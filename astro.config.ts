@@ -28,7 +28,18 @@ export default defineConfig({
     tailwind({
       applyBaseStyles: false,
     }),
-    sitemap(),
+    sitemap(
+      {
+          i18n: {
+            defaultLocale: 'es',
+            locales: {
+              en: 'en-US',
+              es: 'es-ES',
+              ac: 'ca-CA',
+            },
+          },
+      }
+    ),
     mdx(),
     icon({
       include: {

@@ -1,0 +1,93 @@
+---
+
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import type { Widget, Block } from '~/types';
+import Button from '../ui/Button.astro';
+import Image from '~/components/common/Image.astro';
+
+export interface Props extends Widget {
+  title?: string;
+  linkText?: string;
+  linkUrl?: string | URL;
+  information?: string;
+  blocks?: Block[];
+  count?: number;
+}
+
+const {
+  title = await Astro.slots.render('title'),
+  linkText = 'View all posts',
+  linkUrl = '',
+  information = await Astro.slots.render('information'),
+  id,
+  isDark = false,
+  classes = {},
+  bg = await Astro.slots.render('bg'),
+  blocks = [],
+} = Astro.props;
+---
+
+<WidgetWrapper id={id} isDark={isDark} containerClass={classes?.container as string} bg={bg}>
+  <div class="flex flex-col lg:justify-between lg:flex-row mb-8">
+    {
+      (
+        <div class="md:max-w-sm">
+          <h2
+            class="text-3xl font-bold tracking-tight sm:text-4xl sm:leading-none group font-heading mb-2"
+            set:html={title}
+          />
+          {linkText && linkUrl && (
+            <Button variant="link" href={linkUrl}>
+              {' '}
+              {linkText} »
+            </Button>
+          )}
+        </div>
+      )
+    }
+
+    {information && <p class="text-muted dark:text-slate-400 lg:text-sm lg:max-w-md" set:html={information} />}
+  </div>
+
+  <div class="grid gap-6 row-gap-5 md:grid-cols-2 lg:grid-cols-4 -mb-6">
+    {blocks.map((block) => (
+
+    <article
+      class="mb-6 transition intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
+    >
+      <div class="relative md:h-64 bg-gray-400 dark:bg-slate-700 rounded shadow-lg mb-6">
+        {
+          block.image &&
+            
+              <a href={block.link}>
+                <Image
+                  src={block.image}
+                  class="w-full md:h-full rounded shadow-lg bg-gray-400 dark:bg-slate-700"
+                  widths={[400, 900]}
+                  width={400}
+                  sizes="(max-width: 900px) 400px, 900px"
+                  alt={block.title}
+                  aspectRatio="16:9"
+                  layout="cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </a>            
+        }
+      </div>
+
+      <h3 class="text-xl sm:text-2xl font-bold leading-tight mb-2 font-heading dark:text-slate-300">
+        {
+            <a
+              class="inline-block hover:text-primary dark:hover:text-blue-700 transition ease-in duration-200"
+              href={block.permalink}
+            >
+              {block.title}
+            </a>          
+        }
+      </h3>
+      <p class="text-muted dark:text-slate-400 text-lg">{block.excerpt}</p>
+    </article>
+    ))}
+  </div>
+</WidgetWrapper>

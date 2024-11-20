@@ -49,6 +49,14 @@ export interface Taxonomy {
   title: string;
 }
 
+
+export interface Block {
+  title: string;
+  link: string;
+  image: string;
+  excerpt: string;
+}
+
 export interface MetaData {
   title?: string;
   ignoreTitleTemplate?: boolean;
