@@ -23,6 +23,8 @@ const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroInteg
 
 export default defineConfig({
   output: 'static',
+    
+  site: 'https://www.gilsys.com',
 
   integrations: [
     tailwind({
@@ -35,7 +37,7 @@ export default defineConfig({
             locales: {
               en: 'en-US',
               es: 'es-ES',
-              ac: 'ca-CA',
+              ca: 'ca-CA',
             },
           },
       }

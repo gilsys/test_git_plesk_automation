@@ -1,4 +1,4 @@
-import { ui, defaultLang, routes } from '../i18n/ui';
+import { ui, defaultLang, routes, header, footer } from '../i18n/ui';
 
 export function getLangFromUrl(url: URL) {
   const [, lang] = url.pathname.split('/');
@@ -13,9 +13,17 @@ export function useTranslations(lang: keyof typeof ui) {
 }
 
 export function useRoutes(lang: keyof typeof routes) {
-  return function url(key: keyof (typeof routes)[typeof defaultLang]) {
+  return function u(key: keyof (typeof routes)[typeof defaultLang]) {
     return routes[lang][key] || routes[defaultLang][key];
   };
+}
+
+export function getHeader(lang: keyof typeof routes) {
+  return header[lang];  
+}
+
+export function getFooter(lang: keyof typeof routes) {
+  return footer[lang];  
 }
 
 export function useTranslatedPath(lang: keyof typeof ui) {
@@ -23,26 +31,23 @@ export function useTranslatedPath(lang: keyof typeof ui) {
     const pathName = path;
     const hasTranslation = routes[l] !== undefined && routes[l][pathName] !== undefined;
     const translatedPath = hasTranslation ? routes[l][pathName] : path;
-    return `/${l}${translatedPath}`;
+    return translatedPath;
   };
 }
 
-function findKeyByValue(language: string, value: string): string | undefined {
-  const langRoutes = routes[language as keyof typeof routes];
-  return Object.keys(langRoutes).find(key => langRoutes[key] === value);
-}
-
-export function getRouteFromUrl(url: URL): string | undefined {
+export function getRouteFromUrl(url: URL): string | undefined {  
   const pathname = new URL(url).pathname;
   const parts = pathname?.split('/');
 
-  if (parts.length <= 2) {
+  if (parts.length <= 1) {
     return '';
   }
-  
-  const path = '/' + parts.slice(2).join('/');
-  const currentLang = getLangFromUrl(url);
 
-  return findKeyByValue(currentLang, path);
+  const currentLang = getLangFromUrl(url);
+  const path = '/' + parts.slice(1).join('/');
+  
+  const langRoutes = routes[currentLang as keyof typeof routes];
+  const result = Object.keys(langRoutes).find(key => langRoutes[key] === path);
+  return result;
 }
 
