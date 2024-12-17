@@ -55,6 +55,7 @@ export interface Block {
   link: string;
   image: string;
   excerpt: string;
+  links?: Link[]
 }
 
 export interface MetaData {
@@ -195,6 +196,12 @@ export interface CallToAction extends Omit<HTMLAttributes<'a'>, 'slot'> {
   icon?: string;
   classes?: Record<string, string>;
   type?: 'button' | 'submit' | 'reset';
+}
+
+export interface Link{
+  href: string,
+  title: string,
+  text: string
 }
 
 export interface ItemGrid {

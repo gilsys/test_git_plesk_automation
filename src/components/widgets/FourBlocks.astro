@@ -1,9 +1,9 @@
 ---
-
 import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
 import type { Widget, Block } from '~/types';
 import Button from '../ui/Button.astro';
 import Image from '~/components/common/Image.astro';
+import { Icon } from 'astro-icon/components';
 
 export interface Props extends Widget {
   title?: string;
@@ -50,15 +50,11 @@ const {
   </div>
 
   <div class="grid gap-6 row-gap-5 md:grid-cols-2 lg:grid-cols-4 -mb-6">
-    {blocks.map((block) => (
-
-    <article
-      class="mb-6 transition intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
-    >
-      <div class="relative md:h-64 bg-gray-400 dark:bg-slate-700 rounded shadow-lg mb-6">
-        {
-          block.image &&
-            
+    {
+      blocks.map((block) => (
+        <article class="mb-6 transition intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade">
+          <div class="relative md:h-64 bg-gray-400 dark:bg-slate-700 rounded shadow-lg mb-6">
+            {block.image && (
               <a href={block.link}>
                 <Image
                   src={block.image}
@@ -72,22 +68,39 @@ const {
                   loading="lazy"
                   decoding="async"
                 />
-              </a>            
-        }
-      </div>
+              </a>
+            )}
+          </div>
 
-      <h3 class="text-xl sm:text-2xl font-bold leading-tight mb-2 font-heading dark:text-slate-300">
-        {
-            <a
-              class="inline-block hover:text-primary dark:hover:text-blue-700 transition ease-in duration-200"
-              href={block.permalink}
-            >
-              {block.title}
-            </a>          
-        }
-      </h3>
-      <p class="text-muted dark:text-slate-400 text-lg">{block.excerpt}</p>
-    </article>
-    ))}
+          <h3 class="text-xl sm:text-2xl font-bold leading-tight mb-2 font-heading dark:text-slate-300">
+            {
+              <a
+                class="inline-block hover:text-primary dark:hover:text-blue-700 transition ease-in duration-200"
+                href={block.permalink}
+              >
+                {block.title}
+              </a>
+            }
+          </h3>
+          <p class="text-muted dark:text-slate-400 text-md">{block.excerpt}</p>
+          {block.links && (
+            <ul class="my-8 md:my-10 space-y-2 text-left">
+              {block.links.map((link) => (
+                <li class="mb-1.5 flex items-start space-x-3 leading-7">
+                  <div class="rounded-full bg-primary mt-1">
+                    <Icon name="tabler:check" class="w-5 h-5 font-bold p-1 text-white" />
+                  </div>
+                  <span>
+                    <a href="{link.href}" title="{link.title}">
+                      {link.text}
+                    </a>
+                  </span>
+                </li>
+              ))}
+            </ul>
+          )}
+        </article>
+      ))
+    }
   </div>
 </WidgetWrapper>

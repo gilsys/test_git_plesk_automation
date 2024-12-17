@@ -1,4 +1,5 @@
 ---
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
@@ -11,6 +12,7 @@ import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
   title: 'About us',
+  description: 'About us',
 };
 ---
 
@@ -22,14 +24,14 @@ const metadata = {
     actions={[
       { variant: 'primary', target: '_blank', text: 'Get Started', href: 'https://github.com/onwidget/astrowind' },
       { text: 'Learn more', href: '#features' },
-    ]}    
+    ]}
   >
     <Fragment slot="title">
       Programació a mida de
-      <span class="text-accent highlight">software</span>,
-      <span class="text-accent highlight">apps</span>,
-      <span class="text-accent highlight">plataformes web</span> i
-      <span class="text-accent highlight">IA </span><br />
+      <a href="#" class="text-accent highlight" title="TODO SEO">software</a>,
+      <a href="#" class="text-accent highlight" title="TODO SEO">apps</a>,
+      <a href="#" class="text-accent highlight" title="TODO SEO">plataformes web</a> i
+      <a href="#" class="text-accent highlight" title="TODO SEO">IA</a><br />
     </Fragment>
 
     <Fragment slot="subtitle">
@@ -41,37 +43,144 @@ const metadata = {
 
   <FourBlocks
     id="blog"
-    title="Explora els nostres serveis"
-    information={`Dive into a realm of design wisdom and creative inspiration, where you'll find invaluable insights, practical tips, and captivating narratives that elevate and enrich your creative journey.`}
+    title="Serveis"
+    information={`Ens apassiona el que fem, aportem solucions que s'adapten al que necessita la teva empresa, no enfocar-nos a cumplir objectius de ventes.`}
     blocks={[
       {
         link: '#',
         title: 'Software a mida',
-        excerpt:
-          'Programació de software a mida en funció a les necessitats del client, tant plataformes web, com apps multiplataforma Android i iOS.',
+        excerpt: 'Desenvolupem utilitzant la tecnologia idònea per a cada projecte, programant des de zero.',
         image:
           'https://elements-resized.envatousercontent.com/envato-shoebox/153d/55ec-8ac2-4e33-9366-7613f939d934/IMG_9920.jpg?w=1600&cf_fit=scale-down&mark-alpha=18&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark4.png&q=85&format=auto&s=726bfe78ceb96bf256ccec149d387fea13c6afdad518f228cfb21a7cc6524c4e',
+        links: [
+          {
+            href: '#',
+            title: 'Eines i plataformes online',
+            text: 'Eines i plataformes online',
+          },
+          {
+            href: '#',
+            title: 'Aplicacions per mòbils',
+            text: 'Aplicacions per mòbils',
+          },
+          {
+            href: '#',
+            title: 'Webs ultra-ràpides',
+            text: 'Webs ultra-ràpides',
+          },
+          {
+            href: '#',
+            title: "Programació d'APIs",
+            text: "Programació d'APIs",
+          },
+          {
+            href: '#',
+            title: "Programació d'algoritmes",
+            text: "Programació d'algoritmes",
+          },
+        ],
       },
       {
         link: '#',
         title: 'Software adaptat',
-        excerpt: 'Adaptem software existent als requisits del projecte. e-comerce. PIM, CRM, PRM',
+        excerpt: 'Adaptem i ampliem software existent per implementar els requisits del projecte.',
         image:
           'https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/2d/4e/e9/7e/c2/v1_E10/E103DLMQ.jpg?w=1600&cf_fit=scale-down&mark-alpha=18&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark4.png&q=85&format=auto&s=24f66ae43e68453e834f4ef97d589f17578b001b8bb08a5a77d227c537c4f31a',
-      },
-      {
-        link: '#',
-        title: 'Consultoría tecnològica',
-        excerpt: 'Assessorament i orientació sobre com implementar un projecte',
-        image:
-          'https://elements-resized.envatousercontent.com/envato-shoebox/54ee/40ca-a310-42b9-94ed-f99ecf815d20/K-210-Tong-5286wf.jpg?w=1600&cf_fit=scale-down&mark-alpha=18&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark4.png&q=85&format=auto&s=18be023ea83088b1e2a9bde8d28d4f97e8a5b7ba6dad382af0df9ce12f7006bb',
+        links: [
+          {
+            href: '#',
+            title: '#',
+            text: 'Gestió de clients',
+          },
+          {
+            href: '#',
+            title: '#',
+            text: 'Gestió de productes',
+          },
+          {
+            href: '#',
+            title: '#',
+            text: 'Business Intelligence#',
+          },
+          {
+            href: '#',
+            title: '#',
+            text: 'E-commerce',
+          },
+          {
+            href: '#',
+            title: '#',
+            text: 'Web',
+          },
+        ],
       },
       {
         link: '#',
         title: 'Migració i integració',
-        excerpt: 'Creem processos per migrar eines antigues a nous productes existents.',
+        excerpt: 'Optimitzem i migrem eines obsoletes i creem processos per comunicar plataformes.',
         image:
           'https://elements-resized.envatousercontent.com/envato-shoebox/4913/4141-efd3-4391-88ed-971abcc75552/126103.jpg?w=1600&cf_fit=scale-down&mark-alpha=18&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark4.png&q=85&format=auto&s=a21b5b5dd8eeee08fce2a82354ef922e9fe5722d1dd8a839af67fcba4bf9e9e7',
+        links: [
+          {
+            href: '#',
+            title: '#',
+            text: "Anàlisis i migració d'eines antigues",
+          },
+          {
+            href: '#',
+            title: '#',
+            text: "Integración d'intel·ligència artificial",
+          },
+          {
+            href: '#',
+            title: '#',
+            text: 'Integració de sistemes amb APIs',
+          },
+          {
+            href: '#',
+            title: '#',
+            text: 'Optimitació de software',
+          },
+          {
+            href: '#',
+            title: '#',
+            text: 'Divisió i escalabilitat',
+          },
+        ],
+      },
+      {
+        link: '#',
+        title: 'Consultoría tecnològica',
+        excerpt: 'Analitzem la situació actual, escoltem idees i oferim assessorament tecnològic.',
+        image:
+          'https://elements-resized.envatousercontent.com/envato-shoebox/54ee/40ca-a310-42b9-94ed-f99ecf815d20/K-210-Tong-5286wf.jpg?w=1600&cf_fit=scale-down&mark-alpha=18&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark4.png&q=85&format=auto&s=18be023ea83088b1e2a9bde8d28d4f97e8a5b7ba6dad382af0df9ce12f7006bb',
+        links: [
+          {
+            href: '#',
+            title: '#',
+            text: 'Disseny de solucions tecnològiques',
+          },
+          {
+            href: '#',
+            title: '#',
+            text: 'Definición de estrategias de transformación digital',
+          },
+          {
+            href: '#',
+            title: '#',
+            text: 'Propoestes per automatización de processos i tasques',
+          },
+          {
+            href: '#',
+            title: '#',
+            text: 'Implantación de tecnologías emergentes',
+          },
+          {
+            href: '#',
+            title: '#',
+            text: 'Seguretat en software',
+          },
+        ],
       },
     ]}
   >
@@ -89,35 +198,44 @@ const metadata = {
     columns={2}
     items={[
       {
-        title: 'Integration of Astro 4.0 and Tailwind CSS',
+        title: 'Experiència contrastada',
         description:
-          'Offers a powerful combination that enhances both the development process and the end-user experience. Also, allows to build dynamic and visually stunning websites with optimized performance.',
-        icon: 'tabler:layers-union',
+          'Més de <span class="text-accent highlight">20 anys</span> desenvolupant solucions tecnològiques per a empreses de diversos sectors, aporten una àmplia visió i experiència tècnica.',
+        icon: 'tabler:flag-2',
       },
       {
-        title: 'Versatile design for startups, small businesses, and more',
-        description: `Easily customize AstroWind to harmonize with the unique branding and identity of your venture. AstroWind's versatile design adapts to suit your needs.`,
-        icon: 'tabler:artboard',
+        title: 'Solucions personalitzades',
+        description: `Cada projecte és únic. Coneixem el codi i sabem com utilitzar-lo per crear solucions a mida, evitant que t'hagis d'adaptar a eines que no s'ajusten exactament a les teves necessitats.`,
+        icon: 'tabler:settings-code',
       },
       {
-        title: 'Effortless customization for portfolios and marketing sites',
-        description:
-          'With intuitive customization, easily showcase portfolio pieces, case studies, project highlights, and relevant content. Ideal for creative professionals and businesses looking to highlight their expertise.',
-        icon: 'tabler:writing',
-      },
-      {
-        title: 'Optimized landing pages and engaging blogs',
-        description: `Landing pages are strategically designed to captivate visitors and prompt specific actions. Additionally, the blog creation feature empowers sharing insights, engaging the audience.`,
-        icon: 'tabler:podium',
-      },
-      {
-        title: 'Fast loading times and production-ready code',
-        description: `Using Astro 4.0 ensures fast loading and seamless rendering, enhancing browsing. The code follows best practices, improving user experience, SEO, and reducing bounce rates.`,
+        title: 'Tecnologies avançades',
+        description: `Treballem amb eines i tecnologies de darrera generació com la intel·ligència artificial, el cloud i frameworks moderns per oferir resulats innovadors i eficients.`,
         icon: 'tabler:rocket',
       },
       {
-        title: 'SEO-optimized structure for enhanced visibility',
-        description: `Follows SEO best practices with clean code, semantic HTML markup, and fast loading, enhancing search engine rankings. AstroWind's SEO structure ensures visibility to potential customers and clients.`,
+        title: 'Equip expert',
+        description: 'Ens mantenim petits per garantir proximitat, qualitat i control total en cada projecte.',
+        icon: 'tabler:users-group',
+      },
+      {
+        title: 'Innovació responsable',
+        description: `Investigem i aprenem constantment noves tecnologies, però només treballem amb aquelles en què podem garantir resultats sòlids, fiables i de qualitat. Si no ho coneixem, preferim no abordar-ho.`,
+        icon: 'tabler:brand-bluesky',
+      },
+      {
+        title: 'Parlaràs amb enginyers, no comercials',
+        description: `Ens apassiona el que fem. Treballem per aportar solucions reals i personalitzades, sempre enfocades a les necessitats de la teva empresa, sense pressions comercials.`,
+        icon: 'tabler:artboard',
+      },
+      {
+        title: 'Pressupost flexible',
+        description: `Ens adaptem al teu pressupost, dividint el projecte en fases i prioritzant el que sigui més important per al teu negoci.`,
+        icon: 'tabler:adjustments-question',
+      },
+      {
+        title: 'Compromís i suport',
+        description: `T’acompanyem durant tot el procés, des de la idea inicial fins a la implementació, oferint també serveis de manteniment i suport per assegurar l'èxit del projecte.`,
         icon: 'tabler:eyeglass',
       },
     ]}
@@ -138,15 +256,18 @@ const metadata = {
   <!-- Content Widget **************** -->
 
   <Content
-    isAfterContent={true}
+    isAfterContent={false}
     items={[
       {
-        title: 'Description:',
-        description: `For SaaS businesses, user experience is key. AstroWind enhances showcasing SaaS solutions intuitively. The template's Astro 4.0 and Tailwind CSS integration guarantees user-friendly experience, mirroring your software's efficiency. Customize pages to communicate SaaS value and solutions for your audience.`,
+        title: 'Què és?',
+        description: `El govern d'Espanya impulsa el programa Kit Digital, finançat per fons europeus Next Generation, per ajudar petites i mitjanes empreses, otorgant subvencions entre <span class="text-primary">3.000€</span> i <span class="text-primary">29.000€</span> per invertir en la implantació de noves tecnologies.`,
       },
       {
-        title: 'Benefits:',
-        description: `Ensuring a cohesive and user-centric design for your SaaS website. <br /> Effectively communicate complex SaaS features through visual aids, animations, and interactive elements. <br /> Prioritize user needs and pain points through well-structured layouts and clear navigation. <br /> Encourage visitors to take action with strategically placed CTAs. <br /> Ensures your SaaS website works seamlessly across all devices.`,
+        title: 'Som agents digitalitzadors',
+        description: `A gilsys som un agent digitalitzador certificat dins del programa Kit Digital. Podem ajudar-te a digitalitzar les subvencions.
+            <br />
+            <br />
+            <a href="#" class="btn-primary mb-12 w-auto">Més informació</a>`,
       },
     ]}
     image={{
@@ -155,9 +276,8 @@ const metadata = {
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">
-        KIT DIGITAL <br /><span class="text-2xl">Streamlining user experience</span>
-      </h3>
+      <h2 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">KIT DIGITAL</h2>
+      <p class="mb-2">Subvencions per solucions digitals per a autònoms i empreses de fins a 250 treballadors.</p>
     </Fragment>
 
     <Fragment slot="bg">
@@ -169,26 +289,30 @@ const metadata = {
 
   <Content
     isReversed
-    isAfterContent={true}
+    isAfterContent={false}
     items={[
       {
-        title: 'Description:',
-        description: `Your portfolio is your masterpiece, and AstroWind is your canvas. Whether you're a designer, photographer, artist, or any other creative professional, AstroWind empowers you to showcase your work with elegance and sophistication. Tailored to highlight your creative projects, AstroWind's templates offer a visually immersive experience that lets your portfolio shine.`,
+        title: 'Què és?',
+        description: `El programa Kit Consulting, impulsat pel govern d'Espanya amb fons europeus Next Generation, ofereix subvencions de <span class="text-primary">12.000€</span> a <span class="text-primary">24.000€</span> en diferents serveis d'assessorament digital.`,
       },
       {
-        title: 'Benefits:',
-        description: `Serve as a captivating backdrop to showcase your creative work, capturing attention and leaving a lasting impression. <br /> Tailor your portfolio to reflect your unique style and artistic vision. <br /> Prioritizes visuals, allowing you to present your work in high-resolution detail that draws viewers into your creations. <br /> Enables seamless navigation for effortless portfolio exploration.`,
+        title: 'Som agents consultors',
+        description: `A gilsys som un agent consultor certificat dins del programa Kit Consulting. T’ajudem a aprofitar les subvencions i dissenyar el full de ruta per a la transformació digital de la teva empresa.
+            <br />
+            <br />
+            <a href="#" class="btn-primary mb-12 w-auto">Més informació</a>`,
       },
     ]}
     image={{
-      src: 'https://eimconsultores.com/wp-content/uploads/sites/9/2024/06/Logo-Kit-Consulting.png',
-      alt: 'Portfolio Image',
+      src: 'https://s2f6z4h2.rocketcdn.me/wp-content/uploads/2022/11/solicitar-kit-digital-2022.jpg',
+      alt: 'Kit Consulting Image',
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">
-        kit consulting <br /><span class="text-2xl">Highlighting your work</span>
-      </h3>
+      <h2 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">KIT CONSULTING</h2>
+      <p class="mb-2">
+        Subvencions en serveis d'assessorament en transformació digital per a empreses d'entre 10 i 250 treballadors.
+      </p>
     </Fragment>
 
     <Fragment slot="bg">
@@ -196,100 +320,78 @@ const metadata = {
     </Fragment>
   </Content>
 
-  <!-- Steps2 Widget ****************** -->
-
-  <Steps2
-    title="Posar alguna cosa que agafi els últims artícles del blog?"
-    subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla, sed porttitor est nibh at nulla."
-    isReversed={true}
-    callToAction={{
-      text: 'See more',
-      href: '/',
-    }}
-    items={[
-      {
-        title: 'Global reach',
-        description: 'Nam malesuada urna in enim imperdiet tincidunt. Phasellus non tincidunt nisi, at elementum mi.',
-        icon: 'tabler:globe',
-      },
-      {
-        title: 'Positive customer feedback and reviews',
-        description:
-          'Cras semper nulla leo, eget laoreet erat cursus sed. Praesent faucibus massa in purus iaculis dictum.',
-        icon: 'tabler:message-star',
-      },
-      {
-        title: 'Awards and recognition as industry experts',
-        description:
-          'Phasellus lacinia cursus velit, eu malesuada magna pretium eu. Etiam aliquet tellus purus, blandit lobortis ex rhoncus vitae.',
-        icon: 'tabler:award',
-      },
-    ]}
-  />
-
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Sectores en los que trebajamos"
-    subtitle="Discover our selection below to streamline and elevate your projects."
+    title="Sectors pels que treballem"
+    subtitle="La nostra experiència en programació de solucions a mida ens permet abordar projectes en gairebé qualsevol sector."
     columns={3}
     items={[
       {
-        title: 'Educational',
-        description:
-          'By harmonizing instructional design and visual appeal, templates streamline content creation for varied materials, expediting development and cultivating engaging educational spaces.',
-        icon: 'tabler:school',
+        title: 'Tecnològic',
+        description: `Aplicacions web i mòbils amb integració de Bluetooth i APIs a mida.`,
+        icon: 'tabler:code',
       },
       {
-        title: 'Interior Design',
-        description:
-          'Crafting functional, visually appealing spaces for residential and commercial use. Templates emphasize layout, colors, and furniture setups, offering a versatile toolkit for your design vision.',
-        icon: 'tabler:home-star',
+        title: 'Empresarial',
+        description: `Desenvolupament de webs ultra ràpides (no Wordpress) i optimitzades per SEO.`,
+        icon: 'tabler:affiliate',
       },
       {
-        title: 'Photography',
-        description: `Empowering photographers, our templates facilitate captivating storytelling. With a keen focus on layout, galleries, and typography, they cater to both professionals and enthusiasts.`,
-        icon: 'tabler:photo',
-      },
-      {
-        title: 'E-commerce',
-        description:
-          'Developing engaging online stores, our E-commerce templates ensure a dynamic presence to effectively showcase products. Ideal for startups or revamps.',
+        title: 'Retail',
+        description: `Botigues online, landing pages i integració amb facturació.`,
         icon: 'tabler:shopping-cart',
       },
       {
-        title: 'Blog',
-        description:
-          'With attention to typography, these templates empower effective content presentation for writers at any stage, ensuring visually engaging and user-friendly blogs.',
-        icon: 'tabler:article',
-      },
-      {
-        title: 'Business',
-        description:
-          'Providing polished options for effective visual communication, these templates empower both startups and established companies for a professional brand presence.',
-        icon: 'tabler:building-store',
-      },
-      {
-        title: 'Branding',
-        description:
-          'Offering pre-designed elements for a consistent brand identity, including logos and marketing materials. Ideal for new ventures or revamps.',
+        title: 'Màrqueting',
+        description: 'Implantació de CRM, sincronizació de dades de vendes i integració d’eines digitals.',
         icon: 'tabler:arrow-big-up-lines',
       },
       {
-        title: 'Medical',
-        description: `From presentations to patient forms, these tools enhance communication effectiveness for healthcare professionals. Ideal for medical practices and research pursuits.`,
+        title: 'Educació',
+        description: 'Plataformes de formació a mida amb estàndards SCORM/LTI i eines per avaluació digital.',
+        icon: 'tabler:school',
+      },
+      {
+        title: 'Salut',
+        description: "Programació d'eines per gestió mèdica, cites, historial i control d’inventari.",
         icon: 'tabler:vaccine',
       },
       {
-        title: 'Fashion Design',
+        title: 'Industrial',
         description:
-          'With attention to detail, customization, and contemporary design, they empower designers to showcase ideas cohesively. Ideal for all levels of designers.',
-        icon: 'tabler:tie',
+          'Solucions de gestió de productes PIM, programació de software per automatitzar processos i sincronitzar dades.',
+        icon: 'tabler:building-factory-2',
+      },
+      {
+        title: 'Startups',
+        description: "Acompanyament en la creació d'apps i plataformes online i planificaions per fases.",
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Laboratoris',
+        description: `Programació d'algoritmes avançats i eines per automatitzar càlculs tècnics.`,
+        icon: 'tabler:flask',
+      },
+      {
+        title: 'Directiu',
+        description: `Software per analitzar mètriques i facilitar la presa de decisions.`,
+        icon: 'tabler:report-analytics',
+      },
+      {
+        title: 'Formació',
+        description: 'Plataformes e-learning a mida per oferir contingut i gestionar esdeveniments.',
+        icon: 'tabler:certificate',
+      },
+      {
+        title: 'Sector públic',
+        description: 'Software per a gestió i optimització de processos administratius.',
+        icon: 'tabler:progress-check',
       },
     ]}
   />
 
-  <!-- Testimonials Widget *********** -->
+  <!-- Testimonials Widget *********** 
 
   <Testimonials
     title="Client testimonials"
@@ -351,12 +453,12 @@ const metadata = {
       },
     ]}
   />
-
+-->
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Technical Support"
-    tagline="Contact us"
+    title="Contactar"
+    tagline="Estem a Sant Quirze de Besora (Osona), prop de Vic."
     columns={2}
     items={[
       {
@@ -373,4 +475,6 @@ const metadata = {
       },
     ]}
   />
+
+  <BlogLatestPosts title="Últimes entrades del blog" linkText="Anar al blog" />
 </Layout>
