@@ -4,6 +4,7 @@ import type { Widget, Block } from '~/types';
 import Button from '../ui/Button.astro';
 import Image from '~/components/common/Image.astro';
 import { Icon } from 'astro-icon/components';
+import { getLangFromUrl, useTranslations } from '~/utils/i18n';
 
 export interface Props extends Widget {
   title?: string;
@@ -14,9 +15,12 @@ export interface Props extends Widget {
   count?: number;
 }
 
+const currentLang = getLangFromUrl(Astro.url);
+const t = useTranslations(currentLang);
+
 const {
   title = await Astro.slots.render('title'),
-  linkText = 'View all posts',
+  linkText = t('blog.view_all_posts'),
   linkUrl = '',
   information = await Astro.slots.render('information'),
   id,
