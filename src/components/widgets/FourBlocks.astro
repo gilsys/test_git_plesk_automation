@@ -28,10 +28,10 @@ const {
 ---
 
 <WidgetWrapper id={id} isDark={isDark} containerClass={classes?.container as string} bg={bg}>
-  <div class="flex flex-col lg:justify-between lg:flex-row mb-8">
+  <div class="flex flex-col lg:justify-between mb-8">
     {
       (
-        <div class="md:max-w-sm">
+        <div class="">
           <h2
             class="text-3xl font-bold tracking-tight sm:text-4xl sm:leading-none group font-heading mb-2"
             set:html={title}
@@ -46,7 +46,7 @@ const {
       )
     }
 
-    {information && <p class="text-muted dark:text-slate-400 lg:text-sm lg:max-w-md" set:html={information} />}
+    {information && <p class="text-muted dark:text-slate-400 lg:text-sm" set:html={information} />}
   </div>
 
   <div class="grid gap-6 row-gap-5 md:grid-cols-2 lg:grid-cols-4 -mb-6">
@@ -76,7 +76,7 @@ const {
             {
               <a
                 class="inline-block hover:text-primary dark:hover:text-blue-700 transition ease-in duration-200"
-                href={block.permalink}
+                href={block.link}
               >
                 {block.title}
               </a>

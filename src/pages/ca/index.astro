@@ -6,9 +6,8 @@ import Features2 from '~/components/widgets/Features2.astro';
 import FourBlocks from '~/components/widgets/FourBlocks.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Stats from '~/components/widgets/Stats.astro';
-import Steps2 from '~/components/widgets/Steps2.astro';
-import Testimonials from '~/components/widgets/Testimonials.astro';
 import Layout from '~/layouts/PageLayout.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
   title: 'About us',
@@ -20,11 +19,13 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero
+    id="hero-home"
     tagline=""
     actions={[
       { variant: 'primary', target: '_blank', text: 'Get Started', href: 'https://github.com/onwidget/astrowind' },
       { text: 'Learn more', href: '#features' },
     ]}
+    image={{ src: '~/assets/images/bg-1.jpg', alt: 'AstroWind Hero Image' }}
   >
     <Fragment slot="title">
       Programació a mida de
@@ -39,6 +40,8 @@ const metadata = {
         Més de <span class="text-accent highlight">20 anys</span> convertint idees innovadores en projectes d'èxit.
       </span>
     </Fragment>
+
+    
   </Hero>
 
   <FourBlocks
@@ -65,8 +68,8 @@ const metadata = {
           },
           {
             href: '#',
-            title: 'Webs ultra-ràpides',
-            text: 'Webs ultra-ràpides',
+            title: 'Pàgines web ràpides',
+            text: 'Pàgines web ràpide',
           },
           {
             href: '#',
@@ -100,7 +103,7 @@ const metadata = {
           {
             href: '#',
             title: '#',
-            text: 'Business Intelligence#',
+            text: 'Business Intelligence',
           },
           {
             href: '#',
@@ -151,34 +154,34 @@ const metadata = {
       {
         link: '#',
         title: 'Consultoría tecnològica',
-        excerpt: 'Analitzem la situació actual, escoltem idees i oferim assessorament tecnològic.',
+        excerpt: 'Analitzem la situació actual, conceptualitzem idees i oferim assessorament tecnològic.',
         image:
           'https://elements-resized.envatousercontent.com/envato-shoebox/54ee/40ca-a310-42b9-94ed-f99ecf815d20/K-210-Tong-5286wf.jpg?w=1600&cf_fit=scale-down&mark-alpha=18&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark4.png&q=85&format=auto&s=18be023ea83088b1e2a9bde8d28d4f97e8a5b7ba6dad382af0df9ce12f7006bb',
         links: [
           {
             href: '#',
             title: '#',
-            text: 'Disseny de solucions tecnològiques',
+            text: 'Anàlisi de situació tecnològica',
+          },          
+          {
+            href: '#',
+            title: '#',
+            text: 'Trasformació d\'idees a projectes',
+          },          
+          {
+            href: '#',
+            title: '#',
+            text: 'Anàlisi i organtizació de dades',
+          },          
+          {
+            href: '#',
+            title: '#',
+            text: 'Identificació de solucions a integrar',
           },
           {
             href: '#',
             title: '#',
-            text: 'Definición de estrategias de transformación digital',
-          },
-          {
-            href: '#',
-            title: '#',
-            text: 'Propoestes per automatización de processos i tasques',
-          },
-          {
-            href: '#',
-            title: '#',
-            text: 'Implantación de tecnologías emergentes',
-          },
-          {
-            href: '#',
-            title: '#',
-            text: 'Seguretat en software',
+            text: 'Estudi per integració d\'IA',
           },
         ],
       },
@@ -334,7 +337,7 @@ const metadata = {
       },
       {
         title: 'Empresarial',
-        description: `Desenvolupament de webs ultra ràpides (no Wordpress) i optimitzades per SEO.`,
+        description: `Desenvolupament de pàgines web molt ràpides (no Wordpress) i optimitzades per SEO.`,
         icon: 'tabler:affiliate',
       },
       {
@@ -453,12 +456,10 @@ const metadata = {
       },
     ]}
   />
--->
-  <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Contactar"
-    tagline="Estem a Sant Quirze de Besora (Osona), prop de Vic."
+    title="Contacta\'ns"
+    tagline="Des de gilsys posarem en marxa la teva transformació digital."
     columns={2}
     items={[
       {
@@ -468,13 +469,28 @@ const metadata = {
         icon: 'tabler:messages',
       },
       {
-        title: 'Call us',
+        title: 'Truca',
         description:
-          'Mauris faucibus finibus orci, in posuere elit viverra non. In hac habitasse platea dictumst. Cras lobortis metus a hendrerit congue.',
+          '665 331 271',
         icon: 'tabler:headset',
       },
     ]}
   />
+    -->
+    <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contacta\'ns',
+        href: '#',
+      },
+    ]}
+  >
+    <Fragment slot="title">Tens un projecte en ment?</Fragment>
+    <Fragment slot="subtitle"> Des de gilsys posarem en marxa la teva transformació digital.</Fragment>
+  </CallToAction>
 
   <BlogLatestPosts title="Últimes entrades del blog" linkText="Anar al blog" />
+
+  
 </Layout>
