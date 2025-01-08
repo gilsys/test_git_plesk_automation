@@ -42,11 +42,14 @@ export interface Post {
 
   /**  */
   readingTime?: number;
+
+  lang?: string;
 }
 
 export interface Taxonomy {
   slug: string;
   title: string;
+  permalink: string;
 }
 
 

@@ -17,13 +17,46 @@ export const defaultLang = 'es';
 
 export const ui = {
   es: {
-    
+    'common.page': 'Página',
+    'blog.back': 'Volver al blog',
+    'blog.category': 'Categoría',
+    'blog.tag': 'Tag',
+    'blog.related_posts': 'Entradas relacionadas',
+    'blog.view_all_posts': 'Ver todas las entradas',
+    'blog.newer_posts': 'Entradas más recientes',
+    'blog.older_posts': 'Entradas más antiguas',
+    'blog.share': 'Compartir',
+    'blog.reading_time': 'minutos de lectura',
+    'blog.list.title': 'Blog',
+    'blog.list.subtitle': 'Un ejemplo de blog generado estáticamente con noticias, tutoriales, recursos y otro contenido interesante relacionado con AstroWind',
   },
   ca: {
-    
+    'common.page': 'Pàgina',
+    'blog.back': 'Tornar al blog',
+    'blog.category': 'Categoria',
+    'blog.tag': 'Tag',
+    'blog.related_posts': 'Entrades relacionades',
+    'blog.view_all_posts': 'Veure totes les entrades',
+    'blog.newer_posts': 'Entrades més recents',
+    'blog.older_posts': 'Entrades més antigues',
+    'blog.share': 'Compartir',
+    'blog.reading_time': 'minuts de lectura',
+    'blog.list.title': 'The Blog',
+    'blog.list.subtitle': 'Un exemple de bloc generat estàticament amb notícies, tutorials, recursos i altres continguts interessants relacionats amb AstroWind',
   },
   en: {
-    
+    'common.page': 'Page',
+    'blog.back': 'Back to Blog',
+    'blog.category': 'Category',
+    'blog.tag': 'Tag',
+    'blog.related_posts': 'Related Posts',
+    'blog.view_all_posts': 'View All Posts',
+    'blog.newer_posts': 'Newer posts',
+    'blog.older_posts': 'Older posts',
+    'blog.share': 'Share',
+    'blog.reading_time': 'min read',
+    'blog.list.title': 'The Blog',
+    'blog.list.subtitle': 'A statically generated blog example with news, tutorials, resources and other interesting content related to AstroWind',
   },
 } as const;
 
