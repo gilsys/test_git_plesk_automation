@@ -33,6 +33,10 @@
     @apply btn;
   }
 
+  .btn-secondary.active {
+    @apply bg-gray-100 border-gray-600;
+  }
+
   .btn-tertiary {
     @apply btn border-none shadow-none text-muted hover:text-gray-900 dark:text-gray-400 dark:hover:text-white;
   }
@@ -110,8 +114,3 @@
 .features3-itemgrid > div{
   padding-bottom: 100px;
 }
-/*
-.dropdown{
-  font-size: 1rem;
-  line-height: 1rem;
-}*/

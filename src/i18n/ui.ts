@@ -18,6 +18,10 @@ export const defaultLang = 'es';
 export const ui = {
   es: {
     'common.page': 'Página',
+    'language.change_to': 'Cambiar idioma a',
+    'language.es': 'Español',
+    'language.ca': 'Catalán',
+    'language.en': 'Inglés',
     'blog.back': 'Volver al blog',
     'blog.category': 'Categoría',
     'blog.tag': 'Tag',
@@ -32,6 +36,10 @@ export const ui = {
   },
   ca: {
     'common.page': 'Pàgina',
+    'language.change_to': 'Canviar idioma a',
+    'language.es': 'Espanyol',
+    'language.ca': 'Català',
+    'language.en': 'Anglès',
     'blog.back': 'Tornar al blog',
     'blog.category': 'Categoria',
     'blog.tag': 'Tag',
@@ -46,6 +54,10 @@ export const ui = {
   },
   en: {
     'common.page': 'Page',
+    'language.change_to': 'Change language to',
+    'language.es': 'Spanish',
+    'language.ca': 'Catalan',
+    'language.en': 'English',
     'blog.back': 'Back to Blog',
     'blog.category': 'Category',
     'blog.tag': 'Tag',
@@ -289,8 +301,6 @@ export const header = {
         href: routes['ca']['contact'],
       },
     ],
-
-    actions: [{ text: 'Español', href: 'https://github.com/onwidget/astrowind', target: '_self' }],
   },
   es: {
     links: [
@@ -434,8 +444,6 @@ export const header = {
         href: routes['es']['contact'],
       },
     ],
-
-    actions: [{ text: 'Español', href: 'https://github.com/onwidget/astrowind', target: '_self' }],
   },
   en: {
     links: [
@@ -502,7 +510,6 @@ export const header = {
         ],
       },
     ],
-    actions: [{ text: 'Español', href: 'https://github.com/onwidget/astrowind', target: '_self' }],
   },
 };
 

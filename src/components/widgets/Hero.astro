@@ -12,6 +12,7 @@ const {
   content = await Astro.slots.render('content'),
   actions = await Astro.slots.render('actions'),
   image = await Astro.slots.render('image'),
+  backgroundImage = await Astro.slots.render('backgroundImage'),
 
   id,
   bg = await Astro.slots.render('bg'),
@@ -19,6 +20,19 @@ const {
 ---
 
 <section class="relative md:-mt-[76px] not-prose" {...id ? { id } : {}}>
+  {
+    backgroundImage && (
+      <div class="absolute inset-0 md:pt-[76px] z-[-1]">
+        <Image
+          class="w-full h-full"
+          widths={[400, 768, 1024, 2040]}
+          loading="eager"
+          layout="cover"
+          {...backgroundImage}
+        />
+      </div>
+    )
+  }
   <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
     <slot name="bg">
       {bg ? <Fragment set:html={bg} /> : null}
