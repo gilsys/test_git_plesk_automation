@@ -1,0 +1,12 @@
+---
+import ContactForm from '~/components/widgets/ContactForm.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Contactar',
+};
+---
+
+<Layout metadata={metadata}>
+  <ContactForm pageTitle={metadata.title} />
+</Layout>

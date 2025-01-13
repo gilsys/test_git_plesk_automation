@@ -1,20 +1,45 @@
 ---
 import type { Form as Props } from '~/types';
 import Button from '~/components/ui/Button.astro';
+import { getLangFromUrl, useTranslations } from '~/utils/i18n';
 
-const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } = Astro.props;
+const currentLang = getLangFromUrl(Astro.url);
+const t = useTranslations(currentLang);
+
+const {
+  id,
+  inputs,
+  textarea,
+  disclaimer,
+  button = t('contact.send'),
+  description = '',
+  sendTo,
+  successMessage = t('contact.success'),
+  errorMessage = t('contact.error'),
+} = Astro.props;
 ---
 
-<form>
+<form id={id} autocomplete="off">
   {
     inputs &&
       inputs.map(
-        ({ type = 'text', name, label = '', autocomplete = 'on', placeholder = '' }) =>
-          name && (
-            <div class="mb-6">
+        ({
+          type = 'text',
+          name,
+          label = '',
+          autocomplete = 'off',
+          placeholder = '',
+          value = '',
+          required = false,
+          spamCheck = false,
+        }) =>
+          name &&
+          (type !== 'hidden' ? (
+            <div class={`mb-6${spamCheck ? ' hidden' : ''}`}>
               {label && (
                 <label for={name} class="block text-sm font-medium">
                   {label}
+                  {required ? '*' : ''}
                 </label>
               )}
               <input
@@ -23,10 +48,13 @@ const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } 
                 id={name}
                 autocomplete={autocomplete}
                 placeholder={placeholder}
+                required={required}
                 class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
               />
             </div>
-          )
+          ) : (
+            <input type={type} name={name} id={name} value={value} />
+          ))
       )
   }
 
@@ -35,12 +63,14 @@ const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } 
       <div>
         <label for="textarea" class="block text-sm font-medium">
           {textarea.label}
+          {textarea.required ? '*' : ''}
         </label>
         <textarea
           id="textarea"
           name={textarea.name ? textarea.name : 'message'}
           rows={textarea.rows ? textarea.rows : 4}
           placeholder={textarea.placeholder}
+          required={textarea.required}
           class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
         />
       </div>
@@ -55,13 +85,12 @@ const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } 
             id="disclaimer"
             name="disclaimer"
             type="checkbox"
+            required={disclaimer.required}
             class="cursor-pointer mt-1 py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
           />
         </div>
         <div class="ml-3">
-          <label for="disclaimer" class="cursor-pointer select-none text-sm text-gray-600 dark:text-gray-400">
-            {disclaimer.label}
-          </label>
+          <label for="disclaimer" class="select-none text-sm text-gray-600 dark:text-gray-400" set:html={disclaimer.label + (disclaimer.required ? '*' : '')}></label>
         </div>
       </div>
     )
@@ -72,7 +101,12 @@ const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } 
       <div class="mt-10 grid">
         <Button variant="primary" type="submit">
           {button}
+          <svg class="animate-spin ml-1 h-4 w-5 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+          </svg>
         </Button>
+        <div class="form-message mt-4 min-h-6" />
       </div>
     )
   }
@@ -85,3 +119,74 @@ const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } 
     )
   }
 </form>
+
+<script is:inline define:vars={{ formId: id, sendTo: sendTo, successMessage, errorMessage, inputs }}>
+  const addSuccessMessage = () => {
+    removeMessage();
+    formMessage.classList.add('text-green-600');
+    formMessage.innerHTML = successMessage;
+  };
+
+  const addErrorMessage = () => {
+    removeMessage();
+    formMessage.classList.add('text-red-600');
+    formMessage.innerHTML = errorMessage;
+  };
+
+  const removeMessage = () => {
+    form.classList.remove('pointer-events-none');
+    formMessage.innerHTML = '';
+    formMessage.classList.remove('text-green-600', 'text-red-600');
+  };
+
+  const form = document.getElementById(formId);
+  const formMessage = form.querySelector('.form-message');
+  const formLoading = form.querySelector('[type="submit"] .animate-spin');
+
+  const noRequired = inputs.filter((input) => input.spamCheck);
+
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    formLoading.classList.remove('hidden');
+
+    document.activeElement.blur();
+    form.classList.add('pointer-events-none');
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(sendTo, {
+        method: 'POST',
+        body: formData,
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        addSuccessMessage();
+        form.reset();
+
+        noRequired.forEach((input) => {
+          form.querySelector(`[name="${input.name}"]`).setAttribute('required', 'true');
+        });
+      } else {
+        addErrorMessage();
+      }
+
+      formLoading.classList.add('hidden');
+    } catch (error) {
+      addErrorMessage();
+    }
+  });
+
+  form.addEventListener('input', () => {
+    removeMessage();
+  });
+
+  form.addEventListener('change', () => {
+    noRequired.forEach((input) => {
+      form.querySelector(`[name="${input.name}"]`).removeAttribute('required');
+    });
+  });
+</script>

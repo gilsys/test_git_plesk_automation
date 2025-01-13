@@ -1,0 +1,82 @@
+---
+import type { ContactForm as Props } from '~/types';
+import ContactUs from '~/components/widgets/Contact.astro';
+import { getLangFromUrl, useRoutes, useTranslations } from '~/utils/i18n';
+import { SITE } from 'astrowind:config';
+
+const currentLang = getLangFromUrl(Astro.url);
+const t = useTranslations(currentLang);
+const u = useRoutes(currentLang);
+
+const { 
+  title = t('contact.title'),
+  subtitle = t('contact.subtitle'),
+  pageTitle,
+  description,
+ } = Astro.props;
+
+const inputs = [
+  {
+    type: 'text',
+    name: 'name',
+    label: t('contact.name'),
+    required: true,
+  },
+  {
+    type: 'text',
+    name: 'company',
+    label: t('contact.company'),
+  },
+  {
+    type: 'text',
+    name: 'phone',
+    label: t('contact.phone'),
+    required: true,
+  },
+  {
+    type: 'email',
+    name: 'email',
+    label: t('contact.email'),
+    required: true,
+  },
+  {
+    type: 'text',
+    name: 'subject',
+    label: t('contact.subject'),
+    required: true,
+  },
+  {
+    type: 'text',
+    name: 'comments',
+    label: t('contact.comments'),
+    required: true,
+    spamCheck: true,
+  },
+  {
+    type: 'hidden',
+    name: 'page_title',
+    value: pageTitle,
+    required: true,
+  },
+];
+
+const disclaimer = t('contact.disclaimer').replace('%terms%', u('terms')).replace('%privacy_policy%', u('privacy-policy'));
+---
+
+<ContactUs
+  id="contact-form"
+  title={title}
+  subtitle={subtitle}
+  inputs={inputs}
+  textarea={{
+    label: t('contact.message'),
+    required: true,
+  }}
+  button={t('contact.send')}
+  disclaimer={{
+    label: disclaimer,
+    required: true,
+  }}
+  description={description}
+  sendTo={`${SITE.site}/contact/contact.php`}
+/>

@@ -179,6 +179,9 @@ export interface Input {
   label?: string;
   autocomplete?: string;
   placeholder?: string;
+  value?: string;
+  required?: boolean;
+  spamCheck?: boolean;
 }
 
 export interface Textarea {
@@ -186,10 +189,12 @@ export interface Textarea {
   name?: string;
   placeholder?: string;
   rows?: number;
+  required?: boolean;
 }
 
 export interface Disclaimer {
   label?: string;
+  required?: boolean;
 }
 
 // COMPONENTS
@@ -223,11 +228,15 @@ export interface Collapse {
 }
 
 export interface Form {
+  id?: string;
   inputs?: Array<Input>;
   textarea?: Textarea;
   disclaimer?: Disclaimer;
   button?: string;
   description?: string;
+  sendTo?: string;
+  successMessage?: string;
+  errorMessage?: string;
 }
 
 // WIDGETS
@@ -302,4 +311,13 @@ export interface Content extends Omit<Headline, 'classes'>, Widget {
   callToAction?: CallToAction;
 }
 
-export interface Contact extends Omit<Headline, 'classes'>, Form, Widget {}
+export interface Contact extends Omit<Headline, 'classes'>, Form, Widget {
+  sendTo?: string;
+}
+
+export interface ContactForm extends Omit<Headline, 'classes'>, Widget {
+  title?: string;
+  subtitle?: string;
+  pageTitle: string;
+  description?: string;
+}

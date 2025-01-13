@@ -114,3 +114,7 @@
 .features3-itemgrid > div{
   padding-bottom: 100px;
 }
+
+input[type="checkbox"] {
+  accent-color: var(--aw-color-primary);;
+}
