@@ -1,0 +1,269 @@
+---
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+
+const metadata = {
+  title: 'Programació de Software Personalitzat per a Empreses – gilsys',
+  description:
+    'Adaptem plataformes com WordPress, PrestaShop, WooCommerce o PIMCore per crear solucions úniques i personalitzades, ajustades a les necessitats de cada projecte.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero 
+  
+  backgroundImage={{alt: 'Fons abstracte',  src: '~/assets/images/dots/14.jpg'}}
+  actions={[
+    { variant: 'primary', text: 'Sol·licitar pressupost', href: u('contact') },
+    { variant: 'primary', text: 'Sol·licitar demo', href: u('contact') }    
+  ]}
+  tagline="Treballem amb eines i plataformes <strong>existents</strong>, per crear el teu projecte.">
+    <Fragment slot="title">Programació de <span class="text-accent highlight">software personalitzat</span></Fragment>
+    <Fragment slot="subtitle">
+      Adaptem eines com <a href="#TODO" class="text-accent">WordPress</a>, <a href="#TODO" class="text-accent"
+        >PrestaShop</a
+      >, <a href="#TODO" class="text-accent">WooCommerce</a> o <a href="#TODO" class="text-accent">PIMCore</a> per oferir
+      un disseny i funcionament únic i personalitzat, ajustat a les necessitats del projecte.
+    </Fragment>
+  </Hero>
+
+  <Features3
+    id="features-services"
+    title="Què fem a gilsys?"
+    tagline="Serveis basats en plataformes i eines existents."
+    subtitle=""
+    items={[
+      {
+        title: 'Gestió de clients',
+        description:
+          'Adaptem sistemes <strong>CRM</strong> per millorar la captació, el seguiment i la gestió de clients segons els objectius del projecte.',
+        icon: 'tabler:users',
+        callToAction: {
+          class: 'more-info',
+          text: 'Més informació',
+          href: '#TODO',
+        },
+      },
+      {
+        title: 'Gestió de productes',
+        description:
+          'Programem eines PIM basades en <strong>PIMCore</strong>, per centralitzar la gestió dels productes, recursos multimèdia i fluxos de treball.',
+        icon: 'tabler:box',
+        callToAction: {
+          class: 'more-info',
+          text: 'Més informació',
+          href: '#TODO',
+        },
+      },
+      {
+        title: 'Business intelligence',
+        description:
+          "Implementem solucions d'analítica empresarial amb <strong>Metabase</strong>, que permeten analitzar dades, generar informes i facilitar la presa de decisions estratègiques.",
+        icon: 'tabler:chart-bar',
+        callToAction: {
+          class: 'more-info',
+          text: 'Més informació',
+          href: '#TODO',
+        },
+      },
+      {
+        title: 'E-commerce',
+        description:
+          'Personalitzem plataformes com <strong>PrestaShop</strong> o <strong>WooCommerce</strong> per optimitzar la venda online i ampliar funcionalitats.',
+        icon: 'tabler:shopping-cart',
+        callToAction: {
+          class: 'more-info',
+          text: 'Més informació',
+          href: '#TODO',
+        },
+      },
+      {
+        title: 'Programació web',
+        description:
+          "Desenvolupem portals web amb <strong>WordPress</strong>, centrats en el disseny i l'experiència d'usuari, podent ampliar funcionalitats programant plugins a mida.",
+        icon: 'tabler:world',
+        callToAction: {
+          class: 'more-info',
+          text: 'Més informació',
+          href: '#TODO',
+        },
+      },
+    ]}
+  />
+
+  <FAQs
+    title="Què és el software personalitzat?"
+    subtitle="Descobreix com el software personalitzat pot agilitar el desenvolupament del teu projecte."
+    tagline=""
+    items={[
+      {
+        title: 'Què significa software personalitzat?',
+        description:
+          'El software personalitzat consisteix a modificar i ampliar plataformes ja existents per adaptar-les a les necessitats d’una empresa, aprofitant una base robusta i fiable.<br><br>No té sentit crear una botiga online o una web administrada des de zero quan existeixen eines sobre les que treabllar, que faciliten la creació de la base del projecte i que permeten, amb els coneixaments adequats en <strong>programació de software</strong>, poder personaltizar-les i extendre-les segons les necessitats de cada projecte.',
+      },
+      {
+        title: 'Diferències entre software personalitzat i software a mida',
+        description:
+          "El software personalitzat parteix d'una base tecnològica ja existent, que podem extendre i <strong>mitjançant programació</strong> adaptar a les necessitats específiques. El <a href='' class='text-accent'>software a mida</a>, en canvi, es crea completament des de zero per oferir una solució única.<br><br>Escollir programar un <a href='' class='text-accent'>software a mida</a> o treball amb software personaltizat dependrà del grau de personalització que requereixi el projecte i de la visió de futur del mateix.",
+      },
+    ]}
+  />
+
+  <Features2
+    id="features"
+    tagline="Per què utiltizar software personalitzat?"
+    title="Beneficis del software personalitzat"
+    subtitle="Aprofita eines existents per aconseguir resultats ràpids, escalables i rendibles."
+    items={[
+      {
+        title: 'Desenvolupament eficient',
+        description:
+          "L'ús d'una base existent redueix el temps de desenvolupament, permetent una implementació més ràpida i efectiva.",
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Costos optimitzats',
+        description:
+          "Aprofitar una base existent és una opció més rendible en determinats casos que desenvolupar un <a href='#TODO' class='text-accent'>software a mida</a>, mantenint alts nivells de personalització.",
+        icon: 'tabler:currency-dollar',
+      },
+      {
+        title: 'Adaptació amb mòduls i temes personalitzats',
+        description:
+          "Plataformes com <a href='#TODO' class='text-accent'>WordPress</a> o <a href='#TODO' class='text-accent'>PrestaShop</a> es poden ampliar amb mòduls <strong>comercials</strong> o desenvolupats a mida, així com amb <strong>temes personalitzats</strong> que reflecteixin la identitat de la teva empresa.",
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Escalabilitat flexible',
+        description: 'Les solucions personalitzades permeten començar amb funcionalitats bàsiques i afegir-ne de noves segons creixin les necessitats del negoci.',
+        icon: 'tabler:line',
+      },
+      {
+        title: 'Reducció de la corba d\'aprenentatge',
+        description: 'Al treballar amb eines populars els usuaris solen estar familiaritzats amb la interfície des del primer moment i en cas de dubte, poden disponsar de molta informació on-line.',
+        icon: 'tabler:school',
+      },
+      
+      {
+        title: 'Actualitzacions',
+        description:
+          'Les eines que utilitzem estan en constant evolució, això implica que més enllà dels desenvolupaments a mida que es realitzin, es podrà disposar d\'actualitzacions periòdiques amb noves funcionalitats, millores de seguretat i optimitzacions de rendiment.',
+        icon: 'tabler:arrows-right-left',
+      },
+    ]}
+  />
+
+  <Features
+    id="features"
+    tagline=""
+    title="Desavantatges i solucions"
+    subtitle="Treballar amb software personalitzat planteja reptes, descobreix com els abordem per oferir solucions eficients i sostenibles."
+    items={[
+      {
+        title: 'Vulnerabilitat en eines de codi obert',
+        description:
+          "Les eines de codi obert poden ser més sensibles a problemes de seguretat. La solució és disposar d'un <strong>servei d'actualització periòdic</strong> i contemplar la integració dels sistemes de seguretat corresponents per protegir el projecte.",
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Complexitat en les actualitzacions',
+        description:
+          "Quan es requereixen moltes personalitzacions, aplicar actualitzacions pot resultar complicat. A gilsys utilitzem <strong>bones pràctiques de programació</strong> per no tocar el codi font i encapsular les personalitzacions en mòduls independents, facilitant la compatibilitat amb futures versions.",
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Temps i dificultat d’implementació',
+        description:
+          "El temps i la complexitat per implementar personalitzacions poden superar el d'un <a href='#TODO' class='text-accent'>software a mida</a> quan el grau d'adequació és alt. Cal valorar-ho de forma prèvia a l'inici del projecte de cares a poder decidir quina és la millor tecnologia per abordar el projecte.",
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Costos recurrents de plugins',
+        description:
+          "L’ús de plugins comercials pot implicar subscripcions periòdiques que generen despeses recurrents. A gilsys analitzem els millors mòduls a integrar i comparem el cost i les necessitats amb les opcions de desenvolupament a mida per assegurar la millor solució.",
+        icon: 'tabler:currency-dollar',
+      },
+    ]}
+  />
+
+
+  <Content
+    isReversed
+    tagline="Coneix perquè som experts"
+    title="Per què escollir gilsys?"
+    items={[
+      {
+        title: 'Adaptabilitat a múltiples sectors',
+        description:
+          'Tenim experiència en adaptar plataformes a les necessitats específiques de cada sectors a nivell de funcinament i requisits comuns.',
+        icon: 'tabler:building',
+      },
+      {
+        title: 'Coneixement profund en mòduls i integracions',
+        description:
+          'Treballem amb una àmplia gamma de mòduls i integracions, poden suggerir els més adequats per cada projecte.',
+        icon: 'tabler:chart-pie',
+      },            
+      {
+        title: 'Metodologia àgil i eficient',
+        description:
+          'Planifiquem cada projecte de manera metòdica, prioritzant funcionalitats crítiques i implementant solucions de manera àgil per complir amb els terminis establerts.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Suport i manteniment personalitzat',
+        description:
+          'Oferim serveis de suport, manteniment preventiu per integrar actualitzacions i manteniment evolutiu per implementar millores.',
+        icon: 'tabler:headset',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/software-personalizado.jpg',
+      alt: 'Software personalitzat, imatge amb tablet i blocs e-commerce',
+    }}
+  >
+  <Fragment slot="content">
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+      Coneixem les eines i sabem com adaptar-les
+    </h3>
+    A gilsys som experts en programació, no només sabem utilitzar les eines que personalitzem sinó que també les podem extendre perquè en <strong>coneixem el codi font</strong>.
+  </Fragment>
+
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-lightgray"></div>
+  </Fragment>
+  </Content>
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/14.jpg', alt: 'Fons abstracte, inspirat en tecnologia i software' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contactar',
+        href: 'contactar',
+      },
+      {
+        variant: 'primary',
+        text: 'Trucar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">Sol·licita una <span class="custom-gradient">demo</span> sense compromís</Fragment>
+    <Fragment slot="subtitle">T'assessorarem sobre quin seria el software més adequat per a la teva empresa i t'orientarem sobre com el podríem personalitzar.</Fragment>
+  </CallToAction>
+
+  <BlogLatestPosts title="Últimes entrades del blog" linkText="Anar al blog" />
+</Layout>

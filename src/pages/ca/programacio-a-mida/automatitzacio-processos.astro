@@ -1,0 +1,244 @@
+---
+import Content from '~/components/widgets/Content.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Programació d’automatitzacions i APIs',
+  description:
+    'Automatizem tasques repetitives, optimitzem processos empresarials, i millorem la connectivitat entre sistemes.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Section -->
+  <Hero tagline="Facilita la gestió empresarial, redueix errors i estalvia temps i recursos."
+  backgroundImage={{ alt:'Fons abstracte', src: '~/assets/images/dots/24.jpg'}}
+  >
+    <Fragment slot="title">
+      Programació d’ <span class="text-accent highlight">automatitzacions</span> i <span class="text-accent highlight"
+        >APIs</span
+      >
+    </Fragment>
+    <Fragment slot="subtitle">
+      Automatizem tasques repetitives, optimitzem processos empresarials, i millorem la connectivitat entre sistemes.
+    </Fragment>
+  </Hero>
+
+  <Content
+    isReversed
+    tagline=""
+    title="Elimina processos manuals i guanya eficiència"
+    subtitle="La programació d’automatitzacions i APIs permet optimitzar processos empresarials, automatitzar tasques repetitives i millorar la connectivitat entre sistemes."
+    items={[
+      {
+        title: 'Automatitzacions personalitzades',
+        description: `Desenvolupem solucions per a tasques específiques que optimitzen la gestió empresarial i permeten estalviar temps. Aquestes solucions poden ser scripts independents o processos integrats que operen en segon pla per millorar la productivitat.`,
+      },
+      {
+        title: 'Desenvolupament d’APIs a mida',
+        description: `Creem APIs que connecten aplicacions, bases de dades i serveis, facilitant la integració i interoperabilitat. Aquestes APIs poden servir per connectar sistemes interns amb serveis externs, permetent una millor gestió empresarial.`,
+      },
+      {
+        title: 'Automatització amb Intel·ligència Artificial (IA)',
+        description: `Aprofitem les capacitats de la IA per implementar solucions intel·ligents en l’automatització de processos, com la classificació de dades, la resposta automatitzada, la generació de continguts personalitzats. <a href=#TODO></a>`,
+      },
+    ]}
+    image={{
+      src: '~/assets/images/automatizacion-diagrama-estados.jpg',
+      alt: "Diagrama d'estats per automatització de processos",
+    }}
+  >
+    <Fragment slot="postContent">
+      <p class="text-muted">
+        A gilsys, creem solucions a mida que abasten des de scripts senzills fins a APIs avançades que integren diverses
+        plataformes. Aquest enfocament facilita la gestió empresarial, redueix errors i estalvia temps i recursos.
+      </p>
+    </Fragment>
+  </Content>
+
+  <Features3
+    title="Cassos d'ús d'automatitzacions de processos empresarials"
+    items={[
+      {
+        title: 'Sincronització entre sistemes',
+        description:
+          'Creació d’APIs per connectar plataformes d’e-commerce amb sistemes de facturació o gestió logística.',
+        icon: 'tabler:refresh',
+      },
+      {
+        title: 'Automatització de processos repetitius',
+        description:
+          'Scripts que generen informes periòdics, envien notificacions personalitzades o actualitzen automàticament inventaris.',
+        icon: 'tabler:robot',
+      },
+      {
+        title: 'Integració amb serveis externs',
+        description:
+          'Desenvolupament d’eines que connecten passarel·les de pagament amb plataformes empresarials per garantir processos de compra i facturació sense interrupcions.',
+        icon: 'tabler:plug',
+      },
+      {
+        title: 'Gestió de dades en temps real',
+        description:
+          'Solucions que sincronitzen dispositius IoT amb bases de dades per analitzar dades en temps real, oferint estadístiques útils per a la presa de decisions.',
+        icon: 'tabler:chart-bar',
+      },
+      {
+        title: 'Classificació intel·ligent',
+        description:
+          'Implementació d’automatitzacions basades en IA per organitzar productes, documents o informació segons criteris específics.',
+        icon: 'tabler:sort-ascending',
+      },
+      {
+        title: 'Eines de resposta intel·ligent',
+        description: 'Chatbots o assistents virtuals que gestionen respostes automàtiques i millorades per a clients.',
+        icon: 'tabler:message-circle',
+      },
+      {
+        title: 'Control de qualitat de dades',
+        description:
+          'Revisions de funcionament, per detectar possibles problemes en processos i dades generades mitjançant programació algorítmica o intel·ligència artificial.',
+        icon: 'tabler:checklist',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Features3>
+
+  <Features
+    title="Avantatges de les Automatitzacions i APIs"
+    items={[
+      {
+        title: 'Estalvi de temps i recursos',
+        description:
+          'Reducció de tasques manuals repetitives, permetent als equips centrar-se en activitats estratègiques.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Eficiència operativa',
+        description: 'Optimització dels fluxos de treball, eliminant colls d’ampolla i duplicacions de dades.',
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Integració fluida',
+        description:
+          'Connexió de sistemes empresarials amb eines i serveis externs per garantir una experiència unificada.',
+        icon: 'tabler:plug-connected',
+      },
+      {
+        title: 'Escalabilitat i adaptabilitat',
+        description:
+          'Solucions que poden créixer amb les necessitats del projecte, incorporant noves funcionalitats sense comprometre el sistema existent.',
+        icon: 'tabler:arrows-maximize',
+      },
+      {
+        title: 'Millor control i seguretat',
+        description:
+          'Solucions que permeten millorar la qualitat de dades a nivell empresarial i evitar possibles errors.',
+        icon: 'tabler:shield-check',
+      },
+    ]}
+  />
+
+  <!-- Introducció -->
+  <Content
+    tagline=""
+    title=""
+    subtitle=""
+    items={[
+      {
+        title: 'Empreses del sector industrial i logístic',
+        description:
+          'Necessiten automatitzar processos com la gestió d’inventaris, seguiment de comandes i optimització del transport, disposant una major eficiència operativa i control en temps real.',
+      },
+      {
+        title: 'E-commerce i plataformes de venda online',
+        description:
+          'Requereixen APIs per connectar catàlegs de productes, gestors de comandes, sistemes de facturació i passarel·les de pagament, millorant la sincronització i l’experiència del client.',
+      },
+      {
+        title: 'Empreses editorials i de contingut',
+        description:
+          'Poden optimitzar la publicació automàtica d’articles, l’organització de recursos multimèdia i la integració amb altres plataformes de distribució de continguts.',
+      },
+      {
+        title: 'Organitzacions amb sistemes múltiples',
+        description:
+          'Empreses que treballen amb diverses eines de gestió com CRMs, ERPs o sistemes de BI, que requereixen APIs per integrar i sincronitzar dades entre elles, evitant duplicitats i errors.',
+      },
+      {
+        title: 'Empreses amb catàlegs complexos',
+        description:
+          'Aquelles que necessiten gestionar grans volums de dades, com productes o serveis.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/pins-red-conectados.jpg',
+      alt: 'Imatge abstracta per connexions de processos i eines',
+    }}
+  >
+    <Fragment slot="preContent">
+      <h3 class="text-2xl font-bold tracking-tightsm:text-3xl mb-2">
+        Per a qui són útils les automatitzacions i APIs?
+      </h3>
+      <p class="text-muted">
+        Les automatitzacions són imprescindibles per a empreses que busquen agilitzar processos, millorar la integració de dades amb APIs i reduïr la possibilitat d'errors humans.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+        <div class="absolute inset-0 bg-lightgray"></div>
+      </Fragment>
+  </Content>
+
+  <Content
+    isReversed
+    tagline=""
+    title="Per què escollir gilsys per al desenvolupament amb APIs i automatitzacions?"
+    image={{
+      src: '~/assets/images/gilsys-automatizaciones.jpg',
+      alt: 'Solucions automatitzades',
+    }}
+    items={[
+      {
+        title: 'Experiència contrastada',
+        description:
+          'Amb anys d’experiència en programació d’automatitzacions i APIs, a gilsys coneixem els estàndards i les millors pràctiques de programació, oferint solucions robustes i estables.',
+        icon: 'tabler:certificate',
+      },
+      {
+        title: 'Enfocament personalitzat en cada projecte',
+        description:
+          'No apliquem eines genèriques. Treballem estretament amb cada client per entendre les seves necessitats i desenvolupar solucions a mida, totalment adaptades al seu context.',
+        icon: 'tabler:target',
+      },
+      {
+        title: 'Innovació',
+        description:
+          'Ens mantenim al dia amb les darreres tecnologies i innovacions per garantir que cada projecte estigui preparat per als reptes presents i futurs, amb una arquitectura moderna i escalable.',
+        icon: 'tabler:bulb',
+      },
+      {
+        title: 'Desplegaments amb mínim impacte',
+        description:
+          'Planifiquem i executem els desplegaments i actualitzacions per reduir o eliminar interrupcions en el servei, assegurant una transició fluida per als usuaris finals.',
+        icon: 'tabler:arrow-right-circle',
+      },
+    ]}
+  >
+    <Fragment slot="postContent">
+      <p class="text-muted">
+        Amb gilsys, les automatitzacions empresarials esdevenen solucions estratègiques per optimitzar processos i
+        incrementar la productivitat en qualsevol entorn empresarial. Contacta’ns per començar a millorar l’eficiència
+        de la teva empresa!
+      </p>
+    </Fragment>
+    
+  </Content>
+</Layout>

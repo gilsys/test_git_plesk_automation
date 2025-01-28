@@ -11,6 +11,8 @@ const {
   subtitle = await Astro.slots.render('subtitle'),
   tagline,
   content = await Astro.slots.render('content'),
+  preContent = await Astro.slots.render('preContent'),
+  postContent = await Astro.slots.render('postContent'),
   callToAction,
   items = [],
   columns,
@@ -28,7 +30,7 @@ const {
 <WidgetWrapper
   id={id}
   isDark={isDark}
-  containerClass={`max-w-7xl mx-auto ${isAfterContent ? 'pt-0 md:pt-0 lg:pt-0' : ''} ${classes?.container ?? ''}`}
+  containerClass={`wg-content max-w-7xl mx-auto ${isAfterContent ? 'pt-0 md:pt-0 lg:pt-0' : ''} ${classes?.container ?? ''}`}
   bg={bg}
 >
   <Headline
@@ -41,7 +43,13 @@ const {
       subtitle: 'max-w-3xl mx-auto sm:text-center text-xl text-muted dark:text-slate-400',
     }}
   />
+
+  
   <div class="mx-auto max-w-7xl p-4 md:px-8">
+    
+    {preContent && 
+      <div class="mb-12 text-lg" set:html={preContent} />}
+
     <div class={`md:flex ${isReversed ? 'md:flex-row-reverse' : ''} md:gap-16`}>
       <div class="md:basis-1/2 self-center">
         {content && <div class="mb-12 text-lg dark:text-slate-400" set:html={content} />}
@@ -78,17 +86,20 @@ const {
                 <Image
                   class="mx-auto w-full rounded-lg bg-gray-500 shadow-lg"
                   width={500}
-                  height={500}
+                  
                   widths={[400, 768]}
                   sizes="(max-width: 768px) 100vw, 432px"
                   layout="responsive"
                   {...image}
                 />
               )}
+              {/* height por defecto valia 500: height={500} */}
             </div>
           )
-        }
+        }      
       </div>
     </div>
+    {postContent && 
+      <div class="mt-12 text-lg" set:html={postContent} />}
   </div>
 </WidgetWrapper>

@@ -1,0 +1,333 @@
+---
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Prices from '~/components/widgets/Pricing.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Programació d’Aplicacions Mòbils',
+  description: `Programació d'aplicacions multiplataforma, híbrides, per iOS i Android, per mòbils i tablets a Apple Store i Google Play.`,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Section -->
+  <Hero tagline="Solucions a mida, amb disseny atractiu i tecnologia actual."
+  backgroundImage={{ alt:'Fons abstracte', src: '~/assets/images/dots/05.jpg'}}
+  >
+    <Fragment slot="title">
+      Programació d’<span class="text-accent highlight">Aplicacions per mòbils</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      Desenvolupem aplicacions multiplataforma, híbrides, per iOS i Android, per mòbils i tablets a Apple Store i Google
+      Play.
+    </Fragment>
+  </Hero>
+
+  <!-- Introducció -->
+
+  <Features3
+    title="Aplicacions híbrides natives o web"
+    tagline="Diversos enfocs per programar aplicacions mòbils"
+    subtitle="Creem aplicacions per a iOS i Android mitjançant tecnologies híbrides, ja sigui encapsulant aplicacions web en apps mòbils o programant amb tecnologies avançades que es compilen en codi natiu."
+  />
+
+  <Content
+    isReversed
+    tagline=""
+    title="Aplicacions híbrides web encapsulades"
+    subtitle="Es podrà disposar de l'eina en versió web responsive i d'una app instal·lable."
+    items={[
+      {
+        title: 'Codi reutilitzable',
+        description: `El mateix codi es pot utilitzar per a aplicacions mòbils i web.`,
+      },
+      {
+        title: 'Integració amb funcions natives, però limitades',
+        description: ` Mitjançant plugins, poden accedir a funcions bàsiques com càmera, GPS o notificacions push..`,
+      },
+      {
+        title: 'Distribució com a app',
+        description: `Es publiquen en botigues d’aplicacions, augmentant la visibilitat i la facilitat d’accés per part dels usuaris.`,
+      },
+    ]}
+    image={{
+      src: '~/assets/images/app-mosaic-mockups.jpg',
+      alt: "Disseny d'interfície mòvil",
+    }}
+  >
+    <Fragment slot="preContent">
+      <p class="text-muted">
+        Solucions programades utilitzan tecnologies que permeten crear aplicacions web, que posteriorment es poden
+        encapsular per funcionar com aplicació mòbil.
+      </p>
+    </Fragment>
+    <Fragment slot="postContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">Per a qui és útil?</h3>
+      <p class="text-muted">
+        Són ideals per a projectes que requereixen tant una interfície accessible des de <strong>navegadors web</strong>
+        estàndards, com una versió distribuïble a través de botigues d’aplicacions com <strong>Google Play</strong> o <strong
+          >Apple Store</strong
+        >.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Content
+    tagline=""
+    title="Aplicacions híbrides natives"
+    subtitle="Desenvolupament  enfocat exclusivament a dispositius mòbils, s'utilitzen tecnologies híbrides que optimitzen el procés de creació, mantenint una major integració amb funcions natives dels dispositius."
+    items={[
+      {
+        title: 'Funcionalitats natives',
+        description: `Accés complet a funcions del dispositiu com Bluetooth, biometria, accés a informació del dispositiu mòbil i altres elements avançats.`,
+      },
+      {
+        title: "Millor experiència d'usuari",
+        description: `Es desenvolupen per oferir un rendiment proper al d’una app nativa, però amb l’eficiència d’un codi compartit.`,
+      },
+      {
+        title: 'No compatibles amb web',
+        description: `Aquest tipus d’aplicació està exclusivament dissenyat per a mòbils i no es pot reutilitzar per a navegadors.`,
+      },
+    ]}
+    image={{
+      src: '~/assets/images/app-mockup.jpg',
+      alt: 'Apps multiplataforma',
+    }}
+  >
+    <Fragment slot="preContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">Solucions híbrides optimitzades</h3>
+      <p class="text-muted">
+        Desenvolupem aplicacions mòbils que es basen en tecnologies avançades per oferir una experiència d'usuari
+        fluida, aprofitant un sol codi per múltiples plataformes. Aquest enfoc permet que el desenvolupament sigui
+        eficient, aprofitant el potencial de cada dispositiu.
+      </p>
+    </Fragment>
+    <Fragment slot="postContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">Per a qui és útil?</h3>
+      <p class="text-muted">
+        Les aplicacions híbrides natives resulten útils sempre que es requereixi un accés a funcionalitats avançades del
+        dispositiu mòbil. També són bona opción quan no es requereix una versió web, o donat el cas, que aquesta tingui
+        requisits diferents als de l'app mòbil.
+      </p>
+    </Fragment>
+  </Content>
+
+  <Prices
+    title="Comparativa de les opcions híbrides"
+    subtitle="Cada tipologia ofereix avantatges i limitacions segons les necessitats del projecte."
+    prices={[
+      {
+        title: 'Apps híbrides web',
+        subtitle: 'Flexibilitat i compatibilitat.',
+        items: [
+          {
+            title: 'Flexibilitat',
+            description:
+              "L'usuari pot accedir des del navegador web o des d'una aplicació instal·lable en el seu dispositiu mòbil.",
+          },
+          {
+            title: 'Rendiment',
+            description: 'Correcte, però amb fluidesa inferior a aplicacions híbrides natives.',
+          },
+          {
+            title: "Experiència d'usuari",
+            description: 'Adequada, però no assoleix el nivell de qualitat de les apps híbrides natives.',
+          },
+          {
+            title: 'Costos',
+            description: 'Redueix el cost si es requereix tant una versió web com una app mòbil.',
+          },
+          {
+            title: 'Limitacions',
+            description: 'No pot accedir a funcionalitats natives avançades dels dispositius.',
+          },
+        ],
+      },
+      {
+        title: 'Apps híbrides natives',
+        subtitle: 'Rendiment i funcionalitat avançats.',
+        items: [
+          {
+            title: 'Flexibilitat',
+            description: 'Accés complet a funcionalitats natives, com Bluetooth, càmera, GPS i biometria.',
+          },
+          {
+            title: 'Rendiment',
+            description: 'Excel·lent, comparable al d’una aplicació 100% nativa.',
+          },
+          {
+            title: "Experiència d'usuari",
+            description: "Excel·lent, gràcies a la fluïdesa i integració amb l'entorn mòbil.",
+          },
+          {
+            title: 'Costos',
+            description: 'Més elevat sobretot si es requereix una web complementària.',
+          },
+          {
+            title: 'Limitacions',
+            description: 'No es pot reutilitzar el codi per a navegadors web.',
+          },
+        ],
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Prices>
+
+  <!-- Comparativa -->
+  <FAQs
+    title="Per què combinar aplicacions mòbils amb aplicacions web?"
+    subtitle="Les aplicacions mòbils sovint es complementen amb a <a href='#TODO' class='text-accent'>aplicació web</a> que centralitza la gestió i facilita el control operatiu."
+    items={[
+      {
+        title: 'Gestió centralitzada',
+        description:
+          'Configuració d’opcions, administració d’usuaris i supervisió de dades des d’un entorn web privat.',
+      },
+      {
+        title: 'Actualitzacions ràpides',
+        description: 'Canvis i millores en contingut aplicats i reflectits immediatament en l’aplicació mòbil.',
+      },
+      {
+        title: 'Sincronizació fluïda',
+        description: 'Comunicació constant entre la web i el mòbil per mantenir dades coherents i actualitzades.',
+      },
+      {
+        title: 'Anàlisi de mètriques',
+        description:
+          'Accés a estadístiques per analitzar i posteriorment millorar les funcionalitats de l’aplicació o dels seus continguts.',
+      },
+    ]}
+  />
+
+  <!-- Comparativa -->
+  <Features2
+    title="Com programem les aplicacions mòbils?"
+    subtitle=""
+    items={[
+      {
+        title: 'Eficiència en el desenvolupament',
+        description:
+          'Creem aplicacions híbrides amb un enfocament optimitzat, reduint costos i temps de desenvolupament sense sacrificar funcionalitat.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Flexibilitat en les funcionalitats',
+        description:
+          'Les nostres aplicacions poden accedir a funcions del dispositiu, com Bluetooth o notificacions push, gràcies a la integració amb tecnologies híbrides avançades.',
+        icon: 'tabler:adjustments-alt',
+      },
+      {
+        title: 'Gestió integrada amb web',
+        description:
+          'Complementem les aplicacions mòbils amb portals de gestió que permeten administrar configuracions, usuaris i dades en temps real.',
+        icon: 'tabler:plug-connected',
+      },
+      {
+        title: 'Escalabilitat i evolució',
+        description:
+          'Dissenyem aplicacions pensant en el futur, preparades per evolucionar amb noves funcionalitats a mesura que el projecte creixi.',
+        icon: 'tabler:arrows-maximize',
+      },
+      {
+        title: 'Disseny adaptat a cada projecte',
+        description:
+          'Prioritzem interfícies intuïtives i visuals, adaptades a les necessitats i expectatives del públic objectiu.',
+        icon: 'tabler:palette',
+      },
+    ]}
+  >
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-lightgray"></div>
+  </Fragment>
+  </Features2>
+
+
+  <!-- Comparativa amb aplicacions web -->
+  <Features
+    title="En què es diferències les apps mòbils híbrides de les aplicacions web?"
+    items={[
+        {
+          title: 'Accessibilitat',
+          description:
+            "Aplicacions mòbils híbrides requereixen instal·lació i no estan disponibles per equips d'escriptori; les aplicacions web són accessibles des de qualsevol navegador.",
+          icon: 'tabler:world',
+        },
+        {
+          title: 'Funcionalitats natives',
+          description:
+            'Les aplicacions mòbils tenen accés a funcions com càmera o Bluetooth, mentre que les web són limitades al navegador.',
+          icon: 'tabler:device-mobile',
+        },
+        {
+          title: 'Costos i temps de desenvolupament',
+          description:
+            'Les mòbils són més costoses però permeten funcionalitats avançades. Les web són més senzilles i adaptables.',
+          icon: 'tabler:currency-dollar',
+        },
+        {
+          title: 'Rendiment gràfic',
+          description: 'Les aplicacions mòbils són superiors per a tasques gràfiques exigents.',
+          icon: 'tabler:device-gamepad',
+        },
+        {
+          title: 'Actualització',
+          description:
+            'Actualitzar una web és molt més ràpid que fer-ho en un app, doncs les versions publicades a Google Play i Apple Store requereixen ser validades per Google i Apple respectivament.',
+          icon: 'tabler:refresh',
+        },
+      ]}
+  
+  />
+
+  <Content
+    isReversed
+    tagline=""
+    title="Per què confiar en gilsys per implementar la teva aplicació mòbil?"
+    subtitle=""
+    items={[
+      {
+        title: 'Experiència demostrada',
+        description: 'Som experts en desenvolupament d’aplicacions híbrides.',
+        icon: 'tabler:tools',
+      },
+      {
+        title: 'Desenvolupament responsable',
+        description: `Treballem amb bones pràctiques que permeten mantenir i evolucionar les aplicacions sense comprometre’n la qualitat.`,
+        icon: 'tabler:components',
+      },
+      {
+        title: 'Enfoc integral',
+        description:
+          "Creem ecosistemes complets que combinen aplicacions mòbils i eines d'adminsitració web per oferir solucions integrals.",
+        icon: 'tabler:search',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/app-programacion-diseno.jpg',
+      alt: "Disseny d'interfície mòvil",
+    }}
+  >
+    <Fragment slot="content">
+      No és fàcil trobar una empresa especialitzada en programació d'aplicacions, que hagi treballat amb <strong
+        >tecnologies híbrides natives</strong
+      > com amb <strong>tecnologies híbrides web</strong>.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+</Layout>

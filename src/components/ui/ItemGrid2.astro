@@ -20,7 +20,7 @@ const {
   items && (
     <div
       class={twMerge(
-        `grid gap-8 gap-x-12 sm:gap-y-8 ${
+        `ui-itemgrid-2 grid gap-8 gap-x-12 sm:gap-y-8 ${
           columns === 4
             ? 'lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2'
             : columns === 3
@@ -32,7 +32,7 @@ const {
         containerClass
       )}
     >
-      {items.map(({ title, description, icon, callToAction, classes: itemClasses = {} }) => (
+      {items.map(({ title, description, icon, callToAction, list, classes: itemClasses = {} }) => (
         <div
           class={twMerge(
             'relative flex flex-col intersect-once intersect-quarter intercept-no-queue motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade',
@@ -43,9 +43,16 @@ const {
           {(icon || defaultIcon) && (
             <Icon name={icon || defaultIcon} class={twMerge('mb-2 w-10 h-10', defaultIconClass, itemClasses?.icon)} />
           )}
-          <div class={twMerge('text-xl font-bold', titleClass, itemClasses?.title)}>{title}</div>
+          <h3 class={twMerge('text-xl font-bold', titleClass, itemClasses?.title)}>{title}</h3>
           {description && (
             <p class={twMerge('text-muted mt-2', descriptionClass, itemClasses?.description)} set:html={description} />
+          )}
+           {list && (
+            <ul class="feature-list">
+              {list.map((item) => (
+                <li class="mt-1">{item}</li>
+              ))}
+            </ul>
           )}
           {callToAction && (
             <div class="mt-2">

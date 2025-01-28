@@ -1,4 +1,5 @@
 ---
+import FAQs from '~/components/widgets/FAQs.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import Hero from '~/components/widgets/Hero.astro';
@@ -8,7 +9,8 @@ import Steps2 from '~/components/widgets/Steps2.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
-  title: 'Projectes de programació de software a Osona.',
+  title: 'Projectes d\'intel·ligència artificial i programació de software a Osona.',
+  description: 'Més de 20 anys desenvolupant projectes de software. Ens trobaràs prop de Vic, Barcelona, Catalunya.',
 };
 ---
 
@@ -16,21 +18,15 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero
-    tagline=""
-    image={{
-      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'gilsys - Empresa de desenvolupament de software',
-    }}
+    backgroundImage={{alt: 'Fons abstracte',  src: '~/assets/images/neutral/bg-4.jpg'}}
+    
   >
-    <Fragment slot="title">
-      gilsys = Experiència + qualitat.<br />
-      <span class="text-primary">20 anys creant software, web i apps.</span>
-    </Fragment>
+  <Fragment slot="title">
+    <span class="custom-gradient">gilsys</span> = Experiència + qualitat.
+  </Fragment>
 
     <Fragment slot="subtitle">
-      <div class="text-muted dark:text-slate-400 lg:text-md">
-        Oferim resultat professional, cumplint amb un alt nivell d’exigència, compromís i seriositat.
-      </div>
+        Som una empresa TIC d'Osona amb més de 20 anys d'experiència en programació de software, web i apps. Ara també <span class="custom-gradient">intel·ligència artificial</span>.
     </Fragment>
   </Hero>
 
@@ -39,22 +35,28 @@ const metadata = {
   <Steps2
     isReversed={true}
     title="Qui som?"
-    subtitle="Som un equip d'especialistes en la programació de software a mida, apps, desenvolupament d'aplicacions web i integració d'intel·ligència artificial."
+    subtitle=`Som un equip d'especialistes <strong>apassionats</strong> per la programació de software a mida, apps, desenvolupament d'aplicacions web i intel·ligència artificial.
+    <div class="mx-auto px-4 max-w-6xl font-medium py-4 sm:px-6 text-md bg-lightgray">
+    
+    Si vols contactar directament amb Jordi Gil Martí, fundador de gilsys, pots fer-ho a través de <a href="#TODO" class="text-accent">LinkedIn</a>.
+    </div>
+    `
+
     items={[
       {
         title: 'Història',
         description:
-          'gilsys va ser creat per en Jordi Gil Martí (LinkedIN) l’any 2004 amb l’idea d’aportar solucions innovadores i personalitzades basades en software lliure.',
+          'gilsys va ser creat l’any 2004 amb l’idea d’aportar solucions de programació de software, innovadores i personalitzades, basades en <a href="#TODO">software lliure</a>.',
       },
       {
         title: 'Equip actual',
         description:
-          "Som un equip reduït, amb diferents especialitats, però tots amb perfils tècnics. D'aquesta manera podem garantir qualitat, control i proximitat en el tracte.",
+          "Actualment, comptem amb un equip format per professionals amb perfils tècnics especialitzats. Mantenim una estructura reduïda per garantir la màxima qualitat en els nostres serveis, assegurar un control rigorós en cada projecte i oferir un tracte proper als nostres clients.",          
       },
       {
         title: 'Compromís de futur',
         description:
-          "Amb l'arribada de la intel·ligència artificial, cada dia apareixen nous perfils que prometen solucions tecnològiques <em>sense programar</em>. A gilsys, invertim en aprendre noves tecnologies i aportem el valora afegit de més 20 anys d'experiència desenvolupant projectes a mida, aportant rigor i fiabilitat en cada implementació.",
+          "A gilsys, <strong>invertim setmanalment</strong> en aprendre noves tecnologies i aportem el valora afegit de més 20 anys d'experiència desenvolupant projectes a mida, aportant rigor i fiabilitat en cada implementació.",
       },
     ]}
   />
@@ -64,7 +66,7 @@ const metadata = {
 
   <Features3
     title="Els nostres valors"
-    subtitle="Aquests són els nostres valors - Completar"
+    subtitle=""
     columns={3}
     isBeforeContent={true}
     items={[
@@ -77,7 +79,7 @@ const metadata = {
       {
         title: 'Experiència',
         description:
-          'Sabem el què fem. 20 anys en el sector ens han permès treballar en projectes d’àmbits molt diversos, amb clients a nivell nacional i internacional.',
+          'Sabem el què fem. Més de 20 anys en el sector ens han permès treballar en projectes d’àmbits molt diversos, amb clients a nivell nacional i internacional.',
         icon: 'tabler:template',
       },
       {
@@ -159,4 +161,142 @@ const metadata = {
     ]}
     classes={{ container: 'max-w-3xl' }}
   />
+
+  <FAQs
+  title="Preguntes freqüents"
+  subtitle="Dive into the following questions to gain insights into the powerful features that AstroWind offers and how it can elevate your web development journey."
+  tagline="FAQs"
+  classes={{ container: 'max-w-6xl' }}
+  items={[
+    {
+      title: 'Why AstroWind?',
+      description:
+        "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
+    },
+    {
+      title: 'What do I need to start?',
+      description:
+        'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
+    },
+    {
+      title: 'How to install the Astro + Tailwind CSS template?',
+      description:
+        "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
+    },
+    {
+      title: "What's something that you don't understand?",
+      description:
+        "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
+    },
+    {
+      title: 'What is something that you would like to try again?',
+      description:
+        "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
+    },
+    {
+      title: 'If you could only ask one question to each person you meet, what would that question be?',
+      description:
+        "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
+    },
+  ]}
+  ></FAQs>
+
+<FAQs
+title="Preguntes freqüents"
+subtitle="Respostes a les preguntes més habituals."
+tagline="FAQs"
+classes={{ container: 'max-w-6xl' }}
+items={[
+  {
+    title: 'Quins tipus de projectes desenvolupa gilsys?',
+    description:
+      'Oferim solucions a mida per aplicacions web, mòbils, APIs, integracions de sistemes, automatitzacions i intel·ligència artificial.',
+  },
+  {
+    title: 'Quin és el termini mitjà de desenvolupament d’un projecte?',
+    description:
+      'Depèn de la complexitat del projecte. Generalment, projectes petits poden durar unes setmanes, mentre que projectes més grans poden necessitar mesos.',
+  },
+  {
+    title: 'Oferiu suport tècnic després de la finalització d’un projecte?',
+    description:
+      'Sí, oferim serveis de manteniment i suport per assegurar que el sistema funcioni correctament i pugui evolucionar segons les necessitats.',
+  },
+  {
+    title: 'Amb quins sectors treballeu?',
+    description:
+      'Treballem amb sectors diversos com el logístic, industrial, retail, educació, sanitat, e-commerce, i altres.',
+  },
+  {
+    title: 'Podeu ajudar amb la migració de sistemes antics a noves plataformes?',
+    description:
+      'Sí, tenim experiència en la migració de sistemes i bases de dades cap a solucions més modernes i escalables.',
+  },
+  {
+    title: 'Quines són les vostres eines principals de desenvolupament?',
+    description:
+      'Treballem amb tecnologies modernes com frameworks web (React, Vue.js), plataformes mòbils (Flutter, React Native) i integracions amb intel·ligència artificial.',
+  },
+  {
+    title: 'Disposeu d’un equip d’UI/UX?',
+    description:
+      'Sí, tenim dissenyadors especialitzats en UI/UX que asseguren interfícies atractives i fàcils d’utilitzar.',
+  },
+  {
+    title: 'Què passa si es necessiten canvis enmig del projecte?',
+    description:
+      'Treballem de manera flexible i, si es requereixen ajustos, revisem el pressupost i el cronograma per adaptar-nos a les noves necessitats.',
+  },  
+  {
+    title: 'Quines són les condicions de pagament per a un projecte?',
+    description:
+      'Normalment, treballem amb un pagament inicial i pagaments parcials basats en les fites acordades amb el client.',
+  },
+  {
+    title: 'És possible començar un projecte amb un pressupost reduït?',
+    description:
+      'Sí, oferim solucions escalables que permeten començar amb un MVP (Minimum Viable Product) i ampliar-lo posteriorment.',
+  },
+  {
+    title: 'Treballeu amb projectes internacionals?',
+    description:
+      'Sí, hem col·laborat amb empreses a nivell nacional i internacional, oferint solucions adaptades a les seves necessitats.',
+  },
+  {
+    title: 'Treballeu amb metodologies àgils?',
+    description:
+      'Sí, utilitzem metodologies com Scrum o Kanban per garantir flexibilitat i una comunicació constant amb el client.',
+  },
+  {
+    title: 'Podeu integrar solucions d’intel·ligència artificial en projectes existents?',
+    description:
+      'Sí, podem afegir funcionalitats basades en IA a sistemes i aplicacions ja existents.',
+  },
+  {
+    title: 'Com gestioneu la confidencialitat de les dades del projecte?',
+    description:
+      'Signem acords de confidencialitat (NDA) i implementem mesures estrictes per protegir les dades dels nostres clients.',
+  },
+  {
+    title: 'Oferiu formació per als usuaris finals després de la implementació del projecte?',
+    description:
+      'Sí, podem proporcionar formació i documentació per ajudar els usuaris a utilitzar les noves eines o sistemes.',
+  }, 
+  {
+    title: 'Oferiu integracions amb eines de tercers?',
+    description:
+      'Sí, podem integrar solucions amb sistemes de tercers, com ERP, CRM o altres plataformes empresarials.',
+  },
+  {
+    title: 'Es pot fer una demostració del projecte abans de la seva entrega final?',
+    description:
+      'Sí, presentem una demo abans de la fase final per assegurar que compleix amb les expectatives del client.',
+  },
+  {
+    title: 'Quin suport oferiu durant el procés de desenvolupament?',
+    description:
+      'Treballem de manera col·laborativa amb el client i mantenim una comunicació constant durant totes les fases del projecte.',
+  },
+]}
+/>
 </Layout>

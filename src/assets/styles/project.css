@@ -95,15 +95,12 @@
   margin-top: 0;
 }
 
-.features3-itemgrid svg{
+.wg-features-3 .ui-itemgrid-2 svg{
   margin: 10px auto;
   margin-top: 0;
 }
 
-.features3-itemgrid > div:hover{
-  background-color: #9c0000;
-}
-.features3-itemgrid .more-info{
+.wg-features-3 .ui-itemgrid-2 .more-info{
   position: absolute;
   bottom: 24px;  
   left: 50%;
@@ -111,10 +108,177 @@
   width: max-content;
 }
 
-.features3-itemgrid > div{
+.wg-features-3 .ui-itemgrid-2 > div{
   padding-bottom: 100px;
+}
+
+
+@keyframes gradientAnimation {
+  0% {
+      background-position: 10% 50%;            
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 10% 50%;      
+  }
+}
+
+
+h1 .text-accent,
+.custom-gradient
+{
+  background: linear-gradient(270deg, 
+  rgb(64, 64, 64),
+  rgb(176, 0, 0),
+  rgb(0, 0, 0),
+  rgb(185, 0, 0),
+  rgb(255, 255, 255)
+  );
+  background-size: 400% 400%;
+  animation: gradientAnimation 8s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
+h2 a{
+  scroll-margin-top: 120px;
 }
 
 input[type="checkbox"] {
   accent-color: var(--aw-color-primary);;
+}
+
+
+.wg-hero .text-accent,
+.wg-hero .custom-gradient {
+  background: linear-gradient(270deg,
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 1),
+      rgb(200, 200, 200, 0.6),
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 1));
+  background-size: 400% 400%;
+  animation: gradientAnimation 8s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body.route-gilsys .wg-hero h1,
+body.route-gilsys .wg-hero p,
+body.route-home .wg-hero h1,
+body.route-home .wg-hero p
+{
+  color: #000;
+}
+
+body.route-home .wg-hero .text-accent,
+body.route-home .wg-hero .custom-gradient,
+body.route-gilsys .wg-hero .text-accent,
+body.route-gilsys .wg-hero .custom-gradient {
+  background: linear-gradient(270deg, 
+  rgba(0, 0, 0, 1),
+  rgba(0, 0, 0, 1),
+  rgba(0, 0, 0, 1),
+  rgba(0, 0, 0, 1),
+  rgba(0, 0, 0, 1),
+  rgba(255, 255, 255, 1),
+    rgba(176, 0, 0, 1),
+    rgba(176, 0, 0, 0.8),
+    rgba(255, 255, 255, 1),
+
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 1),
+    rgba(250, 50, 50, 1)
+  ); 
+  background-size: 400% 400%;
+  animation: gradientAnimation 8s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
+
+
+.wg-hero h1, .wg-hero p{
+  color: #FFF;
+}
+
+.dropdown-menu .has-children{
+  display: inline-block;
+}
+
+nav .dropdown-menu{
+  position: fixed;
+  left: 10vw;
+  width: 80vw;  
+}
+.scroll nav .dropdown-menu{  
+  top: 74px;
+}
+
+.wg-fourblocks img {
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  opacity: 0.9;
+}
+
+.wg-fourblocks img:hover {
+  transform: scale(1.05);  
+  opacity: 1;
+}
+
+
+
+
+.wg-hero img{  
+  animation: hueRotation 15s infinite linear;
+  object-position: bottom !important;
+}
+
+body.route-gilsys .wg-hero img,
+body.route-home .wg-hero img{  
+  animation: none;
+  object-position: top !important;
+}
+
+
+@keyframes hueRotation {
+  0% {
+    filter: hue-rotate(0deg) brightness(100%) saturate(100%);
+  }
+
+  25% {
+    filter: hue-rotate(90deg) brightness(120%) saturate(100%);
+  }
+
+  50% {
+    filter: hue-rotate(180deg) brightness(80%) saturate(80%);
+  }
+  
+  75% {
+    filter: hue-rotate(270deg) brightness(110%) saturate(30%);
+  }
+  
+  100% {
+    filter: hue-rotate(360deg) brightness(100%) saturate(70%);
+  }
 }

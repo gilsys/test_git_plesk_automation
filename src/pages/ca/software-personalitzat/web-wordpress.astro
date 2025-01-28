@@ -1,0 +1,309 @@
+---
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Prices from '~/components/widgets/Pricing.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Pàgines Web amb WordPress – Flexibilitat i Personalització',
+  description:
+    'Som especialistes en WordPress i oferim solucions personalitzades per a pàgines web, ampliant funcionalitats i optimitzant rendiment.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Section -->
+  <Hero tagline="Més enllà de WordPress, oferim flexibilitat i personalització pel teu projecte web"
+  backgroundImage={{alt: 'Fons abstracte',  src: '~/assets/images/dots/08.jpg'}}
+  >
+    <Fragment slot="title">
+      Pàgines web amb <span class="text-accent highlight">WordPress</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      Desenvolupament i personalització de pàgines web amb WordPress, amb funcionalitats avançades amb programació a
+      mida.
+    </Fragment>
+  </Hero>
+
+  <!-- Introducció -->
+  <Content
+    tagline="Venda online adaptada al teu negoci"
+    title="Què és una botiga online?"
+    subtitle="Plataformes per permetre comprar productes i gestionar les vendes."
+    items={[
+      {
+        title: 'Contingut atractiu i optimitzat per SEO',
+        description: `list: [
+          'Permet crear pàgines amb contingut optimitzat per a cercadors.',
+          'Atrau usuaris amb un disseny atractiu i una estructura ben definida.',
+        ]`,
+        icon: 'tabler:search',
+      },
+      {
+        title: 'Gestió de continguts amigable',
+        description: `list: [
+          'Facilita la gestió de continguts gràcies a una interfície intuïtiva.',
+          'Ideal per usuaris sense coneixements tècnics avançats.',
+        ]`,
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Integració de funcionalitats addicionals',
+        description: `list: [
+          'Afegir funcionalitats com galeries d’imatges, botigues online o blogs.',
+          'Compatible amb milers de plugins disponibles.',
+        ]`,
+        icon: 'tabler:components',
+      },
+      {
+        title: 'Comunitat àmplia i recursos externs',
+        description: `list: [
+          'Accés a una gran comunitat de desenvolupadors i usuaris.',
+          'Documentació extensa, temes i plugins per adaptar el projecte a mida.',
+        ]`,
+        icon: 'tabler:users',
+      },
+    ]    
+    }
+    image={{
+        src: '~/assets/images/wordpress-themes.jpg',
+
+      alt: 'Wordpress webs personalizades',
+    }}
+  >
+    <Fragment slot="preContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">WordPress és la base, programem la resta</h3>
+      <p class="text-muted">
+        WordPress és una de les plataformes més utilitzades per crear pàgines web gràcies a la seva flexibilitat,
+        facilitat d’ús i gran varietat de temes i plugins.
+      </p>
+      <p class="text-muted">
+        A gilsys, som experts en el desenvolupament de pàgines web basades en WordPress, i coneixem en profunditat el
+        codi de la plataforma, els millors mòduls i les tècniques per extendre'l i personalitzar-lo.
+      </p>
+      <p class="text-muted">
+        Podem crear amb plugins a mida, personalitzar plugins existents o adaptar-los seguint bones pràctiques de
+        programació, assegurant que les funcionalitats personalitzades siguin compatibles amb futures actualitzacions de
+        la plataforma.
+      </p>
+    </Fragment>
+    <Fragment slot="content">
+      <p>
+        WordPress és una eina molt versàtil i intuïtiva, ideal per a aquells projectes que necessiten un disseny
+        atractiu i una gestió de continguts estàndard amb opcions de personalització.
+      </p>
+    </Fragment>
+    <Fragment slot="postContent">
+      <h3 class="text-2xl font-bold tracking-tightsm:text-3xl mb-2">Per a qui és útil?</h3>
+      <p class="text-muted">
+        WordPress és perfecte per a petites i mitjanes empreses que necessiten una presència en línia professional,
+        creadors de contingut que busquen gestionar blogs i multimèdia amb facilitat, negocis digitals que volen
+        implementar funcionalitats d'e-commerce amb WooCommerce, i organitzacions amb pressupost limitat que requereixen
+        una solució assequible, potent i escalable.
+      </p>
+    </Fragment>
+  </Content>
+
+  <Content
+    isReversed
+    tagline=""
+    title="Per què escollir WordPress per la teva pàgina web?"
+    items={[
+      {
+        title: 'Crear pàgines atractives i optimitzades per SEO',
+        description:
+          'WordPress ofereix les eines necessàries per dissenyar pàgines amb contingut optimitzat per a cercadors, millorant la visibilitat i l’atractiu per als usuaris.',
+      },
+      {
+        title: 'Facilitat en la gestió de continguts',
+        description:
+          'La seva interfície amigable permet gestionar continguts amb facilitat, fins i tot per a usuaris sense coneixements tècnics.',
+      },
+      {
+        title: 'Integració de funcionalitats addicionals',
+        description:
+          'Afegir funcionalitats com galeries d’imatges, botigues online o formularis és senzill gràcies a la gran varietat de plugins disponibles.',
+      },
+      {
+        title: 'Accés a una comunitat àmplia i recursos externs',
+        description:
+          'Milers de temes, plugins i una gran quantitat de documentació fan que WordPress sigui una plataforma versàtil i recolzada per una comunitat activa.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/wordpress-web-personalizada.jpg',
+      alt: 'Imagen de mostra de plantilla de WordPress',
+    }}
+  >
+    <Fragment slot="preContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">La plataforma més popular</h3>
+      <p class="text-muted">
+        WordPress és una eina molt versàtil i intuïtiva, ideal per a aquells projectes que necessiten una gestió de
+        continguts estàndard amb opcions de personalització.
+      </p>
+    </Fragment>
+    <Fragment slot="postContent">
+      <h3 class="text-2xl font-bold tracking-tightsm:text-3xl mb-2">Limitacions de rendiment</h3>
+      <p class="text-muted">
+        Tot i ser molt versàtil, WordPress pot presentar limitacions de rendiment en comparació amb pàgines web ràpides
+        desenvolupades amb tecnologies per <a class="text-accent" href="#TODO">webs d'alt rendiment</a>, com les que
+        programem a gilsys.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Prices
+    title="Comparativa WordPress i <a href='#TODO'>Pàgines web d'alt rendiment</a>"
+    subtitle="Cada plataforma ofereix avantatges segons, cal escollir segons les necessitats de cada projecte."
+    prices={[
+      {
+        title: 'WordPress',
+        subtitle: 'Solució intuïtiva i popular amb una àmplia comunitat.',
+        items: [
+          {
+            title: 'Rendiment',
+            description: 'Pot ser limitat amb molts plugins o continguts pesats.',
+          },
+          {
+            title: 'Facilitat d’ús',
+            description: 'Interfície intuïtiva i amigable per a usuaris sense coneixements tècnics.',
+          },
+          {
+            title: 'Personalització',
+            description: 'Gran varietat de plugins i temes; personalitzable amb extensió de plugins.',
+          },
+          {
+            title: 'SEO i contingut',
+            description: 'Excel·lent per a blogs i pàgines informatives amb optimitzacions SEO estàndard.',
+          },
+          {
+            title: 'Actualitzacions i manteniment',
+            description: 'Senzill gràcies al sistema integrat de WordPress.',
+          },
+          {
+            title: 'Escalabilitat',
+            description: 'Adequat per a projectes mitjans; limitat amb altes exigències de rendiment.',
+          },
+        ],
+      },
+      {
+        title: 'Pàgines Web Ràpides',
+        subtitle: 'Solució optimitzada i feta a mida per a projectes avançats.',
+        items: [
+          {
+            title: 'Rendiment',
+            description: 'Altíssim, gràcies a un codi optimitzat i lleuger.',
+          },
+          {
+            title: 'Facilitat d’ús',
+            description: 'Requereix més coneixements tècnics per gestionar continguts.',
+          },
+          {
+            title: 'Personalització',
+            description: 'Totalment personalitzable des de zero segons els requisits específics.',
+          },
+          {
+            title: 'SEO i contingut',
+            description: 'Pot ser més optimitzada per velocitat i rendiment SEO tècnic.',
+          },
+          {
+            title: 'Actualitzacions i manteniment',
+            description: 'Pot requerir més suport tècnic depenent de la configuració.',
+          },
+          {
+            title: 'Escalabilitat',
+            description: 'Ideal per a projectes amb requisits tècnics elevats o grans volums de trànsit.',
+          },
+        ],
+      },
+    ]}
+  />
+
+  <FAQs
+    title="Quan escollir WordPress i quan optar per <a href='#TODO'>Pàgines web d'alt rendiment</a>"
+    subtitle=""
+    tagline=""
+    heading=""
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'WordPress',
+        description:
+          'És la millor opció per a projectes que necessiten una gestió senzilla i estàndard de continguts, com blogs, pàgines corporatives o petites botigues online. Permet una ràpida implementació gràcies a la seva àmplia gamma de plugins i temes.',
+      },
+      {
+        title: "Pàgines web d'alt rendiment",
+        description: `Si el projecte requereix un rendiment òptim, càrregues ultra-ràpides, o funcionalitats SEO avançades, les pàgines web ràpides són l’opció ideal. Estan dissenyades des de zero amb tecnologies modernes per garantir velocitat, escalabilitat i seguretat.
+      <br><br>Pots conèixer més detalls sobre les pàgines web ràpides que oferim a gilsys.
+      `,
+        callToAction: {
+          class: 'more-info text-accent',
+          text: 'Més informació (TODO USAR BOTON)',
+          href: '#TODO',
+        },
+      },
+    ]}
+  />
+
+  <Content
+    isReversed
+    tagline=""
+    title="Per què confiar en gilsys per implementar el teu portal en WordPress?"
+    items={[
+        {
+          title: 'Coneixement profund del codi',
+          description:
+            'Gràcies a la nostra experiència amb WordPress, podem optimitzar la plataforma segons els requeriments específics de cada projecte, assegurant un rendiment òptim.',
+          icon: 'tabler:tools',
+        },
+        {
+          title: 'Personalització i ampliació de plugins',
+          list: [
+              'Desenvolupem plugins personalitzats seguint bones pràctiques per garantir sostenibilitat i compatibilitat.',
+              'Adaptem mòduls comercials o gratuïts per ajustar-los completament als objectius del projecte.'
+          ],
+          icon: 'tabler:components',
+        },
+        {
+          title: 'Optimització SEO i rendiment',
+          description:
+            'Implementem tècniques avançades per millorar la velocitat de càrrega i el posicionament SEO, assegurant que la pàgina compleixi amb els estàndards del mercat digital.',
+          icon: 'tabler:search',
+        },
+        {
+          title: 'Facilitat de manteniment',
+          description:
+            'Ens assegurem que les personalitzacions no interfereixin amb futures actualitzacions de WordPress o dels seus plugins, mantenint la pàgina funcional a llarg termini.',
+          icon: 'tabler:recycle',
+        },
+        {
+          title: 'Focalització en resultats',
+          description:
+            'Proposem la solució més adequada, sigui WordPress o una pàgina ràpida, segons les necessitats específiques del projecte, evitant implementacions innecessàries.',
+          icon: 'tabler:target',
+        },
+      ]}
+      
+    image={{
+      src: '~/assets/images/gilsys-programacion-web-wordpress.jpg',
+      alt: 'Programació de webs amb WordPress',
+    }}
+  >
+    <Fragment slot="content">
+      No és fàcil trobar una empresa especialista en WordPress, que pugui personalitzar a nivell de codi la plataforma i
+      pugui extendre-la programant plugins a mida.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+</Layout>

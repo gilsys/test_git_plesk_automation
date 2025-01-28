@@ -1,0 +1,263 @@
+---
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Gestió de Clients amb CRM Personalitzat – Gilsys',
+  description:
+    'Millora la gestió de clients amb un CRM personalitzat. Centralitza informació, automatitza processos i optimitza vendes amb una solució a mida per al teu negoci.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="Millora la gestió de clients amb un CRM personalitzat."
+  backgroundImage={{alt: 'Fons abstracte',  src: '~/assets/images/dots/25.jpg'}}
+  >
+    <Fragment slot="title"
+      >Gestió de <span class="text-accent highlight">Clients</span> amb un CRM Personalitzat</Fragment
+    >
+    <Fragment slot="subtitle">
+      Centralitza informació, automatitza processos i optimitza vendes amb una solució a mida per al teu negoci.
+    </Fragment>
+  </Hero>
+
+  <Content
+    isReversed
+    tagline=""
+    title="Què és un CRM i per què és important?"
+    subtitle="Un CRM és clau per gestionar les relacions amb els clients de manera eficient i estructurada."
+    items={[
+      {
+        title: 'Centralització de dades',
+        description: 'Tota la informació de clients en un sol lloc, accessible per a tot l’equip.',
+      },
+      {
+        title: 'Automatització de processos',
+        description: 'Redueix tasques manuals com l’enviament de correus o seguiments.',
+      },
+      {
+        title: 'Anàlisi i informes',
+        description: 'Genera informes clars sobre vendes, clients i estratègies comercials.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/crm-gestion-clientes.jpg',
+      alt: 'CRM per gestionar clients',
+    }}
+  >
+    <Fragment slot="preContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">
+        Gestiona les relacions amb els teus clients de manera estructurada
+      </h3>
+      <p class="text-muted">
+        La gestió de clients és una de les àrees més importants per a qualsevol empresa que vulgui oferir un servei
+        eficient i mantenir una relació sòlida amb els seus clients. Utilitzar un CRM (Customer Relationship Management)
+        permet centralitzar tota la informació de clients, optimitzar processos comercials i millorar la comunicació
+        interna i externa.
+      </p>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="text-muted">
+        Un CRM és un sistema que permet gestionar les relacions amb els clients de manera eficient i estructurada. Amb
+        un CRM, pots organitzar informació clau, com dades de contacte, històric de comunicacions, seguiment de vendes i
+        gestió de tasques.
+      </p>
+      <p class="text-muted">Disposar d’un CRM personalitzat proporciona:</p>
+    </Fragment>
+
+    <Fragment slot="postContent">
+      <h3 class="text-2xl font-bold tracking-tightsm:text-3xl mb-2">Per a qui és útil?</h3>
+      <p class="text-muted">
+        A Gilsys, treballem amb solucions CRM flexibles que es poden adaptar a les necessitats específiques de cada
+        empresa. Aquestes plataformes es poden ampliar i personalitzar amb mòduls a mida, garantint que el sistema
+        compleixi amb els requeriments concrets del teu negoci.
+      </p>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Features3
+    id="features-services"
+    title="Quines funcionalitats pot tenir un CRM personalitzat?"
+    
+    subtitle="Un CRM és molt més que una base de dades de clients. Les seves funcionalitats poden ser ampliades i personalitzades per adaptar-se al funcionament específic de cada empresa"
+    items={[
+      {
+        title: 'Gestió de contactes i clients',
+        description: `list: [
+          'Registre complet de clients amb dades personals, preferències i històric de comunicacions.',
+          'Classificació de clients segons categories (clients potencials, recurrents, inactius).',
+        ]`,
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Seguiment de vendes i oportunitats',
+        description: `list: [
+          'Monitoritza el cicle de vendes des del primer contacte fins al tancament.',
+          'Assignació d'oportunitats a membres de l'equip per garantir un seguiment adequat.',
+        ]`,
+        icon: 'tabler:chart-bar',
+      },
+      {
+        title: 'Gestió de tasques i projectes',
+        description: `list: [
+          'Creació i assignació de tasques relacionades amb clients o vendes.',
+          'Control de projectes comercials amb calendaris i recordatoris.',
+        ]`,
+        icon: 'tabler:clipboard-check',
+      },
+      {
+        title: 'Automatització de processos',
+        description: `list: [
+          'Enviament automàtic de correus de seguiment, recordatoris o promocions.',
+          'Generació automàtica d’informes comercials.',
+        ]`,
+        icon: 'tabler:repeat',
+      },
+      {
+        title: 'Facturació i gestió financera',
+        description: `list: [
+          'Creació de pressupostos, factures i rebuts vinculats als clients.',
+          'Integració amb sistemes comptables per sincronitzar informació financera.',
+        ]`,
+        icon: 'tabler:currency-dollar',
+      },
+      {
+        title: 'Anàlisi i informes personalitzats',
+        description: `list: [
+          'Creació de gràfics i informes per analitzar vendes, retenció de clients i oportunitats perdudes.',
+          'Generació d'indicadors clau per millorar l’eficiència comercial.',
+        ]`,
+        icon: 'tabler:chart-pie',
+      },
+      {
+        title: 'Integracions amb altres eines',
+        description: `list: [
+          'Connexió amb plataformes ERP, CRM, eines de màrqueting o aplicacions de correu electrònic.',
+          'Sincronització de dades en temps real per unificar la informació empresarial.',
+        ]`,
+        icon: 'tabler:plug-connected',
+      },
+    ]
+    }
+  />
+
+  <Content
+    isReversed
+    tagline=""
+    title="CRM Ampliat amb mòduls"
+    subtitle=""
+    items={[
+      {
+        title: 'Gestió de campanyes de màrqueting',
+        description: 'Planificació, execució i seguiment de campanyes directament des del CRM.',
+      },
+      {
+        title: 'Control de visites comercials',
+        description: 'Registre i seguiment de visites presencials amb clients o distribuïdors.',
+      },
+      {
+        title: 'Gestió documental',
+        description:
+          ' Arxiu i accés ràpid a documents relacionats amb els clients, com contractes o pressupostos.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/crm-marketing-flujo.jpg',
+      alt: 'Mòduls per softawre CRM',
+    }}
+  >
+    <Fragment slot="preContent">
+      <p>
+        Un CRM flexible permet afegir mòduls a mida que cobreixin necessitats específiques de cada negoci. Alguns exemples de mòduls personalitzats inclouen:
+      </p>
+    </Fragment>
+    <Fragment slot="postContent">
+      <p>
+        Aquest enfocament permet que el CRM no només s’adapti a les operacions actuals, sinó que també pugui evolucionar amb el creixement del negoci.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Features
+    id="benefits"
+    tagline="Per què utilitzar un CRM personalitzat?"
+    title="Beneficis d’un CRM personalitzat"
+    subtitle="Un CRM a mida pot transformar la gestió de clients i processos comercials en una eina estratègica."
+    items={[
+      {
+        title: 'Augment de l’eficiència comercial',
+        description: 'Optimitza processos i redueix tasques manuals, permetent un seguiment més acurat.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Millora de la comunicació',
+        description: 'Centralitza informació per evitar errors i garantir una atenció al client excel·lent.',
+        icon: 'tabler:message-circle',
+      },
+      {
+        title: 'Decisions informades',
+        description: 'Accés a informes detallats i anàlisis per prendre decisions estratègiques amb confiança.',
+        icon: 'tabler:chart-pie',
+      },
+      {
+        title: 'Escalabilitat i adaptabilitat',
+        description: 'Amb mòduls a mida, el CRM creix amb el negoci, evitant costos innecessaris a llarg termini.',
+        icon: 'tabler:arrows-maximize',
+      },
+    ]}
+  />
+
+  <Content
+    isReversed
+    tagline=""
+    title="Per què implementar un CRM amb Gilsys?"
+    subtitle=""
+    items={[
+      {
+        title: 'Solucions a mida',
+        description: 'Desenvolupem mòduls personalitzats per adaptar el CRM a les operacions diàries del teu negoci.',
+      },
+      {
+        title: 'Integració amb altres sistemes',
+        description: 'Connectem el CRM amb les eines que ja utilitzes, millorant la gestió i flux de dades.',
+      },
+      {
+        title: 'Honestedat i claredat',
+        description:
+          'Proposem solucions pràctiques i eficients, evitant implementar eines excessivament complexes o cares.',
+      },
+      {
+        title: 'Experiència demostrada',
+        description:
+          'Hem ajudat diverses empreses a optimitzar la gestió de clients i millorar els seus resultats comercials.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/gilsys-crm.jpg',
+      alt: 'Operadores gesionant clients amb softawre',
+    }}
+  >
+    <Fragment slot="postContent">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Contacta amb Gilsys</h3>
+      <p>
+        Si estàs pensant en implementar o optimitzar un CRM personalitzat per al teu negoci, contacta amb nosaltres.
+        Transformarem la gestió de clients en un avantatge competitiu.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+</Layout>

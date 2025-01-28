@@ -1,0 +1,221 @@
+---
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Gestió de Productes amb Pimcore',
+  description:
+    'Centralitza i personalitza la gestió de dades empresarials amb Pimcore, adaptat a les necessitats específiques del teu negoci.',
+};
+---
+
+<Layout metadata={metadata}>
+
+  <Hero tagline="Unifica en una única plataforma i optimitza la gestió de productes."
+  backgroundImage={{alt: 'Fons abstracte',  src: '~/assets/images/dots/30.jpg'}}
+  >
+    <Fragment slot="title"><span class="text-accent highlight">Gestió de productes</span> amb Pimcore</Fragment>
+    <Fragment slot="subtitle">
+      Amb Pimcore podràs centralitzar dades de productes PIM i recursos multimèdia DAM, tractar-les, enriquir-les i implementar integracions multicanal.
+    </Fragment>
+  </Hero>
+
+  
+  <Content    
+    isReversed
+    tagline=""
+    title="Què és Pimcore"
+    subtitle='Pimcore és una plataforma de codi obert dissenyada per centralitzar i gestionar dades de productes de manera eficient i personalitzada. '
+    items={[
+      {
+        title: 'Gestió centralitzada de productes',
+        description:
+          'Permet unificar dades com especificacions tècniques, preus, imatges i descripcions en una única plataforma.',
+      },
+      {
+        title: 'Integració multicanal',
+        description: 'Permet implementar sincronitzacions de dades amb botigues online, marketplaces, ERPs i altres sistemes.',
+      },
+      {
+        title: 'Automatització de processos',
+        description: 'Redueix tasques manuals amb fluxos de treball personalitzats.',
+      }
+    ]}
+    image={{
+      src: '~/assets/images/pimcore-diagrama.jpg',
+      alt: 'Colorful Image',
+    }}
+  >
+    <Fragment slot="preContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">
+        Si la teva empresa disposa de molts productes, la solució és un PIM
+      </h3>
+      <p class="text-muted">
+        Pimcore és molt més que un sistema de gestió de productes; és una de les plataformes més conegudes per gestionar, organitzar i distribuir informació de producte de manera centralitzada. Gràcies a la seva flexibilitat, Pimcore es pot ampliar i personalitzar amb mòduls a mida, convertint-lo en una solució única per a cada empresa.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+  <Content    
+  isAfterContent={true}   
+    items={[
+      {
+        title: 'Gestió de continguts (PIM i DAM)',
+        description: 'Pimcore inclou funcions per gestionar actius digitals i continguts relacionats amb productes.',
+      },
+      {
+        title: 'Programació a mida de Pimcore',
+        description:
+          'Cada PIM és únic, cal programar-lo a mida sobre la base que ofereix i ampliar-lo amb mòduls per cobrir necessitats concretes, com integracions amb eines d\'intel·ligència artificial o funcions avançades.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/pimcore-demo.jpg',
+      alt: 'Colorful Image',
+    }}
+  >
+    
+    <Fragment slot="postContent">
+      <h3 class="text-2xl font-bold tracking-tightsm:text-3xl mb-2">Per a qui és útil?</h3>
+      <p class="text-muted">       
+        És especialment útil per a empreses que treballen amb grans catàlegs de productes, múltiples canals de distribució o necessiten unificar informació i processos.        
+      </p>
+    </Fragment>  
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>  
+  </Content>
+
+  <Features2
+    id="features"
+    tagline="Per què escollir Pimcore?"
+    title="Beneficis del Pimcore"
+    subtitle="TODO"
+    items={[
+      {
+        title: 'Plataforma flexible i escalable',
+        description:
+          'Pimcore no és un sistema rígid ni tancat. La seva estructura flexible permet adaptar-se completament a les necessitats específiques de cada empresa, dissenyar un model de dades i estructura a mida i créixer amb el negoci.',
+        icon: 'tabler:arrows-maximize',
+      },
+      {
+        title: 'Codi obert sense costos de llicència',
+        description:
+          'Pimcore ofereix una versió community de codi obert, significa que no hi ha costos recurrents per llicències. Això redueix les despeses a llarg termini i ofereix un major control sobre la plataforma.',
+        icon: 'tabler:license',
+      },
+      {
+        title: 'Gestió multicanal',
+        description:
+          'Centralitza totes les dades de productes en un sol lloc i permet distribuir-les automàticament a <strong>diversos canals com botigues online, catàlegs impresos o aplicacions mòbils</strong>, mantenint la coherència i qualitat de les dades evitant duplicitats.',
+        icon: 'tabler:share',
+      },      
+      {
+        title: 'Control per rols i perfils',
+        description:
+          "Permet establir regles d'accés a diferents tipus d'usuari i perfils, per poder limitar l'accés a determinats continguts i funcionalitats.",
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Automatització i eficiència',
+        description:
+          'Pimcore permet crear fluxos de treball que redueixen tasques repetitives, com actualitzacions de catàlegs, sincronització d’estocs o generació d’informes.',
+        icon: 'tabler:repeat',
+      },
+      {
+        title: 'Comunitat activa i suport tècnic',
+        description:
+          'Amb una comunitat activa i nombrosos desenvolupadors al voltant del món, Pimcore és una plataforma en constant evolució, amb actualitzacions freqüents i suport ampli.',
+        icon: 'tabler:users',
+      },
+    ]}
+  />
+
+  <Features
+    id="features"
+    tagline=""
+    title="Casos d'ús per a Pimcore"
+    subtitle="Pimcore és una eina molt potent, la qual es pot programar per oferir funcionalitats ben diverses segons els objectius de cada empresa."
+    items={[
+      {
+        title: 'Gestió de grans catàlegs de productes',
+        description:
+          "Importar milers de productes d'una o diverses fonts de dades com documents csv, excels, ERP\'s o bases de dades externes, centralitzar-los a PIM i enriquir de forma centralitzada la seva informació amb camps creats desde la plataforma.",
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Distribució de dades a múltiples canals',
+        description:
+          'Si la teva empresa ven en diversos canals, Pimcore permet preparar exportacions automàtiques de productes a botigues online com prestashop o woocommerce, marketplaces com amazon o catàlegs físics.',
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Gestionar grans bancs de recursos gráfics',
+        description:
+          'Empreses amb molts productes necessiten organitzar la informació gràfica dels mateixos. Pimcore permet realtizar aquesta gestió amb el mòdul DAM.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Control de cicle de vida',
+        description: "Pimcore permet crear workflows personalitzats per gestionar de manera eficient totes les etapes del cicle de vida d’un producte, des de la creació, validació de dades fins a la distribució o publicació en diferents canals de sortida.",
+        icon: 'tabler:graph',
+      },
+    ]}
+  />
+
+  <Content
+    isReversed
+    tagline="No és fàcil trobar una empresa especialista en Pimcore"
+    title="Per què escollir gilsys?"
+    items={[
+      {
+        title: 'Especialistes en programació',
+        description:
+          'Ens assegurem que Pimcore s’adapti completament al teu model de negoci, desenvolupant mòduls i funcionalitats específiques, doncs som una empresa experta en la programació de software.',
+        icon: 'tabler:building',
+      },
+      {
+        title: 'Integracions sense problemes',
+        description:
+          "Els anys d'experiència ens permeten coneixer moltes tecnologies diferents, pel que facilita la implementació de connectors a mida en cas de requerir-se per importar o exportar informació a canals d'entrada o sortida concrets.",
+        icon: 'tabler:chart-pie',
+      },
+      {
+        title: 'Manteniment i optimització',
+        description:
+          "No només implementem Pimcore, també oferir la possibiliat de disposar d'un servei de manteniment a nivell d'actualitzacions, perquè funcioni de manera eficient a llarg termini.",
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Enfoc pràctic',
+        description: 'Recomanem solucions que aportin valor real, evitant implementar funcionalitats innecessàries.',
+        icon: 'tabler:headset',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/pimcore-gestion-productos.jpg',
+      alt: 'Pimcore Logo',
+    }}
+  >
+    <Fragment slot="postContent">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        <a href="" class="text-accent">Consultoria tecnològica</a> prèvia a la implementació de Pimcore
+      </h3>
+      <p>
+      Implementar Pimcore no és una tasca senzilla ni immediata, ja que sol implicar canvis significatius en els fluxos de treball de l'empresa. Abans de començar, és essencial conèixer en profunditat les dades, processos i objectius de transformació digital del negoci. Per això, es realitza una <a href="#" class="text-accent">consultoria tecnològica</a> prèvia per analitzar les necessitats específiques i definir una proposta personalitzada per a la implementació del PIM.
+      </p>
+
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+</Layout>

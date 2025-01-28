@@ -8,11 +8,15 @@ import Hero from '~/components/widgets/Hero.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import Layout from '~/layouts/PageLayout.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+import { header } from '~/i18n/ui.ts';
 
 const metadata = {
   title: 'About us',
   description: 'About us',
 };
+
+const u = useRoutes(getLangFromUrl(Astro.url));
 ---
 
 <Layout metadata={metadata}>
@@ -22,17 +26,20 @@ const metadata = {
     id="hero-home"
     tagline=""
     actions={[
-      { variant: 'primary', target: '_blank', text: 'Get Started', href: 'https://github.com/onwidget/astrowind' },
-      { text: 'Learn more', href: '#features' },
+      { variant: 'primary', target: '_blank', text: 'Sol·licitar pressupost', href: u('contact') },
+      { text: 'Serveis', href: '#serveis' },
     ]}
-    backgroundImage={{ src: '~/assets/images/bg-1.jpg', alt: 'AstroWind Hero Image' }}
+    backgroundImage={{
+      src: '~/assets/images/neutral/bg-1.jpg',
+      alt: 'Fons abstracte, inspirat en tecnologia i software',
+    }}
   >
     <Fragment slot="title">
       Programació a mida de
-      <a href="#" class="text-accent highlight" title="TODO SEO">software</a>,
-      <a href="#" class="text-accent highlight" title="TODO SEO">apps</a>,
-      <a href="#" class="text-accent highlight" title="TODO SEO">plataformes web</a> i
-      <a href="#" class="text-accent highlight" title="TODO SEO">IA</a><br />
+      <span class="custom-gradient">software</span>,
+      <span class="custom-gradient">apps</span>,
+      <span class="custom-gradient">plataformes web</span> i
+      <span class="custom-gradient">IA</span><br />
     </Fragment>
 
     <Fragment slot="subtitle">
@@ -40,150 +47,46 @@ const metadata = {
         Més de <span class="text-accent highlight">20 anys</span> convertint idees innovadores en projectes d'èxit.
       </span>
     </Fragment>
-
-    
   </Hero>
 
+  <Features
+    title="Som una empresa especialitzada en <span class='custom-gradient'>programació de software</span>"
+    subtitle=`Oferim serveis de desenvolupament d’aplicacions web i mòbils, programació de software personalitzat i integració d’intel·ligència artificial, tot adaptat a les necessitats específiques de cada projecte.`
+  />
+
   <FourBlocks
-    id="blog"
-    title="Serveis"
-    information={`Ens apassiona el que fem, aportem solucions que s'adapten al que necessita la teva empresa, no enfocar-nos a cumplir objectius de ventes.`}
+    id="serveis"
+    title="<a name='serveis'>Serveis</a>"
+    information={``}
     blocks={[
       {
-        link: '#',
-        title: 'Software a mida',
-        excerpt: 'Desenvolupem utilitzant la tecnologia idònea per a cada projecte, programant des de zero.',
-        image:
-          'https://elements-resized.envatousercontent.com/envato-shoebox/153d/55ec-8ac2-4e33-9366-7613f939d934/IMG_9920.jpg?w=1600&cf_fit=scale-down&mark-alpha=18&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark4.png&q=85&format=auto&s=726bfe78ceb96bf256ccec149d387fea13c6afdad518f228cfb21a7cc6524c4e',
-        links: [
-          {
-            href: '#',
-            title: 'Eines i plataformes online',
-            text: 'Eines i plataformes online',
-          },
-          {
-            href: '#',
-            title: 'Aplicacions per mòbils',
-            text: 'Aplicacions per mòbils',
-          },
-          {
-            href: '#',
-            title: 'Pàgines web ràpides',
-            text: 'Pàgines web ràpide',
-          },
-          {
-            href: '#',
-            title: "Programació d'APIs",
-            text: "Programació d'APIs",
-          },
-          {
-            href: '#',
-            title: "Programació d'algoritmes",
-            text: "Programació d'algoritmes",
-          },
-        ],
+        link: u('development'),
+        title: header['ca']['links'].find((link) => link._id === 'services').links.find((link) => link._id === 'development').text,
+        excerpt: 'Desenvolupem utilitzant la tecnologia idònea per a cada projecte, creant eines completament noves.',
+        image: '~/assets/images/programacion-software-a-medida.jpg',
+        links: header['ca']['links'].find((link) => link._id === 'services').links.find((link) => link._id === 'development').links,
       },
       {
-        link: '#',
-        title: 'Software adaptat',
-        excerpt: 'Adaptem i ampliem software existent per implementar els requisits del projecte.',
-        image:
-          'https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/2d/4e/e9/7e/c2/v1_E10/E103DLMQ.jpg?w=1600&cf_fit=scale-down&mark-alpha=18&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark4.png&q=85&format=auto&s=24f66ae43e68453e834f4ef97d589f17578b001b8bb08a5a77d227c537c4f31a',
-        links: [
-          {
-            href: '#',
-            title: '#',
-            text: 'Gestió de clients',
-          },
-          {
-            href: '#',
-            title: '#',
-            text: 'Gestió de productes',
-          },
-          {
-            href: '#',
-            title: '#',
-            text: 'Business Intelligence',
-          },
-          {
-            href: '#',
-            title: '#',
-            text: 'E-commerce',
-          },
-          {
-            href: '#',
-            title: '#',
-            text: 'Web',
-          },
-        ],
+        link: u('software'),
+        title: header['ca']['links'].find((link) => link._id === 'services').links.find((link) => link._id === 'software').text,
+        excerpt: 'Utilitzem eines existents com a base i les extenem i adaptem programant a mida.',
+        image: '~/assets/images/software-personalizado.jpg',
+
+        links: header['ca']['links'].find((link) => link._id === 'services').links.find((link) => link._id === 'software').links,
       },
       {
-        link: '#',
-        title: 'Migració i integració',
+        link: u('migration'),
+        title: header['ca']['links'].find((link) => link._id === 'services').links.find((link) => link._id === 'migration').text,
         excerpt: 'Optimitzem i migrem eines obsoletes i creem processos per comunicar plataformes.',
-        image:
-          'https://elements-resized.envatousercontent.com/envato-shoebox/4913/4141-efd3-4391-88ed-971abcc75552/126103.jpg?w=1600&cf_fit=scale-down&mark-alpha=18&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark4.png&q=85&format=auto&s=a21b5b5dd8eeee08fce2a82354ef922e9fe5722d1dd8a839af67fcba4bf9e9e7',
-        links: [
-          {
-            href: '#',
-            title: '#',
-            text: "Anàlisis i migració d'eines antigues",
-          },
-          {
-            href: '#',
-            title: '#',
-            text: "Integración d'intel·ligència artificial",
-          },
-          {
-            href: '#',
-            title: '#',
-            text: 'Integració de sistemes amb APIs',
-          },
-          {
-            href: '#',
-            title: '#',
-            text: 'Optimitació de software',
-          },
-          {
-            href: '#',
-            title: '#',
-            text: 'Divisió i escalabilitat',
-          },
-        ],
+        image: '~/assets/images/migracion-integracion.jpg',
+        links: header['ca']['links'].find((link) => link._id === 'services').links.find((link) => link._id === 'migration').links,
       },
       {
-        link: '#',
-        title: 'Consultoría tecnològica',
-        excerpt: 'Analitzem la situació actual, conceptualitzem idees i oferim assessorament tecnològic.',
-        image:
-          'https://elements-resized.envatousercontent.com/envato-shoebox/54ee/40ca-a310-42b9-94ed-f99ecf815d20/K-210-Tong-5286wf.jpg?w=1600&cf_fit=scale-down&mark-alpha=18&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark4.png&q=85&format=auto&s=18be023ea83088b1e2a9bde8d28d4f97e8a5b7ba6dad382af0df9ce12f7006bb',
-        links: [
-          {
-            href: '#',
-            title: '#',
-            text: 'Anàlisi de situació tecnològica',
-          },          
-          {
-            href: '#',
-            title: '#',
-            text: 'Trasformació d\'idees a projectes',
-          },          
-          {
-            href: '#',
-            title: '#',
-            text: 'Anàlisi i organtizació de dades',
-          },          
-          {
-            href: '#',
-            title: '#',
-            text: 'Identificació de solucions a integrar',
-          },
-          {
-            href: '#',
-            title: '#',
-            text: 'Estudi per integració d\'IA',
-          },
-        ],
+        link: u('consultory'),
+        title: header['ca']['links'].find((link) => link._id === 'services').links.find((link) => link._id === 'consultory').text,
+        excerpt: 'Analitzem la situació actual, conceptualitzem idees i oferim assessorament per a executar-les.',
+        image: '~/assets/images/consultoria-tecnologica.jpg',
+        links: header['ca']['links'].find((link) => link._id === 'services').links.find((link) => link._id === 'consultory').links,
       },
     ]}
   >
@@ -197,7 +100,7 @@ const metadata = {
   <Features
     id="features"
     title="Perquè escollir gilsys?"
-    subtitle="Each of the following features enhances AstroWind's value proposition."
+    subtitle="Experiència + qualitat = <span class='custom-gradient'>tranquil·litat</span>."
     columns={2}
     items={[
       {
@@ -274,7 +177,7 @@ const metadata = {
       },
     ]}
     image={{
-      src: 'https://s2f6z4h2.rocketcdn.me/wp-content/uploads/2022/11/solicitar-kit-digital-2022.jpg',
+      src: '~/assets/images/kit-digital.jpg',
       alt: 'SaaS Businesses Image',
     }}
   >
@@ -307,7 +210,7 @@ const metadata = {
       },
     ]}
     image={{
-      src: 'https://s2f6z4h2.rocketcdn.me/wp-content/uploads/2022/11/solicitar-kit-digital-2022.jpg',
+      src: '~/assets/images/kit-consulting.jpg',
       alt: 'Kit Consulting Image',
     }}
   >
@@ -477,20 +380,28 @@ const metadata = {
     ]}
   />
     -->
-    <CallToAction
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Contacta\'ns',
-        href: '#',
-      },
-    ]}
-  >
-    <Fragment slot="title">Tens un projecte en ment?</Fragment>
-    <Fragment slot="subtitle"> Des de gilsys posarem en marxa la teva transformació digital.</Fragment>
-  </CallToAction>
 
   <BlogLatestPosts title="Últimes entrades del blog" linkText="Anar al blog" />
 
-  
+  <CallToAction
+    backgroundImage={{
+      src: '~/assets/images/neutral/bg-1.jpg',
+      alt: 'Fons abstracte, inspirat en tecnologia i software',
+    }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contactar',
+        href: 'contactar',
+      },
+      {
+        variant: 'primary',
+        text: 'Trucar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">Tens un projecte en ment i necessites pressupost?</Fragment>
+    <Fragment slot="subtitle">Des de gilsys t'ajudarem a convertir la teva idea en una realitat.</Fragment>
+  </CallToAction>
 </Layout>

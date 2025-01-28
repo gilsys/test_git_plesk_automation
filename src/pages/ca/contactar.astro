@@ -9,4 +9,16 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <ContactForm pageTitle={metadata.title} />
+  
+  <iframe
+      class="fixed top-[144px] w-full h-full -z-10"
+      src="https://www.openstreetmap.org/export/embed.html?bbox=1,42.133102,2.237501,42.137102&marker=42.135102,2.234501"
+      allowfullscreen
+      loading="lazy">
+  </iframe>
+  <p>
+      <a href="https://www.google.com/maps?q=42.135102,2.234501" target="_blank" rel="noopener noreferrer">
+          Ver en Google Maps
+      </a>
+  </p>
 </Layout>

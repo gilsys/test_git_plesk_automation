@@ -1,0 +1,265 @@
+---
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+
+const metadata = {
+  title: 'Business Intelligence amb Metabase – gilsys',
+  description:
+    'Transforma dades empresarials en decisions estratègiques amb Metabase, una eina de Business Intelligence personalitzada per a les necessitats del teu negoci.',
+};
+---
+
+<Layout metadata={metadata}>
+
+  <Hero tagline="Transforma les teves dades en informació clau per a la presa de decisions."
+  backgroundImage={{alt: 'Fons abstracte',  src: '~/assets/images/dots/28.jpg'}}
+  >
+    <Fragment slot="title">
+      <span class="text-accent highlight">Business Intelligence</span> amb Metabase
+    </Fragment>
+    <Fragment slot="subtitle">
+      Amb Metabase, accedeix a panells personalitzats i visualitzacions avançades que et permetran optimitzar processos i prendre decisions basades en dades objectives.
+    </Fragment>
+  </Hero>
+
+  <Content
+    isReversed
+    tagline="En lloc de confiar en suposicions o intuïcions, BI ofereix dades concretes que permeten als directius actuar amb confiança i precisió."
+    title="Què és Business Intelligence?"
+    subtitle="BI permet a les empreses entendre el seu rendiment, identificar patrons i prendre decisions basades en dades concretes."
+    
+    items={[{
+        title: 'Identificació d’oportunitats i reptes',
+        description: 'Ajuda a detectar àrees de millora i a aprofitar oportunitats del mercat.',
+      },
+      {
+        title: 'Millora de l’eficiència operativa',
+        description: 'Optimitza processos gràcies a una anàlisi detallada de les dades.',
+      },
+      {
+        title: 'Monitorització en temps real',
+        description: 'Accés immediat a mètriques i rendiment per adaptar-se ràpidament als canvis.',
+      },
+      {
+        title: 'Decisions basades en dades',
+        description: 'Proporciona informació clara per a estratègies precises i eficients.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/business-analytics-graficas-empresariales.jpg',
+      alt: 'Gráficos y datos empresariales de BI',
+    }}
+>
+
+<Fragment slot="preContent">
+    <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">
+        Transformar Dades en Decisions Estratègiques
+    </h3>
+    <p class="text-muted">
+        El concepte de Business Intelligence (BI) fa referència a l’ús d’eines i tecnologies per analitzar dades empresarials i convertir-les en informació clara i útil per a la presa de decisions. Amb BI, les empreses poden accedir a una visió completa del seu rendiment, identificar patrons i tendències, i anticipar-se a les necessitats del mercat o a possibles problemes.
+
+    </p>
+  </Fragment>
+  <Fragment slot="content">
+    <p>Business Intelligence implica recopilar, analitzar i presentar dades de manera visual i comprensible per ajudar les empreses a:</p>
+  </Fragment>
+  <Fragment slot="postContent">
+    <h3 class="text-2xl font-bold tracking-tightsm:text-3xl mb-2">Per a qui és útil?</h3>
+    <p class="text-muted">       
+        Metabase i les eines de Business Intelligence (BI) són útils per a empreses de qualsevol mida que necessiten prendre decisions informades basades en dades. Són especialment rellevants per a equips de màrqueting, vendes, finances i operacions que han de monitoritzar mètriques clau, identificar patrons o tendències i generar informes visuals fàcilment comprensibles. També són ideals per departaments tècnics que busquen democratitzar l'accés a la informació dins de l'organització, permetent que qualsevol persona pugui explorar dades i obtenir mètriques sense necessitat de coneixements avançats en SQL o programació.
+    </p>
+  </Fragment>
+
+</Content>
+
+
+  <Features2
+    id="features"
+    tagline="Metabase: l'eina ideal per a Business Intelligence"
+    title="Funcionalitats destacades de Metabase"
+    subtitle="Descobreix com Metabase pot ajudar-te a gestionar i visualitzar les teves dades de manera òptima."
+    items={[
+      {
+        title: 'Contingut atractiu i optimitzat per SEO',
+        description: `list: [
+          'Permet crear pàgines amb contingut optimitzat per a cercadors.',
+          'Atrau usuaris amb un disseny atractiu i una estructura ben definida.',
+        ]`,
+        icon: 'tabler:search',
+      },
+      {
+        title: 'Gestió de continguts amigable',
+        description: `list: [
+          'Facilita la gestió de continguts gràcies a una interfície intuïtiva.',
+          'Ideal per usuaris sense coneixements tècnics avançats.',
+        ]`,
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Integració de funcionalitats addicionals',
+        description: `list: [
+          'Afegir funcionalitats com galeries d’imatges, botigues online o blogs.',
+          'Compatible amb milers de plugins disponibles.',
+        ]`,
+        icon: 'tabler:components',
+      },
+      {
+        title: 'Comunitat àmplia i recursos externs',
+        description: `list: [
+          'Accés a una gran comunitat de desenvolupadors i usuaris.',
+          'Documentació extensa, temes i plugins per adaptar el projecte a mida.',
+        ]`,
+        icon: 'tabler:users',
+      },
+    ]
+    }
+
+  />
+
+  <Content
+    isReversed
+    tagline=""
+    title="Funcionalitats avançades amb Metabase"
+    subtitle="A gilsys, oferim solucions personalitzades que maximitzen el potencial de Metabase."
+    items={[
+      {
+        title: 'Disseny de panells avançats',
+        description: `list: [
+          'Creació de panells específics per a cada departament.',
+          'Dades filtrades i visualitzacions adaptades als objectius.',
+        ]`,
+      },
+      {
+        title: 'Automatització de consultes i informes',
+        description: `list: [
+          'Programació d'informes recurrents amb consultes SQL complexes.',
+          'Reducció de la intervenció manual en la generació d'informes.',
+        ]`,
+      },
+      {
+        title: 'Integració amb sistemes existents',
+        description: `list: [
+          'Connexió amb bases de dades SQL, CRMs, ERPs i altres eines.',
+          'Dades centralitzades i sincronitzades en temps real.',
+        ]`,
+      },
+      {
+        title: 'Optimització de bases de dades',
+        description: `list: [
+          'Reestructuració de bases de dades per millorar el rendiment.',
+          'Gestió eficient de dades empresarials.',
+        ]`,
+      },
+      {
+        title: 'Personalització d’indicadors clau',
+        description: `list: [
+          'Mètriques específiques per a vendes, costos i rendiment d’equips.',
+          'Visualització de tendències de mercat i altres indicadors importants.',
+        ]`,
+      },
+    ]
+    }
+    image={{
+      src: '~/assets/images/metabase-panel.jpg',
+      alt: 'Panel de datos BI de metabase',
+    }}
+  />
+
+  <Features
+    id="benefits"
+    tagline=""
+    title="Beneficis del Business Intelligence amb gilsys"
+    subtitle="Descobreix els avantatges de treballar amb un equip expert en Metabase i BI."
+    items={[{
+        title: 'Visió clara i precisa',
+        description: 'Accedeix a totes les dades del teu negoci en un sol lloc, amb informes clars que faciliten la presa de decisions.',
+        icon: 'tabler:eye',
+      },
+      {
+        title: 'Preses de decisions basades en dades',
+        description: 'Elimina la intuïció i actua amb confiança gràcies a dades objectives i actualitzades.',
+        icon: 'tabler:clipboard-list',
+      },
+      {
+        title: 'Estalvi de temps',
+        description: 'Panells automàtics i informes programats per dedicar menys temps a analitzar dades i més a implementar accions.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Solucions personalitzades',
+        description: 'Panells, consultes i visualitzacions completament adaptades al teu negoci.',
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Escalabilitat i flexibilitat',
+        description: 'Metabase creix amb la teva empresa, permetent afegir noves bases de dades o panells segons les necessitats.',
+        icon: 'tabler:line',
+      },
+    ]}
+  />
+
+  <Content
+    isReversed
+    tagline="No és fàcil trobar una empresa especialista en Metabase"
+    title="Per què confiar en gilsys per implementar Business Intelligence?"
+    items={[
+      {
+        title: 'Coneixement profund de SQL i bases de dades:',
+        description:
+          'A gilsys tenim experiència en estructurar i optimitzar bases de dades per assegurar que funcionin de manera eficient amb eines com Metabase.',
+        icon: 'tabler:building',
+      },
+      {
+        title: 'Especialistes en Metabase:',
+        description:
+          "Sabem com treure el màxim potencial d’aquesta eina, des de funcionalitats bàsiques fins a configuracions avançades.",
+        icon: 'tabler:chart-pie',
+      },
+      {
+        title: 'Adaptació completa',
+        description:
+          "Creem panells, consultes i visualitzacions específiques per a cada client, sense solucions estàndard que no s’ajustin a les teves necessitats.",
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Enfoc pràctic',
+        description: 'No només configurem Metabase, sinó que també et formem perquè puguis utilitzar-lo de manera independent i treure’n el màxim partit.',
+        icon: 'tabler:headset',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/metabase-background.jpg',
+      alt: 'Customized Software Image',
+    }}
+  >
+    <Fragment slot="postContent">
+      <p>
+      Amb gilsys i Metabase, el teu negoci tindrà accés a eines potents de Business Intelligence que permetran transformar les dades en informació valuosa. Contacta amb nosaltres i descobreix com podem ajudar-te a implementar una solució de BI adaptada al teu projecte.
+      </p>
+
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    actions={[{
+      variant: 'primary',
+      text: 'Contacta’ns',
+      href: '#',
+    }]}
+  >
+    <Fragment slot="title">Tens un projecte de BI en ment?</Fragment>
+    <Fragment slot="subtitle">
+      El nostre equip està preparat per implementar Metabase i convertir les dades del teu negoci en informació accionable.
+    </Fragment>
+  </CallToAction>
+
+</Layout>

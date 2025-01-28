@@ -15,6 +15,7 @@ interface Link {
   href?: string;
   ariaLabel?: string;
   icon?: string;
+  title?: string;
 }
 
 interface MenuLink extends Link {
@@ -60,7 +61,7 @@ const u = useRoutes(language);
 <header
   class:list={[
     { sticky: isSticky, relative: !isSticky, dark: isDark },
-    'top-0 z-40 flex-none mx-auto w-full border-b border-gray-50/0 transition-[opacity] ease-in-out',
+    'wg-header top-0 z-40 flex-none mx-auto w-full border-b border-gray-50/0 transition-[opacity] ease-in-out',
   ]}
   {...isSticky ? { 'data-aw-sticky-header': true } : {}}
   {...id ? { id } : {}}
@@ -108,17 +109,34 @@ const u = useRoutes(language);
                     <Icon name="tabler:chevron-down" class="w-3.5 h-3.5 ml-0.5 rtl:ml-0 rtl:mr-0.5 hidden md:inline" />
                   </button>
                   <ul class="dropdown-menu md:backdrop-blur-md dark:md:bg-dark rounded md:absolute pl-4 md:pl-0 md:hidden font-medium md:bg-white/90 md:min-w-[200px] drop-shadow-xl">
-                    {links.map(({ text: text2, href: href2 }) => (
-                      <li>
+                    {links.map(({ text: text2, href: href2, title: title2, links: subLinks }) => (
+                      <li class:list={[{ 'has-children': subLinks && subLinks.length > 0 }]}>
                         <a
                           class:list={[
                             'first:rounded-t last:rounded-b md:hover:bg-gray-100 hover:text-link dark:hover:text-white dark:hover:bg-gray-700 py-2 px-5 block whitespace-no-wrap',
                             { 'aw-link-active': href2 === currentPath },
                           ]}
                           href={href2}
+                          title={title2}
                         >
                           {text2}
                         </a>
+
+                        {subLinks && subLinks.length > 0 && (
+                          <ul class="dropdown-submenu pl-4">
+                            {subLinks.map(({ text: text3, href: href3, title: title3 }) => (
+                              <li>
+                                <a
+                                  class="py-2 px-5 block whitespace-no-wrap hover:text-link dark:hover:text-white dark:hover:bg-gray-700"
+                                  href={href3}
+                                  title={title3}
+                                >
+                                  {text3}
+                                </a>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
                       </li>
                     ))}
                   </ul>

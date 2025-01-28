@@ -34,7 +34,7 @@ export const ui = {
     'blog.list.title': 'Blog',
     'blog.list.subtitle': 'Un ejemplo de blog generado estáticamente con noticias, tutoriales, recursos y otro contenido interesante relacionado con AstroWind',
     'contact.title': 'Enviar un mensaje',
-    'contact.subtitle': 'Rellene el formulario para enviarnos un mensaje:',
+    'contact.subtitle': 'Rellena el formulario para enviarnos un mensaje:',
     'contact.name': 'Nombre completo',
     'contact.company': 'Empresa',
     'contact.phone': 'Teléfono',
@@ -65,7 +65,7 @@ export const ui = {
     'blog.list.title': 'The Blog',
     'blog.list.subtitle': 'Un exemple de bloc generat estàticament amb notícies, tutorials, recursos i altres continguts interessants relacionats amb AstroWind',
     'contact.title': 'Enviar un missatge',
-    'contact.subtitle': 'Ompli el formulari per a enviar-nos un missatge:',
+    'contact.subtitle': 'Omple el formulari per a enviar-nos un missatge:',
     'contact.name': 'Nom complet',
     'contact.company': 'Empresa',
     'contact.phone': 'Telèfon',
@@ -143,17 +143,33 @@ export const routes = {
       'kit-consulting/servei-de-assessorament-en-estrategia-i-rendiment-de-negoci',
     'kit-consulting/360-digital-transformation':
       'kit-consulting/servei-de-assessorament-360-en-transformacion-digital',
-    'services/software': '/ca/serveis/software',
-    'services/technology-consulting': '/ca/serveis/consultoria',
-    'services/migration-integration': '/ca/serveis/migracio',
-    'services/web-development': '/ca/serveis/web',
+    
+    
+    'consultory': '/ca/consultoria-tecnologica',
+    'migration': '/ca/migracio-integracio',
+    'development': '/ca/programacio-a-mida',
+    'development/web': '/ca/programacio-a-mida/aplicacions-web',
+    'development/apps': '/ca/programacio-a-mida/apps',
+    'development/automation': '/ca/programacio-a-mida/automatitzacio-processos',
+    'development/ia': '/ca/programacio-a-mida/ia-barcelona',
+    'development/astro': '/ca/programacio-a-mida/webs-alt-rendiment',
+
+    'software': '/ca/software-personalitzat',
+    'software/ecommerce': '/ca/software-personalitzat/disseny-botiga-online',
+    'software/metabase': '/ca/software-personalitzat/metabase-analisis-empresarial',
+    'software/pimcore': '/ca/software-personalitzat/pimcore-barcelona',
+    'software/crm': '/ca/software-personalitzat/programa-gestio-clients',
+    'software/wp': '/ca/software-personalitzat/web-wordpress',
+
+    'about': '/ca/sobre-nosaltres',
+    
+
     'contact': '/ca/contactar',
     'terms': '/ca/avis-legal',
     'privacy-policy': '/ca/politica-privacitat',
   },
   es: {
     'home': '/es',
-    'gilsys': '/es/sobre-nosotros',
     'kit-digital/basic-internet-presence': '/es/kit-digital/presencia-basica-internet',
     'kit-digital/e-commerce': '/es/kit-digital/comercio-electronico',
     'kit-digital/customer-management': '/es/kit-digital/gestion-de-clientes',
@@ -182,24 +198,56 @@ export const routes = {
       'kit-consulting/servicio-de-asesoramiento-en-estrategia-y-rendimiento-de-negocio',
     'kit-consulting/360-digital-transformation':
       'kit-consulting/servicio-de-asesoramiento-360-en-transformacion-digital',
-    'services/software': '/es/servicios/software-apps',
-    'services/technology-consulting': '/es/servicios/consultoria-tecnologica',
-    'services/migration-integration': '/es/servicios/migracion-integracion',
-    'services/web-development': '/es/servicios/desarrollo-web',
-    'contact': '/es/contactar',
-    'terms': '/es/aviso-legal',
-    'privacy-policy': '/es/politica-privacidad',
+   
+      'consultory': '/ca/consultoria-tecnologica',
+    'migration': '/ca/migracio-integracio',
+    'development': '/ca/programacio-a-mida',
+    'development/web': '/ca/programacio-a-mida/aplicacions-web',
+    'development/apps': '/ca/programacio-a-mida/apps',
+    'development/automation': '/ca/programacio-a-mida/automatitzacio-processos',
+    'development/ia': '/ca/programacio-a-mida/ia-barcelona',
+    'development/astro': '/ca/programacio-a-mida/webs-alt-rendiment',
+
+    'software': '/ca/software-personalitzat',
+    'software/ecommerce': '/ca/software-personalitzat/disseny-botiga-online',
+    'software/metabase': '/ca/software-personalitzat/metabase-analisis-empresarial',
+    'software/pimcore': '/ca/software-personalitzat/pimcore-barcelona',
+    'software/crm': '/ca/software-personalitzat/programa-gestio-clients',
+    'software/wp': '/ca/software-personalitzat/web-wordpress',
+
+    'about': '/ca/sobre-nosaltres',
+    
+
+    'contact': '/ca/contactar',
+    'terms': '/ca/avis-legal',
+    'privacy-policy': '/ca/politica-privacitat',
   },
   en: {
     'home': '/en',
-    'gilsys': '/en/about-us',
-    'services/software': '/en/services/software-and-app-programming/software-programming',
-    'services/technology-consulting': '/en/services/technology-consulting',
-    'services/migration-integration': '/en/services/migration-and-integration',
-    'services/web-development': '/en/services/web-development',
-    'contact': '/en/contact',
-    'terms': '/en/legal-warning',
-    'privacy-policy': '/en/privacy-policy',
+    
+    'consultory': '/ca/consultoria-tecnologica',
+    'migration': '/ca/migracio-integracio',
+    'development': '/ca/programacio-a-mida',
+    'development/web': '/ca/programacio-a-mida/aplicacions-web',
+    'development/apps': '/ca/programacio-a-mida/apps',
+    'development/automation': '/ca/programacio-a-mida/automatitzacio-processos',
+    'development/ia': '/ca/programacio-a-mida/ia-barcelona',
+    'development/astro': '/ca/programacio-a-mida/webs-alt-rendiment',
+
+    'software': '/ca/software-personalitzat',
+    'software/ecommerce': '/ca/software-personalitzat/disseny-botiga-online',
+    'software/metabase': '/ca/software-personalitzat/metabase-analisis-empresarial',
+    'software/pimcore': '/ca/software-personalitzat/pimcore-barcelona',
+    'software/crm': '/ca/software-personalitzat/programa-gestio-clients',
+    'software/wp': '/ca/software-personalitzat/web-wordpress',
+
+    'about': '/ca/sobre-nosaltres',
+    
+
+    'contact': '/ca/contactar',
+    'terms': '/ca/avis-legal',
+    'privacy-policy': '/ca/politica-privacitat',
+    
   },
 };
 
@@ -207,14 +255,17 @@ export const header = {
   ca: {
     links: [
       {
+        _id: 'home',
         text: 'Inici',
         href: routes['ca']['home'],
       },
       {
+        _id: 'gilsys',
         text: 'gilsys',
         href: routes['ca']['gilsys'],
       },
       {
+        _id: 'kit-digital',
         text: 'Kit Digital',
         links: [
           {
@@ -288,60 +339,177 @@ export const header = {
         ],
       },
       {
+        _id: 'kit-consulting',
         text: 'Kit Consulting',
         links: [
           {
-            text: 'Servei d’assessorament en Intel·ligència Artificial',
+            text: 'Assessorament en Intel·ligència Artificial',
             href: routes['ca']['kit-consulting/ai-advisory'],
           },
           {
-            text: 'Servei d’assessorament en anàlisi de dades (Bàsic)',
+            text: 'Assessorament en anàlisi de dades (Bàsic)',
             href: routes['ca']['kit-consulting/basic-data-analysis'],
           },
           {
-            text: 'Servei d’assessorament en anàlisi de dades (Avançat)',
+            text: 'Assessorament en anàlisi de dades (Avançat)',
             href: routes['ca']['kit-consulting/advanced-data-analysis'],
           },
           {
-            text: 'Servei d’assessorament en vendes digitals',
+            text: 'Assessorament en vendes digitals',
             href: routes['ca']['kit-consulting/digital-sales-advisory'],
           },
           {
-            text: 'Servei d’assessorament en processos de negoci o procés de producció',
+            text: 'Assessorament en processos de negoci o procés de producció',
             href: routes['ca']['kit-consulting/business-process-advisory'],
           },
           {
-            text: 'Servei d’assessorament en estratègia i rendiment de negoci',
+            text: 'Assessorament en estratègia i rendiment de negoci',
             href: routes['ca']['kit-consulting/business-strategy-advisory'],
           },
           {
-            text: 'Servei d’assessorament “360” en transformació digital',
+            text: 'Assessorament “360” en transformació digital',
             href: routes['ca']['kit-consulting/360-digital-transformation'],
           },
         ],
       },
       {
+        _id: 'services',
         text: 'Serveis',
         links: [
           {
-            text: 'Software i app’s',
-            href: routes['ca']['services/software'],
+            _id: 'development',
+            text: 'Programació a mida',
+            href: routes['ca']['development'],
+
+            links: [
+              {
+                href: routes['ca']['development/web'],
+                title: "Programació d'aplicacions web a mida i plataformes online",
+                text: 'Aplicacions web',
+              },
+              {
+                href: routes['ca']['development/apps'],
+                title: "Programació a mida d'apps multiplataforma",
+                text: 'Aplicacions per mòvils',
+              },
+              {
+                href: routes['ca']['development/ia'],
+                title: "Desenvolupament d'eines d'IA a mida",
+                text: "Intel·ligència Artificial",
+              },
+              {
+                href: routes['ca']['development/astro'],
+                title: 'Disseny de pàgines web ultra-ràpides',
+                text: "Webs d'alt rendiment",
+              },
+              
+              {
+                href: routes['ca']['development/automation'],
+                title: "Programació de processos automàtics i APIs a mida",
+                text: "Automatitzacions i APIs",
+              },
+            ],
           },
           {
-            text: 'Consultoria tecnològica',
-            href: routes['ca']['services/technology-consulting'],
+            _id: 'software',
+            text: 'Software personalitzat',
+            href: routes['ca']['software'],
+            links: [
+              {
+                href: routes['ca']['software/wp'],
+                title: 'Programació i disseny a mida de pàgines web',
+                text: 'Webs en WordPress',
+              },
+              {
+                href: routes['ca']['software/pimcore'],
+                title: 'Implantem Pimcore per centralitzar la gestió de productes.',
+                text: 'Gestors de productes',
+              },
+              {
+                href: routes['ca']['software/metabase'],
+                title: 'Utilitzem Metabase com a eina de Business Intelligence',
+                text: 'Anàlisi empresarial',
+              },
+              {
+                href: routes['ca']['software/ecommerce'],
+                title: 'Dissenyem portals e-commerce amb Prestashop i Woocommerce.',
+                text: 'Botiga online',
+              },
+              {
+                href: routes['ca']['software/crm'],
+                title: 'Software CRM personalitzat',
+                text: 'Gestió de clients',
+              },
+            ]
           },
           {
+            _id: 'migration',
             text: 'Migració i integració',
-            href: routes['ca']['services/migration-integration'],
+            href: routes['ca']['migration'],  
+            links: [
+              {
+                href: routes['ca']['migration'] + '#',
+                title: "Traspàs i adaptació d'informació entre bases de dades",
+                text: "Migració de dades",
+              },
+              {
+                href: routes['ca']['migration'] + '#',
+                title: 'Integració d\'intel·ligència artificial en empreses',
+                text: "Integració d'IA",
+              },
+              {
+                href: routes['ca']['migration'] + '#',
+                title: "Sincronització d'informació entre programes",
+                text: 'Connexió de software',
+              },
+              {
+                href: routes['ca']['migration'] + '#',
+                title: 'Anàlisi de codi i millora de rendiment de programes',
+                text: 'Optimitació de software',
+              },
+              {
+                href: routes['ca']['migration'] + '#',
+                title: 'Separació de plataformes en mòduls escalables',
+                text: 'Divisió i escalabilitat',
+              },
+            ],         
           },
           {
-            text: 'Desenvolupament web',
-            href: routes['ca']['services/web-development'],
+            _id: 'consultory',
+            text: 'Consultoria TIC',
+            href: routes['ca']['consultory'],
+            links: [
+              {
+                href: routes['ca']['consultory'] + '#',
+                title: "Estudi de les eines actuals i propostes d'optimització",
+                text: 'Anàlisi de situació tecnològica',
+              },          
+              {
+                href: routes['ca']['consultory'] + '#',
+                title: 'Recollida de requisits i elaboració de propostes',
+                text: 'Trasformació d\'idees a projectes',
+              },          
+              {
+                href:routes['ca']['consultory'] + '#',
+                title: 'Estudi per optimitzar estructura i qualitat de la informació',
+                text: 'Anàlisi i organtizació de dades',
+              },          
+              {
+                href: routes['ca']['consultory'] + '#',
+                title: "Avaluació i proposta de noves eines i serveis",
+                text: 'Identificació de solucions',
+              },
+              {
+                href: routes['ca']['consultory'] + '#',
+                title: 'Com implantar intel·ligència artificial a l\'empresa',
+                text: 'Estudi per integració d\'IA',
+              },
+            ],
           },
         ],
       },
       {
+        _id: 'contact',
         text: 'Contactar',
         href: routes['ca']['contact'],
       },
@@ -561,54 +729,15 @@ export const header = {
 export const footer = {
   ca: {
     links: [
-      {
-        title: 'Product',
-        links: [
-          { text: 'Features', href: '#' },
-          { text: 'Security', href: '#' },
-          { text: 'Team', href: '#' },
-          { text: 'Enterprise', href: '#' },
-          { text: 'Customer stories', href: '#' },
-          { text: 'Pricing', href: '#' },
-          { text: 'Resources', href: '#' },
-        ],
-      },
-      {
-        title: 'Platform',
-        links: [
-          { text: 'Developer API', href: '#' },
-          { text: 'Partners', href: '#' },
-          { text: 'Atom', href: '#' },
-          { text: 'Electron', href: '#' },
-          { text: 'AstroWind Desktop', href: '#' },
-        ],
-      },
-      {
-        title: 'Support',
-        links: [
-          { text: 'Docs', href: '#' },
-          { text: 'Community Forum', href: '#' },
-          { text: 'Professional Services', href: '#' },
-          { text: 'Skills', href: '#' },
-          { text: 'Status', href: '#' },
-        ],
-      },
-      {
-        title: 'Company',
-        links: [
-          { text: 'About', href: '#' },
-          { text: 'Blog', href: '#' },
-          { text: 'Careers', href: '#' },
-          { text: 'Press', href: '#' },
-          { text: 'Inclusion', href: '#' },
-          { text: 'Social Impact', href: '#' },
-          { text: 'Shop', href: '#' },
-        ],
-      },
+      header['ca']['links'].find((link) => link._id === 'services').links.find((link) => link._id === 'development'),
+      header['ca']['links'].find((link) => link._id === 'services').links.find((link) => link._id === 'software'),
+      header['ca']['links'].find((link) => link._id === 'services').links.find((link) => link._id === 'migration'),
+      header['ca']['links'].find((link) => link._id === 'services').links.find((link) => link._id === 'consultory')
     ],
     secondaryLinks: [
-      { text: 'Terms', href: '#' },
-      { text: 'Privacy Policy', href: '#'},
+      { text: 'Avís legal', href: '#' },
+      { text: 'Política de privacitat', href: '#'},
+      { text: 'Política de cookies', href: '#'},
     ],
     socialLinks: [
       { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
@@ -617,10 +746,14 @@ export const footer = {
       //{ ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
       { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
     ],
-    footNote: `
-    <img class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 rtl:mr-0 rtl:ml-1.5 float-left rtl:float-right rounded-sm" src="https://onwidget.com/favicon/favicon-32x32.png" alt="onWidget logo" loading="lazy"></img>
-    Made by <a class="text-blue-600 underline dark:text-muted" href="https://onwidget.com/"> onWidget</a> · All rights reserved.
-  `,
+    address: `            
+            <a href="tel:+34665331271">665 33 12 71</a><br>
+            <a class='text-accent' href="mailto:info@gilsys.com">info@gilsys.com</a><br><br>
+            <a href=''>Passeig del Ter 48<br>
+            08580, Sant Quirze de Besora<br>
+            Osona - Barcelona</a><br/>
+    `,
+    footNote: `gilsys · Tots els drets reservats.`,
   },
   es: {
     links: [
@@ -733,8 +866,9 @@ export const footer = {
       },
     ],
     secondaryLinks: [
-      { text: 'Terms', href: '#' },
-      { text: 'Privacy Policy', href: '#' },
+      { text: 'Avís legal', href: '#' },
+      { text: 'Política de privacitat', href: '#' },
+      { text: 'Política de cookies', href: '#' },
     ],
     socialLinks: [
       { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },

@@ -1,0 +1,322 @@
+---
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Consultoria Tecnològica – Gilsys',
+  description:
+    'Auditoria tecnològica, transformació d’idees en projectes i integració d’eines per optimitzar processos i millorar resultats empresarials.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="Una consultoria per decidir el futur amb seguretat."
+  backgroundImage={{ alt:'Fons abstracte', src: '~/assets/images/dots/20.jpg'}}
+  >
+    <Fragment slot="title"><span class="text-accent highlight">Consultoria</span> Tecnològica</Fragment>
+    <Fragment slot="subtitle"
+      >Auditem, analitzem i proposem solucions per transformar les idees en projectes tecnològics pràctics i efectius.</Fragment
+    >
+  </Hero>
+
+  <Features3
+    id="features-services"
+    title="Què oferim en consultoria?"
+    subtitle="Ajudem empreses a prendre decisions tecnològiques informades per optimitzar processos i millorar resultats."
+    tagline="Consultoria orientada a resultats."
+    items={[
+      {
+        title: 'Anàlisi de situació tecnològica',
+        description:
+          'Auditem els sistemes i processos per identificar punts forts, febleses i oportunitats de millora.',
+        icon: 'tabler:search',
+        callToAction: {
+          class: 'more-info',
+          text: 'Més informació',
+          href: '#TODO',
+        },
+      },
+      {
+        title: 'Transformació d’idees en projectes',
+        description: 'Convertim idees inicials en projectes reals, amb una proposta tècnica clara i fases definides.',
+        icon: 'tabler:bulb',
+        callToAction: {
+          class: 'more-info',
+          text: 'Més informació',
+          href: '#TODO',
+        },
+      },
+      {
+        title: 'Anàlisi i organització de dades',
+        description:
+          'Estudiem i proposem optimitzacions de l’estructura i qualitat de les dades per facilitar la presa de decisions estratègiques.',
+        icon: 'tabler:database',
+        callToAction: {
+          class: 'more-info',
+          text: 'Més informació',
+          href: '#TODO',
+        },
+      },
+      {
+        title: 'Identificació de solucions',
+        description: 'Avaluem i proposem eines que complementin els processos existents i millorin la productivitat.',
+        icon: 'tabler:tool',
+        callToAction: {
+          class: 'more-info',
+          text: 'Més informació',
+          href: '#TODO',
+        },
+      },
+      {
+        title: 'Estudi per a la integració d’IA',
+        description:
+          'Detectem oportunitats per introduir intel·ligència artificial de manera efectiva en els processos empresarials.',
+        icon: 'tabler:brain',
+        callToAction: {
+          class: 'more-info',
+          text: 'Més informació',
+          href: '#TODO',
+        },
+      },
+    ]}
+  />
+
+  <Content
+    isReversed
+    tagline=""
+    title="Anàlisi de Situació Tecnològica"
+    items={[
+      {
+        title: 'Revisió d’eines actuals',
+        description: 'Auditem la funcionalitat de les eines per identificar punts forts i àrees a millorar.',
+      },
+      {
+        title: 'Identificació de colls d’ampolla',
+        description: 'Analitzem processos per detectar i resoldre problemes de rendiment o operatius.',
+      },
+      {
+        title: 'Valoració de seguretat i escalabilitat',
+        description: 'Determinem el nivell de seguretat i la capacitat dels sistemes per créixer amb el negoci.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/consultoria-tecnologica.jpg',
+      alt: 'Consultoria tecnològica sobre taula de vidre',
+    }}
+  >
+    <Fragment slot="preContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">
+        Comprendre l’estat actual per planificar el futur
+      </h3>
+      <p class="text-muted">
+        Realitzem una auditoria detallada dels sistemes i processos per assegurar que cada decisió es basi en informació
+        real i actualitzada.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Content
+    tagline=""
+    title="Transformació d’Idees en Projectes"
+    items={[
+      {
+        title: 'Propostes tècniques adequades',
+        description: 'Definim solucions viables basades en experiència i bones pràctiques.',
+      },
+      {
+        title: 'Priorizació per fases',
+        description: 'Planifiquem les fases del projecte per optimitzar recursos i temps.',
+      },
+      {
+        title: 'Solucions tecnològiques personalitzades',
+        description: 'Proposem eines ajustades a les necessitats específiques del projecte.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/idea-proyecto.jpg',
+      alt: "Transformar idees en projectes",
+    }}
+  >
+    <Fragment slot="preContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">Convertir conceptes en solucions pràctiques</h3>
+      <p class="text-muted">
+        Treballem amb empreses per transformar idees inicials en projectes tecnològics funcionals i orientats a
+        resultats.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0"></div>
+    </Fragment>
+  </Content>
+
+  <Content
+  
+    isReversed
+    tagline=""
+    title="Anàlisi i Organització de Dades"
+    items={[
+      {
+        title: 'Revisió de qualitat de dades',
+        description: 'Analitzem la consistència de les dades per garantir la seva utilitat en la presa de decisions.',
+      },
+      {
+        title: 'Creació d’esquemes d’organització',
+        description: 'Proposem estructures que millorin l’accés i la interpretació de dades.',
+      },
+      {
+        title: 'Optimització de gestió de dades',
+        description: 'Recomanem solucions específiques per gestionar la informació de manera més eficient.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/analisis-clasificacion-datos.jpg',
+      alt: 'Data Organization',
+    }}
+  >
+    <Fragment slot="preContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">Donar sentit a la informació</h3>
+      <p class="text-muted">
+        L'anàlisi i organització de dades és clau per prendre decisions estratègiques amb una visió clara i útil.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Content
+    tagline=""
+    title="Identificació de Solucions a Integrar"
+    items={[
+      {
+        title: 'Avaluació d’opcions de mercat',
+        description:
+          'Analitzem eines finals o personalitzables per trobar les que millor s’adaptin a les necessitats del client.',
+      },
+      {
+        title: 'Propostes complementàries',
+        description:
+          'Proposem solucions que millorin les eines actuals sense necessitat de substituir-les innecessàriament.',
+      },
+      {
+        title: 'Pla d’integració coherent',
+        description:
+          'Dissenyem un pla d’integració alineat amb l’estratègia empresarial per garantir l’èxit del projecte.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/integracion-circular.jpg',
+      alt: 'Integració circular',
+    }}
+  >
+    <Fragment slot="preContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">
+        Seleccionar les eines adequades per millorar processos
+      </h3>
+      <p class="text-muted">
+        Revisem les necessitats de l’empresa per identificar quines solucions poden ajudar a millorar els seus
+        processos, ja sigui integrant eines noves o optimitzant les existents.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0"></div>
+    </Fragment>
+  </Content>
+
+  <Content
+    isReversed
+    tagline=""
+    title="Estudi per a la Integració d’IA"
+    items={[
+      {
+        title: 'Identificació de tasques clau',
+        description: 'Analitzem processos on l’IA pot aportar més valor i eficiència a l’empresa.',
+      },
+      {
+        title: 'Propostes d’eines adaptades',
+        description: 'Recomanem solucions d’intel·ligència artificial compatibles amb l’entorn del client.',
+      },
+      {
+        title: 'Pla d’implementació estratègic',
+        description:
+          'Dissenyem un pla que contempla impactes operatius i necessitats de formació per una integració exitosa.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/estudio-integracion-ia.jpg',
+      alt: 'Estudi per integrar intel·ligència artificial',
+    }}
+  >
+    <Fragment slot="preContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">
+        Introduir intel·ligència artificial de manera efectiva
+      </h3>
+      <p class="text-muted">
+        L’ús d’intel·ligència artificial pot aportar un valor significatiu a les empreses, però només si es planifica i
+        integra adequadament.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Features
+  
+    id="benefits"
+    tagline="Per què confiar en Gilsys?"
+    title="Avantatges de la nostra consultoria"
+    subtitle="Ajudem empreses a optimitzar processos i millorar resultats amb solucions tecnològiques sostenibles i personalitzades."
+    items={[
+      {
+        title: 'Anàlisi realista i enfocament personalitzat',
+        description:
+          'No proposem solucions generalistes. Treballem en base a les necessitats reals del client per oferir respostes útils i viables.',
+        icon: 'tabler:search',
+      },
+      {
+        title: 'Transformació orientada a resultats',
+        description:
+          'Convertim idees en projectes concrets, acompanyant cada fase, des de la conceptualització fins a l’execució.',
+        icon: 'tabler:target',
+      },
+      {
+        title: 'Experiència en tecnologia avançada',
+        description:
+          'Comptem amb experiència en sectors diversos i coneixem les últimes tendències en eines i solucions tecnològiques.',
+        icon: 'tabler:devices',
+      },
+      {
+        title: 'Honestedat i sostenibilitat',
+        description:
+          'Aconsellem el que és més adequat per a l’empresa, evitant inversions innecessàries o canvis radicals.',
+        icon: 'tabler:devices',
+      },
+    ]}
+  />
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contacta’ns',
+        href: '#',
+      },
+    ]}
+  >
+    <Fragment slot="title">Necessites orientació tecnològica?</Fragment>
+    <Fragment slot="subtitle">
+      A Gilsys, transformem les teves idees en projectes i optimitzem els teus processos per assegurar un futur
+      tecnològic sostenible.
+    </Fragment>
+  </CallToAction>
+</Layout>

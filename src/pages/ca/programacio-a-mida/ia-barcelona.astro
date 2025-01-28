@@ -1,0 +1,304 @@
+---
+import Content from '~/components/widgets/Content.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Intel·ligència Artificial – Solucions avançades per al teu negoci',
+  description:
+    'Programem solucions personalitzades amb intel·ligència artificial, integrant LLM a empreses, optimitzant processos i creant automatitzacions i eines innovadores.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Section -->
+  <Hero tagline="Integrem la IA per crear eines realment intel·ligents."
+  backgroundImage={{ alt:'Fons abstracte', src: '~/assets/images/dots/06.jpg' }}
+  >
+    <Fragment slot="title">
+      Programació integrant<br/><span class="text-accent highlight">Intel·ligència Artificial</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      Creem eines que utilitzen IA per automatitzar i optimitzar processos, millorar la presa de decisions i potenciar la productivitat de l'empresa.
+    </Fragment>
+  </Hero>
+
+   <FAQs
+    title="Com aprofitem la intel·ligència artificial?"
+    subtitle="Amb la IA podem arribar més enllà que amb algoritmes programats de manera tradicional."
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'Què permet treballar amb IA?',
+        description:
+          "La Intel·ligència Artificial es diferencia de la programació algorítmica tradicional pel fet que, mentre la programació algorítmica segueix instruccions estrictes definides pel desenvolupador, la IA funciona mitjançant algoritmes adaptatius que aprenen a partir de dades d’entrenament i coneixements preexistents.",
+      },
+      {
+        title: 'Adaptabilitat i evolució constant',
+        description:
+          "Els sistemes basats en IA tenen la capacitat d’aprendre i adaptar-se contínuament en funció de noves dades i requisits. Això significa que el programari desenvolupat pot evolucionar de manera autònoma, adaptant-se a les necessitats canviants dels usuaris sense requerir constants intervencions humanes. Aquesta flexibilitat redueix els costos de manteniment i garanteix que les solucions es mantinguin rellevants i eficients al llarg del temps.",
+      },
+      {
+        title: 'Comprensió avançada de dades',
+        description:
+          "La IA destaca per la seva capacitat d’entendre i analitzar no només textos, sinó també imatges i vídeos. Això permet desenvolupar programari capaç d’identificar patrons visuals, reconèixer objectes o fins i tot interpretar sentiments en continguts multimèdia. Aquesta comprensió avançada millora dràsticament l’eficiència en la gestió de dades complexes, obrint possibilitats en àrees com el processament automàtic de documents, el reconeixement facial o l’anàlisi intel·ligent de vídeos per a sectors com la seguretat o el màrqueting.",
+      },
+      {
+        title: 'Resolució de problemes basada en coneixement',
+        description:
+          "La IA pot abordar problemes que requereixen coneixements especialitzats gràcies al seu entrenament previ amb grans volums de dades. Aquest aprenentatge acumulat li permet raonar i prendre decisions informades que sovint superarien la capacitat humana, especialment en situacions on es requereix tractar amb dades massives o patrons subtils difícils de percebre per un ésser humà. Això la converteix en una eina clau per a àrees com la diagnosi mèdica, l’optimització de processos industrials o la predicció d’esdeveniments complexos.",
+      },
+    ]}
+    ></FAQs>
+  
+
+  <Features2
+    columns={2}
+    title="Què fem a gilsys?"
+    items={[
+      {
+        title: 'Desenvolupament d’Algoritmes IA a Mida',
+        description: `Els algoritmes d’IA personalitzats són ideals per a empreses amb necessitats específiques o reptes únics. Solucions per detecció d’anomalies, reconeixement de patrons i classificació avançada de dades.`,
+        list: [
+          'Detecció d’anomalies en dades operatives.',
+          'Reconeixement de patrons en grans volums de dades.',
+          'Classificadors per organitzar productes en catàlegs o documents segons criteris específics.',
+        ],
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Automatització de processos amb Intel·ligència Artificial',
+        description:
+          'La IA permet automatitzar processos repetitius com la generació de resums, etiquetatge automàtic d’imatges o la creació d’informes visuals.',
+        list: [
+          'Generació automàtica de resums de contractes i informes',
+          'Classificació d’imatges i etiquetatge automàtic.',
+          'Processament de dades i creació d’informes visuals de manera automàtica.',
+        ],
+        icon: 'tabler:robot',
+      },
+      {
+        title: 'Programació d’assistents Virtuals i xatbots',
+        description:
+          'Desenvolupem assistents virtuals i xatbots per a suport a clients, gestió de cites o automatització de l’atenció al client.',
+        list: [
+          'Suport a clients en temps real en botigues online.',
+          'Gestió de cites mèdiques mitjançant interfícies conversacionals.',
+          'Automatització de processos d’atenció al client en empreses amb gran volum de consultes.',
+        ],
+        icon: 'tabler:message-circle',
+      },
+      {
+        title: 'Reconeixement d’Imatges i Processament Visual',
+        description:
+          'Implementem sistemes d’anàlisi d’imatges per a identificació d’anomalies, reconeixement facial i classificació visual.',
+        list: [
+          'Identificació d’anomalies en productes industrials mitjançant imatges.',
+          'Sistemes de reconeixement facial per accedir a àrees restringides.',
+          'Classificació automàtica d’imatges en bases de dades empresarials.',
+        ],
+        icon: 'tabler:photo',
+      },
+      {
+        title: 'Processament del Llenguatge Natural (NLP)',
+        description:
+          'Programes basats en NLP per a la generació de resums, anàlisi de sentiments i traducció automàtica.',
+        list: [
+          'Generació de resums automàtics d’informes complexos.',
+          'Anàlisi de sentiments en comentaris i ressenyes de clients.',
+          'Traducció automàtica i redacció de textos personalitzats.',
+        ],
+        icon: 'tabler:language',
+      },
+      {
+        title: 'Anàlisi Predictiva per a la Presa de Decisions Empresarials',
+        description:
+          'Mitjançant models predictius, ajudem les empreses a optimitzar inventaris i ajustar estratègies de màrqueting.',
+        list: [
+          'Predicció de la demanda de productes per optimitzar l’inventari.',
+          'Identificació de patrons en comportament del client per ajustar campanyes de màrqueting.',
+        ],
+        icon: 'tabler:chart-line',
+      },
+      {
+        title: 'Eines de Redacció de Contingut i Traducció Automàtica',
+        description:
+          'Solucions per generar textos automàtics, traduccions instantànies i resums intel·ligents per documents complexos.',
+        list: [
+          'Redacció de contingut: Generació automàtica de descripcions de productes, articles de blog o textos promocionals adaptats al públic objectiu.',
+          'Traducció automàtica: Adaptació instantània de continguts a múltiples idiomes, assegurant coherència i velocitat en projectes internacionals.',
+          'Resums intel·ligents: Creació de resums comprensibles i precisos per documents extensos o informes tècnics.',
+        ],
+        icon: 'tabler:file-text',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Features2>
+
+    <!-- Casos d’ús -->
+    <Features
+    tagline=""
+    title="Com ho fem a gilsys"
+    subtitle=""
+    items={[
+      {
+        title: 'Configuració de servidors locals o al núvol privat',
+        description:
+          'Instal·lem i optimitzem servidors per executar models d’IA especialitzats, oferint una escalabilitat adaptada a les necessitats del projecte.',
+        icon: 'tabler:arrow-autofit-right',
+      },
+      {
+        title: 'Entrenament de models personalitzats',
+        description:
+          'Preparem LLM adaptats a àmbits concrets com tecnològic, finances, educació o indústria, utilitzant dades pròpies de l’empresa per maximitzar-ne la precisió i la utilitat.',
+        icon: 'tabler:message-circle',
+      },
+      {
+        title: 'Integració amb aplicacions personalitzades',
+        description:
+          'Desenvolupem interfícies i APIs que permeten utilitzar els models des d’aplicacions web, mòbils o sistemes empresarials existents.',
+        icon: 'tabler:search',
+      },
+      {
+        title: 'Seguretat i privacitat',
+        description:
+          'Evitem l’exposició de dades sensibles a plataformes comercials. Amb els servidors propis, totes les operacions i dades es mantenen sota control intern.',
+        icon: 'tabler:speakerphone',
+      },
+    ]}
+  />
+
+  <Content
+    title="Solucions LLM Open Source"
+    subtitle="Serveis de models d'aprenentatge grans en servidors propis."
+  >
+    <Fragment slot="postContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">Què és un LLM Open Source?</h3>
+      <p class="text-muted">
+        Un LLM (Large Language Model) Open Source és un model d'aprenentatge a gran escala que es posa a disposició del públic amb codi obert. Això permet a les empreses descarregar, personalitzar i instal·lar el model en servidors propis, garantint un control total sobre les dades i les aplicacions. A diferència de solucions comercials, els LLM Open Source ofereixen flexibilitat completa i eliminació de dependències amb tercers.
+      </p>
+    </Fragment> 
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  
+  <Features3  
+  items={[
+    {
+      title: 'Control total',
+      description: 'Les dades i els models són propietat exclusiva del client, eliminant dependències de tercers.',
+      icon: 'tabler:shield-check',
+    },
+    {
+      title: 'Adaptació específica',
+      description: 'Els models es poden escollir i ajustar per satisfer les necessitats concretes de cada projecte.',
+      icon: 'tabler:adjustments-alt',
+    },
+    {
+      title: 'Rendiment consistent',
+      description:
+        'Es poden instal·lar en servidors dimensionats segons les necessitats de cada projecte.',
+      icon: 'tabler:chart-line',
+    },
+    {
+      title: 'Absència de restriccions d’ús',
+      description: 'A diferència de les solucions comercials, els models Open Source es poden utilitzar per a qualsevol cas, inclosos projectes privats o sensibles, sense limitacions contractuals.'
+    },
+    {
+      title: 'Innovació col·laborativa',
+      description: 'La comunitat global contribueix contínuament a millorar i optimitzar els models, permetent implementar els últims avenços de manera ràpida.'
+    },
+    {
+      title: 'Compliment normatiu',
+      description:
+        'Mantenir dades i processos en servidors privats facilita el compliment de normatives com el GDPR o altres lleis de privacitat.',
+      icon: 'tabler:lock',
+    },
+  ]}
+  >
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-lightgray"></div>
+  </Fragment>
+  </Features3>
+
+
+ <Features3
+ title="A qui li pot interessar?"
+  items={[
+    {
+      title: 'Empreses amb dades sensibles',
+      description: 'Les organitzacions que necessiten garantir la privacitat de les seves dades poden mantenir-ho tot en servidors propis, assegurant el compliment normatiu.',
+      icon: 'tabler:shield-lock',
+    },
+    {
+      title: 'Startups amb pressupost limitat',
+      description: 'Les startups poden aprofitar el baix cost d\'adquisició i ús per experimentar i innovar sense grans inversions inicials.',
+      icon: 'tabler:coin',
+    },
+    {
+      title: 'Equips de recerca i desenvolupament',
+      description: 'Institucions acadèmiques i centres d\'investigació poden utilitzar els models per analitzar, ajustar i contribuir al progrés de la intel·ligència artificial.',
+      icon: 'tabler:school',
+    },
+    {
+      title: 'Empreses que necessiten personalització',
+      description: 'Per a projectes on les solucions comercials no cobreixen completament les necessitats específiques, els LLM Open Source permeten una personalització completa.',
+      icon: 'tabler:adjustments',
+    },
+    {
+      title: 'Organitzacions preocupades per la independència tecnològica',
+      description: 'Aquelles que volen evitar la dependència de proveïdors externs i garantir la sostenibilitat a llarg termini.',
+      icon: 'tabler:world',
+    },
+  ]}
+>
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-lightgray"></div>
+  </Fragment>
+</Features3>
+
+
+
+  <Content
+    isReversed
+    tagline=""
+    title="Per què escollir gilsys per al desenvolupament amb IA?"
+    
+    image={{
+      src: '~/assets/images/ia-software.jpg',
+      alt: 'Colorful Image',
+    }}
+    items={[
+      {
+        title: 'Coneixement tècnic',
+        description:
+          "A gilsys, comptem amb experiència en integració i programació d’IA, combinant models comercials preentrenats i desenvolupament a mida usant LLM's.",
+        icon: 'tabler:brain',
+      },
+      {
+        title: 'Adaptació a diversos sectors',
+        description:
+          'Treballem amb empreses de sanitat, educació, retail i altres sectors, oferint solucions personalitzades.',
+        icon: 'tabler:building',
+      },
+      {
+        title: 'Visió innovadora',
+        description: 'Estem al dia de les últimes tendències en IA per implementar solucions avançades i d’alt impacte.',
+        icon: 'tabler:headset',
+      },
+    ]}
+  >
+    <Fragment slot="postContent">
+        Aquestes solucions d’IA ofereixen una eina potent per a empreses que volen mantenir-se a l’avantguarda, optimitzar processos i oferir una millor experiència als seus clients. Contacta amb gilsys per començar el teu projecte amb IA!
+    </Fragment>
+  </Content>
+</Layout>

@@ -1,0 +1,359 @@
+---
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Migració i Integració de Sistemes – Gilsys',
+  description:
+    'Migració i integració de sistemes empresarials, assegurant que les eines actuals puguin comunicar-se entre si i estiguin preparades per al futur.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="Una migració a temps és una inversió de futur."
+  backgroundImage={{ alt:'Fons abstracte', src: '~/assets/images/dots/03.jpg' }}
+  >
+    <Fragment slot="title"
+      ><span class="text-accent highlight">Migració</span> i <span class="text-accent highlight">integració</span> de plataformes</Fragment
+    >
+    <Fragment slot="subtitle">Creem fluxes de comunicació entre eines existents, n'integrem de noves i migrem sistemes antics cap a solucions més modernes i eficients.</Fragment>
+  </Hero>
+
+  <Features3
+    id="features-services"
+    title="Què fem a gilsys?"
+    subtitle="Fem que les eines existents treballin de manera coordinada, ajudem a migrar sistemes antics cap a solucions més modernes i escalables i integrem eines externes per crear nous fluxes de treball."
+    tagline="Modernització i integració dels teus sistemes."
+
+    items={[
+      {
+        title: 'Migració de dades',
+        description:
+          'Actualitzem sistemes antics per millorar el rendiment i garantir una infraestructura tecnològica robusta i sostenible.',
+        icon: 'tabler:device-desktop',
+        callToAction: {
+          class: 'more-info',
+          text: 'Més informació',
+          href: '#TODO',
+        },
+      },
+      {
+        title: "Integració d'intel·ligència artificial",
+        description:
+          'Integrem processos intel·ligents, chatbots, automatitzacions, anàlisi predictiva o controls de qualitat a sistemes existents.',
+        icon: 'tabler:brain',
+        callToAction: {
+          class: 'more-info',
+          text: 'Més informació',
+          href: '#TODO',
+        },
+      },
+      {
+        title: 'Connexió de software',
+        description:
+          'Sincronitzem informació entre programes, per assegurar un flux de dades eficient i coordinat entre sistemes nous i existents.',
+        icon: 'tabler:arrows-exchange',
+        callToAction: {
+          class: 'more-info',
+          text: 'Més informació',
+          href: '#TODO',
+        },
+      },
+      {
+        title: 'Optimització de software',
+        description:
+          'Auditem i millorem el rendiment i la seguretat dels sistemes existents, implementant tecnologies modernes si cal.',
+        icon: 'tabler:settings',
+        callToAction: {
+          class: 'more-info',
+          text: 'Més informació',
+          href: '#TODO',
+        },
+      },
+      {
+        title: 'Divisió i escalabilitat',
+        description:
+          "Transformem sistemes monolítics en estructures modulars per facilitar el manteniment i l'escalabilitat.",
+        icon: 'tabler:layers-intersect',
+        callToAction: {
+          class: 'more-info',
+          text: 'Més informació',
+          href: '#TODO',
+        },
+      },
+    ]}
+  />
+
+  <Content
+    isReversed
+    tagline=""
+    title="Modernització Tecnològica"
+    items={[
+      {
+        title: 'Migració de software obsolet',
+        description: 'Substitució de software obsolet a tecnologies més modernes.',
+      },
+      {
+        title: 'Optimització de models de dades',
+        description: 'Reestructuració de bases de dades per augmentar la capacitat i reduir el temps de resposta.',
+      },
+      {
+        title: 'Canvis en infraestructura',
+        description: 'Implementació d’eines al núvol, oferint més flexibilitat i reducció de costos d’infraestructura.',
+      },
+      {
+        title: 'Actualitzacions preventives',
+        description:
+          'Els sistemes antics són més vulnerables a atacs de seguretat i poden ralentitzar el creixement empresarial. Actualitzar-los a temps evita problemes futurs i garanteix un funcionament òptim.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/ui-ux-moderna.jpg',
+      alt: 'Interfície d\'usuari moderna',
+    }}
+  >
+    <Fragment slot="preContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">
+        Actualització de sistemes per a un futur sostenible
+      </h3>
+      <p class="text-muted">
+        Els sistemes antics sovint pateixen problemes de seguretat, baixa eficiència i rendiment limitat, la qual cosa
+        pot comprometre l’operativitat d’una empresa. La modernització tecnològica implica actualitzar software i bases
+        de dades per optimitzar el rendiment i assegurar una infraestructura tecnològica robusta.
+      </p>
+    </Fragment>
+    <Fragment slot="postContent">
+      <h3 class="text-2xl font-bold tracking-tightsm:text-3xl mb-2">Per què és important?</h3>
+      <p class="text-muted">
+        Els sistemes antics són més vulnerables a atacs de seguretat i poden ralentitzar el creixement empresarial.
+        Actualitzar-los a temps evita problemes futurs i garanteix un funcionament òptim.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Content    
+    tagline=""
+    title="Integració d'intel·ligència artificial"
+    items={[
+      {
+        title: 'Chatbots i assistents virtuals',
+        description:
+          'Afegir chatbots o assistents virtuals que treballin amb bases de dades existents per millorar l’atenció al client.',
+      },
+      {
+        title: 'Automatització de processos',
+        description:
+          "Automatitzar processos interns amb machine learning, aprofitant dades empresarials per reduir costos i augmentar l'eficiència.",
+      },
+      {
+        title: 'Anàlisi predictiva',
+        description:
+          'Incorporar sistemes d’anàlisi predictiva a eines ja en ús per anticipar necessitats o tendències empresarials.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/ia-integracion-software-abstracto.jpg',
+      alt: 'Abstracció d\'integració de software amb intel·ligència artificial',
+    }}
+  >
+    <Fragment slot="preContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">
+        Millorar sistemes existents amb processos intel·ligents
+      </h3>
+      <p class="text-muted">
+        Integrar intel·ligència artificial en sistemes ja existents pot transformar les operacions empresarials,
+        optimitzant processos i millorant la presa de decisions. No es tracta de substituir eines actuals, sinó
+        d’ampliar-les per aprofitar-ne el potencial amb funcionalitats avançades.
+      </p>
+    </Fragment>
+    <Fragment slot="postContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">Per què és important?</h3>
+      <p class="text-muted">
+        Incorporar intel·ligència artificial en els processos empresarials millora l’eficiència operativa i permet
+        prendre decisions basades en dades, oferint un avantatge competitiu sostenible.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0"></div>
+    </Fragment>
+  </Content>
+
+  <Content
+    isReversed
+    tagline=""
+    title="Integració de Software Empresarial"
+    items={[
+      {
+        title: 'Connexió mitjançant APIs',
+        description:
+          'Desenvolupem integracions mitjançant APIs personalitzades per sincronitzar informació entre sistemes.',
+      },
+      {
+        title: 'Sincronització de dades',
+        description: 'Centralitzem dades perquè siguin accessibles en temps real des de diferents plataformes.',
+      },
+      {
+        title: 'Connexió de sistemes antics',
+        description:
+          'Connectem software antic amb noves eines implementades per l’empresa, assegurant compatibilitat i eficiència.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/integracion-sistemas.jpg',
+      alt: 'Enterprise Software Integration',
+    }}
+  >
+    <Fragment slot="preContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">
+        Fer que les eines treballin de manera coordinada
+      </h3>
+      <p class="text-muted">
+        Moltes empreses utilitzen múltiples eines, però sovint aquestes no estan connectades entre si, la qual cosa
+        genera duplicació de dades, errors i ineficiències.
+      </p>
+    </Fragment>
+    <Fragment slot="postContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">Beneficis</h3>
+      <p class="text-muted">
+        Un sistema integrat redueix errors, millora l'eficiència i permet una visió més clara de les operacions.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Content    
+    tagline=""
+    title="Optimització de Software"
+    items={[
+      {
+        title: 'Auditoria de codi',
+        description: 'Identifiquem punts febles en termes de seguretat i rendiment per aplicar millores.',
+      },
+      {
+        title: 'Optimització de bases de dades',
+        description: 'Revisem i ajustem bases de dades per millorar el temps de resposta i l’eficiència general.',
+      },
+      {
+        title: 'Migració a tecnologies modernes',
+        description:
+          'Actualitzem sistemes obsolets a tecnologies modernes per assegurar sostenibilitat i compatibilitat futura.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/analisis-optimizacion-software.jpg',
+      alt: 'Persona mirant el codi amb lupa, optimitzant rendiment',
+    }}
+  >
+    <Fragment slot="preContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">
+        Revisar, millorar i migrar per augmentar el rendiment
+      </h3>
+      <p class="text-muted">
+        L’optimització de software implica revisar projectes existents per identificar problemes i aplicar millores, o
+        fins i tot migrar-los a tecnologies més modernes quan sigui necessari.
+      </p>
+    </Fragment>
+    <Fragment slot="postContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">Per què és important?</h3>
+      <p class="text-muted">
+        Un sistema optimitzat consumeix menys recursos, és més segur i redueix costos a llarg termini gràcies a un
+        manteniment més senzill i eficient.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0"></div>
+    </Fragment>
+  </Content>
+
+  <Content
+    isReversed
+    tagline=""
+    title="Divisió i Escalabilitat"
+    items={[
+      {
+        title: 'Separació de funcionalitats',
+        description: 'Dividim sistemes monolítics en blocs modulars per facilitar la gestió i escalabilitat.',
+      },
+      {
+        title: 'Desenvolupament més àgil',
+        description: 'Permet ampliar o modificar només les parts necessàries, reduint temps i costos.',
+      },
+      {
+        title: 'Reducció de l’impacte d’errors',
+        description: 'Els blocs modulars són independents, reduint l’impacte d’errors a nivell global.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/bloques-distribuidos.jpg',
+      alt: 'Dividir una projecte en blocs escalables',
+    }}
+  >
+    <Fragment slot="preContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">Transformar monòlits en sistemes escalables</h3>
+      <p class="text-muted">
+        Els sistemes monolítics poden ser difícils de mantenir i actualitzar. Dividir aquests sistemes en blocs modulars
+        permet un desenvolupament més àgil i escalabilitat.
+      </p>
+    </Fragment>
+    <Fragment slot="postContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">Beneficis</h3>
+      <p class="text-muted">
+        La divisió en blocs permet una gestió més manejable i facilita la incorporació de noves funcionalitats amb mínim
+        impacte.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0  bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Features
+    id="benefits"
+    tagline="Per què migrar i integrar amb Gilsys?"
+    title="Beneficis de la migració i integració"
+    subtitle="A Gilsys, oferim solucions realistes, eficients i adaptades a cadaprojecte, convertint processos de migració i integració en oportunitats per millorar els sistemes de manera intel·ligent i sostenible."
+    items={[
+      {
+        title: 'Migració sense interrupcions',
+        description:
+          'Ens encarreguem que cada procés de migració o integració es realitzi amb el mínim impacte possible en el funcionament diari. Planifiquem i coordinem cada etapa per mantenir la continuïtat operativa i reduir molèsties als usuaris finals.',
+        icon: 'tabler:arrows-horizontal',
+      },
+      {
+        title: 'Seguretat i escalabilitat millorades',
+        description:
+          'Revisem els sistemes existents per identificar vulnerabilitats i implementar millores que enforteixin la protecció de dades. Adaptem les plataformes per facilitar-ne el creixement i l’adopció de noves funcionalitats en el futur.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Honestedat i enfocament personalitzat',
+        description:
+          'A Gilsys prioritzem les necessitats reals del client. Si no és necessari canviar-ho tot, o no té sentit a nivell econòmic fer-ho, ho direm. Recomendarem les pràctiques i solucions més adequades per al negoci, valorant sempre el cost-benefici i l’impacte a llarg termini.',
+        icon: 'tabler:message-circle',
+      },
+      {
+        title: 'Experiència pràctica en projectes reals',
+        description:
+          'Hem treballat amb empreses de sectors diversos, resolent problemes concrets com la integració de sistemes independents, la migració de tecnologies obsoletes o la millora de rendiment en eines ja existents.',
+        icon: 'tabler:chart-bar',
+      },
+      {
+        title: 'Visió sostenible',
+        description:
+          'Optimitzem els sistemes amb bones pràctiques de programació perquè siguin més fàcils d’actualitzar i mantenir amb el pas del temps. Això permet que les plataformes evolucionin al mateix ritme que les necessitats de l’empresa.',
+        icon: 'tabler:leaf',
+      },
+    ]}
+  />
+</Layout>

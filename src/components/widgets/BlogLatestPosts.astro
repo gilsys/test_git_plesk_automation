@@ -42,7 +42,7 @@ const posts = APP_BLOG.isEnabled ? await findLatestPosts({ count, lang }) : [];
 
 {
   APP_BLOG.isEnabled ? (
-    <WidgetWrapper id={id} isDark={isDark} containerClass={classes?.container as string} bg={bg}>
+    <WidgetWrapper id={id} isDark={isDark} containerClass={`wg-blog-latest-posts ${classes?.container ?? ''}`} bg={bg}>
       <div class="flex flex-col lg:justify-between lg:flex-row mb-8">
         {title && (
           <div>

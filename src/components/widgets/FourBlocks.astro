@@ -31,7 +31,7 @@ const {
 } = Astro.props;
 ---
 
-<WidgetWrapper id={id} isDark={isDark} containerClass={classes?.container as string} bg={bg}>
+<WidgetWrapper id={id} isDark={isDark} containerClass={`wg-fourblocks ${classes?.container ?? ''}`} bg={bg}>
   <div class="flex flex-col lg:justify-between mb-8">
     {
       (
@@ -95,7 +95,7 @@ const {
                     <Icon name="tabler:check" class="w-5 h-5 font-bold p-1 text-white" />
                   </div>
                   <span>
-                    <a href="{link.href}" title="{link.title}">
+                    <a href={link.href} title={link.title}>
                       {link.text}
                     </a>
                   </span>

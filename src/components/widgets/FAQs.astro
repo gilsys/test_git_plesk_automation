@@ -8,6 +8,7 @@ const {
   title = '',
   subtitle = '',
   tagline = '',
+  heading = '',
   items = [],
   columns = 2,
 
@@ -18,8 +19,16 @@ const {
 } = Astro.props;
 ---
 
-<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-7xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
+<WidgetWrapper id={id} isDark={isDark} containerClass={`wg-faqs max-w-7xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
   <Headline title={title} subtitle={subtitle} tagline={tagline} />
+    {
+      heading && (
+      <h3 class="text-xl sm:text-3xl text-center font-bold leading-tight mb-10 font-heading ">
+        {heading}
+      </h3>
+      )
+    }      
+
   <ItemGrid
     items={items}
     columns={columns}
