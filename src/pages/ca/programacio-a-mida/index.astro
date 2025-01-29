@@ -15,10 +15,13 @@ import Steps2 from '~/components/widgets/Steps2.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import Testimonials from '~/components/widgets/Testimonials.astro';
 import ContactForm from '~/components/widgets/ContactForm.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
 
 const metadata = {
-  title: 'About us',
-  description: 'About us',
+  title: 'Programació de software a mida per empreses',
+  description: 'Desenvolupem aplicacions web i apps per mòbils, eines que integren intel·ligència artificial a les empreses i automatitzen processos.',
 };
 ---
 
@@ -26,6 +29,10 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero
+    actions={[
+      { variant: 'primary', text: 'Sol·licitar pressupost', href: u('contact') },
+    ]}
+
     backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/13.jpg' }}
     tagline="Creem <strong>eines que NO només funcionen</strong>, sinó que són atractives i eficients."
   >
@@ -33,12 +40,12 @@ const metadata = {
       >Programació de <span class="text-accent highlight"> software a mida</span> per empreses</Fragment
     >
     <Fragment slot="subtitle"
-      >Desenvolupem solucions per a aquelles empreses que necessiten eines úniques i adaptades a les seves necessitats.</Fragment
+      >Desenvolupem aplicacions web i apps per mòbils, eines que integren intel·ligència artificial a les empreses i automatitzen processos.</Fragment
     >
   </Hero>
 
   <Features3
-    title="Què fem a gilsys?"
+    title="Quin tipus d'eines programem a mida?"
     items={[
       {
         title: 'Aplicacions web',
@@ -65,7 +72,7 @@ const metadata = {
       {
         title: 'Programació amb intel·ligència artificial',
         description:
-          'Creem algoritmes per automatitzar processos, analitzar dades i resoldre reptes tècnics utilitzant intel·ligència artificial.',
+          "Desenvolupem solucions que utilitzen la IA per automatitzar tasques que necessiten una comprensió avançada de les dades.",
         icon: 'tabler:brain',
         callToAction: {
           class: 'more-info',
@@ -76,7 +83,7 @@ const metadata = {
       {
         title: "Webs d'alt rendiment",
         description:
-          "Programem webs optimitzades a nivell de rendiment, SEO, seguretat i amb una experiència d'usuari funcional. Per projectes que requereixen més que un <a class='text-accent' href='' title='Programació de webs amb Wordpress'>Wordpress</a>.",
+          "Programem webs optimitzades a nivell de rendiment, SEO, seguretat i amb una experiència d'usuari funcional. Per projectes que requereixen més que un <a class='text-accent' href='' title='Programació de webs autogestionables amb Wordpress'>Wordpress</a>.",
         icon: 'tabler:layout',
         callToAction: {
           class: 'more-info',
@@ -85,9 +92,9 @@ const metadata = {
         },
       },
       {
-        title: "Programació d'APIs",
+        title: "Programació d'automatitzacions i APIs",
         description:
-          'Desenvolupem APIs a mida per integrar sistemes i facilitar l’intercanvi eficient de dades entre plataformes.',
+          'Automatitzar tasques repetitives a través de programació, permet optimitzar processos empresarials i millorar la connectivitat entre sistemes.',
         icon: 'tabler:api',
         callToAction: {
           class: 'more-info',
@@ -116,7 +123,7 @@ const metadata = {
       {
         title: 'Diferències entre software a mida i software personalitzat',
         description:
-          "Tot i que poden semblar conceptes similars, és important destacar que el software a mida es crea <strong>des de zero</strong>, mentre que el software personalitzat implica adaptar o ampliar una eina a les necessitats del client. No hi ha una solució perfecta, depenent de cada projecte, serà millor programar software a mida o utilitzar <a href='#TODO' class='text-accent'>software personalitzat</a>.",
+          "Tot i que poden semblar conceptes similars, és important destacar que el software a mida es crea <strong>des de zero</strong>, mentre que el software personalitzat implica adaptar o ampliar una eina a les necessitats del client. No hi ha una solució perfecta, depenent de cada projecte, serà millor programar software a mida o utilitzar com a base <a href='#TODO' class='text-accent'>software personalitzat</a>.",
       },
     ]}
   />
@@ -125,7 +132,7 @@ const metadata = {
     id="features"
     tagline="Característiques"
     title="Beneficis del software a mida"
-    subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022."
+    subtitle="Solucions úniques per cobrir les necessitats específiques de cada empresa amb eficiència, escalabilitat i innovació."
     items={[
       {
         title: 'Programació a mida per adaptar-se a cada empresa',
@@ -256,8 +263,7 @@ const metadata = {
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
         Oferim experiència, honestedad i qualitat
       </h3>
-      Durant més de 20 anys creant software a mida, hem pogut treballar en projectes molt importants en una gran varietat
-      de sectors.
+      Durant més de 20 anys creant software a mida, hem pogut treballar en projectes molt importants en una gran varietat de sectors.
     </Fragment>
 
     <Fragment slot="bg">
@@ -265,7 +271,24 @@ const metadata = {
     </Fragment>
   </Content>
 
-  <ContactForm pageTitle={metadata.title} />
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/13.jpg', alt: 'Fons abstracte' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Sol·licitar pressupost',
+        href: '#TODO',
+      },
+      {
+        variant: 'primary',
+        text: 'Trucar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">Si el que necessites no existeix, necessites <br /><span class="custom-gradient">software a mida</span></Fragment>
+    <Fragment slot="subtitle">Preparem un pressupost adaptat a les teves necessitats.</Fragment>
+  </CallToAction>
 
   <BlogLatestPosts title="Últimes entrades del blog" linkText="Anar al blog" />
 </Layout>

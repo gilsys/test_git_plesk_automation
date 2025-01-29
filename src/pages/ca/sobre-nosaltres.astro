@@ -7,26 +7,28 @@ import Stats from '~/components/widgets/Stats.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
 import Layout from '~/layouts/PageLayout.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 
 const metadata = {
-  title: 'Projectes d\'intel·ligència artificial i programació de software a Osona.',
-  description: 'Més de 20 anys desenvolupant projectes de software. Ens trobaràs prop de Vic, Barcelona, Catalunya.',
+  title: `gilsys - Empresa TIC d'Osona amb més de 20 anys d'experiència`,
+  description: `Programem software a mida, web, apps i intel·ligència artificial. Coneix els nostres valors, metodologia de treball i respostes a preguntes freqüents.`,
 };
+
+const u = useRoutes(getLangFromUrl(Astro.url));
 ---
 
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
-  <Hero
-    backgroundImage={{alt: 'Fons abstracte',  src: '~/assets/images/neutral/bg-4.jpg'}}
-    
-  >
-  <Fragment slot="title">
-    <span class="custom-gradient">gilsys</span> = Experiència + qualitat.
-  </Fragment>
+  <Hero backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/neutral/bg-4.jpg' }}>
+    <Fragment slot="title">
+      <span class="custom-gradient">gilsys</span> = Experiència + qualitat.
+    </Fragment>
 
     <Fragment slot="subtitle">
-        Som una empresa TIC d'Osona amb més de 20 anys d'experiència en programació de software, web i apps. Ara també <span class="custom-gradient">intel·ligència artificial</span>.
+      Som una empresa TIC d'Osona amb més de 20 anys d'experiència en programació de software, web i aplicacions per
+      mòbils. Ara també <span class="custom-gradient">intel·ligència artificial</span>.
     </Fragment>
   </Hero>
 
@@ -38,10 +40,9 @@ const metadata = {
     subtitle=`Som un equip d'especialistes <strong>apassionats</strong> per la programació de software a mida, apps, desenvolupament d'aplicacions web i intel·ligència artificial.
     <div class="mx-auto px-4 max-w-6xl font-medium py-4 sm:px-6 text-md bg-lightgray">
     
-    Si vols contactar directament amb Jordi Gil Martí, fundador de gilsys, pots fer-ho a través de <a href="#TODO" class="text-accent">LinkedIn</a>.
+    Si vols contactar directament amb Jordi Gil Martí, fundador de gilsys, pots fer-ho a través de <a href="https://www.linkedin.com/in/jordigilmarti/" rel="nofollow" title="Perfil de Jordi Gil Martí a Linked-in" class="text-accent">LinkedIn</a>.
     </div>
     `
-
     items={[
       {
         title: 'Història',
@@ -51,7 +52,7 @@ const metadata = {
       {
         title: 'Equip actual',
         description:
-          "Actualment, comptem amb un equip format per professionals amb perfils tècnics especialitzats. Mantenim una estructura reduïda per garantir la màxima qualitat en els nostres serveis, assegurar un control rigorós en cada projecte i oferir un tracte proper als nostres clients.",          
+          'Actualment, comptem amb un equip format per professionals amb perfils tècnics especialitzats. Mantenim una estructura reduïda per garantir la màxima qualitat en els nostres serveis, assegurar un control rigorós en cada projecte i oferir un tracte proper als nostres clients.',
       },
       {
         title: 'Compromís de futur',
@@ -60,7 +61,6 @@ const metadata = {
       },
     ]}
   />
-
 
   <!-- Features3 Widget ************** -->
 
@@ -74,40 +74,43 @@ const metadata = {
         title: 'Qualitat',
         description:
           'Entreguem productes sòlids i estables que permeten treballar amb tranquil·litat i compleixen amb els requisits establerts.',
-        icon: 'tabler:template',
+        icon: 'tabler:check',
       },
       {
         title: 'Experiència',
         description:
           'Sabem el què fem. Més de 20 anys en el sector ens han permès treballar en projectes d’àmbits molt diversos, amb clients a nivell nacional i internacional.',
-        icon: 'tabler:template',
+        icon: 'tabler:briefcase',
       },
       {
         title: 'Innovació',
         description:
           'Investiguem de forma constant per oferir resultats innovadors que aportin el valor afegit requerit en cada desenvolupament.',
-        icon: 'tabler:template',
+        icon: 'tabler:rocket',
       },
       {
         title: 'Comunicació',
         description:
-          'Creiem fonamental que conegui l’estat del seu projecte per poder prendre les decisions necessàries i obtenir el resultat final previst.',
-        icon: 'tabler:template',
+          "Creiem fonamental transmetre periòdicament l'estat del projecte per poder prendre les decisions necessàries i obtenir el resultat final previst.",
+        icon: 'tabler:message-circle',
       },
       {
         title: 'Honestedat',
         description: 'Aportem les solucions pensant amb el que li convé al client, a nivell tècnic i econòmic.',
-        icon: 'tabler:template',
+        icon: 'tabler:heart',
       },
       {
         title: 'Rendiment',
         description: 'Desenvolupem pensant sempre en el rendiment del projecte, i en la seva futura escalabilitat.',
-        icon: 'tabler:template',
+        icon: 'tabler:chart-line',
       },
     ]}
-  />
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Features3>
 
-  
   <Steps
     id="resume"
     title="Metodologia de treball"
@@ -116,187 +119,186 @@ const metadata = {
       {
         title: 'Recollida de requisits,',
         description: `on escoltem les teves necessitats i les expectatives del projecte que es vol implementar.`,
-        icon: 'tabler:clipboard-list', // Representa recollida d'informació i llistes.
+        icon: 'tabler:clipboard-list',
       },
       {
         title: 'Consultoria tecnològica,',
-        description: `depenent del projecte, serà necessari un anàlisi de la situació actual, es conceptualitzaran idees i s'oferirà assessorament tecnològic.`,
-        icon: 'tabler:settings', // Simbolitza configuració i anàlisi.
+        description:
+          `depenent del projecte, serà necessari una <a href="` +
+          u('consultory') +
+          `" title="Assessorament inicial i estudi de situació tecnològica de l'empresa" class="text-accent">consultoria tecnològica</a> que permeti analitzar a fons la situació actual, conceptualitzar idees i planificar adequadament el projecte.`,
+        icon: 'tabler:settings',
       },
       {
         title: 'Presentació de proposta i planificació de fases,',
         description: `de forma consensuada amb el client segons prioritat i pressupost.`,
-        icon: 'tabler:calendar-check', // Planificació i propostes per fases.
+        icon: 'tabler:calendar-check',
       },
       {
         title: 'Disseny,',
         description: `d'interfície d'usuari en cas de que el projecte ho requereixi.`,
-        icon: 'tabler:palette', // Representa el disseny i les interfícies visuals.
+        icon: 'tabler:palette',
       },
       {
         title: 'Programació del sistema,',
         description: `per a que realitzi les funcionalitats definides.`,
-        icon: 'tabler:code', // Programació i desenvolupament de sistemes.
+        icon: 'tabler:code',
       },
       {
         title: 'Demostració,',
         description: `on s'exposa la solució obtinguda per a que sigui validada.`,
-        icon: 'tabler:eye-check', // Validació i revisió.
+        icon: 'tabler:eye-check',
       },
       {
         title: 'Entrega,',
         description: `i posta en marxa del projecte en entorn de producció.`,
-        icon: 'tabler:rocket', // Llançament i entrega de projectes.
+        icon: 'tabler:rocket',
       },
       {
         title: 'Manteniment,',
         description: `on es donarà suport i es realitzaran els ajustos i correccions en cas necessari.`,
-        icon: 'tabler:tools', // Representa manteniment i ajustos.
+        icon: 'tabler:tools',
       },
       {
         title: 'Ampliacions i noves fases,',
         description: `on s'implementaran noves necessitats acordades amb el client.`,
-        icon: 'tabler:replace', // Creixement, ampliacions i noves fases.
+        icon: 'tabler:replace',
       },
     ]}
     classes={{ container: 'max-w-3xl' }}
   />
 
   <FAQs
-  title="Preguntes freqüents"
-  subtitle="Dive into the following questions to gain insights into the powerful features that AstroWind offers and how it can elevate your web development journey."
-  tagline="FAQs"
-  classes={{ container: 'max-w-6xl' }}
-  items={[
-    {
-      title: 'Why AstroWind?',
+    title="Preguntes freqüents"
+    subtitle="Respostes a les preguntes més habituals."
+    tagline="FAQs"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'Quins tipus de projectes desenvolupa gilsys?',       
       description:
-        "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
-    },
-    {
-      title: 'What do I need to start?',
-      description:
-        'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
-    },
-    {
-      title: 'How to install the Astro + Tailwind CSS template?',
-      description:
-        "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
-    },
-    {
-      title: "What's something that you don't understand?",
-      description:
-        "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
-    },
-    {
-      title: 'What is something that you would like to try again?',
-      description:
-        "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
-    },
-    {
-      title: 'If you could only ask one question to each person you meet, what would that question be?',
-      description:
-        "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
-    },
-  ]}
-  ></FAQs>
+      `
+      Desenvolupem <a href="` + u('development') + `" title="Programació a mida per empreses" class="text-accent">software a mida</a>, creant eines innovadores des de zero. També treballem amb 
+<a href="` + u('software') + `" title="Software personalitzable com CRM, WordPress, Pimcore o Metabase" class="text-accent">software personalitzable</a> per adaptar-lo a les necessitats concretes dels nostres clients, incloent-hi opcions com CRM, WordPress, Pimcore o Metabase. A més, som experts en 
+<a href="` + u('migration') + `" title="Migració de dades i comunicació de programes" class="text-accent">migració de dades i integració de sistemes</a>.<br /><br />
 
-<FAQs
-title="Preguntes freqüents"
-subtitle="Respostes a les preguntes més habituals."
-tagline="FAQs"
-classes={{ container: 'max-w-6xl' }}
-items={[
-  {
-    title: 'Quins tipus de projectes desenvolupa gilsys?',
-    description:
-      'Oferim solucions a mida per aplicacions web, mòbils, APIs, integracions de sistemes, automatitzacions i intel·ligència artificial.',
-  },
-  {
-    title: 'Quin és el termini mitjà de desenvolupament d’un projecte?',
-    description:
-      'Depèn de la complexitat del projecte. Generalment, projectes petits poden durar unes setmanes, mentre que projectes més grans poden necessitar mesos.',
-  },
-  {
-    title: 'Oferiu suport tècnic després de la finalització d’un projecte?',
-    description:
-      'Sí, oferim serveis de manteniment i suport per assegurar que el sistema funcioni correctament i pugui evolucionar segons les necessitats.',
-  },
-  {
-    title: 'Amb quins sectors treballeu?',
-    description:
-      'Treballem amb sectors diversos com el logístic, industrial, retail, educació, sanitat, e-commerce, i altres.',
-  },
-  {
-    title: 'Podeu ajudar amb la migració de sistemes antics a noves plataformes?',
-    description:
-      'Sí, tenim experiència en la migració de sistemes i bases de dades cap a solucions més modernes i escalables.',
-  },
-  {
-    title: 'Quines són les vostres eines principals de desenvolupament?',
-    description:
-      'Treballem amb tecnologies modernes com frameworks web (React, Vue.js), plataformes mòbils (Flutter, React Native) i integracions amb intel·ligència artificial.',
-  },
-  {
-    title: 'Disposeu d’un equip d’UI/UX?',
-    description:
-      'Sí, tenim dissenyadors especialitzats en UI/UX que asseguren interfícies atractives i fàcils d’utilitzar.',
-  },
-  {
-    title: 'Què passa si es necessiten canvis enmig del projecte?',
-    description:
-      'Treballem de manera flexible i, si es requereixen ajustos, revisem el pressupost i el cronograma per adaptar-nos a les noves necessitats.',
-  },  
-  {
-    title: 'Quines són les condicions de pagament per a un projecte?',
-    description:
-      'Normalment, treballem amb un pagament inicial i pagaments parcials basats en les fites acordades amb el client.',
-  },
-  {
-    title: 'És possible començar un projecte amb un pressupost reduït?',
-    description:
-      'Sí, oferim solucions escalables que permeten començar amb un MVP (Minimum Viable Product) i ampliar-lo posteriorment.',
-  },
-  {
-    title: 'Treballeu amb projectes internacionals?',
-    description:
-      'Sí, hem col·laborat amb empreses a nivell nacional i internacional, oferint solucions adaptades a les seves necessitats.',
-  },
-  {
-    title: 'Treballeu amb metodologies àgils?',
-    description:
-      'Sí, utilitzem metodologies com Scrum o Kanban per garantir flexibilitat i una comunicació constant amb el client.',
-  },
-  {
-    title: 'Podeu integrar solucions d’intel·ligència artificial en projectes existents?',
-    description:
-      'Sí, podem afegir funcionalitats basades en IA a sistemes i aplicacions ja existents.',
-  },
-  {
-    title: 'Com gestioneu la confidencialitat de les dades del projecte?',
-    description:
-      'Signem acords de confidencialitat (NDA) i implementem mesures estrictes per protegir les dades dels nostres clients.',
-  },
-  {
-    title: 'Oferiu formació per als usuaris finals després de la implementació del projecte?',
-    description:
-      'Sí, podem proporcionar formació i documentació per ajudar els usuaris a utilitzar les noves eines o sistemes.',
-  }, 
-  {
-    title: 'Oferiu integracions amb eines de tercers?',
-    description:
-      'Sí, podem integrar solucions amb sistemes de tercers, com ERP, CRM o altres plataformes empresarials.',
-  },
-  {
-    title: 'Es pot fer una demostració del projecte abans de la seva entrega final?',
-    description:
-      'Sí, presentem una demo abans de la fase final per assegurar que compleix amb les expectatives del client.',
-  },
-  {
-    title: 'Quin suport oferiu durant el procés de desenvolupament?',
-    description:
-      'Treballem de manera col·laborativa amb el client i mantenim una comunicació constant durant totes les fases del projecte.',
-  },
-]}
-/>
+De forma transversal, en totes les nostres solucions podem implementar 
+<a href="` + u('development/ia') + `" title="Programació intel·ligència artificial" class="text-accent">intel·ligència artificial</a> per automatitzar processos i augmentar l'eficiència.
+<br /><br />
+Finalment, a banda dels serveis de desenvolupament, també oferim 
+<a href="` + u('consultory') + `" title="Assessorament tecnològic" class="text-accent">consultoria tecnològica</a> per convertir idees en projectes tangibles i d’èxit.
+
+      `
+      },
+      {
+        title: 'No tenim molt clar si la idea que tenim és viable o no, i si seria molt car el seu desenvolupament',
+        description: `En aquests casos, analitzem la proposta i n'estudiem la viabilitat. Podem proporcionar un rang de preus orientatiu basat en una previsió del projecte. Si aquest és adequat, podem dur a terme una <a href="` + u('consultory') + `" title="Creació de pressupostos de projectes per fases" class="text-accent">consultoria tecnològica</a> conjunta per conceptualitzar les idees, dividir-les en fases i establir un calendari de treball detallat, amb els costos corresponents a cada fase.  Un cop finalitzada cada fase, es pot revisar l'estat del projecte i replantejar punts si cal, per tal d'adaptar-lo a les necessitats reals.`,
+      },
+      {
+        title: 'Quin és el termini mitjà de desenvolupament d’un projecte?',
+        description:
+          'Depèn de la complexitat del projecte. Generalment, projectes petits poden durar unes setmanes, mentre que projectes més grans poden necessitar mesos.',
+      },
+      {
+        title: 'Oferiu suport tècnic després de la finalització d’un projecte?',
+        description:
+          'Sí, oferim serveis de manteniment i suport per assegurar que el sistema funcioni correctament i pugui evolucionar segons les necessitats.',
+      },
+      {
+        title: 'Amb quins sectors treballeu?',
+        description: `Els serveis que oferim no estan lligats a un sector concret, pel que treballem per sectors molt diversos com el logístic, industrial, retail, educació, sanitat, e-commerce, entre d'altres.`,
+      },
+      {
+        title: 'Podeu ajudar amb la migració de sistemes antics a noves plataformes, sense perdre dades?',
+        description:
+          `Sí, tenim experiència en la <a href="` + u('migration') + `" title="Migracions sense perdre dades" class="text-accent">migració de bases de dades</a>
+          de sistemes antics, transformant-les i adaptant-les a la nova estructura sense perdre informació.`,
+      },
+      {
+        title: 'Quines són les vostres eines principals de desenvolupament?',
+        description: `Hem treballat amb molts llenguatges de programació, bases de dades i eines diverses durant els més de 20 anys que portem en el sector. Pots consultar les tecnologies que més utilitzem actualment a aquest apartat #LINK .`,
+      },
+      {
+        title: 'Què passa si es necessiten canvis enmig del projecte?',
+        description:
+          'Treballem de manera flexible i, si es requereixen ajustos, revisem el pressupost i el cronograma per adaptar-nos a les noves necessitats.',
+      },
+      {
+        title: 'Quines són les condicions de pagament per a un projecte?',
+        description:
+          'Normalment, treballem amb un pagament inicial i pagaments parcials basats en les fites acordades amb el client.',
+      },
+      {
+        title: 'És possible començar un projecte amb un pressupost reduït?',
+        description:
+          'Sí, oferim solucions escalables que permeten començar amb un MVP (Minimum Viable Product) i ampliar-lo posteriorment.',
+      },
+      {
+        title: 'Treballeu amb projectes internacionals?',
+        description:
+          'Sí, hem col·laborat amb empreses a nivell nacional i internacional, oferint solucions adaptades a les seves necessitats.',
+      },
+      {
+        title: 'Treballeu amb metodologies àgils?',
+        description:
+          'Sí, utilitzem metodologies com Scrum o Kanban per garantir flexibilitat i una comunicació constant amb el client.',
+      },
+      {
+        title: 'Podeu integrar automatitzacions amb intel·ligència artificial en projectes existents?',
+        description: `No sempre podem modificar software existent o integrar-hi noves funcionalitats que utilitzin 
+        <a href="` + u('migration') + `" title="Integració d'intel·ligència artificial" class="text-accent">IA</a>
+        , dependrà de cada sistema i de quines funcionalitats es necessitin integrar.`,
+      },
+      {
+        title: 'Com gestioneu la confidencialitat de les dades del projecte?',
+        description:
+          'Signem acords de confidencialitat (NDA) i implementem mesures per protegir les dades dels nostres clients.',
+      },
+      {
+        title: 'Oferiu formació per als usuaris finals després de la implementació del projecte?',
+        description:
+          'Sí, podem proporcionar formació i documentació per ajudar els usuaris a utilitzar les noves eines o sistemes.',
+      },
+      {
+        title: 'Oferiu integracions amb eines de tercers?',
+        description:
+          'Sí, podem integrar solucions amb sistemes de tercers, com ERP, CRM o altres plataformes empresarials.',
+      },
+      {
+        title: 'Es pot fer una demostració del projecte abans de la seva entrega final?',
+        description:
+          'Sí, presentem una demo abans de la fase final per assegurar que compleix amb les expectatives del client.',
+      },
+      {
+        title: 'Quin suport oferiu durant el procés de desenvolupament?',
+        description:
+          'Treballem de manera col·laborativa amb el client i mantenim una comunicació constant durant totes les fases del projecte.',
+      }
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </FAQs>
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/neutral/bg-4.jpg', alt: 'Fons abstracte' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contactar',
+        href: 'contactar',
+      },
+      {
+        variant: 'primary',
+        text: 'Trucar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title"
+      >Si vols conèixer-nos millor,<br /><span class="custom-gradient">sol·licita una reunió</span></Fragment
+    >
+    <Fragment slot="subtitle">Estarem encantats de presentar-nos i veure en quins punts us podem ajudar.</Fragment>
+  </CallToAction>
 </Layout>

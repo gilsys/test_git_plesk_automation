@@ -51,3 +51,31 @@ export function getRouteFromUrl(url: URL): string | undefined {
   return result;
 }
 
+
+
+// Obtiene las migas de pan basadas en una ruta
+export function getBreadcrumb(lang: string, path: string) {
+  const breadcrumbs = [];
+  let currentPath = path;
+
+  while (currentPath) {
+    const route = Object.entries(routes[lang]).find(([, value]) => value === currentPath);
+
+    if (route) {
+      const [key, value] = route;
+      breadcrumbs.unshift({
+        text: key.replace(/-/g, ' '), // Nombre amigable del texto
+        href: value,
+      });
+
+      // Si la ruta tiene un "padre", continuamos.
+      currentPath = Object.entries(routes[lang]).find(([parentKey]) =>
+        value.startsWith(routes[lang][parentKey])
+      )?.[1];
+    } else {
+      currentPath = null;
+    }
+  }
+
+  return breadcrumbs;
+}

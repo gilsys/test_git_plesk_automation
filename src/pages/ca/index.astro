@@ -11,9 +11,9 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 import { header } from '~/i18n/ui.ts';
 
-const metadata = {
-  title: 'About us',
-  description: 'About us',
+const metadata = {         
+  title: 'Programació a mida de software, apps, web i IA | +20 anys.',
+  description: 'Empresa de desenvolupament professional i personalitzat de programes, aplicacions mòbils i eines d’intel·ligència artificial. Prop de Vic (Osona, Barcelona).'
 };
 
 const u = useRoutes(getLangFromUrl(Astro.url));
@@ -50,8 +50,8 @@ const u = useRoutes(getLangFromUrl(Astro.url));
   </Hero>
 
   <Features
-    title="Som una empresa especialitzada en <span class='custom-gradient'>programació de software</span>"
-    subtitle=`Oferim serveis de desenvolupament d’aplicacions web i mòbils, programació de software personalitzat i integració d’intel·ligència artificial, tot adaptat a les necessitats específiques de cada projecte.`
+    title="Integrem<br><span class='custom-gradient'>Intel·ligència Artificial</span> a empreses"
+    subtitle=`Desenvolupem aplicacions web i mòbils, automatitzem processos i integrem IA en software programat a mida per optimitzar la teva empresa.`
   />
 
   <FourBlocks
@@ -111,12 +111,12 @@ const u = useRoutes(getLangFromUrl(Astro.url));
       },
       {
         title: 'Solucions personalitzades',
-        description: `Cada projecte és únic. Coneixem el codi i sabem com utilitzar-lo per crear solucions a mida, evitant que t'hagis d'adaptar a eines que no s'ajusten exactament a les teves necessitats.`,
+        description: `Cada projecte és únic. Coneixem el codi i sabem com utilitzar-lo per crear solucions a mida, evitant adaptar l'empresa a eines que no s'ajusten exactament a les necessitats reals.`,
         icon: 'tabler:settings-code',
       },
       {
         title: 'Tecnologies avançades',
-        description: `Treballem amb eines i tecnologies de darrera generació com la intel·ligència artificial, el cloud i frameworks moderns per oferir resulats innovadors i eficients.`,
+        description: `Treballem amb eines i tecnologies de darrera generació com la <a href="`+ u('development/ia') +`" title="Creem programes per empreses que integren IA" class="text-accent">intel·ligència artificial</a>, el cloud i frameworks moderns per oferir resulats innovadors i eficients.`,
         icon: 'tabler:rocket',
       },
       {
@@ -166,7 +166,7 @@ const u = useRoutes(getLangFromUrl(Astro.url));
     items={[
       {
         title: 'Què és?',
-        description: `El govern d'Espanya impulsa el programa Kit Digital, finançat per fons europeus Next Generation, per ajudar petites i mitjanes empreses, otorgant subvencions entre <span class="text-primary">3.000€</span> i <span class="text-primary">29.000€</span> per invertir en la implantació de noves tecnologies.`,
+        description: `El govern d'Espanya impulsa el programa <a class="text-accent" href='https://www.acelerapyme.gob.es/kit-digital' target='_blank' rel='nofollow'>Kit Digital</a>, finançat per fons europeus Next Generation, per ajudar petites i mitjanes empreses, otorgant subvencions entre <span class="text-primary">3.000€</span> i <span class="text-primary">29.000€</span> per invertir en la implantació de noves tecnologies.`,
       },
       {
         title: 'Som agents digitalitzadors',
@@ -199,7 +199,7 @@ const u = useRoutes(getLangFromUrl(Astro.url));
     items={[
       {
         title: 'Què és?',
-        description: `El programa Kit Consulting, impulsat pel govern d'Espanya amb fons europeus Next Generation, ofereix subvencions de <span class="text-primary">12.000€</span> a <span class="text-primary">24.000€</span> en diferents serveis d'assessorament digital.`,
+        description: `El programa <a class="text-accent" href='https://www.acelerapyme.gob.es/kit-consulting' target='_blank' rel='nofollow'>Kit Consulting</a>, impulsat pel govern d'Espanya amb fons europeus Next Generation, ofereix subvencions de <span class="text-primary">12.000€</span> a <span class="text-primary">24.000€</span> en diferents serveis d'assessorament digital.`,
       },
       {
         title: 'Som agents consultors',
@@ -235,63 +235,64 @@ const u = useRoutes(getLangFromUrl(Astro.url));
     items={[
       {
         title: 'Tecnològic',
-        description: `Aplicacions web i mòbils amb integració de Bluetooth i APIs a mida.`,
+        description: `<a href="`+ u('development/web') +`" title="Programació aplicacions web a mida" class="text-accent">Eines online</a> i <a href="`+ u('development/apps') +`" title="Programació d'aplicacions iOS i Android a mida" class="text-accent">apps per mòbils</a> amb integració de Bluetooth, IA o APIs a mida.`,
         icon: 'tabler:code',
       },
       {
         title: 'Empresarial',
-        description: `Desenvolupament de pàgines web molt ràpides (no Wordpress) i optimitzades per SEO.`,
+        description: `Desenvolupament de 
+        <a href="`+ u('development/web') +`" title="Programació de webs d'alt rendiment" class="text-accent">pàgines web ràpides</a> (no Wordpress) i optimitzades per SEO.`,
         icon: 'tabler:affiliate',
       },
       {
         title: 'Retail',
-        description: `Botigues online, landing pages i integració amb facturació.`,
+        description: `<a href="`+ u('software/ecommerce') +`" title="e-commerce amb Prestashop i Woocommerce" class="text-accent">Botiges online</a>, landing pages i integració amb facturació.`,
         icon: 'tabler:shopping-cart',
       },
       {
         title: 'Màrqueting',
-        description: 'Implantació de CRM, sincronizació de dades de vendes i integració d’eines digitals.',
+        description: `Implantació de <a href="`+ u('software/crm') +`" title="gestors de clients per empreses i autònoms" class="text-accent">CRM</a>, sincronizació de dades de vendes i integració d’eines digitals.`,
         icon: 'tabler:arrow-big-up-lines',
       },
       {
         title: 'Educació',
-        description: 'Plataformes de formació a mida amb estàndards SCORM/LTI i eines per avaluació digital.',
+        description: `<a href="`+ u('development/web') +`" title="Programació aplicacions web per formació" class="text-accent">Plataformes de formació online</a> a mida, amb sistemes d'avaluació avançats.`,
         icon: 'tabler:school',
       },
       {
         title: 'Salut',
-        description: "Programació d'eines per gestió mèdica, cites, historial i control d’inventari.",
+        description: `Programació d'eines online per <a href="`+ u('development/web') +`" title="Disseny i desenvolupament d'eines per a gestió de centres mèdics" class="text-accent">gestió mèdica</a>, cites, historial i control d’inventari.`,
         icon: 'tabler:vaccine',
       },
       {
         title: 'Industrial',
         description:
-          'Solucions de gestió de productes PIM, programació de software per automatitzar processos i sincronitzar dades.',
+          `Solucions de <a href="`+ u('software/pimcore') +`" title="Creem eines per a la gestió unificada de productes amb Pimcore" class="text-accent">gestió de productes PIM</a>, programació de  <a href="`+ u('migration') +`" title="Automatitzem tasques amb software personalitzat" class="text-accent">software per automatitzar processos</a> i sincronitzar dades.`,
         icon: 'tabler:building-factory-2',
       },
       {
         title: 'Startups',
-        description: "Acompanyament en la creació d'apps i plataformes online i planificaions per fases.",
+        description: `<a href="`+ u('consultory') +`" title="Assessorament tecnològic per implementar projectes innovadors" class="text-accent">Convertim idees en projectes</a>, orientem en tot el procés de creació d'apps i plataformes online i definim el full de ruta a nivell tecnològic.`,
         icon: 'tabler:rocket',
       },
       {
         title: 'Laboratoris',
-        description: `Programació d'algoritmes avançats i eines per automatitzar càlculs tècnics.`,
+        description: `Programació d'algoritmes avançats i eines per calcular informació amb <a href="`+ u('development/ia') +`" title="Integració d'intel·ligència artificial entrenada amb dades pròpies" class="text-accent">intel·ligència artificial</a>.`,
         icon: 'tabler:flask',
       },
       {
         title: 'Directiu',
-        description: `Software per analitzar mètriques i facilitar la presa de decisions.`,
+        description: `Software per <a href="`+ u('software/metabase') +`" title="Business Intelligence i analítica amb Metabase" class="text-accent">analitzar dades empresarials</a> i facilitar la presa de decisions.`,
         icon: 'tabler:report-analytics',
       },
       {
-        title: 'Formació',
-        description: 'Plataformes e-learning a mida per oferir contingut i gestionar esdeveniments.',
-        icon: 'tabler:certificate',
+        title: 'Corporacions',
+        description: `<a href="`+ u('software/wp') +`" title="Webs professionals amb WordPress" class="text-accent">Webs WordPress</a> de nivell professionals, amb disseny a mida i personalitzacions avançades.`,
+        icon: 'tabler:building-skyscraper',
       },
       {
         title: 'Sector públic',
-        description: 'Software per a gestió i optimització de processos administratius.',
+        description: `Implementar eines a mida per poder gestionar, optimitzar i <a href="`+ u('development/automation') +`" title="Programació d'automatitzacions per tràmits administratius" class="text-accent">automatitzar tràmits administratius.</a>`,
         icon: 'tabler:progress-check',
       },
     ]}
@@ -401,7 +402,7 @@ const u = useRoutes(getLangFromUrl(Astro.url));
       },
     ]}
   >
-    <Fragment slot="title">Tens un projecte en ment i necessites pressupost?</Fragment>
-    <Fragment slot="subtitle">Des de gilsys t'ajudarem a convertir la teva idea en una realitat.</Fragment>
+    <Fragment slot="title">Tens un projecte en ment i necessites assessorament o pressupost?</Fragment>
+    <Fragment slot="subtitle">Des de gilsys t'ajudarem a convertir la teva idea realitat.</Fragment>
   </CallToAction>
 </Layout>

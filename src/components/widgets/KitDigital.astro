@@ -1,0 +1,15 @@
+---
+import Image from "../common/Image.astro";
+import WidgetWrapper from "../ui/WidgetWrapper.astro";
+---
+
+<WidgetWrapper containerClass={`max-w-full my-0 mx-auto py-6 md:py-6 lg:py-6`}>    
+  <Image
+    class="max-w-full mx-auto lg:max-w-[900px]"
+    sizes="(max-width: 900px) 400px, 900px"
+    widths={[400, 900]}        
+    width={900}
+    src="~/assets/images/kitdigital_logos.jpg"
+    alt="Kit Digital - Programa financiado por los fondos Next Generation del mecanismo de recuperación y resiliencia"
+  />       
+</WidgetWrapper>
