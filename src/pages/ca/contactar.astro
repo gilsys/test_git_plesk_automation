@@ -1,4 +1,5 @@
 ---
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
 import ContactForm from '~/components/widgets/ContactForm.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
@@ -8,17 +9,25 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <ContactForm pageTitle={metadata.title} />
-  
-  <iframe
-      class="fixed top-[144px] w-full h-full -z-10"
-      src="https://www.openstreetmap.org/export/embed.html?bbox=1,42.133102,2.237501,42.137102&marker=42.135102,2.234501"
-      allowfullscreen
-      loading="lazy">
-  </iframe>
-  <p>
-      <a href="https://www.google.com/maps?q=42.135102,2.234501" target="_blank" rel="noopener noreferrer">
-          Ver en Google Maps
-      </a>
-  </p>
+  <WidgetWrapper>
+    <div class="grid lg:grid-cols-2 gap-4">
+      <div class="order-2 lg:order-1 mt-10 lg:mt-0">
+        <iframe
+          class="w-full h-full min-h-[300px]"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=1,42.133102,2.237501,42.137102&marker=42.135102,2.234501"
+          allowfullscreen
+          loading="lazy"
+        >
+        </iframe>
+        <p>
+          <a href="https://www.google.com/maps?q=42.135102,2.234501" target="_blank" rel="noopener noreferrer" class="text-sm">
+            Ver en Google Maps
+          </a>
+        </p>
+      </div>
+      <div class="order-1 lg:order-2">
+        <ContactForm pageTitle={metadata.title} />
+      </div>
+    </div>
+  </WidgetWrapper>
 </Layout>

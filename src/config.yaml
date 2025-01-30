@@ -1,6 +1,6 @@
 site:
   name: gilsys
-  site: 'http://localhost:4321'
+  site: 'http://gilsys.localhost'
   base: '/'
   trailingSlash: false
 

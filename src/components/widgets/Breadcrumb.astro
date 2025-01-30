@@ -1,0 +1,40 @@
+---
+import type { breacrumbItem } from '~/types';
+
+export interface Props {
+  items: breacrumbItem[];
+}
+
+const { items = [] } = Astro.props;
+---
+
+<nav aria-label="breadcrumb" class="text-sm">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList" class="flex items-center flex-wrap">
+    {
+      items.map(({ text, href }, index) => {
+        const isLast = index === items.length - 1;
+        const isFirst = index === 0;
+
+        return (
+          <li
+            itemprop="itemListElement"
+            itemscope
+            itemtype="https://schema.org/ListItem"
+            {...(isLast ? { 'aria-current': 'page' } : {})}
+            class={isFirst ? 'hidden sm:block' : ''}
+          >
+            {href && !isLast ? (
+              <a href={href} itemprop="item">
+                <span itemprop="name">{text}</span>
+              </a>
+            ) : (
+              <span itemprop="name">{text}</span>
+            )}
+
+            <meta itemprop="position" content={String(index + 1)} />
+          </li>
+        );
+      })
+    }
+  </ol>
+</nav>

@@ -1,3 +1,4 @@
+import type { breacrumbItem, LinkItem } from '~/types';
 import { ui, defaultLang, routes, header, footer } from '../i18n/ui';
 
 export function getLangFromUrl(url: URL) {
@@ -19,11 +20,11 @@ export function useRoutes(lang: keyof typeof routes) {
 }
 
 export function getHeader(lang: keyof typeof routes) {
-  return header[lang];  
+  return header[lang];
 }
 
 export function getFooter(lang: keyof typeof routes) {
-  return footer[lang];  
+  return footer[lang];
 }
 
 export function useTranslatedPath(lang: keyof typeof ui) {
@@ -35,7 +36,7 @@ export function useTranslatedPath(lang: keyof typeof ui) {
   };
 }
 
-export function getRouteFromUrl(url: URL): string | undefined {  
+export function getRouteFromUrl(url: URL): string | undefined {
   const pathname = new URL(url).pathname;
   const parts = pathname?.split('/');
 
@@ -45,37 +46,37 @@ export function getRouteFromUrl(url: URL): string | undefined {
 
   const currentLang = getLangFromUrl(url);
   const path = '/' + parts.slice(1).join('/');
-  
+
   const langRoutes = routes[currentLang as keyof typeof routes];
   const result = Object.keys(langRoutes).find(key => langRoutes[key] === path);
   return result;
 }
 
+export function getBreadcrumb(lang: keyof typeof routes, path: string) {
+  const header = getHeader(lang);
+  const translatedPath = routes[lang][path];
+  let result = findBreadcrumbTrail(header.links, translatedPath);
 
+  const home = header.links[0];
 
-// Obtiene las migas de pan basadas en una ruta
-export function getBreadcrumb(lang: string, path: string) {
-  const breadcrumbs = [];
-  let currentPath = path;
+  result = result ? result.filter(item => item.href && item.href !== home.href) : null;
+  return result && result.length > 0 ? [{ text: home.text, href: home.href}, ...result] : null;
+}
 
-  while (currentPath) {
-    const route = Object.entries(routes[lang]).find(([, value]) => value === currentPath);
+function findBreadcrumbTrail(data: LinkItem[], targetHref: string, trail: breacrumbItem[] = []): breacrumbItem[] | null {
+  for (const item of data) {
+    const newTrail = [...trail, { text: item.text, href: item.href || null }];
 
-    if (route) {
-      const [key, value] = route;
-      breadcrumbs.unshift({
-        text: key.replace(/-/g, ' '), // Nombre amigable del texto
-        href: value,
-      });
+    if (item.href === targetHref) {
+      return newTrail;
+    }
 
-      // Si la ruta tiene un "padre", continuamos.
-      currentPath = Object.entries(routes[lang]).find(([parentKey]) =>
-        value.startsWith(routes[lang][parentKey])
-      )?.[1];
-    } else {
-      currentPath = null;
+    if (item.links) {
+      const foundTrail = findBreadcrumbTrail(item.links, targetHref, newTrail);
+      if (foundTrail) {
+        return foundTrail;
+      }
     }
   }
-
-  return breadcrumbs;
+  return null;
 }

@@ -3,6 +3,8 @@ import Image from '~/components/common/Image.astro';
 import Button from '~/components/ui/Button.astro';
 
 import type { Hero as Props } from '~/types';
+import { getBreadcrumb, getLangFromUrl, getRouteFromUrl } from '~/utils/i18n';
+import Breadcrumb from './Breadcrumb.astro';
 
 const {
   title = await Astro.slots.render('title'),
@@ -17,6 +19,10 @@ const {
   id,
   bg = await Astro.slots.render('bg'),
 } = Astro.props;
+
+const language = getLangFromUrl(Astro.url);
+const route = getRouteFromUrl(Astro.url);
+const breadcrumbData = route ? getBreadcrumb(language, route) : null;
 ---
 
 <section class="wg-hero relative md:-mt-[76px] not-prose" {...id ? { id } : {}}>
@@ -110,4 +116,13 @@ const {
       </div>
     </div>
   </div>
+  {
+    breadcrumbData && (
+      <div class="breadcrumb-container">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+          <Breadcrumb items={breadcrumbData} />
+        </div>
+      </div>
+    )
+  }
 </section>

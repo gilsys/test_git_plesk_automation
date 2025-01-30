@@ -218,7 +218,7 @@ export const routes = {
     'about': '/ca/sobre-nosaltres',
     
 
-    'contact': '/ca/contactar',
+    'contact': '/es/contactar',
     'terms': '/ca/avis-legal',
     'privacy-policy': '/ca/politica-privacitat',
   },
@@ -244,7 +244,7 @@ export const routes = {
     'about': '/ca/sobre-nosaltres',
     
 
-    'contact': '/ca/contactar',
+    'contact': '/en/contact',
     'terms': '/ca/avis-legal',
     'privacy-policy': '/ca/politica-privacitat',
     

@@ -1,0 +1,26 @@
+---
+import { getBreadcrumb, getLangFromUrl, getRouteFromUrl } from '~/utils/i18n';
+
+const language = getLangFromUrl(Astro.url);
+const route = getRouteFromUrl(Astro.url);
+const items = route ? getBreadcrumb(language, route) : null;
+
+const breadcrumbJsonLd = items
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      '@id': 'https://innowise.com/artificial-intelligence-development-company/#breadcrumb',
+      itemListElement: items.map(({ text, href }, index) => {
+        const isLast = index === items.length - 1;
+        return {
+          '@type': 'ListItem',
+          position: index + 1,
+          name: text,
+          ...(href && !isLast ? { item: href } : {}),
+        };
+      }),
+    }
+  : null;
+---
+
+{breadcrumbJsonLd && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbJsonLd, null, 2)} />}

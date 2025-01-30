@@ -282,3 +282,14 @@ body.route-home .wg-hero img{
     filter: hue-rotate(360deg) brightness(100%) saturate(70%);
   }
 }
+
+.breadcrumb-container {
+  background-color: rgba(0, 0, 0, 0.5);
+  @apply text-white absolute bottom-0 left-0 w-full py-2;
+}
+
+nav[aria-label="breadcrumb"] li:not(:last-child)::after {
+  content: ">";
+  margin-right: 10px;
+  margin-left: 10px;
+}

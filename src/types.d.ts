@@ -183,6 +183,7 @@ export interface Input {
   value?: string;
   required?: boolean;
   spamCheck?: boolean;
+  fullWidth?: boolean;
 }
 
 export interface Textarea {
@@ -324,4 +325,16 @@ export interface ContactForm extends Omit<Headline, 'classes'>, Widget {
   subtitle?: string;
   pageTitle: string;
   description?: string;
+}
+
+export interface LinkItem {
+  _id?: string;
+  text: string;
+  href?: string;
+  links?: LinkItem[];
+}
+
+export interface breacrumbItem {
+  text: string; 
+  href: string | null;
 }

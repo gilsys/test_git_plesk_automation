@@ -18,6 +18,7 @@ import BasicScripts from '~/components/common/BasicScripts.astro';
 import { ClientRouter } from 'astro:transitions';
 
 import type { MetaData as MetaDataType } from '~/types';
+import BreadcrumbList from '~/components/common/BreadcrumbList.astro';
 
 export interface Props {
   metadata?: MetaDataType;
@@ -51,6 +52,7 @@ const translatePath = useTranslatedPath(language);
     <Metadata {...metadata} />
     <SiteVerification />
     <Analytics />
+    <BreadcrumbList />
 
     <!-- Comment the line below to disable View Transitions -->
     <ClientRouter fallback="swap" />

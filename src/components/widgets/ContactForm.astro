@@ -44,6 +44,7 @@ const inputs = [
     name: 'subject',
     label: t('contact.subject'),
     required: true,
+    fullWidth: true,
   },
   {
     type: 'text',
@@ -79,4 +80,5 @@ const disclaimer = t('contact.disclaimer').replace('%terms%', u('terms')).replac
   }}
   description={description}
   sendTo={`${SITE.site}/contact/contact.php`}
+  classes={{container: 'py-0 md:py-0 lg:py-0'}}
 />
