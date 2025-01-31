@@ -8,24 +8,27 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
 
 const metadata = {
-  title: 'Programació de pàgines web ràpides i optimitzades per SEO',
-  description: `Programem pàgines web d'alt rendiment, optimitzades amb tecnologies avançades com ASTRO, per maximitzar el rendiment i el posicionament SEO.`,
+  title: 'Empresa de disseny de pàgines web d\'alt rendiment',
+  description: `Programem pàgines web amb Astro, molt ràpides, segures i optimitzades per SEO. Prop de Vic (Osona, Barcelona).`,
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- Hero Section -->
-  <Hero tagline="Solucions web on es requereix un rendiment superior."
+  <Hero tagline="Les webs més ràpides de la comarca d'Osona i de la província de Barcelona, possiblement 😊"
+  actions={[{ variant: 'primary', text: 'Sol·licitar pressupost', href: u('contact') }]}
   backgroundImage={{ alt: 'Fons abstracte',  src: '~/assets/images/dots/26.jpg'}}
   >
     <Fragment slot="title">
-      Programació de pàgines web d'<span class="text-accent">alt rendiment</span>
+      Disseny de pàgines web<br/>d'<span class="text-accent">alt rendiment</span>
     </Fragment>
     <Fragment slot="subtitle">
-      Treballem amb <strong>ASTRO</strong>, la tecnologia que ens permet oferir una experiència d'usuari fluïda, un
-      rendiment òptim i un millor SEO.
+      Programem pàgines web amb <strong>Astro</strong>, molt ràpides, <span class="custom-gradient">optimitzades per SEO</span> i <span class="custom-gradient">increiblement segures</span>.
     </Fragment>
   </Hero>
 
@@ -34,7 +37,7 @@ const metadata = {
   <Features3
     tagline="Ideal per a projectes on rendiment, seguretat i SEO són prioritaris."
     title="Pàgines web amb un alt rendiment i un enfoc totalment personalitzat"
-    subtitle="Projectes basats en <a class='text-accent' href='#TODO LInk astro'>ASTRO</a>, on s'aconsegueix una <strong>velocitat</strong> de càrrega excepcional, una <strong>experiència d'usuari</strong> fluïda i una <strong>seguretat</strong> màxima."
+    subtitle="Projectes basats en <a class='text-accent' title='Astro, La tecnologia per webs ràpides, segures i optimitzades' ref='nofollow' href='https://astro.build/'>ASTRO</a>, on s'aconsegueix una <strong>velocitat</strong> de càrrega excepcional, una <strong>experiència d'usuari</strong> fluïda i una <strong>seguretat</strong> màxima."
     items={[
       {
         title: 'Velocitat i rendiment',
@@ -46,7 +49,7 @@ const metadata = {
         title: 'SEO avançat',
         description:
           'Aquestes tecnologies permeten una optimització més detallada per a cercadors, incloent millores en l’estructura del codi, metaetiquetes personalitzades i una indexació més efectiva.',
-        icon: 'tabler:search',
+        icon: 'tabler:seo',
       },
       {
         title: 'Flexibilitat total',
@@ -67,10 +70,10 @@ const metadata = {
         icon: 'tabler:arrows-maximize',
       },
       {
-        title: 'Tecnologia en tendència',
+        title: 'Augmenta visites, conversions i vendes',
         description:
-          "ASTRO s'està consolidant com una de les tecnologies preferides per moltes empreses potents, gràcies a la seva capacitat per maximitzar el rendiment i la flexibilitat.",
-        icon: 'tabler:star',
+          "Un web ràpid i optimitzat per a SEO és la clau per captar més clients, millorar la imatge de marca i augmentar la facturació.",
+        icon: 'tabler:graph',
       },
     ]}
     
@@ -114,10 +117,9 @@ const metadata = {
 
   >
     <Fragment slot="preContent">
-      <h3 class="text-2xl font-bold tracking-tightsm:text-3xl mb-2">Per a qui és útil?</h3>
+      <h3 class="text-2xl font-bold tracking-tightsm:text-3xl mb-2">Quan implementar un web d'alt rendiment?</h3>
       <p class="text-muted">
-        ASTRO és una tecnologia ideal per a empreses que busquen crear pàgines web ultra ràpides, optimitzades per SEO i
-        adaptades a nivell estètic, que no prioritzen l'autogestió de continguts.
+        <strong>ASTRO</strong> és una tecnologia ideal per a empreses que busquen crear pàgines web ultra ràpides, segures, optimitzades per SEO, i personalitzades a nivell estètic, però que NO prioritzen l'autogestió de continguts.
       </p>
     </Fragment>
   </Content>
@@ -131,8 +133,8 @@ const metadata = {
    <Content
    isReversed
    tagline=""
-   title="Quins incovenients presenta WordPress comparat amb ASTRO?"
-   subtitle="Wordpress té al seu favor una gestió de continguts àgil i coneguda, molts temes per escollir i plugins per implementar noves funcionalitats."
+   title="Quins incovenients presenta <span class='custom-gradient'>WordPress</span> comparat amb <span class='custom-gradient'>ASTRO</span>?"
+   subtitle={"<a class='text-accent' href='" + u('software/wp') + "' title=''>WordPress</a>, té al seu favor una gestió de continguts àgil i coneguda, molts temes per escollir i plugins per implementar noves funcionalitats."}
    items={[
      {
        title: 'Rendiment limitat',
@@ -163,7 +165,7 @@ const metadata = {
  >
    <Fragment slot="preContent">
      <p class="text-muted">
-        En moltes ocasions WordPress pot ser la opció més adequada i <a href="#TODO">des de gilsys hi treballem</a>, tot i així, té limitacions quan es tracta d’optimitzar el rendiment i de personalitzar completament una pàgina web segons els requeriments més exigents.
+        WordPress pot ser la opció més adequada en determinades ocasions i és una tecnologia que recomanem i <a class='text-accent' href={u('software/wp')} title=''>treballem a gilsys</a>, però té limitacions quan es tracta d’optimitzar el <strong>rendiment</strong>, <strong>personalitzar completament un disseny</strong> o en temes de <strong>seguretat</strong>.
      </p>
    </Fragment>
    <Fragment slot="bg">
@@ -197,7 +199,7 @@ const metadata = {
     },
     {
       title: 'Manca de plugins i temes predissenyats',
-      description: `ASTRO no disposa de la flexibilitat per instal·lar plugins o utilitzar temes predissenyats com WordPress. Això garanteix una pàgina web amb codi net i altament optimitzat, però limita l'extensibilitat ràpida que pot oferir un WordPress.`,
+      description: `ASTRO no disposa de la flexibilitat per instal·lar plugins o utilitzar temes predissenyats com WordPress. Això garanteix una pàgina web amb codi net i altament optimitzat, però limita l'extensibilitat ràpida que pot oferir un WordPress o la possibilitat de canviar de plantilla una vegada dissenyada.`,
     },
   ]}
 
@@ -208,7 +210,7 @@ const metadata = {
 
 
 <Prices
-title="Comparativa entre pàgines web amb WordPress i Pàgines web d'alt rendiment amb ASTRO"
+title="Comparativa entre pàgines web amb WordPress i pàgines web d'alt rendiment amb ASTRO"
 subtitle="Cada plataforma té els seus avantatges. L'elecció dependrà de les necessitats específiques de cada projecte."
 prices={[
   {
@@ -217,7 +219,7 @@ prices={[
     items: [
       {
         title: 'Velocitat',
-        description: 'Limitada per la càrrega de plugins i temes.',
+        description: 'Limitada per la càrrega de plugins i temes.',        
       },
       {
         title: 'SEO avançat',
@@ -289,43 +291,65 @@ prices={[
 
 
 <Features
-  tagline="ASTRO ens dona la base, però no és màgic, cal que una empresa professional que pugui treure'n el màxim rendiment."
+  tagline="Cal que una empresa de programació professional per treure'n el màxim rendiment."
   title="Per què escollir gilsys per al desenvolupament de pàgines web d'alt rendiment?"
-  subtitle="No és fàcil trobar una empresa que estigui especialitzada en el desenvolupament de webs amb ASTRO, és una tecnologia moderna i es necessiten coneixaments avançats per treballar-hi."
+  subtitle="No és fàcil trobar una empresa que estigui especialitzada en una tecnologia tan moderna i que requereix coneixaments de programació avançats."
   items={[
     {
       title: 'Transició de WordPress a ASTRO',
-      description: 'La nostra pròpia web ha passat de WordPress a ASTRO, un procés que ens ha permès entendre a fons aquesta tecnologia i aprofitar al màxim les seves avantatges..',
+      description: "La nostra pròpia web d'empresa ha passat de WordPress a ASTRO, un procés que ens ha permès entendre a fons aquesta tecnologia i aprofitar al màxim les seves avantatges.",
       icon: 'tabler:transform',
     },
     {
       title: 'Innovació i experimentació constant',
-      description: 'A Gilsys no parem d’investigar i experimentar amb noves tecnologies. Sempre provem qualsevol tecnologia a nivell intern abans d’oferir-la als nostres clients, garantint un coneixement profund i la confiança en les nostres solucions.',
+      description: 'A gilsys no parem d’investigar i experimentar amb noves tecnologies. Sempre provem qualsevol tecnologia a nivell intern abans d’oferir-la als nostres clients, oferint així confiança en les nostres solucions.',
       icon: 'tabler:flask',
     },
     {
       title: 'Experiència en múltiples tecnologies',
-      description: 'A Gilsys comptem amb més de 20 anys d’experiència treballant amb una gran varietat de llenguatges i tecnologies. Aquesta experiència ens permet avaluar cada projecte de manera personalitzada per determinar quina tecnologia s’adapta millor a les necessitats del client.',
+      description: 'A gilsys comptem amb més de 20 anys d’experiència treballant amb una gran varietat de llenguatges i tecnologies. Aquesta experiència ens permet avaluar cada projecte de manera personalitzada per determinar quina tecnologia s’adapta millor a les necessitats del client.',
       icon: 'tabler:code',
     },    
     {
-      title: 'Adaptació i millora de tecnologies complexes',
-      description: "ASTRO no és una tecnologia fàcil com WordPress, a gilsys entenem el seu codi i podem aplicar millores per cobrir requisits específics en projectes complexos.",
+      title: 'Equip de programació expert',
+      description: "ASTRO no és una tecnologia que puguin utilitzar  usuaris finals o dissenyadors com WordPress, a gilsys estem especialitzats en <a href='" + u('development')+ "' title='Programació de softawre a mida' class='text-accent'>programació a mida</a>, pel que entenem el seu codi i podem aplicar millores per cobrir requisits específics en projectes complexos.",
       icon: 'tabler:settings',
     },
     {
       title: 'Disseny i maquetació a mida',
-      description: 'Encara que ASTRO no disposa de moltes plantilles predefinides, tenim una àmplia experiència en treballar amb dissenys a mida i podem adaptar plantilles HTML5 comercials per integrar-les amb ASTRO.',
+      description: 'Encara que ASTRO no disposa de tantes plantilles predefinides com WordPress, tenim una àmplia experiència en maquetar dissenys a mida i podem <strong>adaptar plantilles HTML5</strong> comercials per integrar-les amb ASTRO.',
       icon: 'tabler:layout-grid',
     },
     {
-        title: 'Excel·lents puntuacions en rendiment',
-        description: 'Les nostres pàgines aconsegueixen resultats excepcionals en eines com Google PageSpeed Insights, gràcies a un codi optimitzat i una arquitectura ajustada per maximitzar la velocitat de càrrega i l’experiència de l’usuari.',
+        title: 'Optimitzat per Google',
+        description: "S'aconsegueixen resultats excepcionals en eines com <a href='https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.gilsys.com%2F' title='Test de rendiment de Google' rel='nofollow'>Google PageSpeed Insights</a>, gràcies a un codi optimitzat i una arquitectura ajustada per maximitzar la velocitat de càrrega i l’experiència de l’usuari.",
         icon: 'tabler:rocket'
     }
   ]}
 
 />
+
+<CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/26.jpg', alt: 'Fons abstracte' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Sol·licitar pressupost',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Trucar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Augmenta les visites, les conversions i les vendes amb <span class="custom-gradient">ASTRO</span> 
+    </Fragment>
+    <Fragment slot="subtitle"
+      >Propulsa el teu negoci amb un web ultraràpid, segur i irresistible per a Google.</Fragment>
+  </CallToAction>
 
 
 

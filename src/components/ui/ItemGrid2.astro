@@ -50,7 +50,7 @@ const {
            {list && (
             <ul class="feature-list">
               {list.map((item) => (
-                <li class="mt-1">{item}</li>
+                <li class="my-4" set:html={item}></li>
               ))}
             </ul>
           )}
