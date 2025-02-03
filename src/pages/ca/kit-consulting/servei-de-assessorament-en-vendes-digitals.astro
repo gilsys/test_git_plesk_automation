@@ -1,0 +1,106 @@
+---
+import Features from '~/components/widgets/Features.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import Image from '~/components/common/Image.astro';
+import KitDigital from '~/components/widgets/KitDigital.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+const u = useRoutes(getLangFromUrl(Astro.url));
+
+const metadata = {
+  title: 'Servei d’assessorament en vendes digitals',
+  description:
+    'Assessorament en vendes digitals per a PIMES. Analitzem la teva situació, definim estratègies i utilitzem IA per millorar les teves vendes en línia.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Subvenció Kit Consulting"
+    backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/22.jpg' }}
+  >
+    <Fragment slot="title">Servei d’assessorament en vendes digitals </Fragment>
+    <Fragment slot="subtitle"
+      >Assessorament en vendes digitals per a PIMES. Analitzem la teva situació, definim estratègies i utilitzem IA per
+      millorar les teves vendes en línia.</Fragment
+    >
+  </Hero>
+
+  <Features
+    tagline="Servei d'assessorament <strong>subvencionat</strong>"
+    subtitle="Coneixeràs la inversió requerida i les mesures necessàries per a la seva adopció.<br/>Es realitzarà un cas d'ús i s'implantarà formació adaptada a la teva pime."
+    title="Definim com integrar <span class='custom-gradient'>Intel·ligència Artificial</span> i tècniques de màrqueting digital per millorar el rendiment de les teves vendes en línia"
+    items={[
+        {
+          "description": "Analitzar la situació actual de la teva pime en vendes digitals, posicionament en RRSS i presència a internet.",
+          "icon": "tabler:activity"
+        },
+        {
+          "description": "Conscienciar els teus empleats sobre la importància i les tècniques de venda en línia i màrqueting digital.",
+          "icon": "tabler:user-check"
+        },
+        {
+          "description": "Definir una estratègia de vendes en línia i presència digital (RRSS, posicionament en motors de cerca, Google Analytics, etc.) a mitjà i llarg termini, utilitzant models predictius basats en IA.",
+          "icon": "tabler:chart-line"
+        },
+        {
+          "description": "Desenvolupar i executar un cas d'ús adaptat a la teva pime utilitzant les tècniques apropiades d'intel·ligència artificial, en l'àrea de vendes digitals.",
+          "icon": "tabler:settings"
+        },
+        {
+          "description": "Identificació d'oportunitats o possibles usos de la IA en l'àmbit de les vendes digitals.",
+          "icon": "tabler:search"
+        }
+      ]}
+  />
+
+  <Features
+    title="L'import total subvencionat per Kit Consulting varia  segons el nombre d'empleats"
+    subtitle="L'import màxim subvencionat per a cada servei d'assessorament de Kit Consulting és sempre de 6.000€."
+    items={[
+      {
+        title: 'Import total subvencionat:',
+        list: [
+          "<strong>De 10 a 49 empleats</strong> 12.000€.<br/>Correspon a 2 serveis d'assessorament.",
+          "<strong>De 50 a 99 empleats:</strong> 18.000€.<br/>Correspon a 3 serveis d'assessorament.",
+          "<strong>De 100 a 250 empleats:</strong> 24.000€.<br/>Correspon a 4 serveis d'assessorament.",
+        ],
+        icon: 'tabler:check',
+      },
+      {
+        title: "Import màxim disponible pel servei d'assessorament en vendes digitals:",
+        description: '6.000€',
+        icon: 'tabler:check',
+      },
+    ]}
+  />
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/22.jpg', alt: 'Fons abstracte, inspirat en línees i colors' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contactar',
+        href: 'contactar',
+      },
+      {
+        variant: 'primary',
+        text: 'Trucar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title"
+      >No esperis més, sol·licita assessorament gratuït en com millorar les teves vendes digitals fent ús de  la <span class="custom-gradient">Intel·ligència Artificial</span
+      ></Fragment
+    >
+    <Fragment slot="subtitle"
+      >Contacta'ns i t'assessorarem de forma gratuïta gràcies a la subvenció del Kit Consulting sobre com la IA et pot
+      ajudar a potenciar la teva empresa.</Fragment
+    >
+  </CallToAction>
+
+  <KitDigital />
+</Layout>

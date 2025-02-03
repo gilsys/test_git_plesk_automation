@@ -1,0 +1,120 @@
+---
+import Features from '~/components/widgets/Features.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import Image from '~/components/common/Image.astro';
+import KitDigital from '~/components/widgets/KitDigital.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+const u = useRoutes(getLangFromUrl(Astro.url));
+
+const metadata = {
+  title: 'Servei d’assessorament “360” en transformació digital',
+  description:
+    'Assessorament integral en transformació digital per a PIMES. Optimitza els teus processos i eines amb una estratègia personalitzada.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Subvenció Kit Consulting"
+    backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/22.jpg' }}
+  >
+    <Fragment slot="title">Servei d’assessorament “360” en transformació digital </Fragment>
+    <Fragment slot="subtitle"
+      >Assessorament integral en transformació digital per a PIMES. Optimitza els teus processos i eines amb una
+      estratègia personalitzada.</Fragment
+    >
+  </Hero>
+
+  <Features
+    tagline="Servei d'assessorament <strong>subvencionat</strong>"
+    subtitle="Coneixeràs la inversió requerida i les mesures necessàries per a la seva adopció.<br/>Es realitzarà un cas d'ús i s'implantarà formació adaptada a la teva pime."
+    title="Digitalitzarem els processos de la teva pime i integrarem tecnologies innovadores, aprofitant el potencial de la <span class='custom-gradient'>Intel·ligència Artificial</span>"
+    items={[
+      {
+        description:
+          'Analitzar els processos comercials existents per identificar aquelles àrees de la teva pime que podrien beneficiar-se de la digitalització.',
+        icon: 'tabler:briefcase',
+      },
+      {
+        description:
+          'Dissenyar i implementar programes de conscienciació per educar els teus empleats sobre la importància estratègica de la transformació digital.',
+        icon: 'tabler:user-check',
+      },
+      {
+        description:
+          'Avaluar les eines i tecnologies ja en ús, oferint-te un assessorament per optimitzar el seu rendiment i alinear-les amb els teus objectius de transformació digital.',
+        icon: 'tabler:tools',
+      },
+      {
+        description:
+          'Desenvolupar una estratègia clara i personalitzada que articuli els objectius, terminis i passos específics per a la transformació digital.',
+        icon: 'tabler:target',
+      },
+      {
+        description:
+          "Establir un marc per a la innovació contínua i l'adaptabilitat a mesura que evolucionen les tecnologies digitals.",
+        icon: 'tabler:refresh',
+      },
+      {
+        description:
+          "Desenvolupament i execució d'un cas d'ús adaptat al negoci, utilitzant les tècniques apropiades, que permeti conèixer els avantatges de la utilització d'eines digitals.",
+        icon: 'tabler:settings',
+      },
+      {
+        description: "Identificació d'oportunitats o possibles usos de la IA en l'àmbit de la transformació digital.",
+        icon: 'tabler:brain',
+      },
+    ]}
+  />
+
+  <Features
+    title="L'import total subvencionat per Kit Consulting varia  segons el nombre d'empleats"
+    subtitle="L'import màxim subvencionat per a cada servei d'assessorament de Kit Consulting és sempre de 6.000€."
+    items={[
+      {
+        title: 'Import total subvencionat:',
+        list: [
+          "<strong>De 10 a 49 empleats</strong> 12.000€.<br/>Correspon a 2 serveis d'assessorament.",
+          "<strong>De 50 a 99 empleats:</strong> 18.000€.<br/>Correspon a 3 serveis d'assessorament.",
+          "<strong>De 100 a 250 empleats:</strong> 24.000€.<br/>Correspon a 4 serveis d'assessorament.",
+        ],
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Import màxim disponible pel servei d’assessorament “360” en transformació digital:',
+        description: '6.000€',
+        icon: 'tabler:check',
+      },
+    ]}
+  />
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/22.jpg', alt: 'Fons abstracte, inspirat en línees i colors' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contactar',
+        href: 'contactar',
+      },
+      {
+        variant: 'primary',
+        text: 'Trucar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      No esperis més, sol·licita assessorament gratuït i impulsa la transformació digital de la teva pime mitjançant la
+<span class="custom-gradient">Intel·ligència Artificial</span>
+    </Fragment>
+    <Fragment slot="subtitle"
+      >Contacta'ns i t'assessorarem de forma gratuïta gràcies a la subvenció del Kit Consulting sobre com la IA et pot
+      ajudar a potenciar la teva empresa.</Fragment
+    >
+  </CallToAction>
+
+  <KitDigital />
+</Layout>

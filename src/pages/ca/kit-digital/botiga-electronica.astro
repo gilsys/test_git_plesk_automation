@@ -1,0 +1,140 @@
+---
+import Features from '~/components/widgets/Features.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import Image from '~/components/common/Image.astro';
+import KitDigital from '~/components/widgets/KitDigital.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Comerç electrònic',
+  description:
+    'Creació de la teva botiga en línia amb disseny responsive, SEO, mètodes de pagament, enviament integrats i gestió de continguts.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="Subvenció Kit Digital" backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/21.jpg' }}>
+    <Fragment slot="title">Comerç electrònic</Fragment>
+    <Fragment slot="subtitle">
+      Creem la teva <span class="custom-gradient">botiga en línia</span> amb <span class="custom-gradient"
+        >WooCommerce</span
+      > o altres solucions,
+      <span class="custom-gradient">GRATIS</span> amb la subvenció del Kit Digital, per començar a vendre de manera efectiva
+      per Internet.
+    </Fragment>
+  </Hero>
+
+  <Features2
+    tagline="Funcionalitats i serveis"
+    subtitle="L'objectiu principal és proporcionar-te una botiga en línia autogestionable, amb totes les funcionalitats per vendre de manera eficient per Internet."
+    title="Botiga en línia autogestionable sense cost per a empreses i autònoms amb Kit Digital"
+    items={[
+      {
+        title: 'Creació de la botiga en línia o E-Commerce i alta del catàleg de productes',
+        description:
+          "Tindràs a la teva disposició un catàleg a la teva botiga en línia, en el qual estaran disponibles els teus productes, mitjançant la seva alta, importació o càrrega. La solució inclou la càrrega d'almenys 100 referències dels teus productes, llevat que no disposis d'aquest número, en aquest cas podrà ser menor.",
+        icon: 'tabler:shopping-cart',
+      },
+      {
+        title: 'Mètodes de pagament',
+        description:
+          "L'Agent Digitalitzador que hagis seleccionat configurarà i integrarà els mètodes de pagament a la teva botiga en línia.",
+        icon: 'tabler:credit-card',
+      },
+      {
+        title: 'Disseny Responsive',
+        description: 'El teu E-Commerce es podrà utilitzar en tot tipus de dispositius.',
+        icon: 'tabler:device-laptop',
+      },
+      {
+        title: 'Accessibilitat',
+        description:
+          'El disseny de la teva botiga en línia complirà amb els criteris de conformitat de nivell AA de les Directrius WCAG-2.1.',
+        icon: 'tabler:eye',
+      },
+      {
+        title: 'Posicionament bàsic a internet',
+        description:
+          "Aconseguiràs que la informació bàsica del teu negoci com el contacte i perfil de l'empresa, estigui posicionada a les principals pàgines d'empreses i professionals.",
+        icon: 'tabler:search',
+      },
+      {
+        title: 'Autogestionable',
+        description:
+          "Disposaràs també d'una plataforma de gestió de continguts perquè puguis modificar els continguts del teu web sense necessitat d'ajuda.",
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Optimització de la presència en cercadors (SEO)',
+        description:
+          "L'Agent Digitalitzador serà l'encarregat de realitzar una anàlisi de paraules clau, de competència, SEO On-Page de fins a dues pàgines o apartats perquè tinguis un bon posicionament. També realitzarà la indexació i jerarquització de continguts i informes de seguiment trimestrals.",
+        icon: 'tabler:seo',
+      },
+      {
+        title: "Creació d'un feed o índex de productes",
+        description:
+          'Es crearà un feed o índex de productes per a la seva inserció en cercadors (exclusiu per a Segment IV i V).',
+        icon: 'tabler:package',
+      },
+      {
+        title: "Formes d'enviament",
+        description:
+          "Tindràs configurats i integrats els mètodes d'enviament digital i/o físic dels productes de la teva botiga en línia.",
+        icon: 'tabler:truck',
+      },
+    ]}
+  />
+
+  <Features
+    title="Subvenció Kit Digital segons el nombre d'empleats"
+    subtitle="La subvenció pot ser utilitzada per a diversos serveis de digitalització, amb un import màxim que varia en funció del nombre d'empleats de l'empresa."
+    items={[
+      {
+        title: 'Import total subvencionat:',
+        list: [
+          '<strong>De 0 a 3 empleats:</strong> 3.000€',
+          '<strong>De 50 a 99 empleats:</strong> 25.000€',
+          '<strong>De 100 a 250 empleats:</strong> 29.000€',
+        ],
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Import màxim per al servei de comerç electrònic:',
+        description: 'Fins a 5.000€',
+        icon: 'tabler:check',
+      },
+    ]}
+  />
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/21.jpg', alt: 'Fons abstracte, inspirat en tecnologia i software' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contactar',
+        href: 'contactar',
+      },
+      {
+        variant: 'primary',
+        text: 'Trucar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Estàs a un <span class="custom-gradient">click</span> de portar el teu <span class="custom-gradient"
+        >comerç electrònic</span
+      >
+      al següent nivell i impulsar el teu negoci cap al futur digital
+    </Fragment>
+    <Fragment slot="subtitle"
+      >Contacta'ns i crearem un comerç electrònic per a la teva empresa o negoci, de forma gratuïta gràcies a la
+      subvenció del Kit Digital.</Fragment
+    >
+  </CallToAction>
+
+  <KitDigital />
+</Layout>

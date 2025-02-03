@@ -108,7 +108,7 @@ export const ui = {
     'contact.message': 'Message',
     'contact.send': 'Send',
     'contact.disclaimer': 'I accept the <a href="%terms%" target="_blank" class="underline">terms of use</a> and the <a href="%privacy_policy%" target="_blank" class="underline">privacy policy</a>.',
-    'contact.success': 'Message sent successfully.',
+    'contact.success': 'Message sent successfully.',    
     'contact.error': 'Error sending the message.',
     'menu.more_info': 'More information',
   },
@@ -118,6 +118,8 @@ export const routes = {
   ca: {
     'home': '/ca',
     'gilsys': '/ca/sobre-nosaltres',
+       'kit-digital/basic-internet-presence': '/ca/kit-digital/presencia-basica-internet',
+    'kit-digital/basic-internet-presence': '/ca/kit-digital/presencia-basica-internet',
     'kit-digital': '/ca/kit-digital',
     'kit-digital/basic-internet-presence': '/ca/kit-digital/presencia-basica-internet',
     'kit-digital/e-commerce': '/ca/kit-digital/botiga-electronica',
@@ -136,6 +138,10 @@ export const routes = {
     'kit-digital/ai-bi-analytics': '/ca/kit-digital/business-intelligence-i-analitica-i-ia-associada',
     'kit-digital/ai-process-management': '/ca/kit-digital/gestio-processos-ia',
     'kit-digital/secure-workplace': '/ca/kit-digital/lloc-de-treball-segur',
+    'kit-consulting/ai-advisory': '/ca/kit-consulting/servei-de-assessorament-en-intelligencia-artificial',
+    'kit-consulting/basic-data-analysis': '/ca/kit-consulting/servei-dassessorament-en-analisi-de-dades-basic',
+    'kit-consulting/advanced-data-analysis':
+      'kit-consulting/servei-de-assessorament-en-analisis-de-dades-avancat',
     'kit-consulting': '/ca/kit-consulting',
     'kit-consulting/ai-advisory': '/ca/kit-consulting/servei-de-assessorament-en-intelligencia-artificial',
     'kit-consulting/basic-data-analysis': '/ca/kit-consulting/servei-dassessorament-en-analisi-de-dades-basic',
@@ -160,6 +166,8 @@ export const routes = {
     'development/astro': '/ca/programacio-a-mida/webs-alt-rendiment',
 
     'software': '/ca/software-personalitzat',
+    
+    
     'software/ecommerce': '/ca/software-personalitzat/programacio-woocommerce-prestashop',
     'software/metabase': '/ca/software-personalitzat/metabase-business-intelligence',
     'software/pimcore': '/ca/software-personalitzat/pimcore-barcelona',
@@ -176,7 +184,7 @@ export const routes = {
   },
   es: {
     'home': '/es',
-    'kit-digital/basic-internet-presence': '/es/kit-digital/presencia-basica-internet',
+    'kit-digital/web': '/es/kit-digital/presencia-basica-internet',
     'kit-digital/e-commerce': '/es/kit-digital/comercio-electronico',
     'kit-digital/customer-management': '/es/kit-digital/gestion-de-clientes',
     'kit-digital/process-management': '/es/kit-digital/gestion-de-procesos',
@@ -193,7 +201,7 @@ export const routes = {
     'kit-digital/ai-bi-analytics': '/es/kit-digital/business-intelligence-y-analitica-e-ia-asociada',
     'kit-digital/ai-process-management': '/es/kit-digital/gestion-procesos-ia',
     'kit-digital/secure-workplace': '/es/kit-digital/puesto-de-trabajo-seguro',
-    'kit-consulting/ai-advisory': '/es/kit-consulting/servicio-de-asesoramiento-en-inteligencia-artificial',
+    'kit-consulting/ai': '/es/kit-consulting/servicio-de-asesoramiento-en-inteligencia-artificial',
     'kit-consulting/basic-data-analysis': '/es/kit-consulting/servicio-de-asesoramiento-en-analisis-de-datos-basico',
     'kit-consulting/advanced-data-analysis':
       'kit-consulting/servicio-de-asesoramiento-en-analisis-de-datos-avanzado',
@@ -281,7 +289,7 @@ export const header = {
         links: [
           {
             text: 'Lloc web i presència bàsica a Internet',
-            href: routes['ca']['kit-digital/basic-internet-presence'],
+            href: routes['ca']['kit-digital/web'],
           },
           {
             text: 'Comerç electrònic',
@@ -358,7 +366,7 @@ export const header = {
         links: [
           {
             text: 'Assessorament en Intel·ligència Artificial',
-            href: routes['ca']['kit-consulting/ai-advisory'],
+            href: routes['ca']['kit-consulting/ai'],
           },
           {
             text: 'Assessorament en anàlisi de dades (Bàsic)',
@@ -573,7 +581,7 @@ export const header = {
         links: [
           {
             text: 'Sitio Web y presencia básica en Internet',
-            href: routes['es']['kit-digital/basic-internet-presence'],
+            href: routes['es']['kit-digital/basic-internet-presence'],            
           },
           {
             text: 'Comercio electrónico',

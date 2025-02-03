@@ -1,0 +1,112 @@
+---
+import Features from '~/components/widgets/Features.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import Image from '~/components/common/Image.astro';
+import KitDigital from '~/components/widgets/KitDigital.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+const u = useRoutes(getLangFromUrl(Astro.url));
+
+const metadata = {
+  title: 'Servei d’assessorament en anàlisi de dades (Bàsic)',
+  description:
+    "Servei d'anàlisi de dades bàsic adaptat a les necessitats de la teva pime, amb identificació de dades clau, selecció d'eines d'IA, assessorament i desenvolupament d'un cas d'ús pràctic.",
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Subvenció Kit Consulting"
+    backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/22.jpg' }}
+  >
+    <Fragment slot="title">Servei d’assessorament en anàlisi de dades (Bàsic)</Fragment>
+    <Fragment slot="subtitle"
+      >Analitzem la teva pime i definim un pla per integrar <span class='custom-gradient'> Intel·ligència Artificial</span>, identificant les dades clau i les eines més eficients per automatitzar processos i optimitzar la presa de decisions.</Fragment
+    >
+  </Hero>
+
+  <Features
+    tagline="Servei d'assessorament <strong>subvencionat</strong>"
+    subtitle="Coneixeràs la inversió requerida i les mesures necessàries per a la seva adopció.<br/>Es realitzarà un cas d'ús i s'implantarà formació adaptada a la teva pime."
+    title="Estudiem la teva empresa i planifiquem com integrar <span class='custom-gradient'>Intel·ligència Artificial</span> per automatitzar tasques i processos de forma eficient"
+    items={[
+      {
+        description:
+          "Analitzar les diferents opcions d'eines d'intel·ligència artificial per explotar i visualitzar les dades</a>, recomanant la que millor s'adapti a la situació actual de la teva pime i la inversió necessària per a la seva adopció.",
+        icon: 'tabler:tools',
+      },
+      {
+        description:
+          "Establir informació de valor a partir del tractament de dades amb <a href='" + u('development/ia') + "' title='Programació a mida amb intel·ligència artificial' class='text-accent'>algoritmes d'intel·ligència artificial</a>.",
+        icon: 'tabler:chart-line',
+      },
+      {
+        description: "Assessorar-te sobre l'explotació de les dades a través de l'eina escollida.",
+        icon: 'tabler:user-check',
+      },
+      {
+        description:
+          "Opcionalment, podrà assessorar-te sobre els processos de govern, gestió i gestió de qualitat de la dada d'acord amb les especificacions UNE 0077 “Govern de la dada”, UNE 0078 “Gestió de la Dada” i UNE 0079 “Gestió de la qualitat de la dada”.",
+        icon: 'tabler:shield-lock',
+      },
+      {
+        description: "Desenvolupar i executar un cas d'ús adaptat al negoci en anàlisi de dades (nivell bàsic).",
+        icon: 'tabler:settings',
+      },
+      {
+        description: "Identificar oportunitats o possibles usos de la IA en l'àmbit de l'anàlisi de dades.",
+        icon: 'tabler:brain',
+      },
+    ]}
+  />
+
+  <Features
+    title="L'import total subvencionat per Kit Consulting varia  segons el nombre d'empleats"
+    subtitle="L'import màxim subvencionat per a cada servei d'assessorament de Kit Consulting és sempre de 6.000€."
+    items={[
+      {
+        title: 'Import total subvencionat:',
+        list: [
+          "<strong>De 10 a 49 empleats</strong> 12.000€.<br/>Correspon a 2 serveis d'assessorament.",
+          "<strong>De 50 a 99 empleats:</strong> 18.000€.<br/>Correspon a 3 serveis d'assessorament.",
+          "<strong>De 100 a 250 empleats:</strong> 24.000€.<br/>Correspon a 4 serveis d'assessorament.",
+        ],
+        icon: 'tabler:check',
+      },
+      {
+        title: "Import màxim disponible pel servei d'assessorament en anàlisi de dades (Bàsic):",
+        description: '6.000€',
+        icon: 'tabler:check',
+      },
+    ]}
+  />
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/22.jpg', alt: 'Fons abstracte, inspirat en línees i colors' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contactar',
+        href: 'contactar',
+      },
+      {
+        variant: 'primary',
+        text: 'Trucar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title"
+      >No esperis més, sol·licita assessorament gratuït en <span class="custom-gradient">anàlisi de dades</span
+      ></Fragment
+    >
+    <Fragment slot="subtitle"
+      >Contacta'ns i t'assessorarem de forma gratuïta gràcies a la subvenció del Kit Consulting sobre com la IA et pot
+      ajudar a potenciar la teva empresa.</Fragment
+    >
+  </CallToAction>
+
+  <KitDigital />
+</Layout>

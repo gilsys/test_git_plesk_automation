@@ -12,8 +12,8 @@ import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 import { header } from '~/i18n/ui.ts';
 
 const metadata = {         
-  title: 'Programació a mida de software, apps, web i IA | +20 anys.',
-  description: 'Empresa de desenvolupament professional i personalitzat de programes, aplicacions mòbils i eines d’intel·ligència artificial. Prop de Vic (Osona, Barcelona).'
+  title: 'Programació a mida de software, apps, web i IA | +20 anys',
+  description: "Empresa de desenvolupament personalitzat d'aplicacions mòbils, web, programes i eines d’intel·ligència artificial. Pressupost gratuït. Prop de Vic (Osona, Barcelona)."  
 };
 
 const u = useRoutes(getLangFromUrl(Astro.url));
@@ -54,12 +54,12 @@ const u = useRoutes(getLangFromUrl(Astro.url));
     classes={{ 
       container: 'pb-0 md:pb-0 lg:pb-0',
      }}
-    title="No et quedis enrere, integra ara <span class='custom-gradient'>Intel·ligència Artificial</span> a la teva empresa"
-    subtitle={`Som una empresa especialitzada en desenvolupament de software, no només coneixem les darreres novetats en <a title='Programació a mida integrant intel·ligència artificial' class='text-accent' href='`+ u('development/ia')  +`'>intel·ligència artificial</a> sinó que les apliquen en eines empresarials, aplicacions web, apps mòbils a mida i processos automàtics.`}
+    title="No et quedis enrere, integra<br/><span class='custom-gradient'>Intel·ligència Artificial</span> a la teva empresa"
+    subtitle={`Som una empresa d'enginyeria informàtica, especialitzada en desenvolupament de software. No només coneixem les darreres novetats en <a title='Programació a mida integrant intel·ligència artificial' class='text-accent' href='`+ u('development/ia')  +`'>intel·ligència artificial</a> sinó que les apliquem en eines empresarials, aplicacions web, apps mòbils a mida i automatització de processos.`}
   >
   <Fragment slot="preContent">
     <div class="text-center -mt-4">
-      <a title="Programació a mida amb intel·ligència artificial per empreses" href={u('development/ia')} class="btn-primary mb-12 w-auto">Més informació</a>
+      <a title="Programació a mida amb intel·ligència artificial per empreses" href={u('development/ia')} class="btn-primary w-auto">Més informació</a>
     </div>
   </Fragment>
   </Content>
@@ -67,8 +67,8 @@ const u = useRoutes(getLangFromUrl(Astro.url));
 
   <FourBlocks
     id="serveis"
-    title="<a name='serveis'>Serveis</a>"
-    information={``}
+    title="<a name='serveis'>Serveis d'enginyeria informàtica</a>"
+    information="No adaptis la teva empresa a la tecnologia, nosaltres <span class='text-black'>adaptem la tecnologia a la teva empresa</span>."
     blocks={[
       {
         link: u('development'),
@@ -110,8 +110,9 @@ const u = useRoutes(getLangFromUrl(Astro.url));
 
   <Features
     id="features"
-    title="Perquè escollir gilsys?"
-    subtitle="Experiència + qualitat = <span class='custom-gradient'>tranquil·litat</span>."
+    tagline=`Perquè escollir gilsys?`
+    title="Solucions a mida per a la teva empresa"
+    subtitle="Desenvolupament web, apps i intel·ligència a artificial, programat i personalitzat a mida pel teu negoci."
     columns={2}
     items={[
       {
@@ -176,7 +177,7 @@ const u = useRoutes(getLangFromUrl(Astro.url));
     isAfterContent={false}
     items={[
       {
-        title: 'Què és?',
+        title: 'Què és el Kit Digital?',
         description: `El govern d'Espanya impulsa el programa <a class="text-accent" href='https://www.acelerapyme.gob.es/kit-digital' target='_blank' rel='nofollow'>Kit Digital</a>, finançat per fons europeus Next Generation, per ajudar petites i mitjanes empreses, otorgant subvencions entre <span class="text-primary">3.000€</span> i <span class="text-primary">29.000€</span> per invertir en la implantació de noves tecnologies.`,
       },
       {
@@ -209,7 +210,7 @@ const u = useRoutes(getLangFromUrl(Astro.url));
     isAfterContent={false}
     items={[
       {
-        title: 'Què és?',
+        title: 'Què és el Kit Consulting?',
         description: `El programa <a class="text-accent" href='https://www.acelerapyme.gob.es/kit-consulting' target='_blank' rel='nofollow'>Kit Consulting</a>, impulsat pel govern d'Espanya amb fons europeus Next Generation, ofereix subvencions de <span class="text-primary">12.000€</span> a <span class="text-primary">24.000€</span> en diferents serveis d'assessorament digital.`,
       },
       {
@@ -240,8 +241,8 @@ const u = useRoutes(getLangFromUrl(Astro.url));
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Sectors pels que treballem"
-    subtitle="La nostra experiència en programació de solucions a mida ens permet abordar projectes en gairebé qualsevol sector."
+    title="La nostra experiència en programació a mida ens permet abordar projectes en gairebé qualsevol sector"
+    subtitle="La informàtica és un element transversal en la majoria de sectors, pel que podem crear aplicacions i automatitzacions independentment del tipus d'empresa."
     columns={3}
     items={[
       {

@@ -6,7 +6,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
 import Image from '~/components/common/Image.astro';
 import KitDigital from '~/components/widgets/KitDigital.astro';
-
+import Features2 from '~/components/widgets/Features2.astro';
 
 const metadata = {
   title: 'Presència Bàsica a internet',
@@ -16,13 +16,15 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <Hero tagline="Subvenció Kit Digital"
-  backgroundImage={{ alt:'Fons abstracte', src: '~/assets/images/dots/21.jpg' }}>
+  <Hero tagline="Subvenció Kit Digital" backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/21.jpg' }}>
     <Fragment slot="title">Presència básica a Internet</Fragment>
-    <Fragment slot="subtitle">Creem la <span class='custom-gradient'>pàgina web</span> amb <span class='custom-gradient'>WordPress</span> per a la teva empresa o negoci, <span class='custom-gradient'>GRATIS</span>, amb la subvenció del Kit Digital.</Fragment>
+    <Fragment slot="subtitle"
+      >Creem la <span class="custom-gradient">pàgina web</span> amb <span class="custom-gradient">WordPress</span> per a
+      la teva empresa o negoci, <span class="custom-gradient">GRATIS</span>, amb la subvenció del Kit Digital.</Fragment
+    >
   </Hero>
 
-  <Features
+  <Features2
     tagline="Funcionalitats i serveis"
     subtitle="El principal objectiu d’aquesta categoria és que puguis tenir una pàgina web per a donar-te visibilitat en internet."
     title="Web autogestionable sense cost per empreses i autònoms."
@@ -30,69 +32,65 @@ const metadata = {
       {
         title: 'Domini',
         description: `En cas que encara no disposis d'un domini del teu web, se't donarà un durant un termini mínim de dotze mesos. La titularitat del domini serà teva per complet.`,
-        icon: 'tabler:check'
+        icon: 'tabler:globe',
       },
       {
         title: 'Hosting',
         description: `També tindràs a la teva disposició l'allotjament de la pàgina web durant un termini mínim de dotze mesos.`,
-        icon: 'tabler:check'
+        icon: 'tabler:server',
       },
       {
         title: 'Disseny de la pàgina web',
         description: `Com a part del servei tindràs l'estructura del web, amb un mínim de 3 apartats. Es consideren pàgines o apartats d'un web, elements com ara: pàgina d'inici (Landing Page), presentació de l'empresa, formulari de contacte, descripció de productes, dades de contacte, mapa del lloc (sitemap), etc.`,
-        icon: 'tabler:check'
+        icon: 'tabler:layout',
       },
       {
         title: 'Web responsive',
         description: `El teu web s'adaptarà perfectament a qualsevol tipus de dispositiu.`,
-        icon: 'tabler:check'
+        icon: 'tabler:screen-share',
       },
       {
         title: 'Accessibilitat',
         description: `El disseny del teu web complirà amb els criteris de conformitat de nivell AA de les Directrius WCAG-2.1.`,
-        icon: 'tabler:check'
+        icon: 'tabler:eye',
       },
       {
         title: 'Posicionament bàsic a internet',
         description: `La informació de la teva pime serà indexable pels principals motors de cerca (On-Page).`,
-        icon: 'tabler:check'
+        icon: 'tabler:search',
       },
       {
         title: 'Autogestionable',
         description: `Disposaràs també d'una plataforma de gestió de continguts perquè puguis modificar els continguts del teu web sense necessitat d'ajuda.`,
-        icon: 'tabler:check'
+        icon: 'tabler:edit',
       },
       {
         title: 'Optimització de la presència en cercadors (SEO bàsic)',
         description: `Anàlisi de paraules clau, SEO On-Page de 2 pàgines o apartats, indexació i jerarquització del contingut.`,
-        icon: 'tabler:check'
+        icon: 'tabler:chart-line',
       },
       {
         title: 'Multidioma',
         description: `Se't donarà l'opció de tenir el teu web preparat per al multidioma i traduït a un idioma, a més del castellà.`,
-        icon: 'tabler:check'
-      }
+        icon: 'tabler:language',
+      },
     ]}
-    
   />
 
-  
   <Features
     title="Import màxim de l'ajuda"
     subtitle="Es concedeix un import màxim per invertir en <strong>Presència Bàsica a interenet</strong> depenent del nombre d'empleats del beneficiari."
     items={[
       {
-        title: 'De 0 a 3 empleats:',        
-        description:
-          '2.000€',
+        title: 'De 0 a 3 empleats:',
+        description: '2.000€',
         icon: 'tabler:check',
       },
       {
         title: 'De 10 a 50 empleats:',
-        description:
-          '2.000€',
-          icon: 'tabler:check',
-      }
+        description: '2.000€',
+        icon: 'tabler:check',
+      },
     ]}
   />
 
@@ -111,10 +109,17 @@ const metadata = {
       },
     ]}
   >
-    <Fragment slot="title">Estàs a un <span class='custom-gradient'>click</span> de la teva nova <span class='custom-gradient'>pàgina web</span></Fragment>
-    <Fragment slot="subtitle">Contacta'ns i crearem un lloc web amb <a href='#todo' class="text-accent" title="Programació web amb WordPress">WordPress</a> per a la teva empresa o negoci, de forma gratuïta gràcies a la subvenció del Kit Digital.</Fragment>
+    <Fragment slot="title"
+      >Estàs a un <span class="custom-gradient">click</span> de la teva nova <span class="custom-gradient"
+        >pàgina web</span
+      ></Fragment
+    >
+    <Fragment slot="subtitle"
+      >Contacta'ns i crearem un lloc web amb <a href="#todo" class="text-accent" title="Programació web amb WordPress"
+        >WordPress</a
+      > per a la teva empresa o negoci, de forma gratuïta gràcies a la subvenció del Kit Digital.</Fragment
+    >
   </CallToAction>
 
-  <KitDigital/>
-
+  <KitDigital />
 </Layout>

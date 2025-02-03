@@ -1,0 +1,116 @@
+---
+import Features from '~/components/widgets/Features.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import Image from '~/components/common/Image.astro';
+import KitDigital from '~/components/widgets/KitDigital.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+const u = useRoutes(getLangFromUrl(Astro.url));
+
+const metadata = {
+  title: 'Servei d’assessorament en estratègia i rendiment de negoci',
+  description:
+    'Assessorament en intel·ligència artifical, estratègia de negoci i rendiment per a PIMES. Utilitzem IA per millorar la teva estratègia i rendiment empresarial.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Subvenció Kit Consulting"
+    backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/22.jpg' }}
+  >
+    <Fragment slot="title">Servei d’assessorament en estratègia i rendiment de negoci </Fragment>
+    <Fragment slot="subtitle"
+      >Assessorament en intel·ligència de negoci i rendiment per a PIMES. Utilitzem IA per millorar la teva estratègia i
+      rendiment empresarial.</Fragment
+    >
+  </Hero>
+
+  <Features
+    tagline="Servei d'assessorament <strong>subvencionat</strong>"
+    subtitle="Coneixeràs la inversió requerida i les mesures necessàries per a la seva adopció.<br/>Es realitzarà un cas d'ús i s'implantarà formació adaptada a la teva pime."
+    title="Avaluació i optimització de la intel·ligència de negoci mitjançant <span class='custom-gradient'>Intel·ligència Artificial</span> per millorar l'estratègia, l'anàlisi competitiu i el rendiment de la teva pime"
+    items={[
+      {
+        description:
+          "Analitzar la teva situació actual en intel·ligència de negoci per avaluar necessitats, identificar bretxes en l'ús de tecnologies d'intel·ligència de negoci i detectar oportunitats de millora.",
+        icon: 'tabler:chart-line',
+      },
+      {
+        description:
+          "Plantejar recomanacions per desenvolupar habilitats analítiques i fomentar una cultura de presa de decisions basada en el tractament de dades amb <a href='" + u('development/ia') + "' title='Programació a mida amb intel·ligència artificial' class='text-accent'>algoritmes d'intel·ligència artificial</a> en l'escenari competitiu actual.",
+        icon: 'tabler:brain',
+      },
+      {
+        description:
+          "Assessorar-te en la incorporació de tècniques i eines avançades d'aprenentatge automàtic, intel·ligència artificial i mineria de dades, entenent les especificitats de la teva pime i alineant-les als objectius del negoci.",
+        icon: 'tabler:tools',
+      },
+      {
+        description:
+          'Definir juntament amb tu una estratègia a mitjà i llarg termini per a la implementació i optimització de la intel·ligència de negoci basada en millorar el rendiment.',
+        icon: 'tabler:target',
+      },
+      {
+        description:
+          "Disseny i execució d'un cas d'ús que demostri l'efectivitat de les tècniques d'anàlisi de la competència per millorar l'estratègia i el rendiment del negoci.",
+        icon: 'tabler:chart-pie',
+      },
+      {
+        description:
+          "Identificació d'oportunitats o possibles usos de la IA en l'àmbit de l'estratègia i rendiment de negoci.",
+        icon: 'tabler:brain',
+      },
+    ]}
+  />
+
+  <Features
+    title="L'import total subvencionat per Kit Consulting varia  segons el nombre d'empleats"
+    subtitle="L'import màxim subvencionat per a cada servei d'assessorament de Kit Consulting és sempre de 6.000€."
+    items={[
+      {
+        title: 'Import total subvencionat:',
+        list: [
+          "<strong>De 10 a 49 empleats</strong> 12.000€.<br/>Correspon a 2 serveis d'assessorament.",
+          "<strong>De 50 a 99 empleats:</strong> 18.000€.<br/>Correspon a 3 serveis d'assessorament.",
+          "<strong>De 100 a 250 empleats:</strong> 24.000€.<br/>Correspon a 4 serveis d'assessorament.",
+        ],
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Import màxim disponible pel servei d’assessorament en estratègia i rendiment de negoci:',
+        description: '6.000€',
+        icon: 'tabler:check',
+      },
+    ]}
+  />
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/22.jpg', alt: 'Fons abstracte, inspirat en línees i colors' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contactar',
+        href: 'contactar',
+      },
+      {
+        variant: 'primary',
+        text: 'Trucar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title"
+      >No esperis més, sol·licita assessorament gratuït i millora l'estratègia i el rendiment de negoci de la teva
+      empresa fent ús de la <span class="custom-gradient">Intel·ligència Artificial</span></Fragment
+    >
+    <Fragment slot="subtitle"
+      >Contacta'ns i t'assessorarem de forma gratuïta gràcies a la subvenció del Kit Consulting sobre com la IA et pot
+      ajudar a potenciar la teva empresa.</Fragment
+    >
+  </CallToAction>
+
+  <KitDigital />
+</Layout>

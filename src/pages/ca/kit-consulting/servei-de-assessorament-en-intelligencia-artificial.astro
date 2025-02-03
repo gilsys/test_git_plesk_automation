@@ -1,0 +1,119 @@
+---
+import Features from '~/components/widgets/Features.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import Image from '~/components/common/Image.astro';
+import KitDigital from '~/components/widgets/KitDigital.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+const u = useRoutes(getLangFromUrl(Astro.url));
+
+const metadata = {
+  title: 'Servei d’assessorament en Intel·ligència Artificial',
+  description:
+    "Serveis d'assessorament en IA per a PIMES. Plans personalitzats, identificació de dades clau i capacitació en tècniques de IA.",
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Subvenció Kit Consulting"
+    backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/22.jpg' }}
+  >
+    <Fragment slot="title"
+      >Servei d’assessorament en <span class="custom-gradient">Intel·ligència Artificial</span></Fragment
+    >
+    <Fragment slot="subtitle"
+      >Orientació sobre com implantar IA a la teva empresa o negoci, <span class="custom-gradient">GRATIS</span
+      >, amb la subvenció del Kit Consulting.</Fragment
+    >
+  </Hero>
+
+  <Features
+    tagline="Servei d'assessorament <strong>subvencionat</strong>"
+    subtitle="Coneixeràs la inversió requerida i les mesures necessàries per a la seva adopció.<br/>Es realitzarà un cas d'ús i s'implantarà formació adaptada a la teva pime."
+    title="Estudiem la teva empresa i planifiquem com integrar <span class='custom-gradient'>Intel·ligència Artificial</span> per automatitzar tasques i processos de forma eficient"
+    items={[
+      {
+        description:
+          "L'Assessor Digital Adherit serà l'encarregat de realitzar una sèrie d'activitats per garantir la correcta implementació del pla d'intel·ligència artificial.",
+        icon: 'tabler:brain',
+      },
+      {
+        description:
+          "Identificació de conjunts de dades rellevants per a la <a href='" + u('development/ia') + "' title='Programació a mida amb intel·ligència artificial' class='text-accent'>implementació d'algoritmes d'IA</a>, d'aquesta manera podràs tenir una millor comprensió de la informació de la teva pime.",
+        icon: 'tabler:database',
+      },
+      {
+        description:
+          "Assessorar-te per a la creació de protocols de governança de dades amb normatives d'IA, garantint la validesa i la veracitat dels mateixos quan apliqui la IA.",
+        icon: 'tabler:shield-lock',
+      },
+      {
+        description:
+          "Analitzar eines d'IA per a la gestió de dades, realitzant recomanacions basades en la realitat i la capacitat d'inversió de la teva pime.",
+        icon: 'tabler:tools',
+      },
+      {
+        description:
+          "Orientar-te sobre com les tècniques d'IA poden derivar informació valuosa a partir de les dades existents per impulsar la presa de decisions estratègiques.",
+        icon: 'tabler:chart-pie',
+      },
+      {
+        description: "Capacitar-te en l'ús estratègic de les tècniques d'IA en la gestió de dades.",
+        icon: 'tabler:user-check',
+      },
+      {
+        description:
+          "Desenvolupar i executar un cas d'ús adaptat al negoci, relacionat amb l'aplicació de la intel·ligència artificial.",
+        icon: 'tabler:settings',
+      },
+    ]}
+  />
+
+  <Features
+    title="L'import total subvencionat per Kit Consulting varia  segons el nombre d'empleats"
+    subtitle="L'import màxim subvencionat per a cada servei d'assessorament de Kit Consulting és sempre de 6.000€."
+    items={[
+
+{
+        title: 'Import total subvencionat:',
+        list: [
+          "<strong>De 10 a 49 empleats</strong> 12.000€.<br/>Correspon a 2 serveis d'assessorament.",
+          "<strong>De 50 a 99 empleats:</strong> 18.000€.<br/>Correspon a 3 serveis d'assessorament.",
+          "<strong>De 100 a 250 empleats:</strong> 24.000€.<br/>Correspon a 4 serveis d'assessorament.",
+        ],
+        icon: 'tabler:check',
+      },
+      {
+        title: "Import màxim disponible pel servei d'assessorament en intel·ligència artificial:",
+        description: '6.000€',
+        icon: 'tabler:check',
+      }
+    ]}
+  />
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/22.jpg', alt: 'Fons abstracte, inspirat en línees i colors' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contactar',
+        href: 'contactar',
+      },
+      {
+        variant: 'primary',
+        text: 'Trucar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">No esperis més, sol·licita assessorament gratuït en <span class="custom-gradient">Intel·ligència Artificial</span></Fragment>
+    <Fragment slot="subtitle"
+      >Contacta'ns i t'assessorarem de forma gratuïta gràcies a la subvenció del Kit Consulting sobre com la IA et pot ajudar a potenciar la teva empresa.</Fragment
+    >
+  </CallToAction>
+
+  <KitDigital />
+</Layout>
