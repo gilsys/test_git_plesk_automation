@@ -8,26 +8,31 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+
 
 const metadata = {
   title: "Empresa de programació d'aplicacions web a mida | +20 anys",
   description:
-    'Dissenyem i desenvolupem aplicacions web i plataformes cloud a mida per empreses, adaptades i personalitzades per optimitzar processos i oferir funcionalitats complexes.',
+    'Dissenyem i desenvolupem aplicacions web a mida, per empreses, adaptades i personalitzades per optimitzar processos i oferir funcionalitats complexes.',
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- Hero Section -->
   <Hero tagline="Programem aplicacions a mida que s’ajusten al teu negoci."
-  
+  actions={[
+    { variant: 'primary', text: 'Sol·licitar pressupost', href: u('contact') },
+  ]}
   backgroundImage={{ alt:'Fons abstracte', src: '~/assets/images/dots/02.jpg'}}
   >
     <Fragment slot="title">
       Aplicacions web <span class="text-accent highlight">a mida</span>
     </Fragment>
     <Fragment slot="subtitle">
-      Dissenyem i desenvolupem eines i plataformes a mida per empreses, adaptades a objectius concrets, per optimitzar
-      processos i oferir funcionalitats avançades.
+      Dissenyem i desenvolupem eines i plataformes a mida per empreses, adaptades a objectius concrets, per optimitzar processos i oferir funcionalitats avançades.
     </Fragment>
   </Hero>
 
@@ -35,7 +40,7 @@ const metadata = {
   <Content
     tagline=""
     title="Què són les aplicacions web a mida?"
-    subtitle="Plataformes online per oferir serveis o resoldre processos."
+    subtitle="Plataformes cloud per oferir serveis o resoldre processos."
     items={[
       {
         title: 'Eines internes per a empreses',
@@ -59,25 +64,26 @@ const metadata = {
     }}
   >
     <Fragment slot="preContent">
-      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">Programem tot tipus d'eines online</h3>
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">Programem tot tipus d'eines al núvol</h3>
       <p class="text-muted">
         Quan parlem d'aplicacions web a mida ens referim a tot tipus eines digitals programades específicament per
         oferir funcionalitats a mida, adaptades a les necessitats concretes d’un projecte o empresa.
       </p>
       <p class="text-muted mt-4">
-        A diferència de les <a href="#TODO" class="text-accent">pàgines web amb WordPress</a> o de les <a
-          href="#TODO"
+        A diferència de les <a href={u('software/wp')} title="Disseny web amb WordPress" class="text-accent">pàgines web amb WordPress</a> o de les <a
+          href={u('development/astro')}
+          title='Webs optimitzades per alt rendiment i SEO'
           class="text-accent">pàgines web d'alt rendiment</a
         >, les aplicacions web van un pas més enllà i abarquen qualsevol tipus d'implementació avançada de serveis de
-        programaició d'eines online.
+        programació d'eines cloud.
       </p>
     </Fragment>
     <Fragment slot="postContent">
-      <h3 class="text-2xl font-bold tracking-tightsm:text-3xl mb-2">Per a qui és útil?</h3>
+      <h3 class="text-2xl font-bold tracking-tightsm:text-3xl mb-2">Qui necessita aplicacions web?</h3>
       <p class="text-muted">
         Les aplicacions web a mida són ideals per a empreses, startups i institucions que necessiten solucions digitals
-        personalitzades per automatitzar processos, gestionar dades complexes o oferir serveis en línia. Són
-        especialment útils per a aquells projectes amb requisits únics que no es cobreixen amb eines estàndard.
+        personalitzades per automatitzar processos, gestionar dades complexes o oferir serveis al núvol. Són
+        especialment útils per a aquells projectes, interns o públics, amb requisits únics que no es cobreixen amb eines estàndard.
       </p>
     </Fragment>
   </Content>
@@ -89,7 +95,7 @@ const metadata = {
     items={[
       {
         title: 'Interfícies funcionals',
-        description: ' Ideals per a aplicacions d’ús intern, on la simplicitat i l’eficiència són prioritàries.',
+        description: 'Ideals per a aplicacions d’ús intern, on la simplicitat i l’eficiència són prioritàries.',
       },
       {
         title: 'Interfícies atractives',
@@ -110,7 +116,7 @@ const metadata = {
     <Fragment slot="preContent">
       <p class="text-muted">
         A gilsys, entenem que cada aplicació web té uns objectius específics, i el seu disseny ha de reflectir-los. Per
-        això, adaptem les interfícies d’usuari (UI) segons el tipus de projecte:
+        això, el nostre equip de programadors adapta les interfícies d’usuari (UI) segons el tipus de projecte:
       </p>
     </Fragment>
     <Fragment slot="postContent">
@@ -126,87 +132,87 @@ const metadata = {
 
   <Features2
     id="features"
-    title="Avantatges de les Aplicacions Web a Mida i eines Online"
-    subtitle="Les aplicacions web a mida i online ofereixen beneficis únics en comparació amb les solucions estàndard, les aplicacions mòbils natives o el software instal·lable."
+    title="Avantatges de les <span class='custom-gradient'>aplicacions web</span> a mida i <span class='custom-gradient'>eines cloud</span>"
+    subtitle="Afereixen beneficis únics en comparació amb les solucions estàndard."
     items={[
       {
         title: 'Flexibilitat',
-        description: `list: [
-          'Adaptació completa: Les funcionalitats, el disseny i l’arquitectura es desenvolupen segons els requisits específics del projecte.',
-          'Personalització avançada: Possibilitat d’integrar funcionalitats exclusives que no es poden trobar en eines genèriques.',
-          'Evolució constant: Els sistemes poden ajustar-se a les noves necessitats o reptes que apareguin amb el temps.',
-        ]`,
+        list: [
+          '<strong>Adaptació completa:</strong> Les funcionalitats, el disseny i l’arquitectura es desenvolupen segons els requisits específics del projecte.',
+          '<strong>Personalització avançada:</strong> Possibilitat d’integrar funcionalitats exclusives que no es poden trobar en eines genèriques.',
+          '<strong>Evolució constant:</strong> Els sistemes poden ajustar-se a les noves necessitats o reptes que apareguin amb el temps.',
+        ],
         icon: 'tabler:arrows-maximize',
       },
       {
         title: 'Facilitat d’accés i ús online',
-        description: `list: [
-          'Accessibilitat global: Els usuaris poden accedir-hi des de qualsevol lloc i en qualsevol moment.',
-          'Multidispositiu: Funcionen en ordinadors, tauletes i smartphones sense necessitat de versions específiques.',
-          'Compatibilitat multiplataforma: Funcionen en qualsevol sistema operatiu amb un navegador compatible.',
-        ]`,
+        list: [
+          '<strong>Accessibilitat global:</strong> Els usuaris poden accedir-hi des de qualsevol lloc i en qualsevol moment.',
+          '<strong>Multidispositiu:</strong> Funcionen en ordinadors, tauletes i smartphones sense necessitat de versions específiques.',
+          '<strong>Compatibilitat multiplataforma:</strong> Funcionen en qualsevol sistema operatiu amb un navegador compatible.',
+        ],
         icon: 'tabler:device-laptop',
       },
       {
         title: 'Automatització i eficiència',
-        description: `list: [
-          'Gestió optimitzada: Automatització de tasques repetitives.',
-          'Productivitat millorada: Reducció del temps necessari per completar processos clau.',
-          'Eliminació d’errors: Automatitzar processos crítics minimitza els riscos associats a errors manuals.',
-        ]`,
+        list: [
+          '<strong>Gestió optimitzada:</strong> Automatització de tasques repetitives.',
+          '<strong>Productivitat millorada:</strong> Reducció del temps necessari per completar processos clau.',
+          '<strong>Eliminació d’errors:</strong> Automatitzar processos crítics minimitza els riscos associats a errors manuals.',
+          ],
         icon: 'tabler:settings',
       },
       {
         title: 'Adaptació al creixement',
-        description: `list: [
-          'Incorporació de noves funcionalitats segons necessitats.',
-          'Gestió de grans volums de dades sense comprometre el rendiment.',
-          'Preparades pel futur: Integració amb tecnologies emergents.',
-        ]`,
+        list: [
+          '<strong>Noves funcionalitats</strong> sota demanda.',
+          '<strong>Gestió de grans volums de dades</strong> sense comprometre el rendiment.',
+          '<strong>Preparades pel futur:</strong> Integració amb tecnologies emergents.',
+          ],
         icon: 'tabler:line',
       },
       {
         title: 'Facilitat de manteniment i actualització',
-        description: `list: [
-          'Actualitzacions instantànies sense necessitat de descàrregues.',
-          'Manteniment remot: Ajustos i millores sense interrupcions significatives.',
-          'Costos reduïts gràcies a la gestió centralitzada.',
-        ]`,
+        list: [
+          '<strong>Actualitzacions instantànies</strong> sense necessitat de descàrregues.',
+          '<strong>Manteniment remot:</strong> Ajustos i millores sense interrupcions significatives.',
+          '<strong>Costos reduïts</strong> gràcies a la gestió centralitzada.',
+          ],
         icon: 'tabler:cloud',
       },
       {
         title: 'Disseny orientat a l’usuari',
-        description: `list: [
-          'Facilitat d’ús: Dissenys intuïtius per a una millor experiència d’usuari.',
-          'Adaptabilitat visual a les necessitats del públic objectiu.',
-          'Responsive design: Experiència coherent en qualsevol dispositiu.',
-        ]`,
+        list: [
+          '<strong>Facilitat d’ús:</strong> Dissenys intuïtius per a una millor experiència d’usuari.',
+          '<strong>Adaptabilitat</strong> visual a les necessitats del públic objectiu.',
+          '<strong>Responsive design:</strong> Experiència coherent en qualsevol dispositiu.',
+          ],
         icon: 'tabler:palette',
       },
       {
         title: 'Control i propietat total',
-        description: `list: [
-          'Propietat del codi: Autonomia en modificacions o transferències.',
-          'Independència de proveïdors.',
-          'Seguretat personalitzada adaptada a normatives específiques.',
-        ]`,
+        list: [
+          '<strong>Propietat del codi:</strong> Autonomia en modificacions o transferències.',
+          '<strong>Independència</strong> de proveïdors.',
+          '<strong>Seguretat</strong> personalitzada adaptada a normatives específiques.',
+          ],
         icon: 'tabler:key',
       },
       {
         title: 'Millor rendiment respecte a altres solucions',
-        description: `list: [
-          'Sense instal·lació local: No ocupa espai ni requereix actualitzacions manuals.',
-          'Flexibilitat d’ús: Compatible amb múltiples sistemes operatius.',
-          'Menors requisits de hardware gràcies a la gestió des del servidor.',
-        ]`,
+        list: [
+          '<strong>Sense instal·lació local:</strong> No ocupa espai ni requereix actualitzacions manuals.',
+          '<strong>Flexibilitat d’ús:</strong> Compatible amb múltiples sistemes operatius.',
+          '<strong>Menors requisits de hardware</strong> gràcies a la gestió des del servidor.',
+          ],
         icon: 'tabler:rocket',
       },
       {
         title: 'Optimització per a projectes col·laboratius i SaaS',
-        description: `list: [
-          'Treball en equip en temps real.',
-          'Subscripcions i serveis en línia: Gestiona usuaris i serveis.',
-        ]`,
+        list: [
+          '<strong>Treball en equip</strong> en temps real.',
+          '<strong>Subscripcions i serveis en línia:</strong> Gestiona usuaris i serveis.',
+          ],
         icon: 'tabler:users',
       },
     ]
@@ -220,52 +226,52 @@ const metadata = {
     items={[
       {
         title: 'Plataformes SaaS i serveis en línia',
-        description: `list: [
-          'Plataformes de subscripció amb continguts exclusius, com formació en línia, serveis professionals o accés a eines especialitzades.',
-          'Sistemes de gestió per a membres, clubs esportius o comunitats digitals, amb funcionalitats com planificació d’activitats, seguiment de resultats o comunicació interna.',
-        ]`,
+        list: [
+          '<strong>Plataformes de subscripció</strong> amb continguts exclusius, com formació en línia, serveis professionals o accés a eines especialitzades.',
+          '<strong>Sistemes de gestió per a membres</strong>, clubs esportius o comunitats digitals, amb funcionalitats com planificació d’activitats, seguiment de resultats o comunicació interna.',
+          ],
         icon: 'tabler:server',
       },
       {
         title: 'Generació i automatització de documents',
-        description: `list: [
-          'Generació dinàmica de contractes, factures o certificats, adaptats a les dades específiques de cada usuari o client.',
-          'Creació d’informes tècnics detallats a partir de dades analítiques per a sectors com educació, industrial o la logística.',
-        ]`,
+        list: [
+          '<strong>Generació dinàmica de contractes, factures o certificats</strong>, adaptats a les dades específiques de cada usuari o client.',
+          '<strong>Creació d’informes tècnics</strong> detallats a partir de dades analítiques per a sectors com educació, industrial o la logística.',
+          ],
         icon: 'tabler:file-text',
       },
       {
         title: 'Plataformes per gestionar serveis especialitzats',
-        description: `list: [
-          'Sistemes per gestionar reserves en línia, com cites, serveis professionals o esdeveniments.',
-          'Eines per configurar productes personalitzats, com configuradors de maquinària, equipaments industrials o productes personalitzats per a e-commerce.',
-          'Gestió de projectes i contractacions amb seguiment d’etapes, assignació de tasques i generació d’informes de progrés.',
-        ]`,
+        list: [
+          '<strong>Sistemes per gestionar reserves online</strong>, com cites, serveis professionals o esdeveniments.',
+          '<strong>Eines per configurar productes personalitzats</strong>, com configuradors de maquinària, equipaments industrials o productes personalitzats per a e-commerce.',
+          '<strong>Gestió de projectes</strong> i contractacions amb seguiment d’etapes, assignació de tasques i generació d’informes de progrés.',
+          ],
         icon: 'tabler:calendar-event',
       },
       {
         title: 'Sistemes de gestió i anàlisi de dades',
-        description: `list: [
-          'Panells de control per monitoritzar mètriques de rendiment, com vendes, ús d’eines o estadístiques de trànsit en temps real.',
-          'Sistemes de visualització d’informació amb gràfics, mapes i taules interactives per a la presa de decisions estratègiques.',
-        ]`,
+        list: [
+          '<strong>Panells de control</strong> per monitoritzar mètriques de rendiment, com vendes, ús d’eines o estadístiques de trànsit en temps real.',
+          '<strong>Sistemes de visualització d’informació</strong> amb gràfics, mapes i taules interactives per a la presa de decisions estratègiques.',
+          ],
         icon: 'tabler:chart-pie',
       },
       {
         title: 'Eines de formació i desenvolupament',
-        description: `list: [
-          'Plataformes per administrar cursos, avaluacions i programes de certificació en sectors com l’automoció, la sanitat o la tecnologia.',
-          'Eines de gamificació i seguiment per a formacions internes, amb indicadors de progrés i informes personalitzats.',
-        ]`,
+        list: [
+          '</strong>Plataformes per administrar cursos</strong>, avaluacions i programes de certificació en sectors com l’automoció, la sanitat o la tecnologia.',
+          '<strong>Eines de gamificació</strong> i seguiment per a formacions internes, amb indicadors de progrés i informes personalitzats.',
+          ],
         icon: 'tabler:school',
       },
       {
         title: 'Eines de suport a operacions empresarials',
-        description: `list: [
-          'Sistemes per gestionar inventaris, comandes i distribució en temps real.',
-          'Plataformes per a la gestió de clients completament a mida per adaptar-se a les necessitats específiques de l’empresa.',
-          'Eines per automatitzar processos administratius, com avaluació del rendiment del personal.',
-        ]`,
+        list: [
+          '<strong>Sistemes per gestionar inventaris</strong>, comandes i distribució en temps real.',
+          '<strong>Plataformes per a la gestió de clients</strong> completament a mida per adaptar-se a les necessitats específiques de l’empresa.',
+          '<strong>Eines per automatitzar processos administratius</strong>, com avaluació del rendiment del personal.',
+          ],
         icon: 'tabler:settings',
       },
     ]
@@ -275,6 +281,12 @@ const metadata = {
   <Content
     isReversed
     tagline=""
+
+    image={{
+      src: '~/assets/images/aplicaciones-web-cloud.jpg',
+      alt: 'Aplicacions web cloud',
+    }}
+
     title="Per què escollir gilsys per al desenvolupament d’aplicacions web a mida?"
     items={[
       {
@@ -308,18 +320,31 @@ const metadata = {
         icon: 'tabler:headset',
       },
     ]}
-  >
-    <Fragment slot="postContent">
-      <p>
-        Amb gilsys, les aplicacions web a mida són més que eines digitals; són solucions estratègiques que combinen
-        funcionalitat i disseny per maximitzar l’impacte i l’eficiència del projecte.
-      </p>
-    </Fragment>
+  >    
 
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-lightgray"></div>
     </Fragment>
   </Content>
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/02.jpg', alt: 'Fons abstracte' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Sol·licitar pressupost',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Trucar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">La teva <span class="custom-gradient">aplicació web a mida</span>,<br/> només a un click</Fragment>
+    <Fragment slot="subtitle">Explica'ns les necessitats del teu projecte i prepararem un pressupost personalitzat.</Fragment>
+  </CallToAction>
 
 
 

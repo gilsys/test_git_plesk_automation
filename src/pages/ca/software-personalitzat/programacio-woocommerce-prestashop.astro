@@ -1,0 +1,433 @@
+---
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Prices from '~/components/widgets/Pricing.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Image from '~/components/common/Image.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+
+const metadata = {
+  title: 'Empresa de programació de botiga online amb PrestaShop i Woocommerce | +20 anys',
+  description:
+    'Especialistes en desenvolupament i disseny personalitzat de botigues online amb PrestaShop i Woocommerce, solucions a mida.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Programem e-commerce per empreses de qualsevol dimensió i sector."
+    backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/16.jpg' }}
+  >
+    <Fragment slot="title">
+      Programació de botiga online amb<br />
+      <span class="text-accent highlight">PrestaShop</span> i <span class="text-accent highlight">Woocommerce</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      Creem botigues online amb disseny personalitzat, desenvolupem a mida mòduls i plantilles a mida.
+    </Fragment>
+  </Hero>
+
+  <Content
+    tagline="Desenvolupem e-commerce adaptat per empreses de qualsevol sector"
+    title="Què és un e-commerce?"
+    subtitle="Plataformes, per petites i <strong>grans empreses</strong>, per permetre comprar productes i gestionar les vendes."
+    items={[
+      {
+        title: 'Arribar a nous clients',
+        description:
+          'Internet no té fronteres. Una botiga online permet vendre a tot el món les 24 hores del dia, els 7 dies de la setmana.',
+      },
+      {
+        title: 'Augmentar les vendes',
+        description:
+          "Una botiga online professional i atractiva millora la imatge de l'empresa i genera confiança entre els clients.",
+      },
+      {
+        title: 'Reduir costos',
+        description:
+          'Una botiga online pot ser més econòmica que una botiga física, ja que no requereix un local, personal addicional, etc.',
+      },
+      {
+        title: 'Obtenir informació valuosa sobre els clients',
+        description:
+          'Amb una botiga online permet recopilar dades sobre els teus clients (preferències, hàbits de compra, etc.) per millorar la teva estratègia de màrqueting.',
+      },
+      {
+        title: 'Disposar de funcionalitats tecnologicament avançades',
+        list: [
+          "Disposar d'una gestió centralitzada del catàleg de productes.",
+          'Integrar amb sistemes externs com passarel·les de pagament, ERPs o CRMs.',
+          "Millorar el posicionament de l'empresa en cercadors, amb SEO optimitzat per productes.",
+          'Escalar fàcilment amb el creixament del volum de ventes o ampliació de catàleg.',
+        ],
+      },
+    ]}
+    image={{
+      src: '~/assets/images/ecommerce.jpg',
+      alt: 'Plantilles web per personalitzar botiga online',
+    }}
+  >
+    <Fragment slot="preContent">
+      <p class="text-muted">
+        Un e-commerce, o comerç electrònic, és una plataforma en línia que permet a les empreses vendre productes o
+        serveis a través d'Internet. Avui dia, tenir una botiga online és essencial per a qualsevol empresa que vulgui
+        expandir el seu negoci i arribar a un públic més ampli. Una botiga online permet gestionar tot el procés de
+        venda, des de la presentació dels productes fins al pagament i l'enviament, i ofereix nombrosos avantatges per a
+        les empreses, com ara l'augment de vendes, la millora de la imatge de marca i l'accés a un mercat global.
+      </p>
+    </Fragment>
+    <Fragment slot="postContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">Qui necessita un e-commerce?</h3>
+      <p class="text-muted">
+        Qualsevol empresa de qualsevol sector, que vulgui vendre productes, ja sigui a petita o gran escala, a nivell
+        local, nacional o internacional.
+      </p>
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2 mt-8">Utilitzem Woocommerce i Prestashop</h3>
+      <p class="text-muted">
+        A gilsys, som especialistes en el desenvolupament de botigues online personalitzades amb PrestaShop i
+        Woocommerce, dues de les plataformes de comerç electrònic més potents i versàtils del mercat.
+      </p>
+    </Fragment>
+  </Content>
+
+  <WidgetWrapper containerClass={`max-w-xl pb-6 md:pb-6 lg:pb-6`}>
+    <a href="https://presatshop.com/" rel="nofollow" title="Prestashop - Motor de botigues online" target="_blank">
+      <Image
+        class=""
+        widths={[400, 768]}
+        layout="constrained"
+        src="~/assets/images/prestashop-logo.jpg"
+        alt="Prestashop - Logo"
+      />
+    </a>
+  </WidgetWrapper>
+
+  <FAQs
+    classes={{ container: 'py-0 md:py-0 lg:py-0 ps-12' }}
+    title="Prestashop: Robustesa per a grans botigues online"
+    subtitle="PrestaShop és una plataforma creada exclusivament per al comerç electrònic. La seva estructura robusta i escalable la fa ideal per a catàlegs grans i complexes, així com per a botigues que necessiten funcionalitats més avançades."
+    tagline=""
+  />
+  <WidgetWrapper containerClass={`max-w-xl my-0 mx-auto py-0 md:py-0 lg:py-0 ps-12`}>
+    <a href="https://presatshop.com/" rel="nofollow" title="Prestashop - Motor de botigues online" target="_blank">
+      <Image src="~/assets/images/prestashop-backoffice.jpg" alt="Prestashop - Panell d'administració de botiga" />
+    </a>
+  </WidgetWrapper>
+  <FAQs
+    heading="Punts forts de Prestashop"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'Dissenyat per a grans catàlegs',
+        description: 'Pot gestionar milers de productes sense comprometre el rendiment.',
+      },
+      {
+        title: 'Funcionalitats natives',
+        description:
+          'Inclou eines avançades com gestió d’estocs, descomptes, impostos i enviaments sense necessitat de plugins.',
+      },
+      {
+        title: 'Mòduls comercials',
+        description:
+          'Existeix un gran mercat de mòduls comercials que poden resoldre molts dels requisits freqüents en botigues avançades.',
+      },
+      {
+        title: 'Escalabilitat i personalització',
+        description:
+          'A gilsys, no només treballem amb els mòduls comercials més utilitzats, també desenvolupem funcionalitats a mida per cobrir les necessitats específiques del teu projecte i restashop ofereix una bona base per aquest tipus de personalitzacions.',
+      },
+    ]}
+  />
+
+  <FAQs
+    heading="Limitacions de Prestashop"
+    subtitle=""
+    tagline=""
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'Complexitat inicial',
+        description: 'Requereix més coneixements tècnics per configurar i gestionar en comparació amb WooCommerce.',
+      },
+      {
+        title: 'Menys flexible per a contingut textual',
+        description:
+          'Encara que es poden afegir pàgines informatives, no és tan àgil com WordPress per treballar el disseny i SEO de continguts.',
+      },
+    ]}
+  />
+
+  <WidgetWrapper containerClass={`max-w-xl my-0 mx-auto py-6 md:py-6 lg:py-6`}>
+    <a
+      class="mx-auto"
+      rel="nofollow"
+      href="https://woocommerce.com/"
+      title="WooCommerce - Motor de botigues de WordPress"
+      target="_blank"
+    >
+      <Image
+        class="max-w-xs mx-auto"
+        width={320}
+        layout="responsive"
+        src="~/assets/images/woocommerce.webp"
+        alt="WooCommerce - Logo"
+      />
+    </a>
+  </WidgetWrapper>
+
+  <FAQs
+    classes={{ container: 'py-0 md:py-0 lg:py-0 ps-12' }}
+    title="WooCommerce: E-commerce per catàlegs <em>petits i mitjans</em>, flexible i atractiu."
+    subtitle={"WooCommerce és una extensió de <a class='text-accent' title='Plataforma CMS per a la creació de webs i gestió de continguts' href='" +
+      u('software/wp') +
+      "' >WordPress</a> que converteix qualsevol lloc web en una botiga online funcional i fàcil de gestionar. Ideal per a projectes que necessiten combinar comerç electrònic amb contingut textual optimitzat."}
+    tagline=""
+  />
+
+  <WidgetWrapper containerClass={`max-w-xl my-0 mx-auto py-6 md:py-6 lg:py-6`}>
+    <a
+      href="https://woocommerce.com/"
+      rel="nofollow"
+      title="WooCommerce - Motor de botigues de WordPress"
+      target="_blank"
+    >
+      <Image
+        class=""
+        widths={[400, 768]}
+        layout="constrained"
+        src="~/assets/images/woocommerce-backoffice.jpg"
+        alt="WooCommerce - Panell d'administració de botiga"
+      />
+    </a>
+  </WidgetWrapper>
+  <FAQs
+    heading="Punts forts de WooCommerce"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'Integració amb WordPress',
+        description:
+          'Permet afegir blocs, pàgines informatives i altres continguts SEO per millorar la visibilitat als cercadors.',
+      },
+      {
+        title: 'Gran varietat de plugins i temes',
+        description:
+          'Existeixen moltes extensions per ampliar funcionalitats. A gilsys, coneixem els mòduls més habituals i podem desenvolupar-ne de personalitzats si són necessaris.',
+      },
+      {
+        title: "Facilitat d'ús",
+        description:
+          'Existeixen moltes extensions per ampliar funcionalitats. A gilsys, coneixem els mòduls més habituals i podem desenvolupar-ne de personalitzats si són necessaris.',
+      },
+      {
+        title: 'Cost inicial',
+        description: 'És una opció adequada per a e-commerce amb pressupostos ajustats o en fase inicial.',
+      },
+    ]}
+  />
+
+  <FAQs
+    classes={{ container: 'max-w-6xl pt-0 md:pt-0 lg:pt-0' }}
+    title="Limitacions de WooCommerce"
+    subtitle=""
+    tagline=""
+    items={[
+      {
+        title: 'Rendiment amb catàlegs grans',
+        description: 'Amb un volum de productes molt elevat, WooCommerce pot experimentar problemes de rendiment.',
+        icon: 'tabler:chevron-right',
+      },
+      {
+        title: 'Dependència de plugins',
+        description: 'La necessitat de moltes extensions pot complicar la gestió si no es fan servir bones pràctiques.',
+        icon: 'tabler:chevron-right',
+      },
+    ]}
+  />
+  <Prices
+    title="Comparativa Prestashop i WooCommerce"
+    subtitle="Cada plataforma proporciona avanatatges segons els objectius de projecte de comerç electrònic."
+    prices={[
+      {
+        title: 'Prestashop',
+        subtitle: 'Grans plataformes amb funcionalitats avançades.',
+        items: [
+          {
+            title: 'Mida del catàleg',
+            description: 'Gran amb milers de productes',
+          },
+          {
+            title: 'SEO i contingut',
+            description: 'Menys flexible per contingut textual.',
+          },
+          {
+            title: 'Personalització i mòduls',
+            description: 'Escalabilitat amb funcionalitats natives i mòduls avançats.',
+          },
+          {
+            title: 'Rendiment',
+            description: 'Rendiment alt amb grans volums de dades.',
+          },
+          {
+            title: 'Cost inicial',
+            description: 'Superior.',
+          },
+        ],
+      },
+      {
+        title: 'WooCommerce',
+        subtitle: 'Botigues reduides, amb disseny atractiu.',
+        period: 'Per Month',
+        items: [
+          {
+            title: 'Mida del catàleg',
+            description: 'Petits o mitjans',
+          },
+          {
+            title: 'SEO i contingut',
+            description: 'Excel·lent per a pàgines de contingut i SEO.',
+          },
+          {
+            title: 'Personalització i mòduls',
+            description: 'Compatible amb plugins i mòduls personalitzats.',
+          },
+          {
+            title: 'Rendiment',
+            description: 'Pot ser limitat amb catàlegs grans.',
+          },
+          {
+            title: 'Cost incicial',
+            description: 'Inferior.',
+          },
+        ],
+      },
+    ]}
+  />
+  <Features2
+    id="features"
+    tagline=""
+    title="Com treballem amb Prestashop i Woocommerce des de gilsys?"
+    subtitle={"Assessorem a tot tipus d'empreses sobre <a href='"+ u('consultory') +"' class='text-accent' title='Consultoria tecnològica sobre ecommerce'>com desplegar el negoci a Internet</a> amb solucions personalitzades i eficients."}
+    items={[
+      {
+        title: 'Selecció tecnològica',
+        description:
+          'Recomanem la millor tecnologia per a cada negoci, explicant les característiques de cada e-commerce i evitant funcionalitats innecessàries.',
+        icon: 'tabler:target',
+      },
+      {
+        title: 'Plantilla, maquetació i disseny',
+        description:
+          'Maquetem a mida una plantilla quan el projecte ho requereix o recomanem les més adecuades per a cada tipus de negoci, adaptant-les a les necessitats de cada projecte',
+        icon: 'tabler:paint',
+      },
+      {
+        title: 'Desenvolupament a mida i personalització',
+        description:
+          'Creem mòduls i funcionalitats a mida per a la botiga online, adaptant a les teves necessitats específiques del negoci i oferint-te una solució única i personalitzada.',
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Personalitzacions responsables',
+        description:
+          'El mòduls creats i ampliacions, respecten les estructures originals sempre que sigui possible, evitant problemes de cares a futures actualtizacions.',
+        icon: 'tabler:adjustments-alt',
+      },
+      {
+        title: 'Optimització SEO',
+        description:
+          'Millorem punts tècnics per fer que el posicionament de la teva botiga als cercadors  contingut optimitzat i adaptat als estàndards SEO actuals.',
+        icon: 'tabler:search',
+      },
+      {
+        title: 'Integració amb altres sistemes',
+        description:
+          'Connectem la botiga amb ERP, CRM o eines de màrqueting per centralitzar la gestió i optimitzar els processos empresarials.',
+        icon: 'tabler:database',
+      },
+      {
+        title: 'Rendiment i escalabilitat',
+        description:
+          'Ens assegurem que la plataforma funcioni de manera fluida i que pugui créixer amb les necessitats del projecte.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Manteniment i actualitzacions periòdiques',
+        description:
+          'Ens encarreguem de realitzar les actualitzacions tècniques per a que la teva empresa es pugui centrar exclusivament en el producte i la seva promoció.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Innovació contant',
+        description:
+          `Estem preparats per adaptar la plataforma a nous requisits i integrar solucions innovadores com <a title="Programació de funcionalitats que integrin intel·ligència artificial" class="text-accent" href='` + u('development/ia') + `'>intel·ligència artificial</a> o noves tecnologies que puguin aparèixer en un futur.`,
+        icon: 'tabler:graph',
+      },
+    ]}
+  />
+
+  <Content
+    isReversed
+    tagline=""
+    title="Per què confiar en gilsys per implementar el teu comerç online?"
+    subtitle='El teu e-commerce estarà preparat per destacar i créixer, ja sigui amb WooCommerce per a projectes més petits o amb PrestaShop per a botigues amb catàlegs grans i complexos.'
+    items={[
+      {
+        title: 'Especialistes en WooCommerce i PrestaShop',
+        description:
+          `No és fàcil trobar una empresa, que no únicament pugui personalitzar el disseny de Prestashop i WooCommerce sinó que disposi d'un equip de programació que en conegui el codi font i pugui desenvolupar plantilles a mida, mòduls i ampliacions a mida.`,
+        icon: 'tabler:tools',
+      },
+      {
+        title: 'Personalitzacions responsables',
+        description:
+          'Seguim bones pràctiques per garantir la compatibilitat amb futures actualitzacions i oferir solucions sostenibles i escalables.',
+        icon: 'tabler:layout-dashboard',
+      },
+      {
+        title: 'Integració amb altres eines',
+        description:
+          `Connectem la botiga online amb altres eines com ara <a class="text-accent" title="Sincronització de dades amb gestors de clients" href='` + u('software/crm') + `'>CRM</a>, ERP, plataformes de màrqueting o sistemes de gestió d'estocs, per poder <a title="Processos per automatitzar la sincronització de dades" class="text-accent" href='` + u('development/automation') + `'>sincronitzar informació de forma automàtica</a> i transparent. Això permet automatitzar processos, centralitzar la informació i optimitzar la gestió del teu negoci`,
+        icon: 'tabler:link',
+      }
+      
+    ]}
+    image={{
+      src: '~/assets/images/gilsys-ecommerce.jpg',
+      alt: 'Carrito de compra resepresentant e-commerce',
+    }}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/16.jpg', alt: 'Fons abstracte, inspirat en tecnologia i software' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Sol·licitar pressupost',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Trucar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">Necessites <span class="custom-gradient">vendre per Internet</span>? </Fragment>
+    <Fragment slot="subtitle"
+      >Podem abordar projectes desde <strong>botigues petites</strong> a <strong>grans plataformes</strong>, amb disseny
+      personalitzat i funcionalitats avançades.</Fragment
+    >
+  </CallToAction>
+</Layout>

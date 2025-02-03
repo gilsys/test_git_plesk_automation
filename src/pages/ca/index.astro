@@ -49,10 +49,21 @@ const u = useRoutes(getLangFromUrl(Astro.url));
     </Fragment>
   </Hero>
 
-  <Features
-    title="Integrem<br><span class='custom-gradient'>Intel·ligència Artificial</span> a empreses"
-    subtitle=`Desenvolupem aplicacions web i mòbils, automatitzem processos i integrem IA en software programat a mida per optimitzar la teva empresa.`
-  />
+  <Content
+    
+    classes={{ 
+      container: 'pb-0 md:pb-0 lg:pb-0',
+     }}
+    title="No et quedis enrere, integra ara <span class='custom-gradient'>Intel·ligència Artificial</span> a la teva empresa"
+    subtitle={`Som una empresa especialitzada en desenvolupament de software, no només coneixem les darreres novetats en <a title='Programació a mida integrant intel·ligència artificial' class='text-accent' href='`+ u('development/ia')  +`'>intel·ligència artificial</a> sinó que les apliquen en eines empresarials, aplicacions web, apps mòbils a mida i processos automàtics.`}
+  >
+  <Fragment slot="preContent">
+    <div class="text-center -mt-4">
+      <a title="Programació a mida amb intel·ligència artificial per empreses" href={u('development/ia')} class="btn-primary mb-12 w-auto">Més informació</a>
+    </div>
+  </Fragment>
+  </Content>
+
 
   <FourBlocks
     id="serveis"
@@ -173,7 +184,7 @@ const u = useRoutes(getLangFromUrl(Astro.url));
         description: `A gilsys som un agent digitalitzador certificat dins del programa Kit Digital. Podem ajudar-te a digitalitzar les subvencions.
             <br />
             <br />
-            <a href="#" class="btn-primary mb-12 w-auto">Més informació</a>`,
+            <a href="`+ u('kit-digital') +`" class="btn-primary mb-12 w-auto">Més informació</a>`,
       },
     ]}
     image={{
@@ -206,7 +217,7 @@ const u = useRoutes(getLangFromUrl(Astro.url));
         description: `A gilsys som un agent consultor certificat dins del programa Kit Consulting. T’ajudem a aprofitar les subvencions i dissenyar el full de ruta per a la transformació digital de la teva empresa.
             <br />
             <br />
-            <a href="#" class="btn-primary mb-12 w-auto">Més informació</a>`,
+            <a href="` + u('kit-consulting') + `" class="btn-primary mb-12 w-auto">Més informació</a>`,
       },
     ]}
     image={{

@@ -6,18 +6,24 @@ import Features2 from '~/components/widgets/Features2.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Layout from '~/layouts/PageLayout.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
 
 const metadata = {
-  title: 'Programació d’automatitzacions i APIs',
+  title: 'Empresa de programació d’automatitzacions i APIs',
   description:
-    'Automatizem tasques repetitives, optimitzem processos empresarials, i millorem la connectivitat entre sistemes.',
+    'Automatizem tasques repetitives, optimitzem processos empresarials i sincronitzem dades entre programes.',
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- Hero Section -->
-  <Hero tagline="Facilita la gestió empresarial, redueix errors i estalvia temps i recursos."
-  backgroundImage={{ alt:'Fons abstracte', src: '~/assets/images/dots/24.jpg'}}
+  <Hero
+    tagline="Comuniquem sistemes per reduir errors, temps i recursos."
+    actions={[{ variant: 'primary', text: 'Sol·licitar pressupost', href: u('contact') }]}
+    backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/24.jpg' }}
   >
     <Fragment slot="title">
       Programació d’ <span class="text-accent highlight">automatitzacions</span> i <span class="text-accent highlight"
@@ -25,7 +31,7 @@ const metadata = {
       >
     </Fragment>
     <Fragment slot="subtitle">
-      Automatizem tasques repetitives, optimitzem processos empresarials, i millorem la connectivitat entre sistemes.
+      Automatizem tasques repetitives, optimitzem processos empresarials i sincronitzem dades entre programes.
     </Fragment>
   </Hero>
 
@@ -33,11 +39,11 @@ const metadata = {
     isReversed
     tagline=""
     title="Elimina processos manuals i guanya eficiència"
-    subtitle="La programació d’automatitzacions i APIs permet optimitzar processos empresarials, automatitzar tasques repetitives i millorar la connectivitat entre sistemes."
+    subtitle="La programació d’automatitzacions i APIs permet optimitzar processos empresarials, estalviant tasques repetitives i millorar la connectivitat entre sistemes."
     items={[
       {
         title: 'Automatitzacions personalitzades',
-        description: `Desenvolupem solucions per a tasques específiques que optimitzen la gestió empresarial i permeten estalviar temps. Aquestes solucions poden ser scripts independents o processos integrats que operen en segon pla per millorar la productivitat.`,
+        description: `Desenvolupem sistemes automàtics que suprimeixen la intervenció humana i estalvien temps. Aquestes solucions poden ser comandes que s'executen sota demanda o processos que operen de forma automàtica i permanent.`,
       },
       {
         title: 'Desenvolupament d’APIs a mida',
@@ -45,7 +51,10 @@ const metadata = {
       },
       {
         title: 'Automatització amb Intel·ligència Artificial (IA)',
-        description: `Aprofitem les capacitats de la IA per implementar solucions intel·ligents en l’automatització de processos, com la classificació de dades, la resposta automatitzada, la generació de continguts personalitzats. <a href=#TODO></a>`,
+        description:
+          `Aprofitem les <a href='` +
+          u('development/ia') +
+          `' class='text-accent' title="Integració d'intel·ligència artificial per automatitzar tasques">capacitats de la IA</a> per implementar solucions intel·ligents en l’automatització de processos, com la classificació de dades, la resposta automatitzada, la generació de continguts personalitzats.`,
       },
     ]}
     image={{
@@ -56,7 +65,7 @@ const metadata = {
     <Fragment slot="postContent">
       <p class="text-muted">
         A gilsys, creem solucions a mida que abasten des de scripts senzills fins a APIs avançades que integren diverses
-        plataformes. Aquest enfocament facilita la gestió empresarial, redueix errors i estalvia temps i recursos.
+        plataformes. Aquest enfocament facilita la gestió, redueix errors i estalvia temps i recursos.
       </p>
     </Fragment>
   </Content>
@@ -67,42 +76,43 @@ const metadata = {
       {
         title: 'Sincronització entre sistemes',
         description:
-          'Creació d’APIs per connectar plataformes d’e-commerce amb sistemes de facturació o gestió logística.',
+          'Creació d’<strong>APIs</strong> per connectar plataformes d’e-commerce amb sistemes de facturació o gestió logística.',
         icon: 'tabler:refresh',
       },
       {
         title: 'Automatització de processos repetitius',
         description:
-          'Scripts que generen informes periòdics, envien notificacions personalitzades o actualitzen automàticament inventaris.',
+          '<strong>Scripts</strong> que generen informes periòdics, envien notificacions personalitzades o actualitzen automàticament inventaris.',
         icon: 'tabler:robot',
       },
       {
         title: 'Integració amb serveis externs',
         description:
-          'Desenvolupament d’eines que connecten passarel·les de pagament amb plataformes empresarials per garantir processos de compra i facturació sense interrupcions.',
+          'Desenvolupament d’eines que <strong>connecten passarel·les de pagament</strong> amb plataformes empresarials per garantir processos de compra i facturació sense interrupcions.',
         icon: 'tabler:plug',
       },
       {
         title: 'Gestió de dades en temps real',
         description:
-          'Solucions que sincronitzen dispositius IoT amb bases de dades per analitzar dades en temps real, oferint estadístiques útils per a la presa de decisions.',
+          'Solucions que <strong>sincronitzen dispositius amb bases de dades</strong> per analitzar informació en temps real, oferint estadístiques útils per a la presa de decisions.',
         icon: 'tabler:chart-bar',
       },
       {
         title: 'Classificació intel·ligent',
         description:
-          'Implementació d’automatitzacions basades en IA per organitzar productes, documents o informació segons criteris específics.',
+          'Implementació d’<strong>automatitzacions basades en IA</strong> per organitzar productes, documents o informació segons criteris específics.',
         icon: 'tabler:sort-ascending',
       },
       {
         title: 'Eines de resposta intel·ligent',
-        description: 'Chatbots o assistents virtuals que gestionen respostes automàtiques i millorades per a clients.',
+        description:
+          '<strong>Chatbots o assistents virtuals</strong> que gestionen respostes automàtiques i millorades per a clients.',
         icon: 'tabler:message-circle',
       },
       {
         title: 'Control de qualitat de dades',
         description:
-          'Revisions de funcionament, per detectar possibles problemes en processos i dades generades mitjançant programació algorítmica o intel·ligència artificial.',
+          'Revisions de funcionament, per <strong>detectar possibles problemes en processos</strong> i dades generades mitjançant programació algorítmica o <strong>intel·ligència artificial</strong>.',
         icon: 'tabler:checklist',
       },
     ]}
@@ -122,8 +132,9 @@ const metadata = {
         icon: 'tabler:clock',
       },
       {
-        title: 'Eficiència operativa',
-        description: 'Optimització dels fluxos de treball, eliminant colls d’ampolla i duplicacions de dades.',
+        title: 'Neteja de dades',
+        description:
+          'Optimització de la <strong>qualitat de les dades</strong>, eliminant informaicó duplicada o incorrecta.',
         icon: 'tabler:settings',
       },
       {
@@ -142,6 +153,12 @@ const metadata = {
         title: 'Millor control i seguretat',
         description:
           'Solucions que permeten millorar la qualitat de dades a nivell empresarial i evitar possibles errors.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Automatització de fluxes multiestat',
+        description:
+          'Definim i implementem sistemes amb múltiples estats, transicions i regles de negoci per automatitzar i optimitzar processos.',
         icon: 'tabler:shield-check',
       },
     ]}
@@ -175,8 +192,7 @@ const metadata = {
       },
       {
         title: 'Empreses amb catàlegs complexos',
-        description:
-          'Aquelles que necessiten gestionar grans volums de dades, com productes o serveis.',
+        description: 'Aquelles que necessiten gestionar grans volums de dades, com productes o serveis.',
       },
     ]}
     image={{
@@ -189,12 +205,13 @@ const metadata = {
         Per a qui són útils les automatitzacions i APIs?
       </h3>
       <p class="text-muted">
-        Les automatitzacions són imprescindibles per a empreses que busquen agilitzar processos, millorar la integració de dades amb APIs i reduïr la possibilitat d'errors humans.
+        Les automatitzacions són imprescindibles per a empreses que busquen agilitzar processos, millorar la integració
+        de dades amb APIs i reduïr la possibilitat d'errors humans.
       </p>
     </Fragment>
     <Fragment slot="bg">
-        <div class="absolute inset-0 bg-lightgray"></div>
-      </Fragment>
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
   </Content>
 
   <Content
@@ -213,9 +230,9 @@ const metadata = {
         icon: 'tabler:certificate',
       },
       {
-        title: 'Enfocament personalitzat en cada projecte',
+        title: 'Enfoc personalitzat en cada projecte',
         description:
-          'No apliquem eines genèriques. Treballem estretament amb cada client per entendre les seves necessitats i desenvolupar solucions a mida, totalment adaptades al seu context.',
+          'No apliquem eines genèriques, treballem estretament amb cada client per entendre les seves necessitats i desenvolupar solucions a mida, totalment adaptades al seu context.',
         icon: 'tabler:target',
       },
       {
@@ -234,11 +251,31 @@ const metadata = {
   >
     <Fragment slot="postContent">
       <p class="text-muted">
-        Amb gilsys, les automatitzacions empresarials esdevenen solucions estratègiques per optimitzar processos i
-        incrementar la productivitat en qualsevol entorn empresarial. Contacta’ns per començar a millorar l’eficiència
-        de la teva empresa!
+        Amb gilsys, les automatitzacions empresarials esdevenen <strong>solucions estratègiques</strong> per optimitzar processos
+        i incrementar la productivitat en qualsevol entorn empresarial.
       </p>
     </Fragment>
+
     
   </Content>
+  <CallToAction
+      backgroundImage={{ src: '~/assets/images/dots/24.jpg', alt: 'Fons abstracte' }}
+      actions={[
+        {
+          variant: 'primary',
+          text: 'Sol·licitar pressupost',
+          href: u('contact'),
+        },
+        {
+          variant: 'primary',
+          text: 'Trucar',
+          href: 'tel:+34665331271',
+        },
+      ]}
+    >
+      <Fragment slot="title"
+        >Implementa <span class="custom-gradient">automatitzacions de processos</span> a la teva empresa</Fragment
+      >
+      <Fragment slot="subtitle">Reduïr errors i incrementar productivitat és una inversió de futur assegurada.</Fragment>
+    </CallToAction>
 </Layout>

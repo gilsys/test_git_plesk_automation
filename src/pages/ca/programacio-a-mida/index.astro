@@ -20,7 +20,7 @@ import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 const u = useRoutes(getLangFromUrl(Astro.url));
 
 const metadata = {
-  title: 'Programació de software a mida per empreses',
+  title: 'Programació de software a mida per empreses | +20 anys',
   description: 'Desenvolupem aplicacions web i apps per mòbils, eines que integren intel·ligència artificial a les empreses i automatitzen processos.',
 };
 ---
@@ -55,7 +55,7 @@ const metadata = {
         callToAction: {
           class: 'more-info',
           text: 'Más información',
-          href: '#TODO',
+          href: u('development/web'),
         },
       },
       {
@@ -66,7 +66,7 @@ const metadata = {
         callToAction: {
           class: 'more-info',
           text: 'Más información',
-          href: '#TODO',
+          href: u('development/apps'),
         },
       },
       {
@@ -77,7 +77,7 @@ const metadata = {
         callToAction: {
           class: 'more-info',
           text: 'Más información',
-          href: '#TODO',
+          href: u('development/ia'),
         },
       },
       {
@@ -88,7 +88,7 @@ const metadata = {
         callToAction: {
           class: 'more-info',
           text: 'Más información',
-          href: '#TODO',
+          href: u('development/astro'),
         },
       },
       {
@@ -99,7 +99,7 @@ const metadata = {
         callToAction: {
           class: 'more-info',
           text: 'Más información',
-          href: '#TODO',
+          href: u('development/automation'),
         },
       },
     ]}
@@ -123,7 +123,7 @@ const metadata = {
       {
         title: 'Diferències entre software a mida i software personalitzat',
         description:
-          "Tot i que poden semblar conceptes similars, és important destacar que el software a mida es crea <strong>des de zero</strong>, mentre que el software personalitzat implica adaptar o ampliar una eina a les necessitats del client. No hi ha una solució perfecta, depenent de cada projecte, serà millor programar software a mida o utilitzar com a base <a href='#TODO' class='text-accent'>software personalitzat</a>.",
+          "Tot i que poden semblar conceptes similars, és important destacar que el software a mida es crea <strong>des de zero</strong>, mentre que el software personalitzat implica adaptar o ampliar una eina a les necessitats del client. No hi ha una solució perfecta, depenent de cada projecte, serà millor programar software a mida o utilitzar com a base <a title='Programació de software personalitzat' href='" + u('software') + "' class='text-accent'>software personalitzat</a>.",
       },
     ]}
   />
@@ -137,7 +137,7 @@ const metadata = {
       {
         title: 'Programació a mida per adaptar-se a cada empresa',
         description:
-          "El desenvolupament de software a mida assegura una adaptabilitat superior a les solucions comercials. Cada projecte es dissenya i desenvolupa conjuntament amb l'empresa per respondre a les seves necessitats específiques. En cas necessari, es realitza una consultoria tecnològica per <a href='#' class='text-accent'>transformar les idees en projectes</a>.",
+          "El desenvolupament de software a mida assegura una adaptabilitat superior a les solucions comercials. Cada projecte es dissenya i desenvolupa conjuntament amb l'empresa per respondre a les seves necessitats específiques. En cas necessari, es realitza una consultoria tecnològica per <a  title='Assessorament TIC per transformar idees en projectes' href='" + u('consultory') + "' class='text-accent'>transformar les idees en projectes</a>.",
         icon: 'tabler:brand-tailwind',
       },
       {
