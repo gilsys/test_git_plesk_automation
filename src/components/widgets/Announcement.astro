@@ -1,23 +1,27 @@
 ---
-
+import { Icon } from 'astro-icon/components';
 ---
 
 <div
-  class="wg-announcement dark text-muted text-sm bg-black dark:bg-transparent dark:border-b dark:border-slate-800 dark:text-slate-400 hidden md:flex gap-1 overflow-hidden px-3 py-2 relative text-ellipsis whitespace-nowrap"
+  class="px-4 wg-announcement dark text-white text-sm xl:text-xs bg-black dark:bg-transparent dark:border-b dark:border-slate-800 dark:text-slate-400 hidden md:flex gap-1 overflow-hidden py-2 relative text-ellipsis whitespace-nowrap"
 >
-  <span
-    class="dark:bg-slate-700 bg-white/40 dark:text-slate-300 font-semibold px-1 py-0.5 text-xs mr-0.5 rtl:mr-0 rtl:ml-0.5 inline-block"
-    >NEW</span
-  >
-  <a href="https://astro.build/blog/astro-4150/" class="text-muted hover:underline dark:text-slate-400 font-medium"
-    >Astro 4.15 is now available! »</a
-  >
   <a
+    title="Whatsapp"
+    class=" text-xs mr-0.5 inline-block"
     target="_blank"
-    rel="noopener"
-    class="ltr:ml-auto rtl:mr-auto w-[5.6rem] h-[1.25rem] ml-auto bg-contain inline-block bg-[url(https://img.shields.io/github/stars/onwidget/astrowind.svg?style=social&label=Stars&maxAge=86400)]"
-    title="If you like AstroWind, give us a star."
-    href="https://github.com/onwidget/astrowind"
+    rel="nofollow"
+    href="https://wa.me/+34665331271"
   >
+    <Icon
+      name="tabler:brand-whatsapp"
+      class={'w-5 h-5 xl:h-4 h-4'}
+    />
   </a>
+  <a href="tel:+34665331271" class="text-white hover:underline dark:text-slate-200 px-2"> 665 33 12 71 </a>
+  <a href="mailto:info@gilsys.com" class="text-white hover:underline dark:text-slate-200 ">
+    info@gilsys.com</a
+  >
+  <a class="ml-auto mx-2 inline-block" title="TODO" href="TODO"> ES </a>
+  <a class="mx-2 inline-block" title="TODO" href="TODO"> CA </a>
+  <a class="mx-2 inline-block" title="TODO" href="TODO"> EN </a>
 </div>
