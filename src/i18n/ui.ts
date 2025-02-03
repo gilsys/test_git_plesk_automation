@@ -46,6 +46,7 @@ export const ui = {
     'contact.disclaimer': 'Acepto las <a href="%terms%" target="_blank" class="underline">condiciones de uso</a> y la <a href="%privacy_policy%" target="_blank" class="underline">política de privacidad</a>.',
     'contact.success': 'Mensaje enviado correctamente.',
     'contact.error': 'Error al enviar el mensaje.',
+    'menu.more_info': 'Más información',
   },
   ca: {
     'common.page': 'Pàgina',
@@ -76,7 +77,8 @@ export const ui = {
     'contact.send': 'Enviar',
     'contact.disclaimer': 'Accepto les <a href="%terms%" target="_blank" class="underline">condicions d\'ús</a> i la <a href="%privacy_policy%" target="_blank" class="underline">política de privacitat</a>.',
     'contact.success': 'Missatge enviat correctament.',
-    'contact.error': 'Error al enviar el missatge.'
+    'contact.error': 'Error al enviar el missatge.',
+    'menu.more_info': 'Més informació',
   },
   en: {
     'common.page': 'Page',
@@ -107,7 +109,8 @@ export const ui = {
     'contact.send': 'Send',
     'contact.disclaimer': 'I accept the <a href="%terms%" target="_blank" class="underline">terms of use</a> and the <a href="%privacy_policy%" target="_blank" class="underline">privacy policy</a>.',
     'contact.success': 'Message sent successfully.',
-    'contact.error': 'Error sending the message.'
+    'contact.error': 'Error sending the message.',
+    'menu.more_info': 'More information',
   },
 } as const;
 
@@ -115,6 +118,7 @@ export const routes = {
   ca: {
     'home': '/ca',
     'gilsys': '/ca/sobre-nosaltres',
+    'kit-digital': '/ca/kit-digital',
     'kit-digital/basic-internet-presence': '/ca/kit-digital/presencia-basica-internet',
     'kit-digital/e-commerce': '/ca/kit-digital/botiga-electronica',
     'kit-digital/customer-management': '/ca/kit-digital/gestio-de-clients',
@@ -132,6 +136,7 @@ export const routes = {
     'kit-digital/ai-bi-analytics': '/ca/kit-digital/business-intelligence-i-analitica-i-ia-associada',
     'kit-digital/ai-process-management': '/ca/kit-digital/gestio-processos-ia',
     'kit-digital/secure-workplace': '/ca/kit-digital/lloc-de-treball-segur',
+    'kit-consulting': '/ca/kit-consulting',
     'kit-consulting/ai-advisory': '/ca/kit-consulting/servei-de-assessorament-en-intelligencia-artificial',
     'kit-consulting/basic-data-analysis': '/ca/kit-consulting/servei-dassessorament-en-analisi-de-dades-basic',
     'kit-consulting/advanced-data-analysis':
@@ -165,6 +170,7 @@ export const routes = {
     
 
     'contact': '/ca/contactar',
+    'blog': '/ca/blog',
     'terms': '/ca/avis-legal',
     'privacy-policy': '/ca/politica-privacitat',
   },
@@ -219,6 +225,7 @@ export const routes = {
     
 
     'contact': '/es/contactar',
+    'blog': '/es/blog',
     'terms': '/ca/avis-legal',
     'privacy-policy': '/ca/politica-privacitat',
   },
@@ -245,6 +252,7 @@ export const routes = {
     
 
     'contact': '/en/contact',
+    'blog': '/en/blog',
     'terms': '/ca/avis-legal',
     'privacy-policy': '/ca/politica-privacitat',
     
@@ -267,6 +275,9 @@ export const header = {
       {
         _id: 'kit-digital',
         text: 'Kit Digital',
+        title: 'Més informació del Kit Digital',
+        href: routes['ca']['kit-digital'],
+
         links: [
           {
             text: 'Lloc web i presència bàsica a Internet',
@@ -341,6 +352,9 @@ export const header = {
       {
         _id: 'kit-consulting',
         text: 'Kit Consulting',
+        title: 'Més informació del Kit Consulting',
+        href: routes['ca']['kit-consulting'],
+
         links: [
           {
             text: 'Assessorament en Intel·ligència Artificial',
@@ -379,6 +393,7 @@ export const header = {
           {
             _id: 'development',
             text: 'Programació a mida',
+            title: 'Més informació de programació a mida',
             href: routes['ca']['development'],
 
             links: [
@@ -386,123 +401,146 @@ export const header = {
                 href: routes['ca']['development/web'],
                 title: "Programació d'aplicacions web a mida i plataformes online",
                 text: 'Aplicacions web',
+                icon: 'tabler:code',
               },
               {
                 href: routes['ca']['development/apps'],
                 title: "Programació a mida d'apps multiplataforma",
                 text: 'Aplicacions per mòbils',
+                icon: 'tabler:device-mobile',
               },
               {
                 href: routes['ca']['development/ia'],
                 title: "Desenvolupament d'eines d'IA a mida",
                 text: "Intel·ligència Artificial",
+                icon: 'tabler:cpu',
               },
               {
                 href: routes['ca']['development/astro'],
                 title: 'Disseny de pàgines web ultra-ràpides',
                 text: "Webs d'alt rendiment",
+                icon: 'tabler:world',
               },
               
               {
                 href: routes['ca']['development/automation'],
                 title: "Programació de processos automàtics i APIs a mida",
                 text: "Automatitzacions i APIs",
+                icon: 'tabler:settings-automation',
               },
             ],
           },
           {
             _id: 'software',
             text: 'Software personalitzat',
+            title: 'Més informació de software personalitzat',
             href: routes['ca']['software'],
             links: [
               {
                 href: routes['ca']['software/wp'],
                 title: 'Programació i disseny a mida de pàgines web',
                 text: 'Webs en WordPress',
+                icon: 'tabler:brand-wordpress',
               },
               {
                 href: routes['ca']['software/pimcore'],
                 title: 'Implantem Pimcore per centralitzar la gestió de productes.',
                 text: 'Gestors de productes',
+                icon: 'tabler:database',
               },
               {
                 href: routes['ca']['software/metabase'],
                 title: 'Utilitzem Metabase com a eina de Business Intelligence',
                 text: 'Anàlisi empresarial',
+                icon: 'tabler:chart-bar',
               },
               {
                 href: routes['ca']['software/ecommerce'],
                 title: 'Dissenyem portals e-commerce amb Prestashop i Woocommerce.',
                 text: 'Botiga online',
+                icon: 'tabler:shopping-cart',
               },
               {
                 href: routes['ca']['software/crm'],
                 title: 'Software CRM personalitzat',
                 text: 'Gestió de clients',
+                icon: 'tabler:user-circle',
               },
             ]
           },
           {
             _id: 'migration',
             text: 'Migració i integració',
+            title: 'Més informació de migració i integració',
             href: routes['ca']['migration'],  
             links: [
               {
                 href: routes['ca']['migration'] + '#',
                 title: "Traspàs i adaptació d'informació entre bases de dades",
                 text: "Migració de dades",
+                icon: 'tabler:arrows-transfer-down',
               },
               {
                 href: routes['ca']['migration'] + '#',
                 title: 'Integració d\'intel·ligència artificial en empreses',
                 text: "Integració d'IA",
+                icon: 'tabler:brain',
               },
               {
                 href: routes['ca']['migration'] + '#',
                 title: "Sincronització d'informació entre programes",
                 text: 'Connexió de software',
+                icon: 'tabler:link',
               },
               {
                 href: routes['ca']['migration'] + '#',
                 title: 'Anàlisi de codi i millora de rendiment de programes',
                 text: 'Optimitació de software',
+                icon: 'tabler:chart-line',
               },
               {
                 href: routes['ca']['migration'] + '#',
                 title: 'Separació de plataformes en mòduls escalables',
                 text: 'Divisió i escalabilitat',
+                icon: 'tabler:sitemap',
               },
             ],         
           },
           {
             _id: 'consultory',
             text: 'Consultoria TIC',
+            title: 'Més informació de consultoria TIC',
             href: routes['ca']['consultory'],
             links: [
               {
                 href: routes['ca']['consultory'] + '#',
                 title: "Estudi de les eines actuals i propostes d'optimització",
                 text: 'Anàlisi de situació tecnològica',
+                icon: 'tabler:clipboard-list',
               },          
               {
                 href: routes['ca']['consultory'] + '#',
                 title: 'Recollida de requisits i elaboració de propostes',
                 text: 'Trasformació d\'idees a projectes',
+                icon: 'tabler:clipboard-text',
               },          
               {
                 href:routes['ca']['consultory'] + '#',
                 title: 'Estudi per optimitzar estructura i qualitat de la informació',
                 text: 'Anàlisi i organtizació de dades',
+                icon: 'tabler:table',
               },          
               {
                 href: routes['ca']['consultory'] + '#',
                 title: "Avaluació i proposta de noves eines i serveis",
                 text: 'Identificació de solucions',
+                icon: 'tabler:bulb',
               },
               {
                 href: routes['ca']['consultory'] + '#',
                 title: 'Com implantar intel·ligència artificial a l\'empresa',
                 text: 'Estudi per integració d\'IA',
+                icon: 'tabler:robot',
               },
             ],
           },
@@ -512,6 +550,11 @@ export const header = {
         _id: 'contact',
         text: 'Contactar',
         href: routes['ca']['contact'],
+      },
+      {
+        _id: 'blog',
+        text: 'Blog',
+        href: routes['ca']['blog'],
       },
     ],
   },
@@ -656,6 +699,11 @@ export const header = {
         text: 'Contactar',
         href: routes['es']['contact'],
       },
+      {
+        _id: 'blog',
+        text: 'Blog',
+        href: routes['es']['blog'],
+      },
     ],
   },
   en: {
@@ -721,6 +769,16 @@ export const header = {
             ],
           },
         ],
+      },
+      {
+        _id: 'contact',
+        text: 'Contact',
+        href: routes['en']['contact'],
+      },
+      {
+        _id: 'blog',
+        text: 'Blog',
+        href: routes['en']['blog'],
       },
     ],
   },

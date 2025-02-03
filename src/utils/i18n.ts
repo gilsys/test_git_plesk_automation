@@ -63,7 +63,7 @@ export function getBreadcrumb(lang: keyof typeof routes, path: string) {
   return result && result.length > 0 ? [{ text: home.text, href: home.href}, ...result] : null;
 }
 
-function findBreadcrumbTrail(data: LinkItem[], targetHref: string, trail: breacrumbItem[] = []): breacrumbItem[] | null {
+export function findBreadcrumbTrail(data: LinkItem[], targetHref: string, trail: breacrumbItem[] = []): breacrumbItem[] | null {
   for (const item of data) {
     const newTrail = [...trail, { text: item.text, href: item.href || null }];
 

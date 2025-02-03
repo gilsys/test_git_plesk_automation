@@ -9,6 +9,7 @@ import { trimSlash, getAsset } from '~/utils/permalinks';
 import type { CallToAction } from '~/types';
 import { getLangFromUrl, getRouteFromUrl, useRoutes, useTranslatedPath, useTranslations } from '~/utils/i18n';
 import { languages } from '~/i18n/ui';
+import MenuDropdown from './MenuDropdown.astro';
 
 interface Link {
   text?: string;
@@ -18,7 +19,7 @@ interface Link {
   title?: string;
 }
 
-interface MenuLink extends Link {
+export interface MenuLink extends Link {
   links?: Array<MenuLink>;
 }
 
@@ -90,62 +91,22 @@ const u = useRoutes(language);
       </div>
     </div>
     <nav
-      class="items-center w-full md:w-auto hidden md:flex md:mx-5 mt-4 md:mt-0 text-default overflow-y-auto overflow-x-hidden md:overflow-y-visible md:overflow-x-auto md:justify-self-center"
+      class="items-center w-full md:w-auto hidden md:flex md:mx-5 mt-4 md:mt-0 text-default overflow-y-auto overflow-x-hidden md:overflow-y-visible md:overflow-x-auto md:justify-self-center 2xl:text-sm"
       aria-label="Main navigation"
     >
       <ul
-        class="flex flex-col md:flex-row md:self-center w-full md:w-auto md:text-[0.9375rem] tracking-[0.01rem] font-medium md:justify-center"
+        class="flex flex-col md:flex-row md:self-center w-full md:w-auto tracking-[0.01rem] md:justify-center"
       >
         {
-          links.map(({ text, href, links }) => (
+          links.map(({ text, href, title, links }) => (
             <li class={links?.length ? 'dropdown' : ''}>
               {links?.length ? (
-                <>
-                  <button
-                    type="button"
-                    class="hover:text-link dark:hover:text-white px-4 py-3 flex items-center whitespace-nowrap"
-                  >
-                    {text}{' '}
-                    <Icon name="tabler:chevron-down" class="w-3.5 h-3.5 ml-0.5 rtl:ml-0 rtl:mr-0.5 hidden md:inline" />
-                  </button>
-                  <ul class="dropdown-menu md:backdrop-blur-md dark:md:bg-dark rounded md:absolute pl-4 md:pl-0 md:hidden font-medium md:bg-white/90 md:min-w-[200px] drop-shadow-xl">
-                    {links.map(({ text: text2, href: href2, title: title2, links: subLinks }) => (
-                      <li class:list={[{ 'has-children': subLinks && subLinks.length > 0 }]}>
-                        <a
-                          class:list={[
-                            'first:rounded-t last:rounded-b md:hover:bg-gray-100 hover:text-link dark:hover:text-white dark:hover:bg-gray-700 py-2 px-5 block whitespace-no-wrap',
-                            { 'aw-link-active': href2 === currentPath },
-                          ]}
-                          href={href2}
-                          title={title2}
-                        >
-                          {text2}
-                        </a>
-
-                        {subLinks && subLinks.length > 0 && (
-                          <ul class="dropdown-submenu pl-4">
-                            {subLinks.map(({ text: text3, href: href3, title: title3 }) => (
-                              <li>
-                                <a
-                                  class="py-2 px-5 block whitespace-no-wrap hover:text-link dark:hover:text-white dark:hover:bg-gray-700"
-                                  href={href3}
-                                  title={title3}
-                                >
-                                  {text3}
-                                </a>
-                              </li>
-                            ))}
-                          </ul>
-                        )}
-                      </li>
-                    ))}
-                  </ul>
-                </>
+                <MenuDropdown btn={{text, href, title}} links={links} />
               ) : (
                 <a
                   class:list={[
                     'hover:text-link dark:hover:text-white px-4 py-3 flex items-center whitespace-nowrap',
-                    { 'text-primary': href === currentPath },
+                    { 'active': href === currentPath },
                   ]}
                   href={href}
                 >

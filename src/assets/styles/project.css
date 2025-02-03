@@ -293,3 +293,13 @@ nav[aria-label="breadcrumb"] li:not(:last-child)::after {
   margin-right: 10px;
   margin-left: 10px;
 }
+
+.dropdown:hover .dropdown-menu.menu-dropdown {
+  display: flex;
+  left: 4vw;
+  width: 92vw;
+}
+
+nav .active {
+  @apply text-primary;
+}
