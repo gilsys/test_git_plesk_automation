@@ -1,0 +1,134 @@
+---
+import Features from '~/components/widgets/Features.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import Image from '~/components/common/Image.astro';
+import KitDigital from '~/components/widgets/KitDigital.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+
+const metadata = {
+  title: 'Gestió de processos',
+  description:
+    'Digitalitza i automatitza processos operatius i productius del teu negoci amb solucions escalables i integrades per a la teva PIME amb el Kit Digital.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="Subvenció Kit Digital" backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/21.jpg' }}>
+    <Fragment slot="title">Gestió de processos</Fragment>
+    <Fragment slot="subtitle">
+      Digitalitza i automatitza processos operatius i productius del teu negoci amb solucions escalables i integrades,
+      <span class="custom-gradient">GRATIS</span> gràcies a la subvenció del Kit Digital, per millorar l'eficiència i la
+      productivitat.
+    </Fragment>
+  </Hero>
+
+  <Features2
+  columns={1}
+    tagline="Funcionalitats i serveis"
+    subtitle="El principal objectiu d’aquesta categoria és digitalitzar i optimitzar els processos operatius i productius per millorar l'eficiència i l'automatització dins de la teva PIME."
+    title="Digitalització i automatització de processos operatius i productius amb solucions integrades"
+    items={[
+      {
+        title: 'Digitalització i/o automatització de processos i fluxos de treball',
+        description: `
+            <strong>Digitalització i/o automatització de processos i fluxos de treball:</strong> tindràs digitalitzats i/o automatitzats processos (horizontals i verticals) com ara:
+            <p>Es considera solució horitzontal aquella que agrupa o suporta diversos processos de la cadena de valor, mentre que la solució vertical és aquella que suporta un únic procés dins de la cadena de valor de la teva pime.</p>
+            `,
+        list: [
+                `<strong>Comptabilitat/finances:</strong> comptes a cobrar/per pagar, gestió d'actius i generació de tancaments i balanços, etc.`,
+                `<strong>Facturació:</strong> automatització dels processos de facturació amb la generació de pressupostos, albarans i factures, adaptats als requisits de l'article 29.2.j) de la Llei 58/2003, de 17 de desembre, General Tributària, i a la seva normativa de desenvolupament.`,
+                `<strong>Projectes:</strong> control de pressupostos, costos, estimacions, optimització dels recursos, etc.`,
+                `<strong>Inventari:</strong> previsió, nivells d'estoc, enviaments, distribucions, devolucions i cancel·lacions, etc.`,
+                `<strong>Compres i pagaments:</strong> gestió de comandes de compra i proveïdors.`,
+                `<strong>Recursos humans:</strong> gestió dels recursos humans, nòmines, etc.`,
+                `<strong>Logística:</strong> gestió de flotes i rutes, entre d'altres.`,
+        ],
+        icon: 'tabler:repeat',
+      },
+      {
+        title: 'Integració amb diverses plataformes',
+        description: "La solució disposarà d'APIs o Web Services per a la seva integració amb altres eines.",
+        icon: 'tabler:plug',
+      },
+      {
+        title: 'Actualitzable',
+        description: 'Accediràs a actualitzacions de la solució amb noves versions.',
+        icon: 'tabler:refresh',
+      },
+      {
+        title: 'Escalable',
+        description: "Si la teva empresa creix o canvia estructuralment, la solució s'adaptarà a aquests canvis.",
+        icon: 'tabler:arrows-up-down',
+      },
+      {
+        title: 'Compliment',
+        description:
+          "Podràs assegurar el compliment de la normativa aplicable, en concret del Reglament pel qual es regulen les obligacions de facturació del Reial decret 1619/2012, així com qualsevol normativa d'aplicació.",
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Mòduls individuals',
+        description:
+          "Es podran incorporar nous mòduls individuals, sent aquests aquells que agrupen o suporten un únic subprocés de la cadena de valor de la teva pime, sobre una solució de gestió de processos ja existent. No obstant això, no podrà consistir en un desenvolupament, progrés, augment o enriquiment dels serveis i funcionalitats de la solució existent. Tampoc podrà ser l'actualització deguda a versions que el proveïdor publiqui sobre una versió de programari, ni millores o upgrades de versions existents. El nou mòdul individual que s'implanti ha de complir amb tots els requisits establerts en les bases d'aquesta categoria i s'ha d'ofertar a preu de mercat.",
+        icon: 'tabler:package',
+      },
+    ]}
+  />
+
+  <Features
+    title="Subvenció Kit Digital segons el nombre d'empleats"
+    subtitle="La subvenció pot ser utilitzada per a diversos serveis de digitalització, amb un import màxim que varia en funció del nombre d'empleats de l'empresa."
+    items={[
+      {
+        title: 'Import total subvencionat:',
+        list: [
+          '<strong>De 0 a 3 empleats:</strong> 3.000€',
+          '<strong>De 50 a 99 empleats:</strong> 25.000€',
+          '<strong>De 100 a 250 empleats:</strong> 29.000€',
+        ],
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Import màxim per al servei de gestió de clients:',
+        list: [
+          '<strong>De 0 a 3 empleats:</strong> 2.000€ (inclou 1 usuari)',
+          '<strong>De 50 a 99 empleats:</strong> 10.000€ (inclou 10 usuaris)',
+          '<strong>De 100 a 250 empleats:</strong> 14.000€ (inclou 15 usuaris)',
+        ],
+        icon: 'tabler:check',
+      },
+    ]}
+  />
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/21.jpg', alt: 'Fons abstracte, inspirat en tecnologia i software' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contactar',
+        href: 'contactar',
+      },
+      {
+        variant: 'primary',
+        text: 'Trucar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Estàs a un <span class="custom-gradient">click</span> de digitalitzar la gestió de <span class="custom-gradient"
+        >clients</span
+      > i portar la teva relació comercial al següent nivell
+    </Fragment>
+    <Fragment slot="subtitle">
+      Contacta'ns i implementarem una solució de <span class="custom-gradient">gestió de clients</span> per a la teva empresa,
+      de forma gratuïta gràcies a la subvenció del Kit Digital.
+    </Fragment>
+  </CallToAction>
+
+  <KitDigital />
+</Layout>

@@ -9,13 +9,14 @@ import Steps2 from '~/components/widgets/Steps2.astro';
 import Layout from '~/layouts/PageLayout.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+const u = useRoutes(getLangFromUrl(Astro.url));
 
 const metadata = {
   title: `gilsys - Empresa TIC d'Osona amb més de 20 anys d'experiència`,
   description: `Programem software a mida, web, apps i intel·ligència artificial. Coneix els nostres valors, metodologia de treball i respostes a preguntes freqüents.`,
 };
 
-const u = useRoutes(getLangFromUrl(Astro.url));
+
 ---
 
 <Layout metadata={metadata}>

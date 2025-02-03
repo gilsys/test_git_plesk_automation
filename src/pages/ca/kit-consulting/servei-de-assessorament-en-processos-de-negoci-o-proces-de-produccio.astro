@@ -1,0 +1,117 @@
+---
+import Features from '~/components/widgets/Features.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import Image from '~/components/common/Image.astro';
+import KitDigital from '~/components/widgets/KitDigital.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+const u = useRoutes(getLangFromUrl(Astro.url));
+
+const metadata = {
+  title: 'Servei d’assessorament en processos de negoci o procés de producció',
+  description:
+    'Assessorament en digitalització i millora de processos empresarials i productius per a PIMES. Utilitzem IA per optimitzar i automatitzar els teus processos.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Subvenció Kit Consulting"
+    backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/22.jpg' }}
+  >
+    <Fragment slot="title">Servei d’assessorament en processos de negoci o procés de producció </Fragment>
+    <Fragment slot="subtitle"
+      >Assessorament en digitalització i millora de processos empresarials i productius per a PIMES. Utilitzem IA per
+      optimitzar i automatitzar els teus processos.</Fragment
+    >
+  </Hero>
+
+  <Features
+    tagline="Servei d'assessorament <strong>subvencionat</strong>"
+    subtitle="Coneixeràs la inversió requerida i les mesures necessàries per a la seva adopció.<br/>Es realitzarà un cas d'ús i s'implantarà formació adaptada a la teva pime."
+    title="Identifiquem les àrees de millora en els processos empresarials de la teva pime i dissenyem un pla personalitzat per millorar-los fent us de <span class='custom-gradient'>Intel·ligència Artificial</span>"
+    items={[
+      {
+        description:
+          'Comprendre les metes estratègiques, punts clau i objectius de la teva pime i alinear-les amb un enfocament en la digitalització, ús de la intel·ligència artificial i millora dels processos empresarials (o, en el seu cas, procés de fabricació seleccionat).',
+        icon: 'tabler:target',
+      },
+      {
+        description:
+          "Analitzar els processos empresarials que duus a terme actualment, per identificar possibles millores. En el cas dels processos productius, es realitzarà una anàlisi del procés de fabricació seleccionat, identificant àrees d'oportunitat per a l'eficiència, qualitat i millora contínua.",
+        icon: 'tabler:clipboard-list',
+      },
+      {
+        description:
+          'Comunicar de manera efectiva als empleats de la teva pime la rellevància estratègica de la digitalització de processos, destacant com això no només optimitza la feina diària, sinó que també enforteix la competitivitat.',
+        icon: 'tabler:message-circle',
+      },
+      {
+        description:
+          "Proporcionar assessorament especialitzat en eines de gestió de processos de negoci i d'intel·ligència artificial, abastant des de vendes i recursos humans fins a la gestió de projectes, i destacant solucions específiques per millorar l'eficiència i qualitat. Si, en canvi, s'ha optat per un procés de fabricació, es proporcionarà assessorament en eines i tecnologia per a <a href='" + u('development/automation') + "' title='Servei d’assessorament en processos de negoci o procés de producció' class='text-accent'>l'optimització i automatització</a> d'aquest procés productiu.",
+        icon: 'tabler:tools',
+      },
+      {
+        description:
+          "Desenvolupar i executar un cas d'ús adaptat a la teva pime, utilitzant les tècniques apropiades, per a l'optimització d'un procés de negoci o, en el seu cas, procés de fabricació.",
+        icon: 'tabler:settings',
+      },
+      {
+        description:
+          "Identificar oportunitats o possibles usos de la IA en l'àmbit dels processos de negoci o, en el seu cas, processos de producció.",
+        icon: 'tabler:brain',
+      },
+    ]}
+  />
+
+  <Features
+    title="L'import total subvencionat per Kit Consulting varia  segons el nombre d'empleats"
+    subtitle="L'import màxim subvencionat per a cada servei d'assessorament de Kit Consulting és sempre de 6.000€."
+    items={[
+      {
+        title: 'Import total subvencionat:',
+        list: [
+          "<strong>De 10 a 49 empleats</strong> 12.000€.<br/>Correspon a 2 serveis d'assessorament.",
+          "<strong>De 50 a 99 empleats:</strong> 18.000€.<br/>Correspon a 3 serveis d'assessorament.",
+          "<strong>De 100 a 250 empleats:</strong> 24.000€.<br/>Correspon a 4 serveis d'assessorament.",
+        ],
+        icon: 'tabler:check',
+      },
+      {
+        title: "Import màxim disponible pel servei d'assessorament en processos de negoci o procés de producció:",
+        description: '6.000€',
+        icon: 'tabler:check',
+      },
+    ]}
+  />
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/22.jpg', alt: 'Fons abstracte, inspirat en línees i colors' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contactar',
+        href: 'contactar',
+      },
+      {
+        variant: 'primary',
+        text: 'Trucar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title"
+      >No esperis més, sol·licita assessorament gratuït en com millorar els processos de la teva empresa fent ús de la <span
+        class="custom-gradient">Intel·ligència Artificial</span
+      ></Fragment
+    >
+    <Fragment slot="subtitle"
+      >Contacta'ns i t'assessorarem de forma gratuïta gràcies a la subvenció del Kit Consulting sobre com la IA et pot
+      ajudar a potenciar la teva empresa.</Fragment
+    >
+  </CallToAction>
+
+  <KitDigital />
+</Layout>
