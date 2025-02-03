@@ -6,22 +6,25 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Features2 from '~/components/widgets/Features2.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
 
 const metadata = {
-  title: 'Gestió de Productes amb Pimcore',
+  title: 'Gestió de productes amb Pimcore',
   description:
-    'Centralitza i personalitza la gestió de dades empresarials amb Pimcore, adaptat a les necessitats específiques del teu negoci.',
+    'La teva empresa podrà centralitzar dades de productes PIM i recursos multimèdia DAM, enriquir informació i implementar importacions i exportacions multicanal.',
 };
 ---
 
 <Layout metadata={metadata}>
 
-  <Hero tagline="Unifica en una única plataforma i optimitza la gestió de productes."
+  <Hero tagline="Unifica en una única plataforma la gestió de productes."
   backgroundImage={{alt: 'Fons abstracte',  src: '~/assets/images/dots/30.jpg'}}
   >
     <Fragment slot="title"><span class="text-accent highlight">Gestió de productes</span> amb Pimcore</Fragment>
     <Fragment slot="subtitle">
-      Amb Pimcore podràs centralitzar dades de productes PIM i recursos multimèdia DAM, tractar-les, enriquir-les i implementar integracions multicanal.
+      La teva empresa podrà centralitzar dades de productes PIM i recursos multimèdia DAM, enriquir informació i implementar importacions i exportacions multicanal.
     </Fragment>
   </Hero>
 
@@ -29,7 +32,7 @@ const metadata = {
   <Content    
     isReversed
     tagline=""
-    title="Què és Pimcore"
+    title="Què és Pimcore?"
     subtitle='Pimcore és una plataforma de codi obert dissenyada per centralitzar i gestionar dades de productes de manera eficient i personalitzada. '
     items={[
       {
@@ -83,7 +86,7 @@ const metadata = {
   >
     
     <Fragment slot="postContent">
-      <h3 class="text-2xl font-bold tracking-tightsm:text-3xl mb-2">Per a qui és útil?</h3>
+      <h2 class="text-2xl font-bold tracking-tightsm:text-3xl mb-2">Quines empreses poden necessitar una eina de gestió de productes?</h2>
       <p class="text-muted">       
         És especialment útil per a empreses que treballen amb grans catàlegs de productes, múltiples canals de distribució o necessiten unificar informació i processos.        
       </p>
@@ -96,8 +99,7 @@ const metadata = {
   <Features2
     id="features"
     tagline="Per què escollir Pimcore?"
-    title="Beneficis del Pimcore"
-    subtitle="TODO"
+    title="Beneficis de Pimcore com a software de gestió de productes"
     items={[
       {
         title: 'Plataforma flexible i escalable',
@@ -141,13 +143,13 @@ const metadata = {
   <Features
     id="features"
     tagline=""
-    title="Casos d'ús per a Pimcore"
-    subtitle="Pimcore és una eina molt potent, la qual es pot programar per oferir funcionalitats ben diverses segons els objectius de cada empresa."
+    title="Casos d'ús de gestors de productes"
+    subtitle="Pimcore és una eina molt potent, la qual es pot programar per oferir funcionalitats diverses segons els objectius de cada empresa."
     items={[
       {
         title: 'Gestió de grans catàlegs de productes',
         description:
-          "Importar milers de productes d'una o diverses fonts de dades com documents csv, excels, ERP\'s o bases de dades externes, centralitzar-los a PIM i enriquir de forma centralitzada la seva informació amb camps creats desde la plataforma.",
+          "Importar milers de productes d'una o diverses fonts de dades com documents csv, excels, ERP o bases de dades externes, centralitzar-los a PIM i enriquir de forma centralitzada la seva informació amb camps creats desde la plataforma.",
         icon: 'tabler:shield-check',
       },
       {
@@ -173,16 +175,16 @@ const metadata = {
   <Content
     isReversed
     tagline="No és fàcil trobar una empresa especialista en Pimcore"
-    title="Per què escollir gilsys?"
+    title="Com gilsys et pot ajudar a implentar Pimcore?"
     items={[
       {
         title: 'Especialistes en programació',
         description:
-          'Ens assegurem que Pimcore s’adapti completament al teu model de negoci, desenvolupant mòduls i funcionalitats específiques, doncs som una empresa experta en la programació de software.',
+          `Ens assegurem que Pimcore s’adapti completament al teu model de negoci, desenvolupant mòduls i funcionalitats específiques, doncs som una <a class='text-accent' title='Programació de softawre a mida' href='` + u('software') + `'>empresa experta en la programació a mida.</a>`,
         icon: 'tabler:building',
       },
       {
-        title: 'Integracions sense problemes',
+        title: 'Integracions flexibles',
         description:
           "Els anys d'experiència ens permeten coneixer moltes tecnologies diferents, pel que facilita la implementació de connectors a mida en cas de requerir-se per importar o exportar informació a canals d'entrada o sortida concrets.",
         icon: 'tabler:chart-pie',
@@ -206,10 +208,11 @@ const metadata = {
   >
     <Fragment slot="postContent">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        <a href="" class="text-accent">Consultoria tecnològica</a> prèvia a la implementació de Pimcore
+        Consultoria prèvia a la implementació de Pimcore
       </h3>
-      <p>
-      Implementar Pimcore no és una tasca senzilla ni immediata, ja que sol implicar canvis significatius en els fluxos de treball de l'empresa. Abans de començar, és essencial conèixer en profunditat les dades, processos i objectius de transformació digital del negoci. Per això, es realitza una <a href="#" class="text-accent">consultoria tecnològica</a> prèvia per analitzar les necessitats específiques i definir una proposta personalitzada per a la implementació del PIM.
+      <p class="text-muted">
+      Implementar Pimcore no és una tasca senzilla ni immediata, ja que sol implicar canvis significatius en els fluxos de treball de l'empresa. 
+      Abans de començar, és essencial conèixer en profunditat les dades, processos i objectius de transformació digital del negoci. Per això, es realitza una <a title="Consultoria tecnològica per implantar Pimcore" href={u('consultory')} class="text-accent">consultoria tecnològica</a> prèvia per analitzar les necessitats específiques i definir una proposta personalitzada per a la implementació del PIM.
       </p>
 
     </Fragment>
@@ -218,4 +221,25 @@ const metadata = {
       <div class="absolute inset-0 bg-lightgray"></div>
     </Fragment>
   </Content>
+
+  <CallToAction
+  backgroundImage={{ src: '~/assets/images/dots/25.jpg', alt: 'Fons abstracte, inspirat en tecnologia i software' }}
+  actions={[
+    {
+      variant: 'primary',
+      text: 'Sol·licitar pressupost',
+      href: u('contact'),
+    },
+    {
+      variant: 'primary',
+      text: 'Trucar',
+      href: 'tel:+34665331271',
+    },
+  ]}
+>
+  <Fragment slot="title">Necessites <span class="custom-gradient">gestionar els productes</span> de la teva empresa de forma unificada i eficient?</Fragment>
+  <Fragment slot="subtitle"
+    >Amb Pimcore disposaràs de l'eina perfecte per centralitzar la informació de producte i destribuïr-la a diferents canals.</Fragment
+  >
+</CallToAction>
 </Layout>

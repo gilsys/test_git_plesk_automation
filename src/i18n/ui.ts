@@ -155,8 +155,8 @@ export const routes = {
     'development/astro': '/ca/programacio-a-mida/webs-alt-rendiment',
 
     'software': '/ca/software-personalitzat',
-    'software/ecommerce': '/ca/software-personalitzat/disseny-botiga-online',
-    'software/metabase': '/ca/software-personalitzat/metabase-analisis-empresarial',
+    'software/ecommerce': '/ca/software-personalitzat/programacio-woocommerce-prestashop',
+    'software/metabase': '/ca/software-personalitzat/metabase-business-intelligence',
     'software/pimcore': '/ca/software-personalitzat/pimcore-barcelona',
     'software/crm': '/ca/software-personalitzat/programa-gestio-clients',
     'software/wp': '/ca/software-personalitzat/web-wordpress',
@@ -449,7 +449,7 @@ export const header = {
             links: [
               {
                 href: routes['ca']['migration'] + '#',
-                title: "Traspàs i adaptació d'informació entre bases de dades",
+                title: "Migrem bases de dades antigues a noves aplicacions sense perdre informació.",
                 text: "Migració de dades",
               },
               {

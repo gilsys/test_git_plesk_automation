@@ -6,35 +6,38 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Features2 from '~/components/widgets/Features2.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
 
 const metadata = {
-  title: 'Gestió de Clients amb CRM Personalitzat – Gilsys',
+  title: 'Gestió de Clients amb CRM personalitzat | +20 anys',
   description:
-    'Millora la gestió de clients amb un CRM personalitzat. Centralitza informació, automatitza processos i optimitza vendes amb una solució a mida per al teu negoci.',
+    'Millora la gestió de clients de la teva empresa amb un CRM a mida. Centralitza informació, automatitza processos i optimitza el marketing amb una eina al núvol.',
 };
 ---
 
 <Layout metadata={metadata}>
-  <Hero tagline="Millora la gestió de clients amb un CRM personalitzat."
+  <Hero tagline="Centralitza informació, automatitza processos i optimitza el marketing amb una eina al núvol."
   backgroundImage={{alt: 'Fons abstracte',  src: '~/assets/images/dots/25.jpg'}}
   >
     <Fragment slot="title"
       >Gestió de <span class="text-accent highlight">Clients</span> amb un CRM Personalitzat</Fragment
     >
     <Fragment slot="subtitle">
-      Centralitza informació, automatitza processos i optimitza vendes amb una solució a mida per al teu negoci.
+      Millora el seguiment de clients de la teva empresa amb un CRM a mida.
     </Fragment>
   </Hero>
 
   <Content
     isReversed
     tagline=""
-    title="Què és un CRM i per què és important?"
-    subtitle="Un CRM és clau per gestionar les relacions amb els clients de manera eficient i estructurada."
+    title="Què és un CRM?"
+    subtitle="Un CRM és una eina informàtica clau per gestionar el seguiment de clients de manera eficient i estructurada."
     items={[
       {
         title: 'Centralització de dades',
-        description: 'Tota la informació de clients en un sol lloc, accessible per a tot l’equip.',
+        description: 'Tota la informació de clients en una única base de dades, accessible per a tot l’equip.',
       },
       {
         title: 'Automatització de processos',
@@ -42,7 +45,7 @@ const metadata = {
       },
       {
         title: 'Anàlisi i informes',
-        description: 'Genera informes clars sobre vendes, clients i estratègies comercials.',
+        description: 'Genera informes clars sobre seguiment de vendes, clients i estratègies comercials.',
       },
     ]}
     image={{
@@ -52,103 +55,166 @@ const metadata = {
   >
     <Fragment slot="preContent">
       <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">
-        Gestiona les relacions amb els teus clients de manera estructurada
+        Gestió i seguiment de clients de manera centralitzada
       </h3>
       <p class="text-muted">
         La gestió de clients és una de les àrees més importants per a qualsevol empresa que vulgui oferir un servei
         eficient i mantenir una relació sòlida amb els seus clients. Utilitzar un CRM (Customer Relationship Management)
-        permet centralitzar tota la informació de clients, optimitzar processos comercials i millorar la comunicació
-        interna i externa.
+        permet centralitzar tota la informació.
       </p>
     </Fragment>
     <Fragment slot="content">
       <p class="text-muted">
-        Un CRM és un sistema que permet gestionar les relacions amb els clients de manera eficient i estructurada. Amb
-        un CRM, pots organitzar informació clau, com dades de contacte, històric de comunicacions, seguiment de vendes i
-        gestió de tasques.
+        Permet gestionar les relacions amb els clients de manera eficient i estructurada, com informació clau, dades de contacte, històric de comunicacions, seguiment de vendes i gestió de tasques.
       </p>
-      <p class="text-muted">Disposar d’un CRM personalitzat proporciona:</p>
+      <p class="text-muted mt-3">Disposar d’un CRM permetrà a la teva empresa o negoci:</p>
     </Fragment>
 
-    <Fragment slot="postContent">
-      <h3 class="text-2xl font-bold tracking-tightsm:text-3xl mb-2">Per a qui és útil?</h3>
-      <p class="text-muted">
-        A Gilsys, treballem amb solucions CRM flexibles que es poden adaptar a les necessitats específiques de cada
-        empresa. Aquestes plataformes es poden ampliar i personalitzar amb mòduls a mida, garantint que el sistema
-        compleixi amb els requeriments concrets del teu negoci.
-      </p>
-    </Fragment>
+    
 
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-lightgray"></div>
     </Fragment>
   </Content>
 
-  <Features3
+
+  <Features2
     id="features-services"
-    title="Quines funcionalitats pot tenir un CRM personalitzat?"
-    
-    subtitle="Un CRM és molt més que una base de dades de clients. Les seves funcionalitats poden ser ampliades i personalitzades per adaptar-se al funcionament específic de cada empresa"
+    title="Quines funcionalitats ofereix un programa de gestió de clients?"
+    tagline='Les seves funcionalitats poden ser ampliades i personalitzades per adaptar-se a mida a cada empresa'
+    subtitle="Un CRM és molt més que una base de dades de clients."
     items={[
       {
         title: 'Gestió de contactes i clients',
-        description: `list: [
+        list: [
           'Registre complet de clients amb dades personals, preferències i històric de comunicacions.',
-          'Classificació de clients segons categories (clients potencials, recurrents, inactius).',
-        ]`,
+          'Classificació de clients segons categories.',
+        ],
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Clients potencials',
+        list: [
+          "Registre de possibles clients potencials i seguiment de les accions comercials realitzades.",
+          'Transformació automàtica de clients potencials a clients reals.',
+        ],
         icon: 'tabler:users',
       },
       {
         title: 'Seguiment de vendes i oportunitats',
-        description: `list: [
+        list: [
           'Monitoritza el cicle de vendes des del primer contacte fins al tancament.',
-          'Assignació d'oportunitats a membres de l'equip per garantir un seguiment adequat.',
-        ]`,
+          "Assignació d'oportunitats a membres de l'equip per garantir un seguiment adequat.",
+        ],
         icon: 'tabler:chart-bar',
       },
       {
         title: 'Gestió de tasques i projectes',
-        description: `list: [
+        list: [
           'Creació i assignació de tasques relacionades amb clients o vendes.',
           'Control de projectes comercials amb calendaris i recordatoris.',
-        ]`,
+        ],
         icon: 'tabler:clipboard-check',
       },
       {
         title: 'Automatització de processos',
-        description: `list: [
-          'Enviament automàtic de correus de seguiment, recordatoris o promocions.',
-          'Generació automàtica d’informes comercials.',
-        ]`,
+        list: [
+          'Enviament de correus de recordatori.',
+          'Marketing automàtic amb correus de promocions i seguiment.',
+        ],
         icon: 'tabler:repeat',
       },
       {
         title: 'Facturació i gestió financera',
-        description: `list: [
-          'Creació de pressupostos, factures i rebuts vinculats als clients.',
+        list: [
+          'Creació de pressupostos i factures vinculades als clients.',
           'Integració amb sistemes comptables per sincronitzar informació financera.',
-        ]`,
+        ],
         icon: 'tabler:currency-dollar',
       },
       {
         title: 'Anàlisi i informes personalitzats',
-        description: `list: [
+        list: [
           'Creació de gràfics i informes per analitzar vendes, retenció de clients i oportunitats perdudes.',
-          'Generació d'indicadors clau per millorar l’eficiència comercial.',
-        ]`,
+          "Generació d'indicadors clau per millorar l’eficiència comercial.",
+        ],
         icon: 'tabler:chart-pie',
       },
       {
         title: 'Integracions amb altres eines',
-        description: `list: [
+        list: [
           'Connexió amb plataformes ERP, CRM, eines de màrqueting o aplicacions de correu electrònic.',
-          'Sincronització de dades en temps real per unificar la informació empresarial.',
-        ]`,
+          'Les dades son sincronitzades en temps real per unificar la informació empresarial.',
+        ],
         icon: 'tabler:plug-connected',
       },
     ]
     }
   />
+
+
+
+  <Features
+  
+  title= "Quins sectors poden necessitar una eina per gestionar clients?"
+  subtitle="Les petites i mitjanes empreses (pimes) sovint tenen recursos limitats, per això és crucial que gestionin les seves relacions amb els clients de manera eficaç."
+
+  items={
+    [
+  {
+    title: 'Advocats',
+    description:
+      'Gestiona eficaçment els casos dels clients, el seguiment dels documents legals, les cites i la comunicació amb els clients.',
+    icon: 'tabler:users',
+  },
+  {
+    title: 'Gestors',
+    description:
+      'Organitza la informació dels clients, els seus comptes, les seves inversions i la comunicació amb ells en un sol lloc.',
+    icon: 'tabler:briefcase',
+  },
+  {
+    title: 'Consultors',
+    description:
+      'Simplifica la gestió dels projectes dels clients, el seguiment dels progressos, les factures i la comunicació amb ells.',
+    icon: 'tabler:bulb',
+  },
+  {
+    title: 'Agències immobiliàries',
+    description:
+      'Millora la gestió dels clients, les propietats, les visites, les ofertes i la comunicació amb els clients per tancar més vendes.',
+    icon: 'tabler:home',
+  },
+  {
+    title: 'Empreses de serveis',
+    description:
+      'Centralitza la gestió de les sol·licituds de servei, el seguiment dels problemes dels clients i la resolució de les seves consultes.',
+    icon: 'tabler:speakerphone',
+  },  
+  {
+    title: 'Empreses B2B',
+    description:
+      "Centralitza els leads, les oportunitats de venda, els contactes amb els clients i realitza un seguiment de les vendes.",
+    icon: 'tabler:shopping-cart',
+  },    
+  {
+    title: 'Organitzacions sense ànim de lucre',
+    description:
+      'Gestiona les relacions amb els donants, els voluntaris, els beneficiaris i la comunicació amb ells per a un major impacte.',
+    icon: 'tabler:heart',
+  },
+  {
+    title: 'Administracions públiques',
+    description:
+      'Millora la comunicació amb els ciutadans, gestiona les seves sol·licituds, els seus tràmits i la informació rellevant.',
+    icon: 'tabler:fountain',
+  },
+]
+  }
+  >
+
+
+  </Features>
 
   <Content
     isReversed
@@ -167,7 +233,7 @@ const metadata = {
       {
         title: 'Gestió documental',
         description:
-          ' Arxiu i accés ràpid a documents relacionats amb els clients, com contractes o pressupostos.',
+          'Arxiu i accés ràpid a documents relacionats amb els clients, com contractes o pressupostos.',
       },
     ]}
     image={{
@@ -177,12 +243,13 @@ const metadata = {
   >
     <Fragment slot="preContent">
       <p>
-        Un CRM flexible permet afegir mòduls a mida que cobreixin necessitats específiques de cada negoci. Alguns exemples de mòduls personalitzats inclouen:
+        Un CRM flexible permet 
+        <a class='text-accent' title='Serveis de programació a mida' href={u('software')}>programar mòduls a mida</a> que cobreixin necessitats específiques de cada negoci. Alguns exemples de mòduls personalitzats inclouen:
       </p>
     </Fragment>
     <Fragment slot="postContent">
       <p>
-        Aquest enfocament permet que el CRM no només s’adapti a les operacions actuals, sinó que també pugui evolucionar amb el creixement del negoci.
+        Aquest enfoc permet que el CRM no només s’adapti a les operacions actuals, sinó que també pugui evolucionar amb el creixement del negoci.
       </p>
     </Fragment>
     <Fragment slot="bg">
@@ -192,18 +259,18 @@ const metadata = {
 
   <Features
     id="benefits"
-    tagline="Per què utilitzar un CRM personalitzat?"
+    tagline="Un CRM a mida pot transformar la gestió de clients i processos comercials en una eina estratègica."
     title="Beneficis d’un CRM personalitzat"
-    subtitle="Un CRM a mida pot transformar la gestió de clients i processos comercials en una eina estratègica."
+    subtitle="Cal adaptar la informació a guardar de cada client en funció del sector de cada empresa"
     items={[
       {
-        title: 'Augment de l’eficiència comercial',
+        title: `Augment de l’eficiència comercial`,
         description: 'Optimitza processos i redueix tasques manuals, permetent un seguiment més acurat.',
         icon: 'tabler:clock',
       },
       {
         title: 'Millora de la comunicació',
-        description: 'Centralitza informació per evitar errors i garantir una atenció al client excel·lent.',
+        description: 'Centralitza informació per evitar errors i garantir una millor atenció al client.',
         icon: 'tabler:message-circle',
       },
       {
@@ -213,7 +280,7 @@ const metadata = {
       },
       {
         title: 'Escalabilitat i adaptabilitat',
-        description: 'Amb mòduls a mida, el CRM creix amb el negoci, evitant costos innecessaris a llarg termini.',
+        description: "Amb el pas del temps, l'empresa pot patir canvis, el programa de gestió de clients es pot adaptar a aquests, evitant costos innecessaris de migracions a curt termini.",
         icon: 'tabler:arrows-maximize',
       },
     ]}
@@ -222,42 +289,61 @@ const metadata = {
   <Content
     isReversed
     tagline=""
-    title="Per què implementar un CRM amb Gilsys?"
+    title="Per què implementar un software de gestió de clients amb gilsys?"
     subtitle=""
     items={[
       {
-        title: 'Solucions a mida',
-        description: 'Desenvolupem mòduls personalitzats per adaptar el CRM a les operacions diàries del teu negoci.',
+        title: 'Coneixem el codi i el podem personalitzar a mida',
+        description: `És difíci trobar una empresa que a part d'implantar un programa de gestio de clients, en conegui el codi font i el pugui adaptar a possibles necessitats de cada sector.`,
       },
       {
-        title: 'Integració amb altres sistemes',
-        description: 'Connectem el CRM amb les eines que ja utilitzes, millorant la gestió i flux de dades.',
+        title: 'Solucions CRM a mida',
+        description: 'Desenvolupem mòduls a mida per adaptar el CRM a les operacions diàries del teu negoci.',
+      },
+      {
+        title: 'Integració de la gestió de clients amb altres sistemes',
+        description: 'Connectem el CRM amb altres eines de la teva empresa, millorant la gestió i flux de dades.',
       },
       {
         title: 'Honestedat i claredat',
         description:
-          'Proposem solucions pràctiques i eficients, evitant implementar eines excessivament complexes o cares.',
+          'Proposem solucions pràctiques i eficients, evitant implementar eines excessivament complexes o cares si no és necessari.',
       },
       {
-        title: 'Experiència demostrada',
+        title: 'Actualitzacions i suport',
         description:
-          'Hem ajudat diverses empreses a optimitzar la gestió de clients i millorar els seus resultats comercials.',
+          'Des de la implantació inicial, oferim suport i actualitzacions per millorar la funcionalitat i la seguretat de la teva plataforma.',
       },
     ]}
     image={{
       src: '~/assets/images/gilsys-crm.jpg',
       alt: 'Operadores gesionant clients amb softawre',
     }}
-  >
-    <Fragment slot="postContent">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Contacta amb Gilsys</h3>
-      <p>
-        Si estàs pensant en implementar o optimitzar un CRM personalitzat per al teu negoci, contacta amb nosaltres.
-        Transformarem la gestió de clients en un avantatge competitiu.
-      </p>
-    </Fragment>
+  >    
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-lightgray"></div>
     </Fragment>
   </Content>
+
+  <CallToAction
+  backgroundImage={{ src: '~/assets/images/dots/25.jpg', alt: 'Fons abstracte, inspirat en tecnologia i software' }}
+  actions={[
+    {
+      variant: 'primary',
+      text: 'Sol·licitar pressupost',
+      href: u('contact'),
+    },
+    {
+      variant: 'primary',
+      text: 'Trucar',
+      href: 'tel:+34665331271',
+    },
+  ]}
+>
+  <Fragment slot="title">Necessites <span class="custom-gradient">gestionar els teus clients</span> i portar un seguiment ordenat?</Fragment>
+  <Fragment slot="subtitle"
+    >T'oferim un CRM personalitzat, adaptat a les necessitats de la teva empresa.</Fragment
+  >
+</CallToAction>
+
 </Layout>

@@ -7,33 +7,48 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
 
 const metadata = {
-  title: 'Migració i Integració de Sistemes – Gilsys',
-  description:
-    'Migració i integració de sistemes empresarials, assegurant que les eines actuals puguin comunicar-se entre si i estiguin preparades per al futur.',
+  title: 'Migració i Integració de Sistemes',
+  description: `Migració de bases de dades, renovació de software, integració d'intel·ligència artificial, sincronització de dades entre programes.`,
 };
 ---
 
 <Layout metadata={metadata}>
-  <Hero tagline="Una migració a temps és una inversió de futur."
-  backgroundImage={{ alt:'Fons abstracte', src: '~/assets/images/dots/03.jpg' }}
+  <Hero
+    tagline="Una migració a temps és una inversió de futur."
+    backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/03.jpg' }}
   >
     <Fragment slot="title"
-      ><span class="text-accent highlight">Migració</span> i <span class="text-accent highlight">integració</span> de plataformes</Fragment
+      ><span class="text-accent highlight">Migració</span> i <span class="text-accent highlight">integració</span></Fragment
     >
-    <Fragment slot="subtitle">Creem fluxes de comunicació entre eines existents, n'integrem de noves i migrem sistemes antics cap a solucions més modernes i eficients.</Fragment>
+    <Fragment slot="subtitle"
+      >Creem fluxes de comunicació entre eines existents, n'integrem de noves i migrem sistemes antics cap a solucions
+      més modernes.</Fragment
+    >
   </Hero>
 
   <Features3
     id="features-services"
-    title="Què fem a gilsys?"
-    subtitle="Fem que les eines existents treballin de manera coordinada, ajudem a migrar sistemes antics cap a solucions més modernes i escalables i integrem eines externes per crear nous fluxes de treball."
+    title="A què ens referim amb <span class='custom-gradient'>migració i integració</span>?"
+    subtitle="Fem que les eines existents treballin de manera coordinada, traspassem informació de programes antics cap a aplicacions noves i integrem eines per crear nous fluxes de treball automatitzats."
     tagline="Modernització i integració dels teus sistemes."
-
     items={[
       {
         title: 'Migració de dades',
+        description: 'Migrem bases de dades antigues a noves aplicacions sense perdre informació.',
+        icon: 'tabler:device-desktop',
+        callToAction: {
+          class: 'more-info',
+          text: 'Més informació',
+          href: '#TODO',
+        },
+      },
+      {
+        title: 'Renovació de software',
         description:
           'Actualitzem sistemes antics per millorar el rendiment i garantir una infraestructura tecnològica robusta i sostenible.',
         icon: 'tabler:device-desktop',
@@ -46,7 +61,7 @@ const metadata = {
       {
         title: "Integració d'intel·ligència artificial",
         description:
-          'Integrem processos intel·ligents, chatbots, automatitzacions, anàlisi predictiva o controls de qualitat a sistemes existents.',
+          'Integrem processos intel·ligents, automatitzacions, anàlisi predictiva o sistemes de control de qualitat a eines existents.',
         icon: 'tabler:brain',
         callToAction: {
           class: 'more-info',
@@ -65,10 +80,10 @@ const metadata = {
           href: '#TODO',
         },
       },
+      /*
       {
         title: 'Optimització de software',
-        description:
-          'Auditem i millorem el rendiment i la seguretat dels sistemes existents, implementant tecnologies modernes si cal.',
+        description: 'Analitzem i millorem programes, aplicacions i eines a nivell de rendiment i funcionalitat.',
         icon: 'tabler:settings',
         callToAction: {
           class: 'more-info',
@@ -76,10 +91,11 @@ const metadata = {
           href: '#TODO',
         },
       },
+      */      
       {
         title: 'Divisió i escalabilitat',
         description:
-          "Transformem sistemes monolítics en estructures modulars per facilitar el manteniment i l'escalabilitat.",
+          "Transformem sistemes monolítics en arquitectures distribuïdes per facilitar el manteniment i l'escalabilitat.",
         icon: 'tabler:layers-intersect',
         callToAction: {
           class: 'more-info',
@@ -93,16 +109,19 @@ const metadata = {
   <Content
     isReversed
     tagline=""
-    title="Modernització Tecnològica"
+    title="Renovació de software"
+    subtitle="Mantenir eines antigues implica ineficiència i reducció de productivitat."
     items={[
       {
         title: 'Migració de software obsolet',
-        description: 'Substitució de software obsolet a tecnologies més modernes.',
+        description:
+          `Substitució de programes antics per aplicacions més modernes, <a href='` +
+          u('development') +
+          `' title="Desenvolupament de programes a mida" class="text-accent">desenvolupades a mida</a> a amb <a href='` +
+          u('software') +
+          `' class="text-accent" title='Desenvolupament de programes basats en software personalitzat'>software personalitzat</a>.`,
       },
-      {
-        title: 'Optimització de models de dades',
-        description: 'Reestructuració de bases de dades per augmentar la capacitat i reduir el temps de resposta.',
-      },
+
       {
         title: 'Canvis en infraestructura',
         description: 'Implementació d’eines al núvol, oferint més flexibilitat i reducció de costos d’infraestructura.',
@@ -115,12 +134,12 @@ const metadata = {
     ]}
     image={{
       src: '~/assets/images/ui-ux-moderna.jpg',
-      alt: 'Interfície d\'usuari moderna',
+      alt: "Interfície d'usuari moderna",
     }}
   >
     <Fragment slot="preContent">
       <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">
-        Actualització de sistemes per a un futur sostenible
+        Invertir en renovar software és un estalvi de futur
       </h3>
       <p class="text-muted">
         Els sistemes antics sovint pateixen problemes de seguretat, baixa eficiència i rendiment limitat, la qual cosa
@@ -129,10 +148,13 @@ const metadata = {
       </p>
     </Fragment>
     <Fragment slot="postContent">
-      <h3 class="text-2xl font-bold tracking-tightsm:text-3xl mb-2">Per què és important?</h3>
+      <h3 class="text-2xl font-bold tracking-tightsm:text-3xl mb-2">
+        Per què és important disposar de software actual en una empresa?
+      </h3>
       <p class="text-muted">
-        Els sistemes antics són més vulnerables a atacs de seguretat i poden ralentitzar el creixement empresarial.
-        Actualitzar-los a temps evita problemes futurs i garanteix un funcionament òptim.
+        Els sistemes antics són més vulnerables a atacs de seguretat i a més, poden ralentitzar el creixement
+        empresarial. Renovar a temps evita problemes futurs i garanteix una major eficiencia dels treballadors de
+        l'empresa.
       </p>
     </Fragment>
     <Fragment slot="bg">
@@ -140,19 +162,118 @@ const metadata = {
     </Fragment>
   </Content>
 
-  <Content    
+  <Content
     tagline=""
-    title="Integració d'intel·ligència artificial"
+    title="Migració de dades"
+    subtitle="Deixa enrere els sistemes antics i abraça la innovació amb una migració de dades segura i eficient."
     items={[
       {
-        title: 'Chatbots i assistents virtuals',
+        title: 'Migració de sistemes legacy',
         description:
-          'Afegir chatbots o assistents virtuals que treballin amb bases de dades existents per millorar l’atenció al client.',
+          'Modernitza la teva infraestructura tecnològica traslladant les dades des de sistemes antics (legacy) a plataformes més actuals i eficients.',
       },
+      {
+        title: 'Migració de bases de dades',
+        description:
+          'Optimitza la gestió de les teves dades migrant-les a una base de dades més potent, escalable i segura.',
+      },
+      {
+        title: 'Integració de dades',
+        description:
+          'Unifica les dades provinents de diverses fonts en un únic sistema coherent per obtenir una visió completa del teu negoci.',
+      },
+      {
+        title: 'Migració al núvol',
+        description:
+          'Aprofita els avantatges del núvol (flexibilitat, escalabilitat, seguretat) migrant les teves dades a un entorn cloud.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/migracion-datos-antiguos.jpg',
+      alt: 'Migració de dades entre sistemes',
+    }}
+  >
+    <Fragment slot="preContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">
+        Allibera el potencial de les dades de la teva empresa
+      </h3>
+      <p class="text-muted">
+        En l'era digital actual, les dades són un dels actius més valuosos per a qualsevol empresa. La migració de dades
+        és un procés essencial per garantir que les teves dades estiguin accessibles, segures i en un format que pugui
+        ser utilitzat de manera eficaç per a la presa de decisions i la innovació.
+      </p>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="text-muted">
+        La migració de dades pot ser un projecte complex, però amb una planificació adequada i l'experiència d'un equip
+        expert, pot ser un procés fluid i exitós.
+      </p>
+      <p class="text-muted mt-3">
+        A gilsys, som especialistes en migració de dades. Tenim l'experiència i els coneixements necessaris per
+        ajudar-te a traslladar les teves dades de manera segura i eficient, minimitzant el temps d'inactivitat i els
+        riscos.
+      </p>
+    </Fragment>
+  </Content>
+
+  <Features
+    classes={{ container: 'pt-0 md:pt-0 lg:pt-0' }}
+    isAfterContent
+    title="Per què és important la migració de dades?"
+    items={[
+      {
+        title: "Millora de l'eficiència operativa",
+        description:
+          'La migració de dades permet optimitzar processos i reduir la complexitat dels sistemes, alliberant recursos i millorant la productivitat.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Reducció important de costos',
+        description:
+          "En alliberar recursos i evitar manteniments innecessaris de tecnologies antigues, la migració de dades pot significar un estalvi considerable per a l'empresa.",
+        icon: 'tabler:cash',
+      },
+      {
+        title: 'Augment de la seguretat',
+        description:
+          "Les dades migrades a plataformes modernes gaudeixen de protocols i mesures de protecció més avançades, reduint el risc d'atacs i vulnerabilitats.",
+        icon: 'tabler:shield-lock',
+      },
+      {
+        title: 'Millora en la presa de decisions',
+        description:
+          "La migració de dades posa a disposició de l'empresa dades més accessibles, consistents i actualitzades, permetent una anàlisi més precisa i decisions més informades.",
+        icon: 'tabler:chart-bar',
+      },
+      {
+        title: 'Catalitzador per a la innovació',
+        description:
+          'La migració de dades permet a les empreses adoptar noves tecnologies i explorar solucions més avançades, impulsant la innovació i el creixement.',
+        icon: 'tabler:bulb',
+      },
+      {
+        title: 'Millora de la imatge de marca',
+        description:
+          'Una empresa amb sistemes moderns i eficients transmet una imatge de professionalitat i confiança, millorant la percepció de la marca per part dels clients i col·laboradors.',
+        icon: 'tabler:brand-google-maps',
+      },
+    ]}
+  />
+
+  <Content
+    tagline=""
+    title="Integració d'intel·ligència artificial"
+    subtitle={`No només podem <a class="text-accent" title="Programació de noves aplicacions que integren intel·ligència artificial" href="` + u('development/ia') + `">programar noves aplicacions</a>, sinó que podem integrar la IA a eines existents.`}
+    items={[
       {
         title: 'Automatització de processos',
         description:
           "Automatitzar processos interns amb machine learning, aprofitant dades empresarials per reduir costos i augmentar l'eficiència.",
+      },
+      {
+        title: 'Chatbots i assistents virtuals',
+        description:
+          'Afegir chatbots o assistents virtuals que treballin amb bases de dades existents per millorar l’atenció al client.',
       },
       {
         title: 'Anàlisi predictiva',
@@ -162,7 +283,7 @@ const metadata = {
     ]}
     image={{
       src: '~/assets/images/ia-integracion-software-abstracto.jpg',
-      alt: 'Abstracció d\'integració de software amb intel·ligència artificial',
+      alt: "Abstracció d'integració de software amb intel·ligència artificial",
     }}
   >
     <Fragment slot="preContent">
@@ -182,20 +303,23 @@ const metadata = {
         prendre decisions basades en dades, oferint un avantatge competitiu sostenible.
       </p>
     </Fragment>
+
     <Fragment slot="bg">
-      <div class="absolute inset-0"></div>
+      <div class="absolute inset-0 bg-lightgray"></div>
     </Fragment>
+
   </Content>
 
   <Content
     isReversed
     tagline=""
-    title="Integració de Software Empresarial"
+    title="Connexió de software"
+    subtitle="Sincronitzar dades entre diferents eines simplifica la gestió d'informació de l'empresa i evita dades duplicades."
     items={[
       {
         title: 'Connexió mitjançant APIs',
         description:
-          'Desenvolupem integracions mitjançant APIs personalitzades per sincronitzar informació entre sistemes.',
+          `Desenvolupem <a class="text-accent" title="Automatització de processos de sincronització de dades" href="` + u('development/automation') + `">integracions i automatitzacions mitjançant APIs personalitzades</a> per sincronitzar informació entre sistemes.`,
       },
       {
         title: 'Sincronització de dades',
@@ -227,12 +351,9 @@ const metadata = {
         Un sistema integrat redueix errors, millora l'eficiència i permet una visió més clara de les operacions.
       </p>
     </Fragment>
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-lightgray"></div>
-    </Fragment>
   </Content>
-
-  <Content    
+<!--
+  <Content
     tagline=""
     title="Optimització de Software"
     items={[
@@ -257,7 +378,7 @@ const metadata = {
   >
     <Fragment slot="preContent">
       <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">
-        Revisar, millorar i migrar per augmentar el rendiment
+        Analitzar, revisar i millorar i migrar per augmentar el rendiment
       </h3>
       <p class="text-muted">
         L’optimització de software implica revisar projectes existents per identificar problemes i aplicar millores, o
@@ -271,15 +392,18 @@ const metadata = {
         manteniment més senzill i eficient.
       </p>
     </Fragment>
+    
     <Fragment slot="bg">
-      <div class="absolute inset-0"></div>
+      <div class="absolute inset-0 bg-lightgray"></div>
     </Fragment>
-  </Content>
 
+  </Content>
+-->
   <Content
     isReversed
     tagline=""
     title="Divisió i Escalabilitat"
+    subtitle="En ocasions, utilitzar un únic programa o plataforma per intentar resoldre molts requisits no és la millor opció."
     items={[
       {
         title: 'Separació de funcionalitats',
@@ -320,9 +444,9 @@ const metadata = {
 
   <Features
     id="benefits"
-    tagline="Per què migrar i integrar amb Gilsys?"
+    tagline="Per què migrar i integrar amb gilsys?"
     title="Beneficis de la migració i integració"
-    subtitle="A Gilsys, oferim solucions realistes, eficients i adaptades a cadaprojecte, convertint processos de migració i integració en oportunitats per millorar els sistemes de manera intel·ligent i sostenible."
+    subtitle="A gilsys, oferim solucions realistes, eficients i adaptades a cadaprojecte, convertint processos de migració i integració en oportunitats per millorar els sistemes de manera intel·ligent i sostenible."
     items={[
       {
         title: 'Migració sense interrupcions',
@@ -337,9 +461,9 @@ const metadata = {
         icon: 'tabler:shield-check',
       },
       {
-        title: 'Honestedat i enfocament personalitzat',
+        title: 'Honestedat i enfoc  personalitzat',
         description:
-          'A Gilsys prioritzem les necessitats reals del client. Si no és necessari canviar-ho tot, o no té sentit a nivell econòmic fer-ho, ho direm. Recomendarem les pràctiques i solucions més adequades per al negoci, valorant sempre el cost-benefici i l’impacte a llarg termini.',
+          'A gilsys prioritzem les necessitats reals del client. Si no és necessari canviar-ho tot, o no té sentit a nivell econòmic fer-ho, ho direm. Recomendarem les pràctiques i solucions més adequades per al negoci, valorant sempre el cost-benefici i l’impacte a llarg termini.',
         icon: 'tabler:message-circle',
       },
       {
@@ -356,4 +480,23 @@ const metadata = {
       },
     ]}
   />
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/03.jpg', alt: 'Fons abstracte' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Sol·licitar pressupost',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Trucar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">Vols <span class="custom-gradient">migrar</span> eines antigues o <span class="custom-gradient">integrar aplicacions</span> a la teva empresa?</Fragment>
+    <Fragment slot="subtitle">Contacta'ns i ens encarregarem d'assessorar-te i executar el teu projecte.</Fragment>
+  </CallToAction>
 </Layout>
