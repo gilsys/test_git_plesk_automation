@@ -10,6 +10,10 @@ export interface Props {
   links: MenuLink[];
 }
 
+interface DropdownMenuLink extends MenuLink {
+  colsClass?: string
+}
+
 const { btn, links } = Astro.props;
 
 const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
@@ -17,13 +21,14 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
 const language = getLangFromUrl(Astro.url);
 const t = useTranslations(language);
 
-const getLinks = (currentLinks: MenuLink[]) => {
+const getLinks = (currentLinks: MenuLink[]): DropdownMenuLink[] => {
   if (!currentLinks.length || currentLinks[0].links) {
     return currentLinks;
   }
 
   return [
     {
+      _id: btn._id,
       text: btn.text,
       href: btn.href,
       title: btn.title,
@@ -34,22 +39,28 @@ const getLinks = (currentLinks: MenuLink[]) => {
 };
 
 let breadcrumbTrail = findBreadcrumbTrail(getHeader(language).links, currentPath);
+if(breadcrumbTrail && breadcrumbTrail[0] && breadcrumbTrail[0].text === btn.text && !links[0].links) {
+  breadcrumbTrail = [breadcrumbTrail[0], ...breadcrumbTrail];
+}
 
 ---
 
 <button type="button" class:list={[
-  'hover:text-link dark:hover:text-white px-4 py-3 flex items-center whitespace-nowrap',
+  'hover:text-link dark:hover:text-white px-2 lg:px-4 py-3 flex items-center whitespace-nowrap md:text-sm min-[810px]:text-base',
   { 'active':  breadcrumbTrail && breadcrumbTrail[0] && breadcrumbTrail[0].text === btn.text},
 ]}>
   {btn.text}{' '}
   <Icon name="tabler:chevron-down" class="w-3.5 h-3.5 ml-0.5 rtl:ml-0 rtl:mr-0.5 hidden md:inline" />
 </button>
 <ul
-  class="dropdown-menu menu-dropdown dropdown-menu md:backdrop-blur-md dark:md:bg-dark rounded md:absolute p-4 md:hidden md:bg-white/90 md:min-w-[200px] drop-shadow-xl text-[14px] xl:text-[15px] 2xl:text-[16px] flex-wrap"
+  class:list={[
+    'dropdown-menu menu-dropdown md:backdrop-blur-md dark:md:bg-dark rounded md:absolute p-4 md:bg-white/90 md:min-w-[200px] drop-shadow-xl text-[13px] lg:text-[14px] xl:text-[15px] 2xl:text-[16px] !flex flex-wrap left-[-100vw] right-[-100vw] w-[96vw] mx-auto max-w-[1800px]',
+    {'max-w-[1200px]': btn._id === 'kit-consulting'}
+  ]}
 >
   {
     getLinks(links).map(({ text: text2, href: href2, title: title2, links: subLinks, colsClass }) => (
-      <li class:list={['w-1/2 lg:flex-1 relative pb-8', { 'has-children': subLinks && subLinks.length > 0 }]}>
+      <li class:list={['lg:flex-1 relative pb-8 w-1/2', { 'has-children': subLinks && subLinks.length > 0 }, { 'w-full': getLinks(links).length <= 1 }]}>
         {href2 ? (
           <a
             class:list={[
@@ -72,13 +83,13 @@ let breadcrumbTrail = findBreadcrumbTrail(getHeader(language).links, currentPath
 
         {subLinks && subLinks.length > 0 && (
           <>
-            <ul class={`dropdown-submenu pl-1 xl:pl-4 grid gap-x-4 ${colsClass ? colsClass : ''}`}>
+            <ul class={`dropdown-submenu pl-1 xl:pl-4 grid gap-x-3 lg:gap-x-4 ${colsClass ? colsClass : ''}`}>
               {subLinks.map(({ text: text3, href: href3, title: title3, icon: icon3 }) => (
                 <li class="flex items-center space-x-2 mb-1">
                   <div class="mt-1">
                     <Icon
                       name={icon3 ? icon3 : 'tabler:check'}
-                      class="w-8 h-8 font-bold p-1 text-primary"
+                      class="w-7 h-7 lg:w-8 lg:h-8 font-bold p-1 text-primary"
                     />
                   </div>
                   <a
