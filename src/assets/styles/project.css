@@ -303,3 +303,17 @@ nav[aria-label="breadcrumb"] li:not(:last-child)::after {
 nav .active {
   @apply text-primary;
 }
+
+body:not(.route-home) .wg-hero .btn-primary{
+  background-color: rgba(0,0,0,0.8);
+  color: #FFF;
+  border: 0;
+}
+body:not(.route-home) .wg-hero .btn-primary:hover{
+  background-color: rgba(255,255,255,0.8);
+  color: #000;
+  border: 0;
+}
+.feature-list strong{
+  color: #000;
+}
