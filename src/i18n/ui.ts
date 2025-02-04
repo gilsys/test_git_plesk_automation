@@ -459,7 +459,7 @@ export const header = {
               {
                 href: routes['ca']['software/metabase'],
                 title: 'Utilitzem Metabase com a eina de Business Intelligence',
-                text: 'Anàlisi empresarial',
+                text: 'Business Intelligence',
                 icon: 'tabler:chart-bar',
               },
               {
@@ -806,11 +806,11 @@ export const footer = {
       { text: 'Política de cookies', href: '#'},
     ],
     socialLinks: [
-      { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
-      { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
-      { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
+      { ariaLabel: 'Linked-in', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/company/gilsys' },
+      //{ ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
+      { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: 'https://www.facebook.com/gilsysg6' },
       //{ ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
-      { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
+      //{ ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
     ],
     address: `            
             <a href="tel:+34665331271">665 33 12 71</a><br>

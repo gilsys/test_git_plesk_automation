@@ -317,3 +317,9 @@ body:not(.route-home) .wg-hero .btn-primary:hover{
 .feature-list strong{
   color: #000;
 }
+
+#image-kit-digital,
+#image-kit-consulting{
+  max-width: 300px;
+  margin-top: 3rem;
+}

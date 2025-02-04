@@ -130,7 +130,6 @@ const metadata = {
   </Content>
 
   <Content
-    isReversed
     tagline=""
     title="Anàlisi de situació tecnològica"
     items={[
@@ -161,14 +160,12 @@ const metadata = {
         real i actualitzada.
       </p>
     </Fragment>
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-lightgray"></div>
-    </Fragment>
   </Content>
 
   <Content
     tagline=""
     title="Transformació d’idees en projectes"
+    isReversed
     items={[
       {
         title: 'Propostes tècniques adequades',
@@ -195,13 +192,11 @@ const metadata = {
       </p>
     </Fragment>
     <Fragment slot="bg">
-      <div class="absolute inset-0"></div>
+      <div class="absolute inset-0 bg-lightgray"></div>
     </Fragment>
   </Content>
 
   <Content
-  
-    isReversed
     tagline=""
     title="Anàlisi i organització de dades"
     items={[
@@ -229,13 +224,12 @@ const metadata = {
         L'anàlisi i classificació de dades és clau per prendre decisions estratègiques amb una visió clara i útil.
       </p>
     </Fragment>
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-lightgray"></div>
-    </Fragment>
+    
   </Content>
 
   <Content
     tagline=""
+    isReversed
     title="Identificació de solucions a integrar"
     items={[
       {
@@ -269,7 +263,7 @@ const metadata = {
       </p>
     </Fragment>
     <Fragment slot="bg">
-      <div class="absolute inset-0"></div>
+      <div class="absolute inset-0 bg-lightgray"></div>
     </Fragment>
   </Content>
 
@@ -314,7 +308,7 @@ const metadata = {
   actions={[
     {
       variant: 'primary',
-      text: 'Sol·licitar pressupost',
+      text: 'Pressupost gratuït',
       href: u('contact'),
     },
     {
