@@ -1,0 +1,149 @@
+---
+import Features from '~/components/widgets/Features.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import Image from '~/components/common/Image.astro';
+import KitDigital from '~/components/widgets/KitDigital.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+
+const metadata = {
+  title: 'Ciberseguretat',
+  description:
+    'Protegeix els dispositius dels teus empleats amb solucions avançades de seguretat, que inclouen antimalware, antispyware i més, per a la teva PIME de manera gratuïta amb el Kit Digital.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="Subvenció Kit Digital" backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/21.jpg' }}>
+    <Fragment slot="title">Ciberseguretat</Fragment>
+    <Fragment slot="subtitle">
+      Protegeix els dispositius, dades i processos de la teva empresa amb solucions de seguretat personalitzades,
+      <span class="custom-gradient">GRATIS</span> gràcies a la subvenció del Kit Digital, per garantir la seguretat i complir
+      amb la normativa vigent.
+    </Fragment>
+  </Hero>
+
+  <Features2
+    tagline="Funcionalitats i serveis"
+    subtitle="Garantitza la seguretat de les teves dades i dispositius amb solucions avançades de ciberseguretat, adaptades a les teves necessitats."
+    title="Protegeix la teva empresa amb eines de ciberseguretat d'última generació"
+    items={[
+      {
+        title: 'Antimalware',
+        description:
+          "Tindràs a la teva disposició una eina que analitzi el teu dispositiu, la seva memòria interna i els dispositius d'emmagatzematge externs.",
+        icon: 'tabler:shield',
+      },
+      {
+        title: 'Antispyware',
+        description: "Disposaràs d'una eina que detecti i eviti el programari espia.",
+        icon: 'tabler:spy',
+      },
+      {
+        title: 'Correu segur',
+        description: "Tindràs eines d'anàlisi del correu electrònic amb les següents característiques:",
+        icon: 'tabler:mail-check',
+      },
+      {
+        title: 'Antispam',
+        description: 'Amb detecció i filtre de correu no desitjat.',
+        icon: 'tabler:filter',
+      },
+      {
+        title: 'Antiphishing',
+        description:
+          'Amb detecció de correus amb enllaços o programari maliciós que es sospita serveixin per robar credencials.',
+        icon: 'tabler:shield-lock',
+      },
+      {
+        title: 'Navegació segura',
+        description: 'Amb anàlisi de pàgines web per evitar la navegació a pàgines malicioses.',
+        icon: 'tabler:globe',
+      },
+      {
+        title: 'Control de continguts',
+        description: 'Controla l’accés a continguts no desitjats.',
+        icon: 'tabler:lock',
+      },
+      {
+        title: 'Antiadware',
+        description: 'Evita anuncis maliciosos.',
+        icon: 'tabler:ad',
+      },
+      {
+        title: "Anàlisi i detecció d'amenaces",
+        description: 'Seràs capaç de conèixer el comportament de les amenaces conegudes i noves.',
+        icon: 'tabler:alert-circle',
+      },
+      {
+        title: 'Monitorització de la xarxa',
+        description: "Tindràs eines que analitzen el trànsit de xarxa i t'alerten d'amenaces.",
+        icon: 'tabler:network',
+      },
+      {
+        title: 'Configuració inicial i actualitzacions de seguretat',
+        description:
+          "Disposaràs d'una configuració inicial per al seu correcte ús, amb les respectives actualitzacions de signatures de programari maliciós i altres dades per a la detecció d'amenaces, a més de les actualitzacions de programari de seguretat periòdiques requerides.",
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Requisits especials de formació',
+        description:
+          'Disposaràs de formació per a la configuració del programari de seguretat, i tindràs un kit de conscienciació en ciberseguretat per complementar la solució amb habilitats de tallafocs humà.',
+        icon: 'tabler:book',
+      },
+    ]}
+  />
+
+  <Features
+    title="Subvenció Kit Digital segons el nombre d'empleats"
+    subtitle="La subvenció pot ser utilitzada per a diversos serveis de digitalització, amb un import màxim que varia en funció del nombre d'empleats de l'empresa."
+    items={[
+      {
+        title: 'Import total subvencionat:',
+        list: [
+          '<strong>De 0 a 3 empleats:</strong> 3.000€',
+          '<strong>De 50 a 99 empleats:</strong> 25.000€',
+          '<strong>De 100 a 250 empleats:</strong> 29.000€',
+        ],
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Import màxim per al servei de ciberseguretat:',
+        list: [
+          '<strong>De 0 a 3 empleats:</strong> 125€/usuari (fins a 2 dispositius)',
+          '<strong>De 50 a 99 empleats:</strong> 125€/usuari (inclou 99 dispositius)',
+          '<strong>De 100 a 250 empleats:</strong> 125€/usuari (inclou 232 dispositius)',
+        ],
+        icon: 'tabler:check',
+      },
+    ]}
+  />
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/21.jpg', alt: 'Fons abstracte, inspirat en tecnologia i software' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contactar',
+        href: 'contactar',
+      },
+      {
+        variant: 'primary',
+        text: 'Trucar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Aprofita la subvenció del Kit Digital per a implementar <span class="custom-gradient">Ciberseguretat</span> de forma
+      gratuïta
+    </Fragment>
+    <Fragment slot="subtitle"> Contacta'ns i t'assessorarem sobre com digitalitzar la teva empresa. </Fragment>
+  </CallToAction>
+
+  <KitDigital />
+</Layout>

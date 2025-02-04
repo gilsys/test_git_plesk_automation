@@ -118,10 +118,8 @@ export const routes = {
   ca: {
     'home': '/ca',
     'gilsys': '/ca/sobre-nosaltres',
-       'kit-digital/basic-internet-presence': '/ca/kit-digital/presencia-basica-internet',
     'kit-digital/basic-internet-presence': '/ca/kit-digital/presencia-basica-internet',
     'kit-digital': '/ca/kit-digital',
-    'kit-digital/basic-internet-presence': '/ca/kit-digital/presencia-basica-internet',
     'kit-digital/e-commerce': '/ca/kit-digital/botiga-electronica',
     'kit-digital/customer-management': '/ca/kit-digital/gestio-de-clients',
     'kit-digital/process-management': '/ca/kit-digital/gestio-de-processos',
@@ -139,14 +137,9 @@ export const routes = {
     'kit-digital/ai-process-management': '/ca/kit-digital/gestio-processos-ia',
     'kit-digital/secure-workplace': '/ca/kit-digital/lloc-de-treball-segur',
     'kit-consulting/ai-advisory': '/ca/kit-consulting/servei-de-assessorament-en-intelligencia-artificial',
-    'kit-consulting/basic-data-analysis': '/ca/kit-consulting/servei-dassessorament-en-analisi-de-dades-basic',
-    'kit-consulting/advanced-data-analysis':
-      'kit-consulting/servei-de-assessorament-en-analisis-de-dades-avancat',
+    'kit-consulting/basic-data-analysis': '/ca/kit-consulting/servei-de-assessorament-en-analisi-de-dades-basic',
+    'kit-consulting/advanced-data-analysis':'/ca/kit-consulting/servei-de-assessorament-en-analisis-de-dades-avancat',
     'kit-consulting': '/ca/kit-consulting',
-    'kit-consulting/ai-advisory': '/ca/kit-consulting/servei-de-assessorament-en-intelligencia-artificial',
-    'kit-consulting/basic-data-analysis': '/ca/kit-consulting/servei-dassessorament-en-analisi-de-dades-basic',
-    'kit-consulting/advanced-data-analysis':
-      'kit-consulting/servei-de-assessorament-en-analisis-de-dades-avancat',
     'kit-consulting/digital-sales-advisory': '/ca/kit-consulting/servei-de-assessorament-en-vendes-digitals',
     'kit-consulting/business-process-advisory':
       'kit-consulting/servei-de-assessorament-en-processos-de-negoci-o-proces-de-produccio',

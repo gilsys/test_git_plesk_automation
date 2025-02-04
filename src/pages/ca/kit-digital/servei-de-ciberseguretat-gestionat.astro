@@ -1,0 +1,137 @@
+---
+import Features from '~/components/widgets/Features.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import Image from '~/components/common/Image.astro';
+import KitDigital from '~/components/widgets/KitDigital.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+
+const metadata = {
+  title: 'Servei de Ciberseguretat gestionat',
+  description:
+    "Protecció empresarial amb tècniques EDR i MDR per a la detecció i resposta ràpida davant d'amenaces, monitoratge 24/7 i suport expert per a la teva PIME, de manera gratuïta amb el Kit Digital.",
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="Subvenció Kit Digital" backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/21.jpg' }}>
+    <Fragment slot="title">Servei de Ciberseguretat gestionat</Fragment>
+    <Fragment slot="subtitle">
+        Servei de ciberseguretat gestionat que monitoritza, detecta i respon a amenaces en temps real.  
+        <span class="custom-gradient">GRATIS</span> gràcies a la subvenció del Kit Digital, comptaràs amb protecció contínua i suport expert per prevenir riscos digitals.
+      </Fragment>
+  </Hero>
+
+  <Features2
+    tagline="Funcionalitats i serveis"
+    subtitle="El principal objectiu d’aquesta categoria és proporcionar-te un servei que combini tècniques de EDR (Endpoint Detection and Response) i MDR (Managed Detection and Response) per a detectar incidents de ciberseguretat en temps real i abordar-los de la forma més ràpida i eficaç possible."
+    title="Protegeix la teva empresa amb eines de ciberseguretat d'última generació"
+    items={[
+        {
+          title: 'Instal·lació i configuració inicial',
+          description:
+            "De les eines de seguretat perquè puguis detectar, interrompre i donar una resposta ràpida a les amenaces.",
+          icon: 'tabler:shield',
+        },
+        {
+          title: 'Detecció i resposta en els endpoints',
+          description:
+            "Servidors, PCs, portàtils, telèfons mòbils... La solució implantada ha de ser capaç de detectar i donar resposta en aquests punts, podent subministrar-se la protecció EDR juntament amb la resta dels components de la solució implantada o podent aquesta integrar-se amb solucions EDR ja existents en els endpoints.",
+          icon: 'tabler:device-laptop',
+        },
+        {
+          title: 'Fonts a monitoritzar',
+          description:
+            "La solució implantada haurà de protegir davant les amenaces que afectin diverses fonts de l'empresa com endpoints o solucions Cloud.",
+          icon: 'tabler:cloud',
+        },
+        {
+          title: 'Alertes davant amenaces',
+          description:
+            "Aquest servei alertarà els contactes de la teva empresa immediatament després d'haver detectat possibles amenaces.",
+          icon: 'tabler:bell',
+        },
+        {
+          title: 'Disponibilitat d\'un equip d\'experts',
+          description:
+            "Que s'encarregarà de respondre tots els dubtes que puguin sorgir relacionats amb el servei. També realitzarà una anàlisi i seguiment continu de les alertes generades.",
+          icon: 'tabler:user-check',
+        },
+        {
+          title: 'Monitorització 24x7x365',
+          description:
+            "El servei estarà operatiu les 24 hores del dia, 7 dies a la setmana, els 365 dies de l'any.",
+          icon: 'tabler:clock',
+        },
+        {
+          title: 'Cerca, contenció i resposta davant amenaces',
+          description:
+            "El servei farà una cerca activa de possibles amenaces, evitant, interrompent i responent als possibles atacs. Això impedirà que s'estenguin a altres parts de la xarxa de la teva empresa.",
+          icon: 'tabler:search',
+        },
+        {
+          title: 'Informes mensuals de seguiment',
+          description:
+            "Es generaran informes sobre els incidents detectats i les causes arrel, així com de la situació de l'empresa en matèria de seguretat.",
+          icon: 'tabler:file-report',
+        },
+        {
+          title: 'Assistència directa',
+          description:
+            "En cas d'accident de seguretat, tindràs accés a una línia telefònica de contacte directe amb l'equip de servei per aclarir totes les qüestions que sorgeixin arran d'un atac.",
+          icon: 'tabler:phone',
+        },
+      ]}
+      
+  />
+
+  <Features
+    title="Subvenció Kit Digital segons el nombre d'empleats"
+    subtitle="La subvenció pot ser utilitzada per a diversos serveis de digitalització, amb un import màxim que varia en funció del nombre d'empleats de l'empresa."
+    items={[
+      {
+        title: 'Import total subvencionat:',
+        list: [
+          '<strong>De 50 a 99 empleats:</strong> 25.000€',
+          '<strong>De 100 a 250 empleats:</strong> 29.000€',
+        ],
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Import màxim per al servei de ciberseguretat gestionat:',
+        list: [
+          '<strong>De 50 a 99 empleats:</strong> 200€/dispositiu (fins a 99 dispositius)',
+          '<strong>De 100 a 250 empleats:</strong> 200€/dispositiu (fins a 145 dispositius)',
+        ],
+        icon: 'tabler:check',
+      },
+    ]}
+  />
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/21.jpg', alt: 'Fons abstracte, inspirat en tecnologia i software' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contactar',
+        href: 'contactar',
+      },
+      {
+        variant: 'primary',
+        text: 'Trucar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Aprofita la subvenció del Kit Digital per a implementar el servei de <span class="custom-gradient">Ciberseguretat gestionat</span> de forma
+      gratuïta
+    </Fragment>
+    <Fragment slot="subtitle"> Contacta'ns i t'assessorarem sobre com digitalitzar la teva empresa. </Fragment>
+  </CallToAction>
+
+  <KitDigital />
+</Layout>

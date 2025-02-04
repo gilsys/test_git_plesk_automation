@@ -1,0 +1,109 @@
+---
+import Features from '~/components/widgets/Features.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import Image from '~/components/common/Image.astro';
+import KitDigital from '~/components/widgets/KitDigital.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+
+const metadata = {
+  title: 'Serveis i eines d’oficina virtual',
+  description:
+    "Millora la col·laboració i la gestió de projectes amb les nostres eines d'Oficina Virtual. Gaudeix d'emmagatzematge al núvol i més de manera gratuïta amb el Kit Digital.",
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="Subvenció Kit Digital" backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/21.jpg' }}>
+    <Fragment slot="title">Serveis i eines d’oficina virtual</Fragment>
+    <Fragment slot="subtitle">
+      Implanta solucions interactives i eficients per a la teva empresa amb eines de col·laboració, emmagatzematge i
+      organització de tasques,
+      <span class="custom-gradient">GRATIS</span> gràcies a la subvenció del Kit Digital.
+    </Fragment>
+  </Hero>
+
+  <Features2
+    tagline="Funcionalitats i serveis"
+    subtitle="El principal objectiu d’aquesta categoria és implantar en la teva empresa solucions interactives i funcionals que permetin la col·laboració més eficient entre els teus treballadors."
+    title="Serveis i eines d'oficina virtual per a la teva empresa"
+    items={[
+      {
+        title: 'Col·laboració en equips de treball',
+        description:
+          "Tindràs assistència per part del proveïdor en el procés creatiu d'ideació o gestió d'equips per a la gestió col·laborativa de projectes, compartir recursos i/o coneixements, dotar d'eines per a la interacció dels equips en els processos d'ideació o resolució de problemes, així com la configuració i personalització de fluxos de treball, tasques, etc.",
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Emmagatzemar i compartir arxius',
+        description: "Disposaràs d'1 TB d'emmagatzematge per gestionar i compartir arxius de forma segura.",
+        icon: 'tabler:cloud',
+      },
+      {
+        title: 'Compatibilitat amb dispositius mòbils',
+        description:
+          "La teva solució serà compatible amb dispositius mòbils, per facilitar l'accés a la teva oficina virtual des de qualsevol lloc.",
+        icon: 'tabler:device-mobile',
+      },
+      {
+        title: 'Calendari i agenda',
+        description:
+          "Et permetrà organitzar un calendari i les teves tasques previstes, millorant la planificació i l'eficiència.",
+        icon: 'tabler:calendar',
+      },
+    ]}
+  />
+
+  <Features
+    title="Subvenció Kit Digital segons el nombre d'empleats"
+    subtitle="La subvenció pot ser utilitzada per a diversos serveis de digitalització, amb un import màxim que varia en funció del nombre d'empleats de l'empresa."
+    items={[
+      {
+        title: 'Import total subvencionat:',
+        list: [
+          '<strong>De 0 a 3 empleats:</strong> 3.000€',
+          '<strong>De 50 a 99 empleats:</strong> 25.000€',
+          '<strong>De 100 a 250 empleats:</strong> 29.000€',
+        ],
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Import màxim per serveis i eines d’oficina virtual:',
+        list: [
+          '<strong>De 0 a 3 empleats:</strong> 250€/usuari (fins a 2 dispositius)',
+          '<strong>De 50 a 99 empleats:</strong> 250€/usuari (inclou 99 dispositius)',
+          '<strong>De 100 a 250 empleats:</strong> 250€/usuari (inclou 116 dispositius)',
+        ],
+        icon: 'tabler:check',
+      },
+    ]}
+  />
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/21.jpg', alt: 'Fons abstracte, inspirat en tecnologia i software' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contactar',
+        href: 'contactar',
+      },
+      {
+        variant: 'primary',
+        text: 'Trucar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Aprofita la subvenció del Kit Digital per a implementar <span class="custom-gradient"
+        >Serveis i eines d’oficina virtual</span
+      > de forma gratuïta
+    </Fragment>
+    <Fragment slot="subtitle"> Contacta'ns i t'assessorarem sobre com digitalitzar la teva empresa. </Fragment>
+  </CallToAction>
+
+  <KitDigital />
+</Layout>
