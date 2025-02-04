@@ -555,14 +555,14 @@ export const header = {
         ],
       },
       {
-        _id: 'contact',
-        text: 'Contactar',
-        href: routes['ca']['contact'],
-      },
-      {
         _id: 'blog',
         text: 'Blog',
         href: routes['ca']['blog'],
+      },
+      {
+        _id: 'contact',
+        text: 'Contactar',
+        href: routes['ca']['contact'],
       },
     ],
   },
@@ -704,13 +704,13 @@ export const header = {
         ],
       },
       {
-        text: 'Contactar',
-        href: routes['es']['contact'],
-      },
-      {
         _id: 'blog',
         text: 'Blog',
         href: routes['es']['blog'],
+      },
+      {
+        text: 'Contactar',
+        href: routes['es']['contact'],
       },
     ],
   },
@@ -779,14 +779,14 @@ export const header = {
         ],
       },
       {
-        _id: 'contact',
-        text: 'Contact',
-        href: routes['en']['contact'],
-      },
-      {
         _id: 'blog',
         text: 'Blog',
         href: routes['en']['blog'],
+      },
+      {
+        _id: 'contact',
+        text: 'Contact',
+        href: routes['en']['contact'],
       },
     ],
   },
