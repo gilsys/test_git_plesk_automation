@@ -1,0 +1,115 @@
+---
+import Features from '~/components/widgets/Features.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import Image from '~/components/common/Image.astro';
+import KitDigital from '~/components/widgets/KitDigital.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+
+const metadata = {
+  title: 'Comunicacions segures',
+  description:
+    "Assegura les connexions dels treballadors amb la nostra solució de comunicacions segures. Inclou SSL, xifrat d'extrem a extrem i més, per a la teva PIME de manera gratuïta amb el Kit Digital.",
+};
+---
+
+<Layout metadata={metadata}>
+    <Hero tagline="Subvenció Kit Digital" backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/21.jpg' }}>
+      <Fragment slot="title">Comunicacions segures</Fragment>
+      <Fragment slot="subtitle">
+        Protegeix les connexions, dades i processos de la teva empresa amb solucions de comunicacions segures,
+        <span class="custom-gradient">GRATIS</span> gràcies a la subvenció del Kit Digital, per garantir la seguretat i complir
+        amb la normativa vigent.
+      </Fragment>
+    </Hero>
+
+  <Features2
+    tagline="Funcionalitats i serveis"
+    subtitle="Garantitza la seguretat de les teves comunicacions amb solucions avançades, adaptades a les teves necessitats."
+    title="Comunicacions segures per a la teva empresa amb tecnologia d'última generació"
+    items={[
+      {
+        title: 'SSL',
+        description: "Disposaràs d'un protocol de capa de sockets segurs, per crear una connexió segura i xifrada.",
+        icon: 'tabler:lock',
+      },
+      {
+        title: 'Xifratge d\'extrem a extrem',
+        description: "Tindràs les comunicacions xifrades en tot el seu recorregut, amb l'objectiu de prevenir atacs.",
+        icon: 'tabler:shield-lock',
+      },
+      {
+        title: 'Logs de connexió',
+        description: "Seràs capaç de mantenir un registre dels dispositius que s'han connectat a la teva xarxa privada.",
+        icon: 'tabler:database',
+      },
+      {
+        title: 'Control d\'accés',
+        description: "Tindràs la possibilitat de permetre la connexió a la teva xarxa privada única i exclusivament als dispositius autoritzats per tu.",
+        icon: 'tabler:user-check',
+      },
+      {
+        title: 'Dispositius mòbils',
+        description: "Podràs fer ús d'aquesta solució des de dispositius mòbils.",
+        icon: 'tabler:device-mobile',
+      },
+      {
+        title: 'Configuració inicial i actualitzacions de seguretat',
+        description: "Disposaràs d'una configuració inicial perquè puguis fer-lo servir correctament, amb les respectives actualitzacions de signatures de malware i altres dades per a detecció d'amenaces, a més de les actualitzacions de programari de seguretat periòdiques requerides.",
+        icon: 'tabler:settings',
+      },
+    ]}
+  />
+
+  <Features
+    title="Subvenció Kit Digital segons el nombre d'empleats"
+    subtitle="La subvenció pot ser utilitzada per a diversos serveis de digitalització, amb un import màxim que varia en funció del nombre d'empleats de l'empresa."
+    items={[
+      {
+        title: 'Import total subvencionat:',
+        list: [
+          '<strong>De 0 a 3 empleats:</strong> 3.000€',
+          '<strong>De 50 a 99 empleats:</strong> 25.000€',
+          '<strong>De 100 a 250 empleats:</strong> 29.000€',
+        ],
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Import màxim per al servei de comunicacions segures:',
+        list: [
+          '<strong>De 0 a 3 empleats:</strong> 125€/usuari (fins a 2 dispositius)',
+          '<strong>De 50 a 99 empleats:</strong> 125€/usuari (inclou 99 dispositius)',
+          '<strong>De 100 a 250 empleats:</strong> 125€/usuari (inclou 232 dispositius)',
+        ],
+        icon: 'tabler:check',
+      },
+    ]}
+  />
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/21.jpg', alt: 'Fons abstracte, inspirat en tecnologia i software' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contactar',
+        href: 'contactar',
+      },
+      {
+        variant: 'primary',
+        text: 'Trucar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Aprofita la subvenció del Kit Digital per a implementar <span class="custom-gradient">Comunicacions segures</span> de forma
+      gratuïta
+    </Fragment>
+    <Fragment slot="subtitle"> Contacta'ns i t'assessorarem sobre com digitalitzar la teva empresa. </Fragment>
+  </CallToAction>
+
+  <KitDigital />
+</Layout>

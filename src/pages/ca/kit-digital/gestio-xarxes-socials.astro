@@ -1,0 +1,126 @@
+---
+import Features from '~/components/widgets/Features.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import Image from '~/components/common/Image.astro';
+import KitDigital from '~/components/widgets/KitDigital.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+
+const metadata = {
+  title: 'Gestió de xarxes socials',
+  description:
+    'Millora la presència en línia de la teva empresa amb una estratègia de xarxes socials a mida i monitorització periòdica gràcies al Kit Digital.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="Subvenció Kit Digital" backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/21.jpg' }}>
+    <Fragment slot="title">Gestió de xarxes socials</Fragment>
+    <Fragment slot="subtitle">
+      Impulsa la teva presència en línia amb estratègies de xarxes socials personalitzades i eficiència operativa,
+      <span class="custom-gradient">GRATIS</span> gràcies a la subvenció del Kit Digital, per connectar amb nous clients
+      i fidelitzar els existents.
+    </Fragment>
+  </Hero>
+
+  <Features2
+    tagline="Funcionalitats i serveis"
+    subtitle="El principal objectiu d’aquesta categoria és implantar solucions interactives per millorar la presència i rendiment de la teva empresa a les xarxes socials."
+    title="Gestiona les teves xarxes socials i millora la visibilitat amb estratègies a mida"
+    items={[
+      {
+        title: 'Social Media Plan',
+        description:
+          'Comptaràs amb una estratègia de xarxes socials alineada amb la teva missió i visió, per tal que sigui rellevant i connecti amb els teus potencials clients i fidelitzi aquells usuaris que ja ho siguin.',
+        icon: 'tabler:chart-line',
+      },
+      {
+        title: 'Monitorització de xarxes socials',
+        description:
+          'Tindràs monitoritzats i controlats de manera periòdica els impactes de les accions en xarxes socials per veure els teus resultats i saber si estàs complint amb els objectius de la teva estratègia.',
+        icon: 'tabler:search',
+      },
+      {
+        title: 'Optimització de la xarxa/Auditoria Social Media',
+        description: "T'ajudarà a optimitzar el rendiment, analitzant diferents canals socials.",
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Gestió de xarxes socials',
+        description:
+          "L'Agent Digitalitzador que hagis seleccionat per proporcionar-te la solució t'administrarà el perfil/usuari en, almenys, una xarxa social. Si pertanys als segments IV o V, la gestió serà d'almenys 2 xarxes socials.",
+        icon: 'tabler:user-check',
+      },
+      {
+        title: 'Publicació de posts mensuals',
+        description:
+          "Per als segments I, II i III l'Agent Digitalitzador publicarà un mínim de 4-8 entrades (posts) mensuals a les teves xarxes socials. En el cas dels segments IV i V seran mínim 12 posts mensuals.",
+        icon: 'tabler:edit',
+      },
+      {
+        title: "Aplicació d'una estratègia d'escolta activa",
+        description: "T'ajudarà a mantenir una supervisió de les teves xarxes socials. (Exclusiu per a Segment IV i V)",
+        icon: 'tabler:volume',
+      },
+      {
+        title: 'Creació de contingut audiovisual mensual',
+        description:
+          "L'Agent Digitalitzador s'encarregarà de la creació i publicació de, almenys, dues entrades (posts) mensuals de contingut audiovisual. (Exclusiu per a Segment IV i V)",
+        icon: 'tabler:video',
+      },
+    ]}
+  />
+
+  <Features
+    title="Subvenció Kit Digital segons el nombre d'empleats"
+    subtitle="La subvenció pot ser utilitzada per a diversos serveis de digitalització, amb un import màxim que varia en funció del nombre d'empleats de l'empresa."
+    items={[
+      {
+        title: 'Import total subvencionat:',
+        list: [
+          '<strong>De 0 a 3 empleats:</strong> 3.000€',
+          '<strong>De 50 a 99 empleats:</strong> 25.000€',
+          '<strong>De 100 a 250 empleats:</strong> 29.000€',
+        ],
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Import màxim per serveis de gestió de xarxes socials:',
+        list: [
+          '<strong>De 0 a 3 empleats:</strong> 2.000€',
+          '<strong>De 50 a 99 empleats:</strong> 5.000€',
+          '<strong>De 100 a 250 empleats:</strong> 5.000€',
+        ],
+        icon: 'tabler:check',
+      },
+    ]}
+  />
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/21.jpg', alt: 'Fons abstracte, inspirat en tecnologia i software' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contactar',
+        href: 'contactar',
+      },
+      {
+        variant: 'primary',
+        text: 'Trucar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Aprofita la subvenció del Kit Digital per la <span class="custom-gradient"
+        >Gestió de xarxes socials</span
+      > de forma gratuïta
+    </Fragment>
+    <Fragment slot="subtitle"> Contacta'ns i t'assessorarem sobre com digitalitzar la teva empresa. </Fragment>
+  </CallToAction>
+
+  <KitDigital />
+</Layout>

@@ -78,17 +78,21 @@ const metadata = {
   />
 
   <Features
-    title="Import màxim de l'ajuda"
-    subtitle="Es concedeix un import màxim per invertir en <strong>Presència Bàsica a interenet</strong> depenent del nombre d'empleats del beneficiari."
+    title="Subvenció Kit Digital segons el nombre d'empleats"
+    subtitle="La subvenció pot ser utilitzada per a diversos serveis de digitalització, amb un import màxim que varia en funció del nombre d'empleats de l'empresa."
     items={[
       {
-        title: 'De 0 a 3 empleats:',
-        description: '2.000€',
+        title: 'Import total subvencionat:',
+        list: [
+          '<strong>De 0 a 3 empleats:</strong> 3.000€',
+          '<strong>De 50 a 99 empleats:</strong> 25.000€',
+          '<strong>De 100 a 250 empleats:</strong> 29.000€',
+        ],
         icon: 'tabler:check',
       },
       {
-        title: 'De 10 a 50 empleats:',
-        description: '2.000€',
+        title: 'Import màxim per al servei de presència bàsica a internet:',
+        description: 'Fins a 5.000€',
         icon: 'tabler:check',
       },
     ]}

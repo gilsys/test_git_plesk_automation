@@ -1,0 +1,115 @@
+---
+import Features from '~/components/widgets/Features.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import Image from '~/components/common/Image.astro';
+import KitDigital from '~/components/widgets/KitDigital.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Business Intelligence i Analítica',
+  description:
+    'Optimitza la presa de decisions empresarials amb eines de Business Intelligence (BI), integració de dades i panells personalitzats per a la teva PIME amb Kit Digital.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="Subvenció Kit Digital" backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/21.jpg' }}>
+    <Fragment slot="title">Business Intelligence i Analítica</Fragment>
+    <Fragment slot="subtitle">
+      Implementem solucions d'<span class="custom-gradient">anàlisi de dades</span> i <span class="custom-gradient"
+        >Business Intelligence</span
+      > per a la teva empresa,
+      <span class="custom-gradient">GRATIS</span> amb la subvenció del Kit Digital, per transformar les teves dades en coneixement
+      i millorar la presa de decisions empresarials.
+    </Fragment>
+  </Hero>
+
+  <Features2
+    columns={1}
+    tagline="Funcionalitats i serveis"
+    subtitle="L’objectiu d’aquesta categoria és possibilitar-te l’explotació de dades de la teva empresa per a la millora del procés de presa de decisions."
+    title="Transforma les teves dades en avantatge competitiu amb solucions d'Intel·ligència de Negoci i Anàlisi Avançada"
+    items={[
+      {
+        title: 'Integració de dades amb altres bases de dades',
+        description:
+          'Tindràs accés a altres bases de dades i a la realització de comparacions amb les dades exposades.',
+        icon: 'tabler:database',
+      },
+      {
+        title: 'Emmagatzematge de dades',
+        description:
+          "Si pertanys als segments I, II o III, disposaràs d'una capacitat d'emmagatzematge com a mínim d'1 GB per usuari. Per als segments IV i V, la capacitat d'emmagatzematge mínima serà de 5 GB per usuari.",
+        icon: 'tabler:cloud',
+      },
+      {
+        title: 'Creació de panells de dades estructurats i visuals',
+        description:
+          'Comptaràs amb panells de dades personalitzats amb dades rellevants i diferents formes de visualització.',
+        icon: 'tabler:chart-pie',
+      },
+      {
+        title: 'Exportació de dades',
+        description:
+          "Podràs exportar dades a imatges o a documents d'Excel, creant sinergies i compatibilitats amb diferents programes que utilitzis comunament.",
+        icon: 'tabler:file-export',
+      },
+    ]}
+  />
+
+  <Features
+    title="Subvenció Kit Digital segons el nombre d'empleats"
+    subtitle="La subvenció pot ser utilitzada per a diversos serveis de digitalització, amb un import màxim que varia en funció del nombre d'empleats de l'empresa."
+    items={[
+      {
+        title: 'Import total subvencionat:',
+        list: [
+          '<strong>De 0 a 3 empleats:</strong> 3.000€',
+          '<strong>De 50 a 99 empleats:</strong> 25.000€',
+          '<strong>De 100 a 250 empleats:</strong> 29.000€',
+        ],
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Import màxim per al servei de Business Intelligence i Analítica:',
+        list: [
+          '<strong>De 0 a 3 empleats:</strong> 1.500€ (inclou 1 usuari)',
+          '<strong>De 50 a 99 empleats:</strong> 7.000€ (inclou 10 usuaris)',
+          '<strong>De 100 a 250 empleats:</strong> 8.000€ (inclou 15 usuaris)',
+        ],
+        icon: 'tabler:check',
+      },
+    ]}
+  />
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/21.jpg', alt: 'Fons abstracte, inspirat en tecnologia i software' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contactar',
+        href: 'contactar',
+      },
+      {
+        variant: 'primary',
+        text: 'Trucar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Estàs a un <span class="custom-gradient">click</span> de transformar les teves <span class="custom-gradient"
+        >dades</span
+      > en coneixement clau per impulsar el teu negoci
+    </Fragment>
+    <Fragment slot="subtitle">
+      Contacta'ns i implementarem solucions d'<span class="custom-gradient">anàlisi de dades</span> per a la teva empresa,
+      de forma gratuïta gràcies a la subvenció del Kit Digital.
+    </Fragment>
+  </CallToAction>
+
+  <KitDigital />
+</Layout>

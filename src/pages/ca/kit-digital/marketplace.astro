@@ -1,0 +1,116 @@
+---
+import Features from '~/components/widgets/Features.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import Image from '~/components/common/Image.astro';
+import KitDigital from '~/components/widgets/KitDigital.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Marketplace',
+  description:
+    'Optimitza les vendes en Marketplace amb anàlisis de competència, estratègia de negoci, gestió de catàleg i listings de forma gratuïta amb el Kit Digital.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="Subvenció Kit Digital" backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/21.jpg' }}>
+    <Fragment slot="title">Marketplace</Fragment>
+    <Fragment slot="subtitle">
+      Dissenyem una estratègia personalitzada per a dirigir les teves referències i productes,
+      <span class="custom-gradient">GRATIS</span> gràcies a la subvenció del Kit Digital, per augmentar les teves vendes
+      i optimitzar els canals de distribució.
+    </Fragment>
+  </Hero>
+
+  <Features2
+    tagline="Funcionalitats i serveis"
+    subtitle="L’objectiu principal d’aquesta categoria és ajudar-te a dirigir les teves referències i productes per a incrementar el teu nivell de vendes, optimitzant els recursos existents, triant els canals de distribució adequats i adaptant les teves referències i productes a les necessitats externes."
+    title="Optimitza la gestió de productes i canals de distribució per incrementar les teves vendes"
+    items={[
+      {
+        title: "Estudi previ d'alternatives i alta a la plataforma",
+        description:
+          "La solució inclou l'obertura de compte i alta del teu perfil, pel teu compte, en, almenys, una plataforma de Marketplace i en, almenys, un país.",
+        icon: 'tabler:database',
+      },
+      {
+        title: 'Anàlisi de la competència',
+        description:
+          "La solució inclou la realització d'una investigació de mercat focalitzada en les característiques dels teus competidors per millorar el teu procés de presa de decisions i ajudar-te a assolir una posició competitiva.",
+        icon: 'tabler:search',
+      },
+      {
+        title: "Disseny i definició de l'estratègia de negoci",
+        description:
+          "La solució inclou la generació de l'estratègia de negoci per aconseguir la consecució dels objectius desitjats orientant els recursos disponibles cap a aquesta finalitat.",
+        icon: 'tabler:target',
+      },
+      {
+        title: 'Producció del catàleg de referències',
+        description:
+          "Anàlisi de les categories a comercialitzar per seleccionar, almenys, deu productes alineats amb l'estratègia de negoci, llevat que no disposis d'aquest número, en aquest cas podrà ser menor.",
+        icon: 'tabler:box',
+      },
+      {
+        title: 'Creació del contingut del listing',
+        description:
+          "Definició de, almenys, deu descripcions del catàleg de referències, llevat que no disposis d'aquest número, en aquest cas podrà ser menor.",
+        icon: 'tabler:file-description',
+      },
+      {
+        title: 'Alta de referències',
+        description:
+          "Càrrega de, almenys, deu referències, i les seves respectives descripcions i fotografies, a la plataforma, llevat que no disposis d'aquest número, en aquest cas podrà ser menor, acompanyada per la descripció i fotografia individual de cada producte.",
+        icon: 'tabler:cloud-upload',
+      },
+    ]}
+  />
+
+  <Features
+    title="Subvenció Kit Digital segons el nombre d'empleats"
+    subtitle="La subvenció pot ser utilitzada per a diversos serveis de digitalització, amb un import màxim que varia en funció del nombre d'empleats de l'empresa."
+    items={[
+      {
+        title: 'Import total subvencionat:',
+        list: [
+          '<strong>De 0 a 3 empleats:</strong> 3.000€',
+          '<strong>De 50 a 99 empleats:</strong> 25.000€',
+          '<strong>De 100 a 250 empleats:</strong> 29.000€',
+        ],
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Import màxim per al servei de marketplace:',
+        description: 'Fins a 2.000€',
+        icon: 'tabler:check',
+      },
+    ]}
+  />
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/21.jpg', alt: 'Fons abstracte, inspirat en tecnologia i software' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contactar',
+        href: 'contactar',
+      },
+      {
+        variant: 'primary',
+        text: 'Trucar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Aprofita la subvenció del Kit Digital per implementar el servei de <span class="custom-gradient">Marketplace</span> de forma
+      gratuïta
+    </Fragment>
+    <Fragment slot="subtitle"> Contacta'ns i t'assessorarem sobre com digitalitzar la teva empresa. </Fragment>
+  </CallToAction>
+
+  <KitDigital />
+</Layout>

@@ -1,0 +1,173 @@
+---
+import Features from '~/components/widgets/Features.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import Image from '~/components/common/Image.astro';
+import KitDigital from '~/components/widgets/KitDigital.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Gestió de clients',
+  description:
+    'Optimitza la gestió de relacions comercials amb els clients mitjançant eines digitals avançades i gestió documental centralitzada per a la teva PIME amb el Kit Digital.',
+};
+---
+
+<Layout metadata={metadata}>
+    <Hero tagline="Subvenció Kit Digital" backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/21.jpg' }}>
+        <Fragment slot="title">Gestió de clients amb IA associada</Fragment>
+        <Fragment slot="subtitle">
+          Implanta un sistema de <span class="custom-gradient">gestió de clients</span> intel·ligent amb <span
+            class="custom-gradient">CRM</span> i eines digitals avançades, 
+          <span class="custom-gradient">GRATIS</span> gràcies a la subvenció del Kit Digital, per millorar l'eficiència i
+          les relacions comercials.
+        </Fragment>
+      </Hero>
+      
+
+  <Features2
+    tagline="Funcionalitats i serveis"
+    subtitle="El principal objectiu d’aquesta categoria és la dotació de capacitacions en intel·ligència artificial per a optimitzar processos i agilitzar les interaccions i relacions amb els clients."
+    title="Optimitza la gestió de clients i oportunitats amb eines digitals avançades fent ús de la IA"
+    items={[
+        {
+          title: 'Gestió de clients potencials (Leads)',
+          description: 'De forma manual o mitjançant una importació per fitxer.',
+          icon: 'tabler:user-plus',
+        },
+        {
+          title: 'Gestió de clients',
+          description: 'Traçant l\'activitat comercial des de l\'obertura de l\'oportunitat fins a la simulació de productes/serveis i la contractació d\'aquests.',
+          icon: 'tabler:user-check',
+        },
+        {
+          title: 'Gestió d\'oportunitats',
+          description: 'Totes les oportunitats de negoci reals.',
+          icon: 'tabler:clipboard',
+        },
+        {
+          title: 'Accions o tasques comercials',
+          description: 'Possibilitat de crear accions i tasques comercials (manuals o generades automàticament a partir del workflow de vendes assignat a l\'oportunitat).',
+          icon: 'tabler:check',
+        },
+        {
+          title: 'Reporting, planificació i seguiment comercial',
+          description: 'Diferents nivells d\'agregació d\'informació.',
+          icon: 'tabler:chart-bar',
+        },
+        {
+          title: 'Alertes',
+          description: 'Podràs visualitzar alertes de clients en diferents tipologies de format gràfic.',
+          icon: 'tabler:bell',
+        },
+        {
+          title: 'Gestió documental',
+          description: 'Comptaràs amb un programari de gestió comercial i documental per tenir tota la informació organitzada en un mateix lloc.',
+          icon: 'tabler:folder',
+        },
+        {
+          title: 'Integració de diverses plataformes',
+          description: 'Disponibilitat d\'APIs o Web Services per a la consolidació de la informació i dades de tota l\'empresa.',
+          icon: 'tabler:plug',
+        },
+        {
+          title: 'Web responsive (mòbil/tablet)',
+          description: 'Les pàgines web dissenyades han de ser funcionals tant en ordinadors personals com en dispositius mòbils.',
+          icon: 'tabler:device-laptop',
+        },
+        {
+          title: 'Lead Scoring predictiu',
+          description: 'L\'eina haurà de fer ús de la Intel·ligència artificial per a l\'avaluació històrica de les dades de vendes i el comportament dels clients per predir i destacar les oportunitats més prometedores.',
+          icon: 'tabler:star',
+        },
+        {
+          title: 'Automatització de reunions i tasques',
+          description: 'L\'eina haurà d\'automatitzar el procés de programació de cites amb clients així com facilitar la coordinació entre els equips interns i aquests.',
+          icon: 'tabler:calendar',
+        },
+        {
+          title: 'Automatització de "journeys de venda"',
+          description: 'La intel·ligència artificial haurà d\'automatitzar tasques com la gestió de tasques i oportunitats comercials; classificació de correus electrònics i la seva resposta automàtica; l\'actualització de registres i l\'assignació de tasques a la xarxa comercial.',
+          icon: 'tabler:repeat',
+        },
+        {
+          title: 'Integració amb la plataforma de Gestió de Clients',
+          description: 'Disponibilitat d\'APIs o Web Services per a la consolidació de la informació i dades.',
+          icon: 'tabler:plug',
+        },
+        {
+          title: 'Dades, privacitat i seguretat',
+          description: 'Es respecten els compromisos existents, inclosos RGPD i els límits de dades estipulats a la CE.',
+          icon: 'tabler:shield-check',
+        },
+        {
+          title: 'Interacció amb sistemes d\'IA',
+          description: 'Els proveïdors garantiran que els sistemes d\'IA destinats a interactuar directament amb persones físiques es dissenyin de tal manera que aquestes persones sàpiguen que estan interactuant amb un sistema d\'IA.',
+          icon: 'tabler:robot',
+        },
+        {
+          title: 'Capacitació en fonaments d\'IA generativa en l\'àmbit de gestió de clients',
+          description: 'Capacitacions per preparar els empleats al voltant de les funcionalitats descrites anteriorment, que comptaran amb:',
+          list: [
+            "<strong>Fonaments bàsics:</strong><br/>Aproximació a la normativa vigent i riscos ètics i de seguretat derivats.",
+            "<strong>Capacitacions específiques en:</strong><br/>Gestió predictiva de clients actuals, potencials (leads) i oportunitats, automatització de reunions, tasques “journeys de venda” (classificació de correus electrònics, resposta automàtica, actualització de registres i assignació de tasques a la xarxa comercial), xatbots (FAQs), gestió documental intel·ligent.",
+            "<strong>Durada:</strong><br/>Les capacitacions tindran una durada total de 20h al llarg de dos mesos per cadascun dels usuaris definits per segment.",
+            "<strong>Instructor humà:</strong><br/>Tant en modalitat presencial com en línia, les capacitacions les impartirà un instructor humà a disposició dels usuaris.",
+            "<strong>Diploma de finalització:</strong><br/>S'atorgarà un certificat de capacitats adquirides en IA en l'àmbit de la gestió de clients al concloure la formació.",
+          ],
+          icon: 'tabler:book',
+        },
+      ]}
+      
+  />
+
+  <Features
+    title="Subvenció Kit Digital segons el nombre d'empleats"
+    subtitle="La subvenció pot ser utilitzada per a diversos serveis de digitalització, amb un import màxim que varia en funció del nombre d'empleats de l'empresa."
+    items={[
+      {
+        title: 'Import total subvencionat:',
+        list: [
+          '<strong>De 50 a 99 empleats:</strong> 25.000€',
+          '<strong>De 100 a 250 empleats:</strong> 29.000€',
+        ],
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Import màxim per al servei de gestió de clients amb IA associada:',
+        list: [
+        '<strong>De 50 a 99 empleats:</strong> 18.000€ (inclou 10 usuaris i mínim capacitació a 3 d’ells en IA associada)',
+        '<strong>De 100 a 250 empleats:</strong> 24.000€ (inclou 15 usuaris i mínim capacitació a 5 d’ells en IA associada)',
+      ],
+        icon: 'tabler:check',
+      },
+    ]}
+  />
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/21.jpg', alt: 'Fons abstracte, inspirat en tecnologia i software' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contactar',
+        href: 'contactar',
+      },
+      {
+        variant: 'primary',
+        text: 'Trucar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+  <Fragment slot="title">
+    Aprofita la subvenció del Kit Digital per implementar el servei de <span class="custom-gradient">Gestió de clients amb IA associada</span> de forma
+    gratuïta
+  </Fragment>
+  <Fragment slot="subtitle"> Contacta'ns i t'assessorarem sobre com digitalitzar la teva empresa. </Fragment>
+  </CallToAction>
+
+  <KitDigital />
+</Layout>

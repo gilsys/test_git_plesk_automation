@@ -118,10 +118,8 @@ export const routes = {
   ca: {
     'home': '/ca',
     'gilsys': '/ca/sobre-nosaltres',
-       'kit-digital/basic-internet-presence': '/ca/kit-digital/presencia-basica-internet',
     'kit-digital/basic-internet-presence': '/ca/kit-digital/presencia-basica-internet',
     'kit-digital': '/ca/kit-digital',
-    'kit-digital/basic-internet-presence': '/ca/kit-digital/presencia-basica-internet',
     'kit-digital/e-commerce': '/ca/kit-digital/botiga-electronica',
     'kit-digital/customer-management': '/ca/kit-digital/gestio-de-clients',
     'kit-digital/process-management': '/ca/kit-digital/gestio-de-processos',
@@ -139,14 +137,9 @@ export const routes = {
     'kit-digital/ai-process-management': '/ca/kit-digital/gestio-processos-ia',
     'kit-digital/secure-workplace': '/ca/kit-digital/lloc-de-treball-segur',
     'kit-consulting/ai-advisory': '/ca/kit-consulting/servei-de-assessorament-en-intelligencia-artificial',
-    'kit-consulting/basic-data-analysis': '/ca/kit-consulting/servei-dassessorament-en-analisi-de-dades-basic',
-    'kit-consulting/advanced-data-analysis':
-      'kit-consulting/servei-de-assessorament-en-analisis-de-dades-avancat',
+    'kit-consulting/basic-data-analysis': '/ca/kit-consulting/servei-de-assessorament-en-analisi-de-dades-basic',
+    'kit-consulting/advanced-data-analysis':'/ca/kit-consulting/servei-de-assessorament-en-analisis-de-dades-avancat',
     'kit-consulting': '/ca/kit-consulting',
-    'kit-consulting/ai-advisory': '/ca/kit-consulting/servei-de-assessorament-en-intelligencia-artificial',
-    'kit-consulting/basic-data-analysis': '/ca/kit-consulting/servei-dassessorament-en-analisi-de-dades-basic',
-    'kit-consulting/advanced-data-analysis':
-      'kit-consulting/servei-de-assessorament-en-analisis-de-dades-avancat',
     'kit-consulting/digital-sales-advisory': '/ca/kit-consulting/servei-de-assessorament-en-vendes-digitals',
     'kit-consulting/business-process-advisory':
       'kit-consulting/servei-de-assessorament-en-processos-de-negoci-o-proces-de-produccio',
@@ -459,7 +452,7 @@ export const header = {
               {
                 href: routes['ca']['software/metabase'],
                 title: 'Utilitzem Metabase com a eina de Business Intelligence',
-                text: 'Anàlisi empresarial',
+                text: 'Business Intelligence',
                 icon: 'tabler:chart-bar',
               },
               {
@@ -807,11 +800,11 @@ export const footer = {
       { text: 'Política de cookies', href: '#'},
     ],
     socialLinks: [
-      { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
-      { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
-      { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
+      { ariaLabel: 'Linked-in', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/company/gilsys' },
+      //{ ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
+      { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: 'https://www.facebook.com/gilsysg6' },
       //{ ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
-      { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
+      //{ ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
     ],
     address: `            
             <a href="tel:+34665331271">665 33 12 71</a><br>

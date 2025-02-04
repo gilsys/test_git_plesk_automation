@@ -26,7 +26,7 @@ const u = useRoutes(getLangFromUrl(Astro.url));
     id="hero-home"
     tagline=""
     actions={[
-      { variant: 'primary', target: '_blank', text: 'Sol·licitar pressupost', href: u('contact') },
+      { variant: 'primary', target: '_blank', text: 'Pressupost gratuït', href: u('contact') },
       { text: 'Serveis', href: '#serveis' },
     ]}
     backgroundImage={{
@@ -54,7 +54,7 @@ const u = useRoutes(getLangFromUrl(Astro.url));
     classes={{ 
       container: 'pb-0 md:pb-0 lg:pb-0',
      }}
-    title="No et quedis enrere, integra<br/><span class='custom-gradient'>Intel·ligència Artificial</span> a la teva empresa"
+    title="No et quedis enrere, integra <br/><span class='custom-gradient'>Intel·ligència Artificial</span> a la teva empresa"
     subtitle={`Som una empresa d'enginyeria informàtica, especialitzada en desenvolupament de software. No només coneixem les darreres novetats en <a title='Programació a mida integrant intel·ligència artificial' class='text-accent' href='`+ u('development/ia')  +`'>intel·ligència artificial</a> sinó que les apliquem en eines empresarials, aplicacions web, apps mòbils a mida i automatització de processos.`}
   >
   <Fragment slot="preContent">
@@ -67,7 +67,7 @@ const u = useRoutes(getLangFromUrl(Astro.url));
 
   <FourBlocks
     id="serveis"
-    title="<a name='serveis'>Serveis d'enginyeria informàtica</a>"
+    title="<a title='Serveis de programció a mida, software personalitzat, migració i integració i consultoria TIC' name='serveis'>Serveis d'enginyeria informàtica</a>"
     information="No adaptis la teva empresa a la tecnologia, nosaltres <span class='text-black'>adaptem la tecnologia a la teva empresa</span>."
     blocks={[
       {
@@ -162,7 +162,8 @@ const u = useRoutes(getLangFromUrl(Astro.url));
   <!-- Stats Widget ****************** -->
 
   <Stats
-    title="Algunes dades"
+    title="Experiència i confiança: <span class='custom-gradient'>gilsys en xifres</span>"
+    subtitle="Donem les <strong>gràcies</strong> a tots els clients que han confiat en les nostres solucions de programació a mida, apps i intel·ligència artificial, i que han tingut un impacte real en la seva empresa."
     stats={[
       { title: 'Anys', amount: '+20' },
       { title: 'Projectes', amount: '+200' },
@@ -174,6 +175,7 @@ const u = useRoutes(getLangFromUrl(Astro.url));
   <!-- Content Widget **************** -->
 
   <Content
+    isImageSmall
     isAfterContent={false}
     items={[
       {
@@ -189,8 +191,9 @@ const u = useRoutes(getLangFromUrl(Astro.url));
       },
     ]}
     image={{
+      id: 'image-kit-digital',
       src: '~/assets/images/kit-digital.jpg',
-      alt: 'SaaS Businesses Image',
+      alt: `Kit Digital - Subvencions per implantació de transformació digital a pimes i autònoms`,
     }}
   >
     <Fragment slot="content">
@@ -207,7 +210,8 @@ const u = useRoutes(getLangFromUrl(Astro.url));
 
   <Content
     isReversed
-    isAfterContent={false}
+    isImageSmall    
+    isAfterContent
     items={[
       {
         title: 'Què és el Kit Consulting?',
@@ -222,8 +226,9 @@ const u = useRoutes(getLangFromUrl(Astro.url));
       },
     ]}
     image={{
+      id: 'image-kit-consulting',
       src: '~/assets/images/kit-consulting.jpg',
-      alt: 'Kit Consulting Image',
+      alt: 'Kit Consulting - Subvencions per assessorament en transformació digital',
     }}
   >
     <Fragment slot="content">
@@ -404,8 +409,8 @@ const u = useRoutes(getLangFromUrl(Astro.url));
     actions={[
       {
         variant: 'primary',
-        text: 'Contactar',
-        href: 'contactar',
+        text: 'Pressupost gratuït',
+        href: u('contact'),
       },
       {
         variant: 'primary',
@@ -414,7 +419,7 @@ const u = useRoutes(getLangFromUrl(Astro.url));
       },
     ]}
   >
-    <Fragment slot="title">Tens un projecte en ment i necessites assessorament o pressupost?</Fragment>
-    <Fragment slot="subtitle">Des de gilsys t'ajudarem a convertir la teva idea realitat.</Fragment>
+    <Fragment slot="title">Sol·licita un <span class='custom-gradient'>pressupost orientatiu</span> gratuït</Fragment>
+    <Fragment slot="subtitle">Si tens un projecte en ment i necessites assessorament, des de gilsys t'ajudarem a convertir-lo en realitat.</Fragment>
   </CallToAction>
 </Layout>

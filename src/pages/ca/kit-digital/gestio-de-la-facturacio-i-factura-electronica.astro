@@ -1,0 +1,171 @@
+---
+import Features from '~/components/widgets/Features.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import Image from '~/components/common/Image.astro';
+import KitDigital from '~/components/widgets/KitDigital.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+
+const metadata = {
+  title: 'Gestió de la facturació i factura electrònica',
+  description:
+    "Digitalitza el flux d'emissió i recepció de factures amb la nostra solució de facturació electrònica personalitzable per a la teva PIME amb el Kit Digital.",
+};
+---
+
+<Layout metadata={metadata}>
+    <Hero tagline="Subvenció Kit Digital" backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/21.jpg' }}>
+        <Fragment slot="title">Facturació Electrònica i Gestió de la Facturació</Fragment>
+        <Fragment slot="subtitle">
+          Automatitza i digitalitza tot el procés d'emissió i recepció de factures amb solucions personalitzables i segures, 
+          <span class="custom-gradient">GRATIS</span> gràcies a la subvenció del Kit Digital, per millorar l'eficiència i complir amb la normativa tributària.
+        </Fragment>
+      </Hero>
+
+      <Features2
+      tagline="Funcionalitats i serveis"
+      subtitle="Aquesta solució té com a objectiu millorar la gestió dels processos de facturació, des de la creació fins a l'enviament de factures, per augmentar l'eficiència operativa de la teva PIME."
+      title="Automatització de la facturació electrònica i optimització dels processos financers"    
+    items={[
+      {
+        title: 'Factures en format estructurat',
+        description:
+          "Tindràs la possibilitat d'emetre factures en formats estructurats, almenys en format FACTURA-E, per facilitar-ne el tractament automatitzat.",
+        icon: 'tabler:file-code',
+      },
+      {
+        title: 'Factures il·limitades',
+        description: 'Podràs emetre i rebre un nombre il·limitat de factures.',
+        icon: 'tabler:file-invoice',
+      },
+      {
+        title: 'Clients il·limitats',
+        description: "Tindràs la capacitat d'enviar factures a un nombre il·limitat de clients.",
+        icon: 'tabler:user',
+      },
+      {
+        title: 'Productes o serveis il·limitats',
+        description: 'Podràs crear un nombre il·limitat de productes i/o serveis facturables dins del catàleg.',
+        icon: 'tabler:box',
+      },
+      {
+        title: 'Enviament i recepció de factures',
+        description:
+          "La solució implantada per l'Agent Digitalitzador et permetrà enviar i rebre factures electròniques directament, almenys per correu electrònic.",
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Personalització de factures',
+        description: 'Les factures seran personalitzables, incloent-hi la selecció del teu logotip.',
+        icon: 'tabler:edit',
+      },
+      {
+        title: 'Còpies de seguretat periòdiques',
+        description: "Podràs realitzar còpies de seguretat, amb possibilitat d'almenys una periodicitat diària.",
+        icon: 'tabler:cloud',
+      },
+      {
+        title: 'Emmagatzematge/Històric de factures',
+        description:
+          "Si pertanys als segments I, II o III tindràs almenys 1 GB per a les factures. Per als segments IV i V es proporcionarà un emmagatzematge d'almenys 10 GB.",
+        icon: 'tabler:database',
+      },
+      {
+        title: 'Integració amb altres solucions',
+        description:
+          "La solució haurà de disposar d'APIs o Web Services per a la seva integració amb altres eines, així com permetre la càrrega de dades manualment.",
+        icon: 'tabler:plug',
+      },
+      {
+        title: 'Control de venciment de les factures',
+        description: 'Tindràs un sistema de control del venciment de les factures.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: "Generació d'un registre de facturació",
+        description:
+          "La solució et permetrà generar un registre de facturació, de forma simultània o immediatament anterior a l'expedició de cada factura.",
+        icon: 'tabler:file-text',
+      },
+      {
+        title: 'Emissió de factures verificables',
+        description:
+          "La solució haurà de permetre l'emissió de factures, tant en paper com electrònicament, que puguin ser verificables amb l'Agència Tributària.",
+        icon: 'tabler:file-check',
+      },
+      {
+        title: 'Verificació presencial',
+        description:
+          'La solució haurà de permetre la verificació presencial del registre de facturació per part de les autoritats competents.',
+        icon: 'tabler:lock',
+      },
+      {
+        title: 'Declaració responsable',
+        description:
+          "La solució haurà de disposar d'una declaració responsable per part del fabricant acreditant que el programari compleix amb la normativa tributària vigent.",
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Compliment',
+        description:
+          "Podràs assegurar el compliment de la normativa aplicable, en concret el Reglament pel qual es regulen les obligacions de facturació del Reial decret 1619/2012, així com qualsevol normativa d'aplicació.",
+        icon: 'tabler:shield-check',
+      },
+    ]}
+  />
+
+  <Features
+    title="Subvenció Kit Digital segons el nombre d'empleats"
+    subtitle="La subvenció pot ser utilitzada per a diversos serveis de digitalització, amb un import màxim que varia en funció del nombre d'empleats de l'empresa."
+    items={[
+      {
+        title: 'Import total subvencionat:',
+        list: [
+          '<strong>De 0 a 3 empleats:</strong> 3.000€',
+          '<strong>De 50 a 99 empleats:</strong> 25.000€',
+          '<strong>De 100 a 250 empleats:</strong> 29.000€',
+        ],
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Import màxim per al servei de gestió de facturació i factura electrònica:',
+        list: [
+          '<strong>De 0 a 3 empleats:</strong> 1.000€ (inclou 1 usuari)',
+          '<strong>De 50 a 99 empleats:</strong> 3.000€ (inclou 6 usuaris)',
+          '<strong>De 100 a 250 empleats:</strong> 3.000€ (inclou 6 usuaris)',
+        ],
+        icon: 'tabler:check',
+      },
+    ]}
+  />
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/21.jpg', alt: 'Fons abstracte, inspirat en tecnologia i software' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contactar',
+        href: 'contactar',
+      },
+      {
+        variant: 'primary',
+        text: 'Trucar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+  <Fragment slot="title">
+    Aprofita la subvenció del Kit Digital per a implementar la <span class="custom-gradient">Gestió de la facturació</span> de forma gratuïta
+  </Fragment>
+  <Fragment slot="subtitle">
+    Contacta'ns i t'assessorarem sobre com digitalitzar la teva empresa.
+  </Fragment>
+  
+  
+  </CallToAction>
+
+  <KitDigital />
+</Layout>

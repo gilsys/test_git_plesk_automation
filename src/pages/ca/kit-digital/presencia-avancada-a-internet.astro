@@ -1,0 +1,121 @@
+---
+import Features from '~/components/widgets/Features.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import Image from '~/components/common/Image.astro';
+import KitDigital from '~/components/widgets/KitDigital.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Presència avançada a Internet',
+  description:
+    "Serveis avançats per a posicionament i visibilitat per a empreses a Internet, augmentant l'abast i trànsit de clients potencials amb la subvenció del Kit Digital.",
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="Subvenció Kit Digital" backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/21.jpg' }}>
+    <Fragment slot="title">Presència avançada a Internet</Fragment>
+    <Fragment slot="subtitle">
+      Millora la visibilitat de la teva empresa a internet amb solucions avançades en SEO, posicionament i optimització,
+      <span class="custom-gradient">GRATIS</span>, gràcies a la subvenció del Kit Digital.
+    </Fragment>
+  </Hero>
+
+  <Features2
+    tagline="Funcionalitats i serveis"
+    subtitle="Aquest servei està dissenyat per millorar la teva visibilitat online, augmentant el trànsit i la presència a internet de la teva empresa."
+    title="Millora el posicionament i visibilitat de la teva empresa a internet"
+    items={[
+      {
+        title: 'Posicionament bàsic a internet',
+        description:
+          "La solució haurà de posicionar la informació bàsica del negoci, contacte i perfil de la teva empresa en els principals sites, xarxes de negoci o directoris d'empreses i professionals.",
+        icon: 'tabler:search',
+      },
+      {
+        title: 'Anàlisi de paraules clau',
+        description:
+          'Gestió, cerca i anàlisi de paraules clau amb la finalitat de desenvolupar estratègies útils perquè els cercadors classifiquin el contingut i ajudin els usuaris a trobar resultats rellevants per a les seves consultes.',
+        icon: 'tabler:chart-pie',
+      },
+      {
+        title: 'Anàlisi de la competència',
+        description:
+          "La solució inclou una anàlisi mensual de la competència per informar-te de la teva situació davant d'altres competidors.",
+        icon: 'tabler:eye',
+      },
+      {
+        title: 'SEO On-Page',
+        description:
+          "La solució ha d'oferir un servei mínim de dues pàgines o apartats SEO On-Page, optimitzant l'estructura i el contingut intern per millorar la posició natural de la teva pime en cercadors, així com la indexació i jerarquització del contingut.",
+        icon: 'tabler:file-code',
+      },
+      {
+        title: 'SEO Off-Page',
+        description:
+          "La solució haurà de proveir aquest servei, que comportarà l'execució d'accions fora de l'entorn del lloc web per millorar el teu posicionament orgànic.",
+        icon: 'tabler:external-link',
+      },
+      {
+        title: 'Creació de metadades estructurades de pàgina',
+        description:
+          'La solució et proporcionarà la creació de metadades estructurades de la teva pàgina (Exclusiu per als segments IV i V).',
+        icon: 'tabler:code',
+      },
+      {
+        title: 'Informes mensuals de seguiment',
+        description:
+          "La solució inclou un informe mensual dels resultats de les accions executades per generar consciència de l'evolució i la repercussió de les mateixes en la presència a internet del teu negoci.",
+        icon: 'tabler:file-report',
+      },
+    ]}
+  />
+
+  <Features
+    title="Subvenció Kit Digital segons el nombre d'empleats"
+    subtitle="La subvenció pot ser utilitzada per a diversos serveis de digitalització, amb un import màxim que varia en funció del nombre d'empleats de l'empresa."
+    items={[
+      {
+        title: 'Import total subvencionat:',
+        list: [
+          '<strong>De 0 a 3 empleats:</strong> 3.000€',
+          '<strong>De 50 a 99 empleats:</strong> 25.000€',
+          '<strong>De 100 a 250 empleats:</strong> 29.000€',
+        ],
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Import màxim per al servei de presència avançada a internet:',
+        description: 'Fins a 5.000€',
+        icon: 'tabler:check',
+      },
+    ]}
+  />
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/21.jpg', alt: 'Fons abstracte, inspirat en tecnologia i software' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contactar',
+        href: 'contactar',
+      },
+      {
+        variant: 'primary',
+        text: 'Trucar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Aprofita la subvenció del Kit Digital per la <span class="custom-gradient">Presència avançada a Internet</span> de forma
+      gratuïta
+    </Fragment>
+    <Fragment slot="subtitle"> Contacta'ns i t'assessorarem sobre com digitalitzar la teva empresa. </Fragment>
+  </CallToAction>
+
+  <KitDigital />
+</Layout>

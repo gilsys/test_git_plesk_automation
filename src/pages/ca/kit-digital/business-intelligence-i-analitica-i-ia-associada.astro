@@ -1,0 +1,119 @@
+---
+import Features from '~/components/widgets/Features.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import Image from '~/components/common/Image.astro';
+import KitDigital from '~/components/widgets/KitDigital.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Business Intelligence i Analítica i IA associada',
+  description:
+    'Millora la presa de decisions amb capacitació en IA, integració i anàlisi de dades, i creació de panells visuals. 100% subvencionat.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="Subvenció Kit Digital" backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/21.jpg' }}>
+    <Fragment slot="title">Business Intelligence i Analítica i IA associada</Fragment>
+    <Fragment slot="subtitle">
+        Impulsa la teva empresa amb <span class="custom-gradient">Business Intelligence</span> i 
+        <span class="custom-gradient">analítica de dades</span> basada en IA,  
+        <span class="custom-gradient">GRATIS</span> gràcies a la subvenció del Kit Digital, per millorar la presa de decisions.
+      </Fragment>
+    
+  </Hero>
+
+  <Features2
+    columns={1}
+    tagline="Funcionalitats i serveis"
+    subtitle="El principal objectiu d’aquesta categoria és la capacitació en intel·ligència atificial especialitzada en Business Intelligence i analítica. D’aquesta manera podràs millorar el procés de presa de decisions empresarials."
+    title="Millora la presa de decisions amb IA aplicada a Business Intelligence i anàlisi de dades"
+    items={[
+      {
+        title: 'Integració de dades amb altres bases de dades',
+        description:
+          "La solució permetrà l'accés a altres bases de dades i la realització de comparacions amb les dades exposades.",
+        icon: 'tabler:database',
+      },
+      {
+        title: 'Emmagatzematge de dades',
+        description: "S'haurà de proveir una capacitat mínima d'emmagatzematge d'1 GB per usuari.",
+        icon: 'tabler:cloud',
+      },
+      {
+        title: 'Creació de panells de dades estructurats i visuals',
+        description:
+          'La solució permetrà crear panells de dades personalitzats, rellevants i visualitzar-los de diferents formes.',
+        icon: 'tabler:chart-line',
+      },
+      {
+        title: 'Exportació de dades',
+        description:
+          "A imatges o a documents d'Excel, creant sinergies i compatibilitats amb diferents programes d'ús comú per als usuaris.",
+        icon: 'tabler:download',
+      },
+      {
+        title: "Capacitació en fonaments d'IA generativa en l'àmbit de BI i analítica",
+        description:
+          'Capacitacions per preparar els empleats al voltant de les funcionalitats descrites anteriorment, que comptaran amb:',
+        list: [
+          '<strong>Fonaments bàsics:</strong><br/>Aproximació a la normativa vigent i riscos ètics i de seguretat derivats.',
+          "<strong>Capacitacions específiques en:</strong><br/>Integració de dades amb altres bases de dades, emmagatzematge de dades, creació de panells de dades estructurats i visuals, exportació de dades i casos d'ús amb les principals tecnologies d'IA.",
+          '<strong>Durada:</strong><br/>Les capacitacions tindran una durada total de 20h al llarg de dos mesos per cadascun dels usuaris definits per segment.',
+          '<strong>Instructor humà:</strong><br/>Tant en modalitat presencial com en línia, les capacitacions les impartirà un instructor humà a disposició dels usuaris.',
+          "<strong>Diploma de finalització:</strong><br/>S'atorgarà un certificat de capacitats adquirides en IA al concloure la formació.",
+        ],
+        icon: 'tabler:book',
+      },
+    ]}
+  />
+
+  <Features
+    title="Subvenció Kit Digital segons el nombre d'empleats"
+    subtitle="La subvenció pot ser utilitzada per a diversos serveis de digitalització, amb un import màxim que varia en funció del nombre d'empleats de l'empresa."
+    items={[
+      {
+        title: 'Import total subvencionat:',
+        list: ['<strong>De 50 a 99 empleats:</strong> 25.000€', '<strong>De 100 a 250 empleats:</strong> 29.000€'],
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Import màxim per al servei de Business Intelligence i Analítica i IA associada:',
+        list: [
+          '<strong>De 50 a 99 empleats:</strong> 8.000€ (inclou 10 usuaris i mínim capacitació a 3 d’ells en IA associada)',
+          '<strong>De 100 a 250 empleats:</strong> 9.000€ (inclou 15 usuaris i mínim capacitació a 5 d’ells en IA associada)',
+        ],
+        icon: 'tabler:check',
+      },
+    ]}
+  />
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/21.jpg', alt: 'Fons abstracte, inspirat en tecnologia i software' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contactar',
+        href: 'contactar',
+      },
+      {
+        variant: 'primary',
+        text: 'Trucar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Aprofita la subvenció del Kit Digital per implementar el servei de <span class="custom-gradient"
+        >Business Intelligence i Analítica i IA associada</span
+      > de forma gratuïta
+    </Fragment>
+    <Fragment slot="subtitle"> Contacta'ns i t'assessorarem sobre com digitalitzar la teva empresa. </Fragment>
+  </CallToAction>
+
+  <KitDigital />
+</Layout>

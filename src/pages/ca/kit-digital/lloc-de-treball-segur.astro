@@ -1,0 +1,163 @@
+---
+import Features from '~/components/widgets/Features.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import Image from '~/components/common/Image.astro';
+import KitDigital from '~/components/widgets/KitDigital.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+
+const metadata = {
+  title: 'Lloc de treball segur',
+  description:
+    'Millora la presència en línia de la teva empresa amb una estratègia de xarxes socials a mida i monitorització periòdica gràcies al Kit Digital.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="Subvenció Kit Digital" backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/21.jpg' }}>
+    <Fragment slot="title">Lloc de treball segur</Fragment>
+    <Fragment slot="subtitle">
+        Protegeix el teu equip i les teves dades amb solucions de seguretat avançades, <span class="custom-gradient">GRATIS</span> gràcies a la subvenció del Kit Digital, per garantir un entorn de treball segur i productiu.
+    </Fragment>
+  </Hero>
+
+  <Features2
+  columns={1}
+    tagline="Funcionalitats i serveis"
+    subtitle="Si tens una microempresa pertanyent al segment III, el principal objectiu d’aquesta categoria és proporcionar-te un lloc de treball segur amb la finalitat de potenciar o millorar la teva productivitat."
+    title="Et proporcionarem un dispositiu modern i segur. Optimitza la productivitat del teu negoci"
+    items={[
+        {
+          title: 'Rebràs un dispositiu de hardware',
+          description:
+            "Haurà d'incloure integrat el producte, una llicència i un encriptat/xifrat en repòs que asseguri la privacitat de les dades i documents emmagatzemats en el dispositiu.",
+          icon: 'tabler:device-laptop',
+        },
+        {
+          title: 'Tipologia del dispositiu',
+          description:
+            "Aquest dispositiu podrà ser un ordinador portàtil o de sobretaula nou i haurà de tenir com a mínim les següents característiques de hardware.",
+          icon: 'tabler:devices',
+        },
+        {
+          title: 'Requisits mínims del dispositiu hardware',
+          description:
+            'El dispositiu haurà de complir amb les especificacions tècniques següents:',
+          list: [
+            '<strong>Processador:</strong> Mínim de 4 nuclis físics i una velocitat de CPU clock màxima d\'almenys 2.9 GHz amb una puntuació mínima de 15.000 en PassMark Software.',
+            '<strong>Memòria RAM:</strong> Mínim de 16GB DDR4.',
+            '<strong>Emmagatzematge SSD:</strong> Mínim de 512 GB amb encriptat protegit per contrasenya proporcionada per l\'Agent Digitalitzador.',
+            '<strong>Sistema operatiu:</strong> Preinstal·lat i amb llicència de fàbrica.',
+            '<strong>Targetes gràfiques, de xarxa i de so:</strong> Integrades.',
+            '<strong>Interfícies d\'entrada/sortida:</strong> Ports USB i d\'entrada de micròfon, ja siguin integrats o a través d\'un replicador de ports.',
+            '<strong>Pantalla:</strong> En portàtils mínim de 13 polzades; webcam HD i lector de targetes smartcard (DNI-e).',
+            '<strong>Ordinadors de sobretaula:</strong> Monitor mínim de 23 polzades Full HD amb HDMI i etiquetatge energètic de la UE.',
+            '<strong>Certificacions:</strong> ENERGY STAR®, EPEAT™ Silver Registered, TCO o similars.',
+            '<strong>Certificació MIL STD 810H:</strong> Compliment d\'almenys 5 mètodes, incloent resistència a alta temperatura, baixa temperatura i humitat.',
+          ],
+          icon: 'tabler:cpu',
+        },
+        {
+          title: 'Requisits específics de publicitat',
+          description:
+            "El dispositiu haurà de comptar amb serigrafia o etiqueta identificativa que inclogui els següents logotips:",
+          list: [
+            'L\'emblema de la Unió Europea que indiqui «Finançat per la Unió Europea-Next Generation EU».',
+            'El logotip del Pla de Recuperació, Transformació i Resiliència.',
+            'El logotip del Ministeri per a la Transformació Digital i de la Funció Pública.',
+            'El logotip de l\'Entitat Pública Empresarial Red.es («Red.es»).',
+          ],
+          icon: 'tabler:badge',
+        },
+        {
+          title: 'Requisits mínims del servei de suport i atenció',
+          description:
+            'L\'Agent Digitalitzador proporcionarà un servei de suport i atenció amb les següents garanties:',
+          list: [
+            'El dispositiu es lliurarà dins d\'Espanya després de comprovar el seu correcte funcionament.',
+            'Servei de suport disponible en 5 dies laborables, amb atenció per correu electrònic de dilluns a divendres de 09:00 a 17:00 hores.',
+            'Les reparacions es realitzaran de manera remota o presencialment en la ubicació de lliurament, sense costos addicionals per al beneficiari.',
+            'El temps màxim de reparació serà de 5 dies laborables. Si no es compleix aquest termini, es proporcionarà un equip anàleg de substitució.',
+          ],
+          icon: 'tabler:headset',
+        },
+        {
+          title: 'Requisits de ciberseguretat del lloc de treball segur',
+          description:
+            'El dispositiu haurà de complir amb els estàndards mínims de ciberseguretat establerts en aquesta categoria:',
+          list: [
+            '<strong>Antimalware:</strong> Eina per analitzar el dispositiu i unitats d\'emmagatzematge externes.',
+            '<strong>Antispyware:</strong> Programari per detectar i evitar malware espia.',
+            '<strong>Correu segur:</strong> Anàlisi del correu electrònic amb antispam i antiphishing.',
+            '<strong>Navegació segura:</strong> Control de continguts i protecció antiadware.',
+            '<strong>Anàlisi i detecció d\'amenaces:</strong> Monitoratge del comportament de possibles amenaces.',
+            '<strong>Monitorització de la xarxa:</strong> Eines que analitzen el trànsit de xarxa i alerten d\'amenaces.',
+            '<strong>Configuració inicial i actualitzacions de seguretat:</strong> Instal·lació i actualització de signatures de malware i programari de seguretat.',
+            '<strong>Formació en ciberseguretat:</strong> Inclou una tutoria per a la configuració del programari de seguretat i un kit de conscienciació en ciberseguretat.',
+          ],
+          icon: 'tabler:shield-lock',
+        },
+        {
+          title: 'Possibilitat d\'adquisició del hardware associat',
+          description:
+            'Al finalitzar la fase II, el beneficiari tindrà l\'opció de comprar el dispositiu abonant el seu valor residual.',
+          list: [
+            'L\'adquisició del hardware és opcional per al beneficiari, però obligatòria per a l\'Agent Digitalitzador oferir aquesta opció.',
+            'Si no es realitza el pagament acordat, l\'Agent Digitalitzador podrà recuperar l\'equipament.',
+            'El preu de compra del dispositiu s\'informarà a la plataforma Acelera Pyme i constarà en l\'Acord de Prestació de Solucions de Digitalització.',
+            'El cost màxim de compra serà del 15% de l\'import total de la solució contractada.',
+          ],
+          icon: 'tabler:shopping-cart',
+        },
+      ]}
+  />
+
+  <Features
+    title="Subvenció Kit Digital segons el nombre d'empleats"
+    subtitle="La subvenció pot ser utilitzada per a diversos serveis de digitalització, amb un import màxim que varia en funció del nombre d'empleats de l'empresa."
+    items={[
+      {
+        title: 'Import total subvencionat:',
+        list: [
+          '<strong>De 0 a 3 empleats:</strong> 3.000€'
+        ],
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Import màxim lloc de treball segur:',
+        list: [
+          '<strong>De 0 a 3 empleats:</strong> 1.000€ (Inclou 1 dispositiu)',
+        ],
+        icon: 'tabler:check',
+      },
+    ]}
+  />
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/21.jpg', alt: 'Fons abstracte, inspirat en tecnologia i software' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contactar',
+        href: 'contactar',
+      },
+      {
+        variant: 'primary',
+        text: 'Trucar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Aprofita la subvenció del Kit Digital <span class="custom-gradient"
+        >Lloc de treball segur</span
+      > per obtenir el teu dispositiu de forma gratuïta
+    </Fragment>
+    <Fragment slot="subtitle"> Contacta'ns i t'assessorarem sobre com digitalitzar la teva empresa. </Fragment>
+  </CallToAction>
+
+  <KitDigital />
+</Layout>
