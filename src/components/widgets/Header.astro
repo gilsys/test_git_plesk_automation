@@ -21,7 +21,7 @@ interface Link {
 
 export interface MenuLink extends Link {
   links?: Array<MenuLink>;
-    _id: string;
+  _id: string;
 }
 
 export interface Props {
@@ -58,6 +58,7 @@ const translatePath = useTranslatedPath(language);
 const t = useTranslations(language);
 const u = useRoutes(language);
 
+const contactLink = links.find((link) => link._id === 'contact');
 ---
 
 <header
@@ -83,7 +84,7 @@ const u = useRoutes(language);
       },
     ]}
   >
-    <div class:list={[{ 'mr-auto rtl:mr-0 rtl:ml-auto': position === 'right' }, 'flex justify-between']}>
+    <div class:list={[{ 'mr-auto rtl:mr-0 rtl:ml-auto': position === 'right' }, 'flex justify-between relative z-10']}>
       <a class="flex items-center" href={u('home')}>
         <Logo />
       </a>
@@ -96,18 +97,18 @@ const u = useRoutes(language);
       aria-label="Main navigation"
     >
       <ul
-        class="flex flex-col md:flex-row md:self-center w-full md:w-auto tracking-[0.01rem] md:justify-center"
+        class="flex flex-col md:flex-row md:self-center w-full md:w-auto tracking-[0.01rem] md:justify-center pt-7 md:pt-0"
       >
         {
           links.map(({ text, href, title, links, _id }) => (
-            <li class={links?.length ? 'dropdown group' : ''}>
+            <li class:list={[`menu-item-${_id}`, { 'dropdown group': links?.length }]}>
               {links?.length ? (
-                <MenuDropdown btn={{text, href, title, _id}} links={links} />
+                <MenuDropdown btn={{ text, href, title, _id }} links={links} />
               ) : (
                 <a
                   class:list={[
                     'hover:text-link dark:hover:text-white px-2 lg:px-4 py-3 flex items-center whitespace-nowrap  md:text-sm min-[810px]:text-base',
-                    { 'active': href === currentPath && currentPath !== u('home')},
+                    { active: href === currentPath && currentPath !== u('home') },
                   ]}
                   href={href}
                 >
@@ -141,6 +142,21 @@ const u = useRoutes(language);
           }
         </div>
         {
+          contactLink && (
+            <div class="mr-auto md:hidden">
+              <a
+                class:list={[
+                  'hover:text-link dark:hover:text-white whitespace-nowrap',
+                  { active: contactLink.href === currentPath },
+                ]}
+                href={contactLink.href}
+              >
+                {contactLink.text}
+              </a>
+            </div>
+          )
+        }
+        {
           actions?.length ? (
             <span class="ml-4 rtl:ml-0 rtl:mr-4">
               {actions.map((btnProps) => (
@@ -155,11 +171,11 @@ const u = useRoutes(language);
           showLangMenu ? (
             <span class="ml-4 rtl:ml-0 rtl:mr-4 lang-menu md:hidden">
               {Object.keys(languages).map((lang) => (
-                <Button 
-                  text={lang} 
-                  href={translatePath(`${route}`, lang)} 
-                  title={`${t('language.change_to')} ${t(`language.${lang}`)}`} 
-                  class={`ml-2 p-0 w-10 h-10 rounded-full font-semibold shadow-none text-sm uppercase ${language === lang ? 'active' : ''}`} 
+                <Button
+                  text={lang}
+                  href={translatePath(`${route}`, lang)}
+                  title={`${t('language.change_to')} ${t(`language.${lang}`)}`}
+                  class={`ml-2 p-0 w-10 h-10 rounded-full font-semibold shadow-none text-sm uppercase ${language === lang ? 'active' : ''}`}
                 />
               ))}
             </span>

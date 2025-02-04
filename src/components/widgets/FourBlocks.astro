@@ -90,9 +90,12 @@ const {
           {block.links && (
             <ul class="my-8 md:my-10 space-y-2 text-left">
               {block.links.map((link) => (
-                <li class="mb-1.5 flex items-start space-x-3 leading-7">
-                  <div class="rounded-full bg-primary mt-1">
-                    <Icon name="tabler:check" class="w-5 h-5 font-bold p-1 text-white" />
+                <li class="mb-1.5 flex items-center space-x-3 leading-7">
+                  <div class="mt-1">
+                    <Icon
+                      name={link.icon ? link.icon : 'tabler:check'}
+                      class="w-7 h-7 lg:w-8 lg:h-8 font-bold p-1 text-primary"
+                    />
                   </div>
                   <span>
                     <a href={link.href} title={link.title}>

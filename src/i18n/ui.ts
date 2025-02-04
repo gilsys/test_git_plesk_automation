@@ -709,6 +709,7 @@ export const header = {
         href: routes['es']['blog'],
       },
       {
+        _id: 'contact',
         text: 'Contactar',
         href: routes['es']['contact'],
       },

@@ -46,25 +46,27 @@ if(breadcrumbTrail && breadcrumbTrail[0] && breadcrumbTrail[0].text === btn.text
 ---
 
 <button type="button" class:list={[
-  'hover:text-link dark:hover:text-white px-2 lg:px-4 py-3 flex items-center whitespace-nowrap md:text-sm min-[810px]:text-base',
+  'hover:text-link dark:hover:text-white px-2 lg:px-4 py-3 flex items-center whitespace-nowrap md:text-sm min-[810px]:text-base w-full',
   { 'active':  breadcrumbTrail && breadcrumbTrail[0] && breadcrumbTrail[0].text === btn.text},
 ]}>
   {btn.text}{' '}
   <Icon name="tabler:chevron-down" class="w-3.5 h-3.5 ml-0.5 rtl:ml-0 rtl:mr-0.5 hidden md:inline" />
+  <Icon name="tabler:chevron-down" class="w-5 h-5 ml-auto rtl:ml-0 rtl:mr-0.5 group-[.show]:hidden md:hidden" />
+  <Icon name="tabler:chevron-up" class="w-5 h-5 ml-auto rtl:ml-0 rtl:mr-0.5 group-[:not(.show)]:hidden md:hidden" />
 </button>
 <ul
   class:list={[
-    'dropdown-menu menu-dropdown md:backdrop-blur-md dark:md:bg-dark rounded md:absolute p-4 md:bg-white/90 md:min-w-[200px] drop-shadow-xl text-[13px] lg:text-[14px] xl:text-[15px] 2xl:text-[16px] !flex flex-wrap left-[-100vw] right-[-100vw] w-[96vw] mx-auto max-w-[1800px]',
+    'dropdown-menu menu-dropdown md:backdrop-blur-md dark:md:bg-dark rounded md:absolute p-4 pt-0 md:pt-4 md:bg-white/90 md:min-w-[200px] drop-shadow-xl text-[13px] lg:text-[14px] xl:text-[15px] 2xl:text-[16px] !flex flex-wrap left-[-100vw] right-[-100vw] w-[96vw] mx-auto max-w-[1800px]',
     {'max-w-[1200px]': btn._id === 'kit-consulting'}
   ]}
 >
   {
     getLinks(links).map(({ text: text2, href: href2, title: title2, links: subLinks, colsClass }) => (
-      <li class:list={['lg:flex-1 relative pb-8 w-1/2', { 'has-children': subLinks && subLinks.length > 0 }, { 'w-full': getLinks(links).length <= 1 }]}>
+      <li class:list={['lg:flex-1 relative pb-8 w-full', { 'has-children': subLinks && subLinks.length > 0 }, { 'min-[560px]:w-1/2': getLinks(links).length > 1 }]}>
         {href2 ? (
           <a
             class:list={[
-              'text-[16px] xl:text-[17px] font-bold leading-tight mb-2 font-heading dark:text-slate-300 hover:text-primary dark:hover:text-blue-700 transition ease-in duration-200 py-2 px-3 xl:px-5 block whitespace-no-wrap',
+              'text-[16px] xl:text-[17px] font-bold leading-tight mb-2 font-heading dark:text-slate-300 hover:text-primary dark:hover:text-blue-700 transition ease-in duration-200 py-2 px-3 xl:px-5 inline-block whitespace-no-wrap',
               { 'active':  breadcrumbTrail && breadcrumbTrail[1] && breadcrumbTrail[1].text === text2 && breadcrumbTrail[1].href === href2},
             ]}
             href={href2}
@@ -74,7 +76,7 @@ if(breadcrumbTrail && breadcrumbTrail[0] && breadcrumbTrail[0].text === btn.text
           </a>
         ) : (
           <span class:list={[
-              'text-[16px] xl:text-[17px] font-bold leading-tight mb-2 font-heading dark:text-slate-300 hover:text-primary dark:hover:text-blue-700 transition ease-in duration-200 py-2 px-3 xl:px-5 block whitespace-no-wrap',
+              'text-[16px] xl:text-[17px] font-bold leading-tight mb-2 font-heading dark:text-slate-300 hover:text-primary dark:hover:text-blue-700 transition ease-in duration-200 py-2 px-3 xl:px-5 inline-block whitespace-no-wrap',
               { 'active':  breadcrumbTrail && breadcrumbTrail[1] && breadcrumbTrail[1].text === text2 && breadcrumbTrail[1].href === href2},
             ]}>
             {text2}

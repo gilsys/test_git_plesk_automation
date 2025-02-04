@@ -294,12 +294,42 @@ nav[aria-label="breadcrumb"] li:not(:last-child)::after {
   margin-left: 10px;
 }
 
-.dropdown:not(:hover) .dropdown-menu.menu-dropdown {
-  display: none !important;
+@media (min-width: 768px) {
+  .dropdown:not(:hover) .dropdown-menu.menu-dropdown {
+    display: none !important;
+  }
 }
 
-nav .active {
+@media (max-width: 767px) {
+  .dropdown:not(.show) .dropdown-menu.menu-dropdown {
+    display: none !important;
+  }
+}
+
+header .active:not(.btn-secondary) {
   @apply text-primary;
+}
+
+.menu-item-home {
+  @apply order-1 md:order-1;
+}
+.menu-item-gilsys {
+  @apply order-2 md:order-2;
+}
+.menu-item-kit-digital {
+  @apply order-5 md:order-4;
+}
+.menu-item-kit-consulting {
+  @apply order-6 md:order-5;
+}
+.menu-item-services {
+  @apply order-4 md:order-3;
+}
+.menu-item-blog {
+  @apply order-3 md:order-6;
+}
+.menu-item-contact {
+  @apply hidden md:order-7 md:block;
 }
 
 body:not(.route-home) .wg-hero .btn-primary{

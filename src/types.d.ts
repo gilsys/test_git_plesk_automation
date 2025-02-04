@@ -211,7 +211,8 @@ export interface CallToAction extends Omit<HTMLAttributes<'a'>, 'slot'> {
 export interface Link{
   href: string,
   title: string,
-  text: string
+  text: string,
+  icon?: string
 }
 
 export interface ItemGrid {
