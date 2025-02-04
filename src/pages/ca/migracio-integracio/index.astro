@@ -38,16 +38,6 @@ const metadata = {
     tagline="Modernització i integració dels teus sistemes."
     items={[
       {
-        title: 'Migració de dades',
-        description: 'Migrem bases de dades antigues a noves aplicacions sense perdre informació.',
-        icon: 'tabler:device-desktop',
-        callToAction: {
-          class: 'more-info',
-          text: 'Més informació',
-          href: '#TODO',
-        },
-      },
-      {
         title: 'Renovació de software',
         description:
           'Actualitzem sistemes antics per millorar el rendiment i garantir una infraestructura tecnològica robusta i sostenible.',
@@ -58,6 +48,17 @@ const metadata = {
           href: '#TODO',
         },
       },
+      {
+        title: 'Migració de dades',
+        description: 'Migrem bases de dades antigues a noves aplicacions sense perdre informació.',
+        icon: 'tabler:device-desktop',
+        callToAction: {
+          class: 'more-info',
+          text: 'Més informació',
+          href: '#TODO',
+        },
+      },
+      
       {
         title: "Integració d'intel·ligència artificial",
         description:
@@ -189,7 +190,7 @@ const metadata = {
       },
     ]}
     image={{
-      src: '~/assets/images/migracion-datos-antiguos.jpg',
+      src: '~/assets/images/migracion-datos-antiguos.png',
       alt: 'Migració de dades entre sistemes',
     }}
   >
@@ -261,6 +262,7 @@ const metadata = {
   />
 
   <Content
+  isReversed
     tagline=""
     title="Integració d'intel·ligència artificial"
     subtitle={`No només podem <a class="text-accent" title="Programació de noves aplicacions que integren intel·ligència artificial" href="` + u('development/ia') + `">programar noves aplicacions</a>, sinó que podem integrar la IA a eines existents.`}
@@ -282,7 +284,7 @@ const metadata = {
       },
     ]}
     image={{
-      src: '~/assets/images/ia-integracion-software-abstracto.jpg',
+      src: '~/assets/images/ia-integracion-software-abstracto.png',
       alt: "Abstracció d'integració de software amb intel·ligència artificial",
     }}
   >
@@ -310,8 +312,7 @@ const metadata = {
 
   </Content>
 
-  <Content
-    isReversed
+  <Content    
     tagline=""
     title="Connexió de software"
     subtitle="Sincronitzar dades entre diferents eines simplifica la gestió d'informació de l'empresa i evita dades duplicades."
@@ -332,7 +333,7 @@ const metadata = {
       },
     ]}
     image={{
-      src: '~/assets/images/integracion-sistemas.jpg',
+      src: '~/assets/images/integracion-sistemas.png',
       alt: 'Enterprise Software Integration',
     }}
   >
@@ -419,7 +420,7 @@ const metadata = {
       },
     ]}
     image={{
-      src: '~/assets/images/bloques-distribuidos.jpg',
+      src: '~/assets/images/bloques-distribuidos.png',
       alt: 'Dividir una projecte en blocs escalables',
     }}
   >
@@ -486,7 +487,7 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Sol·licitar pressupost',
+        text: 'Pressupost gratuït',
         href: u('contact'),
       },
       {

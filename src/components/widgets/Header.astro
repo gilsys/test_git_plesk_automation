@@ -21,6 +21,7 @@ interface Link {
 
 export interface MenuLink extends Link {
   links?: Array<MenuLink>;
+    _id: string;
 }
 
 export interface Props {
@@ -62,7 +63,7 @@ const u = useRoutes(language);
 <header
   class:list={[
     { sticky: isSticky, relative: !isSticky, dark: isDark },
-    'wg-header top-0 z-40 flex-none mx-auto w-full border-b border-gray-50/0 transition-[opacity] ease-in-out',
+    'wg-header top-[36px] z-40 flex-none mx-auto w-full border-b border-gray-50/0 transition-[opacity] ease-in-out',
   ]}
   {...isSticky ? { 'data-aw-sticky-header': true } : {}}
   {...id ? { id } : {}}
@@ -75,7 +76,7 @@ const u = useRoutes(language);
         'md:flex md:justify-between': position !== 'center',
       },
       {
-        'md:grid md:grid-cols-3 md:items-center': position === 'center',
+        'md:flex md:items-center': position === 'center',
       },
       {
         'max-w-7xl': !isFullWidth,
@@ -91,22 +92,22 @@ const u = useRoutes(language);
       </div>
     </div>
     <nav
-      class="items-center w-full md:w-auto hidden md:flex md:mx-5 mt-4 md:mt-0 text-default overflow-y-auto overflow-x-hidden md:overflow-y-visible md:overflow-x-auto md:justify-self-center 2xl:text-sm"
+      class="items-center w-full md:w-auto hidden md:flex md:ml-auto mt-4 md:mt-0 text-default overflow-y-auto overflow-x-hidden md:overflow-y-visible md:overflow-x-auto md:justify-self-center 2xl:text-sm"
       aria-label="Main navigation"
     >
       <ul
         class="flex flex-col md:flex-row md:self-center w-full md:w-auto tracking-[0.01rem] md:justify-center"
       >
         {
-          links.map(({ text, href, title, links }) => (
-            <li class={links?.length ? 'dropdown' : ''}>
+          links.map(({ text, href, title, links, _id }) => (
+            <li class={links?.length ? 'dropdown group' : ''}>
               {links?.length ? (
-                <MenuDropdown btn={{text, href, title}} links={links} />
+                <MenuDropdown btn={{text, href, title, _id}} links={links} />
               ) : (
                 <a
                   class:list={[
-                    'hover:text-link dark:hover:text-white px-4 py-3 flex items-center whitespace-nowrap',
-                    { 'active': href === currentPath },
+                    'hover:text-link dark:hover:text-white px-2 lg:px-4 py-3 flex items-center whitespace-nowrap  md:text-sm min-[810px]:text-base',
+                    { 'active': href === currentPath && currentPath !== u('home')},
                   ]}
                   href={href}
                 >
@@ -152,7 +153,7 @@ const u = useRoutes(language);
         }
         {
           showLangMenu ? (
-            <span class="ml-4 rtl:ml-0 rtl:mr-4 lang-menu">
+            <span class="ml-4 rtl:ml-0 rtl:mr-4 lang-menu md:hidden">
               {Object.keys(languages).map((lang) => (
                 <Button 
                   text={lang} 

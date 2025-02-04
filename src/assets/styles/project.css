@@ -227,7 +227,7 @@ body.route-gilsys .wg-hero .custom-gradient {
   display: inline-block;
 }
 
-nav .dropdown-menu{
+nav .dropdown-menu:not(.menu-dropdown){
   position: fixed;
   left: 10vw;
   width: 80vw;  
@@ -294,10 +294,8 @@ nav[aria-label="breadcrumb"] li:not(:last-child)::after {
   margin-left: 10px;
 }
 
-.dropdown:hover .dropdown-menu.menu-dropdown {
-  display: flex;
-  left: 4vw;
-  width: 92vw;
+.dropdown:not(:hover) .dropdown-menu.menu-dropdown {
+  display: none !important;
 }
 
 nav .active {
@@ -316,4 +314,10 @@ body:not(.route-home) .wg-hero .btn-primary:hover{
 }
 .feature-list strong{
   color: #000;
+}
+
+#image-kit-digital,
+#image-kit-consulting{
+  max-width: 300px;
+  margin-top: 3rem;
 }
