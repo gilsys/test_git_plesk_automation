@@ -9,14 +9,15 @@ import Steps2 from '~/components/widgets/Steps2.astro';
 import Layout from '~/layouts/PageLayout.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+import Hero2 from '~/components/widgets/Hero2.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
 const u = useRoutes(getLangFromUrl(Astro.url));
 
 const metadata = {
   title: `gilsys - Empresa TIC d'Osona amb més de 20 anys d'experiència`,
   description: `Programem software a mida, web, apps i intel·ligència artificial. Coneix els nostres valors, metodologia de treball i respostes a preguntes freqüents.`,
 };
-
-
 ---
 
 <Layout metadata={metadata}>
@@ -112,6 +113,76 @@ const metadata = {
     </Fragment>
   </Features3>
 
+  <Features3
+    columns={3}
+    tagline="Diga'm quina web tens i et diré quina empresa ets."
+    title="Una web que <span class='custom-gradient'>diu molt de Gilsys</span>"
+    subtitle={`A finals de 2024 vam llançar una nova web per celebrar que Gilsys cumplia 20 anys.<br/><br/>
+  Ens han preguntat: <strong><em>Per què, si l'anterior no estava gens malament?</em></strong>`}
+    items={[
+      {
+        icon: 'tabler:old',
+        title: "Perquè l'antiga tenia 5 anys.",
+        description:
+          "No hauria de ser un problema per a moltes empreses, però nosaltres volem estar a l'avantguarda, aplicant les darreres tecnologies a casa nostra.",
+      },
+      {
+        icon: 'tabler:device-mobile-star',
+        title: 'Perquè som una empresa exigent.',
+        description:
+          "Necessitàvem una web que reflectís el nostre nivell d'exigència i de la qual ens sentíssim orgullosos.",
+      },
+      {
+        icon: 'tabler:rocket',
+        title: 'Perquè volíem provar Astro.',
+        description:
+          "Estem permanentment innovant i provant noves tecnologies. Volíem provar <a title='Programció de webs d'alt rendiment a mida' class='text-accent' href='" +
+          u('development/astro') +
+          "'>Astro</a> i portar la nostra web al següent nivell.",
+      },
+      {
+        icon: 'tabler:number-100-small',
+        title: 'Perquè volíem la màxima puntuació a Google PageSpeed Insights.',
+        description:
+          "Hem aconseguit una puntuació de <strong>100 en rendiment, 100 en bones pràctiques, 100 en accessibilitat i 100 en SEO</strong> en <a title='Google PageSpeed Insights' class='text-accent' href='https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.gilsys.com%2F'>Google PageSpeed Insights</a>.",
+      },
+      {
+        icon: 'tabler:ai',
+        title: 'Perquè ha arribat la era de la intel·ligència artificial.',
+        description:
+          "L'explosió de la <a title='Programció amb intel·ligència artificial' class='text-accent' href='" +
+          u('development/ia') +
+          "'>intel·ligència artificial</a> està canviant el panorama digital, i volem mostrar com podem aportar valor a les empreses que volen adoptar-la.",
+      },
+      {
+        icon: 'tabler:artboard',
+        title: "Perquè volíem canviar d'imatge.",
+        description: 'Amb la nova web, transmetem una identitat més moderna i fresca.',
+      },
+      {
+        icon: 'tabler:seo',
+        title: 'Perquè volíem millorar el SEO.',
+        description: "Potenciant la marca de l'empresa en els motors de cerca i arribar així a més clients.",
+      },
+      {
+        icon: 'tabler:bubble-text',
+        title: 'Perquè volíem actualitzar contingut',
+        description:
+          'Una web que expliqui clarament què fem, qui som i com podem ajudar-te, de manera actualitzada i rellevant.',
+      },
+      {
+        icon: 'tabler:chart-line',
+        title: 'Perquè volíem anar més enllà de WordPress.',
+        description: 'Tenim capacitats tècniques i les volíem demostrar amb un web ràpid, segur i optimitzat per SEO.',
+      },
+    ]}
+  />
+
+  <!--{
+    description:
+      'Et proposem un repte, si dubtes entre nosaltres i una altra empresa, estudia com fa les coses cada empresa.?',
+  },-->
+
   <Steps
     id="resume"
     title="Metodologia de treball"
@@ -167,7 +238,11 @@ const metadata = {
       },
     ]}
     classes={{ container: 'max-w-3xl' }}
-  />
+  >
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-lightgray"></div>
+  </Fragment>
+  </Steps>
 
   <FAQs
     title="Preguntes freqüents"
@@ -177,41 +252,52 @@ const metadata = {
     items={[
       {
         title: 'És gratuït demanar pressupost?',
-        description:
-          'Sí, depenent del projecte podrem donar un preu final o un rang de cost orientatiu.',
+        description: 'Sí, depenent del projecte podrem donar un preu final o un rang de cost orientatiu.',
       },
       {
         title: 'Hi ha compromís de compra després de rebre un pressupost?',
-        description:
-          'No, el pressupost orientatiu és sempre gratuït.',
+        description: 'No, el pressupost orientatiu és sempre gratuït.',
       },
       {
-        title: 'Quins tipus de projectes desenvolupa gilsys?',       
-      description:
-      `
-      Desenvolupem <a href="` + u('development') + `" title="Programació a mida per empreses" class="text-accent">software a mida</a>, creant eines innovadores des de zero. També treballem amb 
-<a href="` + u('software') + `" title="Software personalitzable com CRM, WordPress, Pimcore o Metabase" class="text-accent">software personalitzable</a> per adaptar-lo a les necessitats concretes dels nostres clients, incloent-hi opcions com CRM, WordPress, Pimcore o Metabase. A més, som experts en 
-<a href="` + u('migration') + `" title="Migració de dades i comunicació de programes" class="text-accent">migració de dades i integració de sistemes</a>.<br /><br />
+        title: 'Quins tipus de projectes desenvolupa gilsys?',
+        description:
+          `
+      Desenvolupem <a href="` +
+          u('development') +
+          `" title="Programació a mida per empreses" class="text-accent">software a mida</a>, creant eines innovadores des de zero. També treballem amb 
+<a href="` +
+          u('software') +
+          `" title="Software personalitzable com CRM, WordPress, Pimcore o Metabase" class="text-accent">software personalitzable</a> per adaptar-lo a les necessitats concretes dels nostres clients, incloent-hi opcions com CRM, WordPress, Pimcore o Metabase. A més, som experts en 
+<a href="` +
+          u('migration') +
+          `" title="Migració de dades i comunicació de programes" class="text-accent">migració de dades i integració de sistemes</a>.<br /><br />
 
 De forma transversal, en totes les nostres solucions podem implementar 
-<a href="` + u('development/ia') + `" title="Programació intel·ligència artificial" class="text-accent">intel·ligència artificial</a> per automatitzar processos i augmentar l'eficiència.
+<a href="` +
+          u('development/ia') +
+          `" title="Programació intel·ligència artificial" class="text-accent">intel·ligència artificial</a> per automatitzar processos i augmentar l'eficiència.
 <br /><br />
 Finalment, a banda dels serveis de desenvolupament, també oferim 
-<a href="` + u('consultory') + `" title="Assessorament tecnològic" class="text-accent">consultoria tecnològica</a> per convertir idees en projectes tangibles i d’èxit.
+<a href="` +
+          u('consultory') +
+          `" title="Assessorament tecnològic" class="text-accent">consultoria tecnològica</a> per convertir idees en projectes tangibles i d’èxit.
 
-      `
+      `,
       },
       {
         title: 'No tenim molt clar si la idea que tenim és viable o no, i si seria molt car el seu desenvolupament',
-        description: `En aquests casos, analitzem la proposta i n'estudiem la viabilitat. Podem proporcionar un rang de preus orientatiu basat en una previsió del projecte. Si aquest és adequat, podem dur a terme una <a href="` + u('consultory') + `" title="Creació de pressupostos de projectes per fases" class="text-accent">consultoria tecnològica</a> conjunta per conceptualitzar les idees, dividir-les en fases i establir un calendari de treball detallat, amb els costos corresponents a cada fase.  Un cop finalitzada cada fase, es pot revisar l'estat del projecte i replantejar punts si cal, per tal d'adaptar-lo a les necessitats reals.`,
+        description:
+          `En aquests casos, analitzem la proposta i n'estudiem la viabilitat. Podem proporcionar un rang de preus orientatiu basat en una previsió del projecte. Si aquest és adequat, podem dur a terme una <a href="` +
+          u('consultory') +
+          `" title="Creació de pressupostos de projectes per fases" class="text-accent">consultoria tecnològica</a> conjunta per conceptualitzar les idees, dividir-les en fases i establir un calendari de treball detallat, amb els costos corresponents a cada fase.  Un cop finalitzada cada fase, es pot revisar l'estat del projecte i replantejar punts si cal, per tal d'adaptar-lo a les necessitats reals.`,
       },
-      
+
       {
         title: 'Quin és el termini mitjà de desenvolupament d’un projecte?',
         description:
           'Depèn de la complexitat del projecte. Generalment, projectes petits poden durar unes setmanes, mentre que projectes més grans poden necessitar mesos.',
       },
-      
+
       {
         title: 'Oferiu suport tècnic després de la finalització d’un projecte?',
         description:
@@ -224,7 +310,9 @@ Finalment, a banda dels serveis de desenvolupament, també oferim
       {
         title: 'Podeu ajudar amb la migració de sistemes antics a noves plataformes, sense perdre dades?',
         description:
-          `Sí, tenim experiència en la <a href="` + u('migration') + `" title="Migracions sense perdre dades" class="text-accent">migració de bases de dades</a>
+          `Sí, tenim experiència en la <a href="` +
+          u('migration') +
+          `" title="Migracions sense perdre dades" class="text-accent">migració de bases de dades</a>
           de sistemes antics, transformant-les i adaptant-les a la nova estructura sense perdre informació.`,
       },
       {
@@ -258,8 +346,11 @@ Finalment, a banda dels serveis de desenvolupament, també oferim
       },
       {
         title: 'Podeu integrar automatitzacions amb intel·ligència artificial en projectes existents?',
-        description: `No sempre podem modificar software existent o integrar-hi noves funcionalitats que utilitzin 
-        <a href="` + u('migration') + `" title="Integració d'intel·ligència artificial" class="text-accent">IA</a>
+        description:
+          `No sempre podem modificar software existent o integrar-hi noves funcionalitats que utilitzin 
+        <a href="` +
+          u('migration') +
+          `" title="Integració d'intel·ligència artificial" class="text-accent">IA</a>
         , dependrà de cada sistema i de quines funcionalitats es necessitin integrar.`,
       },
       {
@@ -286,12 +377,10 @@ Finalment, a banda dels serveis de desenvolupament, també oferim
         title: 'Quin suport oferiu durant el procés de desenvolupament?',
         description:
           'Treballem de manera col·laborativa amb el client i mantenim una comunicació constant durant totes les fases del projecte.',
-      }
+      },
     ]}
   >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-lightgray"></div>
-    </Fragment>
+    
   </FAQs>
 
   <CallToAction

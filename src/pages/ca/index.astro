@@ -10,6 +10,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 import { header } from '~/i18n/ui.ts';
+import Hero2 from '~/components/widgets/Hero2.astro';
 
 const metadata = {         
   title: 'Programació a mida de software, apps, web i IA | +20 anys',
@@ -49,8 +50,8 @@ const u = useRoutes(getLangFromUrl(Astro.url));
     </Fragment>
   </Hero>
 
-  <Content
-    
+  <!--
+  <Hero2
     classes={{ 
       container: 'pb-0 md:pb-0 lg:pb-0',
      }}
@@ -62,7 +63,27 @@ const u = useRoutes(getLangFromUrl(Astro.url));
       <a title="Programació a mida amb intel·ligència artificial per empreses" href={u('development/ia')} class="btn-primary w-auto">Més informació</a>
     </div>
   </Fragment>
-  </Content>
+  
+  </Hero2>
+ -->
+  <Hero2
+    tagline="Ajudem a empreses a adoptar intel·ligència artificial"
+    actions={[
+      { variant: 'primary', title: 'Programació a mida amb intel·ligència artificial per empreses', text: 'Mes informació', href: u('development/ia') },
+    ]}
+    image={{
+      src: '~/assets/images/inteligencia-artificial.png',
+      alt: 'Intel·ligència artificial',
+    }}
+  >
+    <Fragment slot="title">
+      No et quedis enrere, integra <br/><span class='custom-gradient'>Intel·ligència Artificial</span> a la teva empresa
+    </Fragment>
+
+    <Fragment slot="subtitle">      
+      Som una empresa d'enginyeria informàtica, especialitzada en desenvolupament de software. No només coneixem les darreres novetats en <a title='Programació a mida integrant intel·ligència artificial' class='text-accent' href={u('development/ia')}>intel·ligència artificial</a> sinó que les apliquem en eines empresarials, aplicacions web, apps mòbils a mida i automatització de processos.
+    </Fragment>
+  </Hero2>
 
 
   <FourBlocks

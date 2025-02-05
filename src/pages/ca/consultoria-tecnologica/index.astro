@@ -14,7 +14,7 @@ const u = useRoutes(getLangFromUrl(Astro.url));
 const metadata = {
   title: 'Consultoria TIC',
   description:
-    `Assessorament per integrar intel·ligència artificial a l'empresa, anàlisis de la situació tecnològica, transformació d’idees en projectes i estudis per organització de dades.`,
+    `Assessorament per integrar intel·ligència artificial a l'empresa, anàlisi de la situació tecnològica, transformació d’idees en projectes i estudis per organització de dades.`,
 };
 ---
 
@@ -24,7 +24,7 @@ const metadata = {
   >
     <Fragment slot="title"><span class="text-accent highlight">Consultoria</span> TIC</Fragment>
     <Fragment slot="subtitle"
-      >Assessorament per integrar intel·ligència artificial a l'empresa, anàlisis de la situació tecnològica, transformació d’idees en projectes i estudis per organització de dades.</Fragment
+      >Assessorament per integrar intel·ligència artificial a l'empresa, anàlisi de la situació tecnològica, transformació d’idees en projectes i estudis per organització de dades.</Fragment
     >
   </Hero>
 
@@ -42,7 +42,7 @@ const metadata = {
         callToAction: {
           class: 'more-info',
           text: 'Més informació',
-          href: '#TODO',
+          href: '#ia',
         },
       },
       {
@@ -53,7 +53,7 @@ const metadata = {
         callToAction: {
           class: 'more-info',
           text: 'Més informació',
-          href: '#TODO',
+          href: '#analisi-situacio-tecnologica',
         },
       },
       {
@@ -63,7 +63,7 @@ const metadata = {
         callToAction: {
           class: 'more-info',
           text: 'Més informació',
-          href: '#TODO',
+          href: '#transformar-idees-en-projectes',
         },
       },
       {
@@ -74,7 +74,7 @@ const metadata = {
         callToAction: {
           class: 'more-info',
           text: 'Més informació',
-          href: '#TODO',
+          href: '#analisi-organitzacio-dades',
         },
       },
       {
@@ -84,7 +84,7 @@ const metadata = {
         callToAction: {
           class: 'more-info',
           text: 'Més informació',
-          href: '#TODO',
+          href: '#identificacio-solucions',
         },
       },
       
@@ -94,7 +94,8 @@ const metadata = {
   <Content
     isReversed
     tagline=""
-    title="Assessorament per a la integració intel·ligència artificial"
+    title="<a title='Assessorament tecnològic per adaptar ia a l\'empresa' name='ia'>Assessorament per a la integració intel·ligència artificial</a>"
+    subtitle="Analitzem les tasques i processos de l'empresa per estudiar punts on integrar Intel·ligència Artificial."
     items={[
       {
         title: 'Identificació de tasques clau',
@@ -131,7 +132,8 @@ const metadata = {
 
   <Content
     tagline=""
-    title="Anàlisi de situació tecnològica"
+    title=`<a title='Anàlisi tecnològic de l'empresa i identificació de possibles automatitzacions' name='analisi-situacio-tecnologica'>Anàlisi de situació tecnològica</a>`
+    subtitle=`Estudi de l'empresa per detectar possibles punts on automatitzar tasques o millorar les aplicacions actuals.`
     items={[
       {
         title: 'Revisió d’eines actuals',
@@ -164,7 +166,8 @@ const metadata = {
 
   <Content
     tagline=""
-    title="Transformació d’idees en projectes"
+    title=`<a title='Transformem idees en plans de projecte reals' name='transformar-idees-en-projectes'>Transformació d’idees en projectes</a>`
+    subtitle=`Consultoria per poder delimitar a nivell tècnic i funcional el procés d'implementació d'un projecte de desenvolupament informàtic.`
     isReversed
     items={[
       {
@@ -198,7 +201,10 @@ const metadata = {
 
   <Content
     tagline=""
-    title="Anàlisi i organització de dades"
+    title=""
+
+    title=`<a title="Estudi per classificar les dades de l'empresa" name="analisi-organitzacio-dades">Anàlisi i organització de dades</a>`
+    subtitle=`Estudiem els diferents origens de dades de per poder reatlizar propostes de millora i reorganització.`
     items={[
       {
         title: 'Revisió de qualitat de dades',
@@ -230,7 +236,8 @@ const metadata = {
   <Content
     tagline=""
     isReversed
-    title="Identificació de solucions a integrar"
+    title=`<a title="Busquem i proposem les eines més adequades per cada projecte" name='identificacio-solucions'>Identificació de solucions</a>`
+    subtitle=`Consultoria per estudiar opcions comercials o de codi obert que s'adaptin a les necessitats de cada projecte.`
     items={[
       {
         title: 'Avaluació d’opcions de mercat',

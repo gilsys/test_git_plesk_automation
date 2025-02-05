@@ -476,31 +476,32 @@ export const header = {
             href: routes['ca']['migration'],  
             links: [
               {
-                href: routes['ca']['migration'] + '#',
+                href: routes['ca']['migration'] + '#renovacio-software',
+                title: 'Substituïr sistemes antics a aplicacions modernes.',
+                text: 'Renovació de software',
+                icon: 'tabler:chart-line',
+              },
+              {
+                href: routes['ca']['migration'] + '#migracio-dades',
                 title: "Migrem bases de dades antigues a noves aplicacions sense perdre informació.",
                 text: "Migració de dades",
                 icon: 'tabler:arrows-transfer-down',
               },
               {
-                href: routes['ca']['migration'] + '#',
+                href: routes['ca']['migration'] + '#integracio-ia',
                 title: 'Integració d\'intel·ligència artificial en empreses',
                 text: "Integració d'IA",
                 icon: 'tabler:brain',
               },
               {
-                href: routes['ca']['migration'] + '#',
+                href: routes['ca']['migration'] + '#connexio-software',
                 title: "Sincronització d'informació entre programes",
                 text: 'Connexió de software',
                 icon: 'tabler:link',
               },
+              
               {
-                href: routes['ca']['migration'] + '#',
-                title: 'Anàlisi de codi i millora de rendiment de programes',
-                text: 'Optimitació de software',
-                icon: 'tabler:chart-line',
-              },
-              {
-                href: routes['ca']['migration'] + '#',
+                href: routes['ca']['migration'] + '#divisio-escalabilitat',
                 title: 'Separació de plataformes en mòduls escalables',
                 text: 'Divisió i escalabilitat',
                 icon: 'tabler:sitemap',
@@ -514,35 +515,36 @@ export const header = {
             href: routes['ca']['consultory'],
             links: [
               {
-                href: routes['ca']['consultory'] + '#',
+                href: routes['ca']['consultory'] + '#ia',
+                title: 'Com implantar intel·ligència artificial a l\'empresa',
+                text: 'Estudi per integració d\'IA',
+                icon: 'tabler:robot',
+              },
+              {
+                href: routes['ca']['consultory'] + '#analisi-situacio-tecnologica',
                 title: "Estudi de les eines actuals i propostes d'optimització",
                 text: 'Anàlisi de situació tecnològica',
                 icon: 'tabler:clipboard-list',
               },          
               {
-                href: routes['ca']['consultory'] + '#',
+                href: routes['ca']['consultory'] + '#transformar-idees-en-projectes',
                 title: 'Recollida de requisits i elaboració de propostes',
                 text: 'Trasformació d\'idees a projectes',
                 icon: 'tabler:clipboard-text',
               },          
               {
-                href:routes['ca']['consultory'] + '#',
+                href:routes['ca']['consultory'] + '#analisi-organitzacio-dades',
                 title: 'Estudi per optimitzar estructura i qualitat de la informació',
                 text: 'Anàlisi i organtizació de dades',
                 icon: 'tabler:table',
               },          
               {
-                href: routes['ca']['consultory'] + '#',
+                href: routes['ca']['consultory'] + '#identificacio-solucions',
                 title: "Avaluació i proposta de noves eines i serveis",
                 text: 'Identificació de solucions',
                 icon: 'tabler:bulb',
-              },
-              {
-                href: routes['ca']['consultory'] + '#',
-                title: 'Com implantar intel·ligència artificial a l\'empresa',
-                text: 'Estudi per integració d\'IA',
-                icon: 'tabler:robot',
-              },
+              }
+              
             ],
           },
         ],
