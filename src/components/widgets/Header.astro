@@ -106,8 +106,9 @@ const contactLink = links.find((link) => link._id === 'contact');
                 <MenuDropdown btn={{ text, href, title, _id }} links={links} />
               ) : (
                 <a
+                  id={_id}
                   class:list={[
-                    'hover:text-link dark:hover:text-white px-2 lg:px-4 py-3 flex items-center whitespace-nowrap  md:text-sm min-[810px]:text-base',
+                    'hover:text-accent dark:hover:text-white px-2 lg:px-4 py-3 flex items-center whitespace-nowrap  md:text-sm min-[810px]:text-base',
                     { active: href === currentPath && currentPath !== u('home') },
                   ]}
                   href={href}
@@ -143,7 +144,7 @@ const contactLink = links.find((link) => link._id === 'contact');
         </div>
         {
           contactLink && (
-            <div class="mr-auto md:hidden">
+            <div class="mr-auto py-2 px-4 md:hidden mobile-contact-btn">
               <a
                 class:list={[
                   'hover:text-link dark:hover:text-white whitespace-nowrap',
@@ -168,7 +169,7 @@ const contactLink = links.find((link) => link._id === 'contact');
           )
         }
         {
-          showLangMenu ? (
+          false && showLangMenu ? (
             <span class="ml-4 rtl:ml-0 rtl:mr-4 lang-menu md:hidden">
               {Object.keys(languages).map((lang) => (
                 <Button

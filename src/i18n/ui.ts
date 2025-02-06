@@ -394,7 +394,7 @@ export const header = {
           {
             _id: 'development',
             text: 'Programació a mida',
-            title: 'Més informació de programació a mida',
+            title: 'Programació de software a mida per empreses',
             href: routes['ca']['development'],
 
             links: [
@@ -434,7 +434,7 @@ export const header = {
           {
             _id: 'software',
             text: 'Software personalitzat',
-            title: 'Més informació de software personalitzat',
+            title: 'Programació de software personalitzat',
             href: routes['ca']['software'],
             links: [
               {
@@ -472,7 +472,7 @@ export const header = {
           {
             _id: 'migration',
             text: 'Migració i integració',
-            title: 'Més informació de migració i integració',
+            title: 'Migració de dades i aplicacions i integració de sistemes',
             href: routes['ca']['migration'],  
             links: [
               {
@@ -511,7 +511,7 @@ export const header = {
           {
             _id: 'consultory',
             text: 'Consultoria TIC',
-            title: 'Més informació de consultoria TIC',
+            title: 'Assessorament en desenvolupament de projectes informàtics',
             href: routes['ca']['consultory'],
             links: [
               {

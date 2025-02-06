@@ -187,6 +187,7 @@ body.route-home .wg-hero p
   color: #000;
 }
 
+/*.wg-header #contact,*/
 body.route-home .wg-hero .text-accent,
 body.route-home .wg-hero .custom-gradient,
 body.route-gilsys .wg-hero .text-accent,
@@ -349,5 +350,49 @@ body:not(.route-home) .wg-hero .btn-primary:hover{
 #image-kit-digital,
 #image-kit-consulting{
   max-width: 300px;
-  margin-top: 3rem;
+  margin-top: -3rem;
+}
+
+@media screen and (min-width: 768px) {
+  #image-kit-digital,
+  #image-kit-consulting{
+    max-width: 300px;
+    margin-top: 3rem;
+  }
+}
+
+
+
+.wg-header #contact, .mobile-contact-btn{
+  border-radius: 100%;
+  border-radius: 9999px;
+  margin-left: 0.5rem;
+  background-color: rgba(176, 176, 176, 0.1) !important;
+}
+
+#home-first-image{
+  border-radius: 100%;
+  animation: hueRotation2 15s infinite linear;
+}
+
+@keyframes hueRotation2 {
+  0% {
+    filter: hue-rotate(0deg) brightness(120%) saturate(100%);
+  }
+
+  25% {
+    filter: hue-rotate(15deg) brightness(120%) saturate(100%);
+  }
+
+  50% {
+    filter: hue-rotate(0deg) brightness(140%) saturate(80%);
+  }
+  
+  75% {
+    filter: hue-rotate(5deg) brightness(120%) saturate(120%);
+  }
+  
+  100% {
+    filter: hue-rotate(0deg) brightness(120%) saturate(70%);
+  }
 }

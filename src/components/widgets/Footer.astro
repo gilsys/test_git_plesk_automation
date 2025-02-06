@@ -54,16 +54,17 @@ const u = useRoutes(language);
         links.map(({ text, title, links, href }) => (
           <div class="col-span-6 md:col-span-3 lg:col-span-2 lg:w-52">
             <div class="dark:text-gray-300 font-medium mb-2">
-              <a href={href} title={title}>{text}</a>
+              <a class="hover:text-accent" href={href} title={title}>{text}</a>
             </div>
             {links && Array.isArray(links) && links.length > 0 && (
               <ul class="text-sm">
-                {links.map(({ text, href, ariaLabel }) => (
+                {links.map(({ text, href, ariaLabel, title }) => (
                   <li class="mb-2">
                     <a
-                      class="text-muted hover:text-gray-700 hover:underline dark:text-gray-400 transition duration-150 ease-in-out text-xs lg:text-sm"
+                      class="hover:text-accent text-muted dark:text-gray-400 transition duration-150 ease-in-out text-xs lg:text-sm"
                       href={href}
                       aria-label={ariaLabel}
+                      title={title}
                     >
                       <Fragment set:html={text} />
                     </a>

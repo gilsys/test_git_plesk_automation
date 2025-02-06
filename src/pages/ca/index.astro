@@ -72,6 +72,7 @@ const u = useRoutes(getLangFromUrl(Astro.url));
       { variant: 'primary', title: 'Programació a mida amb intel·ligència artificial per empreses', text: 'Mes informació', href: u('development/ia') },
     ]}
     image={{
+      id: 'home-first-image',
       src: '~/assets/images/inteligencia-artificial.png',
       alt: 'Intel·ligència artificial',
     }}
@@ -93,14 +94,16 @@ const u = useRoutes(getLangFromUrl(Astro.url));
     blocks={[
       {
         link: u('development'),
-        title: header['ca']['links'].find((link) => link._id === 'services').links.find((link) => link._id === 'development').text,
+        text: header['ca']['links'].find((link) => link._id === 'services').links.find((link) => link._id === 'development').text,
+        title: header['ca']['links'].find((link) => link._id === 'services').links.find((link) => link._id === 'development').title,
         excerpt: 'Desenvolupem utilitzant la tecnologia idònea per a cada projecte, creant eines completament noves.',
         image: '~/assets/images/programacion-software-a-medida.jpg',
         links: header['ca']['links'].find((link) => link._id === 'services').links.find((link) => link._id === 'development').links,
       },
       {
         link: u('software'),
-        title: header['ca']['links'].find((link) => link._id === 'services').links.find((link) => link._id === 'software').text,
+        text: header['ca']['links'].find((link) => link._id === 'services').links.find((link) => link._id === 'software').text,
+        title: header['ca']['links'].find((link) => link._id === 'services').links.find((link) => link._id === 'software').title,
         excerpt: 'Utilitzem eines existents com a base i les extenem i adaptem programant a mida.',
         image: '~/assets/images/software-personalizado.jpg',
 
@@ -108,14 +111,16 @@ const u = useRoutes(getLangFromUrl(Astro.url));
       },
       {
         link: u('migration'),
-        title: header['ca']['links'].find((link) => link._id === 'services').links.find((link) => link._id === 'migration').text,
+        text: header['ca']['links'].find((link) => link._id === 'services').links.find((link) => link._id === 'migration').text,
+        title: header['ca']['links'].find((link) => link._id === 'services').links.find((link) => link._id === 'migration').title,
         excerpt: 'Optimitzem i migrem eines obsoletes i creem processos per comunicar plataformes.',
         image: '~/assets/images/migracion-integracion.jpg',
         links: header['ca']['links'].find((link) => link._id === 'services').links.find((link) => link._id === 'migration').links,
       },
       {
         link: u('consultory'),
-        title: header['ca']['links'].find((link) => link._id === 'services').links.find((link) => link._id === 'consultory').text,
+        text: header['ca']['links'].find((link) => link._id === 'services').links.find((link) => link._id === 'consultory').text,
+        title: header['ca']['links'].find((link) => link._id === 'services').links.find((link) => link._id === 'consultory').title,
         excerpt: 'Analitzem la situació actual, conceptualitzem idees i oferim assessorament per a executar-les.',
         image: '~/assets/images/consultoria-tecnologica.jpg',
         links: header['ca']['links'].find((link) => link._id === 'services').links.find((link) => link._id === 'consultory').links,
@@ -197,6 +202,9 @@ const u = useRoutes(getLangFromUrl(Astro.url));
 
   <Content
     isImageSmall
+    classes={{ 
+      container: 'pb-10 md:pb-0 lg:pb-0',
+     }}
     isAfterContent={false}
     items={[
       {
@@ -207,8 +215,7 @@ const u = useRoutes(getLangFromUrl(Astro.url));
         title: 'Som agents digitalitzadors',
         description: `A gilsys som un agent digitalitzador certificat dins del programa Kit Digital. Podem ajudar-te a digitalitzar les subvencions.
             <br />
-            <br />
-            <a href="`+ u('kit-digital') +`" class="btn-primary mb-12 w-auto">Més informació</a>`,
+            <a href="`+ u('kit-digital') +`" class="btn-primary mt-12 mb-12 w-auto">Més informació</a>`,
       },
     ]}
     image={{
@@ -219,7 +226,7 @@ const u = useRoutes(getLangFromUrl(Astro.url));
   >
     <Fragment slot="content">
       <h2 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">KIT DIGITAL</h2>
-      <p class="mb-2">Subvencions per solucions digitals per a autònoms i empreses de fins a 250 treballadors.</p>
+      <p class="-mb-4">Subvencions per solucions digitals per a autònoms i empreses de fins a 250 treballadors.</p>
     </Fragment>
 
     <Fragment slot="bg">
@@ -242,8 +249,7 @@ const u = useRoutes(getLangFromUrl(Astro.url));
         title: 'Som agents consultors',
         description: `A gilsys som un agent consultor certificat dins del programa Kit Consulting. T’ajudem a aprofitar les subvencions i dissenyar el full de ruta per a la transformació digital de la teva empresa.
             <br />
-            <br />
-            <a href="` + u('kit-consulting') + `" class="btn-primary mb-12 w-auto">Més informació</a>`,
+            <a href="` + u('kit-consulting') + `" class="btn-primary mt-12 mb-12 w-auto">Més informació</a>`,
       },
     ]}
     image={{
@@ -254,7 +260,7 @@ const u = useRoutes(getLangFromUrl(Astro.url));
   >
     <Fragment slot="content">
       <h2 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">KIT CONSULTING</h2>
-      <p class="mb-2">
+      <p class="-mb-4">
         Subvencions en serveis d'assessorament en transformació digital per a empreses d'entre 10 i 250 treballadors.
       </p>
     </Fragment>

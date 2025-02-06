@@ -10,7 +10,8 @@ const t = useTranslations(language);
 ---
 
 <div
-  class="px-4 wg-announcement dark text-white text-[13px] bg-black dark:bg-transparent dark:border-b dark:border-slate-800 dark:text-slate-400 flex items-center gap-1 overflow-hidden py-2 relative text-ellipsis whitespace-nowrap sticky top-0 z-40 h-[36px]"
+  class="px-4 wg-announcement dark text-white text-[13px] bg-black dark:bg-transparent
+  dark:border-b dark:border-slate-800 dark:text-slate-400 flex items-center gap-1 overflow-hidden py-2 relative text-ellipsis whitespace-nowrap sticky top-0 z-40 h-[36px]"
 >
   <a
     title="Whatsapp"
@@ -24,7 +25,7 @@ const t = useTranslations(language);
   <a href="tel:+34665331271" class="text-white hover:underline dark:text-slate-200 px-2"> 665 33 12 71 </a>
   <a href="mailto:info@gilsys.com" class="text-white hover:underline dark:text-slate-200"> info@gilsys.com</a>
 
-  <div class="ml-auto hidden md:block">
+  <div class="ml-auto">
     {
       Object.keys(languages).map((lang) => (
         <a

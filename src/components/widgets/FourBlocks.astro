@@ -79,10 +79,11 @@ const {
           <h3 class="text-xl sm:text-2xl font-bold leading-tight mb-2 font-heading dark:text-slate-300">
             {
               <a
+                title={block.title}
                 class="inline-block hover:text-primary dark:hover:text-blue-700 transition ease-in duration-200"
                 href={block.link}
               >
-                {block.title}
+                {block.text}
               </a>
             }
           </h3>
@@ -98,7 +99,7 @@ const {
                     />
                   </div>
                   <span>
-                    <a href={link.href} title={link.title}>
+                    <a class="hover:text-accent" href={link.href} title={link.title}>
                       {link.text}
                     </a>
                   </span>

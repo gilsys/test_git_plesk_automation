@@ -37,8 +37,8 @@ const metadata = {
 
   <Content
     tagline="Desenvolupem e-commerce adaptat per empreses de qualsevol sector"
-    title="Què és un e-commerce?"
-    subtitle="Plataformes, per petites i <strong>grans empreses</strong>, per permetre comprar productes i gestionar les vendes."
+    title="Què és un e-commerce, botiga online o comerç electrònic?"
+    subtitle="Parlem de plataformes, per <strong>petites</strong> i <strong>grans empreses</strong>, que permeten comprar productes i gestionar les vendes."
     items={[
       {
         title: 'Arribar a nous clients',
@@ -59,16 +59,7 @@ const metadata = {
         title: 'Obtenir informació valuosa sobre els clients',
         description:
           'Amb una botiga online permet recopilar dades sobre els teus clients (preferències, hàbits de compra, etc.) per millorar la teva estratègia de màrqueting.',
-      },
-      {
-        title: 'Disposar de funcionalitats tecnologicament avançades',
-        list: [
-          "Disposar d'una gestió centralitzada del catàleg de productes.",
-          'Integrar amb sistemes externs com passarel·les de pagament, ERPs o CRMs.',
-          "Millorar el posicionament de l'empresa en cercadors, amb SEO optimitzat per productes.",
-          'Escalar fàcilment amb el creixament del volum de ventes o ampliació de catàleg.',
-        ],
-      },
+      }
     ]}
     image={{
       src: '~/assets/images/ecommerce.jpg',
@@ -76,27 +67,57 @@ const metadata = {
     }}
   >
     <Fragment slot="preContent">
-      <p class="text-muted">
-        Un e-commerce, o comerç electrònic, és una plataforma en línia que permet a les empreses vendre productes o
-        serveis a través d'Internet. Avui dia, tenir una botiga online és essencial per a qualsevol empresa que vulgui
-        expandir el seu negoci i arribar a un públic més ampli. Una botiga online permet gestionar tot el procés de
-        venda, des de la presentació dels productes fins al pagament i l'enviament, i ofereix nombrosos avantatges per a
-        les empreses, com ara l'augment de vendes, la millora de la imatge de marca i l'accés a un mercat global.
-      </p>
-    </Fragment>
-    <Fragment slot="postContent">
-      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">Qui necessita un e-commerce?</h3>
-      <p class="text-muted">
-        Qualsevol empresa de qualsevol sector, que vulgui vendre productes, ja sigui a petita o gran escala, a nivell
-        local, nacional o internacional.
-      </p>
-      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2 mt-8">Utilitzem Woocommerce i Prestashop</h3>
-      <p class="text-muted">
-        A gilsys, som especialistes en el desenvolupament de botigues online personalitzades amb PrestaShop i
-        Woocommerce, dues de les plataformes de comerç electrònic més potents i versàtils del mercat.
-      </p>
-    </Fragment>
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">
+        L'objectiu és simple: <span class="custom-gradient">vendre per Internet</span>
+        
+      </h3>
+    </Fragment>    
   </Content>
+
+  <Content
+  isAfterContent
+  isReversed
+  tagline=""
+  title=""
+  subtitle=""
+  items={[
+    {
+      title: 'Gestionar la botiga i el catàleg de productes',
+      description:
+        "Disposar d'una eina per realitzar tota l'administració necessària.",
+    },
+    {
+      title: 'Integrar la plataforma amb altres programes',
+      description:
+        "Sincronitzar dades amb sistemes externs com ERPs o CRMs.",
+    },
+    {
+      title: 'Créixer',
+      description:
+        'Escalar fàcilment amb el creixament del volum de ventes o ampliació de catàleg.',
+    }
+  ]}
+  image={{
+    src: '~/assets/images/ecommerce.jpg',
+    alt: 'Plantilles web per personalitzar botiga online',
+  }}
+>
+<Fragment slot="postContent">
+  <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2 mt-8">Qui necessita un e-commerce?</h3>
+  <p class="text-muted">
+    Qualsevol empresa de qualsevol sector, que vulgui vendre productes, ja sigui a petita o gran escala, a nivell
+    local, nacional o internacional.
+  </p>
+  <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2 mt-8">Utilitzem Woocommerce i Prestashop</h3>
+  <p class="text-muted">
+    A gilsys, som especialistes en el desenvolupament de botigues online personalitzades amb PrestaShop i
+    Woocommerce, dues de les plataformes de comerç electrònic més potents i versàtils del mercat.
+  </p>
+</Fragment>
+</Content>
+
+
+
 
   <WidgetWrapper containerClass={`max-w-xl pb-6 md:pb-6 lg:pb-6`}>
     <a href="https://presatshop.com/" rel="nofollow" title="Prestashop - Motor de botigues online" target="_blank">
@@ -332,26 +353,44 @@ const metadata = {
       {
         title: 'Desenvolupament a mida i personalització',
         description:
-          'Creem mòduls i funcionalitats a mida per a la botiga online, adaptant a les teves necessitats específiques del negoci i oferint-te una solució única i personalitzada.',
+          'Creem mòduls i <strong>funcionalitats a mida</strong>, adaptant la botiga a les necessitats específiques del negoci i oferint una solució única i personalitzada.',
         icon: 'tabler:settings',
-      },
-      {
-        title: 'Personalitzacions responsables',
-        description:
-          'El mòduls creats i ampliacions, respecten les estructures originals sempre que sigui possible, evitant problemes de cares a futures actualtizacions.',
-        icon: 'tabler:adjustments-alt',
       },
       {
         title: 'Optimització SEO',
         description:
-          'Millorem punts tècnics per fer que el posicionament de la teva botiga als cercadors  contingut optimitzat i adaptat als estàndards SEO actuals.',
+        'Millorem punts tècnics per fer que el posicionament de la teva botiga als cercadors  contingut optimitzat i adaptat als estàndards SEO actuals.',
         icon: 'tabler:search',
       },
       {
-        title: 'Integració amb altres sistemes',
+        title: 'Traducció i internacionalització',
+        description:
+          'Traduirem la plataforma a tants idiomes com sigui necessari i configurem les divises i impostos corresponents.',
+        icon: 'tabler:flag',
+      },
+      {
+        title: 'Integració amb altres aplicacions',
         description:
           'Connectem la botiga amb ERP, CRM o eines de màrqueting per centralitzar la gestió i optimitzar els processos empresarials.',
         icon: 'tabler:database',
+      },
+      {
+        title: 'Sistemes de pagament online',
+        description:
+          'Integrarem pasarel·les de pagament de qualsevol tipus: <a target="_blank" href="https://redsys.es/" class="text-accent" title="Pagament amb TPV Redsys, connexió directa al banc" rel="nofollow">TPV amb tarjeta i Bizum</a>, <a target="_blank" class="text-accent" rel="nofollow" href="https://www.paypal.com">Paypal</a>, <a target="_blank" class="text-accent" href="https://www.stripe.com" title="Stripe" rel="nofollow">Stripe</a>, <a target="_blank" class="text-accent" href="https://woocommerce.com/es/payments/" title="Stripe" rel="nofollow">Woocommerce Payments</a> o el que el projecte requereixi.',
+        icon: 'tabler:credit-card-pay',
+      },
+      {
+        title: 'Transport i enviament',
+        description:
+          "Integrarem mòduls per transferir les comandes a empreses de transport, permetenet automatitzar etiquetatge i seguiment de l'enviament.",
+        icon: 'tabler:package-export',
+      },
+      {
+        title: 'Autoadministrable',
+        description:
+          "Realitzem la formació corresponent per a que el teu negoci o empresa pugui tenir control sobre el comerç online i les ventes.",
+        icon: 'tabler:box-padding',
       },
       {
         title: 'Rendiment i escalabilitat',
@@ -366,7 +405,7 @@ const metadata = {
         icon: 'tabler:shield-check',
       },
       {
-        title: 'Innovació contant',
+        title: 'Innovació constant',
         description:
           `Estem preparats per adaptar la plataforma a nous requisits i integrar solucions innovadores com <a title="Programació de funcionalitats que integrin intel·ligència artificial" class="text-accent" href='` + u('development/ia') + `'>intel·ligència artificial</a> o noves tecnologies que puguin aparèixer en un futur.`,
         icon: 'tabler:graph',

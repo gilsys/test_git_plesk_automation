@@ -55,6 +55,7 @@ export interface Taxonomy {
 
 export interface Block {
   title: string;
+  text: string;
   link: string;
   image: string;
   excerpt: string;
