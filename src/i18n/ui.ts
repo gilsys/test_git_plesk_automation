@@ -278,74 +278,74 @@ export const header = {
 
         links: [
           {
-            text: 'Lloc web i presència bàsica a Internet',
-            href: routes['ca']['kit-digital/web'],
-          },
-          {
-            text: 'Comerç electrònic',
-            href: routes['ca']['kit-digital/e-commerce'],
-          },
-          {
-            text: 'Gestió de clients',
-            href: routes['ca']['kit-digital/customer-management'],
-          },
-          {
-            text: 'Gestió de processos',
-            href: routes['ca']['kit-digital/process-management'],
-          },
-          {
             text: 'Business Intelligence i Analítica',
             href: routes['ca']['kit-digital/bi-analytics'],
-          },
-          {
-            text: 'Gestió de la facturació i factura electrònica',
-            href: routes['ca']['kit-digital/electronic-invoicing'],
-          },
-          {
-            text: 'Ciberseguretat',
-            href: routes['ca']['kit-digital/cybersecurity'],
-          },
-          {
-            text: 'Comunicacions segures',
-            href: routes['ca']['kit-digital/secure-communications'],
-          },
-          {
-            text: 'Serveis i eines d’oficina virtual',
-            href: routes['ca']['kit-digital/virtual-office-tools'],
-          },
-          {
-            text: 'Gestió de xarxes socials',
-            href: routes['ca']['kit-digital/social-media-management'],
-          },
-          {
-            text: 'Presència avançada a Internet',
-            href: routes['ca']['kit-digital/advanced-internet-presence'],
-          },
-          {
-            text: 'Marketplace',
-            href: routes['ca']['kit-digital/marketplace'],
-          },
-          {
-            text: 'Servei de Ciberseguretat Gestionada',
-            href: routes['ca']['kit-digital/managed-cybersecurity'],
-          },
-          {
-            text: 'Gestió de clients amb IA associada',
-            href: routes['ca']['kit-digital/ai-customer-management'],
           },
           {
             text: 'Business Intelligence i Analítica i IA associada',
             href: routes['ca']['kit-digital/ai-bi-analytics'],
           },
           {
+            text: 'Ciberseguretat',
+            href: routes['ca']['kit-digital/cybersecurity'],
+          },
+          {
+            text: 'Comerç electrònic',
+            href: routes['ca']['kit-digital/e-commerce'],
+          },
+          {
+            text: 'Comunicacions segures',
+            href: routes['ca']['kit-digital/secure-communications'],
+          },
+          {
+            text: 'Gestió de clients',
+            href: routes['ca']['kit-digital/customer-management'],
+          },
+          {
+            text: 'Gestió de clients amb IA associada',
+            href: routes['ca']['kit-digital/ai-customer-management'],
+          },
+          {
+            text: 'Gestió de la facturació i factura electrònica',
+            href: routes['ca']['kit-digital/electronic-invoicing'],
+          },
+          {
+            text: 'Gestió de processos',
+            href: routes['ca']['kit-digital/process-management'],
+          },
+          {
             text: 'Gestió de processos amb IA associada',
             href: routes['ca']['kit-digital/ai-process-management'],
+          },
+          {
+            text: 'Gestió de xarxes socials',
+            href: routes['ca']['kit-digital/social-media-management'],
           },
           {
             text: 'Lloc de treball segur',
             href: routes['ca']['kit-digital/secure-workplace'],
           },
-        ],
+          {
+            text: 'Lloc web i presència bàsica a Internet',
+            href: routes['ca']['kit-digital/web'],
+          },
+          {
+            text: 'Marketplace',
+            href: routes['ca']['kit-digital/marketplace'],
+          },
+          {
+            text: 'Presència avançada a Internet',
+            href: routes['ca']['kit-digital/advanced-internet-presence'],
+          },
+          {
+            text: 'Servei de Ciberseguretat Gestionada',
+            href: routes['ca']['kit-digital/managed-cybersecurity'],
+          },
+          {
+            text: 'Serveis i eines d’oficina virtual',
+            href: routes['ca']['kit-digital/virtual-office-tools'],
+          },
+        ],        
       },
       {
         _id: 'kit-consulting',
@@ -359,30 +359,30 @@ export const header = {
             href: routes['ca']['kit-consulting/ai'],
           },
           {
-            text: 'Assessorament en anàlisi de dades (Bàsic)',
-            href: routes['ca']['kit-consulting/basic-data-analysis'],
-          },
-          {
             text: 'Assessorament en anàlisi de dades (Avançat)',
             href: routes['ca']['kit-consulting/advanced-data-analysis'],
           },
           {
-            text: 'Assessorament en vendes digitals',
-            href: routes['ca']['kit-consulting/digital-sales-advisory'],
-          },
-          {
-            text: 'Assessorament en processos de negoci o procés de producció',
-            href: routes['ca']['kit-consulting/business-process-advisory'],
+            text: 'Assessorament en anàlisi de dades (Bàsic)',
+            href: routes['ca']['kit-consulting/basic-data-analysis'],
           },
           {
             text: 'Assessorament en estratègia i rendiment de negoci',
             href: routes['ca']['kit-consulting/business-strategy-advisory'],
           },
           {
+            text: 'Assessorament en processos de negoci o procés de producció',
+            href: routes['ca']['kit-consulting/business-process-advisory'],
+          },
+          {
+            text: 'Assessorament en vendes digitals',
+            href: routes['ca']['kit-consulting/digital-sales-advisory'],
+          },
+          {
             text: 'Assessorament “360” en transformació digital',
             href: routes['ca']['kit-consulting/360-digital-transformation'],
           },
-        ],
+        ],        
       },
       {
         _id: 'services',
@@ -561,137 +561,285 @@ export const header = {
   es: {
     links: [
       {
+        _id: 'home',
         text: 'Inicio',
         href: routes['es']['home'],
       },
       {
+        _id: 'gilsys',
         text: 'gilsys',
         href: routes['es']['gilsys'],
       },
       {
+        _id: 'kit-digital',
         text: 'Kit Digital',
+        title: 'Más información sobre el Kit Digital',
+        href: routes['es']['kit-digital'],
+  
         links: [
-          {
-            text: 'Sitio Web y presencia básica en Internet',
-            href: routes['es']['kit-digital/basic-internet-presence'],            
-          },
-          {
-            text: 'Comercio electrónico',
-            href: routes['es']['kit-digital/e-commerce'],
-          },
-          {
-            text: 'Gestión de clientes',
-            href: routes['es']['kit-digital/customer-management'],
-          },
-          {
-            text: 'Gestión de procesos',
-            href: routes['es']['kit-digital/process-management'],
-          },
           {
             text: 'Business Intelligence y Analítica',
             href: routes['es']['kit-digital/bi-analytics'],
           },
           {
-            text: 'Gestión de la facturación y factura electrónica',
-            href: routes['es']['kit-digital/electronic-invoicing'],
+            text: 'Business Intelligence y Analítica con IA asociada',
+            href: routes['es']['kit-digital/ai-bi-analytics'],
           },
           {
             text: 'Ciberseguridad',
             href: routes['es']['kit-digital/cybersecurity'],
           },
           {
+            text: 'Comercio electrónico',
+            href: routes['es']['kit-digital/e-commerce'],
+          },
+          {
             text: 'Comunicaciones seguras',
             href: routes['es']['kit-digital/secure-communications'],
           },
           {
-            text: 'Servicios y herramientas de Oficina Virtual',
-            href: routes['es']['kit-digital/virtual-office-tools'],
-          },
-          {
-            text: 'Gestión de redes sociales',
-            href: routes['es']['kit-digital/social-media-management'],
-          },
-          {
-            text: 'Presencia Avanzada en Internet',
-            href: routes['es']['kit-digital/advanced-internet-presence'],
-          },
-          {
-            text: 'Marketplace',
-            href: routes['es']['kit-digital/marketplace'],
-          },
-          {
-            text: 'Servicio de Ciberseguridad Gestionada',
-            href: routes['es']['kit-digital/managed-cybersecurity'],
+            text: 'Gestión de clientes',
+            href: routes['es']['kit-digital/customer-management'],
           },
           {
             text: 'Gestión de clientes con IA asociada',
             href: routes['es']['kit-digital/ai-customer-management'],
           },
           {
-            text: 'Business Intelligence y Analítica e IA asociada',
-            href: routes['es']['kit-digital/ai-bi-analytics'],
+            text: 'Gestión de la facturación y factura electrónica',
+            href: routes['es']['kit-digital/electronic-invoicing'],
+          },
+          {
+            text: 'Gestión de procesos',
+            href: routes['es']['kit-digital/process-management'],
           },
           {
             text: 'Gestión de procesos con IA asociada',
             href: routes['es']['kit-digital/ai-process-management'],
           },
           {
+            text: 'Gestión de redes sociales',
+            href: routes['es']['kit-digital/social-media-management'],
+          },
+          {
             text: 'Puesto de trabajo seguro',
             href: routes['es']['kit-digital/secure-workplace'],
           },
-        ],
-      },
+          {
+            text: 'Sitio web y presencia básica en Internet',
+            href: routes['es']['kit-digital/web'],
+          },
+          {
+            text: 'Marketplace',
+            href: routes['es']['kit-digital/marketplace'],
+          },
+          {
+            text: 'Presencia avanzada en Internet',
+            href: routes['es']['kit-digital/advanced-internet-presence'],
+          },
+          {
+            text: 'Servicio de Ciberseguridad Gestionada',
+            href: routes['es']['kit-digital/managed-cybersecurity'],
+          },
+          {
+            text: 'Servicios y herramientas de oficina virtual',
+            href: routes['es']['kit-digital/virtual-office-tools'],
+          },
+        ],        
+      },  
       {
+        _id: 'kit-consulting',
         text: 'Kit Consulting',
+        title: 'Más información sobre Kit Consulting',
+        href: routes['es']['kit-consulting'],
+  
         links: [
           {
-            text: 'Servicio de asesoramiento en Inteligencia Artificial',
-            href: routes['es']['kit-consulting/ai-advisory'],
+            text: 'Asesoramiento en Inteligencia Artificial',
+            href: routes['es']['kit-consulting/ai'],
           },
           {
-            text: 'Servicio de asesoramiento en análisis de datos (Básico)',
-            href: routes['es']['kit-consulting/basic-data-analysis'],
-          },
-          {
-            text: 'Servicio de asesoramiento en análisis de datos (Avanzado)',
+            text: 'Asesoramiento en análisis de datos (Avanzado)',
             href: routes['es']['kit-consulting/advanced-data-analysis'],
           },
           {
-            text: 'Servicio de asesoramiento en ventas digitales',
-            href: routes['es']['kit-consulting/digital-sales-advisory'],
+            text: 'Asesoramiento en análisis de datos (Básico)',
+            href: routes['es']['kit-consulting/basic-data-analysis'],
           },
           {
-            text: 'Servicio de asesoramiento en procesos de negocio o proceso de producción',
-            href: routes['es']['kit-consulting/business-process-advisory'],
-          },
-          {
-            text: 'Servicio de asesoramiento en estrategia y rendimiento de negocio',
+            text: 'Asesoramiento en estrategia y rendimiento de negocio',
             href: routes['es']['kit-consulting/business-strategy-advisory'],
           },
           {
-            text: 'Servicio de asesoramiento “360” en transformación digital',
+            text: 'Asesoramiento en procesos de negocio o proceso de producción',
+            href: routes['es']['kit-consulting/business-process-advisory'],
+          },
+          {
+            text: 'Asesoramiento en ventas digitales',
+            href: routes['es']['kit-consulting/digital-sales-advisory'],
+          },
+          {
+            text: 'Asesoramiento “360” en transformación digital',
             href: routes['es']['kit-consulting/360-digital-transformation'],
           },
-        ],
+        ],        
       },
       {
+        _id: 'services',
         text: 'Servicios',
         links: [
           {
-            text: 'Software y apps',
-            href: routes['es']['services/software'],
+            _id: 'development',
+            text: 'Programación a medida',
+            title: 'Programación de software a medida para empresas',
+            href: routes['es']['development'],
+  
+            links: [
+              {
+                href: routes['es']['development/web'],
+                title: 'Programación de aplicaciones web a medida y plataformas online',
+                text: 'Aplicaciones web',
+                icon: 'tabler:code',
+              },
+              {
+                href: routes['es']['development/apps'],
+                title: 'Programación a medida de apps multiplataforma',
+                text: 'Aplicaciones móviles',
+                icon: 'tabler:device-mobile',
+              },
+              {
+                href: routes['es']['development/ia'],
+                title: 'Desarrollo de herramientas de IA a medida',
+                text: 'Inteligencia Artificial',
+                icon: 'tabler:cpu',
+              },
+              {
+                href: routes['es']['development/astro'],
+                title: 'Diseño de páginas web ultra-rápidas',
+                text: 'Webs de alto rendimiento',
+                icon: 'tabler:world',
+              },
+              {
+                href: routes['es']['development/automation'],
+                title: 'Programación de procesos automáticos y APIs a medida',
+                text: 'Automatizaciones y APIs',
+                icon: 'tabler:settings-automation',
+              },
+            ],
           },
           {
-            text: 'Consultoría tecnológica',
-            href: routes['es']['services/technology-consulting'],
+            _id: 'software',
+            text: 'Software personalizado',
+            title: 'Programación de software personalizado',
+            href: routes['es']['software'],
+            links: [
+              {
+                href: routes['es']['software/wp'],
+                title: 'Programación y diseño a medida de páginas web',
+                text: 'Webs en WordPress',
+                icon: 'tabler:brand-wordpress',
+              },
+              {
+                href: routes['es']['software/pimcore'],
+                title: 'Implementamos Pimcore para centralizar la gestión de productos.',
+                text: 'Gestores de productos',
+                icon: 'tabler:database',
+              },
+              {
+                href: routes['es']['software/metabase'],
+                title: 'Utilizamos Metabase como herramienta de Business Intelligence',
+                text: 'Business Intelligence',
+                icon: 'tabler:chart-bar',
+              },
+              {
+                href: routes['es']['software/ecommerce'],
+                title: 'Diseñamos portales e-commerce con Prestashop y Woocommerce.',
+                text: 'Tienda online',
+                icon: 'tabler:shopping-cart',
+              },
+              {
+                href: routes['es']['software/crm'],
+                title: 'Software CRM personalizado',
+                text: 'Gestión de clientes',
+                icon: 'tabler:user-circle',
+              },
+            ]
           },
           {
+            _id: 'migration',
             text: 'Migración e integración',
-            href: routes['es']['services/migration-integration'],
+            title: 'Migración de datos y aplicaciones e integración de sistemas',
+            href: routes['es']['migration'],  
+            links: [
+              {
+                href: routes['es']['migration'] + '#renovacion-software',
+                title: 'Sustitución de sistemas antiguos por aplicaciones modernas.',
+                text: 'Renovación de software',
+                icon: 'tabler:chart-line',
+              },
+              {
+                href: routes['es']['migration'] + '#migracion-datos',
+                title: 'Migramos bases de datos antiguas a nuevas aplicaciones sin pérdida de información.',
+                text: 'Migración de datos',
+                icon: 'tabler:arrows-transfer-down',
+              },
+              {
+                href: routes['es']['migration'] + '#integracion-ia',
+                title: 'Integración de inteligencia artificial en empresas',
+                text: 'Integración de IA',
+                icon: 'tabler:brain',
+              },
+              {
+                href: routes['es']['migration'] + '#conexion-software',
+                title: 'Sincronización de información entre programas',
+                text: 'Conexión de software',
+                icon: 'tabler:link',
+              },
+              {
+                href: routes['es']['migration'] + '#division-escalabilidad',
+                title: 'Separación de plataformas en módulos escalables',
+                text: 'División y escalabilidad',
+                icon: 'tabler:sitemap',
+              },
+            ],         
           },
           {
-            text: 'Desarrollo web',
-            href: routes['es']['services/web-development'],
+            _id: 'consultory',
+            text: 'Consultoría TIC',
+            title: 'Asesoramiento en desarrollo de proyectos informáticos',
+            href: routes['es']['consultory'],
+            links: [
+              {
+                href: routes['es']['consultory'] + '#ia',
+                title: 'Cómo implementar inteligencia artificial en la empresa',
+                text: 'Estudio para integración de IA',
+                icon: 'tabler:robot',
+              },
+              {
+                href: routes['es']['consultory'] + '#analisis-situacion-tecnologica',
+                title: 'Estudio de las herramientas actuales y propuestas de optimización',
+                text: 'Análisis de situación tecnológica',
+                icon: 'tabler:clipboard-list',
+              },          
+              {
+                href: routes['es']['consultory'] + '#transformar-ideas-en-proyectos',
+                title: 'Recopilación de requisitos y elaboración de propuestas',
+                text: 'Transformación de ideas en proyectos',
+                icon: 'tabler:clipboard-text',
+              },          
+              {
+                href:routes['es']['consultory'] + '#analisis-organizacion-datos',
+                title: 'Estudio para optimizar estructura y calidad de la información',
+                text: 'Análisis y organización de datos',
+                icon: 'tabler:table',
+              },          
+              {
+                href: routes['es']['consultory'] + '#identificacion-soluciones',
+                title: 'Evaluación y propuesta de nuevas herramientas y servicios',
+                text: 'Identificación de soluciones',
+                icon: 'tabler:bulb',
+              }
+            ],
           },
         ],
       },
