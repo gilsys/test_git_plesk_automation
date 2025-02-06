@@ -141,12 +141,9 @@ export const routes = {
     'kit-consulting/advanced-data-analysis':'/ca/kit-consulting/servei-de-assessorament-en-analisis-de-dades-avancat',
     'kit-consulting': '/ca/kit-consulting',
     'kit-consulting/digital-sales-advisory': '/ca/kit-consulting/servei-de-assessorament-en-vendes-digitals',
-    'kit-consulting/business-process-advisory':
-      'kit-consulting/servei-de-assessorament-en-processos-de-negoci-o-proces-de-produccio',
-    'kit-consulting/business-strategy-advisory':
-      'kit-consulting/servei-de-assessorament-en-estrategia-i-rendiment-de-negoci',
-    'kit-consulting/360-digital-transformation':
-      'kit-consulting/servei-de-assessorament-360-en-transformacion-digital',
+    'kit-consulting/business-process-advisory': '/ca/kit-consulting/servei-de-assessorament-en-processos-de-negoci-o-proces-de-produccio',
+    'kit-consulting/business-strategy-advisory': '/ca/kit-consulting/servei-de-assessorament-en-estrategia-i-rendiment-de-negoci',
+    'kit-consulting/360-digital-transformation': '/ca/kit-consulting/servei-de-assessorament-360-en-transformacion-digital',
     
     
     'consultory': '/ca/consultoria-tecnologica',
@@ -197,14 +194,14 @@ export const routes = {
     'kit-consulting/ai': '/es/kit-consulting/servicio-de-asesoramiento-en-inteligencia-artificial',
     'kit-consulting/basic-data-analysis': '/es/kit-consulting/servicio-de-asesoramiento-en-analisis-de-datos-basico',
     'kit-consulting/advanced-data-analysis':
-      'kit-consulting/servicio-de-asesoramiento-en-analisis-de-datos-avanzado',
+    'kit-consulting/servicio-de-asesoramiento-en-analisis-de-datos-avanzado',
     'kit-consulting/digital-sales-advisory': '/es/kit-consulting/servicio-de-asesoramiento-en-ventas-digitales',
     'kit-consulting/business-process-advisory':
-      'kit-consulting/servicio-de-asesoramiento-en-procesos-de-negocio-o-proceso-de-produccion',
+    'kit-consulting/servicio-de-asesoramiento-en-procesos-de-negocio-o-proceso-de-produccion',
     'kit-consulting/business-strategy-advisory':
-      'kit-consulting/servicio-de-asesoramiento-en-estrategia-y-rendimiento-de-negocio',
+    'kit-consulting/servicio-de-asesoramiento-en-estrategia-y-rendimiento-de-negocio',
     'kit-consulting/360-digital-transformation':
-      'kit-consulting/servicio-de-asesoramiento-360-en-transformacion-digital',
+    'kit-consulting/servicio-de-asesoramiento-360-en-transformacion-digital',
    
       'consultory': '/ca/consultoria-tecnologica',
     'migration': '/ca/migracio-integracio',
