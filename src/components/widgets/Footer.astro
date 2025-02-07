@@ -161,7 +161,7 @@ const u = useRoutes(language);
         <Fragment set:html={footNote} />
       </div>
 
-      <div class="text-sm text-muted flex gap-2 mt-2 text-right lg:absolute lg:w-full lg:text-center lg:block">
+      <div class="text-sm text-muted flex gap-2 mt-2 text-right lg:absolute lg:w-[calc(100%-10px)] lg:text-center lg:block lg:-ms-[10px] xl:-ms-[20px]">
         {
           secondaryLinks.map(({ text, href }, index) => (
             <>
