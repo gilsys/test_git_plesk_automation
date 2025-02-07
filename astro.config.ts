@@ -15,6 +15,8 @@ import astrowind from './vendor/integration';
 
 import { readingTimeRemarkPlugin, responsiveTablesRehypePlugin, lazyImagesRehypePlugin } from './src/utils/frontmatter';
 
+//import jopSoftwarecookieconsent from '@jop-software/astro-cookieconsent';
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const hasExternalScripts = false;
@@ -26,63 +28,53 @@ export default defineConfig({
     
   site: 'https://www.gilsys.com',
 
-  integrations: [
-    tailwind({
-      applyBaseStyles: false,
-    }),
-    sitemap(
-      {
-          i18n: {
-            defaultLocale: 'es',
-            locales: {
-              en: 'en-US',
-              es: 'es-ES',
-              ca: 'ca-CA',
-            },
+  integrations: [tailwind({
+    applyBaseStyles: false,
+  }), sitemap(
+    {
+        i18n: {
+          defaultLocale: 'es',
+          locales: {
+            en: 'en-US',
+            es: 'es-ES',
+            ca: 'ca-CA',
           },
-      }
-    ),
-    mdx(),
-    icon({
-      include: {
-        tabler: ['*'],
-        'flat-color-icons': [
-          'template',
-          'gallery',
-          'approval',
-          'document',
-          'advertising',
-          'currency-exchange',
-          'voice-presentation',
-          'business-contact',
-          'database',
-        ],
-      },
-    }),
-
-    ...whenExternalScripts(() =>
-      partytown({
-        config: { forward: ['dataLayer.push'] },
-      })
-    ),
-
-    compress({
-      CSS: true,
-      HTML: {
-        'html-minifier-terser': {
-          removeAttributeQuotes: false,
         },
+    }
+  ), mdx(), icon({
+    include: {
+      tabler: ['*'],
+      'flat-color-icons': [
+        'template',
+        'gallery',
+        'approval',
+        'document',
+        'advertising',
+        'currency-exchange',
+        'voice-presentation',
+        'business-contact',
+        'database',
+      ],
+    },
+  }), ...whenExternalScripts(() =>
+    partytown({
+      config: { forward: ['dataLayer.push'] },
+    })
+  ), compress({
+    CSS: true,
+    HTML: {
+      'html-minifier-terser': {
+        removeAttributeQuotes: false,
       },
-      Image: false,
-      JavaScript: true,
-      SVG: false,
-      Logger: 1,
-    }),
-
-    astrowind({
-      config: './src/config.yaml',
-    }),
-  ],
+    },
+    Image: false,
+    JavaScript: true,
+    SVG: false,
+    Logger: 1,
+  }), astrowind({
+    config: './src/config.yaml',
+  })
+],
 
   image: {
     domains: ['cdn.pixabay.com'],

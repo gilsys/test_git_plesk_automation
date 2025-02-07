@@ -38,7 +38,11 @@ const translatePath = useTranslatedPath(language);
 <!doctype html>
 <html lang={language} dir={textDirection} class="2xl:text-[20px]">
   <head>    
-    
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.0.1/dist/cookieconsent.css"
+  />
+  <script type="module" src="/src/scripts/cookieconsent-config.js"></script>
    {Object.entries(languages)
       .filter(([lang]) => lang !== language) // Filtra el idioma actual
       .map(([lang, { code }]) => (          // Extrae el código del idioma
