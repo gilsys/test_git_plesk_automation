@@ -183,6 +183,7 @@ export const routes = {
   },
   es: {
     'home': '/es',
+    'gilsys': '/es/sobre-nosotros',
     'kit-digital/web': '/es/kit-digital/presencia-basica-internet',
     'kit-digital/e-commerce': '/es/kit-digital/comercio-electronico',
     'kit-digital/customer-management': '/es/kit-digital/gestion-de-clientes',

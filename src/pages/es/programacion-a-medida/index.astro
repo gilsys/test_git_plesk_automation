@@ -1,0 +1,292 @@
+---
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+
+const metadata = {
+  title: 'Programación de software a medida para empresas | +20 años',
+  description:
+    'Desarrollamos aplicaciones web y apps móviles, herramientas que integran inteligencia artificial en las empresas y automatizan procesos.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    actions={[{ variant: 'primary', text: 'Presupuesto gratuito', href: u('contact') }]}
+    backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/dots/13.jpg' }}
+    tagline="Creamos <strong>herramientas que NO solo funcionan</strong>, sino que son atractivas y eficientes."
+  >
+    <Fragment slot="title"
+      >Programación de <span class="text-accent highlight"> software a medida</span> para empresas</Fragment
+    >
+    <Fragment slot="subtitle"
+      >Desarrollamos aplicaciones web y apps móviles, herramientas que integran inteligencia artificial en las empresas
+      y automatizan procesos.</Fragment
+    >
+  </Hero>
+
+  <Features3
+    title="¿Qué tipo de herramientas programamos a medida?"
+    items={[
+      {
+        title: 'Aplicaciones web',
+        description:
+          'Desarrollamos herramientas y plataformas online, públicas o de uso empresarial interno para todo tipo de proyectos.',
+        icon: 'tabler:world',
+        callToAction: {
+          class: 'more-info',
+          text: 'Más información',
+          href: u('development/web'),
+        },
+      },
+      {
+        title: 'Aplicaciones móviles',
+        description:
+          'Diseñamos y programamos aplicaciones multiplataforma, híbridas, para iOS y Android, para móviles y tablets en Apple Store y Google Play.',
+        icon: 'tabler:device-mobile',
+        callToAction: {
+          class: 'more-info',
+          text: 'Más información',
+          href: u('development/apps'),
+        },
+      },
+      {
+        title: 'Programación con inteligencia artificial',
+        description:
+          'Desarrollamos soluciones que utilizan IA para automatizar tareas que requieren una comprensión avanzada de los datos.',
+        icon: 'tabler:brain',
+        callToAction: {
+          class: 'more-info',
+          text: 'Más información',
+          href: u('development/ia'),
+        },
+      },
+      {
+        title: 'Webs de alto rendimiento',
+        description:
+          "Programamos webs optimizadas en rendimiento, SEO, seguridad y con una experiencia de usuario funcional. Para proyectos que requieren más que un <a class='text-accent' href='' title='Programación de webs autogestionables con Wordpress'>WordPress</a>.",
+        icon: 'tabler:layout',
+        callToAction: {
+          class: 'more-info',
+          text: 'Más información',
+          href: u('development/astro'),
+        },
+      },
+      {
+        title: 'Programación de automatizaciones y APIs',
+        description:
+          'Automatizar tareas repetitivas mediante programación permite optimizar procesos empresariales y mejorar la conectividad entre sistemas.',
+        icon: 'tabler:api',
+        callToAction: {
+          class: 'more-info',
+          text: 'Más información',
+          href: u('development/automation'),
+        },
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Features3>
+
+  <FAQs
+    title="Software, webs, apps móviles y herramientas en la nube, programadas a medida"
+    subtitle="En gilsys, somos especialistas en el desarrollo de soluciones tecnológicas diseñadas desde cero para cubrir los requisitos concretos de cada proyecto."
+    tagline=""
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: '¿Qué significa software a medida?',
+        description:
+          'El software a medida es la programación de aplicaciones y herramientas tecnológicas <strong>que no existen</strong>. Esto permite una adaptación completa a las necesidades del cliente, eliminando las limitaciones de las plataformas comerciales o soluciones personalizadas basadas en software estándar.',
+      },
+      {
+        title: 'Diferencias entre software a medida y software personalizado',
+        description:
+          "Aunque pueden parecer conceptos similares, es importante destacar que el software a medida se crea <strong>desde cero</strong>, mientras que el software personalizado implica adaptar o ampliar una herramienta a las necesidades del cliente. No hay una solución perfecta, dependiendo de cada proyecto, será mejor programar software a medida o utilizar como base <a title='Programación de software personalizado' href='" +
+          u('software') +
+          "' class='text-accent'>software personalizado</a>.",
+      },
+    ]}
+  />
+
+  <Features2
+    id="features"
+    tagline="Características"
+    title="Beneficios del software a medida"
+    subtitle="Soluciones únicas para cubrir las necesidades específicas de cada empresa con eficiencia, escalabilidad e innovación."
+    items={[
+      {
+        title: 'Programación a medida para adaptarse a cada empresa',
+        description:
+          "El desarrollo de software a medida asegura una adaptabilidad superior a las soluciones comerciales. Cada proyecto se diseña y desarrolla conjuntamente con la empresa para responder a sus necesidades específicas. En caso necesario, se realiza una consultoría tecnológica para <a  title='Asesoramiento IT para transformar ideas en proyectos' href='" +
+          u('consultory') +
+          "' class='text-accent'>transformar las ideas en proyectos</a>.",
+        icon: 'tabler:brand-tailwind',
+      },
+      {
+        title: 'Interfaces de usuario completamente personalizadas',
+        description:
+          'La programación a medida elimina las limitaciones de los programas estándar. Diseñar interfaces intuitivas y adaptadas a los requerimientos específicos facilita el uso y mejora la eficiencia de los equipos en herramientas internas y hace más atractiva la experiencia en plataformas y apps.',
+        icon: 'tabler:components',
+      },
+      {
+        title: 'Desarrollo de funcionalidades avanzadas',
+        description:
+          'Al tener control del código fuente, podemos implementar funcionalidades avanzadas y personalizadas para dar respuesta a las necesidades específicas de cada proyecto, creando soluciones tecnológicas tan simples o complejas como sea necesario.',
+        icon: 'tabler:list-check',
+      },
+      {
+        title: 'Control de código y actualizaciones',
+        description:
+          'El desarrollo de software a medida garantiza un control total sobre el código fuente y las actualizaciones. Esto ofrece flexibilidad eliminando la dependencia de proveedores externos.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Escalabilidad y flexibilidad para adaptarse al crecimiento del negocio',
+        description:
+          'El desarrollo a medida estará pensado para evolucionar con cada proyecto. Las herramientas creadas se pueden ampliar o modificar para incorporar nuevas funcionalidades, integrar tecnologías emergentes y escalar a nivel de infraestructura.',
+        icon: 'tabler:arrows-right-left',
+      },
+      {
+        title: 'Eficiencia y productividad',
+        description:
+          'Reducir tiempo en tareas repetitivas y errores humanos es posible con programación a medida, que optimiza los procesos y mejora la productividad de la empresa.',
+        icon: 'tabler:arrows-right-left',
+      },
+      {
+        title: 'Innovación en desarrollo tecnológico',
+        description:
+          'Se pueden incorporar tecnologías innovadoras como frameworks modernos e inteligencia artificial, para preparar el software de cara a las necesidades actuales y futuras de la empresa.',
+        icon: 'tabler:arrows-right-left',
+      },
+      {
+        title: 'Integración con sistemas y herramientas existentes',
+        description:
+          'La programación a medida permite integrar el software creado con sistemas y herramientas ya utilizados por la empresa, mejorando la conectividad y optimizando los procesos sin interrupciones.',
+        icon: 'tabler:arrows-right-left',
+      },
+      {
+        title: 'Ahorro a largo plazo comparado con el desarrollo propietario',
+        description:
+          'El software a medida elimina costos recurrentes de licencias y adaptaciones forzadas, ofreciendo en muchos casos una solución más rentable y sostenible.',
+        icon: 'tabler:arrows-right-left',
+      },
+    ]}
+  />
+
+  <Features
+    id="features"
+    tagline=""
+    title="Desventajas y soluciones"
+    subtitle="Descubre cómo el software a medida supera los retos iniciales para ofrecer beneficios a largo plazo."
+    items={[
+      {
+        title: 'Costo inicial más elevado que el software comercial',
+        description:
+          'El <strong>software a medida</strong> requiere una inversión inicial más alta en comparación con soluciones estándar. Esto se debe a la personalización total del desarrollo y la creación desde cero. A largo plazo, el costo se reduce eliminando licencias recurrentes, costos de adaptación y dependencias de terceros.',
+        icon: 'tabler:currency-dollar',
+      },
+      {
+        title: 'Tiempo de desarrollo más largo',
+        description:
+          'Crear un software puede requerir más tiempo que implementar una solución comercial ya existente. En gilsys utilizamos <strong>metodologías ágiles</strong> para garantizar un proceso eficiente y priorizar funcionalidades críticas, permitiendo una implementación por fases.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Dependencia del proveedor de desarrollo',
+        description:
+          'Que el código sea único puede generar cierta dependencia del equipo de desarrolladores. En <strong>gilsys</strong>, ofrecemos <strong>transparencia total</strong> en el código y, si es necesario, podemos ofrecer como servicio adicional la documentación y formación para equipos técnicos del cliente, asegurando una autonomía total.',
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Complejidad en la gestión inicial',
+        description:
+          'Adoptar una herramienta completamente nueva puede requerir un período de adaptación para los usuarios finales. Desarrollamos <strong>interfaces intuitivas</strong> y proporcionamos formación específica para facilitar una transición fluida. Además, podemos ajustar el software de forma posterior al despliegue para adaptarlo según el feedback de los usuarios.',
+        icon: 'tabler:settings',
+      },
+    ]}
+  />
+
+  <Content
+    isReversed
+    tagline="Descubre por qué somos diferentes"
+    title="¿Por qué elegir gilsys para desarrollar proyectos de <span class='custom-gradient'>programación a medida</span>?"
+    items={[
+      {
+        title: 'Compromiso con el proyecto y la planificación',
+        description:
+          'Nos encargamos de definir de forma precisa lo que incluirá el proyecto de software a medida desde el primer momento y establecemos un calendario realista ajustado a su complejidad.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Enfoque en la eficiencia y el rendimiento',
+        description:
+          'Nuestras herramientas <strong>NO solo funcionan</strong>, creemos que cada código debe ser una pequeña obra artesanal. Optimizamos el código y los procesos internos del software para que sea rápido, fiable y eficiente.',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Servicios de mantenimiento evolutivo y correctivo',
+        description:
+          'Planificamos contigo la evolución del software para que pueda crecer con tu empresa, integrando nuevas funcionalidades.',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Tecnología de vanguardia',
+        description:
+          'Desde inteligencia artificial hasta soluciones en la nube, utilizamos las tecnologías más adecuadas para tu proyecto, priorizando la innovación sobre la reutilización de código cuando es necesario.',
+        icon: 'tabler:cloud',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/programacion-software-a-medida.jpg',
+      alt: 'Código fuente de programación de software a medida',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        Durante más de 20 años creando software a medida, hemos trabajado en proyectos clave en una gran variedad de
+        sectores.
+      </p>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/13.jpg', alt: 'Fondo abstracto' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Presupuesto gratuito',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Llamar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title"
+      >Si lo que necesitas no existe, necesitas <br /><span class="custom-gradient">software a medida</span></Fragment
+    >
+    <Fragment slot="subtitle">Preparamos un presupuesto adaptado a tus necesidades.</Fragment>
+  </CallToAction>
+
+  <BlogLatestPosts title="Últimas entradas del blog" linkText="Ir al blog" />
+</Layout>

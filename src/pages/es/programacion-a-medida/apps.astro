@@ -1,0 +1,365 @@
+---
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Prices from '~/components/widgets/Pricing.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+
+const metadata = {
+  title: `Empresa de desarrollo de aplicaciones móviles | +20 años`,
+  description: `Programación de apps multiplataforma, híbridas, para iOS y Android, para móviles y tablets en Apple Store y Google Play, integradas con IA.`,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Section -->
+  <Hero
+    tagline="Soluciones a medida, con diseño atractivo y tecnología actual."
+    actions={[{ variant: 'primary', text: 'Presupuesto gratuito', href: u('contact') }]}
+    backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/dots/05.jpg' }}
+  >
+    <Fragment slot="title">
+      Programación de <span class="custom-gradient">Aplicaciones para móviles</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      Desarrollamos <span class="custom-gradient">aplicaciones multiplataforma</span>, <span class="custom-gradient"
+        >híbridas</span
+      >, para iOS y Android, para móviles y tablets en Apple Store y Google Play integradas con IA.
+    </Fragment>
+  </Hero>
+
+  <!-- Introducción -->
+
+  <Features3
+    title="Aplicaciones híbridas nativas o web"
+    tagline="Diferentes enfoques para desarrollar aplicaciones móviles"
+    subtitle="Creamos aplicaciones para iOS y Android mediante tecnologías híbridas, ya sea encapsulando aplicaciones web en apps móviles o programando con tecnologías avanzadas que se compilan en código nativo."
+  />
+
+  <!-- Comparativa -->
+  <Features2
+    title="¿Cómo desarrollamos las aplicaciones móviles?"
+    subtitle=""
+    items={[
+      {
+        title: 'Eficiencia en el desarrollo',
+        description:
+          'Creamos <strong>aplicaciones híbridas</strong>, multiplataforma que permiten limitar costos y tiempos de desarrollo sin sacrificar funcionalidad.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Flexibilidad en las funcionalidades',
+        description: `Utilizamos tecnologías que permiten a las aplicaciones creadas, acceder a <strong>funciones propias del dispositivo</strong>, como Bluetooth, notificaciones push o ubicación.`,
+        icon: 'tabler:adjustments-alt',
+      },
+      {
+        title: 'Gestión integrada con web',
+        description: `Complementamos las aplicaciones móviles con <a class="text-accent" title="Desarrollo de aplicaciones web a medida" href="${u('development/web')}">aplicaciones web</a> que permiten administrar configuraciones, usuarios y datos en tiempo real.`,
+        icon: 'tabler:plug-connected',
+      },
+      {
+        title: 'Escalabilidad y evolución',
+        description:
+          'Diseñamos apps pensando en el futuro, preparadas para actualizarse y <strong>evolucionar</strong> con nuevas funcionalidades a medida que el proyecto crezca.',
+        icon: 'tabler:arrows-maximize',
+      },
+      {
+        title: 'Diseño adaptado a cada proyecto',
+        description: `Priorizamos el <strong>diseño de interfaces</strong> intuitivas y limpias, adaptadas a las necesidades y expectativas del usuario final de cada app.`,
+        icon: 'tabler:palette',
+      },
+      {
+        title: 'Integradas con inteligencia artificial',
+        description: `Utilizamos la <a class="text-accent" title="Integramos inteligencia artificial en apps híbridas" href="${u('development/ia')}">IA</a> para que las aplicaciones creadas puedan resolver problemas avanzados siempre que el proyecto lo requiera, permitiendo así disponer de herramientas capaces de entender y razonar.`,
+        icon: 'tabler:brain',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- Comparativa con aplicaciones web -->
+  <Features
+    title={`¿En qué se diferencian las <span class="custom-gradient">apps móviles híbridas</span> de las <a class="custom-gradient" title="Desarrollo de aplicaciones web a medida" href="${u('development/web')}">aplicaciones web</a>?`}
+    items={[
+      {
+        title: 'Accesibilidad',
+        description:
+          'Las aplicaciones móviles híbridas requieren instalación y no están disponibles para equipos de escritorio; las aplicaciones web son accesibles desde cualquier navegador.',
+        icon: 'tabler:world',
+      },
+      {
+        title: 'Funcionalidades nativas',
+        description:
+          'Las aplicaciones móviles tienen acceso a funciones como cámara o Bluetooth, mientras que las web están limitadas al navegador.',
+        icon: 'tabler:device-mobile',
+      },
+      {
+        title: 'Costos y tiempos de desarrollo',
+        description:
+          'Las aplicaciones móviles son más costosas pero permiten funcionalidades avanzadas. Las aplicaciones web son más sencillas y adaptables.',
+        icon: 'tabler:currency-dollar',
+      },
+      {
+        title: 'Rendimiento gráfico',
+        description: 'Las aplicaciones móviles son superiores para tareas gráficas exigentes.',
+        icon: 'tabler:device-gamepad',
+      },
+      {
+        title: 'Actualización',
+        description:
+          'Actualizar una aplicación web es mucho más rápido que hacerlo en una app, ya que las versiones publicadas en Google Play y Apple Store deben ser validadas por Google y Apple respectivamente.',
+        icon: 'tabler:refresh',
+      },
+    ]}
+  />
+
+  <!-- Comparativa -->
+  <FAQs
+    title="Programamos apps móviles gestionables a través de aplicaciones web"
+    subtitle={"Las aplicaciones móviles a menudo se complementan con una <a href='" +
+      u('development/web') +
+      "' class='text-accent'>aplicación web</a> que centraliza la gestión y facilita el control operativo."}
+    items={[
+      {
+        title: 'Gestión centralizada',
+        description:
+          'Configuración de opciones, administración de usuarios y supervisión de datos desde un entorno web privado.',
+      },
+      {
+        title: 'Actualizaciones rápidas',
+        description: 'Cambios y mejoras en contenido aplicados y reflejados inmediatamente en la aplicación móvil.',
+      },
+      {
+        title: 'Sincronización fluida',
+        description: 'Comunicación constante entre la web y el móvil para mantener datos coherentes y actualizados.',
+      },
+      {
+        title: 'Análisis de métricas',
+        description:
+          'Acceso a estadísticas para analizar y posteriormente mejorar las funcionalidades de la aplicación o de sus contenidos.',
+      },
+    ]}
+  />
+
+  <Content
+    isReversed
+    tagline=""
+    title="Aplicaciones híbridas web encapsuladas"
+    subtitle="Se podrá disponer de la herramienta en versión web responsive y de una app instalable."
+    items={[
+      {
+        title: 'Código reutilizable',
+        description: `El mismo código puede utilizarse tanto para aplicaciones móviles como para aplicaciones web.`,
+      },
+      {
+        title: 'Integración con funciones nativas, pero limitadas',
+        description: `A través de plugins, pueden acceder a funciones básicas como cámara, GPS o notificaciones push.`,
+      },
+      {
+        title: 'Distribución como app',
+        description: `Se publican en tiendas de aplicaciones, aumentando la visibilidad y facilitando el acceso para los usuarios.`,
+      },
+    ]}
+    image={{
+      src: '~/assets/images/app-mosaic-mockups.jpg',
+      alt: 'Diseño de interfaz móvil',
+    }}
+  >
+    <Fragment slot="preContent">
+      <p class="text-muted">
+        Soluciones programadas utilizando tecnologías que permiten crear aplicaciones web, que posteriormente pueden
+        encapsularse para funcionar como aplicación móvil.
+      </p>
+    </Fragment>
+    <Fragment slot="postContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">¿Cuándo recomendamos apps híbridas web?</h3>
+      <p class="text-muted">
+        Son ideales para proyectos que requieren tanto una interfaz accesible desde <strong>navegadores web</strong>
+        estándar, como una versión distribuible a través de tiendas de aplicaciones como <strong>Google Play</strong> o <strong
+          >Apple Store</strong
+        >.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Content
+    tagline=""
+    title="Aplicaciones híbridas nativas"
+    subtitle="Desarrollo enfocado exclusivamente en dispositivos móviles. Se utilizan tecnologías híbridas que optimizan el proceso de creación, manteniendo una mayor integración con funciones nativas de los dispositivos."
+    items={[
+      {
+        title: 'Funcionalidades nativas',
+        description: `Acceso completo a funciones del dispositivo como Bluetooth, biometría, acceso a información del dispositivo móvil y otros elementos avanzados.`,
+      },
+      {
+        title: 'Mejor experiencia de usuario',
+        description: `Se desarrollan para ofrecer un rendimiento cercano al de una app nativa, pero con la eficiencia de un código compartido.`,
+      },
+      {
+        title: 'No compatibles con web',
+        description: `Este tipo de aplicación está exclusivamente diseñado para móviles y no puede reutilizarse en navegadores.`,
+      },
+    ]}
+    image={{
+      src: '~/assets/images/app-mockup.jpg',
+      alt: 'Apps multiplataforma',
+    }}
+  >
+    <Fragment slot="preContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">Soluciones híbridas optimizadas</h3>
+      <p class="text-muted">
+        Desarrollamos aplicaciones móviles basadas en tecnologías avanzadas para ofrecer una experiencia de usuario
+        fluida, aprovechando un solo código para múltiples plataformas. Este enfoque permite que el desarrollo sea
+        eficiente, maximizando el potencial de cada dispositivo.
+      </p>
+    </Fragment>
+    <Fragment slot="postContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">¿Cuándo recomendamos apps híbridas nativas?</h3>
+      <p class="text-muted">
+        Las aplicaciones híbridas nativas resultan útiles siempre que se requiera acceso a funcionalidades avanzadas del
+        dispositivo móvil. También son una buena opción cuando no se necesita una versión web, o en caso de que esta
+        tenga requisitos diferentes a los de la app móvil.
+      </p>
+    </Fragment>
+  </Content>
+
+  <Prices
+    title="Comparativa de las opciones híbridas"
+    subtitle="Cada tipología ofrece ventajas y limitaciones según las necesidades del proyecto."
+    prices={[
+      {
+        title: 'Apps híbridas web',
+        subtitle: 'Flexibilidad y compatibilidad.',
+        items: [
+          {
+            title: 'Flexibilidad',
+            description:
+              'El usuario puede acceder desde el navegador web o desde una aplicación instalable en su dispositivo móvil.',
+          },
+          {
+            title: 'Rendimiento',
+            description: 'Correcto, pero con menor fluidez en comparación con aplicaciones híbridas nativas.',
+          },
+          {
+            title: 'Experiencia de usuario',
+            description: 'Adecuada, pero no alcanza el nivel de calidad de las apps híbridas nativas.',
+          },
+          {
+            title: 'Costos',
+            description: 'Reduce el costo si se requiere tanto una versión web como una app móvil.',
+          },
+          {
+            title: 'Limitaciones',
+            description: 'No puede acceder a funcionalidades nativas avanzadas de los dispositivos.',
+          },
+        ],
+      },
+      {
+        title: 'Apps híbridas nativas',
+        subtitle: 'Rendimiento y funcionalidad avanzados.',
+        items: [
+          {
+            title: 'Flexibilidad',
+            description: 'Acceso completo a funcionalidades nativas, como Bluetooth, cámara, GPS y biometría.',
+          },
+          {
+            title: 'Rendimiento',
+            description: 'Excelente, comparable al de una aplicación 100% nativa.',
+          },
+          {
+            title: 'Experiencia de usuario',
+            description: 'Excelente, gracias a la fluidez e integración con el entorno móvil.',
+          },
+          {
+            title: 'Costos',
+            description: 'Más elevado, especialmente si se requiere una web complementaria.',
+          },
+          {
+            title: 'Limitaciones',
+            description: 'No se puede reutilizar el código para navegadores web.',
+          },
+        ],
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Prices>
+
+  <Content
+    isReversed
+    tagline=""
+    title="¿Por qué confiar en gilsys para implementar aplicaciones móviles?"
+    subtitle=""
+    items={[
+      {
+        title: 'Experiencia demostrada',
+        description:
+          'Hemos desarrollado aplicaciones multiplataforma para múltiples sectores, desde las primeras apps hasta la actualidad.',
+        icon: 'tabler:tools',
+      },
+      {
+        title: 'Desarrollo responsable',
+        description: `Trabajamos con buenas prácticas que permiten mantener y evolucionar las aplicaciones sin comprometer su calidad.`,
+        icon: 'tabler:components',
+      },
+      {
+        title: 'Soluciones integrales',
+        description:
+          `Creamos ecosistemas completos, que combinan apps móviles y <a class='text-accent' title="Programación de herramientas cloud para administrar apps" href='` +
+          u('development/web') +
+          `'> herramientas en la nube para gestionar</a> los datos y contenidos de la aplicación.`,
+        icon: 'tabler:cloud',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/app-programacion-diseno.jpg',
+      alt: 'Diseño de interfaz móvil',
+    }}
+  >
+    <Fragment slot="content">
+      No es fácil encontrar una empresa especializada en programación de aplicaciones, que haya trabajado tanto con <strong
+        >tecnologías híbridas nativas</strong
+      > como con <strong>tecnologías híbridas web</strong>.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/02.jpg', alt: 'Fondo abstracto' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Presupuesto gratuito',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Llamar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">Podemos programar la <span class="custom-gradient">app</span> que imaginas</Fragment>
+    <Fragment slot="subtitle"
+      >Desarrollar una app es un proceso complejo, déjalo en manos de profesionales con más de 20 años de experiencia.</Fragment
+    >
+  </CallToAction>
+</Layout>
