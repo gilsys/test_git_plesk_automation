@@ -187,7 +187,13 @@ body.route-home .wg-hero p
   color: #000;
 }
 
+
+a.text-accent:hover{
+  color: #000;
+}
+
 /*.wg-header #contact,*/
+a.text-accent:hover,
 body.route-home .wg-hero .text-accent,
 body.route-home .wg-hero .custom-gradient,
 body.route-gilsys .wg-hero .text-accent,
@@ -396,3 +402,8 @@ body:not(.route-home) .wg-hero .btn-primary:hover{
     filter: hue-rotate(0deg) brightness(120%) saturate(70%);
   }
 }
+
+#online-cart-shop{
+  box-shadow: none;
+}
+

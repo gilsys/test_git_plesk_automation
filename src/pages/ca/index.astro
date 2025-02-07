@@ -11,10 +11,12 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 import { header } from '~/i18n/ui.ts';
 import Hero2 from '~/components/widgets/Hero2.astro';
+import Note from '~/components/widgets/Note.astro';
 
-const metadata = {         
+const metadata = {
   title: 'Programació a mida de software, apps, web i IA | +20 anys',
-  description: "Empresa de desenvolupament personalitzat d'aplicacions mòbils, web, programes i eines d’intel·ligència artificial. Pressupost gratuït. Prop de Vic (Osona, Barcelona)."  
+  description:
+    "Empresa de desenvolupament personalitzat d'aplicacions mòbils, web, programes i eines d’intel·ligència artificial. Pressupost gratuït. Prop de Vic (Osona, Barcelona).",
 };
 
 const u = useRoutes(getLangFromUrl(Astro.url));
@@ -69,7 +71,12 @@ const u = useRoutes(getLangFromUrl(Astro.url));
   <Hero2
     tagline="Ajudem a empreses a adoptar intel·ligència artificial"
     actions={[
-      { variant: 'primary', title: 'Programació a mida amb intel·ligència artificial per empreses', text: 'Mes informació', href: u('development/ia') },
+      {
+        variant: 'primary',
+        title: 'Programació a mida amb intel·ligència artificial per empreses',
+        text: 'Mes informació',
+        href: u('development/ia'),
+      },
     ]}
     image={{
       id: 'home-first-image',
@@ -78,14 +85,18 @@ const u = useRoutes(getLangFromUrl(Astro.url));
     }}
   >
     <Fragment slot="title">
-      No et quedis enrere, integra <br/><span class='custom-gradient'>Intel·ligència Artificial</span> a la teva empresa
+      No et quedis enrere, integra <br /><span class="custom-gradient">Intel·ligència Artificial</span> a la teva empresa
     </Fragment>
 
-    <Fragment slot="subtitle">      
-      Som una empresa d'enginyeria informàtica, especialitzada en desenvolupament de software. No només coneixem les darreres novetats en <a title='Programació a mida integrant intel·ligència artificial' class='text-accent' href={u('development/ia')}>intel·ligència artificial</a> sinó que les apliquem en eines empresarials, aplicacions web, apps mòbils a mida i automatització de processos.
+    <Fragment slot="subtitle">
+      Som una empresa d'enginyeria informàtica, especialitzada en desenvolupament de software. No només coneixem les
+      darreres novetats en <a
+        title="Programació a mida integrant intel·ligència artificial"
+        class="text-accent"
+        href={u('development/ia')}>intel·ligència artificial</a
+      > sinó que les apliquem en eines empresarials, aplicacions web, apps mòbils a mida i automatització de processos.
     </Fragment>
   </Hero2>
-
 
   <FourBlocks
     id="serveis"
@@ -94,36 +105,60 @@ const u = useRoutes(getLangFromUrl(Astro.url));
     blocks={[
       {
         link: u('development'),
-        text: header['ca']['links'].find((link) => link._id === 'services').links.find((link) => link._id === 'development').text,
-        title: header['ca']['links'].find((link) => link._id === 'services').links.find((link) => link._id === 'development').title,
+        text: header['ca']['links']
+          .find((link) => link._id === 'services')
+          .links.find((link) => link._id === 'development').text,
+        title: header['ca']['links']
+          .find((link) => link._id === 'services')
+          .links.find((link) => link._id === 'development').title,
         excerpt: 'Desenvolupem utilitzant la tecnologia idònea per a cada projecte, creant eines completament noves.',
         image: '~/assets/images/programacion-software-a-medida.jpg',
-        links: header['ca']['links'].find((link) => link._id === 'services').links.find((link) => link._id === 'development').links,
+        links: header['ca']['links']
+          .find((link) => link._id === 'services')
+          .links.find((link) => link._id === 'development').links,
       },
       {
         link: u('software'),
-        text: header['ca']['links'].find((link) => link._id === 'services').links.find((link) => link._id === 'software').text,
-        title: header['ca']['links'].find((link) => link._id === 'services').links.find((link) => link._id === 'software').title,
+        text: header['ca']['links']
+          .find((link) => link._id === 'services')
+          .links.find((link) => link._id === 'software').text,
+        title: header['ca']['links']
+          .find((link) => link._id === 'services')
+          .links.find((link) => link._id === 'software').title,
         excerpt: 'Utilitzem eines existents com a base i les extenem i adaptem programant a mida.',
         image: '~/assets/images/software-personalizado.jpg',
 
-        links: header['ca']['links'].find((link) => link._id === 'services').links.find((link) => link._id === 'software').links,
+        links: header['ca']['links']
+          .find((link) => link._id === 'services')
+          .links.find((link) => link._id === 'software').links,
       },
       {
         link: u('migration'),
-        text: header['ca']['links'].find((link) => link._id === 'services').links.find((link) => link._id === 'migration').text,
-        title: header['ca']['links'].find((link) => link._id === 'services').links.find((link) => link._id === 'migration').title,
+        text: header['ca']['links']
+          .find((link) => link._id === 'services')
+          .links.find((link) => link._id === 'migration').text,
+        title: header['ca']['links']
+          .find((link) => link._id === 'services')
+          .links.find((link) => link._id === 'migration').title,
         excerpt: 'Optimitzem i migrem eines obsoletes i creem processos per comunicar plataformes.',
         image: '~/assets/images/migracion-integracion.jpg',
-        links: header['ca']['links'].find((link) => link._id === 'services').links.find((link) => link._id === 'migration').links,
+        links: header['ca']['links']
+          .find((link) => link._id === 'services')
+          .links.find((link) => link._id === 'migration').links,
       },
       {
         link: u('consultory'),
-        text: header['ca']['links'].find((link) => link._id === 'services').links.find((link) => link._id === 'consultory').text,
-        title: header['ca']['links'].find((link) => link._id === 'services').links.find((link) => link._id === 'consultory').title,
+        text: header['ca']['links']
+          .find((link) => link._id === 'services')
+          .links.find((link) => link._id === 'consultory').text,
+        title: header['ca']['links']
+          .find((link) => link._id === 'services')
+          .links.find((link) => link._id === 'consultory').title,
         excerpt: 'Analitzem la situació actual, conceptualitzem idees i oferim assessorament per a executar-les.',
         image: '~/assets/images/consultoria-tecnologica.jpg',
-        links: header['ca']['links'].find((link) => link._id === 'services').links.find((link) => link._id === 'consultory').links,
+        links: header['ca']['links']
+          .find((link) => link._id === 'services')
+          .links.find((link) => link._id === 'consultory').links,
       },
     ]}
   >
@@ -154,7 +189,10 @@ const u = useRoutes(getLangFromUrl(Astro.url));
       },
       {
         title: 'Tecnologies avançades',
-        description: `Treballem amb eines i tecnologies de darrera generació com la <a href="`+ u('development/ia') +`" title="Creem programes per empreses que integren IA" class="text-accent">intel·ligència artificial</a>, el cloud i frameworks moderns per oferir resulats innovadors i eficients.`,
+        description:
+          `Treballem amb eines i tecnologies de darrera generació com la <a href="` +
+          u('development/ia') +
+          `" title="Creem programes per empreses que integren IA" class="text-accent">intel·ligència artificial</a>, el cloud i frameworks moderns per oferir resulats innovadors i eficients.`,
         icon: 'tabler:rocket',
       },
       {
@@ -202,9 +240,9 @@ const u = useRoutes(getLangFromUrl(Astro.url));
 
   <Content
     isImageSmall
-    classes={{ 
+    classes={{
       container: 'pb-10 md:pb-0 lg:pb-0',
-     }}
+    }}
     isAfterContent={false}
     items={[
       {
@@ -213,9 +251,12 @@ const u = useRoutes(getLangFromUrl(Astro.url));
       },
       {
         title: 'Som agents digitalitzadors',
-        description: `A gilsys som un agent digitalitzador certificat dins del programa Kit Digital. Podem ajudar-te a digitalitzar les subvencions.
+        description:
+          `A gilsys som un agent digitalitzador certificat dins del programa Kit Digital. Podem ajudar-te a digitalitzar les subvencions.
             <br />
-            <a href="`+ u('kit-digital') +`" class="btn-primary mt-12 mb-12 w-auto">Més informació</a>`,
+            <a href="` +
+          u('kit-digital') +
+          `" class="btn-primary mt-12 mb-12 w-auto">Més informació</a>`,
       },
     ]}
     image={{
@@ -238,7 +279,7 @@ const u = useRoutes(getLangFromUrl(Astro.url));
 
   <Content
     isReversed
-    isImageSmall    
+    isImageSmall
     isAfterContent
     items={[
       {
@@ -247,9 +288,12 @@ const u = useRoutes(getLangFromUrl(Astro.url));
       },
       {
         title: 'Som agents consultors',
-        description: `A gilsys som un agent consultor certificat dins del programa Kit Consulting. T’ajudem a aprofitar les subvencions i dissenyar el full de ruta per a la transformació digital de la teva empresa.
+        description:
+          `A gilsys som un agent consultor certificat dins del programa Kit Consulting. T’ajudem a aprofitar les subvencions i dissenyar el full de ruta per a la transformació digital de la teva empresa.
             <br />
-            <a href="` + u('kit-consulting') + `" class="btn-primary mt-12 mb-12 w-auto">Més informació</a>`,
+            <a href="` +
+          u('kit-consulting') +
+          `" class="btn-primary mt-12 mb-12 w-auto">Més informació</a>`,
       },
     ]}
     image={{
@@ -279,64 +323,103 @@ const u = useRoutes(getLangFromUrl(Astro.url));
     items={[
       {
         title: 'Tecnològic',
-        description: `<a href="`+ u('development/web') +`" title="Programació aplicacions web a mida" class="text-accent">Eines online</a> i <a href="`+ u('development/apps') +`" title="Programació d'aplicacions iOS i Android a mida" class="text-accent">apps per mòbils</a> amb integració de Bluetooth, IA o APIs a mida.`,
+        description:
+          `<a href="` +
+          u('development/web') +
+          `" title="Programació aplicacions web a mida" class="text-accent">Eines online</a> i <a href="` +
+          u('development/apps') +
+          `" title="Programació d'aplicacions iOS i Android a mida" class="text-accent">apps per mòbils</a> amb integració de Bluetooth, IA o APIs a mida.`,
         icon: 'tabler:code',
       },
       {
         title: 'Empresarial',
-        description: `Desenvolupament de 
-        <a href="`+ u('development/web') +`" title="Programació de webs d'alt rendiment" class="text-accent">pàgines web ràpides</a> (no Wordpress) i optimitzades per SEO.`,
+        description:
+          `Desenvolupament de 
+        <a href="` +
+          u('development/web') +
+          `" title="Programació de webs d'alt rendiment" class="text-accent">pàgines web ràpides</a> (no Wordpress) i optimitzades per SEO.`,
         icon: 'tabler:affiliate',
       },
       {
         title: 'Retail',
-        description: `<a href="`+ u('software/ecommerce') +`" title="e-commerce amb Prestashop i Woocommerce" class="text-accent">Botiges online</a>, landing pages i integració amb facturació.`,
+        description:
+          `<a href="` +
+          u('software/ecommerce') +
+          `" title="e-commerce amb Prestashop i Woocommerce" class="text-accent">Botiges online</a>, landing pages i integració amb facturació.`,
         icon: 'tabler:shopping-cart',
       },
       {
         title: 'Màrqueting',
-        description: `Implantació de <a href="`+ u('software/crm') +`" title="gestors de clients per empreses i autònoms" class="text-accent">CRM</a>, sincronizació de dades de vendes i integració d’eines digitals.`,
+        description:
+          `Implantació de <a href="` +
+          u('software/crm') +
+          `" title="gestors de clients per empreses i autònoms" class="text-accent">CRM</a>, sincronizació de dades de vendes i integració d’eines digitals.`,
         icon: 'tabler:arrow-big-up-lines',
       },
       {
         title: 'Educació',
-        description: `<a href="`+ u('development/web') +`" title="Programació aplicacions web per formació" class="text-accent">Plataformes de formació online</a> a mida, amb sistemes d'avaluació avançats.`,
+        description:
+          `<a href="` +
+          u('development/web') +
+          `" title="Programació aplicacions web per formació" class="text-accent">Plataformes de formació online</a> a mida, amb sistemes d'avaluació avançats.`,
         icon: 'tabler:school',
       },
       {
         title: 'Salut',
-        description: `Programació d'eines online per <a href="`+ u('development/web') +`" title="Disseny i desenvolupament d'eines per a gestió de centres mèdics" class="text-accent">gestió mèdica</a>, cites, historial i control d’inventari.`,
+        description:
+          `Programació d'eines online per <a href="` +
+          u('development/web') +
+          `" title="Disseny i desenvolupament d'eines per a gestió de centres mèdics" class="text-accent">gestió mèdica</a>, cites, historial i control d’inventari.`,
         icon: 'tabler:vaccine',
       },
       {
         title: 'Industrial',
         description:
-          `Solucions de <a href="`+ u('software/pimcore') +`" title="Creem eines per a la gestió unificada de productes amb Pimcore" class="text-accent">gestió de productes PIM</a>, programació de  <a href="`+ u('migration') +`" title="Automatitzem tasques amb software personalitzat" class="text-accent">software per automatitzar processos</a> i sincronitzar dades.`,
+          `Solucions de <a href="` +
+          u('software/pimcore') +
+          `" title="Creem eines per a la gestió unificada de productes amb Pimcore" class="text-accent">gestió de productes PIM</a>, programació de  <a href="` +
+          u('migration') +
+          `" title="Automatitzem tasques amb software personalitzat" class="text-accent">software per automatitzar processos</a> i sincronitzar dades.`,
         icon: 'tabler:building-factory-2',
       },
       {
         title: 'Startups',
-        description: `<a href="`+ u('consultory') +`" title="Assessorament tecnològic per implementar projectes innovadors" class="text-accent">Convertim idees en projectes</a>, orientem en tot el procés de creació d'apps i plataformes online i definim el full de ruta a nivell tecnològic.`,
+        description:
+          `<a href="` +
+          u('consultory') +
+          `" title="Assessorament tecnològic per implementar projectes innovadors" class="text-accent">Convertim idees en projectes</a>, orientem en tot el procés de creació d'apps i plataformes online i definim el full de ruta a nivell tecnològic.`,
         icon: 'tabler:rocket',
       },
       {
         title: 'Laboratoris',
-        description: `Programació d'algoritmes avançats i eines per calcular informació amb <a href="`+ u('development/ia') +`" title="Integració d'intel·ligència artificial entrenada amb dades pròpies" class="text-accent">intel·ligència artificial</a>.`,
+        description:
+          `Programació d'algoritmes avançats i eines per calcular informació amb <a href="` +
+          u('development/ia') +
+          `" title="Integració d'intel·ligència artificial entrenada amb dades pròpies" class="text-accent">intel·ligència artificial</a>.`,
         icon: 'tabler:flask',
       },
       {
         title: 'Directiu',
-        description: `Software per <a href="`+ u('software/metabase') +`" title="Business Intelligence i analítica amb Metabase" class="text-accent">analitzar dades empresarials</a> i facilitar la presa de decisions.`,
+        description:
+          `Software per <a href="` +
+          u('software/metabase') +
+          `" title="Business Intelligence i analítica amb Metabase" class="text-accent">analitzar dades empresarials</a> i facilitar la presa de decisions.`,
         icon: 'tabler:report-analytics',
       },
       {
         title: 'Corporacions',
-        description: `<a href="`+ u('software/wp') +`" title="Webs professionals amb WordPress" class="text-accent">Webs WordPress</a> de nivell professionals, amb disseny a mida i personalitzacions avançades.`,
+        description:
+          `<a href="` +
+          u('software/wp') +
+          `" title="Webs professionals amb WordPress" class="text-accent">Webs WordPress</a> de nivell professionals, amb disseny a mida i personalitzacions avançades.`,
         icon: 'tabler:building-skyscraper',
       },
       {
         title: 'Sector públic',
-        description: `Implementar eines a mida per poder gestionar, optimitzar i <a href="`+ u('development/automation') +`" title="Programació d'automatitzacions per tràmits administratius" class="text-accent">automatitzar tràmits administratius.</a>`,
+        description:
+          `Implementar eines a mida per poder gestionar, optimitzar i <a href="` +
+          u('development/automation') +
+          `" title="Programació d'automatitzacions per tràmits administratius" class="text-accent">automatitzar tràmits administratius.</a>`,
         icon: 'tabler:progress-check',
       },
     ]}
@@ -403,7 +486,15 @@ const u = useRoutes(getLangFromUrl(Astro.url));
         },
       },
     ]}
-  />
+  />-->
+  <Note linkText="Informa't" linkTitle="Més informació" linkHref={u('contact')}>
+    <Fragment slot="h2">
+      Subvencionable amb <span class="text-4xl">KIT Digital</span>
+    </Fragment>
+    <Fragment slot="p">
+      <a href={u('software/crm')} title="Gestió de clients subvencionable amb KIT Digital" class="text-accent font-medium cursor-pointer">🔗 Gestió de clients</a> - De 3.000€ a 29.000€
+    </Fragment>
+  </Note>
 
   <Features2
     title="Contacta\'ns"
@@ -418,13 +509,12 @@ const u = useRoutes(getLangFromUrl(Astro.url));
       },
       {
         title: 'Truca',
-        description:
-          '665 331 271',
+        description: '665 331 271',
         icon: 'tabler:headset',
       },
     ]}
   />
-    -->
+  -->
 
   <BlogLatestPosts title="Últimes entrades del blog" linkText="Anar al blog" />
 
@@ -446,7 +536,9 @@ const u = useRoutes(getLangFromUrl(Astro.url));
       },
     ]}
   >
-    <Fragment slot="title">Sol·licita un <span class='custom-gradient'>pressupost orientatiu</span> gratuït</Fragment>
-    <Fragment slot="subtitle">Si tens un projecte en ment i necessites assessorament, des de gilsys t'ajudarem a convertir-lo en realitat.</Fragment>
+    <Fragment slot="title">Sol·licita un <span class="custom-gradient">pressupost orientatiu</span> gratuït</Fragment>
+    <Fragment slot="subtitle"
+      >Si tens un projecte en ment i necessites assessorament, des de gilsys t'ajudarem a convertir-lo en realitat.</Fragment
+    >
   </CallToAction>
 </Layout>
