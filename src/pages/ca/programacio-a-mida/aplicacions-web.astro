@@ -9,6 +9,7 @@ import Hero from '~/components/widgets/Hero.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Layout from '~/layouts/PageLayout.astro';
 import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+import Note from '~/components/widgets/Note.astro';
 
 const u = useRoutes(getLangFromUrl(Astro.url));
 
@@ -35,6 +36,16 @@ const metadata = {
       Dissenyem i desenvolupem eines i plataformes a mida per empreses, adaptades a objectius concrets, per optimitzar processos i oferir funcionalitats avançades.
     </Fragment>
   </Hero>
+
+  
+  <Note linkText="Informa't" linkTitle="Més informació" linkHref={u('contact')}>
+    <Fragment slot="h2">
+      Subvencionable amb <span class="text-4xl">KIT Digital</span>
+    </Fragment>
+    <Fragment slot="p">
+      <a href={u('software/crm')} title="Gestió de clients subvencionable amb KIT Digital" class="text-accent font-medium cursor-pointer">🔗 Gestió de clients</a> - De 3.000€ a 29.000€
+    </Fragment>
+  </Note>
 
   <!-- Introducció -->
   <Content
