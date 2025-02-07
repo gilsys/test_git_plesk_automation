@@ -1,10 +1,9 @@
 ---
 import { Icon } from 'astro-icon/components';
 import { SITE } from 'astrowind:config';
-import { getLangFromUrl, useRoutes } from '~/utils/i18n';
-import Logo from '../Logo.astro';
-import WidgetWrapper from '../ui/WidgetWrapper.astro';
+import { getLangFromUrl, useTranslations, useRoutes } from '~/utils/i18n';
 import Image from '../common/Image.astro';
+import Logo from '../Logo.astro';
 
 interface Link {
   text?: string;
@@ -31,8 +30,9 @@ export interface Props {
 
 const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme = 'light', address = '' } = Astro.props;
 
-const language = getLangFromUrl(Astro.url);
-const u = useRoutes(language);
+const currentLang = getLangFromUrl(Astro.url);
+const t = useTranslations(currentLang);
+const u = useRoutes(currentLang);
 ---
 
 <footer
@@ -98,7 +98,7 @@ const u = useRoutes(language);
           </div>
         </div>
         <div class="mt-14 lg:-mt-4">
-          <div class="text-right lg:text-center -mb-10 lg:-mb-3 text-xs lg:text-sm">Afiliacions</div>
+          <div class="text-right lg:text-center -mb-10 lg:-mb-3 text-xs lg:text-sm">t('affiliations')</div>
           <div class="mt-14 md:mt-10 lg:mt-0 md:flex gap-8 items-center h-20">
             <a
               class="pe-2 lg:pe-0"

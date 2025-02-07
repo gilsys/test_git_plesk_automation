@@ -47,6 +47,9 @@ export const ui = {
     'contact.success': 'Mensaje enviado correctamente.',
     'contact.error': 'Error al enviar el mensaje.',
     'menu.more_info': 'Más información',
+    'affiliations': 'Afiliaciones',
+    'affiliations.ccm': 'Socis de Consell empresarial d\'Osona',
+    'affiliations.tic': 'Socis de TICOsona - Associació d\'Empreses de Tecnologies de la Informació i la Comunicació d\'Osona',
   },
   ca: {
     'common.page': 'Pàgina',
@@ -203,29 +206,29 @@ export const routes = {
     'kit-consulting/360-digital-transformation':
     'kit-consulting/servicio-de-asesoramiento-360-en-transformacion-digital',
    
-      'consultory': '/ca/consultoria-tecnologica',
-    'migration': '/ca/migracio-integracio',
-    'development': '/ca/programacio-a-mida',
-    'development/web': '/ca/programacio-a-mida/aplicacions-web',
-    'development/apps': '/ca/programacio-a-mida/apps',
-    'development/automation': '/ca/programacio-a-mida/automatitzacio-processos',
-    'development/ia': '/ca/programacio-a-mida/ia-barcelona',
-    'development/astro': '/ca/programacio-a-mida/webs-alt-rendiment',
+    'consultory': '/es/consultoria-tecnologica',
+    'migration': '/es/migracion-integracion',
+    'development': '/es/programacion-a-medida',
+    'development/web': '/es/programacion-a-medida/aplicaciones-web',
+    'development/apps': '/es/programacion-a-medida/apps',
+    'development/automation': '/es/programacion-a-medida/automatizacion-procesos',
+    'development/ia': '/es/programacion-a-medida/ia-barcelona',
+    'development/astro': '/es/programacion-a-medida/webs-alto-rendimiento',
 
-    'software': '/ca/software-personalitzat',
-    'software/ecommerce': '/ca/software-personalitzat/disseny-botiga-online',
-    'software/metabase': '/ca/software-personalitzat/metabase-analisis-empresarial',
-    'software/pimcore': '/ca/software-personalitzat/pimcore-barcelona',
-    'software/crm': '/ca/software-personalitzat/programa-gestio-clients',
-    'software/wp': '/ca/software-personalitzat/web-wordpress',
+    'software': '/es/software-personalizado',
+    'software/ecommerce': '/es/software-personalizado/diseno-tienda-online',
+    'software/metabase': '/es/software-personalizado/metabase-analisis-empresarial',
+    'software/pimcore': '/es/software-personalizado/pimcore-barcelona',
+    'software/crm': '/es/software-personalizado/programa-gestion-clientes',
+    'software/wp': '/es/software-personalizado/web-wordpress',
 
-    'about': '/ca/sobre-nosaltres',
-    
+    'about': '/es/sobre-nosotros',
 
     'contact': '/es/contactar',
     'blog': '/es/blog',
-    'terms': '/ca/avis-legal',
-    'privacy-policy': '/ca/politica-privacitat',
+    'terms': '/es/aviso-legal',
+    'privacy-policy': '/es/politica-de-privacidad',
+
   },
   en: {
     'home': '/en',
@@ -805,7 +808,7 @@ export const header = {
           },
           {
             _id: 'consultory',
-            text: 'Consultoría TIC',
+            text: 'Consultoría IT',
             title: 'Asesoramiento en desarrollo de proyectos informáticos',
             href: routes['es']['consultory'],
             links: [
@@ -964,66 +967,31 @@ export const footer = {
   },
   es: {
     links: [
-      {
-        title: 'Product',
-        links: [
-          { text: 'Features', href: '#' },
-          { text: 'Security', href: '#' },
-          { text: 'Team', href: '#' },
-          { text: 'Enterprise', href: '#' },
-          { text: 'Customer stories', href: '#' },
-          { text: 'Pricing', href: '#' },
-          { text: 'Resources', href: '#' },
-        ],
-      },
-      {
-        title: 'Platform',
-        links: [
-          { text: 'Developer API', href: '#' },
-          { text: 'Partners', href: '#' },
-          { text: 'Atom', href: '#' },
-          { text: 'Electron', href: '#' },
-          { text: 'AstroWind Desktop', href: '#' },
-        ],
-      },
-      {
-        title: 'Support',
-        links: [
-          { text: 'Docs', href: '#' },
-          { text: 'Community Forum', href: '#' },
-          { text: 'Professional Services', href: '#' },
-          { text: 'Skills', href: '#' },
-          { text: 'Status', href: '#' },
-        ],
-      },
-      {
-        title: 'Company',
-        links: [
-          { text: 'About', href: '#' },
-          { text: 'Blog', href: '#' },
-          { text: 'Careers', href: '#' },
-          { text: 'Press', href: '#' },
-          { text: 'Inclusion', href: '#' },
-          { text: 'Social Impact', href: '#' },
-          { text: 'Shop', href: '#' },
-        ],
-      },
+      header['es']['links'].find((link) => link._id === 'services').links.find((link) => link._id === 'development'),
+      header['es']['links'].find((link) => link._id === 'services').links.find((link) => link._id === 'software'),
+      header['es']['links'].find((link) => link._id === 'services').links.find((link) => link._id === 'migration'),
+      header['es']['links'].find((link) => link._id === 'services').links.find((link) => link._id === 'consultory')
     ],
     secondaryLinks: [
-      { text: 'Terms', href: '#' },
-      { text: 'Privacy Policy', href: '#' },
+      { text: 'Aviso legal', href: '#' },
+      { text: 'Política de privacidad', href: '#' },
+      { text: 'Política de cookies', href: '#' },
     ],
     socialLinks: [
-      { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
-      { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
-      { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
+      { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/company/gilsys' },
+      //{ ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
+      { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: 'https://www.facebook.com/gilsysg6' },
       //{ ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
-      { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
+      //{ ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
     ],
-    footNote: `
-    <img class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 rtl:mr-0 rtl:ml-1.5 float-left rtl:float-right rounded-sm" src="https://onwidget.com/favicon/favicon-32x32.png" alt="onWidget logo" loading="lazy"></img>
-    Made by <a class="text-blue-600 underline dark:text-muted" href="https://onwidget.com/"> onWidget</a> · All rights reserved.
-  `,
+    address: `            
+            <a href="tel:+34665331271">665 33 12 71</a><br>
+            <a class='text-accent' href="mailto:info@gilsys.com">info@gilsys.com</a><br><br>            
+            <a href='https://maps.app.goo.gl/V5T7Ksystbsv68eD7' rel='nofollow' target='_blank' title='Abrir Google Maps'>Passeig del Ter 48<br>
+            08580, Sant Quirze de Besora<br>
+            Osona - Barcelona</a><br/>
+    `,
+    footNote: `gilsys · Todos los derechos reservados.`,
   },
   en: {
     links: [
