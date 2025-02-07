@@ -1,0 +1,310 @@
+---
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+
+const metadata = {
+  title: 'Kit Digital | gilsys',
+  description:
+    'Accedeix a ajudes del Kit Digital per digitalitzar el teu negoci amb solucions adaptades. Descobreix com obtenir fins a 29.000€ en subvencions.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/21.jpg' }}
+    actions={[{ variant: 'primary', text: 'Pressupost gratuït', href: u('contact') }]}
+    tagline="Subvencions per digitalitzar la teva empresa"
+  >
+    <Fragment slot="title"><span class="custom-gradient">Kit Digital</span></Fragment>
+    <Fragment slot="subtitle">
+      Digitalitza la teva empresa amb ajudes adaptades a les teves necessitats. Per a autònoms i empreses de fins a 250
+      treballadors.
+    </Fragment>
+  </Hero>
+
+  <Features3
+    id="features-kit-digital"
+    tagline="Subvencions del Kit Digital"
+    title="Impulsa la digitalització del teu negoci amb les ajudes del Kit Digital"
+    subtitle="Descobreix totes les subvencions disponibles per a la digitalització de la teva empresa. Adaptem les solucions a les teves necessitats."
+    items={[
+      {
+        title: 'Business Intelligence i Analítica',
+        description: 'Implementa solucions per analitzar dades i prendre decisions estratègiques amb eines modernes.',
+        icon: 'tabler:chart-bar',
+        callToAction: {
+          class: 'more-info',
+          text: 'Més informació',
+          href: u('kit-digital/bi-analytics'),
+        },
+      },
+      {
+        title: 'Ciberseguretat',
+        description: 'Protegeix el teu negoci davant de possibles amenaces digitals amb solucions avançades.',
+        icon: 'tabler:shield-check',
+        callToAction: {
+          class: 'more-info',
+          text: 'Més informació',
+          href: u('kit-digital/cybersecurity'),
+        },
+      },
+      {
+        title: 'Comerç electrònic',
+        description:
+          'Crea o millora la teva botiga en línia per incrementar les teves vendes i arribar a nous clients.',
+        icon: 'tabler:shopping-cart',
+        callToAction: {
+          class: 'more-info',
+          text: 'Més informació',
+          href: u('kit-digital/e-commerce'),
+        },
+      },
+      {
+        title: 'Comunicacions segures',
+        description: 'Millora la seguretat de les comunicacions empresarials amb eines fiables i encriptades.',
+        icon: 'tabler:lock',
+        callToAction: {
+          class: 'more-info',
+          text: 'Més informació',
+          href: u('kit-digital/secure-communications'),
+        },
+      },
+      {
+        title: 'Gestió de clients',
+        description: 'Optimitza la captació i fidelització de clients amb solucions CRM adaptades.',
+        icon: 'tabler:users',
+        callToAction: {
+          class: 'more-info',
+          text: 'Més informació',
+          href: u('kit-digital/customer-management'),
+        },
+      },
+      {
+        title: 'Gestió de clients amb IA associada',
+        description: 'Incorpora intel·ligència artificial per millorar la relació amb els teus clients.',
+        icon: 'tabler:robot',
+        callToAction: {
+          class: 'more-info',
+          text: 'Més informació',
+          href: u('kit-digital/ai-customer-management'),
+        },
+      },
+      {
+        title: 'Gestió de la facturació i factura electrònica',
+        description: 'Simplifica i automatitza la gestió de la facturació amb eines digitals eficients.',
+        icon: 'tabler:file-invoice',
+        callToAction: {
+          class: 'more-info',
+          text: 'Més informació',
+          href: u('kit-digital/electronic-invoicing'),
+        },
+      },
+      {
+        title: 'Gestió de processos',
+        description: 'Millora l’eficiència del teu negoci amb eines per optimitzar els processos interns.',
+        icon: 'tabler:settings',
+        callToAction: {
+          class: 'more-info',
+          text: 'Més informació',
+          href: u('kit-digital/process-management'),
+        },
+      },
+      {
+        title: 'Gestió de processos amb IA associada',
+        description: 'Automatitza i optimitza processos mitjançant la intel·ligència artificial.',
+        icon: 'tabler:brain',
+        callToAction: {
+          class: 'more-info',
+          text: 'Més informació',
+          href: u('kit-digital/ai-process-management'),
+        },
+      },
+      {
+        title: 'Gestió de xarxes socials',
+        description: 'Gestiona i optimitza la teva presència a les xarxes socials amb solucions avançades.',
+        icon: 'tabler:share',
+        callToAction: {
+          class: 'more-info',
+          text: 'Més informació',
+          href: u('kit-digital/social-media-management'),
+        },
+      },
+      {
+        title: 'Lloc de treball segur',
+        description: 'Garanteix la seguretat dels equips i eines de treball amb solucions adaptades.',
+        icon: 'tabler:lock',
+        callToAction: {
+          class: 'more-info',
+          text: 'Més informació',
+          href: u('kit-digital/secure-workplace'),
+        },
+      },
+      {
+        title: 'Marketplace',
+        description: 'Crea i gestiona la teva pròpia plataforma de vendes en línia per expandir el teu negoci.',
+        icon: 'tabler:shopping-bag',
+        callToAction: {
+          class: 'more-info',
+          text: 'Més informació',
+          href: u('kit-digital/marketplace'),
+        },
+      },
+      {
+        title: 'Presència avançada a Internet',
+        description: 'Millora la visibilitat del teu negoci amb una estratègia digital adaptada.',
+        icon: 'tabler:world',
+        callToAction: {
+          class: 'more-info',
+          text: 'Més informació',
+          href: u('kit-digital/advanced-internet-presence'),
+        },
+      },
+      {
+        title: 'Servei de Ciberseguretat Gestionada',
+        description: 'Confia en experts per monitoritzar i gestionar la seguretat del teu negoci.',
+        icon: 'tabler:shield',
+        callToAction: {
+          class: 'more-info',
+          text: 'Més informació',
+          href: u('kit-digital/managed-cybersecurity'),
+        },
+      },
+      {
+        title: 'Serveis i eines d’oficina virtual',
+        description: 'Implementa solucions per treballar en remot de manera eficient i segura.',
+        icon: 'tabler:device-desktop-analytics',
+        callToAction: {
+          class: 'more-info',
+          text: 'Més informació',
+          href: u('kit-digital/virtual-office-tools'),
+        },
+      },
+    ]}
+  />
+
+  <Content
+    isReversed
+    tagline="Subvencions adaptades segons la mida de la teva empresa"
+    title="Ajudes segons els segments del Kit Digital"
+    items={[
+      {
+        title: 'Segment III',
+        description:
+          'Petites empreses, microempreses i autònoms amb entre 0 i 3 empleats poden optar a un bo digital de fins a 3.000€. Ideal per a negocis petits que busquen una primera empenta digital.',
+        icon: 'tabler:user',
+      },
+      {
+        title: 'Segment IV',
+        description:
+          'Mitjanes empreses amb entre 50 i menys de 100 empleats poden rebre un bo digital de fins a 25.000€, perfecte per implementar solucions digitals avançades.',
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Segment V',
+        description:
+          'Mitjanes empreses amb entre 100 i menys de 250 empleats poden accedir a un bo digital de fins a 29.000€. Aquesta ajuda permet realitzar una transformació digital completa.',
+        icon: 'tabler:building',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/kit-digital.jpg',
+      alt: 'Kit Digital, segments segons mida d’empresa',
+    }}
+  />
+
+  <FAQs
+    title="Preguntes freqüents sobre el Kit Digital"
+    items={[
+      {
+        title: 'Què és el Kit Digital?',
+        description:
+          'El Kit Digital és un programa finançat pels fons Next Generation de la Unió Europea, destinat a ajudar petites i mitjanes empreses a digitalitzar-se. Ofereix subvencions que poden oscil·lar entre 3.000€ i 29.000€ segons la mida de l’empresa.',
+      },
+      {
+        title: 'Qui pot beneficiar-se del Kit Digital?',
+        description:
+          'Està dirigit a autònoms i empreses de fins a 250 treballadors. S’organitza en diferents segments segons el nombre d’empleats, i cada segment té un import màxim assignat per al bo digital.',
+      },
+      {
+        title: 'Quins serveis es poden subvencionar amb el Kit Digital?',
+        description:
+          'Les subvencions cobreixen una àmplia gamma de solucions digitals, com ara: llocs web, comerç electrònic, gestió de clients (CRM), ciberseguretat, presència avançada a Internet, gestió de xarxes socials, gestió de processos, analítica empresarial (BI), comunicacions segures, i més.',
+      },
+      {
+        title: 'Com puc sol·licitar el Kit Digital?',
+        description:
+          `Per accedir al Kit Digital, primer cal comprovar si la teva empresa compleix els requisits. A <a class="text-accent" href='` +
+          u('contact') +
+          `'>gilsys</a>, t’ajudem a gestionar el procés de sol·licitud, incloent-hi l’avaluació inicial, la tramitació de la subvenció i la implementació de les solucions escollides.`,
+      },
+      {
+        title: 'Quina és la nostra funció com a agents digitalitzadors?',
+        description:
+          'A gilsys som agents digitalitzadors certificats. Això significa que podem assessorar-te i implementar les solucions tecnològiques que millor s’adaptin a les necessitats de la teva empresa, sempre garantint que compleixin amb els requisits del programa Kit Digital.',
+      },
+      {
+        title: 'Quant temps es triga a rebre l’ajuda?',
+        description:
+          'Els terminis poden variar segons la càrrega administrativa, però des del moment en què es concedeix la subvenció, pots començar a implementar les solucions seleccionades amb el nostre suport.',
+      },
+      {
+        title: 'És obligatori invertir tot l’import de la subvenció?',
+        description:
+          'No, pots distribuir l’import entre les solucions que necessitis. Tanmateix, per optar al "Lloc de treball segur", és obligatori haver contractat prèviament una altra solució de digitalització.',
+      },
+      {
+        title: 'Per què triar gilsys com a agent digitalitzador?',
+        description:
+          'Com a experts en solucions digitals i programació personalitzada, no només t’ajudem a accedir a les subvencions, sinó que també implementem les eines més adequades per garantir que la digitalització tingui un impacte real i durador en el teu negoci.',
+      },
+    ]}
+  />
+
+  <Fragment slot="content">
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+      Coneixem les eines i sabem com adaptar-les
+    </h3>
+    A gilsys som experts en programació, no només sabem utilitzar les eines que personalitzem sinó que també les podem extendre
+    perquè en <strong>coneixem el codi font</strong>.
+  </Fragment>
+
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-lightgray"></div>
+  </Fragment>
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/21.jpg', alt: 'Fons abstracte, inspirat en tecnologia i software' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Pressupost gratuït',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Trucar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title"
+      >Aprofita el <span class="custom-gradient">Kit Digital</span> i digitalitza el teu negoci</Fragment
+    >
+    <Fragment slot="subtitle">
+      Descobreix les subvencions disponibles i deixa'ns ajudar-te a escollir i implementar les millors solucions per el
+      teu negoci.
+    </Fragment>
+  </CallToAction>
+</Layout>

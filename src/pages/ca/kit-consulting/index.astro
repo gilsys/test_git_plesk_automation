@@ -1,0 +1,207 @@
+---
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+
+const metadata = {
+  title: 'Kit Consulting | gilsys',
+  description:
+    'Accedeix al servei de Kit Consulting per optimitzar els processos i estratègies digitals de la teva empresa. Descobreix com obtenir assessorament especialitzat per transformar digitalment el teu negoci.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/21.jpg' }}
+    actions={[{ variant: 'primary', text: 'Pressupost gratuït', href: u('contact') }]}
+    tagline="Subvencions per digitalitzar la teva empresa"
+  >
+    <Fragment slot="title"><span class="custom-gradient">Kit Consulting</span></Fragment>
+    <Fragment slot="subtitle">
+      Optimitza els processos i estratègies digitals de la teva empresa amb el nostre servei d’assessorament expert.
+    </Fragment>
+  </Hero>
+
+  <Features3
+    id="features-kit-consulting"
+    tagline="Serveis d'assessorament del Kit Consulting"
+    title="Transforma digitalment el teu negoci amb el Kit Consulting"
+    subtitle="Explora les diferents àrees on podem ajudar-te amb un assessorament personalitzat i estratègic."
+    items={[
+      {
+        title: 'Assessorament en Intel·ligència Artificial',
+        description:
+          'Descobreix com aplicar la IA per optimitzar els processos i millorar la productivitat del teu negoci.',
+        icon: 'tabler:robot',
+        callToAction: {
+          class: 'more-info',
+          text: 'Més informació',
+          href: u('kit-consulting/ai-advisory'),
+        },
+      },
+      {
+        title: 'Assessorament en anàlisi de dades (Bàsic)',
+        description: 'Aprèn a interpretar i utilitzar les dades per prendre millors decisions estratègiques.',
+        icon: 'tabler:chart-bar',
+        callToAction: {
+          class: 'more-info',
+          text: 'Més informació',
+          href: u('kit-consulting/basic-data-analysis'),
+        },
+      },
+      {
+        title: 'Assessorament en anàlisi de dades (Avançat)',
+        description:
+          'Implementa anàlisis avançades per descobrir oportunitats i optimitzar els resultats del teu negoci.',
+        icon: 'tabler:chart-pie',
+        callToAction: {
+          class: 'more-info',
+          text: 'Més informació',
+          href: u('kit-consulting/advanced-data-analysis'),
+        },
+      },
+      {
+        title: 'Assessorament en vendes digitals',
+        description: 'Millora la teva estratègia de vendes digitals per incrementar ingressos i captar nous clients.',
+        icon: 'tabler:shopping-cart',
+        callToAction: {
+          class: 'more-info',
+          text: 'Més informació',
+          href: u('kit-consulting/digital-sales-advisory'),
+        },
+      },
+      {
+        title: 'Assessorament en processos de negoci o procés de producció',
+        description: 'Optimitza i digitalitza els teus processos per guanyar en eficiència i reduir costos.',
+        icon: 'tabler:settings',
+        callToAction: {
+          class: 'more-info',
+          text: 'Més informació',
+          href: u('kit-consulting/business-process-advisory'),
+        },
+      },
+      {
+        title: 'Assessorament en estratègia i rendiment de negoci',
+        description: 'Defineix i implementa estratègies per millorar el rendiment global de la teva empresa.',
+        icon: 'tabler:trending-up',
+        callToAction: {
+          class: 'more-info',
+          text: 'Més informació',
+          href: u('kit-consulting/business-strategy-advisory'),
+        },
+      },
+      {
+        title: 'Assessorament “360°” en transformació digital',
+        description:
+          'Rep un assessorament integral per abordar la digitalització del teu negoci des de tots els angles.',
+        icon: 'tabler:circle',
+        callToAction: {
+          class: 'more-info',
+          text: 'Més informació',
+          href: u('kit-consulting/360-digital-transformation'),
+        },
+      },
+    ]}
+  />
+
+  <Content
+    isReversed
+    tagline="Ajuts segons el tamany de la teva empresa"
+    title="Ajudes segons els segments del Kit Consulting"
+    items={[
+      {
+        title: 'Petites empreses',
+        description: 'Empreses amb entre 10 i menys de 50 empleats poden optar a un import de fins a 12.000€.',
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Mitjanes empreses (Segment IV)',
+        description: 'Empreses amb entre 50 i menys de 100 empleats poden rebre fins a 18.000€.',
+        icon: 'tabler:building',
+      },
+      {
+        title: 'Mitjanes empreses (Segment V)',
+        description: 'Empreses amb entre 100 i menys de 250 empleats poden accedir a un import de fins a 24.000€.',
+        icon: 'tabler:building-arch',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/kit-consulting.jpg',
+      alt: 'Kit Consulting, segments segons mida d’empresa',
+    }}
+  />
+
+  <FAQs
+    title="Preguntes freqüents sobre el Kit Consulting"
+    items={[
+      {
+        title: 'Què és el Kit Consulting?',
+        description:
+          'És un servei d’assessorament especialitzat destinat a empreses que volen transformar-se digitalment, amb suport en estratègia, processos i tecnologia.',
+      },
+      {
+        title: 'Qui pot beneficiar-se del Kit Consulting?',
+        description:
+          'Empreses de 10 a 250 empleats que busquin optimitzar els seus processos o implementar estratègies digitals poden accedir-hi.',
+      },
+      {
+        title: 'Com puc sol·licitar el Kit Consulting?',
+        description:
+          `Contacta amb nosaltres a <a class="text-accent" href='` +
+          u('contact') +
+          `'>gilsys</a> per rebre informació detallada i començar el procés de sol·licitud.`,
+      },
+      {
+        title: 'Quina és la funció de gilsys en el Kit Consulting?',
+        description:
+          'A gilsys oferim assessorament especialitzat i t’ajudem a implementar les solucions més adequades per a la teva empresa.',
+      },
+    ]}
+  />
+
+  <Fragment slot="content">
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+      Coneixem les eines i sabem com adaptar-les
+    </h3>
+    A gilsys som experts en programació, no només sabem utilitzar les eines que personalitzem sinó que també les podem extendre
+    perquè en <strong>coneixem el codi font</strong>.
+  </Fragment>
+
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-lightgray"></div>
+  </Fragment>
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/21.jpg', alt: 'Fons abstracte, inspirat en tecnologia i software' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Pressupost gratuït',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Trucar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title"
+      >Aprofita el <span class="custom-gradient">Kit Consulting</span> per transformar el teu negoci</Fragment
+    >
+    <Fragment slot="subtitle">
+      Obtingues suport personalitzat en estratègia, tecnologia i processos per fer créixer la teva empresa.
+    </Fragment>
+  </CallToAction>
+</Layout>
