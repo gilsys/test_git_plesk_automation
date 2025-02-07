@@ -1,16 +1,16 @@
 ---
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import FourBlocks from '~/components/widgets/FourBlocks.astro';
 import Hero from '~/components/widgets/Hero.astro';
-import Stats from '~/components/widgets/Stats.astro';
-import Layout from '~/layouts/PageLayout.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
-import { getLangFromUrl, useRoutes } from '~/utils/i18n';
-import { header } from '~/i18n/ui.ts';
 import Hero2 from '~/components/widgets/Hero2.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import { header } from '~/i18n/ui.ts';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 
 const metadata = {
   title: 'Programación a medida de software, apps, web e IA | +20 años',
@@ -112,7 +112,7 @@ const u = useRoutes(getLangFromUrl(Astro.url));
           .find((link) => link._id === 'services')
           .links.find((link) => link._id === 'development').title,
         excerpt:
-          'Desarrollamos utilizando la tecnología más adecuada para cada proyecto, creando herramientas completamente nuevas.',
+          'Desarrollamos utilizando la tecnología más adecuada para cada proyecto, creando herramientas nuevas.',
         image: '~/assets/images/programacion-software-a-medida.jpg',
         links: header['es']['links']
           .find((link) => link._id === 'services')

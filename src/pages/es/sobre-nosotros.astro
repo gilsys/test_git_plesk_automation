@@ -1,228 +1,402 @@
 ---
-import Features2 from '~/components/widgets/Features2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import Hero from '~/components/widgets/Hero.astro';
-import Stats from '~/components/widgets/Stats.astro';
+import Steps from '~/components/widgets/Steps.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
 import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+const u = useRoutes(getLangFromUrl(Astro.url));
 
 const metadata = {
-  title: 'About us',
+  title: `gilsys - Empresa IT de Osona con más de 20 años de experiencia`,
+  description: `Programamos software a medida, web, apps e inteligencia artificial. Conoce nuestros valores, metodología de trabajo y respuestas a preguntas frecuentes.`,
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
-  <Hero
-    tagline="About us"
-    image={{
-      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Caos Image',
-    }}
-  >
+  <Hero backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/neutral/bg-4.jpg' }}>
     <Fragment slot="title">
-      Elevate your online presence with our <br />
-      <span class="text-accent dark:text-white highlight"> Beautiful Website Templates</span>
+      <span class="custom-gradient">gilsys</span> = Experiencia + calidad.
     </Fragment>
 
     <Fragment slot="subtitle">
-      Donec efficitur, ipsum quis congue luctus, mauris magna convallis mauris, eu auctor nisi lectus non augue. Donec
-      quis lorem non massa vulputate efficitur ac at turpis. Sed tincidunt ex a nunc convallis, et lobortis nisi tempus.
-      Suspendisse vitae nisi eget tortor luctus maximus sed non lectus.
+      Somos una empresa IT de Osona con más de 20 años de experiencia en programación de software, web y aplicaciones 
+      móviles. Ahora también <span class="custom-gradient">inteligencia artificial</span>.
     </Fragment>
   </Hero>
 
-  <!-- Stats Widget ****************** -->
+  <!-- Steps2 Widget ****************** -->
 
-  <Stats
-    title="Statistics about us"
-    stats={[
-      { title: 'Offices', amount: '4' },
-      { title: 'Employees', amount: '248' },
-      { title: 'Templates', amount: '12' },
-      { title: 'Awards', amount: '24' },
-    ]}
-  />
+  <Steps2
+  isReversed={true}
+  title="¿Quiénes somos?"
+  subtitle=`Somos un equipo de especialistas <strong>apasionados</strong> por la programación de software a medida, apps, desarrollo de aplicaciones web e inteligencia artificial.
+  <div class="mx-auto px-4 max-w-6xl font-medium py-4 sm:px-6 text-md bg-lightgray">
+  
+  Si deseas contactar directamente con Jordi Gil Martí, fundador de gilsys, puedes hacerlo a través de <a href="https://www.linkedin.com/in/jordigilmarti/" title="Perfil de Jordi Gil Martí en LinkedIn" class="text-accent">LinkedIn</a>.
+  </div>
+  `
+  items={[
+    {
+      title: 'Historia',
+      description:
+        'gilsys fue creado en el año 2004 con la idea de ofrecer soluciones de programación de software, innovadoras y personalizadas, basadas en <a title="Software libre" href="https://es.wikipedia.org/wiki/Software_libre">software libre</a>.',
+    },
+    {
+      title: 'Equipo actual',
+      description:
+        'Actualmente, contamos con un equipo formado por profesionales con perfiles técnicos especializados. Mantenemos una estructura reducida para garantizar la máxima calidad en nuestros servicios, asegurar un control riguroso en cada proyecto y ofrecer un trato cercano a nuestros clientes.',
+    },
+    {
+      title: 'Compromiso de futuro',
+      description:
+        "En gilsys, <strong>invertimos semanalmente</strong> en aprender nuevas tecnologías y aportamos el valor añadido de más de 20 años de experiencia desarrollando proyectos a medida, brindando rigor y fiabilidad en cada implementación.",
+    },
+  ]}
+/>
+
 
   <!-- Features3 Widget ************** -->
 
   <Features3
-    title="Our templates"
-    subtitle="Etiam scelerisque, enim eget vestibulum luctus, nibh mauris blandit nulla, nec vestibulum risus justo ut enim. Praesent lacinia diam et ante imperdiet euismod."
-    columns={3}
-    isBeforeContent={true}
-    items={[
-      {
-        title: 'Educational',
-        description:
-          'Morbi faucibus luctus quam, sit amet aliquet felis tempor id. Cras augue massa, ornare quis dignissim a, molestie vel nulla.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Interior Design',
-        description:
-          'Vivamus porttitor, tortor convallis aliquam pretium, turpis enim consectetur elit, vitae egestas purus erat ac nunc nulla.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Photography',
-        description:
-          'Duis sed lectus in nisl vehicula porttitor eget quis odio. Aliquam erat volutpat. Nulla eleifend nulla id sem fermentum.',
-        icon: 'tabler:template',
-      },
-    ]}
-  />
+  title="Nuestros valores"
+  subtitle=""
+  columns={3}
+  isBeforeContent={true}
+  items={[
+    {
+      title: 'Calidad',
+      description:
+        'Entregamos productos sólidos y estables que permiten trabajar con tranquilidad y cumplen con los requisitos establecidos.',
+      icon: 'tabler:check',
+    },
+    {
+      title: 'Experiencia',
+      description:
+        'Sabemos lo que hacemos. Más de 20 años en el sector nos han permitido trabajar en proyectos de ámbitos muy diversos, con clientes a nivel nacional e internacional.',
+      icon: 'tabler:briefcase',
+    },
+    {
+      title: 'Innovación',
+      description:
+        'Investigamos de forma constante para ofrecer resultados innovadores que aporten el valor añadido requerido en cada desarrollo.',
+      icon: 'tabler:rocket',
+    },
+    {
+      title: 'Comunicación',
+      description:
+        "Creemos fundamental transmitir periódicamente el estado del proyecto para poder tomar las decisiones necesarias y obtener el resultado final previsto.",
+      icon: 'tabler:message-circle',
+    },
+    {
+      title: 'Honestidad',
+      description: 'Aportamos soluciones pensando en lo que más le conviene al cliente, tanto a nivel técnico como económico.',
+      icon: 'tabler:heart',
+    },
+    {
+      title: 'Rendimiento',
+      description: 'Desarrollamos pensando siempre en el rendimiento del proyecto y en su futura escalabilidad.',
+      icon: 'tabler:chart-line',
+    },
+  ]}
+>
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-lightgray"></div>
+  </Fragment>
+</Features3>
 
-  <!-- Features3 Widget ************** -->
 
-  <Features3
-    columns={3}
-    isAfterContent={true}
-    items={[
-      {
-        title: 'E-commerce',
-        description:
-          'Rutrum non odio at vehicula. Proin ipsum justo, dignissim in vehicula sit amet, dignissim id quam. Sed ac tincidunt sapien.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Blog',
-        description:
-          'Nullam efficitur volutpat sem sed fringilla. Suspendisse et enim eu orci volutpat laoreet ac vitae libero.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Business',
-        description:
-          'Morbi et elit finibus, facilisis justo ut, pharetra ipsum. Donec efficitur, ipsum quis congue luctus, mauris magna.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Branding',
-        description:
-          'Suspendisse vitae nisi eget tortor luctus maximus sed non lectus. Cras malesuada pretium placerat. Nullam venenatis dolor a ante rhoncus.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Medical',
-        description:
-          'Vestibulum malesuada lacus id nibh posuere feugiat. Nam volutpat nulla a felis ultrices, id suscipit mauris congue. In hac habitasse platea dictumst.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Fashion Design',
-        description:
-          'Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus.',
-        icon: 'tabler:template',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-      alt: 'Colorful Image',
-    }}
-  />
+<Features3
+columns={3}
+tagline="Dime qué web tienes y te diré qué empresa eres"
+title="Una web que <span class='custom-gradient'>dice mucho de Gilsys</span>"
+subtitle={`A finales de 2024 lanzamos una nueva web para celebrar que Gilsys cumplía 20 años.<br/><br/>
+Nos han preguntado: <strong><em>¿Por qué, si la anterior no estaba nada mal?</em></strong>`}
+items={[
+  {
+    icon: 'tabler:old',
+    title: 'Porque la anterior tenía 5 años',
+    description:
+      'No debería ser un problema para muchas empresas, pero nosotros queremos estar a la vanguardia, aplicando las últimas tecnologías en nuestra propia web.',
+  },
+  {
+    icon: 'tabler:device-mobile-star',
+    title: 'Porque somos una empresa exigente',
+    description:
+      'Necesitábamos una web que reflejara nuestro nivel de exigencia y de la que nos sintiéramos orgullosos.',
+  },
+  {
+    icon: 'tabler:rocket',
+    title: 'Porque queríamos probar Astro',
+    description:
+      "Estamos en constante innovación y prueba de nuevas tecnologías. Queríamos probar <a title='Programación de webs de alto rendimiento a medida' class='text-accent' href='" +
+      u('development/astro') +
+      "'>Astro</a> y llevar nuestra web al siguiente nivel.",
+  },
+  {
+    icon: 'tabler:number-100-small',
+    title: 'Porque queríamos la máxima puntuación en Google PageSpeed Insights',
+    description:
+      "Hemos conseguido una puntuación de <strong>100 en rendimiento, 100 en buenas prácticas, 100 en accesibilidad y 100 en SEO</strong> en <a title='Google PageSpeed Insights' class='text-accent' href='https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.gilsys.com%2F'>Google PageSpeed Insights</a>.",
+  },
+  {
+    icon: 'tabler:ai',
+    title: 'Porque ha llegado la era de la inteligencia artificial',
+    description:
+      "La explosión de la <a title='Programación con inteligencia artificial' class='text-accent' href='" +
+      u('development/ia') +
+      "'>inteligencia artificial</a> está cambiando el panorama digital, y queremos mostrar cómo podemos aportar valor a las empresas que desean adoptarla.",
+  },
+  {
+    icon: 'tabler:artboard',
+    title: 'Porque queríamos cambiar de imagen',
+    description: 'Con la nueva web, transmitimos una identidad más moderna y fresca.',
+  },
+  {
+    icon: 'tabler:seo',
+    title: 'Porque queríamos mejorar el SEO',
+    description: 'Potenciando la marca de la empresa en los motores de búsqueda y llegando así a más clientes.',
+  },
+  {
+    icon: 'tabler:bubble-text',
+    title: 'Porque queríamos actualizar contenido',
+    description:
+      'Una web que explique claramente qué hacemos, quiénes somos y cómo podemos ayudarte, de manera actualizada y relevante.',
+  },
+  {
+    icon: 'tabler:chart-line',
+    title: 'Porque queríamos ir más allá de WordPress',
+    description: 'Tenemos capacidades técnicas y queríamos demostrarlas con una web rápida, segura y optimizada para SEO.',
+  },
+]}
+/>
 
-  <!-- Steps2 Widget ****************** -->
 
-  <Steps2
-    title="Our values"
-    subtitle="Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus. Nulla facilisi. Vestibulum malesuada lacus."
-    items={[
-      {
-        title: 'Customer-centric approach',
-        description:
-          'Donec id nibh neque. Quisque et fermentum tortor. Fusce vitae dolor a mauris dignissim commodo. Ut eleifend luctus condimentum.',
-      },
-      {
-        title: 'Constant Improvement',
-        description:
-          'Phasellus laoreet fermentum venenatis. Vivamus dapibus pulvinar arcu eget mattis. Fusce eget mauris leo.',
-      },
-      {
-        title: 'Ethical Practices',
-        description:
-          'Vestibulum imperdiet libero et lectus molestie, et maximus augue porta. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
-      },
-    ]}
-  />
+  <!--{
+    description:
+      'Et proposem un repte, si dubtes entre nosaltres i una altra empresa, estudia com fa les coses cada empresa.?',
+  },-->
 
-  <!-- Steps2 Widget ****************** -->
+  <Steps
+  id="resume"
+  title="Metodología de trabajo"
+  subtitle="Aunque gilsys trata cada proyecto de forma individual y personalizada, a nivel general, nuestra metodología de trabajo define las siguientes fases:"
+  items={[
+    {
+      title: 'Recopilación de requisitos,',
+      description: `donde escuchamos tus necesidades y las expectativas del proyecto que se quiere implementar.`,
+      icon: 'tabler:clipboard-list',
+    },
+    {
+      title: 'Consultoría tecnológica,',
+      description:
+        `dependiendo del proyecto, puede ser necesaria una <a href="` +
+        u('consultory') +
+        `" title="Asesoramiento inicial y estudio de situación tecnológica de la empresa" class="text-accent">consultoría tecnológica</a> que permita analizar a fondo la situación actual, conceptualizar ideas y planificar adecuadamente el proyecto.`,
+      icon: 'tabler:settings',
+    },
+    {
+      title: 'Presentación de propuesta y planificación de fases,',
+      description: `de forma consensuada con el cliente según prioridad y presupuesto.`,
+      icon: 'tabler:calendar-check',
+    },
+    {
+      title: 'Diseño,',
+      description: `de la interfaz de usuario en caso de que el proyecto lo requiera.`,
+      icon: 'tabler:palette',
+    },
+    {
+      title: 'Programación del sistema,',
+      description: `para que realice las funcionalidades definidas.`,
+      icon: 'tabler:code',
+    },
+    {
+      title: 'Demostración,',
+      description: `donde se expone la solución obtenida para que sea validada.`,
+      icon: 'tabler:eye-check',
+    },
+    {
+      title: 'Entrega,',
+      description: `y puesta en marcha del proyecto en entorno de producción.`,
+      icon: 'tabler:rocket',
+    },
+    {
+      title: 'Mantenimiento,',
+      description: `donde se brindará soporte y se realizarán los ajustes y correcciones en caso necesario.`,
+      icon: 'tabler:tools',
+    },
+    {
+      title: 'Ampliaciones y nuevas fases,',
+      description: `donde se implementarán nuevas necesidades acordadas con el cliente.`,
+      icon: 'tabler:replace',
+    },
+  ]}
+  classes={{ container: 'max-w-3xl' }}
+>
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-lightgray"></div>
+  </Fragment>
+</Steps>
 
-  <Steps2
-    title="Achievements"
-    subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla, sed porttitor est nibh at nulla."
-    isReversed={true}
-    callToAction={{
-      text: 'See more',
-      href: '/',
-    }}
-    items={[
-      {
-        title: 'Global reach',
-        description: 'Nam malesuada urna in enim imperdiet tincidunt. Phasellus non tincidunt nisi, at elementum mi.',
-        icon: 'tabler:globe',
-      },
-      {
-        title: 'Positive customer feedback and reviews',
-        description:
-          'Cras semper nulla leo, eget laoreet erat cursus sed. Praesent faucibus massa in purus iaculis dictum.',
-        icon: 'tabler:message-star',
-      },
-      {
-        title: 'Awards and recognition as industry experts',
-        description:
-          'Phasellus lacinia cursus velit, eu malesuada magna pretium eu. Etiam aliquet tellus purus, blandit lobortis ex rhoncus vitae.',
-        icon: 'tabler:award',
-      },
-    ]}
-  />
 
-  <!-- Features2 Widget ************** -->
+<FAQs
+title="Preguntas frecuentes"
+subtitle="Respuestas a las preguntas más habituales."
+tagline="FAQs"
+classes={{ container: 'max-w-6xl' }}
+items={[
+  {
+    title: '¿Es gratuito solicitar un presupuesto?',
+    description: 'Sí, dependiendo del proyecto podremos dar un precio final o un rango de costo orientativo.',
+  },
+  {
+    title: '¿Hay compromiso de compra después de recibir un presupuesto?',
+    description: 'No, el presupuesto orientativo es siempre gratuito.',
+  },
+  {
+    title: '¿Qué tipo de proyectos desarrolla gilsys?',
+    description:
+      `
+    Desarrollamos <a href="` +
+      u('development') +
+      `" title="Programación a medida para empresas" class="text-accent">software a medida</a>, creando herramientas innovadoras desde cero. También trabajamos con 
+<a href="` +
+      u('software') +
+      `" title="Software personalizable como CRM, WordPress, Pimcore o Metabase" class="text-accent">software personalizable</a> para adaptarlo a las necesidades concretas de nuestros clientes, incluyendo opciones como CRM, WordPress, Pimcore o Metabase. Además, somos expertos en 
+<a href="` +
+      u('migration') +
+      `" title="Migración de datos e integración de sistemas" class="text-accent">migración de datos e integración de sistemas</a>.<br /><br />
 
-  <Features2
-    title="Our locations"
-    tagline="Find us"
-    columns={4}
-    items={[
-      {
-        title: 'EE.UU',
-        description: '1234 Lorem Ipsum St, 12345, Miami',
-      },
-      {
-        title: 'Spain',
-        description: '5678 Lorem Ipsum St, 56789, Madrid',
-      },
-      {
-        title: 'Australia',
-        description: '9012 Lorem Ipsum St, 90123, Sydney',
-      },
-      {
-        title: 'Brazil',
-        description: '3456 Lorem Ipsum St, 34567, São Paulo',
-      },
-    ]}
-  />
+De manera transversal, en todas nuestras soluciones podemos implementar 
+<a href="` +
+      u('development/ia') +
+      `" title="Programación con inteligencia artificial" class="text-accent">inteligencia artificial</a> para automatizar procesos y aumentar la eficiencia.
+<br /><br />
+Finalmente, además de los servicios de desarrollo, también ofrecemos 
+<a href="` +
+      u('consultory') +
+      `" title="Asesoramiento tecnológico" class="text-accent">consultoría tecnológica</a> para convertir ideas en proyectos tangibles y exitosos.
+    `,
+  },
+  {
+    title: 'No tenemos claro si nuestra idea es viable o cuánto costaría desarrollarla',
+    description:
+      `En estos casos, analizamos la propuesta y estudiamos su viabilidad. Podemos proporcionar un rango de precios orientativo basado en una previsión del proyecto. Si es adecuado, podemos llevar a cabo una <a href="` +
+      u('consultory') +
+      `" title="Creación de presupuestos de proyectos por fases" class="text-accent">consultoría tecnológica</a> conjunta para conceptualizar las ideas, dividirlas en fases y establecer un calendario de trabajo detallado con los costos correspondientes a cada fase. Al finalizar cada fase, se puede revisar el estado del proyecto y replantear puntos si es necesario, para adaptarlo a las necesidades reales.`,
+  },
+  {
+    title: '¿Cuál es el plazo medio de desarrollo de un proyecto?',
+    description:
+      'Depende de la complejidad del proyecto. Generalmente, los proyectos pequeños pueden durar unas semanas, mientras que los proyectos más grandes pueden tardar meses.',
+  },
+  {
+    title: '¿Ofrecéis soporte técnico después de finalizar un proyecto?',
+    description:
+      'Sí, ofrecemos servicios de mantenimiento y soporte para asegurar que el sistema funcione correctamente y pueda evolucionar según las necesidades.',
+  },
+  {
+    title: '¿Con qué sectores trabajáis?',
+    description:
+      'Los servicios que ofrecemos no están ligados a un sector concreto, por lo que trabajamos con sectores muy diversos como logística, industria, retail, educación, sanidad, e-commerce, entre otros.',
+  },
+  {
+    title: '¿Podéis ayudar con la migración de sistemas antiguos a nuevas plataformas sin perder datos?',
+    description:
+      `Sí, tenemos experiencia en la <a href="` +
+      u('migration') +
+      `" title="Migraciones sin pérdida de datos" class="text-accent">migración de bases de datos</a>
+      de sistemas antiguos, transformándolas y adaptándolas a la nueva estructura sin pérdida de información.`,
+  },
+  {
+    title: '¿Cuáles son vuestras principales herramientas de desarrollo?',
+    description:
+      'Hemos trabajado con muchos lenguajes de programación, bases de datos y herramientas diversas durante más de 20 años en el sector. Puedes consultar las tecnologías que más utilizamos actualmente en este apartado #LINK.',
+  },
+  {
+    title: '¿Qué pasa si se necesitan cambios en medio del proyecto?',
+    description:
+      'Trabajamos de manera flexible y, si se requieren ajustes, revisamos el presupuesto y el cronograma para adaptarnos a las nuevas necesidades.',
+  },
+  {
+    title: '¿Cuáles son las condiciones de pago para un proyecto?',
+    description:
+      'Normalmente, trabajamos con un pago inicial y pagos parciales basados en los hitos acordados con el cliente.',
+  },
+  {
+    title: '¿Es posible comenzar un proyecto con un presupuesto reducido?',
+    description:
+      'Sí, ofrecemos soluciones escalables que permiten comenzar con un MVP (Minimum Viable Product) y ampliarlo posteriormente.',
+  },
+  {
+    title: '¿Trabajáis con proyectos internacionales?',
+    description:
+      'Sí, hemos colaborado con empresas a nivel nacional e internacional, ofreciendo soluciones adaptadas a sus necesidades.',
+  },
+  {
+    title: '¿Trabajáis con metodologías ágiles?',
+    description:
+      'Sí, utilizamos metodologías como Scrum o Kanban para garantizar flexibilidad y una comunicación constante con el cliente.',
+  },
+  {
+    title: '¿Podéis integrar automatizaciones con inteligencia artificial en proyectos existentes?',
+    description:
+      `No siempre podemos modificar software existente o integrar nuevas funcionalidades que utilicen 
+    <a href="` +
+      u('migration') +
+      `" title="Integración de inteligencia artificial" class="text-accent">IA</a>, dependerá de cada sistema y de qué funcionalidades se necesiten integrar.`,
+  },
+  {
+    title: '¿Cómo gestionáis la confidencialidad de los datos del proyecto?',
+    description:
+      'Firmamos acuerdos de confidencialidad (NDA) y aplicamos medidas para proteger los datos de nuestros clientes.',
+  },
+  {
+    title: '¿Ofrecéis formación para los usuarios finales después de la implementación del proyecto?',
+    description:
+      'Sí, podemos proporcionar formación y documentación para ayudar a los usuarios a utilizar las nuevas herramientas o sistemas.',
+  },
+  {
+    title: '¿Ofrecéis integraciones con herramientas de terceros?',
+    description:
+      'Sí, podemos integrar soluciones con sistemas de terceros, como ERP, CRM u otras plataformas empresariales.',
+  },
+  {
+    title: '¿Se puede hacer una demostración del proyecto antes de su entrega final?',
+    description:
+      'Sí, presentamos una demo antes de la fase final para asegurar que cumple con las expectativas del cliente.',
+  },
+  {
+    title: '¿Qué soporte ofrecéis durante el proceso de desarrollo?',
+    description:
+      'Trabajamos de manera colaborativa con el cliente y mantenemos una comunicación constante durante todas las fases del proyecto.',
+  },
+]}
+/>
 
-  <!-- Features2 Widget ************** -->
+<CallToAction
+  backgroundImage={{ src: '~/assets/images/neutral/bg-4.jpg', alt: 'Fondo abstracto' }}
+  actions={[
+    {
+      variant: 'primary',
+      text: 'Contactar',
+      href: 'contacto',
+    },
+    {
+      variant: 'primary',
+      text: 'Llamar',
+      href: 'tel:+34665331271',
+    },
+  ]}
+>
+  <Fragment slot="title"
+    >Si quieres conocernos mejor,<br /><span class="custom-gradient">solicita una reunión</span></Fragment
+  >
+  <Fragment slot="subtitle">Estaremos encantados de presentarnos y ver en qué podemos ayudarte.</Fragment>
+</CallToAction>
 
-  <Features2
-    title="Technical Support"
-    tagline="Contact us"
-    columns={2}
-    items={[
-      {
-        title: 'Chat with us',
-        description:
-          'Integer luctus laoreet libero, auctor varius purus rutrum sit amet. Ut nec molestie nisi, quis eleifend mi.',
-        icon: 'tabler:messages',
-      },
-      {
-        title: 'Call us',
-        description:
-          'Mauris faucibus finibus orci, in posuere elit viverra non. In hac habitasse platea dictumst. Cras lobortis metus a hendrerit congue.',
-        icon: 'tabler:headset',
-      },
-    ]}
-  />
 </Layout>
