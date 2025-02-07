@@ -10,6 +10,7 @@ interface Link {
   href?: string;
   ariaLabel?: string;
   icon?: string;
+  title?: string;
 }
 
 interface Links {
@@ -28,7 +29,7 @@ export interface Props {
   address?: string;
 }
 
-const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme = 'light', address = '' } = Astro.props;
+const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme = 'light', address = '', } = Astro.props;
 
 const currentLang = getLangFromUrl(Astro.url);
 const t = useTranslations(currentLang);
@@ -98,7 +99,7 @@ const u = useRoutes(currentLang);
           </div>
         </div>
         <div class="mt-14 lg:-mt-4">
-          <div class="text-right lg:text-center -mb-10 lg:-mb-3 text-xs lg:text-sm">t('affiliations')</div>
+          <div class="text-right lg:text-center -mb-10 lg:-mb-3 text-xs lg:text-sm">{t('affiliations')}</div>
           <div class="mt-14 md:mt-10 lg:mt-0 md:flex gap-8 items-center h-20">
             <a
               class="pe-2 lg:pe-0"

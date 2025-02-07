@@ -48,8 +48,8 @@ export const ui = {
     'contact.error': 'Error al enviar el mensaje.',
     'menu.more_info': 'Más información',
     'affiliations': 'Afiliaciones',
-    'affiliations.ccm': 'Socis de Consell empresarial d\'Osona',
-    'affiliations.tic': 'Socis de TICOsona - Associació d\'Empreses de Tecnologies de la Informació i la Comunicació d\'Osona',
+    'affiliations.ccm': 'Socios de Consell empresarial d\'Osona',
+    'affiliations.tic': 'Socios de TICOsona - Associació d\'Empreses de Tecnologies de la Informació i la Comunicació d\'Osona',
   },
   ca: {
     'common.page': 'Pàgina',
@@ -82,6 +82,9 @@ export const ui = {
     'contact.success': 'Missatge enviat correctament.',
     'contact.error': 'Error al enviar el missatge.',
     'menu.more_info': 'Més informació',
+    'affiliations': 'Afiliacions',
+    'affiliations.ccm': 'Socios de Consell empresarial d\'Osona',
+    'affiliations.tic': 'Socios de TICOsona - Associació d\'Empreses de Tecnologies de la Informació i la Comunicació d\'Osona',
   },
   en: {
     'common.page': 'Page',
@@ -114,6 +117,9 @@ export const ui = {
     'contact.success': 'Message sent successfully.',    
     'contact.error': 'Error sending the message.',
     'menu.more_info': 'More information',
+    'affiliations': 'Affiliations',
+    'affiliations.ccm': 'Member of Consell empresarial d\'Osona',
+    'affiliations.tic': 'Member of TICOsona - Associació d\'Empreses de Tecnologies de la Informació i la Comunicació d\'Osona',
   },
 } as const;
 
