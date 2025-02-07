@@ -956,7 +956,7 @@ export const footer = {
     address: `            
             <a href="tel:+34665331271">665 33 12 71</a><br>
             <a class='text-accent' href="mailto:info@gilsys.com">info@gilsys.com</a><br><br>            
-            <a href='https://maps.app.goo.gl/V5T7Ksystbsv68eD7' rel='nofollow' target='_blank' title='Obrir google maps'>Passeig del Ter 48<br>
+            <a href='https://maps.app.goo.gl/V5T7Ksystbsv68eD7' target='_blank' title='Obrir google maps'>Passeig del Ter 48<br>
             08580, Sant Quirze de Besora<br>
             Osona - Barcelona</a><br/>
     `,
