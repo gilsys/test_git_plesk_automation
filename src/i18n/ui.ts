@@ -327,7 +327,7 @@ export const header = {
           },
           {
             text: 'Lloc web i presència bàsica a Internet',
-            href: routes['ca']['kit-digital/web'],
+            href: routes['ca']['kit-digital/basic-internet-presence'],
           },
           {
             text: 'Marketplace',
@@ -356,7 +356,7 @@ export const header = {
         links: [
           {
             text: 'Assessorament en Intel·ligència Artificial',
-            href: routes['ca']['kit-consulting/ai'],
+            href: routes['ca']['kit-consulting/ai-advisory'],
           },
           {
             text: 'Assessorament en anàlisi de dades (Avançat)',
