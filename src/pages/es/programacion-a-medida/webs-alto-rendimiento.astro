@@ -1,0 +1,363 @@
+---
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Prices from '~/components/widgets/Pricing.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+
+const metadata = {
+  title: 'Empresa de diseño de páginas web de alto rendimiento',
+  description: `Programamos páginas web con Astro, muy rápidas, seguras y optimizadas para SEO. Cerca de Vic (Osona, Barcelona).`,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Section -->
+  <Hero tagline="Olvídate de preocuparte por la optimización"
+  actions={[{ variant: 'primary', text: 'Presupuesto gratuito', href: u('contact') }]}
+  backgroundImage={{ alt: 'Fondo abstracto',  src: '~/assets/images/dots/27.jpg'}}
+  >
+    <Fragment slot="title">
+      Diseño de páginas web<br/>de <span class="text-accent">alto rendimiento</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      Programamos páginas web con <strong>Astro</strong>, muy rápidas, <span class="custom-gradient">optimizadas para SEO</span> y <span class="custom-gradient">increíblemente seguras</span>.
+    </Fragment>
+  </Hero>
+
+
+  <!-- Introducció -->
+
+  <Features3
+    tagline="Ideal para proyectos donde el rendimiento, la seguridad y el SEO son prioritarios."
+    title="Páginas web con un alto rendimiento y un enfoque totalmente personalizado"
+    subtitle="Proyectos basados en <a class='text-accent' title='Astro, La tecnología para webs rápidas, seguras y optimizadas' href='https://astro.build/'>ASTRO</a>, donde se logra una <strong>velocidad</strong> de carga excepcional, una <strong>experiencia de usuario</strong> fluida y una <strong>seguridad</strong> máxima."
+    items={[
+      {
+        title: 'Velocidad y rendimiento',
+        description:
+          'Las páginas desarrolladas con frameworks como Angular están optimizadas para una carga rápida y una respuesta inmediata, mejorando la experiencia del usuario y el posicionamiento en buscadores.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'SEO avanzado',
+        description:
+          'Estas tecnologías permiten una optimización más detallada para buscadores, incluyendo mejoras en la estructura del código, metaetiquetas personalizadas y una indexación más efectiva.',
+        icon: 'tabler:seo',
+      },
+      {
+        title: 'Flexibilidad total',
+        description:
+          'El desarrollo personalizado permite adaptar completamente la página a los objetivos del proyecto, sin las limitaciones propias de un gestor de contenidos.',
+        icon: 'tabler:adjustments-alt',
+      },
+      {
+        title: 'Seguridad mejorada',
+        description:
+          'El código personalizado reduce la dependencia de plugins externos, minimizando las vulnerabilidades y aumentando la seguridad del sitio.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Escalabilidad',
+        description:
+          'Las páginas rápidas son capaces de gestionar grandes volúmenes de tráfico o contenido sin perder rendimiento, ideales para proyectos con crecimiento previsto.',
+        icon: 'tabler:arrows-maximize',
+      },
+      {
+        title: 'Aumenta visitas, conversiones y ventas',
+        description:
+          "Un sitio web rápido y optimizado para SEO es la clave para captar más clientes, mejorar la imagen de marca y aumentar la facturación.",
+        icon: 'tabler:graph',
+      },
+    ]}
+    
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Features3>
+
+
+  <!-- Introducción -->
+  <Content
+    tagline=""
+    title=""
+    subtitle=""
+    items={[
+      {
+        title: 'Startups y negocios digitales',
+        description:
+          'Necesitan una presencia en línea competitiva y de gran impacto, aprovechando un código ligero y escalable que puede evolucionar con el crecimiento del proyecto.',
+      },
+      {
+        title: 'Medios y blogs de contenido',
+        description:
+          "Requieren una publicación y carga rápida de artículos, imágenes y recursos multimedia, mejorando la navegación y el tiempo de permanencia de los usuarios.",
+      },
+      {
+        title: 'Empresas con enfoque en SEO avanzado',
+        description:
+          'Buscan controlar hasta el más mínimo detalle del código para garantizar la mejor indexación en buscadores.',
+      },
+      {
+        title: 'Páginas web corporativas premium',
+        description:
+          "Empresas que necesitan transmitir una imagen profesional y exclusiva, con un alto rendimiento y un diseño totalmente personalizado que refuerza su marca y ofrece una experiencia de usuario mejorada.",
+      },
+    ]}
+    image={{
+      src: '~/assets/images/astro-coete-empresas.jpg',
+      alt: 'Cohete con empresas agarrándolo',
+    }}
+
+  >
+    <Fragment slot="preContent">
+      <h3 class="text-2xl font-bold tracking-tightsm:text-3xl mb-2">¿Cuándo implementar una web de alto rendimiento?</h3>
+      <p class="text-muted">
+        <strong>ASTRO</strong> es una tecnología ideal para empresas que buscan crear páginas web ultra rápidas, seguras, optimizadas para SEO y personalizadas a nivel estético, pero que NO priorizan la autogestión de contenidos.
+      </p>
+    </Fragment>
+  </Content>
+
+
+
+
+
+
+
+  <!-- Introducción -->
+  <Content
+  isReversed
+  tagline=""
+  title="¿Qué inconvenientes presenta <span class='custom-gradient'>WordPress</span> comparado con <span class='custom-gradient'>ASTRO</span>?"
+  subtitle={"<a class='text-accent' href='" + u('software/wp') + "' title=''>WordPress</a> tiene a su favor una gestión de contenidos ágil y conocida, muchos temas para elegir y plugins para implementar nuevas funcionalidades."}
+  items={[
+    {
+      title: 'Rendimiento limitado',
+      description:
+        'Los sitios web basados en WordPress suelen depender de plugins que pueden afectar negativamente la velocidad de carga.',
+    },
+    {
+      title: 'Dificultad en SEO avanzado',
+      description:
+        "Aunque ofrece plugins para SEO, no permite el mismo nivel de optimización que un desarrollo personalizado.",
+    },
+    {
+      title: 'Seguridad',
+      description:
+        'Su popularidad lo convierte en un objetivo frecuente de ataques informáticos, aumentando la necesidad de mantenimiento constante.',
+    },
+    {
+      title: 'Escalabilidad limitada',
+      description:
+        "Es menos eficiente en la gestión de grandes cantidades de tráfico o contenido.",
+    },
+  ]}
+ image={{
+   src: '~/assets/images/astro-web-rendimiento-cohete.jpg',
+   alt: 'Cohete con logo Astro, representando rendimiento optimizado',
+ }}
+
+>
+  <Fragment slot="preContent">
+    <p class="text-muted">
+       WordPress puede ser la opción más adecuada en determinadas ocasiones y es una tecnología que recomendamos y <a class='text-accent' href={u('software/wp')} title=''>trabajamos en Gilsys</a>, pero tiene limitaciones cuando se trata de optimizar el <strong>rendimiento</strong>, <strong>personalizar completamente un diseño</strong> o en temas de <strong>seguridad</strong>.
+    </p>
+  </Fragment>
+  <Fragment slot="bg">
+   <div class="absolute inset-0 bg-lightgray"></div>
+ </Fragment>    
+</Content>
+
+
+
+
+
+
+
+<FAQs
+title="¿Qué inconvenientes tiene la tecnología de páginas web rápidas de ASTRO?"
+subtitle={"ASTRO presenta muchas ventajas a la hora de implementar páginas web centradas en rendimiento, pero no ofrece ciertas funcionalidades que puede tener una página web programada con <a href='" + u('software/wp') + "' class='text-accent' >WordPress</a> y que pueden ser importantes para determinados proyectos."}
+tagline=""
+heading=""
+classes={{ container: 'max-w-6xl' }}
+items={[
+  {
+    title: "Gestión de contenidos limitada",
+    description: `ASTRO no cuenta con una interfaz gráfica para la autogestión de contenidos como WordPress. Es ideal para proyectos donde el contenido se mantiene relativamente estable, para empresas con conocimientos técnicos que puedan gestionarlo tras una formación, o también se puede delegar esta tarea a Gilsys.`,
+  },
+  {
+    title: "Costo inicial más elevado",
+    description: `El desarrollo personalizado con ASTRO requiere una inversión inicial superior en comparación con el uso de plantillas estándar de WordPress. No obstante, las prestaciones obtenidas, como velocidad, optimización SEO y seguridad, compensan ampliamente esta inversión a largo plazo.`,
+  },
+  {
+    title: 'Tiempo de desarrollo más largo',
+    description: `El desarrollo con ASTRO implica un proceso más detallado y personalizado, ya que cada elemento gráfico y funcionalidad se diseñan específicamente para el proyecto, asegurando un resultado único y altamente optimizado.`,
+  },
+  {
+    title: 'Falta de plugins y temas prediseñados',
+    description: `ASTRO no dispone de la flexibilidad para instalar plugins o utilizar temas prediseñados como WordPress. Esto garantiza una página web con código limpio y altamente optimizado, pero limita la extensibilidad rápida que puede ofrecer WordPress o la posibilidad de cambiar de plantilla una vez diseñada.`,
+  },
+]}
+
+>
+</FAQs>
+
+
+
+
+
+<Prices
+title="Comparativa entre páginas web con WordPress y páginas web de alto rendimiento con ASTRO"
+subtitle="Cada plataforma tiene sus ventajas. La elección dependerá de las necesidades específicas de cada proyecto."
+prices={[
+  {
+    title: 'WordPress',
+    subtitle: 'Solución intuitiva y popular con una amplia comunidad.',
+    items: [
+      {
+        title: 'Velocidad',
+        description: 'Limitada por la carga de plugins y temas.',        
+      },
+      {
+        title: 'SEO avanzado',
+        description: 'Limitado a las opciones de plugins.',
+      },
+      {
+        title: 'Facilidad de gestión',
+        description: 'Interfaz gráfica intuitiva para usuarios sin conocimientos técnicos.',
+      },
+      {
+        title: 'Escalabilidad',
+        description: 'Menos eficiente para grandes volúmenes de contenido.',
+      },
+      {
+        title: 'Seguridad',
+        description: 'Vulnerable por la dependencia de plugins.',
+      },
+      {
+        title: 'Tiempo de desarrollo',
+        description: 'Más rápido inicialmente.',
+      },
+      {
+        title: 'Costo inicial',
+        description: 'Inferior.',
+      },
+    ],
+  },
+  {
+    title: 'ASTRO',
+    subtitle: 'Solución optimizada y hecha a medida para proyectos avanzados.',
+    items: [
+      {
+        title: 'Velocidad',
+        description: 'Óptima gracias a un código ligero y optimizado.',
+      },
+      {
+        title: 'SEO avanzado',
+        description: 'Totalmente personalizable y más efectivo.',
+      },
+      {
+        title: 'Facilidad de gestión',
+        description: 'Sin interfaz gráfica, se requiere gestión técnica.',
+      },
+      {
+        title: 'Escalabilidad',
+        description: 'Altamente escalable.',
+      },
+      {
+        title: 'Seguridad',
+        description: 'Mucho más segura, el código generado no es penetrable.',
+      },
+      {
+        title: 'Tiempo de desarrollo',
+        description: 'Requiere más tiempo de desarrollo.',
+      },
+      {
+        title: 'Costo inicial',
+        description: 'Superior, pero rentable a largo plazo.',
+      },
+    ],
+  },
+]}
+>
+<Fragment slot="bg">
+    <div class="absolute inset-0 bg-lightgray"></div>
+  </Fragment>
+</Prices>
+
+  
+
+<Features
+  tagline="Es necesaria una empresa de programación profesional para aprovechar al máximo su rendimiento."
+  title="¿Por qué elegir Gilsys para el desarrollo de páginas web de alto rendimiento?"
+  subtitle="No es fácil encontrar una empresa especializada en una tecnología tan moderna que requiere conocimientos avanzados de programación."
+  items={[
+    {
+      title: 'Transición de WordPress a ASTRO',
+      description: "Nuestra propia web de empresa ha pasado de WordPress a ASTRO, un proceso que nos ha permitido entender a fondo esta tecnología y aprovechar al máximo sus ventajas.",
+      icon: 'tabler:transform',
+    },
+    {
+      title: 'Innovación y experimentación constante',
+      description: 'En Gilsys no dejamos de investigar y experimentar con nuevas tecnologías. Siempre probamos cualquier tecnología a nivel interno antes de ofrecerla a nuestros clientes, brindando así confianza en nuestras soluciones.',
+      icon: 'tabler:flask',
+    },
+    {
+      title: 'Experiencia en múltiples tecnologías',
+      description: 'En Gilsys contamos con más de 20 años de experiencia trabajando con una gran variedad de lenguajes y tecnologías. Esta experiencia nos permite evaluar cada proyecto de manera personalizada para determinar qué tecnología se adapta mejor a las necesidades del cliente.',
+      icon: 'tabler:code',
+    },    
+    {
+      title: 'Equipo de programación experto',
+      description: "ASTRO no es una tecnología que puedan utilizar usuarios finales o diseñadores como WordPress. En Gilsys estamos especializados en <a href='" + u('development')+ "' title='Programación de software a medida' class='text-accent'>programación a medida</a>, por lo que entendemos su código y podemos aplicar mejoras para cubrir requisitos específicos en proyectos complejos.",
+      icon: 'tabler:settings',
+    },
+    {
+      title: 'Diseño y maquetación a medida',
+      description: 'Aunque ASTRO no dispone de tantas plantillas predefinidas como WordPress, tenemos una amplia experiencia en maquetar diseños a medida y podemos <strong>adaptar plantillas HTML5</strong> comerciales para integrarlas con ASTRO.',
+      icon: 'tabler:layout-grid',
+    },
+    {
+        title: 'Optimizado para Google',
+        description: "Se consiguen resultados excepcionales en herramientas como <a href='https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.gilsys.com%2F' title='Test de rendimiento de Google'>Google PageSpeed Insights</a>, gracias a un código optimizado y una arquitectura ajustada para maximizar la velocidad de carga y la experiencia del usuario.",
+        icon: 'tabler:rocket'
+    }
+  ]}
+
+/>
+
+<CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/27.jpg', alt: 'Fondo abstracto' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Presupuesto gratuito',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Llamar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Aumenta las visitas, las conversiones y las ventas con <span class="custom-gradient">ASTRO</span> 
+    </Fragment>
+    <Fragment slot="subtitle"
+      >Impulsa tu negocio con una web ultrarrápida, segura e irresistible para Google.</Fragment>
+  </CallToAction>
+
+
+
+
+
+</Layout>

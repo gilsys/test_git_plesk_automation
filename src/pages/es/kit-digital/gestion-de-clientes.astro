@@ -1,0 +1,143 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import KitDigital from '~/components/widgets/KitDigital.astro';
+import Layout from '~/layouts/PageLayout.astro';
+const metadata = {
+  title: 'Gestión de clientes',
+  description:
+    'Optimiza la gestión de relaciones comerciales con los clientes mediante herramientas digitales avanzadas y gestión documental centralizada para tu PYME con el Kit Digital.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Subvención Kit Digital"
+    backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/dots/21.jpg' }}
+  >
+    <Fragment slot="title">Gestión de clientes</Fragment>
+    <Fragment slot="subtitle">
+      Implementa un sistema de <span class="custom-gradient">gestión de clientes</span> eficiente con <span
+        class="custom-gradient">CRM</span
+      > y herramientas digitales avanzadas,
+      <span class="custom-gradient">GRATIS</span> gracias a la subvención del Kit Digital, para optimizar las relaciones
+      y procesos comerciales.
+    </Fragment>
+  </Hero>
+
+  <Features2
+    tagline="Funcionalidades y servicios"
+    subtitle="Digitaliza y optimiza la gestión de relaciones comerciales con tus clientes. Almacena, sigue y convierte leads en clientes, con herramientas de gestión y reporting detallado para tomar decisiones informadas."
+    title="Gestión integral de clientes, oportunidades y leads para empresas, con herramientas digitales avanzadas"
+    items={[
+      {
+        title: 'Gestión de clientes',
+        description:
+          'Podrás almacenar y consultar los datos de cada uno de tus clientes, desde su alta como oportunidad de negocio, y simular la compra de productos o contratación de servicios.',
+        icon: 'tabler:user',
+      },
+      {
+        title: 'Gestión de clientes potenciales (Leads)',
+        description:
+          'Podrás dar de alta nuevos Leads de forma manual o mediante una importación por archivo. Los datos asociados a los Leads te permitirán su gestión comercial con el objetivo de convertirlos en clientes. Además, podrás parametrizar reglas de negocio para la asignación de Leads según diferentes criterios.',
+        icon: 'tabler:user-plus',
+      },
+      {
+        title: 'Gestión de oportunidades',
+        description:
+          'Tendrás la posibilidad de gestionar todas las oportunidades de negocio que impliquen el envío al cliente potencial o Lead de ofertas y presupuestos. Además, podrás comprobar el estado de cada oportunidad (en análisis, oferta presentada, en negociación, ganadas, canceladas, etc.).',
+        icon: 'tabler:target',
+      },
+      {
+        title: 'Acciones o tareas comerciales',
+        description:
+          'La herramienta implantada por el Agente Digitalizador de tu elección te permitirá crear acciones y tareas comerciales, tanto de forma manual como automática.',
+        icon: 'tabler:circle-check',
+      },
+      {
+        title: 'Reporting, planificación y seguimiento comercial',
+        description:
+          "Podrás realizar el seguimiento mediante indicadores (KPI's), listado de oportunidades, y otros, con diferentes niveles de agregación de información en función de tus necesidades. También podrás generar informes para el seguimiento y monitorización de tu actividad comercial, contemplando ratios de eficiencia, estado de fases, pipeline y otros atributos medibles (como productos, cotizaciones, etc.), y según los canales, perfiles, roles y/o fases comerciales. Estos informes podrán mostrar, al menos, datos mensuales, acumulados y/o comparativas entre diferentes ejercicios comerciales.",
+        icon: 'tabler:file-chart',
+      },
+      {
+        title: 'Alertas',
+        description:
+          'Podrás visualizar Alertas de Clientes en formato gráfico de diferente tipología (iconos, mensajes emergentes, etc.).',
+        icon: 'tabler:bell',
+      },
+      {
+        title: 'Gestión documental',
+        description:
+          'La solución incluirá un software para la gestión centralizada de la documentación capaz de insertar y/o vincular documentos tanto relativos a tu actividad comercial, como los proporcionados por los propios clientes.',
+        icon: 'tabler:folder',
+      },
+      {
+        title: 'Diseño Responsive',
+        description: 'Tendrás una interfaz funcional en todo tipo de dispositivos.',
+        icon: 'tabler:device-laptop',
+      },
+      {
+        title: 'Integración con diversas plataformas',
+        description:
+          'Dispondrás de APIs o Web Services para la consolidación de la información y datos de toda tu empresa.',
+        icon: 'tabler:plug',
+      },
+    ]}
+  />
+
+  <Features
+    title="Subvención Kit Digital según el número de empleados"
+    subtitle="La subvención puede utilizarse para diversos servicios de digitalización, con un importe máximo que varía en función del número de empleados de la empresa."
+    items={[
+      {
+        title: 'Importe total subvencionado:',
+        list: [
+          '<strong>De 0 a 3 empleados:</strong> 3.000€',
+          '<strong>De 50 a 99 empleados:</strong> 25.000€',
+          '<strong>De 100 a 250 empleados:</strong> 29.000€',
+        ],
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Importe máximo para el servicio de gestión de clientes:',
+        list: [
+          '<strong>De 0 a 3 empleados:</strong> 2.000€ (incluye 1 usuario)',
+          '<strong>De 50 a 99 empleados:</strong> 10.000€ (incluye 10 usuarios)',
+          '<strong>De 100 a 250 empleados:</strong> 14.000€ (incluye 15 usuarios)',
+        ],
+        icon: 'tabler:check',
+      },
+    ]}
+  />
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/21.jpg', alt: 'Fondo abstracto, inspirado en tecnología y software' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contactar',
+        href: 'contactar',
+      },
+      {
+        variant: 'primary',
+        text: 'Llamar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Estás a un <span class="custom-gradient">click</span> de digitalizar la gestión de <span class="custom-gradient"
+        >clientes</span
+      > y llevar tu relación comercial al siguiente nivel
+    </Fragment>
+    <Fragment slot="subtitle">
+      Contáctanos y implementaremos una solución de <span class="custom-gradient">gestión de clientes</span> para tu empresa,
+      de forma gratuita gracias a la subvención del Kit Digital.
+    </Fragment>
+  </CallToAction>
+
+  <KitDigital />
+</Layout>

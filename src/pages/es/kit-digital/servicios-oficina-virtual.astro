@@ -1,0 +1,108 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import KitDigital from '~/components/widgets/KitDigital.astro';
+import Layout from '~/layouts/PageLayout.astro';
+const metadata = {
+  title: 'Servicios y herramientas de oficina virtual',
+  description:
+    'Mejora la colaboración y la gestión de proyectos con nuestras herramientas de Oficina Virtual. Disfruta de almacenamiento en la nube y más, de manera gratuita con el Kit Digital.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Subvención Kit Digital"
+    backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/dots/21.jpg' }}
+  >
+    <Fragment slot="title">Servicios y herramientas de oficina virtual</Fragment>
+    <Fragment slot="subtitle">
+      Implementa soluciones interactivas y eficientes para tu empresa con herramientas de colaboración, almacenamiento y
+      organización de tareas,
+      <span class="custom-gradient">GRATIS</span> gracias a la subvención del Kit Digital.
+    </Fragment>
+  </Hero>
+
+  <Features2
+    tagline="Funcionalidades y servicios"
+    subtitle="El principal objetivo de esta categoría es implementar en tu empresa soluciones interactivas y funcionales que permitan una colaboración más eficiente entre tus empleados."
+    title="Servicios y herramientas de oficina virtual para tu empresa"
+    items={[
+      {
+        title: 'Colaboración en equipos de trabajo',
+        description:
+          'Contarás con asistencia por parte del proveedor en el proceso creativo de ideación o gestión de equipos para la colaboración en proyectos, compartir recursos y/o conocimientos, proporcionar herramientas para la interacción de equipos en procesos de ideación o resolución de problemas, así como la configuración y personalización de flujos de trabajo, tareas, etc.',
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Almacenamiento y compartición de archivos',
+        description: 'Dispondrás de 1 TB de almacenamiento para gestionar y compartir archivos de forma segura.',
+        icon: 'tabler:cloud',
+      },
+      {
+        title: 'Compatibilidad con dispositivos móviles',
+        description:
+          'Tu solución será compatible con dispositivos móviles para facilitar el acceso a tu oficina virtual desde cualquier lugar.',
+        icon: 'tabler:device-mobile',
+      },
+      {
+        title: 'Calendario y agenda',
+        description:
+          'Te permitirá organizar un calendario y tus tareas previstas, mejorando la planificación y la eficiencia.',
+        icon: 'tabler:calendar',
+      },
+    ]}
+  />
+
+  <Features
+    title="Subvención Kit Digital según el número de empleados"
+    subtitle="La subvención puede utilizarse para diversos servicios de digitalización, con un importe máximo que varía en función del número de empleados de la empresa."
+    items={[
+      {
+        title: 'Importe total subvencionado:',
+        list: [
+          '<strong>De 0 a 3 empleados:</strong> 3.000€',
+          '<strong>De 50 a 99 empleados:</strong> 25.000€',
+          '<strong>De 100 a 250 empleados:</strong> 29.000€',
+        ],
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Importe máximo para servicios y herramientas de oficina virtual:',
+        list: [
+          '<strong>De 0 a 3 empleados:</strong> 250€/usuario (hasta 2 dispositivos)',
+          '<strong>De 50 a 99 empleados:</strong> 250€/usuario (incluye 99 dispositivos)',
+          '<strong>De 100 a 250 empleados:</strong> 250€/usuario (incluye 116 dispositivos)',
+        ],
+        icon: 'tabler:check',
+      },
+    ]}
+  />
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/21.jpg', alt: 'Fondo abstracto, inspirado en tecnología y software' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contactar',
+        href: 'contactar',
+      },
+      {
+        variant: 'primary',
+        text: 'Llamar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Aprovecha la subvención del Kit Digital para implementar <span class="custom-gradient"
+        >Servicios y herramientas de oficina virtual</span
+      > de forma gratuita
+    </Fragment>
+    <Fragment slot="subtitle"> Contáctanos y te asesoraremos sobre cómo digitalizar tu empresa. </Fragment>
+  </CallToAction>
+
+  <KitDigital />
+</Layout>

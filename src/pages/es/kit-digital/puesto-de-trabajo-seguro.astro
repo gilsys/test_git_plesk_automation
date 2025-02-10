@@ -1,0 +1,158 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import KitDigital from '~/components/widgets/KitDigital.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Puesto de trabajo seguro',
+  description:
+    'Protege tu equipo y tus datos con soluciones de seguridad avanzadas, garantizando un entorno de trabajo seguro y productivo gracias al Kit Digital.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Subvención Kit Digital"
+    backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/dots/21.jpg' }}
+  >
+    <Fragment slot="title">Puesto de trabajo seguro</Fragment>
+    <Fragment slot="subtitle">
+      Protege tu equipo y tus datos con soluciones de seguridad avanzadas, <span class="custom-gradient">GRATIS</span> gracias
+      a la subvención del Kit Digital, para garantizar un entorno de trabajo seguro y productivo.
+    </Fragment>
+  </Hero>
+
+  <Features2
+    columns={1}
+    tagline="Funcionalidades y servicios"
+    subtitle="Si tienes una microempresa perteneciente al segmento III, el principal objetivo de esta categoría es proporcionarte un puesto de trabajo seguro con el fin de potenciar o mejorar tu productividad."
+    title="Te proporcionaremos un dispositivo moderno y seguro. Optimiza la productividad de tu negocio"
+    items={[
+      {
+        title: 'Recibirás un dispositivo de hardware',
+        description:
+          'El producto deberá incluir integrado una licencia y un cifrado en reposo que garantice la privacidad de los datos y documentos almacenados en el dispositivo.',
+        icon: 'tabler:device-laptop',
+      },
+      {
+        title: 'Tipología del dispositivo',
+        description:
+          'Este dispositivo podrá ser un ordenador portátil o de sobremesa nuevo y deberá contar con las siguientes características mínimas de hardware.',
+        icon: 'tabler:devices',
+      },
+      {
+        title: 'Requisitos mínimos del dispositivo hardware',
+        description: 'El dispositivo deberá cumplir con las siguientes especificaciones técnicas:',
+        list: [
+          '<strong>Procesador:</strong> Mínimo de 4 núcleos físicos y una velocidad de CPU clock máxima de al menos 2.9 GHz con una puntuación mínima de 15.000 en PassMark Software.',
+          '<strong>Memoria RAM:</strong> Mínimo de 16GB DDR4.',
+          '<strong>Almacenamiento SSD:</strong> Mínimo de 512 GB con cifrado protegido por contraseña proporcionada por el Agente Digitalizador.',
+          '<strong>Sistema operativo:</strong> Preinstalado y con licencia de fábrica.',
+          '<strong>Tarjetas gráficas, de red y de sonido:</strong> Integradas.',
+          '<strong>Interfaces de entrada/salida:</strong> Puertos USB y de entrada de micrófono, ya sea integrados o mediante un replicador de puertos.',
+          '<strong>Pantalla:</strong> En portátiles mínimo de 13 pulgadas; webcam HD y lector de tarjetas smartcard (DNI-e).',
+          '<strong>Ordenadores de sobremesa:</strong> Monitor mínimo de 23 pulgadas Full HD con HDMI y etiquetado energético de la UE.',
+          '<strong>Certificaciones:</strong> ENERGY STAR®, EPEAT™ Silver Registered, TCO o similares.',
+          '<strong>Certificación MIL STD 810H:</strong> Cumplimiento de al menos 5 métodos, incluyendo resistencia a altas y bajas temperaturas y humedad.',
+        ],
+        icon: 'tabler:cpu',
+      },
+      {
+        title: 'Requisitos específicos de publicidad',
+        description:
+          'El dispositivo deberá contar con serigrafía o etiqueta identificativa que incluya los siguientes logotipos:',
+        list: [
+          'El emblema de la Unión Europea que indique «Financiado por la Unión Europea-Next Generation EU».',
+          'El logotipo del Plan de Recuperación, Transformación y Resiliencia.',
+          'El logotipo del Ministerio para la Transformación Digital y de la Función Pública.',
+          'El logotipo de la Entidad Pública Empresarial Red.es («Red.es»).',
+        ],
+        icon: 'tabler:badge',
+      },
+      {
+        title: 'Requisitos mínimos del servicio de soporte y atención',
+        description:
+          'El Agente Digitalizador proporcionará un servicio de soporte y atención con las siguientes garantías:',
+        list: [
+          'El dispositivo se entregará dentro de España tras comprobar su correcto funcionamiento.',
+          'Servicio de soporte disponible en 5 días laborables, con atención por correo electrónico de lunes a viernes de 09:00 a 17:00 horas.',
+          'Las reparaciones se realizarán de manera remota o presencialmente en la ubicación de entrega, sin costes adicionales para el beneficiario.',
+          'El tiempo máximo de reparación será de 5 días laborables. Si no se cumple este plazo, se proporcionará un equipo análogo de sustitución.',
+        ],
+        icon: 'tabler:headset',
+      },
+      {
+        title: 'Requisitos de ciberseguridad del puesto de trabajo seguro',
+        description:
+          'El dispositivo deberá cumplir con los estándares mínimos de ciberseguridad establecidos en esta categoría:',
+        list: [
+          '<strong>Antimalware:</strong> Herramienta para analizar el dispositivo y unidades de almacenamiento externas.',
+          '<strong>Antispyware:</strong> Software para detectar y evitar malware espía.',
+          '<strong>Correo seguro:</strong> Análisis del correo electrónico con antispam y antiphishing.',
+          '<strong>Navegación segura:</strong> Control de contenidos y protección antiadware.',
+          '<strong>Análisis y detección de amenazas:</strong> Monitoreo del comportamiento de posibles amenazas.',
+          '<strong>Monitorización de la red:</strong> Herramientas que analizan el tráfico de red y alertan de amenazas.',
+          '<strong>Configuración inicial y actualizaciones de seguridad:</strong> Instalación y actualización de firmas de malware y software de seguridad.',
+          '<strong>Formación en ciberseguridad:</strong> Incluye una tutoría para la configuración del software de seguridad y un kit de concienciación en ciberseguridad.',
+        ],
+        icon: 'tabler:shield-lock',
+      },
+      {
+        title: 'Posibilidad de adquisición del hardware asociado',
+        description:
+          'Al finalizar la fase II, el beneficiario tendrá la opción de comprar el dispositivo abonando su valor residual.',
+        list: [
+          'La adquisición del hardware es opcional para el beneficiario, pero obligatoria para el Agente Digitalizador ofrecer esta opción.',
+          'Si no se realiza el pago acordado, el Agente Digitalizador podrá recuperar el equipo.',
+          'El precio de compra del dispositivo se informará en la plataforma Acelera Pyme y constará en el Acuerdo de Prestación de Soluciones de Digitalización.',
+          'El coste máximo de compra será del 15% del importe total de la solución contratada.',
+        ],
+        icon: 'tabler:shopping-cart',
+      },
+    ]}
+  />
+
+  <Features
+    title="Subvención Kit Digital según el número de empleados"
+    subtitle="La subvención puede utilizarse para diversos servicios de digitalización, con un importe máximo que varía en función del número de empleados de la empresa."
+    items={[
+      {
+        title: 'Importe total subvencionado:',
+        list: ['<strong>De 0 a 3 empleados:</strong> 3.000€'],
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Importe máximo puesto de trabajo seguro:',
+        list: ['<strong>De 0 a 3 empleados:</strong> 1.000€ (Incluye 1 dispositivo)'],
+        icon: 'tabler:check',
+      },
+    ]}
+  />
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/21.jpg', alt: 'Fondo abstracto, inspirado en tecnología y software' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contactar',
+        href: 'contactar',
+      },
+      {
+        variant: 'primary',
+        text: 'Llamar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Aprovecha la subvención del Kit Digital para el <span class="custom-gradient">Puesto de trabajo seguro</span> y consigue
+      tu dispositivo de forma gratuita
+    </Fragment>
+    <Fragment slot="subtitle"> Contáctanos y te asesoraremos sobre cómo digitalizar tu empresa. </Fragment>
+  </CallToAction>
+
+  <KitDigital />
+</Layout>

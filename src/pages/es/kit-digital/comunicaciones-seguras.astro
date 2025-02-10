@@ -1,0 +1,117 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import KitDigital from '~/components/widgets/KitDigital.astro';
+import Layout from '~/layouts/PageLayout.astro';
+const metadata = {
+  title: 'Comunicaciones seguras',
+  description:
+    'Asegura las conexiones de los trabajadores con nuestra solución de comunicaciones seguras. Incluye SSL, cifrado de extremo a extremo y más, para tu PYME de manera gratuita con el Kit Digital.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Subvención Kit Digital"
+    backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/dots/21.jpg' }}
+  >
+    <Fragment slot="title">Comunicaciones seguras</Fragment>
+    <Fragment slot="subtitle">
+      Protege las conexiones, datos y procesos de tu empresa con soluciones de comunicaciones seguras,
+      <span class="custom-gradient">GRATIS</span> gracias a la subvención del Kit Digital, para garantizar la seguridad y
+      cumplir con la normativa vigente.
+    </Fragment>
+  </Hero>
+
+  <Features2
+    tagline="Funcionalidades y servicios"
+    subtitle="Garantiza la seguridad de tus comunicaciones con soluciones avanzadas, adaptadas a tus necesidades."
+    title="Comunicaciones seguras para tu empresa con tecnología de última generación"
+    items={[
+      {
+        title: 'SSL',
+        description: 'Dispondrás de un protocolo de capa de sockets seguros, para crear una conexión segura y cifrada.',
+        icon: 'tabler:lock',
+      },
+      {
+        title: 'Cifrado de extremo a extremo',
+        description: 'Tendrás las comunicaciones cifradas en todo su recorrido, con el objetivo de prevenir ataques.',
+        icon: 'tabler:shield-lock',
+      },
+      {
+        title: 'Registros de conexión',
+        description: 'Serás capaz de mantener un registro de los dispositivos que se han conectado a tu red privada.',
+        icon: 'tabler:database',
+      },
+      {
+        title: 'Control de acceso',
+        description:
+          'Tendrás la posibilidad de permitir la conexión a tu red privada única y exclusivamente a los dispositivos autorizados por ti.',
+        icon: 'tabler:user-check',
+      },
+      {
+        title: 'Dispositivos móviles',
+        description: 'Podrás hacer uso de esta solución desde dispositivos móviles.',
+        icon: 'tabler:device-mobile',
+      },
+      {
+        title: 'Configuración inicial y actualizaciones de seguridad',
+        description:
+          'Dispondrás de una configuración inicial para que puedas utilizarlo correctamente, con las respectivas actualizaciones de firmas de malware y otros datos para la detección de amenazas, además de las actualizaciones de software de seguridad periódicas requeridas.',
+        icon: 'tabler:settings',
+      },
+    ]}
+  />
+
+  <Features
+    title="Subvención Kit Digital según el número de empleados"
+    subtitle="La subvención puede utilizarse para diversos servicios de digitalización, con un importe máximo que varía en función del número de empleados de la empresa."
+    items={[
+      {
+        title: 'Importe total subvencionado:',
+        list: [
+          '<strong>De 0 a 3 empleados:</strong> 3.000€',
+          '<strong>De 50 a 99 empleados:</strong> 25.000€',
+          '<strong>De 100 a 250 empleados:</strong> 29.000€',
+        ],
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Importe máximo para el servicio de comunicaciones seguras:',
+        list: [
+          '<strong>De 0 a 3 empleados:</strong> 125€/usuario (hasta 2 dispositivos)',
+          '<strong>De 50 a 99 empleados:</strong> 125€/usuario (incluye 99 dispositivos)',
+          '<strong>De 100 a 250 empleados:</strong> 125€/usuario (incluye 232 dispositivos)',
+        ],
+        icon: 'tabler:check',
+      },
+    ]}
+  />
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/21.jpg', alt: 'Fondo abstracto, inspirado en tecnología y software' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contactar',
+        href: 'contactar',
+      },
+      {
+        variant: 'primary',
+        text: 'Llamar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Aprovecha la subvención del Kit Digital para implementar <span class="custom-gradient"
+        >Comunicaciones seguras</span
+      > de forma gratuita
+    </Fragment>
+    <Fragment slot="subtitle"> Contáctanos y te asesoraremos sobre cómo digitalizar tu empresa. </Fragment>
+  </CallToAction>
+
+  <KitDigital />
+</Layout>

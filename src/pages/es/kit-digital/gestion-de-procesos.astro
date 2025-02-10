@@ -1,0 +1,134 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import KitDigital from '~/components/widgets/KitDigital.astro';
+import Layout from '~/layouts/PageLayout.astro';
+const metadata = {
+  title: 'Gestión de procesos',
+  description:
+    'Digitaliza y automatiza procesos operativos y productivos de tu negocio con soluciones escalables e integradas para tu PYME con el Kit Digital.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Subvención Kit Digital"
+    backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/dots/21.jpg' }}
+  >
+    <Fragment slot="title">Gestión de procesos</Fragment>
+    <Fragment slot="subtitle">
+      Digitaliza y automatiza procesos operativos y productivos de tu negocio con soluciones escalables e integradas,
+      <span class="custom-gradient">GRATIS</span> gracias a la subvención del Kit Digital, para mejorar la eficiencia y la
+      productividad.
+    </Fragment>
+  </Hero>
+
+  <Features2
+    columns={1}
+    tagline="Funcionalidades y servicios"
+    subtitle="El principal objetivo de esta categoría es digitalizar y optimizar los procesos operativos y productivos para mejorar la eficiencia y la automatización dentro de tu PYME."
+    title="Digitalización y automatización de procesos operativos y productivos con soluciones integradas"
+    items={[
+      {
+        title: 'Digitalización y/o automatización de procesos y flujos de trabajo',
+        description: `
+            Dispondrás de procesos digitalizados y/o automatizados (horizontales y verticales) como:<br/>            
+            <br/>            
+            Se considera solución horizontal aquella que agrupa o soporta varios procesos de la cadena de valor, mientras que la solución vertical es aquella que soporta un único proceso dentro de la cadena de valor de tu PYME.
+            `,
+        list: [
+          `<strong>Contabilidad/finanzas:</strong><br/>Cuentas por cobrar/pagar, gestión de activos y generación de cierres y balances, etc.`,
+          `<strong>Facturación:</strong><br/>Automatización de los procesos de facturación con la generación de presupuestos, albaranes y facturas, adaptados a los requisitos del artículo 29.2.j) de la Ley 58/2003, de 17 de diciembre, General Tributaria, y su normativa de desarrollo.`,
+          `<strong>Proyectos:</strong><br/>Control de presupuestos, costes, estimaciones, optimización de los recursos, etc.`,
+          `<strong>Inventario:</strong><br/>Previsión, niveles de stock, envíos, distribuciones, devoluciones y cancelaciones, etc.`,
+          `<strong>Compras y pagos:</strong><br/>Gestión de pedidos de compra y proveedores.`,
+          `<strong>Recursos humanos:</strong><br/>Gestión de recursos humanos, nóminas, etc.`,
+          `<strong>Logística:</strong><br/>Gestión de flotas y rutas, entre otros.`,
+        ],
+        icon: 'tabler:repeat',
+      },
+      {
+        title: 'Integración con diversas plataformas',
+        description: 'La solución dispondrá de APIs o Web Services para su integración con otras herramientas.',
+        icon: 'tabler:plug',
+      },
+      {
+        title: 'Actualizable',
+        description: 'Tendrás acceso a actualizaciones de la solución con nuevas versiones.',
+        icon: 'tabler:refresh',
+      },
+      {
+        title: 'Escalable',
+        description: 'Si tu empresa crece o cambia estructuralmente, la solución se adaptará a estos cambios.',
+        icon: 'tabler:arrows-up-down',
+      },
+      {
+        title: 'Cumplimiento',
+        description:
+          'Podrás asegurar el cumplimiento de la normativa aplicable, en concreto del Reglamento que regula las obligaciones de facturación del Real Decreto 1619/2012, así como cualquier normativa aplicable.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Módulos individuales',
+        description:
+          'Se podrán incorporar nuevos módulos individuales, siendo estos aquellos que agrupan o soportan un único subproceso de la cadena de valor de tu PYME, sobre una solución de gestión de procesos ya existente.<br/> No obstante, no podrá consistir en un desarrollo, progreso, aumento o enriquecimiento de los servicios y funcionalidades de la solución existente. Tampoco podrá ser la actualización debida a versiones que el proveedor publique sobre una versión de software, ni mejoras o upgrades de versiones existentes.<br/> El nuevo módulo individual que se implemente debe cumplir con todos los requisitos establecidos en las bases de esta categoría y debe ofertarse a precio de mercado.',
+        icon: 'tabler:package',
+      },
+    ]}
+  />
+
+  <Features
+    title="Subvención Kit Digital según el número de empleados"
+    subtitle="La subvención puede utilizarse para diversos servicios de digitalización, con un importe máximo que varía en función del número de empleados de la empresa."
+    items={[
+      {
+        title: 'Importe total subvencionado:',
+        list: [
+          '<strong>De 0 a 3 empleados:</strong> 3.000€',
+          '<strong>De 50 a 99 empleados:</strong> 25.000€',
+          '<strong>De 100 a 250 empleados:</strong> 29.000€',
+        ],
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Importe máximo para el servicio de gestión de clientes:',
+        list: [
+          '<strong>De 0 a 3 empleados:</strong> 2.000€ (incluye 1 usuario)',
+          '<strong>De 50 a 99 empleados:</strong> 15.000€ (incluye 20 usuarios)',
+          '<strong>De 100 a 250 empleados:</strong> 18.000€ (incluye 25 usuarios)',
+        ],
+        icon: 'tabler:check',
+      },
+    ]}
+  />
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/21.jpg', alt: 'Fondo abstracto, inspirado en tecnología y software' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contactar',
+        href: 'contactar',
+      },
+      {
+        variant: 'primary',
+        text: 'Llamar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Estás a un <span class="custom-gradient">click</span> de digitalizar la <span class="custom-gradient"
+        >gestión de procesos</span
+      > y llevar la eficiencia operativa de tu empresa al siguiente nivel
+    </Fragment>
+    <Fragment slot="subtitle">
+      Contáctanos e implementaremos una solución de <span class="custom-gradient">gestión de procesos</span> para tu empresa,
+      de forma gratuita gracias a la subvención del Kit Digital.
+    </Fragment>
+  </CallToAction>
+
+  <KitDigital />
+</Layout>

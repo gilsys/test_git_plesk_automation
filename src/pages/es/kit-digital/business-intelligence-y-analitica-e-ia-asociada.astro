@@ -1,0 +1,113 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import KitDigital from '~/components/widgets/KitDigital.astro';
+import Layout from '~/layouts/PageLayout.astro';
+const metadata = {
+  title: 'Business Intelligence y Analítica con IA asociada',
+  description:
+    'Mejora la toma de decisiones con capacitación en IA, integración y análisis de datos, y creación de paneles visuales. 100% subvencionado.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="Subvención Kit Digital" backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/dots/21.jpg' }}>
+    <Fragment slot="title">Business Intelligence y Analítica con IA asociada</Fragment>
+    <Fragment slot="subtitle">
+        Impulsa tu empresa con <span class="custom-gradient">Business Intelligence</span> y 
+        <span class="custom-gradient">analítica de datos</span> basada en IA,  
+        <span class="custom-gradient">GRATIS</span> gracias a la subvención del Kit Digital, para mejorar la toma de decisiones.
+      </Fragment>
+  </Hero>
+
+  <Features2
+    tagline="Funcionalidades y servicios"
+    subtitle="El principal objetivo de esta categoría es la capacitación en inteligencia artificial especializada en Business Intelligence y analítica. De esta manera, podrás mejorar el proceso de toma de decisiones empresariales."
+    title="Mejora la toma de decisiones con IA aplicada a Business Intelligence y análisis de datos"
+    items={[
+      {
+        title: 'Integración de datos con otras bases de datos',
+        description:
+          "La solución permitirá el acceso a otras bases de datos y la realización de comparaciones con los datos expuestos.",
+        icon: 'tabler:database',
+      },
+      {
+        title: 'Almacenamiento de datos',
+        description: "Se deberá proveer una capacidad mínima de almacenamiento de 1 GB por usuario.",
+        icon: 'tabler:cloud',
+      },
+      {
+        title: 'Creación de paneles de datos estructurados y visuales',
+        description:
+          'La solución permitirá crear paneles de datos personalizados, relevantes y visualizarlos de diferentes formas.',
+        icon: 'tabler:chart-line',
+      },
+      {
+        title: 'Exportación de datos',
+        description:
+          "A imágenes o documentos de Excel, creando sinergias y compatibilidades con diferentes programas de uso común para los usuarios.",
+        icon: 'tabler:download',
+      },
+      {
+        title: "Capacitación en fundamentos de IA generativa en el ámbito de BI y analítica",
+        description:
+          'Capacitaciones para preparar a los empleados en torno a las funcionalidades descritas anteriormente, que incluirán:',
+        list: [
+          '<strong>Fundamentos básicos:</strong><br/>Aproximación a la normativa vigente y riesgos éticos y de seguridad derivados.',
+          "<strong>Capacitaciones específicas en:</strong><br/>Integración de datos con otras bases de datos, almacenamiento de datos, creación de paneles de datos estructurados y visuales, exportación de datos y casos de uso con las principales tecnologías de IA.",
+          '<strong>Duración:</strong><br/>Las capacitaciones tendrán una duración total de 20h a lo largo de dos meses para cada uno de los usuarios definidos por segmento.',
+          '<strong>Instructor humano:</strong><br/>Tanto en modalidad presencial como en línea, las capacitaciones serán impartidas por un instructor humano disponible para los usuarios.',
+          "<strong>Diploma de finalización:</strong><br/>Se otorgará un certificado de capacidades adquiridas en IA al concluir la formación.",
+        ],
+        icon: 'tabler:book',
+      },
+    ]}
+  />
+
+  <Features
+    title="Subvención Kit Digital según el número de empleados"
+    subtitle="La subvención puede utilizarse para diversos servicios de digitalización, con un importe máximo que varía en función del número de empleados de la empresa."
+    items={[
+      {
+        title: 'Importe total subvencionado:',
+        list: ['<strong>De 50 a 99 empleados:</strong> 25.000€', '<strong>De 100 a 250 empleados:</strong> 29.000€'],
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Importe máximo para el servicio de Business Intelligence y Analítica con IA asociada:',
+        list: [
+          '<strong>De 50 a 99 empleados:</strong> 8.000€ (incluye 10 usuarios y mínimo capacitación a 3 de ellos en IA asociada)',
+          '<strong>De 100 a 250 empleados:</strong> 9.000€ (incluye 15 usuarios y mínimo capacitación a 5 de ellos en IA asociada)',
+        ],
+        icon: 'tabler:check',
+      },
+    ]}
+  />
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/21.jpg', alt: 'Fondo abstracto, inspirado en tecnología y software' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contactar',
+        href: 'contactar',
+      },
+      {
+        variant: 'primary',
+        text: 'Llamar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Aprovecha la subvención del Kit Digital para implementar el servicio de <span class="custom-gradient"
+        >Business Intelligence y Analítica con IA asociada</span
+      > de forma gratuita
+    </Fragment>
+    <Fragment slot="subtitle"> Contáctanos y te asesoraremos sobre cómo digitalizar tu empresa. </Fragment>
+  </CallToAction>
+
+  <KitDigital />
+</Layout>

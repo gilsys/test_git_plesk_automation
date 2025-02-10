@@ -1,0 +1,271 @@
+---
+import Content from '~/components/widgets/Content.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+
+const metadata = {
+  title: 'Empresa de programación de automatizaciones y APIs',
+  description:
+    'Automatizamos tareas repetitivas, optimizamos procesos empresariales y sincronizamos datos entre programas.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Section -->
+  <Hero
+    tagline="Comunicamos sistemas para reducir errores, tiempo y recursos."
+    actions={[{ variant: 'primary', text: 'Presupuesto gratuito', href: u('contact') }]}
+    backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/dots/24.jpg' }}
+  >
+    <Fragment slot="title">
+      Programación de <span class="text-accent highlight">automatizaciones</span> y <span class="text-accent highlight"
+        >APIs</span
+      >
+    </Fragment>
+    <Fragment slot="subtitle">
+      Automatizamos tareas repetitivas, optimizamos procesos empresariales y sincronizamos datos entre programas.
+    </Fragment>
+  </Hero>
+
+  <Content
+  isReversed
+  tagline=""
+  title="Elimina procesos manuales y gana eficiencia"
+  subtitle="La programación de automatizaciones y APIs permite optimizar procesos empresariales, ahorrando tareas repetitivas y mejorando la conectividad entre sistemas."
+  items={[
+    {
+      title: 'Automatizaciones personalizadas',
+      description: `Desarrollamos sistemas automáticos que eliminan la intervención humana y ahorran tiempo. Estas soluciones pueden ser comandos que se ejecutan bajo demanda o procesos que operan de forma automática y permanente.`,
+    },
+    {
+      title: 'Desarrollo de APIs a medida',
+      description: `Creamos APIs que conectan aplicaciones, bases de datos y servicios, facilitando la integración e interoperabilidad. Estas APIs pueden servir para conectar sistemas internos con servicios externos, permitiendo una mejor gestión empresarial.`,
+    },
+    {
+      title: 'Automatización con Inteligencia Artificial (IA)',
+      description:
+        `Aprovechamos las <a href='` +
+        u('development/ia') +
+        `' class='text-accent' title="Integración de inteligencia artificial para automatizar tareas">capacidades de la IA</a> para implementar soluciones inteligentes en la automatización de procesos, como la clasificación de datos, la respuesta automatizada y la generación de contenidos personalizados.`,
+    },
+  ]}
+  image={{
+    src: '~/assets/images/automatizacion-diagrama-estados.jpg',
+    alt: "Diagrama de estados para automatización de procesos",
+  }}
+>
+</Content>
+
+<Features3
+  subtitle="Programamos desde automatizaciones simples hasta integraciones complejas"
+  title="Casos de uso de automatización de procesos empresariales"
+  items={[
+    {
+      title: 'Sincronización entre sistemas',
+      description:
+        'Creación de <strong>APIs</strong> para conectar plataformas de e-commerce con sistemas de facturación o gestión logística.',
+      icon: 'tabler:refresh',
+    },
+    {
+      title: 'Automatización de procesos repetitivos',
+      description:
+        '<strong>Scripts</strong> que generan informes periódicos, envían notificaciones personalizadas o actualizan automáticamente inventarios.',
+      icon: 'tabler:robot',
+    },
+    {
+      title: 'Integración con servicios externos',
+      description:
+        'Desarrollo de herramientas que <strong>conectan pasarelas de pago</strong> con plataformas empresariales para garantizar procesos de compra y facturación sin interrupciones.',
+      icon: 'tabler:plug',
+    },
+    {
+      title: 'Gestión de datos en tiempo real',
+      description:
+        'Soluciones que <strong>sincronizan dispositivos con bases de datos</strong> para analizar información en tiempo real, ofreciendo estadísticas útiles para la toma de decisiones.',
+      icon: 'tabler:chart-bar',
+    },
+    {
+      title: 'Clasificación inteligente',
+      description:
+        'Implementación de <strong>automatizaciones basadas en IA</strong> para organizar productos, documentos o información según criterios específicos.',
+      icon: 'tabler:sort-ascending',
+    },
+    {
+      title: 'Herramientas de respuesta inteligente',
+      description:
+        '<strong>Chatbots o asistentes virtuales</strong> que gestionan respuestas automáticas y mejoradas para clientes.',
+      icon: 'tabler:message-circle',
+    },
+    {
+      title: 'Control de calidad de datos',
+      description:
+        'Revisiones de funcionamiento para <strong>detectar posibles problemas en procesos</strong> y datos generados mediante programación algorítmica o <strong>inteligencia artificial</strong>.',
+      icon: 'tabler:checklist',
+    },
+  ]}
+>
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-lightgray"></div>
+  </Fragment>
+</Features3>
+
+<Features
+    title="Ventajas de las Automatizaciones y APIs"
+    subtitle="Invertir en automatización <strong>siempre</strong> implica un aumento de eficiencia en la empresa"
+    items={[
+      {
+        title: 'Ahorro de tiempo y recursos',
+        description:
+          'Reducción de tareas manuales repetitivas, permitiendo a los equipos centrarse en actividades estratégicas.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Limpieza de datos',
+        description:
+          'Optimización de la <strong>calidad de los datos</strong>, eliminando información duplicada o incorrecta.',
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Integración fluida',
+        description:
+          'Conexión de sistemas empresariales con herramientas y servicios externos para garantizar una experiencia unificada.',
+        icon: 'tabler:plug-connected',
+      },
+      {
+        title: 'Escalabilidad y adaptabilidad',
+        description:
+          'Soluciones que pueden crecer con las necesidades del proyecto, incorporando nuevas funcionalidades sin comprometer el sistema existente.',
+        icon: 'tabler:arrows-maximize',
+      },
+      {
+        title: 'Mejor control y seguridad',
+        description:
+          'Soluciones que permiten mejorar la calidad de los datos a nivel empresarial y evitar posibles errores.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Automatización de flujos multiestado',
+        description:
+          'Definimos e implementamos sistemas con múltiples estados, transiciones y reglas de negocio para automatizar y optimizar procesos.',
+        icon: 'tabler:shield-check',
+      },
+    ]}
+  />
+
+
+  <!-- Introducción -->
+  <Content
+    tagline=""
+    title=""
+    subtitle=""
+    items={[
+      {
+        title: 'Empresas del sector industrial y logístico',
+        description:
+          'Necesitan automatizar procesos como la gestión de inventarios, seguimiento de pedidos y optimización del transporte, logrando una mayor eficiencia operativa y control en tiempo real.',
+      },
+      {
+        title: 'E-commerce y plataformas de venta online',
+        description:
+          'Requieren APIs para conectar catálogos de productos, gestores de pedidos, sistemas de facturación y pasarelas de pago, mejorando la sincronización y la experiencia del cliente.',
+      },
+      {
+        title: 'Empresas editoriales y de contenido',
+        description:
+          'Pueden optimizar la publicación automática de artículos, la organización de recursos multimedia y la integración con otras plataformas de distribución de contenidos.',
+      },
+      {
+        title: 'Organizaciones con sistemas múltiples',
+        description:
+          'Empresas que trabajan con diversas herramientas de gestión como CRMs, ERPs o sistemas de BI, que requieren APIs para integrar y sincronizar datos entre ellas, evitando duplicidades y errores.',
+      },
+      {
+        title: 'Empresas con catálogos complejos',
+        description: 'Aquellas que necesitan gestionar grandes volúmenes de datos, como productos o servicios.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/pins-red-conectados.png',
+      alt: 'Imagen abstracta para conexiones de procesos y herramientas',
+    }}
+  >
+    <Fragment slot="preContent">
+      <h3 class="text-2xl font-bold tracking-tightsm:text-3xl mb-2">
+        ¿Para quién son útiles las automatizaciones y APIs?
+      </h3>
+      <p class="text-muted">
+        Las automatizaciones son imprescindibles para empresas que buscan agilizar procesos, mejorar la integración
+        de datos con APIs y reducir la posibilidad de errores humanos.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Content
+  isReversed
+  tagline=""
+  title="¿Por qué elegir Gilsys para el desarrollo con APIs y automatizaciones?"
+  image={{
+    src: '~/assets/images/gilsys-automatizaciones.jpg',
+    alt: 'Soluciones automatizadas',
+  }}
+  items={[
+    {
+      title: 'Experiencia contrastada',
+      description:
+        'Con años de experiencia en programación de automatizaciones y APIs, en Gilsys conocemos los estándares y las mejores prácticas de programación, ofreciendo soluciones robustas y estables.',
+      icon: 'tabler:certificate',
+    },
+    {
+      title: 'Enfoque personalizado en cada proyecto',
+      description:
+        'No aplicamos herramientas genéricas, trabajamos estrechamente con cada cliente para entender sus necesidades y desarrollar soluciones a medida, totalmente adaptadas a su contexto.',
+      icon: 'tabler:target',
+    },
+    {
+      title: 'Innovación',
+      description:
+        'Nos mantenemos al día con las últimas tecnologías e innovaciones para garantizar que cada proyecto esté preparado para los retos presentes y futuros, con una arquitectura moderna y escalable.',
+      icon: 'tabler:bulb',
+    },
+    {
+      title: 'Despliegues con mínimo impacto',
+      description:
+        'Planificamos y ejecutamos los despliegues y actualizaciones para reducir o eliminar interrupciones en el servicio, asegurando una transición fluida para los usuarios finales.',
+      icon: 'tabler:arrow-right-circle',
+    },
+  ]}
+>
+</Content>
+<CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/24.jpg', alt: 'Fondo abstracto' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Presupuesto gratuito',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Llamar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title"
+      >Implementa <span class="custom-gradient">automatizaciones de procesos</span> en tu empresa</Fragment
+    >
+    <Fragment slot="subtitle">Reducir errores e incrementar productividad es una inversión de futuro asegurada.</Fragment>
+  </CallToAction>
+
+</Layout>

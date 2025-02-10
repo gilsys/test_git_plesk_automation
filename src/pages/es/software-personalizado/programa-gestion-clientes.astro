@@ -1,0 +1,335 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+
+const metadata = {
+  title: 'Gestión de Clientes con CRM personalizado | +20 años',
+  description:
+    'Mejora la gestión de clientes de tu empresa con un CRM a medida. Centraliza información, automatiza procesos y optimiza el marketing con una herramienta en la nube.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Centraliza información, automatiza procesos y optimiza el marketing con una herramienta en la nube."
+    backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/dots/25.jpg' }}
+  >
+    <Fragment slot="title"
+      >Gestión de <span class="text-accent highlight">Clientes</span> con un CRM Personalizado</Fragment
+    >
+    <Fragment slot="subtitle"> Mejora el seguimiento de clientes de tu empresa con un CRM a medida. </Fragment>
+  </Hero>
+
+  <Content
+    isReversed
+    tagline=""
+    title="¿Qué es un CRM?"
+    subtitle="Un CRM es una herramienta informática clave para gestionar el seguimiento de clientes de manera eficiente y estructurada."
+    items={[
+      {
+        title: 'Centralización de datos',
+        description: 'Toda la información de clientes en una única base de datos, accesible para todo el equipo.',
+      },
+      {
+        title: 'Automatización de procesos',
+        description: 'Reduce tareas manuales como el envío de correos o seguimientos.',
+      },
+      {
+        title: 'Análisis e informes',
+        description: 'Genera informes claros sobre seguimiento de ventas, clientes y estrategias comerciales.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/crm-gestion-clientes.jpg',
+      alt: 'CRM para gestionar clientes',
+    }}
+  >
+    <Fragment slot="preContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">
+        Gestión y seguimiento de clientes de manera centralizada
+      </h3>
+      <p class="text-muted">
+        La gestión de clientes es una de las áreas más importantes para cualquier empresa que quiera ofrecer un servicio
+        eficiente y mantener una relación sólida con sus clientes. Utilizar un CRM (Customer Relationship Management)
+        permite centralizar toda la información.
+      </p>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="text-muted">
+        Permite gestionar las relaciones con los clientes de manera eficiente y estructurada, incluyendo información
+        clave, datos de contacto, historial de comunicaciones, seguimiento de ventas y gestión de tareas.
+      </p>
+      <p class="text-muted mt-3">Disponer de un CRM permitirá a tu empresa o negocio:</p>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Features2
+    id="features-services"
+    title="¿Qué funcionalidades ofrece un programa de gestión de clientes?"
+    tagline="Sus funcionalidades pueden ampliarse y personalizarse para adaptarse a cada empresa"
+    subtitle="Un CRM es mucho más que una base de datos de clientes."
+    items={[
+      {
+        title: 'Gestión de contactos y clientes',
+        list: [
+          'Registro completo de clientes con datos personales, preferencias e historial de comunicaciones.',
+          'Clasificación de clientes según categorías.',
+        ],
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Clientes potenciales',
+        list: [
+          'Registro de posibles clientes potenciales y seguimiento de las acciones comerciales realizadas.',
+          'Transformación automática de clientes potenciales en clientes reales.',
+        ],
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Seguimiento de ventas y oportunidades',
+        list: [
+          'Monitoriza el ciclo de ventas desde el primer contacto hasta el cierre.',
+          'Asignación de oportunidades a miembros del equipo para garantizar un seguimiento adecuado.',
+        ],
+        icon: 'tabler:chart-bar',
+      },
+      {
+        title: 'Gestión de tareas y proyectos',
+        list: [
+          'Creación y asignación de tareas relacionadas con clientes o ventas.',
+          'Control de proyectos comerciales con calendarios y recordatorios.',
+        ],
+        icon: 'tabler:clipboard-check',
+      },
+      {
+        title: 'Automatización de procesos',
+        list: ['Envío de correos de recordatorio.', 'Marketing automático con correos de promociones y seguimiento.'],
+        icon: 'tabler:repeat',
+      },
+      {
+        title: 'Facturación y gestión financiera',
+        list: [
+          'Creación de presupuestos y facturas vinculadas a los clientes.',
+          'Integración con sistemas contables para sincronizar información financiera.',
+        ],
+        icon: 'tabler:currency-dollar',
+      },
+      {
+        title: 'Análisis e informes personalizados',
+        list: [
+          'Creación de gráficos e informes para analizar ventas, retención de clientes y oportunidades perdidas.',
+          'Generación de indicadores clave para mejorar la eficiencia comercial.',
+        ],
+        icon: 'tabler:chart-pie',
+      },
+      {
+        title: 'Integraciones con otras herramientas',
+        list: [
+          'Conexión con plataformas ERP, CRM, herramientas de marketing o aplicaciones de correo electrónico.',
+          'Los datos se sincronizan en tiempo real para unificar la información empresarial.',
+        ],
+        icon: 'tabler:plug-connected',
+      },
+    ]}
+  />
+
+  <Features
+    title="¿Qué sectores pueden necesitar una herramienta para gestionar clientes?"
+    subtitle="Las pequeñas y medianas empresas (pymes) a menudo tienen recursos limitados, por lo que es crucial que gestionen sus relaciones con los clientes de manera eficaz."
+    items={[
+      {
+        title: 'Abogados',
+        description:
+          'Gestiona eficazmente los casos de los clientes, el seguimiento de los documentos legales, las citas y la comunicación con los clientes.',
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Gestores',
+        description:
+          'Organiza la información de los clientes, sus cuentas, sus inversiones y la comunicación con ellos en un solo lugar.',
+        icon: 'tabler:briefcase',
+      },
+      {
+        title: 'Consultores',
+        description:
+          'Simplifica la gestión de los proyectos de los clientes, el seguimiento de los progresos, las facturas y la comunicación con ellos.',
+        icon: 'tabler:bulb',
+      },
+      {
+        title: 'Agencias inmobiliarias',
+        description:
+          'Mejora la gestión de los clientes, las propiedades, las visitas, las ofertas y la comunicación con los clientes para cerrar más ventas.',
+        icon: 'tabler:home',
+      },
+      {
+        title: 'Empresas de servicios',
+        description:
+          'Centraliza la gestión de las solicitudes de servicio, el seguimiento de los problemas de los clientes y la resolución de sus consultas.',
+        icon: 'tabler:speakerphone',
+      },
+      {
+        title: 'Empresas B2B',
+        description:
+          'Centraliza los leads, las oportunidades de venta, los contactos con los clientes y realiza un seguimiento de las ventas.',
+        icon: 'tabler:shopping-cart',
+      },
+      {
+        title: 'Organizaciones sin ánimo de lucro',
+        description:
+          'Gestiona las relaciones con los donantes, los voluntarios, los beneficiarios y la comunicación con ellos para lograr un mayor impacto.',
+        icon: 'tabler:heart',
+      },
+      {
+        title: 'Administraciones públicas',
+        description:
+          'Mejora la comunicación con los ciudadanos, gestiona sus solicitudes, sus trámites y la información relevante.',
+        icon: 'tabler:fountain',
+      },
+    ]}
+  />
+  <Content
+    isReversed
+    tagline=""
+    title="CRM Ampliado con Módulos"
+    subtitle=""
+    items={[
+      {
+        title: 'Gestión de campañas de marketing',
+        description: 'Planificación, ejecución y seguimiento de campañas directamente desde el CRM.',
+      },
+      {
+        title: 'Control de visitas comerciales',
+        description: 'Registro y seguimiento de visitas presenciales con clientes o distribuidores.',
+      },
+      {
+        title: 'Gestión documental',
+        description:
+          'Archivo y acceso rápido a documentos relacionados con los clientes, como contratos o presupuestos.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/crm-marketing-flujo.jpg',
+      alt: 'Módulos para software CRM',
+    }}
+  >
+    <Fragment slot="preContent">
+      <p>
+        Un CRM flexible permite
+        <a class="text-accent" title="Servicios de programación a medida" href={u('software')}
+          >programar módulos a medida</a
+        > que cubran necesidades específicas de cada negocio. Algunos ejemplos de módulos personalizados incluyen:
+      </p>
+    </Fragment>
+    <Fragment slot="postContent">
+      <p>
+        Este enfoque permite que el CRM no solo se adapte a las operaciones actuales, sino que también pueda evolucionar
+        con el crecimiento del negocio.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Features
+    id="benefits"
+    tagline="Un CRM a medida puede transformar la gestión de clientes y procesos comerciales en una herramienta estratégica."
+    title="Beneficios de un CRM personalizado"
+    subtitle="Es fundamental adaptar la información que se almacena de cada cliente en función del sector de cada empresa."
+    items={[
+      {
+        title: `Aumento de la eficiencia comercial`,
+        description: 'Optimiza procesos y reduce tareas manuales, permitiendo un seguimiento más preciso.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Mejora de la comunicación',
+        description: 'Centraliza información para evitar errores y garantizar una mejor atención al cliente.',
+        icon: 'tabler:message-circle',
+      },
+      {
+        title: 'Decisiones informadas',
+        description: 'Acceso a informes detallados y análisis para tomar decisiones estratégicas con confianza.',
+        icon: 'tabler:chart-pie',
+      },
+      {
+        title: 'Escalabilidad y adaptabilidad',
+        description:
+          'Con el tiempo, la empresa puede experimentar cambios. El programa de gestión de clientes puede adaptarse a estos cambios, evitando costes innecesarios de migraciones a corto plazo.',
+        icon: 'tabler:arrows-maximize',
+      },
+    ]}
+  />
+  <Content
+    isReversed
+    tagline=""
+    title="¿Por qué implementar un software de gestión de clientes con Gilsys?"
+    subtitle=""
+    items={[
+      {
+        title: 'Conocemos el código y podemos personalizarlo a medida',
+        description: `Es difícil encontrar una empresa que, además de implementar un programa de gestión de clientes, conozca su código fuente y pueda adaptarlo a las necesidades específicas de cada sector.`,
+      },
+      {
+        title: 'Soluciones CRM a medida',
+        description:
+          'Desarrollamos módulos personalizados para adaptar el CRM a las operaciones diarias de tu negocio.',
+      },
+      {
+        title: 'Integración de la gestión de clientes con otros sistemas',
+        description:
+          'Conectamos el CRM con otras herramientas de tu empresa, mejorando la gestión y el flujo de datos.',
+      },
+      {
+        title: 'Honestidad y claridad',
+        description:
+          'Proponemos soluciones prácticas y eficientes, evitando implementar herramientas excesivamente complejas o costosas si no es necesario.',
+      },
+      {
+        title: 'Actualizaciones y soporte',
+        description:
+          'Desde la implantación inicial, ofrecemos soporte y actualizaciones para mejorar la funcionalidad y la seguridad de tu plataforma.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/gilsys-crm.jpg',
+      alt: 'Operadores gestionando clientes con software',
+    }}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/25.jpg', alt: 'Fondo abstracto, inspirado en tecnología y software' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Presupuesto gratuito',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Llamar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title"
+      >¿Necesitas <span class="custom-gradient">gestionar tus clientes</span> y llevar un seguimiento ordenado?</Fragment
+    >
+    <Fragment slot="subtitle">Te ofrecemos un CRM personalizado, adaptado a las necesidades de tu empresa.</Fragment>
+  </CallToAction>
+</Layout>

@@ -1,0 +1,140 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import KitDigital from '~/components/widgets/KitDigital.astro';
+import Layout from '~/layouts/PageLayout.astro';
+const metadata = {
+  title: 'Comercio Electrónico',
+  description:
+    'Creación de tu tienda en línea con diseño responsive, SEO, métodos de pago, envíos integrados y gestión de contenidos.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Subvención Kit Digital"
+    backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/dots/21.jpg' }}
+  >
+    <Fragment slot="title">Comercio Electrónico</Fragment>
+    <Fragment slot="subtitle">
+      Creamos tu <span class="custom-gradient">tienda en línea</span> con <span class="custom-gradient"
+        >WooCommerce</span
+      > u otras soluciones,
+      <span class="custom-gradient">GRATIS</span> con la subvención del Kit Digital, para comenzar a vender de manera efectiva
+      por Internet.
+    </Fragment>
+  </Hero>
+
+  <Features2
+    tagline="Funcionalidades y servicios"
+    subtitle="El objetivo principal es proporcionarte una tienda en línea autogestionable, con todas las funcionalidades necesarias para vender de manera eficiente por Internet."
+    title="Tienda en línea autogestionable sin costo para empresas y autónomos con Kit Digital"
+    items={[
+      {
+        title: 'Creación de la tienda en línea o E-Commerce y alta del catálogo de productos',
+        description:
+          'Dispondrás de un catálogo en tu tienda en línea, donde estarán disponibles tus productos mediante su alta, importación o carga. La solución incluye la carga de al menos 100 referencias de tus productos, salvo que no dispongas de este número, en cuyo caso podrá ser menor.',
+        icon: 'tabler:shopping-cart',
+      },
+      {
+        title: 'Métodos de pago',
+        description:
+          'El Agente Digitalizador que hayas seleccionado configurará e integrará los métodos de pago en tu tienda en línea.',
+        icon: 'tabler:credit-card',
+      },
+      {
+        title: 'Diseño Responsive',
+        description: 'Tu E-Commerce podrá utilizarse en todo tipo de dispositivos.',
+        icon: 'tabler:device-laptop',
+      },
+      {
+        title: 'Accesibilidad',
+        description:
+          'El diseño de tu tienda en línea cumplirá con los criterios de conformidad de nivel AA de las Directrices WCAG-2.1.',
+        icon: 'tabler:eye',
+      },
+      {
+        title: 'Posicionamiento básico en Internet',
+        description:
+          'Conseguirás que la información básica de tu negocio, como el contacto y el perfil de la empresa, esté posicionada en las principales páginas de empresas y profesionales.',
+        icon: 'tabler:search',
+      },
+      {
+        title: 'Autogestionable',
+        description:
+          'Dispondrás también de una plataforma de gestión de contenidos para que puedas modificar los contenidos de tu web sin necesidad de ayuda.',
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Optimización de la presencia en buscadores (SEO)',
+        description:
+          'El Agente Digitalizador se encargará de realizar un análisis de palabras clave, de competencia, SEO On-Page de hasta dos páginas o apartados para mejorar el posicionamiento. También realizará la indexación y jerarquización de contenidos e informes de seguimiento trimestrales.',
+        icon: 'tabler:seo',
+      },
+      {
+        title: 'Creación de un feed o índice de productos',
+        description:
+          'Se creará un feed o índice de productos para su inserción en buscadores (exclusivo para Segmento IV y V).',
+        icon: 'tabler:package',
+      },
+      {
+        title: 'Formas de envío',
+        description:
+          'Tendrás configurados e integrados los métodos de envío digital y/o físico de los productos de tu tienda en línea.',
+        icon: 'tabler:truck',
+      },
+    ]}
+  />
+
+  <Features
+    title="Subvención Kit Digital según el número de empleados"
+    subtitle="La subvención puede utilizarse para diversos servicios de digitalización, con un importe máximo que varía en función del número de empleados de la empresa."
+    items={[
+      {
+        title: 'Importe total subvencionado:',
+        list: [
+          '<strong>De 0 a 3 empleados:</strong> 3.000€',
+          '<strong>De 50 a 99 empleados:</strong> 25.000€',
+          '<strong>De 100 a 250 empleados:</strong> 29.000€',
+        ],
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Importe máximo para el servicio de comercio electrónico:',
+        description: 'Hasta 5.000€',
+        icon: 'tabler:check',
+      },
+    ]}
+  />
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/21.jpg', alt: 'Fondo abstracto, inspirado en tecnología y software' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contactar',
+        href: 'contactar',
+      },
+      {
+        variant: 'primary',
+        text: 'Llamar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Estás a un <span class="custom-gradient">click</span> de llevar tu <span class="custom-gradient"
+        >comercio electrónico</span
+      >
+      al siguiente nivel e impulsar tu negocio hacia el futuro digital
+    </Fragment>
+    <Fragment slot="subtitle"
+      >Contáctanos y crearemos un comercio electrónico para tu empresa o negocio, de forma gratuita gracias a la
+      subvención del Kit Digital.</Fragment
+    >
+  </CallToAction>
+
+  <KitDigital />
+</Layout>

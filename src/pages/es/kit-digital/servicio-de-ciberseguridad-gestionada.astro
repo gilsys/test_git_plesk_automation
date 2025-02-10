@@ -1,0 +1,131 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import KitDigital from '~/components/widgets/KitDigital.astro';
+import Layout from '~/layouts/PageLayout.astro';
+const metadata = {
+  title: 'Servicio de Ciberseguridad Gestionado',
+  description:
+    "Protección empresarial con técnicas EDR y MDR para la detección y respuesta rápida ante amenazas, monitorización 24/7 y soporte experto para tu PYME, de manera gratuita con el Kit Digital.",
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="Subvención Kit Digital" backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/dots/21.jpg' }}>
+    <Fragment slot="title">Servicio de Ciberseguridad Gestionado</Fragment>
+    <Fragment slot="subtitle">
+        Servicio de ciberseguridad gestionado que monitoriza, detecta y responde a amenazas en tiempo real.  
+        <span class="custom-gradient">GRATIS</span> gracias a la subvención del Kit Digital, contarás con protección continua y soporte experto para prevenir riesgos digitales.
+      </Fragment>
+  </Hero>
+
+  <Features2
+    tagline="Funcionalidades y servicios"
+    subtitle="El principal objetivo de esta categoría es proporcionarte un servicio que combine técnicas de EDR (Endpoint Detection and Response) y MDR (Managed Detection and Response) para detectar incidentes de ciberseguridad en tiempo real y abordarlos de la forma más rápida y eficaz posible."
+    title="Protege tu empresa con herramientas de ciberseguridad de última generación"
+    items={[
+        {
+          title: 'Instalación y configuración inicial',
+          description:
+            "De las herramientas de seguridad para que puedas detectar, interrumpir y dar una respuesta rápida a las amenazas.",
+          icon: 'tabler:shield',
+        },
+        {
+          title: 'Detección y respuesta en los endpoints',
+          description:
+            "Servidores, PCs, portátiles, teléfonos móviles... La solución implantada debe ser capaz de detectar y dar respuesta en estos puntos, pudiendo suministrarse la protección EDR junto con el resto de los componentes de la solución implantada o pudiendo esta integrarse con soluciones EDR ya existentes en los endpoints.",
+          icon: 'tabler:device-laptop',
+        },
+        {
+          title: 'Fuentes a monitorizar',
+          description:
+            "La solución implantada deberá proteger ante las amenazas que afecten a diversas fuentes de la empresa como endpoints o soluciones Cloud.",
+          icon: 'tabler:cloud',
+        },
+        {
+          title: 'Alertas ante amenazas',
+          description:
+            "Este servicio alertará a los contactos de tu empresa inmediatamente después de haber detectado posibles amenazas.",
+          icon: 'tabler:bell',
+        },
+        {
+          title: 'Disponibilidad de un equipo de expertos',
+          description:
+            "Que se encargará de responder todas las dudas que puedan surgir relacionadas con el servicio. También realizará un análisis y seguimiento continuo de las alertas generadas.",
+          icon: 'tabler:user-check',
+        },
+        {
+          title: 'Monitorización 24x7x365',
+          description:
+            "El servicio estará operativo las 24 horas del día, 7 días a la semana, los 365 días del año.",
+          icon: 'tabler:clock',
+        },
+        {
+          title: 'Búsqueda, contención y respuesta ante amenazas',
+          description:
+            "El servicio realizará una búsqueda activa de posibles amenazas, evitando, interrumpiendo y respondiendo a los posibles ataques. Esto impedirá que se extiendan a otras partes de la red de tu empresa.",
+          icon: 'tabler:search',
+        },
+        {
+          title: 'Informes mensuales de seguimiento',
+          description:
+            "Se generarán informes sobre los incidentes detectados y las causas raíz, así como sobre la situación de la empresa en materia de seguridad.",
+          icon: 'tabler:file-report',
+        },
+        {
+          title: 'Asistencia directa',
+          description:
+            "En caso de incidente de seguridad, tendrás acceso a una línea telefónica de contacto directo con el equipo de servicio para aclarar todas las cuestiones que surjan a raíz de un ataque.",
+          icon: 'tabler:phone',
+        },
+      ]}
+  />
+
+  <Features
+    title="Subvención Kit Digital según el número de empleados"
+    subtitle="La subvención puede utilizarse para diversos servicios de digitalización, con un importe máximo que varía en función del número de empleados de la empresa."
+    items={[
+      {
+        title: 'Importe total subvencionado:',
+        list: [
+          '<strong>De 50 a 99 empleados:</strong> 25.000€',
+          '<strong>De 100 a 250 empleados:</strong> 29.000€',
+        ],
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Importe máximo para el servicio de ciberseguridad gestionada:',
+        list: [
+          '<strong>De 50 a 99 empleados:</strong> 200€/dispositivo (hasta 99 dispositivos)',
+          '<strong>De 100 a 250 empleados:</strong> 200€/dispositivo (hasta 145 dispositivos)',
+        ],
+        icon: 'tabler:check',
+      },
+    ]}
+  />
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/21.jpg', alt: 'Fondo abstracto, inspirado en tecnología y software' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contactar',
+        href: 'contactar',
+      },
+      {
+        variant: 'primary',
+        text: 'Llamar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Aprovecha la subvención del Kit Digital para implementar el servicio de <span class="custom-gradient">Ciberseguridad Gestionada</span> de forma gratuita
+    </Fragment>
+    <Fragment slot="subtitle"> Contáctanos y te asesoraremos sobre cómo digitalizar tu empresa. </Fragment>
+  </CallToAction>
+
+  <KitDigital />
+</Layout>

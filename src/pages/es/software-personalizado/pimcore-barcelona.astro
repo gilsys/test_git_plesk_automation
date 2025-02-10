@@ -1,0 +1,264 @@
+---
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+
+const metadata = {
+  title: 'Gestión de productos con Pimcore',
+  description:
+    'Tu empresa podrá centralizar datos de productos PIM y recursos multimedia DAM, enriquecer información e implementar importaciones y exportaciones multicanal.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Unifica en una única plataforma la gestión de productos."
+    backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/dots/30.jpg' }}
+  >
+    <Fragment slot="title"><span class="text-accent highlight">Gestión de productos</span> con Pimcore</Fragment>
+    <Fragment slot="subtitle">
+      Tu empresa podrá centralizar datos de productos PIM y recursos multimedia DAM, enriquecer información e
+      implementar importaciones y exportaciones multicanal.
+    </Fragment>
+  </Hero>
+
+  <Content
+    isReversed
+    tagline=""
+    title="¿Qué es Pimcore?"
+    subtitle="Pimcore es una plataforma de código abierto diseñada para centralizar y gestionar datos de productos de manera eficiente y personalizada."
+    items={[
+      {
+        title: 'Gestión centralizada de productos',
+        description:
+          'Permite unificar datos como especificaciones técnicas, precios, imágenes y descripciones en una única plataforma.',
+      },
+      {
+        title: 'Integración multicanal',
+        description:
+          'Permite implementar sincronizaciones de datos con tiendas online, marketplaces, ERPs y otros sistemas.',
+      },
+      {
+        title: 'Automatización de procesos',
+        description: 'Reduce tareas manuales con flujos de trabajo personalizados.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/pimcore-diagrama.jpg',
+      alt: 'Imagen ilustrativa de Pimcore',
+    }}
+  >
+    <Fragment slot="preContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">
+        Si tu empresa dispone de muchos productos, la solución es un PIM
+      </h3>
+      <p class="text-muted">
+        Pimcore es mucho más que un sistema de gestión de productos; es una de las plataformas más conocidas para
+        gestionar, organizar y distribuir información de productos de manera centralizada. Gracias a su flexibilidad,
+        Pimcore se puede ampliar y personalizar con módulos a medida, convirtiéndolo en una solución única para cada
+        empresa.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Content
+    isAfterContent={true}
+    items={[
+      {
+        title: 'Gestión de contenidos (PIM y DAM)',
+        description:
+          'Pimcore incluye funciones para gestionar activos digitales y contenidos relacionados con productos.',
+      },
+      {
+        title: 'Programación a medida de Pimcore',
+        description:
+          'Cada PIM es único, es necesario programarlo a medida sobre la base que ofrece y ampliarlo con módulos para cubrir necesidades concretas, como integraciones con herramientas de inteligencia artificial o funciones avanzadas.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/pimcore-demo.jpg',
+      alt: 'Ejemplo de interfaz de Pimcore',
+    }}
+  >
+    <Fragment slot="postContent">
+      <h2 class="text-2xl font-bold tracking-tightsm:text-3xl mb-2">
+        ¿Qué empresas pueden necesitar una herramienta de gestión de productos?
+      </h2>
+      <p class="text-muted">
+        Es especialmente útil para empresas que trabajan con grandes catálogos de productos, múltiples canales de
+        distribución o necesitan unificar información y procesos.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Features2
+    id="features"
+    tagline="¿Por qué elegir Pimcore?"
+    title="Beneficios de Pimcore como software de gestión de productos"
+    items={[
+      {
+        title: 'Plataforma flexible y escalable',
+        description:
+          'Pimcore no es un sistema rígido ni cerrado. Su estructura flexible permite adaptarse completamente a las necesidades específicas de cada empresa, diseñar un modelo de datos y estructura a medida y crecer con el negocio.',
+        icon: 'tabler:arrows-maximize',
+      },
+      {
+        title: 'Código abierto sin costos de licencia',
+        description:
+          'Pimcore ofrece una versión community de código abierto, lo que significa que no hay costos recurrentes por licencias. Esto reduce los gastos a largo plazo y ofrece un mayor control sobre la plataforma.',
+        icon: 'tabler:license',
+      },
+      {
+        title: 'Gestión multicanal',
+        description:
+          'Centraliza todos los datos de productos en un solo lugar y permite distribuirlos automáticamente a <strong>diversos canales como tiendas online, catálogos impresos o aplicaciones móviles</strong>, manteniendo la coherencia y calidad de los datos y evitando duplicidades.',
+        icon: 'tabler:share',
+      },
+      {
+        title: 'Control por roles y perfiles',
+        description:
+          'Permite establecer reglas de acceso para diferentes tipos de usuario y perfiles, limitando el acceso a determinados contenidos y funcionalidades.',
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Automatización y eficiencia',
+        description:
+          'Pimcore permite crear flujos de trabajo que reducen tareas repetitivas, como actualizaciones de catálogos, sincronización de stocks o generación de informes.',
+        icon: 'tabler:repeat',
+      },
+      {
+        title: 'Comunidad activa y soporte técnico',
+        description:
+          'Con una comunidad activa y numerosos desarrolladores en todo el mundo, Pimcore es una plataforma en constante evolución, con actualizaciones frecuentes y un amplio soporte.',
+        icon: 'tabler:users',
+      },
+    ]}
+  />
+
+  <Features
+    id="features"
+    tagline=""
+    title="Casos de uso de gestores de productos"
+    subtitle="Pimcore es una herramienta muy potente, que se puede programar para ofrecer funcionalidades diversas según los objetivos de cada empresa."
+    items={[
+      {
+        title: 'Gestión de grandes catálogos de productos',
+        description:
+          'Importar miles de productos desde una o varias fuentes de datos como documentos CSV, Excels, ERP o bases de datos externas, centralizarlos en PIM y enriquecer su información de forma centralizada con campos creados desde la plataforma.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Distribución de datos a múltiples canales',
+        description:
+          'Si tu empresa vende en varios canales, Pimcore permite preparar exportaciones automáticas de productos a tiendas online como PrestaShop o WooCommerce, marketplaces como Amazon o catálogos físicos.',
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Gestión de grandes bancos de recursos gráficos',
+        description:
+          'Las empresas con muchos productos necesitan organizar la información gráfica de los mismos. Pimcore permite realizar esta gestión con el módulo DAM.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Control del ciclo de vida',
+        description:
+          'Pimcore permite crear workflows personalizados para gestionar de manera eficiente todas las etapas del ciclo de vida de un producto, desde la creación, validación de datos hasta la distribución o publicación en diferentes canales de salida.',
+        icon: 'tabler:graph',
+      },
+    ]}
+  />
+  <Content
+    isReversed
+    tagline="No es fácil encontrar una empresa especialista en Pimcore"
+    title="¿Cómo puede Gilsys ayudarte a implementar Pimcore?"
+    items={[
+      {
+        title: 'Especialistas en programación',
+        description:
+          `Nos aseguramos de que Pimcore se adapte completamente a tu modelo de negocio, desarrollando módulos y funcionalidades específicas, ya que somos una <a class='text-accent' title='Programación de software a medida' href='` +
+          u('software') +
+          `'>empresa experta en la programación a medida.</a>`,
+        icon: 'tabler:building',
+      },
+      {
+        title: 'Integraciones flexibles',
+        description:
+          'Los años de experiencia nos permiten conocer muchas tecnologías diferentes, lo que facilita la implementación de conectores a medida en caso de requerirse para importar o exportar información a canales de entrada o salida específicos.',
+        icon: 'tabler:chart-pie',
+      },
+      {
+        title: 'Mantenimiento y optimización',
+        description:
+          'No solo implementamos Pimcore, también ofrecemos la posibilidad de disponer de un servicio de mantenimiento a nivel de actualizaciones, para que funcione de manera eficiente a largo plazo.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Enfoque práctico',
+        description:
+          'Recomendamos soluciones que aporten valor real, evitando implementar funcionalidades innecesarias.',
+        icon: 'tabler:headset',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/pimcore-gestion-productos.jpg',
+      alt: 'Logo de Pimcore',
+    }}
+  >
+    <Fragment slot="postContent">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Consultoría previa a la implementación de Pimcore
+      </h3>
+      <p class="text-muted">
+        Implementar Pimcore no es una tarea sencilla ni inmediata, ya que suele implicar cambios significativos en los
+        flujos de trabajo de la empresa. Antes de comenzar, es esencial conocer en profundidad los datos, procesos y
+        objetivos de transformación digital del negocio. Por ello, se realiza una <a
+          title="Consultoría tecnológica para implantar Pimcore"
+          href={u('consultory')}
+          class="text-accent">consultoría tecnológica</a
+        > previa para analizar las necesidades específicas y definir una propuesta personalizada para la implementación del
+        PIM.
+      </p>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/25.jpg', alt: 'Fondo abstracto, inspirado en tecnología y software' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Presupuesto gratuito',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Llamar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title"
+      >¿Necesitas <span class="custom-gradient">gestionar los productos</span> de tu empresa de forma unificada y eficiente?</Fragment
+    >
+    <Fragment slot="subtitle"
+      >Con Pimcore dispondrás de la herramienta perfecta para centralizar la información de producto y distribuirla en
+      diferentes canales.</Fragment
+    >
+  </CallToAction>
+</Layout>

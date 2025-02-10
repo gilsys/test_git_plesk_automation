@@ -1,0 +1,462 @@
+---
+import Image from '~/components/common/Image.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Prices from '~/components/widgets/Pricing.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+
+const metadata = {
+  title: 'Empresa de programación de tienda online con PrestaShop y WooCommerce | +20 años',
+  description:
+    'Especialistas en desarrollo y diseño personalizado de tiendas online con PrestaShop y WooCommerce, soluciones a medida.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Programamos e-commerce para empresas de cualquier dimensión y sector."
+    backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/dots/16.jpg' }}
+  >
+    <Fragment slot="title">
+      Programación de tienda online con<br />
+      <span class="text-accent highlight">PrestaShop</span> y <span class="text-accent highlight">WooCommerce</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      Creamos tiendas online con diseño personalizado, desarrollamos módulos y plantillas a medida.
+    </Fragment>
+  </Hero>
+
+  <Content
+    tagline="Desarrollamos e-commerce adaptado para empresas de cualquier sector"
+    title="¿Qué es un e-commerce, tienda online o comercio electrónico?"
+    subtitle="Hablamos de plataformas, para <strong>pequeñas</strong> y <strong>grandes empresas</strong>, que permiten comprar productos y gestionar las ventas."
+    items={[
+      {
+        title: 'Alcanzar nuevos clientes',
+        description:
+          'Internet no tiene fronteras. Una tienda online permite vender en todo el mundo las 24 horas del día, los 7 días de la semana.',
+      },
+      {
+        title: 'Aumentar las ventas',
+        description:
+          'Una tienda online profesional y atractiva mejora la imagen de la empresa y genera confianza entre los clientes.',
+      },
+      {
+        title: 'Reducir costos',
+        description:
+          'Una tienda online puede ser más económica que una tienda física, ya que no requiere un local, personal adicional, etc.',
+      },
+      {
+        title: 'Obtener información valiosa sobre los clientes',
+        description:
+          'Con una tienda online puedes recopilar datos sobre tus clientes (preferencias, hábitos de compra, etc.) para mejorar tu estrategia de marketing.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/ecommerce.jpg',
+      alt: 'Plantillas web para personalizar tienda online',
+    }}
+  >
+    <Fragment slot="preContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">
+        El objetivo es simple: <span class="custom-gradient">vender por Internet</span>
+      </h3>
+    </Fragment>
+  </Content>
+
+  <Content
+    isAfterContent
+    isReversed
+    tagline=""
+    title=""
+    subtitle=""
+    items={[
+      {
+        title: 'Gestionar la tienda y el catálogo de productos',
+        description: 'Disponer de una herramienta para realizar toda la administración necesaria.',
+      },
+      {
+        title: 'Integrar la plataforma con otros programas',
+        description: 'Sincronizar datos con sistemas externos como ERPs o CRMs.',
+      },
+      {
+        title: 'Crecer',
+        description: 'Escalar fácilmente con el crecimiento del volumen de ventas o ampliación de catálogo.',
+      },
+    ]}
+    image={{
+      id: 'online-cart-shop',
+      src: '~/assets/images/tienda-online.png',
+      alt: 'Diseños a medida para tienda online',
+    }}
+  >
+    <Fragment slot="postContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2 mt-8">¿Quién necesita un e-commerce?</h3>
+      <p class="text-muted">
+        Cualquier empresa de cualquier sector que quiera vender productos, ya sea a pequeña o gran escala, a nivel
+        local, nacional o internacional.
+      </p>
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2 mt-8">Utilizamos WooCommerce y PrestaShop</h3>
+      <p class="text-muted">
+        En Gilsys, somos especialistas en el desarrollo de tiendas online personalizadas con PrestaShop y WooCommerce,
+        dos de las plataformas de comercio electrónico más potentes y versátiles del mercado.
+      </p>
+    </Fragment>
+  </Content>
+
+  <WidgetWrapper containerClass={`max-w-xl pb-6 md:pb-6 lg:pb-6`}>
+    <a href="https://prestashop.com/" title="PrestaShop - Motor de tiendas online" target="_blank">
+      <Image
+        class=""
+        widths={[400, 768]}
+        layout="constrained"
+        src="~/assets/images/prestashop-logo.jpg"
+        alt="PrestaShop - Logo"
+      />
+    </a>
+  </WidgetWrapper>
+  <FAQs
+    classes={{ container: 'py-0 md:py-0 lg:py-0 ps-12' }}
+    title="PrestaShop: Robustez para grandes tiendas online"
+    subtitle="PrestaShop es una plataforma creada exclusivamente para el comercio electrónico. Su estructura robusta y escalable la hace ideal para catálogos grandes y complejos, así como para tiendas que necesitan funcionalidades más avanzadas."
+    tagline=""
+  />
+  <WidgetWrapper containerClass={`max-w-xl my-0 mx-auto py-0 md:py-0 lg:py-0 ps-12`}>
+    <a href="https://prestashop.com/" title="PrestaShop - Motor de tiendas online" target="_blank">
+      <Image src="~/assets/images/prestashop-backoffice.jpg" alt="PrestaShop - Panel de administración de tienda" />
+    </a>
+  </WidgetWrapper>
+  <FAQs
+    heading="Puntos fuertes de PrestaShop"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'Diseñado para grandes catálogos',
+        description: 'Puede gestionar miles de productos sin comprometer el rendimiento.',
+      },
+      {
+        title: 'Funcionalidades nativas',
+        description:
+          'Incluye herramientas avanzadas como gestión de stocks, descuentos, impuestos y envíos sin necesidad de plugins.',
+      },
+      {
+        title: 'Módulos comerciales',
+        description:
+          'Existe un gran mercado de módulos comerciales que pueden resolver muchos de los requisitos frecuentes en tiendas avanzadas.',
+      },
+      {
+        title: 'Escalabilidad y personalización',
+        description:
+          'En Gilsys, no solo trabajamos con los módulos comerciales más utilizados, también desarrollamos funcionalidades a medida para cubrir las necesidades específicas de tu proyecto y PrestaShop ofrece una buena base para este tipo de personalizaciones.',
+      },
+    ]}
+  />
+
+  <FAQs
+    heading="Limitaciones de PrestaShop"
+    subtitle=""
+    tagline=""
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'Complejidad inicial',
+        description: 'Requiere más conocimientos técnicos para configurar y gestionar en comparación con WooCommerce.',
+      },
+      {
+        title: 'Menos flexible para contenido textual',
+        description:
+          'Aunque se pueden añadir páginas informativas, no es tan ágil como WordPress para trabajar el diseño y SEO de contenidos.',
+      },
+    ]}
+  />
+
+  <WidgetWrapper containerClass={`max-w-xl my-0 mx-auto py-6 md:py-6 lg:py-6`}>
+    <a
+      class="mx-auto"
+      href="https://woocommerce.com/"
+      title="WooCommerce - Motor de tiendas de WordPress"
+      target="_blank"
+    >
+      <Image
+        class="max-w-xs mx-auto"
+        width={320}
+        layout="responsive"
+        src="~/assets/images/woocommerce.webp"
+        alt="WooCommerce - Logo"
+      />
+    </a>
+  </WidgetWrapper>
+
+  <FAQs
+    classes={{ container: 'py-0 md:py-0 lg:py-0 ps-12' }}
+    title="WooCommerce: E-commerce para catálogos <em>pequeños y medianos</em>, flexible y atractivo."
+    subtitle={"WooCommerce es una extensión de <a class='text-accent' title='Plataforma CMS para la creación de webs y gestión de contenidos' href='" +
+      u('software/wp') +
+      "' >WordPress</a> que convierte cualquier sitio web en una tienda online funcional y fácil de gestionar. Ideal para proyectos que necesitan combinar comercio electrónico con contenido textual optimizado."}
+    tagline=""
+  />
+
+  <WidgetWrapper containerClass={`max-w-xl my-0 mx-auto py-6 md:py-6 lg:py-6`}>
+    <a href="https://woocommerce.com/" title="WooCommerce - Motor de tiendas de WordPress" target="_blank">
+      <Image
+        class=""
+        widths={[400, 768]}
+        layout="constrained"
+        src="~/assets/images/woocommerce-backoffice.jpg"
+        alt="WooCommerce - Panel de administración de tienda"
+      />
+    </a>
+  </WidgetWrapper>
+  <FAQs
+    heading="Puntos fuertes de WooCommerce"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'Integración con WordPress',
+        description:
+          'Permite añadir blogs, páginas informativas y otros contenidos SEO para mejorar la visibilidad en los buscadores.',
+      },
+      {
+        title: 'Gran variedad de plugins y temas',
+        description:
+          'Existen muchas extensiones para ampliar funcionalidades. En Gilsys, conocemos los módulos más utilizados y podemos desarrollar personalizados si son necesarios.',
+      },
+      {
+        title: 'Facilidad de uso',
+        description:
+          'Plataforma intuitiva y de fácil gestión, ideal para usuarios sin conocimientos técnicos avanzados.',
+      },
+      {
+        title: 'Coste inicial',
+        description: 'Es una opción adecuada para e-commerce con presupuestos ajustados o en fase inicial.',
+      },
+    ]}
+  />
+
+  <FAQs
+    classes={{ container: 'max-w-6xl pt-0 md:pt-0 lg:pt-0' }}
+    title="Limitaciones de WooCommerce"
+    subtitle=""
+    tagline=""
+    items={[
+      {
+        title: 'Rendimiento con catálogos grandes',
+        description:
+          'Con un volumen de productos muy elevado, WooCommerce puede experimentar problemas de rendimiento.',
+        icon: 'tabler:chevron-right',
+      },
+      {
+        title: 'Dependencia de plugins',
+        description: 'El uso de muchas extensiones puede complicar la gestión si no se aplican buenas prácticas.',
+        icon: 'tabler:chevron-right',
+      },
+    ]}
+  />
+  <Prices
+    title="Comparativa PrestaShop y WooCommerce"
+    subtitle="Cada plataforma ofrece ventajas según los objetivos del proyecto de comercio electrónico."
+    prices={[
+      {
+        title: 'PrestaShop',
+        subtitle: 'Plataforma robusta con funcionalidades avanzadas.',
+        items: [
+          {
+            title: 'Tamaño del catálogo',
+            description: 'Grande con miles de productos',
+          },
+          {
+            title: 'SEO y contenido',
+            description: 'Menos flexible para contenido textual.',
+          },
+          {
+            title: 'Personalización y módulos',
+            description: 'Escalable con funcionalidades nativas y módulos avanzados.',
+          },
+          {
+            title: 'Rendimiento',
+            description: 'Alto rendimiento con grandes volúmenes de datos.',
+          },
+          {
+            title: 'Coste inicial',
+            description: 'Superior.',
+          },
+        ],
+      },
+      {
+        title: 'WooCommerce',
+        subtitle: 'Tiendas pequeñas y medianas, con diseño atractivo.',
+        period: 'Por mes',
+        items: [
+          {
+            title: 'Tamaño del catálogo',
+            description: 'Pequeño o mediano',
+          },
+          {
+            title: 'SEO y contenido',
+            description: 'Excelente para páginas de contenido y SEO.',
+          },
+          {
+            title: 'Personalización y módulos',
+            description: 'Compatible con plugins y módulos personalizados.',
+          },
+          {
+            title: 'Rendimiento',
+            description: 'Puede ser limitado con catálogos grandes.',
+          },
+          {
+            title: 'Coste inicial',
+            description: 'Inferior.',
+          },
+        ],
+      },
+    ]}
+  />
+  <Features2
+    id="features"
+    tagline=""
+    title="¿Cómo trabajamos con PrestaShop y WooCommerce en Gilsys?"
+    subtitle={"Asesoramos a todo tipo de empresas sobre <a href='" +
+      u('consultory') +
+      "' class='text-accent' title='Consultoría tecnológica sobre ecommerce'>cómo llevar su negocio a Internet</a> con soluciones personalizadas y eficientes."}
+    items={[
+      {
+        title: 'Selección tecnológica',
+        description:
+          'Recomendamos la mejor tecnología para cada negocio, explicando las características de cada e-commerce y evitando funcionalidades innecesarias.',
+        icon: 'tabler:target',
+      },
+      {
+        title: 'Plantilla, maquetación y diseño',
+        description:
+          'Maquetamos una plantilla a medida cuando el proyecto lo requiere o recomendamos las más adecuadas para cada tipo de negocio, adaptándolas a las necesidades del proyecto.',
+        icon: 'tabler:paint',
+      },
+      {
+        title: 'Desarrollo a medida y personalización',
+        description:
+          'Creamos módulos y <strong>funcionalidades personalizadas</strong>, adaptando la tienda a las necesidades específicas del negocio y ofreciendo una solución única.',
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Optimización SEO',
+        description:
+          'Mejoramos aspectos técnicos para que el posicionamiento de la tienda en buscadores sea óptimo, con contenido optimizado y adaptado a los estándares SEO actuales.',
+        icon: 'tabler:search',
+      },
+      {
+        title: 'Traducción e internacionalización',
+        description:
+          'Traducimos la plataforma a tantos idiomas como sea necesario y configuramos las divisas e impuestos correspondientes.',
+        icon: 'tabler:flag',
+      },
+      {
+        title: 'Integración con otras aplicaciones',
+        description:
+          'Conectamos la tienda con ERP, CRM o herramientas de marketing para centralizar la gestión y optimizar los procesos empresariales.',
+        icon: 'tabler:database',
+      },
+      {
+        title: 'Sistemas de pago online',
+        description:
+          'Integramos pasarelas de pago de cualquier tipo: <a target="_blank" href="https://redsys.es/" class="text-accent" title="Pago con TPV Redsys, conexión directa con el banco">TPV con tarjeta y Bizum</a>, <a target="_blank" class="text-accent" href="https://www.paypal.com">Paypal</a>, <a target="_blank" class="text-accent" href="https://www.stripe.com" title="Stripe">Stripe</a>, <a target="_blank" class="text-accent" href="https://woocommerce.com/es/payments/" title="WooCommerce Payments">WooCommerce Payments</a> o lo que el proyecto requiera.',
+        icon: 'tabler:credit-card-pay',
+      },
+      {
+        title: 'Transporte y envíos',
+        description:
+          'Integramos módulos para transferir pedidos a empresas de transporte, permitiendo automatizar el etiquetado y seguimiento del envío.',
+        icon: 'tabler:package-export',
+      },
+      {
+        title: 'Autogestión',
+        description: 'Ofrecemos formación para que la empresa tenga control sobre su comercio online y sus ventas.',
+        icon: 'tabler:box-padding',
+      },
+      {
+        title: 'Rendimiento y escalabilidad',
+        description:
+          'Nos aseguramos de que la plataforma funcione de manera fluida y que pueda crecer con las necesidades del proyecto.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Mantenimiento y actualizaciones periódicas',
+        description:
+          'Nos encargamos de realizar las actualizaciones técnicas para que la empresa pueda centrarse exclusivamente en su producto y su promoción.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Innovación constante',
+        description:
+          `Estamos preparados para adaptar la plataforma a nuevos requisitos e integrar soluciones innovadoras como <a title="Programación de funcionalidades con inteligencia artificial" class="text-accent" href='` +
+          u('development/ia') +
+          `'>inteligencia artificial</a> u otras tecnologías emergentes.`,
+        icon: 'tabler:graph',
+      },
+    ]}
+  />
+  <Content
+    isReversed
+    tagline=""
+    title="¿Por qué confiar en Gilsys para implementar tu comercio online?"
+    subtitle="Tu e-commerce estará preparado para destacar y crecer, ya sea con WooCommerce para proyectos más pequeños o con PrestaShop para tiendas con catálogos grandes y complejos."
+    items={[
+      {
+        title: 'Especialistas en WooCommerce y PrestaShop',
+        description: `No es fácil encontrar una empresa que no solo pueda personalizar el diseño de PrestaShop y WooCommerce, sino que además disponga de un equipo de programación que conozca su código fuente y pueda desarrollar plantillas a medida, módulos y ampliaciones personalizadas.`,
+        icon: 'tabler:tools',
+      },
+      {
+        title: 'Personalizaciones responsables',
+        description:
+          'Seguimos buenas prácticas para garantizar la compatibilidad con futuras actualizaciones y ofrecer soluciones sostenibles y escalables.',
+        icon: 'tabler:layout-dashboard',
+      },
+      {
+        title: 'Integración con otras herramientas',
+        description:
+          `Conectamos la tienda online con otras herramientas como <a class="text-accent" title="Sincronización de datos con gestores de clientes" href='` +
+          u('software/crm') +
+          `'>CRM</a>, ERP, plataformas de marketing o sistemas de gestión de stock, para poder <a title="Procesos para automatizar la sincronización de datos" class="text-accent" href='` +
+          u('development/automation') +
+          `'>sincronizar información de forma automática</a> y transparente. Esto permite automatizar procesos, centralizar la información y optimizar la gestión de tu negocio.`,
+        icon: 'tabler:link',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/ecommerce-carrito.png',
+      alt: 'Carrito de compra representando e-commerce',
+    }}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/16.jpg', alt: 'Fondo abstracto, inspirado en tecnología y software' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Presupuesto gratuito',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Llamar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">¿Necesitas <span class="custom-gradient">vender por Internet</span>? </Fragment>
+    <Fragment slot="subtitle"
+      >Podemos abordar proyectos desde <strong>pequeñas tiendas</strong> hasta <strong>grandes plataformas</strong>, con
+      diseño personalizado y funcionalidades avanzadas.</Fragment
+    >
+  </CallToAction>
+</Layout>

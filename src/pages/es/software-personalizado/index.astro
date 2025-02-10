@@ -1,0 +1,310 @@
+---
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+const metadata = {
+  title: 'Programación de software personalizado para empresas | +20 años',
+  description:
+    'Adaptamos plataformas como WordPress, PrestaShop, WooCommerce, Pimcore o Metabase para crear soluciones únicas y personalizadas, ajustadas a cada empresa.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/dots/14.jpg' }}
+    actions={[
+      { variant: 'primary', text: 'Presupuesto gratuito', href: u('contact') },
+      { variant: 'primary', text: 'Solicitar demo', href: u('contact') },
+    ]}
+    tagline="Diseñamos y programamos webs y herramientas, utilizando tecnologías <strong>existentes</strong> como base de tu proyecto."
+  >
+    <Fragment slot="title">Programación de <span class="custom-gradient">software personalizado</span></Fragment>
+    <Fragment slot="subtitle">
+      Adaptamos plataformas como
+      <a href={u('software/wp')} title="Diseño de WordPress a medida" class="custom-gradient">WordPress</a>,
+      <a href={u('software/ecommerce')} title="Programación de Prestashop" class="custom-gradient">PrestaShop</a>, <a
+        href={u('software/pimcore')}
+        title="Programación de Pimcore"
+        class="custom-gradient">Pimcore</a
+      > o
+      <a href={u('software/metabase')} title="Programación de Metabase" class="custom-gradient">Metabase</a>
+      para ofrecer un diseño y funcionamiento único y personalizado, ajustado a las necesidades del proyecto.
+    </Fragment>
+  </Hero>
+
+  <Features3
+    id="features-services"
+    tagline="Servicios basados en plataformas y herramientas existentes"
+    title="Webs administradas, tiendas, CRM, BI o PIM requieren programación, pero no desde cero."
+    subtitle={"Diferenciamos software personalizado de <a class='text-accent' title='Desarrollamos nuevas aplicaciones programando a medida' href='" +
+      u('software') +
+      "'>software a medida</a>, donde programamos nuevas aplicaciones y herramientas desde cero."}
+    items={[
+      {
+        title: 'Programación web',
+        description:
+          'Desarrollamos portales web con <strong>WordPress</strong>, centrados en el diseño y la experiencia de usuario, pudiendo ampliar funcionalidades programando plugins a medida.',
+        icon: 'tabler:world',
+        callToAction: {
+          class: 'more-info',
+          text: 'Más información',
+          href: u('software/wp'),
+        },
+      },
+      {
+        title: 'E-commerce',
+        description:
+          'Personalizamos plataformas como <strong>PrestaShop</strong> o <strong>WooCommerce</strong> para optimizar la venta online y ampliar funcionalidades.',
+        icon: 'tabler:shopping-cart',
+        callToAction: {
+          class: 'more-info',
+          text: 'Más información',
+          href: u('software/ecommerce'),
+        },
+      },
+      {
+        title: 'Gestión de clientes',
+        description:
+          'Adaptamos sistemas <strong>CRM</strong> para mejorar la captación, el seguimiento y la gestión de clientes según los objetivos de cada negocio.',
+        icon: 'tabler:users',
+        callToAction: {
+          class: 'more-info',
+          text: 'Más información',
+          href: u('software/crm'),
+        },
+      },
+      {
+        title: 'Gestión de productos',
+        description:
+          'Programamos herramientas PIM basadas en <strong>Pimcore</strong>, para centralizar la gestión de productos, recursos multimedia y flujos de trabajo.',
+        icon: 'tabler:box',
+        callToAction: {
+          class: 'more-info',
+          text: 'Más información',
+          href: u('software/pimcore'),
+        },
+      },
+      {
+        title: 'Business intelligence',
+        description:
+          'Implementamos soluciones de analítica empresarial con <strong>Metabase</strong>, que permiten analizar datos, generar informes y facilitar la toma de decisiones estratégicas.',
+        icon: 'tabler:chart-bar',
+        callToAction: {
+          class: 'more-info',
+          text: 'Más información',
+          href: u('software/metabase'),
+        },
+      },
+    ]}
+  />
+
+  <FAQs
+    title="¿Qué es el software personalizado?"
+    items={[
+      {
+        title: '¿Qué significa software personalizado?',
+        description:
+          'El software personalizado consiste en modificar y ampliar plataformas base para adaptarlas a las necesidades de un proyecto, aprovechando una base robusta y fiable.<br/><br/>En ocasiones no es necesario programar un proyecto desde cero cuando ciertas herramientas ya implementan las funcionalidades base. Con los conocimientos adecuados en <strong>programación de software</strong>, podemos personalizarlas y extenderlas según las necesidades de cada proyecto.',
+      },
+      {
+        title: '¿Qué diferencias hay entre software personalizado y software a medida?',
+        description:
+          `El software personalizado parte de una base tecnológica ya existente, que podemos extender y <strong>mediante programación</strong> adaptar a necesidades específicas. Cuando hablamos de <a title='Desarrollo de aplicaciones para empresas a medida' href='` +
+          u('software') +
+          `' class='text-accent'>programación a medida</a>, trabajamos desde cero para ofrecer una solución única.<br/><br/>Elegir programar un software a medida o personalizado dependerá del grado de personalización que requiera el proyecto y de su visión de futuro.`,
+      },
+      {
+        title: '¿No es mejor utilizar siempre software personalizado?',
+        description:
+          `Rotundamente NO. En muchos casos, el software personalizado es suficiente para adaptar plataformas ya existentes a las necesidades específicas del proyecto, ofreciendo una solución más rápida y económica. 
+        Sin embargo, cuando los requisitos son muy específicos o se necesita una solución totalmente innovadora, el software a medida es la mejor opción, ya que se puede diseñar y desarrollar desde cero para satisfacer todas las particularidades del proyecto. A veces, adaptar una herramienta existente con muchas personalizaciones puede resultar más costoso que programarla desde cero.
+        <br/><br/>
+        La clave está en evaluar las necesidades concretas y los objetivos a largo plazo antes de decidir qué enfoque es el más adecuado. No siempre es necesario, pero en Gilsys ofrecemos servicios de <a class="text-accent" title="Asesoramiento tecnológico sobre proyectos de programación" href='` +
+          u('consultory') +
+          `'>consultoría</a> para estudiar las ideas de la empresa y analizar las posibles opciones de desarrollo.`,
+      },
+      {
+        title: '¿Algunos ejemplos?',
+        description:
+          `Podemos programar una web a medida con <a class="text-accent" title="Programación a medida de webs rápidas" href='` +
+          u('development/astro') +
+          `'>ASTRO</a>, si necesitamos alto rendimiento, velocidad y seguridad, pero en algunas ocasiones es más adecuado trabajar con <a class="text-accent" title="Diseño personalizado de WordPress" href='` +
+          u('software/wp') +
+          `'>WordPress</a>, que ya ofrece una base avanzada para la autogestión de contenido de forma fácil para el usuario y se puede extender con plugins.<br/><br/>
+        También podemos crear un gestor de clientes completamente desde cero si el proyecto lo requiere, pero habitualmente es más eficiente basarse en una herramienta <a class="text-accent" title="Programa de gestión de clientes para empresas" href='` +
+          u('software/crm') +
+          `'>CRM</a>, que permita ser ampliada y adaptada mediante código, sobre la cual aplicar las personalizaciones necesarias.
+        `,
+      },
+    ]}
+  />
+
+  <Features2
+    id="features"
+    tagline="¿Por qué utilizar software personalizado?"
+    title="Podemos crear herramientas a medida basándonos en tecnologías existentes"
+    subtitle="Aprovecha herramientas existentes para lograr resultados rápidos, escalables y rentables."
+    items={[
+      {
+        title: 'Desarrollo eficiente',
+        description:
+          'El uso de una base existente reduce el tiempo de desarrollo, permitiendo una implementación más rápida.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Costo más económico',
+        description:
+          "Aprovechar una base existente es una opción más rentable en ciertos casos que desarrollar un <a title='Programación de software a medida' href='" +
+          u('development') +
+          "' class='text-accent'>software a medida</a>, manteniendo altos niveles de personalización.",
+        icon: 'tabler:currency-dollar',
+      },
+      {
+        title: 'Adaptación con módulos y temas personalizados',
+        description:
+          `Plataformas como <a href='` +
+          u('software/wp') +
+          `' title="Programación de WordPress" class="text-accent">WordPress</a> o <a href='` +
+          u('software/ecommerce') +
+          `' title="Programación de tienda online con Prestashop" class="text-accent">PrestaShop</a> pueden ampliarse con módulos gratuitos, comerciales o desarrollados a medida, así como con <strong>plantillas personalizadas</strong> que reflejen la identidad de tu empresa.`,
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Escalabilidad flexible',
+        description:
+          'Las soluciones personalizadas permiten comenzar con funcionalidades básicas y añadir nuevas según crezcan las necesidades del negocio.',
+        icon: 'tabler:line',
+      },
+      {
+        title: 'Reducción de la curva de aprendizaje',
+        description:
+          'Al trabajar con herramientas populares, los usuarios suelen estar familiarizados con la interfaz desde el primer momento y, en caso de dudas, pueden disponer de mucha información online.',
+        icon: 'tabler:school',
+      },
+
+      {
+        title: 'Actualizaciones',
+        description:
+          'Las herramientas que utilizamos están en constante evolución, lo que implica que más allá de los desarrollos a medida, se podrán recibir actualizaciones periódicas con nuevas funcionalidades, mejoras de seguridad y optimización de rendimiento.',
+        icon: 'tabler:arrows-right-left',
+      },
+    ]}
+  />
+
+  <Features
+    id="features"
+    tagline=""
+    title="Desventajas y soluciones"
+    subtitle="Trabajar con software personalizado plantea retos. Descubre cómo los abordamos para ofrecer soluciones eficientes y sostenibles."
+    items={[
+      {
+        title: 'Vulnerabilidad en herramientas de código abierto',
+        description:
+          'Las herramientas de código abierto pueden ser más sensibles a problemas de seguridad. La solución es disponer de un <strong>servicio de actualización periódico</strong> e integrar los sistemas de seguridad correspondientes para proteger el proyecto.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Complejidad en las actualizaciones',
+        description:
+          'Cuando se requieren muchas personalizaciones, aplicar actualizaciones puede resultar complicado. En Gilsys utilizamos <strong>buenas prácticas de programación</strong> para no modificar el código fuente y encapsular las personalizaciones en módulos independientes, facilitando la compatibilidad con futuras versiones.',
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Tiempo y dificultad de implementación',
+        description:
+          'El tiempo y la complejidad para implementar personalizaciones pueden superar los de un software a medida cuando el grado de adecuación es alto. Es importante evaluarlo previamente antes de iniciar el proyecto para decidir qué tecnología es la más adecuada.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Costos recurrentes de plugins',
+        description:
+          'El uso de plugins comerciales puede implicar suscripciones periódicas que generan gastos recurrentes. En Gilsys analizamos los mejores módulos a integrar y comparamos el costo y las necesidades con opciones de desarrollo a medida para asegurar la mejor solución.',
+        icon: 'tabler:currency-dollar',
+      },
+    ]}
+  />
+  <Content
+    isReversed
+    tagline="No solo tendrás un diseño a medida, conocemos el código y sabemos ampliarlo."
+    title="¿Cómo puede Gilsys ayudarte en la programación de software personalizado?"
+    items={[
+      {
+        title: 'Adaptabilidad a múltiples sectores',
+        description:
+          'Tenemos experiencia en adaptar plataformas a las necesidades específicas de cada sector a nivel de funcionamiento y requisitos comunes.',
+        icon: 'tabler:building',
+      },
+      {
+        title: 'Conocimiento profundo en módulos e integraciones',
+        description:
+          'Trabajamos con una amplia gama de módulos e integraciones, pudiendo sugerir los más adecuados para cada proyecto.',
+        icon: 'tabler:chart-pie',
+      },
+      {
+        title: 'Metodología ágil y eficiente',
+        description:
+          'Planificamos cada proyecto de manera metódica, priorizando funcionalidades críticas e implementando soluciones de manera ágil para cumplir con los plazos establecidos.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Soporte y mantenimiento personalizado',
+        description:
+          'Ofrecemos servicios de soporte, mantenimiento preventivo para integrar actualizaciones y mantenimiento evolutivo para implementar mejoras.',
+        icon: 'tabler:headset',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/software-personalizado.jpg',
+      alt: 'Software personalizado, imagen con tablet y bloques e-commerce',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Conocemos las herramientas y sabemos cómo adaptarlas
+      </h3>
+      En Gilsys somos expertos en programación, no solo sabemos utilizar las herramientas que personalizamos, sino que también
+      podemos extenderlas porque <strong>conocemos su código fuente</strong>.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/14.jpg', alt: 'Fondo abstracto, inspirado en tecnología y software' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Presupuesto gratuito',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Llamar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title"
+      >Conocemos muchas herramientas y podemos <span class="custom-gradient">personalizarlas</span> para tu empresa</Fragment
+    >
+    <Fragment slot="subtitle"
+      >Te asesoraremos sobre cuál sería el software más adecuado para tu sector y te orientaremos sobre cómo podríamos
+      personalizarlo.</Fragment
+    >
+  </CallToAction>
+
+  <BlogLatestPosts title="Últimas entradas del blog" linkText="Ir al blog" />
+</Layout>

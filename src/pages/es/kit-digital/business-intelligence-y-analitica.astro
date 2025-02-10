@@ -1,0 +1,112 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import KitDigital from '~/components/widgets/KitDigital.astro';
+import Layout from '~/layouts/PageLayout.astro';
+const metadata = {
+  title: 'Business Intelligence y Analítica',
+  description:
+    'Optimiza la toma de decisiones empresariales con herramientas de Business Intelligence (BI), integración de datos y paneles personalizados para tu PYME con Kit Digital.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Subvención Kit Digital"
+    backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/dots/21.jpg' }}
+  >
+    <Fragment slot="title">Business Intelligence y Analítica</Fragment>
+    <Fragment slot="subtitle">
+      Implementamos soluciones de <span class="custom-gradient">análisis de datos</span> y <span class="custom-gradient"
+        >Business Intelligence</span
+      > para tu empresa,
+      <span class="custom-gradient">GRATIS</span> con la subvención del Kit Digital, para transformar tus datos en conocimiento
+      y mejorar la toma de decisiones empresariales.
+    </Fragment>
+  </Hero>
+
+  <Features2
+    tagline="Funcionalidades y servicios"
+    subtitle="El objetivo de esta categoría es facilitarte la explotación de los datos de tu empresa para mejorar el proceso de toma de decisiones."
+    title="Transforma tus datos en ventaja competitiva con soluciones de Inteligencia de Negocio y Análisis Avanzado"
+    items={[
+      {
+        title: 'Integración de datos con otras bases de datos',
+        description:
+          'Tendrás acceso a otras bases de datos y la posibilidad de realizar comparaciones con los datos expuestos.',
+        icon: 'tabler:database',
+      },
+      {
+        title: 'Almacenamiento de datos',
+        description:
+          'Si perteneces a los segmentos I, II o III, dispondrás de una capacidad de almacenamiento mínima de 1 GB por usuario. Para los segmentos IV y V, la capacidad mínima de almacenamiento será de 5 GB por usuario.',
+        icon: 'tabler:cloud',
+      },
+      {
+        title: 'Creación de paneles de datos estructurados y visuales',
+        description:
+          'Dispondrás de paneles de datos personalizados con información relevante y diferentes formas de visualización.',
+        icon: 'tabler:chart-pie',
+      },
+      {
+        title: 'Exportación de datos',
+        description:
+          'Podrás exportar datos a imágenes o documentos de Excel, creando sinergias y compatibilidades con los diferentes programas que utilices habitualmente.',
+        icon: 'tabler:file-export',
+      },
+    ]}
+  />
+  <Features
+    title="Subvención Kit Digital según el número de empleados"
+    subtitle="La subvención puede utilizarse para diversos servicios de digitalización, con un importe máximo que varía en función del número de empleados de la empresa."
+    items={[
+      {
+        title: 'Importe total subvencionado:',
+        list: [
+          '<strong>De 0 a 3 empleados:</strong> 3.000€',
+          '<strong>De 50 a 99 empleados:</strong> 25.000€',
+          '<strong>De 100 a 250 empleados:</strong> 29.000€',
+        ],
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Importe máximo para el servicio de Business Intelligence y Analítica:',
+        list: [
+          '<strong>De 0 a 3 empleados:</strong> 1.500€ (incluye 1 usuario)',
+          '<strong>De 50 a 99 empleados:</strong> 7.000€ (incluye 10 usuarios)',
+          '<strong>De 100 a 250 empleados:</strong> 8.000€ (incluye 15 usuarios)',
+        ],
+        icon: 'tabler:check',
+      },
+    ]}
+  />
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/21.jpg', alt: 'Fondo abstracto, inspirado en tecnología y software' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contactar',
+        href: 'contactar',
+      },
+      {
+        variant: 'primary',
+        text: 'Llamar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Estás a un <span class="custom-gradient">click</span> de transformar tus <span class="custom-gradient">datos</span
+      > en conocimiento clave para impulsar tu negocio
+    </Fragment>
+    <Fragment slot="subtitle">
+      Contáctanos y implementaremos soluciones de <span class="custom-gradient">análisis de datos</span> para tu empresa,
+      de forma gratuita gracias a la subvención del Kit Digital.
+    </Fragment>
+  </CallToAction>
+
+  <KitDigital />
+</Layout>

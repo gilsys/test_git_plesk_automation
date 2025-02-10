@@ -1,0 +1,203 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+const metadata = {
+  title: 'Kit Consulting | gilsys',
+  description:
+    'Accede al servicio de Kit Consulting para optimizar los procesos y estrategias digitales de tu empresa. Descubre cómo obtener asesoramiento especializado para transformar digitalmente tu negocio.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/dots/21.jpg' }}
+    actions={[{ variant: 'primary', text: 'Presupuesto gratuito', href: u('contact') }]}
+    tagline="Subvenciones para digitalizar tu empresa"
+  >
+    <Fragment slot="title"><span class="custom-gradient">Kit Consulting</span></Fragment>
+    <Fragment slot="subtitle">
+      Optimiza los procesos y estrategias digitales de tu empresa con nuestro servicio de asesoramiento experto.
+    </Fragment>
+  </Hero>
+
+  <Features3
+    id="features-kit-consulting"
+    tagline="Servicios de asesoramiento del Kit Consulting"
+    title="Transforma digitalmente tu negocio con el Kit Consulting"
+    subtitle="Explora las diferentes áreas en las que podemos ayudarte con un asesoramiento personalizado y estratégico."
+    items={[
+      {
+        title: 'Asesoramiento en Inteligencia Artificial',
+        description:
+          'Descubre cómo aplicar la IA para optimizar procesos y mejorar la productividad de tu negocio.',
+        icon: 'tabler:robot',
+        callToAction: {
+          class: 'more-info',
+          text: 'Más información',
+          href: u('kit-consulting/ai-advisory'),
+        },
+      },
+      {
+        title: 'Asesoramiento en análisis de datos (Básico)',
+        description: 'Aprende a interpretar y utilizar los datos para tomar mejores decisiones estratégicas.',
+        icon: 'tabler:chart-bar',
+        callToAction: {
+          class: 'more-info',
+          text: 'Más información',
+          href: u('kit-consulting/basic-data-analysis'),
+        },
+      },
+      {
+        title: 'Asesoramiento en análisis de datos (Avanzado)',
+        description:
+          'Implementa análisis avanzados para descubrir oportunidades y optimizar los resultados de tu negocio.',
+        icon: 'tabler:chart-pie',
+        callToAction: {
+          class: 'more-info',
+          text: 'Más información',
+          href: u('kit-consulting/advanced-data-analysis'),
+        },
+      },
+      {
+        title: 'Asesoramiento en ventas digitales',
+        description: 'Mejora tu estrategia de ventas digitales para aumentar ingresos y captar nuevos clientes.',
+        icon: 'tabler:shopping-cart',
+        callToAction: {
+          class: 'more-info',
+          text: 'Más información',
+          href: u('kit-consulting/digital-sales-advisory'),
+        },
+      },
+      {
+        title: 'Asesoramiento en procesos de negocio o producción',
+        description: 'Optimiza y digitaliza tus procesos para ganar en eficiencia y reducir costos.',
+        icon: 'tabler:settings',
+        callToAction: {
+          class: 'more-info',
+          text: 'Más información',
+          href: u('kit-consulting/business-process-advisory'),
+        },
+      },
+      {
+        title: 'Asesoramiento en estrategia y rendimiento de negocio',
+        description: 'Define e implementa estrategias para mejorar el rendimiento global de tu empresa.',
+        icon: 'tabler:trending-up',
+        callToAction: {
+          class: 'more-info',
+          text: 'Más información',
+          href: u('kit-consulting/business-strategy-advisory'),
+        },
+      },
+      {
+        title: 'Asesoramiento “360°” en transformación digital',
+        description:
+          'Recibe un asesoramiento integral para abordar la digitalización de tu negocio desde todos los ángulos.',
+        icon: 'tabler:circle',
+        callToAction: {
+          class: 'more-info',
+          text: 'Más información',
+          href: u('kit-consulting/360-digital-transformation'),
+        },
+      },
+    ]}
+  />
+
+  <Content
+    isReversed
+    tagline="Ayudas según el tamaño de tu empresa"
+    title="Ayudas según los segmentos del Kit Consulting"
+    items={[
+      {
+        title: 'Pequeñas empresas',
+        description: 'Empresas con entre 10 y menos de 50 empleados pueden optar a un importe de hasta 12.000€.',
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Medianas empresas (Segmento IV)',
+        description: 'Empresas con entre 50 y menos de 100 empleados pueden recibir hasta 18.000€.',
+        icon: 'tabler:building',
+      },
+      {
+        title: 'Medianas empresas (Segmento V)',
+        description: 'Empresas con entre 100 y menos de 250 empleados pueden acceder a un importe de hasta 24.000€.',
+        icon: 'tabler:building-arch',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/kit-consulting.jpg',
+      alt: 'Kit Consulting, segmentos según tamaño de empresa',
+    }}
+  />
+
+  <FAQs
+    title="Preguntas frecuentes sobre el Kit Consulting"
+    items={[
+      {
+        title: '¿Qué es el Kit Consulting?',
+        description:
+          'Es un servicio de asesoramiento especializado destinado a empresas que desean transformarse digitalmente, con soporte en estrategia, procesos y tecnología.',
+      },
+      {
+        title: '¿Quién puede beneficiarse del Kit Consulting?',
+        description:
+          'Empresas de 10 a 250 empleados que busquen optimizar sus procesos o implementar estrategias digitales pueden acceder a él.',
+      },
+      {
+        title: '¿Cómo puedo solicitar el Kit Consulting?',
+        description:
+          `Contacta con nosotros en <a class="text-accent" href='` +
+          u('contact') +
+          `'>gilsys</a> para recibir información detallada y comenzar el proceso de solicitud.`,
+      },
+      {
+        title: '¿Cuál es la función de gilsys en el Kit Consulting?',
+        description:
+          'En gilsys ofrecemos asesoramiento especializado y te ayudamos a implementar las soluciones más adecuadas para tu empresa.',
+      },
+    ]}
+  />
+
+  <Fragment slot="content">
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+      Conocemos las herramientas y sabemos cómo adaptarlas
+    </h3>
+    En gilsys somos expertos en programación, no solo sabemos utilizar las herramientas que personalizamos, sino que también podemos extenderlas
+    porque <strong>conocemos su código fuente</strong>.
+  </Fragment>
+
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-lightgray"></div>
+  </Fragment>
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/21.jpg', alt: 'Fondo abstracto, inspirado en tecnología y software' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Presupuesto gratuito',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Llamar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title"
+      >Aprovecha el <span class="custom-gradient">Kit Consulting</span> para transformar tu negocio</Fragment
+    >
+    <Fragment slot="subtitle">
+      Obtén soporte personalizado en estrategia, tecnología y procesos para hacer crecer tu empresa.
+    </Fragment>
+  </CallToAction>
+</Layout>

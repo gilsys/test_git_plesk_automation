@@ -1,0 +1,230 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+const metadata = {
+  title: 'Business Intelligence con Metabase',
+  description:
+    'Conecta bases de datos, analiza información y transforma en decisiones estratégicas con Metabase, una herramienta de Business Intelligence.',
+};
+---
+
+<Layout metadata={metadata}>
+
+  <Hero tagline="Herramientas que transforman tus datos en información clave para la toma de decisiones."
+  backgroundImage={{alt: 'Fondo abstracto',  src: '~/assets/images/dots/27.jpg'}}
+  >
+    <Fragment slot="title">
+      <span class="text-accent highlight">Business Intelligence</span> con Metabase
+    </Fragment>
+    <Fragment slot="subtitle">
+      Conectamos bases de datos y creamos paneles con gráficos e indicadores.
+    </Fragment>
+  </Hero>
+
+  <Content
+    isReversed
+    tagline="En lugar de confiar en suposiciones o intuiciones, BI ofrece datos concretos que permiten a los directivos actuar con confianza y precisión."
+    title="¿Qué es Business Intelligence?"
+    subtitle="BI permite a las empresas entender su rendimiento, identificar patrones y tomar decisiones basadas en datos concretos."
+    
+    items={[{
+        title: 'Identificación de oportunidades y retos',
+        description: 'Ayuda a detectar áreas de mejora y aprovechar oportunidades del mercado.',
+      },
+      {
+        title: 'Mejora de la eficiencia operativa',
+        description: 'Optimiza procesos gracias a un análisis detallado de los datos.',
+      },
+      {
+        title: 'Monitorización en tiempo real',
+        description: 'Acceso inmediato a métricas y rendimiento para adaptarse rápidamente a los cambios.',
+      },
+      {
+        title: 'Decisiones basadas en datos',
+        description: 'Proporciona información clara para estrategias precisas y eficientes.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/business-analytics-graficas-empresariales.jpg',
+      alt: 'Paneles con gráficos y datos empresariales de BI',
+    }}
+>
+<Fragment slot="preContent">
+  <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">
+      Transformar datos en decisiones estratégicas
+  </h3>
+  <p class="text-muted">
+      El concepto de Business Intelligence (BI) hace referencia al uso de herramientas y tecnologías para analizar datos empresariales y convertirlos en información clara y útil para la toma de decisiones. Con BI, las empresas pueden acceder a una visión completa de su rendimiento, identificar patrones y tendencias, y anticiparse a las necesidades del mercado o a posibles problemas.
+  </p>
+</Fragment>
+<Fragment slot="postContent">
+  <h3 class="text-2xl font-bold tracking-tightsm:text-3xl mb-2">¿Qué empresas necesitan utilizar Business Intelligence?</h3>
+  <p class="text-muted">       
+      Las herramientas de BI son útiles para empresas <strong>de cualquier sector y tamaño</strong> que necesiten tomar decisiones basadas en datos.<br/><br/>
+      Son especialmente relevantes para equipos de marketing, ventas, finanzas y operaciones que deben monitorizar métricas clave, identificar patrones o tendencias y generar informes visuales fácilmente comprensibles <strong>sin necesidad de conocimientos avanzados en SQL o programación</strong>.
+  </p>
+</Fragment>
+
+</Content>
+
+<Features
+id="benefits"
+tagline=""
+title="Beneficios del Business Intelligence"
+subtitle="Descubre las ventajas de trabajar con un equipo experto en Metabase y BI."
+items={[{
+  title: 'Visión clara y precisa',
+  description: 'Accede a todos los datos de tu negocio en un solo lugar, con informes claros que facilitan la toma de decisiones.',
+  icon: 'tabler:eye',
+},
+{
+  title: 'Toma de decisiones basada en datos',
+  description: 'Elimina la intuición y actúa con confianza gracias a datos objetivos y actualizados.',
+  icon: 'tabler:clipboard-list',
+},
+{
+  title: 'Ahorro de tiempo',
+  description: 'Paneles automáticos e informes programados para dedicar menos tiempo a analizar datos y más a implementar acciones.',
+  icon: 'tabler:clock',
+},
+{
+  title: 'Soluciones personalizadas',
+  description: 'Paneles, consultas y visualizaciones completamente adaptadas a tu negocio.',
+  icon: 'tabler:settings',
+},
+{
+  title: 'Escalabilidad y flexibilidad',
+  description: 'Metabase crece con tu empresa, permitiendo añadir nuevas bases de datos o paneles según las necesidades.',
+  icon: 'tabler:line',
+},
+{
+  title: 'Anticipa tendencias y escenarios futuros',
+  description:'El BI te permite analizar datos históricos, tendencias actuales y prever escenarios futuros para anticiparte a los cambios del mercado.',
+  icon: 'tabler:clock-2',
+},
+]}
+/>
+
+<Content
+    isReversed
+    tagline=""
+    title="Funcionalidades BI avanzadas con <span class='custom-gradient'>Metabase</span>"
+    subtitle="En Gilsys, ofrecemos soluciones personalizadas que maximizan el potencial de Metabase."
+    items={[
+      {
+        title: 'Diseño de paneles avanzados',
+        list: [
+          'Creación de paneles específicos para cada departamento.',
+          'Datos filtrados y visualizaciones adaptadas a los objetivos.',
+        ],
+      },
+      {
+        title: 'Automatización de consultas e informes',
+        list: [
+          "Programación de informes recurrentes con consultas SQL complejas.",          
+          "Reducción de la intervención manual en la generación de informes.",
+        ],
+      },
+      {
+        title: 'Integración con sistemas existentes',
+        list: [
+          'Conexión con bases de datos SQL, CRMs, ERPs y otras herramientas.',
+          'Datos centralizados y sincronizados en tiempo real.',
+        ],
+      },
+      {
+        title: 'Optimización de bases de datos',
+        list: [
+          'Reestructuración de bases de datos para mejorar el rendimiento.',
+          'Gestión eficiente de datos empresariales.',
+        ],
+      },
+      {
+        title: 'Personalización de indicadores clave KPI',
+        list: [
+          'Métricas específicas para ventas, costos y rendimiento de equipos.',
+          'Visualización de tendencias de mercado y otros indicadores importantes.',
+        ],
+      },
+    ]
+    }
+    image={{
+      src: '~/assets/images/metabase-panel.jpg',
+      alt: 'Panel de datos BI de Metabase',
+    }}
+  />
+
+  <Content
+    isReversed
+    tagline="No es fácil encontrar una empresa especialista en Metabase"
+    title="¿Por qué confiar en Gilsys para implementar Business Intelligence?"
+    items={[
+      {
+        title: 'Conocimiento profundo de SQL y bases de datos:',
+        description:
+          'En Gilsys tenemos experiencia en estructurar y optimizar bases de datos para asegurar que funcionen de manera eficiente con herramientas como Metabase.',
+        icon: 'tabler:building',
+      },
+      {
+        title: 'Especialistas en Metabase:',
+        description:
+          "Sabemos cómo aprovechar al máximo esta herramienta, desde funcionalidades básicas hasta configuraciones avanzadas.",
+        icon: 'tabler:chart-pie',
+      },
+      {
+        title: 'Adaptación completa',
+        description:
+          "Creamos paneles, consultas y visualizaciones específicas para cada cliente, sin soluciones estándar que no se ajusten a tus necesidades.",
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Enfoque práctico',
+        description: 'No solo configuramos Metabase, sino que también te formamos para que puedas utilizarlo de manera independiente y sacarle el máximo provecho.',
+        icon: 'tabler:headset',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/metabase-background.jpg',
+      alt: 'Imagen de software personalizado',
+    }}
+  >
+    <Fragment slot="postContent">
+      <p>
+      Tu empresa tendrá acceso a una de las herramientas más potentes de Business Intelligence, que permitirá transformar los datos en información valiosa.
+      </p>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+  backgroundImage={{ src: '~/assets/images/dots/27.jpg', alt: 'Fondo abstracto, inspirado en tecnología y software' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Presupuesto gratuito',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Llamar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">¿Necesitas un <span class="custom-gradient">software de BI</span> para mejorar la toma de decisiones?</Fragment>
+    <Fragment slot="subtitle">
+      Nuestro equipo está preparado para implementar Metabase y convertir los datos de tu negocio en información valiosa.
+    </Fragment>
+</CallToAction>
+
+
+</Layout>

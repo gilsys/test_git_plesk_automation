@@ -1,0 +1,303 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+const metadata = {
+  title: 'Kit Digital | gilsys',
+  description:
+    'Accede a ayudas del Kit Digital para digitalizar tu negocio con soluciones adaptadas. Descubre cómo obtener hasta 29.000€ en subvenciones.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/dots/21.jpg' }}
+    actions={[{ variant: 'primary', text: 'Presupuesto gratuito', href: u('contact') }]}
+    tagline="Subvenciones para digitalizar tu empresa"
+  >
+    <Fragment slot="title"><span class="custom-gradient">Kit Digital</span></Fragment>
+    <Fragment slot="subtitle">
+      Digitaliza tu empresa con ayudas adaptadas a tus necesidades. Para autónomos y empresas de hasta 250 trabajadores.
+    </Fragment>
+  </Hero>
+  <Features3
+    id="features-kit-digital"
+    tagline="Subvenciones del Kit Digital"
+    title="Impulsa la digitalización de tu negocio con las ayudas del Kit Digital"
+    subtitle="Descubre todas las subvenciones disponibles para la digitalización de tu empresa. Adaptamos las soluciones a tus necesidades."
+    items={[
+      {
+        title: 'Business Intelligence y Analítica',
+        description:
+          'Implementa soluciones para analizar datos y tomar decisiones estratégicas con herramientas modernas.',
+        icon: 'tabler:chart-bar',
+        callToAction: {
+          class: 'more-info',
+          text: 'Más información',
+          href: u('kit-digital/bi-analytics'),
+        },
+      },
+      {
+        title: 'Ciberseguridad',
+        description: 'Protege tu negocio frente a posibles amenazas digitales con soluciones avanzadas.',
+        icon: 'tabler:shield-check',
+        callToAction: {
+          class: 'more-info',
+          text: 'Más información',
+          href: u('kit-digital/cybersecurity'),
+        },
+      },
+      {
+        title: 'Comercio electrónico',
+        description: 'Crea o mejora tu tienda en línea para incrementar tus ventas y llegar a nuevos clientes.',
+        icon: 'tabler:shopping-cart',
+        callToAction: {
+          class: 'more-info',
+          text: 'Más información',
+          href: u('kit-digital/e-commerce'),
+        },
+      },
+      {
+        title: 'Comunicaciones seguras',
+        description: 'Mejora la seguridad de las comunicaciones empresariales con herramientas fiables y encriptadas.',
+        icon: 'tabler:lock',
+        callToAction: {
+          class: 'more-info',
+          text: 'Más información',
+          href: u('kit-digital/secure-communications'),
+        },
+      },
+      {
+        title: 'Gestión de clientes',
+        description: 'Optimiza la captación y fidelización de clientes con soluciones CRM adaptadas.',
+        icon: 'tabler:users',
+        callToAction: {
+          class: 'more-info',
+          text: 'Más información',
+          href: u('kit-digital/customer-management'),
+        },
+      },
+      {
+        title: 'Gestión de clientes con IA asociada',
+        description: 'Incorpora inteligencia artificial para mejorar la relación con tus clientes.',
+        icon: 'tabler:robot',
+        callToAction: {
+          class: 'more-info',
+          text: 'Más información',
+          href: u('kit-digital/ai-customer-management'),
+        },
+      },
+      {
+        title: 'Gestión de facturación y factura electrónica',
+        description: 'Simplifica y automatiza la gestión de la facturación con herramientas digitales eficientes.',
+        icon: 'tabler:file-invoice',
+        callToAction: {
+          class: 'more-info',
+          text: 'Más información',
+          href: u('kit-digital/electronic-invoicing'),
+        },
+      },
+      {
+        title: 'Gestión de procesos',
+        description: 'Mejora la eficiencia de tu negocio con herramientas para optimizar los procesos internos.',
+        icon: 'tabler:settings',
+        callToAction: {
+          class: 'more-info',
+          text: 'Más información',
+          href: u('kit-digital/process-management'),
+        },
+      },
+      {
+        title: 'Gestión de procesos con IA asociada',
+        description: 'Automatiza y optimiza procesos mediante inteligencia artificial.',
+        icon: 'tabler:brain',
+        callToAction: {
+          class: 'more-info',
+          text: 'Más información',
+          href: u('kit-digital/ai-process-management'),
+        },
+      },
+      {
+        title: 'Gestión de redes sociales',
+        description: 'Gestiona y optimiza tu presencia en redes sociales con soluciones avanzadas.',
+        icon: 'tabler:share',
+        callToAction: {
+          class: 'more-info',
+          text: 'Más información',
+          href: u('kit-digital/social-media-management'),
+        },
+      },
+      {
+        title: 'Puesto de trabajo seguro',
+        description: 'Garantiza la seguridad de los equipos y herramientas de trabajo con soluciones adaptadas.',
+        icon: 'tabler:lock',
+        callToAction: {
+          class: 'more-info',
+          text: 'Más información',
+          href: u('kit-digital/secure-workplace'),
+        },
+      },
+      {
+        title: 'Marketplace',
+        description: 'Crea y gestiona tu propia plataforma de ventas en línea para expandir tu negocio.',
+        icon: 'tabler:shopping-bag',
+        callToAction: {
+          class: 'more-info',
+          text: 'Más información',
+          href: u('kit-digital/marketplace'),
+        },
+      },
+      {
+        title: 'Presencia avanzada en Internet',
+        description: 'Mejora la visibilidad de tu negocio con una estrategia digital adaptada.',
+        icon: 'tabler:world',
+        callToAction: {
+          class: 'more-info',
+          text: 'Más información',
+          href: u('kit-digital/advanced-internet-presence'),
+        },
+      },
+      {
+        title: 'Servicio de Ciberseguridad Gestionada',
+        description: 'Confía en expertos para monitorizar y gestionar la seguridad de tu negocio.',
+        icon: 'tabler:shield',
+        callToAction: {
+          class: 'more-info',
+          text: 'Más información',
+          href: u('kit-digital/managed-cybersecurity'),
+        },
+      },
+      {
+        title: 'Servicios y herramientas de oficina virtual',
+        description: 'Implementa soluciones para trabajar en remoto de manera eficiente y segura.',
+        icon: 'tabler:device-desktop-analytics',
+        callToAction: {
+          class: 'more-info',
+          text: 'Más información',
+          href: u('kit-digital/virtual-office-tools'),
+        },
+      },
+    ]}
+  />
+  <Content
+    isReversed
+    tagline="Subvenciones adaptadas según el tamaño de tu empresa"
+    title="Ayudas según los segmentos del Kit Digital"
+    items={[
+      {
+        title: 'Segmento III',
+        description:
+          'Pequeñas empresas, microempresas y autónomos con entre 0 y 3 empleados pueden optar a un bono digital de hasta 3.000€. Ideal para negocios pequeños que buscan un primer impulso digital.',
+        icon: 'tabler:user',
+      },
+      {
+        title: 'Segmento IV',
+        description:
+          'Medianas empresas con entre 50 y menos de 100 empleados pueden recibir un bono digital de hasta 25.000€, perfecto para implementar soluciones digitales avanzadas.',
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Segmento V',
+        description:
+          'Medianas empresas con entre 100 y menos de 250 empleados pueden acceder a un bono digital de hasta 29.000€. Esta ayuda permite realizar una transformación digital completa.',
+        icon: 'tabler:building',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/kit-digital.jpg',
+      alt: 'Kit Digital, segmentos según tamaño de empresa',
+    }}
+  />
+
+  <FAQs
+    title="Preguntas frecuentes sobre el Kit Digital"
+    items={[
+      {
+        title: '¿Qué es el Kit Digital?',
+        description:
+          'El Kit Digital es un programa financiado por los fondos Next Generation de la Unión Europea, destinado a ayudar a pequeñas y medianas empresas a digitalizarse. Ofrece subvenciones que pueden oscilar entre 3.000€ y 29.000€ según el tamaño de la empresa.',
+      },
+      {
+        title: '¿Quién puede beneficiarse del Kit Digital?',
+        description:
+          'Está dirigido a autónomos y empresas de hasta 250 empleados. Se organiza en diferentes segmentos según el número de empleados, y cada segmento tiene un importe máximo asignado para el bono digital.',
+      },
+      {
+        title: '¿Qué servicios se pueden subvencionar con el Kit Digital?',
+        description:
+          'Las subvenciones cubren una amplia gama de soluciones digitales, como: sitios web, comercio electrónico, gestión de clientes (CRM), ciberseguridad, presencia avanzada en Internet, gestión de redes sociales, gestión de procesos, analítica empresarial (BI), comunicaciones seguras, y más.',
+      },
+      {
+        title: '¿Cómo puedo solicitar el Kit Digital?',
+        description:
+          `Para acceder al Kit Digital, primero es necesario comprobar si tu empresa cumple los requisitos. En <a class="text-accent" href='` +
+          u('contact') +
+          `'>gilsys</a>, te ayudamos a gestionar el proceso de solicitud, incluyendo la evaluación inicial, la tramitación de la subvención y la implementación de las soluciones elegidas.`,
+      },
+      {
+        title: '¿Cuál es nuestra función como agentes digitalizadores?',
+        description:
+          'En gilsys somos agentes digitalizadores certificados. Esto significa que podemos asesorarte e implementar las soluciones tecnológicas que mejor se adapten a las necesidades de tu empresa, garantizando siempre que cumplan con los requisitos del programa Kit Digital.',
+      },
+      {
+        title: '¿Cuánto tiempo se tarda en recibir la ayuda?',
+        description:
+          'Los plazos pueden variar según la carga administrativa, pero desde el momento en que se concede la subvención, puedes comenzar a implementar las soluciones seleccionadas con nuestro soporte.',
+      },
+      {
+        title: '¿Es obligatorio invertir todo el importe de la subvención?',
+        description:
+          'No, puedes distribuir el importe entre las soluciones que necesites. Sin embargo, para optar al "Puesto de trabajo seguro", es obligatorio haber contratado previamente otra solución de digitalización.',
+      },
+      {
+        title: '¿Por qué elegir gilsys como agente digitalizador?',
+        description:
+          'Como expertos en soluciones digitales y programación personalizada, no solo te ayudamos a acceder a las subvenciones, sino que también implementamos las herramientas más adecuadas para garantizar que la digitalización tenga un impacto real y duradero en tu negocio.',
+      },
+    ]}
+  />
+
+  <Fragment slot="content">
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+      Conocemos las herramientas y sabemos cómo adaptarlas
+    </h3>
+    En gilsys somos expertos en programación, no solo sabemos utilizar las herramientas que personalizamos, sino que también
+    podemos extenderlas porque <strong>conocemos el código fuente</strong>.
+  </Fragment>
+
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-lightgray"></div>
+  </Fragment>
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/21.jpg', alt: 'Fondo abstracto, inspirado en tecnología y software' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Presupuesto gratuito',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Llamar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title"
+      >Aprovecha el <span class="custom-gradient">Kit Digital</span> y digitaliza tu negocio</Fragment
+    >
+    <Fragment slot="subtitle">
+      Descubre las subvenciones disponibles y déjanos ayudarte a elegir e implementar las mejores soluciones para tu
+      negocio.
+    </Fragment>
+  </CallToAction>
+</Layout>

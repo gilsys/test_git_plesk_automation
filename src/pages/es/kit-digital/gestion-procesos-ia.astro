@@ -1,0 +1,117 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import KitDigital from '~/components/widgets/KitDigital.astro';
+import Layout from '~/layouts/PageLayout.astro';
+const metadata = {
+  title: 'Gestión de procesos con IA asociada',
+  description:
+    'Digitaliza y automatiza procesos de negocio relacionados con los aspectos operativos o productivos mediante capacitaciones en inteligencia artificial. 100% subvencionado.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Subvención Kit Digital"
+    backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/dots/21.jpg' }}
+  >
+    <Fragment slot="title">Gestión de procesos con IA asociada</Fragment>
+    <Fragment slot="subtitle">
+      Optimiza los procesos operativos de tu empresa con <span class="custom-gradient">inteligencia artificial</span> y
+      <span class="custom-gradient">automatización de procesos</span>,
+      <span class="custom-gradient">GRATIS</span> gracias a la subvención del Kit Digital, para mejorar tu eficiencia y agilizar
+      la toma de decisiones.
+    </Fragment>
+  </Hero>
+
+  <Features2
+    columns={1}
+    tagline="Funcionalidades y servicios"
+    subtitle="El objetivo principal es digitalizar y/o automatizar procesos de negocio relacionados con los aspectos operativos o productivos de las empresas beneficiarias mediante capacitaciones en inteligencia artificial especializadas en gestión de procesos."
+    title="Optimiza la gestión de procesos con IA para una toma de decisiones más ágil"
+    items={[
+      {
+        title: 'Automatización de procesos y flujos de trabajo',
+        description:
+          'La solución deberá permitir la digitalización y/o automatización de procesos integrales (horizontales o verticales), así como otras funcionalidades de gestión interna de procesos.',
+        icon: 'tabler:repeat',
+      },
+      {
+        title: 'Integración con diversas plataformas',
+        description: 'La solución deberá disponer de APIs o Web Services para su integración con otras herramientas.',
+        icon: 'tabler:plug',
+      },
+      {
+        title: 'Actualizable',
+        description: 'La solución deberá ser actualizable con nuevas versiones.',
+        icon: 'tabler:refresh',
+      },
+      {
+        title: 'Escalable',
+        description:
+          'La solución deberá poder adaptarse a los posibles crecimientos o cambios en la estructura empresarial de la pyme.',
+        icon: 'tabler:arrows-up-down',
+      },
+      {
+        title: 'Capacitación en fundamentos de IA generativa para la gestión de procesos',
+        description:
+          'Capacitaciones para preparar a los empleados en torno a las funcionalidades descritas arriba, que contarán con:',
+        list: [
+          '<strong>Fundamentos básicos:</strong><br/>Aproximación a la normativa vigente y riesgos éticos y de seguridad derivados.',
+          '<strong>Capacitaciones específicas en:</strong><br/>Automatización y optimización de flujos de trabajo (contabilidad y finanzas, facturación, proyectos, inventario, compras y pagos, recursos humanos, logística y otros), gestión financiera, interpretación de datos y aprendizaje continuo.',
+          '<strong>Duración:</strong><br/>Las capacitaciones tendrán una duración total de 20h a lo largo de dos meses para cada uno de los usuarios definidos por segmento.',
+          '<strong>Instructor humano:</strong><br/>Tanto en modalidad presencial como en línea, las capacitaciones serán impartidas por un instructor humano a disposición de los usuarios.',
+          '<strong>Diploma de finalización:</strong><br/>Se otorgará un certificado de capacidades adquiridas en IA al concluir la formación.',
+        ],
+        icon: 'tabler:book',
+      },
+    ]}
+  />
+
+  <Features
+    title="Subvención Kit Digital según el número de empleados"
+    subtitle="La subvención puede utilizarse para diversos servicios de digitalización, con un importe máximo que varía en función del número de empleados de la empresa."
+    items={[
+      {
+        title: 'Importe total subvencionado:',
+        list: ['<strong>De 50 a 99 empleados:</strong> 25.000€', '<strong>De 100 a 250 empleados:</strong> 29.000€'],
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Importe máximo para el servicio de Gestión de procesos con IA asociada:',
+        list: [
+          '<strong>De 50 a 99 empleados:</strong> 16.000€ (incluye 10 usuarios y mínimo capacitación a 3 de ellos en IA asociada)',
+          '<strong>De 100 a 250 empleados:</strong> 19.000€ (incluye 15 usuarios y mínimo capacitación a 5 de ellos en IA asociada)',
+        ],
+        icon: 'tabler:check',
+      },
+    ]}
+  />
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/21.jpg', alt: 'Fondo abstracto, inspirado en tecnología y software' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contactar',
+        href: 'contactar',
+      },
+      {
+        variant: 'primary',
+        text: 'Llamar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Aprovecha la subvención del Kit Digital para implementar el servicio de <span class="custom-gradient"
+        >Gestión de procesos con IA asociada</span
+      > de forma gratuita
+    </Fragment>
+    <Fragment slot="subtitle"> Contáctanos y te asesoraremos sobre cómo digitalizar tu empresa. </Fragment>
+  </CallToAction>
+
+  <KitDigital />
+</Layout>

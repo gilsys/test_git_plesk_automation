@@ -1,0 +1,327 @@
+---
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Prices from '~/components/widgets/Pricing.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+
+
+const metadata = {
+  title: 'Desarrollo web a medida en WordPress | +20 años',
+  description:
+    'Agencia de programación de WordPress para empresas, creamos módulos a medida, diseño y maquetación personalizados y rendimiento optimizado.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Section -->
+  <Hero tagline="Tu web con el CMS más popular."
+  backgroundImage={{alt: 'Fondo abstracto',  src: '~/assets/images/dots/08.jpg'}}
+  >
+    <Fragment slot="title">
+      Web a medida con <span class="custom-gradient">WordPress</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      Desarrollamos páginas web para empresas, con <span class="custom-gradient">diseño y plantillas personalizadas</span> mediante módulos y temas programados a medida.
+    </Fragment>
+  </Hero>
+
+  <!-- Introducción -->
+  <Content
+    tagline="Programamos y diseñamos webs a medida en WordPress"
+    title="Expertos en WordPress"
+    subtitle="Además de contar con miles de plantillas y módulos, podemos programar a medida y personalizar la web, tanto a nivel de diseño como de funcionamiento."
+    items={[
+      {
+        title: 'Contenido atractivo y optimizado para SEO',
+        list: [
+          'Permite crear páginas con contenido optimizado para buscadores.',
+          'Atrae usuarios con un diseño atractivo y una estructura bien definida.',
+        ],
+        icon: 'tabler:search',
+      },
+      {
+        title: 'Gestión de contenidos amigable',
+        list: [
+          'Facilita la gestión de contenidos gracias a una interfaz intuitiva.',
+          'Ideal para usuarios sin conocimientos técnicos avanzados.',
+        ],
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Integración de funcionalidades adicionales',
+        list: [
+          'Añadir funcionalidades como galerías de imágenes, tiendas online o blogs.',
+          'Compatible con miles de plugins disponibles.',
+        ],
+        icon: 'tabler:components',
+      },
+      {
+        title: 'Comunidad amplia y recursos externos',
+        list: [
+          'Acceso a una gran comunidad de desarrolladores y usuarios.',
+          'Documentación extensa, temas y plugins para adaptar el proyecto a medida.',
+        ],
+        icon: 'tabler:users',
+      },
+    ]    
+    }
+    image={{
+        src: '~/assets/images/wordpress-themes.jpg',
+
+      alt: 'WordPress webs personalizadas',
+    }}
+  >
+    <Fragment slot="preContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">WordPress es la base, nosotros programamos el resto</h3>
+      <p class="text-muted">
+        WordPress es una de las plataformas CMS más utilizadas para crear páginas web autogestionadas gracias a su flexibilidad,
+        facilidad de uso y gran variedad de temas y plugins.
+      </p>
+      <p class="text-muted mt-2">
+        En Gilsys, somos expertos en el desarrollo de páginas web basadas en WordPress, conocemos en profundidad el código de la plataforma, los mejores módulos y las técnicas para extenderlo y personalizarlo.
+      </p>
+      <p class="text-muted mt-2">
+        Podemos crear plugins a medida, personalizar plugins existentes o adaptarlos siguiendo buenas prácticas de
+        programación, asegurando que las funcionalidades personalizadas sean compatibles con futuras actualizaciones de
+        la plataforma.
+      </p>
+    </Fragment>
+    <Fragment slot="content">
+      <p>
+        WordPress es una herramienta muy versátil e intuitiva, ideal para aquellos proyectos que necesitan un diseño
+        atractivo y una gestión de contenidos estándar con opciones de personalización.
+      </p>
+    </Fragment>
+    <Fragment slot="postContent">
+      <h3 class="text-2xl font-bold tracking-tightsm:text-3xl mb-2">¿Qué empresas pueden necesitar un WordPress?</h3>
+      <p class="text-muted">
+        WordPress es perfecto para pequeñas y medianas empresas que necesitan una presencia en línea profesional,
+        creadores de contenido que buscan gestionar blogs y multimedia con facilidad, negocios digitales que quieren
+        implementar funcionalidades de <a href={u('software/ecommerce')} class="text-accent" title="Tiendas online con WooCommerce">e-commerce con WooCommerce</a>, y organizaciones que requieren
+        una solución asequible, potente y escalable.
+      </p>
+      <p class="text-muted mt-3">
+        Si se necesita un resultado con mayor rendimiento, donde no se prioriza la autogestión de contenidos, sino la velocidad, el rendimiento y la optimización para buscadores, recomendamos crear una web a medida con <a href={u('development/astro')} class="text-accent" title="Programación de webs rápidas, seguras y optimizadas para SEO">ASTRO</a>.
+      </p>
+    </Fragment>
+  </Content>
+
+  <Content
+  isReversed
+  tagline=""
+  title="¿Por qué elegir WordPress para tu página web?"
+  items={[
+    {
+      title: 'Crear páginas atractivas y optimizadas para SEO',
+      description:
+        'WordPress ofrece las herramientas necesarias para diseñar páginas con contenido optimizado para buscadores, mejorando la visibilidad y el atractivo para los usuarios.',
+    },
+    {
+      title: 'Facilidad en la gestión de contenidos',
+      description:
+        'Su interfaz amigable permite gestionar contenidos con facilidad, incluso para usuarios sin conocimientos técnicos.',
+    },
+    {
+      title: 'Integración de funcionalidades adicionales',
+      description:
+        'Añadir funcionalidades como galerías de imágenes, tiendas online o formularios es sencillo gracias a la gran variedad de plugins disponibles.',
+    },
+    {
+      title: 'Acceso a una comunidad amplia y recursos externos',
+      description:
+        'Miles de temas, plugins y una gran cantidad de documentación hacen que WordPress sea una plataforma versátil y respaldada por una comunidad activa.',
+    },
+  ]}
+  image={{
+    src: '~/assets/images/wordpress-web-personalizada.jpg',
+    alt: 'Imagen de muestra de plantilla de WordPress',
+  }}
+>
+  <Fragment slot="preContent">
+    <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">La plataforma más popular</h3>
+    <p class="text-muted">
+      WordPress es una herramienta muy versátil e intuitiva, ideal para aquellos proyectos que necesitan una gestión de
+      contenidos estándar con opciones de personalización.
+    </p>
+  </Fragment>
+  <Fragment slot="postContent">
+    <h3 class="text-2xl font-bold tracking-tightsm:text-3xl mb-2">Limitaciones de rendimiento</h3>
+    <p class="text-muted">
+      A pesar de ser muy versátil, WordPress puede presentar limitaciones de rendimiento en comparación con páginas web rápidas
+      desarrolladas con tecnologías para <a href={u('development/astro')} class="text-accent" title="Programación de webs optimizadas">webs de alto rendimiento</a>, como las que
+      programamos en Gilsys.
+    </p>
+  </Fragment>
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-lightgray"></div>
+  </Fragment>
+</Content>
+
+<Prices
+  title={`Comparativa entre WordPress y <a href='` + u('development/astro') + `' class="text-accent" title="Programación de webs rápidas, seguras y optimizadas para SEO">ASTRO</a>`}
+  subtitle="Cada tecnología ofrece diferentes ventajas, es importante elegir según las necesidades de cada proyecto."
+  prices={[
+    {
+      title: 'WordPress',
+      subtitle: 'Solución intuitiva y popular con una amplia comunidad.',
+      items: [
+        {
+          title: 'Rendimiento',
+          description: 'Puede ser limitado con muchos plugins o contenidos pesados.',
+        },
+        {
+          title: 'Facilidad de uso',
+          description: 'Interfaz intuitiva y amigable para usuarios sin conocimientos técnicos.',
+        },
+        {
+          title: 'Personalización',
+          description: 'Gran variedad de plugins y temas; personalizable con extensión de plugins.',
+        },
+        {
+          title: 'Actualizaciones y mantenimiento',
+          description: 'Sencillo gracias al sistema integrado de WordPress.',
+        },
+        {
+          title: 'Escalabilidad',
+          description: 'Adecuado para proyectos medianos; limitado con altas exigencias de rendimiento.',
+        },
+        {
+          title: 'SEO y contenido',
+          description: 'Ofrece módulos para analizar SEO a nivel de contenido, pero es más difícil adaptar el SEO técnico.',
+        },
+      ],
+    },
+    {
+      title: 'Páginas Web Rápidas',
+      subtitle: 'Solución optimizada y hecha a medida para proyectos avanzados.',
+      items: [
+        {
+          title: 'Rendimiento',
+          description: 'Altísimo, gracias a un código optimizado y ligero.',
+        },
+        {
+          title: 'Facilidad de uso',
+          description: 'Requiere más conocimientos técnicos para gestionar contenidos.',
+        },
+        {
+          title: 'Personalización',
+          description: 'Totalmente personalizable desde cero según los requisitos específicos.',
+        },
+        {
+          title: 'Actualizaciones y mantenimiento',
+          description: 'Puede requerir más soporte técnico dependiendo de la configuración.',
+        },
+        {
+          title: 'Escalabilidad',
+          description: 'Ideal para proyectos con requisitos técnicos elevados o grandes volúmenes de tráfico.',
+        },
+        {
+          title: 'SEO y contenido',
+          description: 'Puede ser más optimizado a nivel de SEO técnico.',
+        },
+      ],
+    },
+  ]}
+/>
+
+<FAQs
+    title={`¿Cuándo elegir WordPress y cuándo optar por <a href='` + u('development/astro') + `' class="text-accent" title="Programación de webs rápidas, seguras y optimizadas para SEO">páginas web de alto rendimiento?</a>`}
+    subtitle=""
+    tagline=""
+    heading=""
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'WordPress',
+        description:
+          'Es la mejor opción para proyectos que necesitan una gestión sencilla y estándar de contenidos, como blogs, páginas corporativas o pequeñas tiendas online. Permite una rápida implementación gracias a su amplia gama de plugins y temas.',
+      },
+      {
+        title: "Páginas web de alto rendimiento",
+        description: `Si el proyecto requiere un rendimiento óptimo, cargas ultra-rápidas o funcionalidades SEO avanzadas, las páginas web rápidas son la opción ideal. Están diseñadas desde cero con tecnologías modernas para garantizar velocidad, escalabilidad y seguridad.`
+      },
+    ]}
+  />
+
+  <Content
+    isReversed
+    tagline=""
+    title="¿Por qué confiar en Gilsys para programar tu web en WordPress?"
+    items={[
+        {
+          title: 'Conocimiento profundo del código',
+          description:
+            'Gracias a nuestra experiencia con WordPress, podemos optimizar la plataforma según los requerimientos específicos de cada proyecto, proporcionando un rendimiento óptimo.',
+          icon: 'tabler:tools',
+        },
+        {
+          title: 'Personalización y ampliación de plugins',
+          description: 
+              'Desarrollamos plugins personalizados siguiendo buenas prácticas para garantizar sostenibilidad y compatibilidad, y adaptamos módulos comerciales o gratuitos para ajustarlos completamente a los objetivos del proyecto.'
+          ,
+          icon: 'tabler:components',
+        },
+        {
+          title: 'Optimización SEO y rendimiento',
+          description:
+            `Implementamos técnicas avanzadas para mejorar la velocidad de carga y el posicionamiento SEO, revisando las puntuaciones en <a class="text-accent" title='Test de rendimiento de Google' href='https://pagespeed.web.dev/'>Google Page Speed</a>.`,
+          icon: 'tabler:search',
+        },
+        {
+          title: 'Facilidad de mantenimiento',
+          description:
+            'Nos aseguramos de que las personalizaciones no interfieran con futuras actualizaciones de WordPress o de sus plugins, manteniendo la página funcional a largo plazo.',
+          icon: 'tabler:recycle',
+        },
+        {
+          title: 'Focalización en resultados',
+          description:
+            'Proponemos la solución más adecuada, ya sea WordPress o una página rápida, según las necesidades específicas del proyecto, evitando implementaciones innecesarias.',
+          icon: 'tabler:target',
+        },
+      ]}
+      
+    image={{
+      src: '~/assets/images/gilsys-programacion-web-wordpress.jpg',
+      alt: 'Programación de webs con WordPress',
+    }}
+  >
+    <Fragment slot="content">
+      No es fácil encontrar una empresa especialista en WordPress que pueda ofrecer diseño y maquetación a medida y personalizarlo programando plugins.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+  backgroundImage={{ src: '~/assets/images/dots/08.jpg', alt: 'Fondo abstracto, inspirado en tecnología y software' }}
+  actions={[
+    {
+      variant: 'primary',
+      text: 'Presupuesto gratuito',
+      href: u('contact'),
+    },
+    {
+      variant: 'primary',
+      text: 'Llamar',
+      href: 'tel:+34665331271',
+    },
+  ]}
+>
+  <Fragment slot="title">Te ofrecemos una web con diseño y programación utilizando <span class="custom-gradient">WordPress</span></Fragment>
+  <Fragment slot="subtitle"
+    >Si necesitas una empresa que implemente una web en WordPress de calidad superior, contáctanos.</Fragment
+  >
+</CallToAction>
+
+</Layout>

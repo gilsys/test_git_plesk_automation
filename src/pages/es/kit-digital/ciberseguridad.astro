@@ -1,0 +1,149 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import KitDigital from '~/components/widgets/KitDigital.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Ciberseguridad',
+  description:
+    'Protege los dispositivos de tus empleados con soluciones avanzadas de seguridad, que incluyen antimalware, antispyware y más, para tu PYME de manera gratuita con el Kit Digital.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Subvención Kit Digital"
+    backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/dots/21.jpg' }}
+  >
+    <Fragment slot="title">Ciberseguridad</Fragment>
+    <Fragment slot="subtitle">
+      Protege los dispositivos, datos y procesos de tu empresa con soluciones de seguridad personalizadas,
+      <span class="custom-gradient">GRATIS</span> gracias a la subvención del Kit Digital, para garantizar la seguridad y
+      cumplir con la normativa vigente.
+    </Fragment>
+  </Hero>
+
+  <Features2
+    tagline="Funcionalidades y servicios"
+    subtitle="Garantiza la seguridad de tus datos y dispositivos con soluciones avanzadas de ciberseguridad, adaptadas a tus necesidades."
+    title="Protege tu empresa con herramientas de ciberseguridad de última generación"
+    items={[
+      {
+        title: 'Antimalware',
+        description:
+          'Dispondrás de una herramienta que analice tu dispositivo, su memoria interna y los dispositivos de almacenamiento externo.',
+        icon: 'tabler:shield',
+      },
+      {
+        title: 'Antispyware',
+        description: 'Dispondrás de una herramienta que detecte y evite el software espía.',
+        icon: 'tabler:spy',
+      },
+      {
+        title: 'Correo seguro',
+        description:
+          'Dispondrás de herramientas de análisis del correo electrónico con las siguientes características:',
+        icon: 'tabler:mail-check',
+      },
+      {
+        title: 'Antispam',
+        description: 'Con detección y filtrado de correos no deseados.',
+        icon: 'tabler:filter',
+      },
+      {
+        title: 'Antiphishing',
+        description: 'Con detección de correos con enlaces o software malicioso sospechoso de robar credenciales.',
+        icon: 'tabler:shield-lock',
+      },
+      {
+        title: 'Navegación segura',
+        description: 'Con análisis de páginas web para evitar la navegación en sitios maliciosos.',
+        icon: 'tabler:globe',
+      },
+      {
+        title: 'Control de contenidos',
+        description: 'Controla el acceso a contenidos no deseados.',
+        icon: 'tabler:lock',
+      },
+      {
+        title: 'Antiadware',
+        description: 'Evita anuncios maliciosos.',
+        icon: 'tabler:ad',
+      },
+      {
+        title: 'Análisis y detección de amenazas',
+        description: 'Serás capaz de conocer el comportamiento de amenazas conocidas y nuevas.',
+        icon: 'tabler:alert-circle',
+      },
+      {
+        title: 'Monitorización de la red',
+        description: 'Dispondrás de herramientas que analicen el tráfico de red y te alerten de amenazas.',
+        icon: 'tabler:network',
+      },
+      {
+        title: 'Configuración inicial y actualizaciones de seguridad',
+        description:
+          'Dispondrás de una configuración inicial para su correcto uso, con las respectivas actualizaciones de firmas de malware y otros datos para la detección de amenazas, además de las actualizaciones de software de seguridad periódicas requeridas.',
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Requisitos especiales de formación',
+        description:
+          'Dispondrás de formación para la configuración del software de seguridad y contarás con un kit de concienciación en ciberseguridad para complementar la solución con habilidades de firewall humano.',
+        icon: 'tabler:book',
+      },
+    ]}
+  />
+
+  <Features
+    title="Subvención Kit Digital según el número de empleados"
+    subtitle="La subvención puede utilizarse para diversos servicios de digitalización, con un importe máximo que varía en función del número de empleados de la empresa."
+    items={[
+      {
+        title: 'Importe total subvencionado:',
+        list: [
+          '<strong>De 0 a 3 empleados:</strong> 3.000€',
+          '<strong>De 50 a 99 empleados:</strong> 25.000€',
+          '<strong>De 100 a 250 empleados:</strong> 29.000€',
+        ],
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Importe máximo para el servicio de ciberseguridad:',
+        list: [
+          '<strong>De 0 a 3 empleados:</strong> 125€/usuario (hasta 2 dispositivos)',
+          '<strong>De 50 a 99 empleados:</strong> 125€/usuario (incluye 99 dispositivos)',
+          '<strong>De 100 a 250 empleados:</strong> 125€/usuario (incluye 232 dispositivos)',
+        ],
+        icon: 'tabler:check',
+      },
+    ]}
+  />
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/21.jpg', alt: 'Fondo abstracto, inspirado en tecnología y software' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contactar',
+        href: 'contactar',
+      },
+      {
+        variant: 'primary',
+        text: 'Llamar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Aprovecha la subvención del Kit Digital para implementar <span class="custom-gradient">Ciberseguridad</span> de forma
+      gratuita
+    </Fragment>
+    <Fragment slot="subtitle"> Contáctanos y te asesoraremos sobre cómo digitalizar tu empresa. </Fragment>
+  </CallToAction>
+
+  <KitDigital />
+</Layout>

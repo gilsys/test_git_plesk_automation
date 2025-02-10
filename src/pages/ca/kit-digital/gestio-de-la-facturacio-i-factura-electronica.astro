@@ -1,13 +1,10 @@
 ---
-import Features from '~/components/widgets/Features.astro';
-import Hero from '~/components/widgets/Hero.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
-import Layout from '~/layouts/PageLayout.astro';
-import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
-import Image from '~/components/common/Image.astro';
-import KitDigital from '~/components/widgets/KitDigital.astro';
+import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
-import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import KitDigital from '~/components/widgets/KitDigital.astro';
+import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
   title: 'Gestió de la facturació i factura electrònica',
@@ -18,7 +15,7 @@ const metadata = {
 
 <Layout metadata={metadata}>
     <Hero tagline="Subvenció Kit Digital" backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/21.jpg' }}>
-        <Fragment slot="title">Facturació Electrònica i Gestió de la Facturació</Fragment>
+        <Fragment slot="title">Facturació electrònica i gestió de la facturació</Fragment>
         <Fragment slot="subtitle">
           Automatitza i digitalitza tot el procés d'emissió i recepció de factures amb solucions personalitzables i segures, 
           <span class="custom-gradient">GRATIS</span> gràcies a la subvenció del Kit Digital, per millorar l'eficiència i complir amb la normativa tributària.

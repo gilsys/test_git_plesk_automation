@@ -184,6 +184,7 @@ export const routes = {
   es: {
     'home': '/es',
     'gilsys': '/es/sobre-nosotros',
+    'kit-digital': '/es/kit-digital',
     'kit-digital/web': '/es/kit-digital/presencia-basica-internet',
     'kit-digital/e-commerce': '/es/kit-digital/comercio-electronico',
     'kit-digital/customer-management': '/es/kit-digital/gestion-de-clientes',
@@ -201,7 +202,8 @@ export const routes = {
     'kit-digital/ai-bi-analytics': '/es/kit-digital/business-intelligence-y-analitica-e-ia-asociada',
     'kit-digital/ai-process-management': '/es/kit-digital/gestion-procesos-ia',
     'kit-digital/secure-workplace': '/es/kit-digital/puesto-de-trabajo-seguro',
-    'kit-consulting/ai': '/es/kit-consulting/servicio-de-asesoramiento-en-inteligencia-artificial',
+    'kit-consulting': '/es/kit-consulting',
+    'kit-consulting/ai-advisory': '/es/kit-consulting/servicio-de-asesoramiento-en-inteligencia-artificial',
     'kit-consulting/basic-data-analysis': '/es/kit-consulting/servicio-de-asesoramiento-en-analisis-de-datos-basico',
     'kit-consulting/advanced-data-analysis':
     'kit-consulting/servicio-de-asesoramiento-en-analisis-de-datos-avanzado',
@@ -223,8 +225,8 @@ export const routes = {
     'development/astro': '/es/programacion-a-medida/webs-alto-rendimiento',
 
     'software': '/es/software-personalizado',
-    'software/ecommerce': '/es/software-personalizado/diseno-tienda-online',
-    'software/metabase': '/es/software-personalizado/metabase-analisis-empresarial',
+    'software/ecommerce': '/es/software-personalizado/programacion-woocommerce-prestashop',
+    'software/metabase': '/es/software-personalizado/metabase-business-intelligence',
     'software/pimcore': '/es/software-personalizado/pimcore-barcelona',
     'software/crm': '/es/software-personalizado/programa-gestion-clientes',
     'software/wp': '/es/software-personalizado/web-wordpress',
@@ -666,7 +668,7 @@ export const header = {
         links: [
           {
             text: 'Asesoramiento en Inteligencia Artificial',
-            href: routes['es']['kit-consulting/ai'],
+            href: routes['es']['kit-consulting/ai-advisory'],
           },
           {
             text: 'Asesoramiento en análisis de datos (Avanzado)',

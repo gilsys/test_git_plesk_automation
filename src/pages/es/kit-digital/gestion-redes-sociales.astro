@@ -1,0 +1,124 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import KitDigital from '~/components/widgets/KitDigital.astro';
+import Layout from '~/layouts/PageLayout.astro';
+const metadata = {
+  title: 'Gestión de redes sociales',
+  description:
+    'Mejora la presencia en línea de tu empresa con una estrategia de redes sociales a medida y monitoreo periódico gracias al Kit Digital.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Subvención Kit Digital"
+    backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/dots/21.jpg' }}
+  >
+    <Fragment slot="title">Gestión de redes sociales</Fragment>
+    <Fragment slot="subtitle">
+      Impulsa tu presencia en línea con estrategias personalizadas de redes sociales y eficiencia operativa,
+      <span class="custom-gradient">GRATIS</span> gracias a la subvención del Kit Digital, para conectar con nuevos clientes
+      y fidelizar a los existentes.
+    </Fragment>
+  </Hero>
+
+  <Features2
+    tagline="Funcionalidades y servicios"
+    subtitle="El principal objetivo de esta categoría es implementar soluciones interactivas para mejorar la presencia y rendimiento de tu empresa en redes sociales."
+    title="Gestiona tus redes sociales y mejora la visibilidad con estrategias a medida"
+    items={[
+      {
+        title: 'Social Media Plan',
+        description:
+          'Contarás con una estrategia de redes sociales alineada con tu misión y visión, para que sea relevante y conecte con tus clientes potenciales y fidelice a aquellos que ya lo son.',
+        icon: 'tabler:chart-line',
+      },
+      {
+        title: 'Monitoreo de redes sociales',
+        description:
+          'Se monitorizarán y controlarán de manera periódica los impactos de las acciones en redes sociales para evaluar los resultados y verificar el cumplimiento de los objetivos estratégicos.',
+        icon: 'tabler:search',
+      },
+      {
+        title: 'Optimización de la red/Auditoría Social Media',
+        description: 'Te ayudará a optimizar el rendimiento analizando diferentes canales sociales.',
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Gestión de redes sociales',
+        description:
+          'El Agente Digitalizador que hayas seleccionado administrará el perfil/usuario en, al menos, una red social. Si perteneces a los segmentos IV o V, la gestión será de al menos 2 redes sociales.',
+        icon: 'tabler:user-check',
+      },
+      {
+        title: 'Publicación de posts mensuales',
+        description:
+          'Para los segmentos I, II y III, el Agente Digitalizador publicará un mínimo de 4-8 publicaciones mensuales en tus redes sociales. En el caso de los segmentos IV y V, serán mínimo 12 publicaciones mensuales.',
+        icon: 'tabler:edit',
+      },
+      {
+        title: 'Aplicación de una estrategia de escucha activa',
+        description: 'Ayudará a supervisar tus redes sociales. (Exclusivo para Segmento IV y V)',
+        icon: 'tabler:volume',
+      },
+      {
+        title: 'Creación de contenido audiovisual mensual',
+        description:
+          'El Agente Digitalizador se encargará de la creación y publicación de al menos dos publicaciones mensuales de contenido audiovisual. (Exclusivo para Segmento IV y V)',
+        icon: 'tabler:video',
+      },
+    ]}
+  />
+
+  <Features
+    title="Subvención Kit Digital según el número de empleados"
+    subtitle="La subvención puede utilizarse para diversos servicios de digitalización, con un importe máximo que varía en función del número de empleados de la empresa."
+    items={[
+      {
+        title: 'Importe total subvencionado:',
+        list: [
+          '<strong>De 0 a 3 empleados:</strong> 3.000€',
+          '<strong>De 50 a 99 empleados:</strong> 25.000€',
+          '<strong>De 100 a 250 empleados:</strong> 29.000€',
+        ],
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Importe máximo para servicios de gestión de redes sociales:',
+        list: [
+          '<strong>De 0 a 3 empleados:</strong> 2.000€',
+          '<strong>De 50 a 99 empleados:</strong> 5.000€',
+          '<strong>De 100 a 250 empleados:</strong> 5.000€',
+        ],
+        icon: 'tabler:check',
+      },
+    ]}
+  />
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/21.jpg', alt: 'Fondo abstracto, inspirado en tecnología y software' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contactar',
+        href: 'contactar',
+      },
+      {
+        variant: 'primary',
+        text: 'Llamar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Aprovecha la subvención del Kit Digital para la <span class="custom-gradient">Gestión de redes sociales</span> de forma
+      gratuita
+    </Fragment>
+    <Fragment slot="subtitle"> Contáctanos y te asesoraremos sobre cómo digitalizar tu empresa. </Fragment>
+  </CallToAction>
+
+  <KitDigital />
+</Layout>

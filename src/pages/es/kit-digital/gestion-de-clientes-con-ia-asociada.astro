@@ -1,0 +1,180 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import KitDigital from '~/components/widgets/KitDigital.astro';
+import Layout from '~/layouts/PageLayout.astro';
+const metadata = {
+  title: 'Gestión de clientes con IA asociada',
+  description:
+    'Optimiza la gestión de relaciones comerciales con los clientes mediante herramientas digitales avanzadas y gestión documental centralizada para tu PYME con el Kit Digital.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Subvención Kit Digital"
+    backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/dots/21.jpg' }}
+  >
+    <Fragment slot="title">Gestión de clientes con IA asociada</Fragment>
+    <Fragment slot="subtitle">
+      Implementa un sistema de <span class="custom-gradient">gestión de clientes</span> inteligente con <span
+        class="custom-gradient">CRM</span
+      > y herramientas digitales avanzadas,
+      <span class="custom-gradient">GRATIS</span> gracias a la subvención del Kit Digital, para mejorar la eficiencia y las
+      relaciones comerciales.
+    </Fragment>
+  </Hero>
+
+  <Features2
+    tagline="Funcionalidades y servicios"
+    subtitle="El principal objetivo de esta categoría es la capacitación en inteligencia artificial para optimizar procesos y agilizar las interacciones y relaciones con los clientes."
+    title="Optimiza la gestión de clientes y oportunidades con herramientas digitales avanzadas usando IA"
+    items={[
+      {
+        title: 'Gestión de clientes potenciales (Leads)',
+        description: 'De forma manual o mediante una importación por archivo.',
+        icon: 'tabler:user-plus',
+      },
+      {
+        title: 'Gestión de clientes',
+        description:
+          'Trazando la actividad comercial desde la apertura de la oportunidad hasta la simulación de productos/servicios y su contratación.',
+        icon: 'tabler:user-check',
+      },
+      {
+        title: 'Gestión de oportunidades',
+        description: 'Todas las oportunidades de negocio reales.',
+        icon: 'tabler:clipboard',
+      },
+      {
+        title: 'Acciones o tareas comerciales',
+        description:
+          'Posibilidad de crear acciones y tareas comerciales (manuales o generadas automáticamente a partir del flujo de ventas asignado a la oportunidad).',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Reporting, planificación y seguimiento comercial',
+        description: 'Diferentes niveles de agregación de información.',
+        icon: 'tabler:chart-bar',
+      },
+      {
+        title: 'Alertas',
+        description: 'Podrás visualizar alertas de clientes en diferentes formatos gráficos.',
+        icon: 'tabler:bell',
+      },
+      {
+        title: 'Gestión documental',
+        description:
+          'Contarás con un software de gestión comercial y documental para tener toda la información organizada en un mismo lugar.',
+        icon: 'tabler:folder',
+      },
+      {
+        title: 'Integración de diversas plataformas',
+        description:
+          'Disponibilidad de APIs o Web Services para la consolidación de la información y datos de toda la empresa.',
+        icon: 'tabler:plug',
+      },
+      {
+        title: 'Web responsive (móvil/tablet)',
+        description:
+          'Las páginas web diseñadas serán funcionales tanto en ordenadores personales como en dispositivos móviles.',
+        icon: 'tabler:device-laptop',
+      },
+      {
+        title: 'Lead Scoring predictivo',
+        description:
+          'La herramienta deberá hacer uso de la Inteligencia Artificial para evaluar históricamente los datos de ventas y el comportamiento de los clientes, prediciendo y destacando las oportunidades más prometedoras.',
+        icon: 'tabler:star',
+      },
+      {
+        title: 'Automatización de reuniones y tareas',
+        description:
+          'La herramienta deberá automatizar el proceso de programación de citas con clientes, así como facilitar la coordinación entre los equipos internos y estos.',
+        icon: 'tabler:calendar',
+      },
+      {
+        title: 'Automatización de "journeys de venta"',
+        description:
+          'La inteligencia artificial deberá automatizar tareas como la gestión de tareas y oportunidades comerciales, clasificación de correos electrónicos y su respuesta automática, actualización de registros y asignación de tareas a la red comercial.',
+        icon: 'tabler:repeat',
+      },
+      {
+        title: 'Integración con la plataforma de Gestión de Clientes',
+        description: 'Disponibilidad de APIs o Web Services para la consolidación de la información y datos.',
+        icon: 'tabler:plug',
+      },
+      {
+        title: 'Datos, privacidad y seguridad',
+        description:
+          'Se respetan los compromisos existentes, incluyendo RGPD y los límites de datos estipulados en la CE.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Interacción con sistemas de IA',
+        description:
+          'Los proveedores garantizarán que los sistemas de IA destinados a interactuar directamente con personas físicas estén diseñados para que estas sepan que están interactuando con un sistema de IA.',
+        icon: 'tabler:robot',
+      },
+      {
+        title: 'Capacitación en fundamentos de IA generativa en el ámbito de gestión de clientes',
+        description:
+          'Capacitaciones para preparar a los empleados en torno a las funcionalidades descritas anteriormente, que contarán con:',
+        list: [
+          '<strong>Fundamentos básicos:</strong><br/>Aproximación a la normativa vigente y riesgos éticos y de seguridad derivados.',
+          '<strong>Capacitaciones específicas en:</strong><br/>Gestión predictiva de clientes actuales, potenciales (leads) y oportunidades, automatización de reuniones, tareas y “journeys de venta” (clasificación de correos electrónicos, respuesta automática, actualización de registros y asignación de tareas a la red comercial), chatbots (FAQs), gestión documental inteligente.',
+          '<strong>Duración:</strong><br/>Las capacitaciones tendrán una duración total de 20h a lo largo de dos meses para cada uno de los usuarios definidos por segmento.',
+          '<strong>Instructor humano:</strong><br/>Tanto en modalidad presencial como en línea, las capacitaciones serán impartidas por un instructor humano a disposición de los usuarios.',
+          '<strong>Diploma de finalización:</strong><br/>Se otorgará un certificado de capacidades adquiridas en IA en el ámbito de la gestión de clientes al finalizar la formación.',
+        ],
+        icon: 'tabler:book',
+      },
+    ]}
+  />
+
+  <Features
+    title="Subvención Kit Digital según el número de empleados"
+    subtitle="La subvención puede utilizarse para diversos servicios de digitalización, con un importe máximo que varía en función del número de empleados de la empresa."
+    items={[
+      {
+        title: 'Importe total subvencionado:',
+        list: ['<strong>De 50 a 99 empleados:</strong> 25.000€', '<strong>De 100 a 250 empleados:</strong> 29.000€'],
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Importe máximo para el servicio de gestión de clientes con IA asociada:',
+        list: [
+          '<strong>De 50 a 99 empleados:</strong> 18.000€ (incluye 10 usuarios y capacitación mínima a 3 de ellos en IA asociada)',
+          '<strong>De 100 a 250 empleados:</strong> 24.000€ (incluye 15 usuarios y capacitación mínima a 5 de ellos en IA asociada)',
+        ],
+        icon: 'tabler:check',
+      },
+    ]}
+  />
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/21.jpg', alt: 'Fondo abstracto, inspirado en tecnología y software' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contactar',
+        href: 'contactar',
+      },
+      {
+        variant: 'primary',
+        text: 'Llamar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Aprovecha la subvención del Kit Digital para implementar el servicio de <span class="custom-gradient"
+        >Gestión de clientes con IA asociada</span
+      > de forma gratuita
+    </Fragment>
+    <Fragment slot="subtitle"> Contáctanos y te asesoraremos sobre cómo digitalizar tu empresa. </Fragment>
+  </CallToAction>
+
+  <KitDigital />
+</Layout>

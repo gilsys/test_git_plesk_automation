@@ -1,0 +1,171 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import KitDigital from '~/components/widgets/KitDigital.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Gestió de la facturació i factura electrònica',
+  description:
+    "Digitalitza el flux d'emissió i recepció de factures amb la nostra solució de facturació electrònica personalitzable per a la teva PIME amb el Kit Digital.",
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Subvención Kit Digital"
+    backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/dots/21.jpg' }}
+  >
+    <Fragment slot="title">Facturación electrónica y gestión de la facturación</Fragment>
+    <Fragment slot="subtitle">
+      Automatiza y digitaliza todo el proceso de emisión y recepción de facturas con soluciones personalizables y
+      seguras,
+      <span class="custom-gradient">GRATIS</span> gracias a la subvención del Kit Digital, para mejorar la eficiencia y cumplir
+      con la normativa tributaria.
+    </Fragment>
+  </Hero>
+
+  <Features2
+    tagline="Funcionalidades y servicios"
+    subtitle="Esta solución tiene como objetivo mejorar la gestión de los procesos de facturación, desde la creación hasta el envío de facturas, para aumentar la eficiencia operativa de tu PYME."
+    title="Automatización de la facturación electrónica y optimización de los procesos financieros"
+    items={[
+      {
+        title: 'Facturas en formato estructurado',
+        description:
+          'Tendrás la posibilidad de emitir facturas en formatos estructurados, al menos en formato FACTURA-E, para facilitar su tratamiento automatizado.',
+        icon: 'tabler:file-code',
+      },
+      {
+        title: 'Facturas ilimitadas',
+        description: 'Podrás emitir y recibir un número ilimitado de facturas.',
+        icon: 'tabler:file-invoice',
+      },
+      {
+        title: 'Clientes ilimitados',
+        description: 'Tendrás la capacidad de enviar facturas a un número ilimitado de clientes.',
+        icon: 'tabler:user',
+      },
+      {
+        title: 'Productos o servicios ilimitados',
+        description: 'Podrás crear un número ilimitado de productos y/o servicios facturables dentro del catálogo.',
+        icon: 'tabler:box',
+      },
+      {
+        title: 'Envío y recepción de facturas',
+        description:
+          'La solución implementada por el Agente Digitalizador te permitirá enviar y recibir facturas electrónicas directamente, al menos por correo electrónico.',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Personalización de facturas',
+        description: 'Las facturas serán personalizables, incluyendo la selección de tu logotipo.',
+        icon: 'tabler:edit',
+      },
+      {
+        title: 'Copias de seguridad periódicas',
+        description: 'Podrás realizar copias de seguridad, con posibilidad de al menos una periodicidad diaria.',
+        icon: 'tabler:cloud',
+      },
+      {
+        title: 'Almacenamiento/Histórico de facturas',
+        description:
+          'Si perteneces a los segmentos I, II o III tendrás al menos 1 GB para almacenar facturas. Para los segmentos IV y V se proporcionará un almacenamiento de al menos 10 GB.',
+        icon: 'tabler:database',
+      },
+      {
+        title: 'Integración con otras soluciones',
+        description:
+          'La solución deberá disponer de APIs o Web Services para su integración con otras herramientas, así como permitir la carga de datos manualmente.',
+        icon: 'tabler:plug',
+      },
+      {
+        title: 'Control de vencimiento de las facturas',
+        description: 'Dispondrás de un sistema de control del vencimiento de las facturas.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Generación de un registro de facturación',
+        description:
+          'La solución te permitirá generar un registro de facturación, de forma simultánea o inmediatamente anterior a la expedición de cada factura.',
+        icon: 'tabler:file-text',
+      },
+      {
+        title: 'Emisión de facturas verificables',
+        description:
+          'La solución deberá permitir la emisión de facturas, tanto en papel como electrónicamente, que puedan ser verificadas con la Agencia Tributaria.',
+        icon: 'tabler:file-check',
+      },
+      {
+        title: 'Verificación presencial',
+        description:
+          'La solución deberá permitir la verificación presencial del registro de facturación por parte de las autoridades competentes.',
+        icon: 'tabler:lock',
+      },
+      {
+        title: 'Declaración responsable',
+        description:
+          'La solución deberá disponer de una declaración responsable por parte del fabricante acreditando que el software cumple con la normativa tributaria vigente.',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Cumplimiento',
+        description:
+          'Podrás asegurar el cumplimiento de la normativa aplicable, en concreto el Reglamento por el que se regulan las obligaciones de facturación del Real Decreto 1619/2012, así como cualquier normativa de aplicación.',
+        icon: 'tabler:shield-check',
+      },
+    ]}
+  />
+
+  <Features
+    title="Subvención Kit Digital según el número de empleados"
+    subtitle="La subvención puede utilizarse para diversos servicios de digitalización, con un importe máximo que varía en función del número de empleados de la empresa."
+    items={[
+      {
+        title: 'Importe total subvencionado:',
+        list: [
+          '<strong>De 0 a 3 empleados:</strong> 3.000€',
+          '<strong>De 50 a 99 empleados:</strong> 25.000€',
+          '<strong>De 100 a 250 empleados:</strong> 29.000€',
+        ],
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Importe máximo para el servicio de gestión de facturación y factura electrónica:',
+        list: [
+          '<strong>De 0 a 3 empleados:</strong> 1.000€ (incluye 1 usuario)',
+          '<strong>De 50 a 99 empleados:</strong> 3.000€ (incluye 6 usuarios)',
+          '<strong>De 100 a 250 empleados:</strong> 3.000€ (incluye 6 usuarios)',
+        ],
+        icon: 'tabler:check',
+      },
+    ]}
+  />
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/21.jpg', alt: 'Fondo abstracto, inspirado en tecnología y software' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contactar',
+        href: 'contactar',
+      },
+      {
+        variant: 'primary',
+        text: 'Llamar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Aprovecha la subvención del Kit Digital para implementar la <span class="custom-gradient"
+        >Gestión de la facturación</span
+      > de forma gratuita
+    </Fragment>
+    <Fragment slot="subtitle"> Contáctanos y te asesoraremos sobre cómo digitalizar tu empresa. </Fragment>
+  </CallToAction>
+
+  <KitDigital />
+</Layout>
