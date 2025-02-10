@@ -237,30 +237,30 @@ export const routes = {
   },
   en: {
     'home': '/en',
+    'gilsys': '/en/about-us',
     
-    'consultory': '/ca/consultoria-tecnologica',
-    'migration': '/ca/migracio-integracio',
-    'development': '/ca/programacio-a-mida',
-    'development/web': '/ca/programacio-a-mida/aplicacions-web',
-    'development/apps': '/ca/programacio-a-mida/apps',
-    'development/automation': '/ca/programacio-a-mida/automatitzacio-processos',
-    'development/ia': '/ca/programacio-a-mida/ia-barcelona',
-    'development/astro': '/ca/programacio-a-mida/webs-alt-rendiment',
+    'consultory': '/en/technology-consulting',
+    'migration': '/en/migration-integration',
+    'development': '/en/custom-development',
+    'development/web': '/en/custom-development/web-applications',
+    'development/apps': '/en/custom-development/apps',
+    'development/automation': '/en/custom-development/process-automation',
+    'development/ia': '/en/custom-development/ai-barcelona',
+    'development/astro': '/en/custom-development/high-performance-websites',
 
-    'software': '/ca/software-personalitzat',
-    'software/ecommerce': '/ca/software-personalitzat/disseny-botiga-online',
-    'software/metabase': '/ca/software-personalitzat/metabase-analisis-empresarial',
-    'software/pimcore': '/ca/software-personalitzat/pimcore-barcelona',
-    'software/crm': '/ca/software-personalitzat/programa-gestio-clients',
-    'software/wp': '/ca/software-personalitzat/web-wordpress',
+    'software': '/en/custom-software',
+    'software/ecommerce': '/en/custom-software/woocommerce-prestashop-development',
+    'software/metabase': '/en/custom-software/metabase-business-intelligence',
+    'software/pimcore': '/en/custom-software/pimcore-barcelona',
+    'software/crm': '/en/custom-software/customer-management-software',
+    'software/wp': '/en/custom-software/wordpress-web',
 
-    'about': '/ca/sobre-nosaltres',
-    
+    'about': '/en/about-us',
 
     'contact': '/en/contact',
     'blog': '/en/blog',
-    'terms': '/ca/avis-legal',
-    'privacy-policy': '/ca/politica-privacitat',
+    'terms': '/en/legal-notice',
+    'privacy-policy': '/en/privacy-policy',
     
   },
 };
@@ -866,63 +866,170 @@ export const header = {
   en: {
     links: [
       {
+        _id: 'home',
         text: 'Home',
         href: routes['en']['home'],
       },
       {
+        _id: 'gilsys',
         text: 'gilsys',
         href: routes['en']['gilsys'],
       },
       {
+        _id: 'services',
         text: 'Services',
         links: [
           {
-            text: 'Custom software, apps and AI',
+            _id: 'development',
+            text: 'Custom Development',
+            title: 'Custom software development for businesses',
+            href: routes['en']['development'],
+  
             links: [
               {
-                text: 'Software Programming',
-                href: routes['en']['services/software-programming'],
+                href: routes['en']['development/web'],
+                title: 'Custom web application and online platform development',
+                text: 'Web Applications',
+                icon: 'tabler:code',
               },
               {
-                text: 'Mobile app development',
-                href: routes['en']['services/mobile-app-development'],
+                href: routes['en']['development/apps'],
+                title: 'Custom cross-platform app development',
+                text: 'Mobile Applications',
+                icon: 'tabler:device-mobile',
               },
               {
-                text: 'Product managers',
-                href: routes['en']['services/product-managers'],
-              },
-              {
-                text: 'Electronic invoicing',
-                href: routes['en']['services/electronic-invoicing'],
-              },
-              {
-                text: 'Integration into social media',
-                href: routes['en']['services/integration-into-social-media'],
-              },
-              {
-                text: 'Customer Relationship Management',
-                href: routes['en']['services/customer-relationship-management'],
-              },
-              {
-                text: 'Process management',
-                href: routes['en']['services/process-management'],
-              },
-              {
-                text: 'Cybersecurity',
-                href: routes['en']['services/cybersecurity'],
-              },
-              {
-                text: 'Secure communications',
-                href: routes['en']['services/secure-communications'],
-              },
-              {
-                text: 'Business Intelligence and Analytics',
-                href: routes['en']['services/bi-analytics'],
-              },
-              {
+                href: routes['en']['development/ia'],
+                title: 'Custom AI tool development',
                 text: 'Artificial Intelligence',
-                href: routes['en']['services/artificial-intelligence'],
+                icon: 'tabler:cpu',
               },
+              {
+                href: routes['en']['development/astro'],
+                title: 'Ultra-fast website design',
+                text: 'High-Performance Websites',
+                icon: 'tabler:world',
+              },
+              {
+                href: routes['en']['development/automation'],
+                title: 'Custom automation and API development',
+                text: 'Automations & APIs',
+                icon: 'tabler:settings-automation',
+              },
+            ],
+          },
+          {
+            _id: 'software',
+            text: 'Custom Software',
+            title: 'Personalized software development',
+            href: routes['en']['software'],
+            links: [
+              {
+                href: routes['en']['software/wp'],
+                title: 'Custom WordPress website development and design',
+                text: 'WordPress Websites',
+                icon: 'tabler:brand-wordpress',
+              },
+              {
+                href: routes['en']['software/pimcore'],
+                title: 'We implement Pimcore to centralize product management',
+                text: 'Product Management Systems',
+                icon: 'tabler:database',
+              },
+              {
+                href: routes['en']['software/metabase'],
+                title: 'Using Metabase as a Business Intelligence tool',
+                text: 'Business Intelligence',
+                icon: 'tabler:chart-bar',
+              },
+              {
+                href: routes['en']['software/ecommerce'],
+                title: 'We design e-commerce platforms with Prestashop and WooCommerce',
+                text: 'Online Store',
+                icon: 'tabler:shopping-cart',
+              },
+              {
+                href: routes['en']['software/crm'],
+                title: 'Custom CRM software',
+                text: 'Customer Management',
+                icon: 'tabler:user-circle',
+              },
+            ]
+          },
+          {
+            _id: 'migration',
+            text: 'Migration & Integration',
+            title: 'Data and application migration, and system integration',
+            href: routes['en']['migration'],  
+            links: [
+              {
+                href: routes['en']['migration'] + '#software-renewal',
+                title: 'Replacing outdated systems with modern applications',
+                text: 'Software Renewal',
+                icon: 'tabler:chart-line',
+              },
+              {
+                href: routes['en']['migration'] + '#data-migration',
+                title: 'Migrating old databases to new applications without data loss',
+                text: 'Data Migration',
+                icon: 'tabler:arrows-transfer-down',
+              },
+              {
+                href: routes['en']['migration'] + '#ai-integration',
+                title: 'Integrating artificial intelligence into businesses',
+                text: 'AI Integration',
+                icon: 'tabler:brain',
+              },
+              {
+                href: routes['en']['migration'] + '#software-connection',
+                title: 'Synchronizing information between software programs',
+                text: 'Software Connection',
+                icon: 'tabler:link',
+              },
+              {
+                href: routes['en']['migration'] + '#scalability-division',
+                title: 'Splitting platforms into scalable modules',
+                text: 'Division & Scalability',
+                icon: 'tabler:sitemap',
+              },
+            ],         
+          },
+          {
+            _id: 'consultory',
+            text: 'IT Consulting',
+            title: 'Expert advice on IT project development',
+            href: routes['en']['consultory'],
+            links: [
+              {
+                href: routes['en']['consultory'] + '#ai',
+                title: 'How to implement AI in your business',
+                text: 'AI Integration Study',
+                icon: 'tabler:robot',
+              },
+              {
+                href: routes['en']['consultory'] + '#technology-situation-analysis',
+                title: 'Analysis of current tools and optimization proposals',
+                text: 'Technology Situation Analysis',
+                icon: 'tabler:clipboard-list',
+              },          
+              {
+                href: routes['en']['consultory'] + '#transforming-ideas-into-projects',
+                title: 'Requirement gathering and proposal development',
+                text: 'Turning Ideas into Projects',
+                icon: 'tabler:clipboard-text',
+              },          
+              {
+                href: routes['en']['consultory'] + '#data-organization-analysis',
+                title: 'Study to optimize structure and data quality',
+                text: 'Data Analysis & Organization',
+                icon: 'tabler:table',
+              },          
+              {
+                href: routes['en']['consultory'] + '#solution-identification',
+                title: 'Evaluation and proposal of new tools and services',
+                text: 'Solution Identification',
+                icon: 'tabler:bulb',
+              }
             ],
           },
         ],
@@ -1000,66 +1107,30 @@ export const footer = {
   },
   en: {
     links: [
-      {
-        title: 'Product',
-        links: [
-          { text: 'Features', href: '#' },
-          { text: 'Security', href: '#' },
-          { text: 'Team', href: '#' },
-          { text: 'Enterprise', href: '#' },
-          { text: 'Customer stories', href: '#' },
-          { text: 'Pricing', href: '#' },
-          { text: 'Resources', href: '#' },
-        ],
-      },
-      {
-        title: 'Platform',
-        links: [
-          { text: 'Developer API', href: '#' },
-          { text: 'Partners', href: '#' },
-          { text: 'Atom', href: '#' },
-          { text: 'Electron', href: '#' },
-          { text: 'AstroWind Desktop', href: '#' },
-        ],
-      },
-      {
-        title: 'Support',
-        links: [
-          { text: 'Docs', href: '#' },
-          { text: 'Community Forum', href: '#' },
-          { text: 'Professional Services', href: '#' },
-          { text: 'Skills', href: '#' },
-          { text: 'Status', href: '#' },
-        ],
-      },
-      {
-        title: 'Company',
-        links: [
-          { text: 'About', href: '#' },
-          { text: 'Blog', href: '#' },
-          { text: 'Careers', href: '#' },
-          { text: 'Press', href: '#' },
-          { text: 'Inclusion', href: '#' },
-          { text: 'Social Impact', href: '#' },
-          { text: 'Shop', href: '#' },
-        ],
-      },
+      header['en']['links'].find((link) => link._id === 'services').links.find((link) => link._id === 'development'),
+      header['en']['links'].find((link) => link._id === 'services').links.find((link) => link._id === 'software'),
+      header['en']['links'].find((link) => link._id === 'services').links.find((link) => link._id === 'migration'),
+      header['en']['links'].find((link) => link._id === 'services').links.find((link) => link._id === 'consultory')
     ],
     secondaryLinks: [
-      { text: 'Avís legal', href: '#' },
-      { text: 'Política de privacitat', href: '#' },
-      { text: 'Política de cookies', href: '#' },
+      { text: 'Legal Notice', href: '#' },
+      { text: 'Privacy Policy', href: '#' },
+      { text: 'Cookie Policy', href: '#' },
     ],
     socialLinks: [
-      { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
-      { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
-      { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
+      { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/company/gilsys' },
+      //{ ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
+      { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: 'https://www.facebook.com/gilsysg6' },
       //{ ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
-      { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
+      //{ ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
     ],
-    footNote: `
-    <img class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 rtl:mr-0 rtl:ml-1.5 float-left rtl:float-right rounded-sm" src="https://onwidget.com/favicon/favicon-32x32.png" alt="onWidget logo" loading="lazy"></img>
-    Made by <a class="text-blue-600 underline dark:text-muted" href="https://onwidget.com/"> onWidget</a> · All rights reserved.
-  `,
+    address: `            
+            <a href="tel:+34665331271">665 33 12 71</a><br>
+            <a class='text-accent' href="mailto:info@gilsys.com">info@gilsys.com</a><br><br>            
+            <a href='https://maps.app.goo.gl/V5T7Ksystbsv68eD7' rel='nofollow' target='_blank' title='Open Google Maps'>Passeig del Ter 48<br>
+            08580, Sant Quirze de Besora<br>
+            Osona - Barcelona</a><br/>
+    `,
+    footNote: `gilsys · All rights reserved.`,
   },
 };

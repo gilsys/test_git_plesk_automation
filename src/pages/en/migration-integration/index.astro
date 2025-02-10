@@ -1,0 +1,484 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+const metadata = {
+  title: 'System Migration & Integration',
+  description: `Database migration, software modernization, AI integration, and data synchronization between applications.`,
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="A timely migration is an investment in the future."
+    backgroundImage={{ alt: 'Abstract background', src: '~/assets/images/dots/03.jpg' }}
+  >
+    <Fragment slot="title"
+      ><span class="text-accent highlight">Migration</span> & <span class="text-accent highlight">Integration</span
+      ></Fragment
+    >
+    <Fragment slot="subtitle"
+      >We create seamless communication between existing tools, integrate new ones, and migrate outdated systems to
+      modern solutions.</Fragment
+    >
+  </Hero>
+
+  <Features3
+    id="features-services"
+    title="What Do We Mean by <span class='custom-gradient'>Migration & Integration</span>?"
+    subtitle="We ensure existing tools work in coordination, transfer information from outdated systems to modern applications, and integrate new tools to automate workflows."
+    tagline="Modernizing and integrating your systems."
+    items={[
+      {
+        title: 'Software Modernization',
+        description:
+          'We upgrade outdated systems to improve performance and ensure a robust, sustainable technological infrastructure.',
+        icon: 'tabler:device-desktop',
+        callToAction: {
+          class: 'more-info',
+          text: 'Learn More',
+          href: '#renovacio-software',
+        },
+      },
+      {
+        title: 'Data Migration',
+        description: 'We migrate old databases to new applications without losing any information.',
+        icon: 'tabler:database',
+        callToAction: {
+          class: 'more-info',
+          text: 'Learn More',
+          href: '#migracio-dades',
+        },
+      },
+      {
+        title: 'AI Integration',
+        description:
+          'We integrate intelligent processes, automation, predictive analytics, and quality control systems into existing tools.',
+        icon: 'tabler:brain',
+        callToAction: {
+          class: 'more-info',
+          text: 'Learn More',
+          href: '#integracio-ia',
+        },
+      },
+      {
+        title: 'Software Connectivity',
+        description:
+          'We synchronize data across applications to ensure a smooth and coordinated data flow between new and existing systems.',
+        icon: 'tabler:arrows-exchange',
+        callToAction: {
+          class: 'more-info',
+          text: 'Learn More',
+          href: '#connexio-software',
+        },
+      },
+      {
+        title: 'System Scalability & Modularity',
+        description:
+          'We transform monolithic systems into distributed architectures, making them easier to maintain and scale over time.',
+        icon: 'tabler:layers-intersect',
+        callToAction: {
+          class: 'more-info',
+          text: 'Learn More',
+          href: '#divisio-escalabilitat',
+        },
+      },
+    ]}
+  />
+  <Content
+    isReversed
+    tagline=""
+    title="<a name='renovacio-software' title='Upgrade outdated programs and tools to replace them with modern applications'>Software Modernization</a>"
+    subtitle="Maintaining outdated tools leads to inefficiency and reduced productivity."
+    items={[
+      {
+        title: 'Migration from Legacy Software',
+        description:
+          `Replacing outdated programs with modern applications, <a href='` +
+          u('development') +
+          `' title="Custom software development" class="text-accent">custom-developed</a> or based on <a href='` +
+          u('software') +
+          `' class="text-accent" title='Development of programs based on customizable software'>customizable software</a>.`,
+      },
+
+      {
+        title: 'Infrastructure Upgrades',
+        description:
+          'Implementation of cloud-based tools, offering greater flexibility and reduced infrastructure costs.',
+      },
+      {
+        title: 'Preventive Updates',
+        description:
+          'Outdated systems are more vulnerable to security threats and can slow business growth. Updating them in time prevents future issues and ensures optimal performance.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/ui-ux-moderna.jpg',
+      alt: 'Modern user interface',
+    }}
+  >
+    <Fragment slot="preContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">
+        Investing in Software Modernization is a Future-Proof Strategy
+      </h3>
+      <p class="text-muted">
+        Legacy systems often suffer from security vulnerabilities, low efficiency, and limited performance, which can
+        compromise business operations. Technological modernization involves upgrading software and databases to
+        optimize performance and ensure a robust IT infrastructure.
+      </p>
+    </Fragment>
+    <Fragment slot="postContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">
+        Why Is It Important to Have Up-to-Date Software in a Business?
+      </h3>
+      <p class="text-muted">
+        Outdated systems are more vulnerable to security breaches and can slow down business growth. Upgrading in time
+        prevents future problems and ensures higher efficiency for employees.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+  <Content
+    tagline=""
+    title="<a name='migracio-dades' title='Transfer old databases to new platforms'>Data Migration</a>"
+    subtitle="Leave outdated systems behind and embrace innovation with secure and efficient data migration."
+    items={[
+      {
+        title: 'Legacy System Migration',
+        description:
+          'Upgrade your technological infrastructure by transferring data from legacy systems to more modern and efficient platforms.',
+      },
+      {
+        title: 'Database Migration',
+        description: 'Optimize data management by migrating to a more powerful, scalable, and secure database.',
+      },
+      {
+        title: 'Data Integration',
+        description:
+          'Unify data from multiple sources into a single, coherent system for a complete view of your business.',
+      },
+      {
+        title: 'Cloud Migration',
+        description:
+          'Leverage the advantages of cloud computing (flexibility, scalability, security) by migrating your data to a cloud environment.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/migracion-datos-antiguos.png',
+      alt: 'Data migration between systems',
+    }}
+  >
+    <Fragment slot="preContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">
+        Unlock the Full Potential of Your Business Data
+      </h3>
+      <p class="text-muted">
+        In today’s digital era, data is one of the most valuable assets for any company. Data migration is an essential
+        process to ensure that your data remains accessible, secure, and formatted for effective decision-making and
+        innovation.
+      </p>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="text-muted">
+        Data migration can be a complex process, but with proper planning and the expertise of an experienced team, it
+        can be seamless and successful.
+      </p>
+      <p class="text-muted mt-3">
+        At gilsys, we specialize in data migration. With our expertise and knowledge, we help you securely and
+        efficiently transfer your data while minimizing downtime and risk.
+      </p>
+    </Fragment>
+  </Content>
+  <Features
+    classes={{ container: 'pt-0 md:pt-0 lg:pt-0' }}
+    isAfterContent
+    title="Why Is Data Migration Important?"
+    items={[
+      {
+        title: 'Improved Operational Efficiency',
+        description:
+          'Data migration helps optimize processes and reduce system complexity, freeing up resources and enhancing productivity.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Cost Reduction',
+        description:
+          'By freeing up resources and eliminating unnecessary maintenance of outdated technologies, data migration leads to significant cost savings.',
+        icon: 'tabler:cash',
+      },
+      {
+        title: 'Enhanced Security',
+        description:
+          'Migrated data benefits from modern platforms with advanced security protocols and protection measures, reducing the risk of attacks and vulnerabilities.',
+        icon: 'tabler:shield-lock',
+      },
+      {
+        title: 'A Catalyst for Innovation',
+        description:
+          'Data migration enables companies to adopt new technologies and explore advanced solutions, driving innovation and growth.',
+        icon: 'tabler:bulb',
+      },
+      {
+        title: 'Better Decision-Making',
+        description:
+          'Migrated data ensures that businesses have access to consistent, up-to-date, and easily accessible information, enabling more accurate analysis and better decision-making.',
+        icon: 'tabler:chart-bar',
+      },
+      {
+        title: 'Stronger Brand Image',
+        description:
+          'A company with modern, efficient systems projects an image of professionalism and reliability, enhancing brand perception among clients and partners.',
+        icon: 'tabler:brand-google-maps',
+      },
+    ]}
+  />
+
+  <Content
+    isReversed
+    tagline=""
+    title="<a name='integracio-ia' title='Integrate AI into existing tools or processes'>AI Integration</a>"
+    subtitle={`Not only can we <a class="text-accent" title="Develop new applications that integrate artificial intelligence" href="` +
+      u('development/ia') +
+      `">develop new applications</a>, but we can also integrate AI into existing tools.`}
+    items={[
+      {
+        title: 'Process Automation',
+        description:
+          'Automate internal processes using machine learning, leveraging business data to reduce costs and increase efficiency.',
+      },
+      {
+        title: 'Chatbots & Virtual Assistants',
+        description:
+          'Enhance customer service by adding chatbots or virtual assistants that work with existing databases.',
+      },
+      {
+        title: 'Predictive Analytics',
+        description:
+          'Integrate predictive analytics into existing tools to anticipate business needs and market trends.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/ia-integracion-software-abstracto.png',
+      alt: 'Abstract representation of AI integration in software',
+    }}
+  >
+    <Fragment slot="preContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">
+        Enhance Existing Systems with Intelligent Processes
+      </h3>
+      <p class="text-muted">
+        Integrating artificial intelligence into existing systems can transform business operations, optimizing
+        workflows and improving decision-making. It’s not about replacing current tools but expanding their potential
+        with advanced functionalities.
+      </p>
+    </Fragment>
+    <Fragment slot="postContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">Why Is It Important?</h3>
+      <p class="text-muted">
+        Incorporating AI into business processes improves operational efficiency and enables data-driven
+        decision-making, providing a sustainable competitive advantage.
+      </p>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+  <Content
+    tagline=""
+    title="<a name='connexio-software' title='Automatically synchronize data between applications and software'>Software Connectivity</a>"
+    subtitle="Syncing data across different tools simplifies business information management and eliminates duplicate data."
+    items={[
+      {
+        title: 'API-Based Connectivity',
+        description:
+          `We develop <a class="text-accent" title="Automated data synchronization processes" href="` +
+          u('development/automation') +
+          `">custom API integrations and automations</a> to synchronize information between systems.`,
+      },
+      {
+        title: 'Data Centralization',
+        description:
+          'We unify data so it is accessible in real-time across multiple platforms, preventing duplication and redundancy.',
+      },
+      {
+        title: 'Legacy System Connectivity',
+        description:
+          'While migrating to modern tools is always our recommended approach, if necessary, we can adapt legacy systems to export data into more advanced technologies, allowing for better data management and enrichment.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/integracion-sistemas.png',
+      alt: 'Enterprise Software Integration',
+    }}
+  >
+    <Fragment slot="preContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">Making Business Tools Work in Sync</h3>
+      <p class="text-muted">
+        Many businesses rely on multiple tools, but these are often disconnected, leading to data duplication, errors,
+        and inefficiencies.
+      </p>
+    </Fragment>
+    <Fragment slot="postContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">Benefits of Software Synchronization</h3>
+      <p class="text-muted">
+        An integrated system reduces errors, enhances efficiency, and provides clearer insights into business
+        operations.
+      </p>
+    </Fragment>
+  </Content>
+
+  <!--
+  <Content
+    tagline=""
+    title="Optimització de Software"
+    items={[
+      {
+        title: 'Auditoria de codi',
+        description: 'Identifiquem punts febles en termes de seguretat i rendiment per aplicar millores.',
+      },
+      {
+        title: 'Optimització de bases de dades',
+        description: 'Revisem i ajustem bases de dades per millorar el temps de resposta i l’eficiència general.',
+      },
+      {
+        title: 'Migració a tecnologies modernes',
+        description:
+          'Actualitzem sistemes obsolets a tecnologies modernes per assegurar sostenibilitat i compatibilitat futura.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/analisis-optimizacion-software.jpg',
+      alt: 'Persona mirant el codi amb lupa, optimitzant rendiment',
+    }}
+  >
+    <Fragment slot="preContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">
+        Analitzar, revisar i millorar i migrar per augmentar el rendiment
+      </h3>
+      <p class="text-muted">
+        L’optimització de software implica revisar projectes existents per identificar problemes i aplicar millores, o
+        fins i tot migrar-los a tecnologies més modernes quan sigui necessari.
+      </p>
+    </Fragment>
+    <Fragment slot="postContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">Per què és important?</h3>
+      <p class="text-muted">
+        Un sistema optimitzat consumeix menys recursos, és més segur i redueix costos a llarg termini gràcies a un
+        manteniment més senzill i eficient.
+      </p>
+    </Fragment>
+    
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+
+  </Content>
+-->
+  <Content
+    isReversed
+    tagline=""
+    title="<a name='divisio-escalabilitat' title='Break down large systems into more specialized and scalable tools'>Modularization & Scalability</a>"
+    subtitle="Sometimes, using a single platform or software to meet multiple requirements is not the best solution."
+    items={[
+      {
+        title: 'Functionality Segmentation',
+        description: 'We break down monolithic systems into modular components to improve management and scalability.',
+      },
+      {
+        title: 'More Agile Development',
+        description: 'Allows for targeted updates and expansions, reducing time and costs.',
+      },
+      {
+        title: 'Minimized Error Impact',
+        description: 'Modular blocks operate independently, reducing the impact of errors on the overall system.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/bloques-distribuidos.png',
+      alt: 'Dividing a project into scalable modules',
+    }}
+  >
+    <Fragment slot="preContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">Transforming Monoliths into Scalable Systems</h3>
+      <p class="text-muted">
+        Monolithic systems can be challenging to maintain and update. Breaking these systems into modular components
+        enables agile development and improved scalability.
+      </p>
+    </Fragment>
+    <Fragment slot="postContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">Benefits of Modularization & Scaling</h3>
+      <p class="text-muted">
+        Modular architectures improve manageability and make it easier to introduce new functionalities with minimal
+        disruption.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Features
+    id="benefits"
+    tagline="Agile and Transparent Implementations for Users"
+    title="What Are the Benefits of Performing Migrations and Integrations with gilsys?"
+    subtitle="We execute migrations efficiently and turn integrations into opportunities to evolve systems sustainably, without unnecessary investment."
+    items={[
+      {
+        title: 'Seamless Migration Process',
+        description: `We ensure that every migration or integration is carried out with <strong>minimal impact</strong> on daily operations. 
+        We meticulously plan and coordinate each stage to maintain business continuity and reduce disruptions for end users.`,
+        icon: 'tabler:arrows-horizontal',
+      },
+      {
+        title: 'Honestedat i enfoc personalitzat',
+        description:
+          'A gilsys prioritzem les necessitats reals del client. Si no és necessari canviar-ho tot, o no té sentit a nivell econòmic fer-ho, ho exposarem de forma transparent. Recomanem les pràctiques i solucions més adequades per cada projecte, valorant sempre el cost-benefici i l’impacte a llarg termini.',
+        icon: 'tabler:message-circle',
+      },
+      {
+        title: 'Experiència pràctica en projectes reals',
+        description: `Hem treballat amb empreses de sectors molt diversos, resolent problemes concrets com la integració de sistemes independents, la migració d'eines a aplicacions més modernes o dividint plataformes per convertir-les en més escalables a nivell d'arquitectura i funcional.`,
+        icon: 'tabler:chart-bar',
+      },
+      {
+        title: 'Desenvolupament pensat per al futur',
+        description:
+          'Cada migració i integració es planteja amb una <strong>estratègia a llarg termini</strong>. Dissenyem sistemes flexibles que evolucionen amb l’empresa, permetent afegir noves funcionalitats, integrar eines modernes i adaptar-se als canvis tecnològics sense necessitat de reconstruir des de zero.',
+        icon: 'tabler:leaf',
+      },
+    ]}
+  />
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/03.jpg', alt: 'Abstract background' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get a Free Quote',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Call Us',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title"
+      >Looking to <span class="custom-gradient">migrate</span> legacy tools or <span class="custom-gradient"
+        >integrate applications</span
+      > into your business?</Fragment
+    >
+    <Fragment slot="subtitle"
+      >Get in touch with us, and we’ll handle the consultation and execution of your project.</Fragment
+    >
+  </CallToAction>
+</Layout>

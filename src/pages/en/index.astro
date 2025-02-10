@@ -1,214 +1,494 @@
 ---
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
-import Features3 from '~/components/widgets/Features3.astro';
+import FourBlocks from '~/components/widgets/FourBlocks.astro';
 import Hero from '~/components/widgets/Hero.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
 import Stats from '~/components/widgets/Stats.astro';
-import Steps2 from '~/components/widgets/Steps2.astro';
+import { header } from '~/i18n/ui.ts';
 import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 
 const metadata = {
-  title: 'About us',
+  title: 'Custom Software, Apps, Web, and AI Development | +20 Years',
+  description:
+    'Custom development company for mobile applications, web platforms, software, and artificial intelligence tools. Get a free quote. Located near Vic (Osona, Barcelona).',
 };
+
+const u = useRoutes(getLangFromUrl(Astro.url));
 ---
 
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
   <Hero
-    tagline="About us"
-    image={{
-      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Caos Image',
+    id="hero-home"
+    tagline=""
+    actions={[
+      { variant: 'primary', target: '_blank', text: 'Get a Free Quote', href: u('contact') },
+      { text: 'Services', href: '#services' },
+    ]}
+    backgroundImage={{
+      src: '~/assets/images/neutral/bg-1.jpg',
+      alt: 'Abstract background inspired by technology and software',
     }}
   >
     <Fragment slot="title">
-      Elevate your online presence with our <br />
-      <span class="text-accent dark:text-white highlight"> Beautiful Website Templates</span>
+      Custom development of
+      <span class="custom-gradient">software</span>,
+      <span class="custom-gradient">apps</span>,
+      <span class="custom-gradient">web platforms</span>, and
+      <span class="custom-gradient">AI</span><br />
     </Fragment>
 
     <Fragment slot="subtitle">
-      Donec efficitur, ipsum quis congue luctus, mauris magna convallis mauris, eu auctor nisi lectus non augue. Donec
-      quis lorem non massa vulputate efficitur ac at turpis. Sed tincidunt ex a nunc convallis, et lobortis nisi tempus.
-      Suspendisse vitae nisi eget tortor luctus maximus sed non lectus.
+      <span class="hidden sm:inline">
+        Over <span class="text-accent highlight">20 years</span> of turning innovative ideas into successful projects.
+      </span>
     </Fragment>
   </Hero>
+
+  <!--
+  <Hero2
+    classes={{ 
+      container: 'pb-0 md:pb-0 lg:pb-0',
+    }}
+    title="Stay ahead of the game, integrate <br/><span class='custom-gradient'>Artificial Intelligence</span> into your business"
+    subtitle={`We are a software engineering company specializing in custom software development. We don’t just stay up to date with the latest advancements in <a title='Custom development integrating artificial intelligence' class='text-accent' href='`+ u('development/ia')  +`'>artificial intelligence</a>—we actively apply them to business tools, web applications, custom mobile apps, and process automation.`}
+  >
+    <Fragment slot="preContent">
+      <div class="text-center -mt-4">
+        <a title="Custom AI-powered software development for businesses" href={u('development/ia')} class="btn-primary w-auto">Learn more</a>
+      </div>
+    </Fragment>
+
+  </Hero2>
+
+ -->
+  <Hero2
+    tagline="Helping businesses adopt artificial intelligence"
+    actions={[
+      {
+        variant: 'primary',
+        title: 'Custom AI-powered software development for businesses',
+        text: 'Learn more',
+        href: u('development/ia'),
+      },
+    ]}
+    image={{
+      id: 'home-first-image',
+      src: '~/assets/images/inteligencia-artificial.png',
+      alt: 'Artificial intelligence',
+    }}
+  >
+    <Fragment slot="title">
+      Stay ahead of the game, integrate <br /><span class="custom-gradient">Artificial Intelligence</span> into your business
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      We are a software engineering company specializing in custom software development. We don’t just stay up to date
+      with the latest advancements in <a
+        title="Custom development integrating artificial intelligence"
+        class="text-accent"
+        href={u('development/ia')}>artificial intelligence</a
+      >—we actively apply them to business tools, web applications, custom mobile apps, and process automation.
+    </Fragment>
+  </Hero2>
+
+  <FourBlocks
+    id="services"
+    title="<a title='Custom development, personalized software, migration and integration, and IT consulting services' name='services'>Software Engineering Services</a>"
+    information="Don't adapt your business to technology, we <span class='text-black'>adapt technology to your business</span>."
+    blocks={[
+      {
+        link: u('development'),
+        text: header['en']['links']
+          .find((link) => link._id === 'services')
+          .links.find((link) => link._id === 'development').text,
+        title: header['en']['links']
+          .find((link) => link._id === 'services')
+          .links.find((link) => link._id === 'development').title,
+        excerpt: 'We develop using the right technology for each project, creating completely new tools from scratch.',
+        image: '~/assets/images/programacion-software-a-medida.jpg',
+        links: header['en']['links']
+          .find((link) => link._id === 'services')
+          .links.find((link) => link._id === 'development').links,
+      },
+      {
+        link: u('software'),
+        text: header['en']['links']
+          .find((link) => link._id === 'services')
+          .links.find((link) => link._id === 'software').text,
+        title: header['en']['links']
+          .find((link) => link._id === 'services')
+          .links.find((link) => link._id === 'software').title,
+        excerpt: 'We build upon existing tools, extending and customizing them with tailored development.',
+        image: '~/assets/images/software-personalizado.jpg',
+        links: header['en']['links']
+          .find((link) => link._id === 'services')
+          .links.find((link) => link._id === 'software').links,
+      },
+      {
+        link: u('migration'),
+        text: header['en']['links']
+          .find((link) => link._id === 'services')
+          .links.find((link) => link._id === 'migration').text,
+        title: header['en']['links']
+          .find((link) => link._id === 'services')
+          .links.find((link) => link._id === 'migration').title,
+        excerpt: 'We optimize and migrate outdated tools while creating seamless processes to connect platforms.',
+        image: '~/assets/images/migracion-integracion.jpg',
+        links: header['en']['links']
+          .find((link) => link._id === 'services')
+          .links.find((link) => link._id === 'migration').links,
+      },
+      {
+        link: u('consultory'),
+        text: header['en']['links']
+          .find((link) => link._id === 'services')
+          .links.find((link) => link._id === 'consultory').text,
+        title: header['en']['links']
+          .find((link) => link._id === 'services')
+          .links.find((link) => link._id === 'consultory').title,
+        excerpt:
+          'We analyze your current situation, conceptualize ideas, and provide expert guidance to bring them to life.',
+        image: '~/assets/images/consultoria-tecnologica.jpg',
+        links: header['en']['links']
+          .find((link) => link._id === 'services')
+          .links.find((link) => link._id === 'consultory').links,
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </FourBlocks>
+  <!-- Steps2 Widget ****************** -->
+
+  <Features
+    id="features"
+    tagline="Why choose gilsys?"
+    title="Tailored solutions for your business"
+    subtitle="Web development, apps, and artificial intelligence—customized and programmed to fit your business needs."
+    columns={2}
+    items={[
+      {
+        title: 'Proven Experience',
+        description:
+          'Over <span class="text-accent highlight">20 years</span> of developing technological solutions for businesses across different industries, providing a broad vision and technical expertise.',
+        icon: 'tabler:flag-2',
+      },
+      {
+        title: 'Tailored Solutions',
+        description: `Every project is unique. We understand code and know how to use it to create custom solutions, avoiding the need to adapt your business to tools that don’t fully match your real needs.`,
+        icon: 'tabler:settings-code',
+      },
+      {
+        title: 'Cutting-Edge Technologies',
+        description:
+          `We work with the latest technologies, including <a href="` +
+          u('development/ia') +
+          `" title="We develop AI-integrated software for businesses" class="text-accent">artificial intelligence</a>, cloud computing, and modern frameworks to deliver innovative and efficient results.`,
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Expert Team',
+        description: 'We keep our team small to ensure proximity, quality, and full control over every project.',
+        icon: 'tabler:users-group',
+      },
+      {
+        title: 'Responsible Innovation',
+        description: `We constantly research and learn new technologies, but we only work with those that guarantee solid, reliable, and high-quality results. If we don’t master it, we won’t take it on.`,
+        icon: 'tabler:brand-bluesky',
+      },
+      {
+        title: 'Talk to Engineers, Not Salespeople',
+        description: `We are passionate about what we do. Our focus is on providing real, personalized solutions tailored to your business needs—without sales pressure.`,
+        icon: 'tabler:artboard',
+      },
+      {
+        title: 'Flexible Budget',
+        description: `We adapt to your budget by breaking the project into phases and prioritizing what’s most important for your business.`,
+        icon: 'tabler:adjustments-question',
+      },
+      {
+        title: 'Commitment & Support',
+        description: `We support you throughout the entire process, from the initial idea to implementation, offering maintenance and support services to ensure the success of your project.`,
+        icon: 'tabler:eyeglass',
+      },
+    ]}
+  />
 
   <!-- Stats Widget ****************** -->
 
   <Stats
-    title="Statistics about us"
+    title="Experience & Trust: <span class='custom-gradient'>gilsys in numbers</span>"
+    subtitle="We sincerely <strong>thank</strong> all our clients who have trusted our custom software development, apps, and artificial intelligence solutions—making a real impact on their businesses."
     stats={[
-      { title: 'Offices', amount: '4' },
-      { title: 'Employees', amount: '248' },
-      { title: 'Templates', amount: '12' },
-      { title: 'Awards', amount: '24' },
+      { title: 'Years', amount: '+20' },
+      { title: 'Projects', amount: '+200' },
+      { title: 'Deliveries', amount: '+1K' },
+      { title: 'Lines of Code', amount: '+1M' },
     ]}
   />
 
-  <!-- Features3 Widget ************** -->
+  <!-- Content Widget **************** -->
 
-  <Features3
-    title="Our templates"
-    subtitle="Etiam scelerisque, enim eget vestibulum luctus, nibh mauris blandit nulla, nec vestibulum risus justo ut enim. Praesent lacinia diam et ante imperdiet euismod."
-    columns={3}
-    isBeforeContent={true}
+  <!-- <Content
+    isImageSmall
+    classes={{
+      container: 'pb-10 md:pb-0 lg:pb-0',
+    }}
+    isAfterContent={false}
     items={[
       {
-        title: 'Educational',
-        description:
-          'Morbi faucibus luctus quam, sit amet aliquet felis tempor id. Cras augue massa, ornare quis dignissim a, molestie vel nulla.',
-        icon: 'tabler:template',
+        title: 'Què és el Kit Digital?',
+        description: `El govern d'Espanya impulsa el programa <a class="text-accent" href='https://www.acelerapyme.gob.es/kit-digital' target='_blank'>Kit Digital</a>, finançat per fons europeus Next Generation, per ajudar petites i mitjanes empreses, otorgant subvencions entre <span class="text-primary">3.000€</span> i <span class="text-primary">29.000€</span> per invertir en la implantació de noves tecnologies.`,
       },
       {
-        title: 'Interior Design',
+        title: 'Som agents digitalitzadors',
         description:
-          'Vivamus porttitor, tortor convallis aliquam pretium, turpis enim consectetur elit, vitae egestas purus erat ac nunc nulla.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Photography',
-        description:
-          'Duis sed lectus in nisl vehicula porttitor eget quis odio. Aliquam erat volutpat. Nulla eleifend nulla id sem fermentum.',
-        icon: 'tabler:template',
+          `A gilsys som un agent digitalitzador certificat dins del programa Kit Digital. Podem ajudar-te a digitalitzar les subvencions.
+            <br />
+            <a href="` +
+          u('kit-digital') +
+          `" class="btn-primary mt-12 mb-12 w-auto">Més informació</a>`,
       },
     ]}
-  />
+    image={{
+      id: 'image-kit-digital',
+      src: '~/assets/images/kit-digital.jpg',
+      alt: `Kit Digital - Subvencions per implantació de transformació digital a pimes i autònoms`,
+    }}
+  >
+    <Fragment slot="content">
+      <h2 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">KIT DIGITAL</h2>
+      <p class="-mb-4">Subvencions per solucions digitals per a autònoms i empreses de fins a 250 treballadors.</p>
+    </Fragment>
 
-  <!-- Features3 Widget ************** -->
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content> -->
 
-  <Features3
-    columns={3}
-    isAfterContent={true}
+  <!-- Content Widget **************** -->
+
+  <!-- <Content
+    isReversed
+    isImageSmall
+    isAfterContent
     items={[
       {
-        title: 'E-commerce',
-        description:
-          'Rutrum non odio at vehicula. Proin ipsum justo, dignissim in vehicula sit amet, dignissim id quam. Sed ac tincidunt sapien.',
-        icon: 'tabler:template',
+        title: 'Què és el Kit Consulting?',
+        description: `El programa <a class="text-accent" href='https://www.acelerapyme.gob.es/kit-consulting' target='_blank'>Kit Consulting</a>, impulsat pel govern d'Espanya amb fons europeus Next Generation, ofereix subvencions de <span class="text-primary">12.000€</span> a <span class="text-primary">24.000€</span> en diferents serveis d'assessorament digital.`,
       },
       {
-        title: 'Blog',
+        title: 'Som agents consultors',
         description:
-          'Nullam efficitur volutpat sem sed fringilla. Suspendisse et enim eu orci volutpat laoreet ac vitae libero.',
-        icon: 'tabler:template',
+          `A gilsys som un agent consultor certificat dins del programa Kit Consulting. T’ajudem a aprofitar les subvencions i dissenyar el full de ruta per a la transformació digital de la teva empresa.
+            <br />
+            <a href="` +
+          u('kit-consulting') +
+          `" class="btn-primary mt-12 mb-12 w-auto">Més informació</a>`,
+      },
+    ]}
+    image={{
+      id: 'image-kit-consulting',
+      src: '~/assets/images/kit-consulting.jpg',
+      alt: 'Kit Consulting - Subvencions per assessorament en transformació digital',
+    }}
+  >
+    <Fragment slot="content">
+      <h2 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">KIT CONSULTING</h2>
+      <p class="-mb-4">
+        Subvencions en serveis d'assessorament en transformació digital per a empreses d'entre 10 i 250 treballadors.
+      </p>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content> -->
+
+  <!-- Features2 Widget ************** -->
+  <Features2
+    title="Our expertise in custom development allows us to tackle projects in almost any industry"
+    subtitle="Technology plays a key role across most sectors, enabling us to create applications and automations regardless of the type of business."
+    columns={3}
+    items={[
+      {
+        title: 'Technology',
+        description:
+          `<a href="` +
+          u('development/web') +
+          `" title="Custom web application development" class="text-accent">Online tools</a> and <a href="` +
+          u('development/apps') +
+          `" title="Custom iOS and Android app development" class="text-accent">mobile apps</a> with Bluetooth integration, AI, or custom APIs.`,
+        icon: 'tabler:code',
       },
       {
         title: 'Business',
         description:
-          'Morbi et elit finibus, facilisis justo ut, pharetra ipsum. Donec efficitur, ipsum quis congue luctus, mauris magna.',
-        icon: 'tabler:template',
+          `Development of 
+      <a href="` +
+          u('development/web') +
+          `" title="High-performance website development" class="text-accent">fast and SEO-optimized websites</a> (not WordPress).`,
+        icon: 'tabler:affiliate',
       },
       {
-        title: 'Branding',
+        title: 'Retail',
         description:
-          'Suspendisse vitae nisi eget tortor luctus maximus sed non lectus. Cras malesuada pretium placerat. Nullam venenatis dolor a ante rhoncus.',
-        icon: 'tabler:template',
+          `<a href="` +
+          u('software/ecommerce') +
+          `" title="E-commerce with Prestashop and WooCommerce" class="text-accent">Online stores</a>, landing pages, and invoicing system integration.`,
+        icon: 'tabler:shopping-cart',
       },
       {
-        title: 'Medical',
+        title: 'Marketing',
         description:
-          'Vestibulum malesuada lacus id nibh posuere feugiat. Nam volutpat nulla a felis ultrices, id suscipit mauris congue. In hac habitasse platea dictumst.',
-        icon: 'tabler:template',
+          `Implementation of <a href="` +
+          u('software/crm') +
+          `" title="Customer management systems for businesses and freelancers" class="text-accent">CRM</a> solutions, sales data synchronization, and digital tool integration.`,
+        icon: 'tabler:arrow-big-up-lines',
       },
       {
-        title: 'Fashion Design',
+        title: 'Education',
         description:
-          'Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus.',
-        icon: 'tabler:template',
+          `<a href="` +
+          u('development/web') +
+          `" title="Custom e-learning platform development" class="text-accent">Online training platforms</a> with advanced evaluation systems.`,
+        icon: 'tabler:school',
+      },
+      {
+        title: 'Healthcare',
+        description:
+          `Development of online tools for <a href="` +
+          u('development/web') +
+          `" title="Custom solutions for medical center management" class="text-accent">medical management</a>, appointments, patient records, and inventory control.`,
+        icon: 'tabler:vaccine',
+      },
+      {
+        title: 'Industry',
+        description:
+          `Solutions for <a href="` +
+          u('software/pimcore') +
+          `" title="Product Information Management (PIM) solutions with Pimcore" class="text-accent">product management</a>, along with <a href="` +
+          u('migration') +
+          `" title="Custom software for process automation" class="text-accent">software to automate processes</a> and synchronize data.`,
+        icon: 'tabler:building-factory-2',
+      },
+      {
+        title: 'Startups',
+        description:
+          `<a href="` +
+          u('consultory') +
+          `" title="Tech consulting for launching innovative projects" class="text-accent">Turning ideas into projects</a>, guiding startups through app and platform development while defining a solid tech roadmap.`,
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Laboratories',
+        description:
+          `Development of advanced algorithms and tools to process data using <a href="` +
+          u('development/ia') +
+          `" title="AI integration trained with proprietary data" class="text-accent">artificial intelligence</a>.`,
+        icon: 'tabler:flask',
+      },
+      {
+        title: 'Executive',
+        description:
+          `Software for <a href="` +
+          u('software/metabase') +
+          `" title="Business Intelligence and analytics with Metabase" class="text-accent">business data analysis</a> to support decision-making.`,
+        icon: 'tabler:report-analytics',
+      },
+      {
+        title: 'Corporations',
+        description:
+          `<a href="` +
+          u('software/wp') +
+          `" title="Professional WordPress websites" class="text-accent">Professional WordPress websites</a> with custom design and advanced customizations.`,
+        icon: 'tabler:building-skyscraper',
+      },
+      {
+        title: 'Public Sector',
+        description:
+          `Implementation of custom tools to optimize, manage, and <a href="` +
+          u('development/automation') +
+          `" title="Custom automation for administrative processes" class="text-accent">automate administrative processes</a>.`,
+        icon: 'tabler:progress-check',
       },
     ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-      alt: 'Colorful Image',
-    }}
   />
 
-  <!-- Steps2 Widget ****************** -->
+  <!-- Testimonials Widget *********** 
 
-  <Steps2
-    title="Our values"
-    subtitle="Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus. Nulla facilisi. Vestibulum malesuada lacus."
-    items={[
+  <Testimonials
+    title="Client testimonials"
+    subtitle="Discover what clients have to say about their experiences working with me."
+    testimonials={[
       {
-        title: 'Customer-centric approach',
-        description:
-          'Donec id nibh neque. Quisque et fermentum tortor. Fusce vitae dolor a mauris dignissim commodo. Ut eleifend luctus condimentum.',
+        testimonial: `She took our vague concept and turned it into a visual masterpiece that perfectly aligned with our goals. Her attention to detail and ability to translate ideas into compelling visuals exceeded our expectations.`,
+        name: 'Mark Thompson',
+        job: 'Creative director',
+        image: {
+          src: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+          alt: 'Mark Thompson Image',
+        },
       },
       {
-        title: 'Constant Improvement',
-        description:
-          'Phasellus laoreet fermentum venenatis. Vivamus dapibus pulvinar arcu eget mattis. Fusce eget mauris leo.',
+        testimonial: `She transformed our brand identity with her creative finesse, capturing our essence in every element. Her dedication and talent truly shine through her work.`,
+        name: 'Emily Martinez',
+        job: 'CEO',
+        image: {
+          src: 'https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=772&q=80',
+          alt: 'Emily Martinez Image',
+        },
       },
       {
-        title: 'Ethical Practices',
-        description:
-          'Vestibulum imperdiet libero et lectus molestie, et maximus augue porta. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
+        testimonial: `She has an uncanny ability to communicate emotions and stories. She crafted a logo for our NGO that not only represents our cause but also evokes empathy. Her professionalism and commitment make her a designer of exceptional caliber.`,
+        name: 'Laura Simmons',
+        job: 'Founder of an NGO',
+        image: {
+          src: 'https://images.unsplash.com/photo-1554727242-741c14fa561c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+          alt: 'Laura Simmons Image',
+        },
+      },
+      {
+        testimonial: `We entrusted Sarah with revamping our website's user interface, and the results were astounding. Her intuitive design sense enhanced user experience, leading to a significant increase in engagement. She's a designer who truly understands the synergy of aesthetics and functionality.`,
+        name: 'Alex Foster',
+        job: 'Director of web services',
+        image: {
+          src: 'https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+          alt: 'Alex Foster Image',
+        },
+      },
+      {
+        testimonial: `She took our vision and elevated it beyond imagination. Her ability to capture brand essence and translate it into design is nothing short of remarkable. Working with her has been an inspiring journey.`,
+        name: 'Jessica Collins',
+        job: 'Product Manager',
+        image: {
+          src: 'https://images.unsplash.com/photo-1548142813-c348350df52b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=778&q=80',
+          alt: 'Jessica Collins Image',
+        },
+      },
+      {
+        testimonial: `Her ability to transform concepts into captivating visuals is nothing short of extraordinary. She took our event poster idea and turned it into a visual masterpiece that perfectly captured the essence of our festival. Sarah's dedication, creativity, and knack for delivering beyond expectations make her an invaluable asset to any project.`,
+        name: 'Michael Carter',
+        job: 'Event Coordinator',
+        image: {
+          src: 'https://images.unsplash.com/photo-1566492031773-4f4e44671857?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+          alt: 'Michael Carter Image',
+        },
       },
     ]}
   />
-
-  <!-- Steps2 Widget ****************** -->
-
-  <Steps2
-    title="Achievements"
-    subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla, sed porttitor est nibh at nulla."
-    isReversed={true}
-    callToAction={{
-      text: 'See more',
-      href: '/',
-    }}
-    items={[
-      {
-        title: 'Global reach',
-        description: 'Nam malesuada urna in enim imperdiet tincidunt. Phasellus non tincidunt nisi, at elementum mi.',
-        icon: 'tabler:globe',
-      },
-      {
-        title: 'Positive customer feedback and reviews',
-        description:
-          'Cras semper nulla leo, eget laoreet erat cursus sed. Praesent faucibus massa in purus iaculis dictum.',
-        icon: 'tabler:message-star',
-      },
-      {
-        title: 'Awards and recognition as industry experts',
-        description:
-          'Phasellus lacinia cursus velit, eu malesuada magna pretium eu. Etiam aliquet tellus purus, blandit lobortis ex rhoncus vitae.',
-        icon: 'tabler:award',
-      },
-    ]}
-  />
-
-  <!-- Features2 Widget ************** -->
-
+ 
+<
   <Features2
-    title="Our locations"
-    tagline="Find us"
-    columns={4}
-    items={[
-      {
-        title: 'EE.UU',
-        description: '1234 Lorem Ipsum St, 12345, Miami',
-      },
-      {
-        title: 'Spain',
-        description: '5678 Lorem Ipsum St, 56789, Madrid',
-      },
-      {
-        title: 'Australia',
-        description: '9012 Lorem Ipsum St, 90123, Sydney',
-      },
-      {
-        title: 'Brazil',
-        description: '3456 Lorem Ipsum St, 34567, São Paulo',
-      },
-    ]}
-  />
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Technical Support"
-    tagline="Contact us"
+    title="Contacta\'ns"
+    tagline="Des de gilsys posarem en marxa la teva transformació digital."
     columns={2}
     items={[
       {
@@ -218,11 +498,36 @@ const metadata = {
         icon: 'tabler:messages',
       },
       {
-        title: 'Call us',
-        description:
-          'Mauris faucibus finibus orci, in posuere elit viverra non. In hac habitasse platea dictumst. Cras lobortis metus a hendrerit congue.',
+        title: 'Truca',
+        description: '665 331 271',
         icon: 'tabler:headset',
       },
     ]}
   />
+  -->
+  <BlogLatestPosts title="Latest Blog Posts" linkText="Go to Blog" />
+
+  <CallToAction
+    backgroundImage={{
+      src: '~/assets/images/neutral/bg-1.jpg',
+      alt: 'Abstract background inspired by technology and software',
+    }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get a Free Quote',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Call Us',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">Request a <span class="custom-gradient">free preliminary quote</span></Fragment>
+    <Fragment slot="subtitle"
+      >If you have a project in mind and need guidance, gilsys is here to help you turn it into reality.</Fragment
+    >
+  </CallToAction>
 </Layout>

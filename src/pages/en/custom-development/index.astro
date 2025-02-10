@@ -1,0 +1,289 @@
+---
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+const u = useRoutes(getLangFromUrl(Astro.url));
+
+const metadata = {
+  title: 'Custom Software Development for Businesses | +20 Years',
+  description:
+    'We develop web applications, mobile apps, and AI-powered tools that automate processes and enhance business operations.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    actions={[{ variant: 'primary', text: 'Get a Free Quote', href: u('contact') }]}
+    backgroundImage={{ alt: 'Abstract background', src: '~/assets/images/dots/13.jpg' }}
+    tagline="We create <strong>tools that don’t just work</strong>—they are attractive and efficient."
+  >
+    <Fragment slot="title"
+      >Custom <span class="text-accent highlight">Software Development</span> for Businesses</Fragment
+    >
+    <Fragment slot="subtitle"
+      >We develop web applications, mobile apps, and AI-powered tools that automate processes and enhance business
+      operations.</Fragment
+    >
+  </Hero>
+
+  <Features3
+    title="What kind of custom tools do we develop?"
+    items={[
+      {
+        title: 'Web Applications',
+        description:
+          'We develop online tools and platforms, whether public-facing or for internal business use, across all types of projects.',
+        icon: 'tabler:world',
+        callToAction: {
+          class: 'more-info',
+          text: 'Learn More',
+          href: u('development/web'),
+        },
+      },
+      {
+        title: 'Mobile Applications',
+        description:
+          'We design and develop cross-platform, hybrid apps for iOS and Android, available on the Apple Store and Google Play.',
+        icon: 'tabler:device-mobile',
+        callToAction: {
+          class: 'more-info',
+          text: 'Learn More',
+          href: u('development/apps'),
+        },
+      },
+      {
+        title: 'AI-Powered Development',
+        description:
+          'We build solutions that leverage AI to automate tasks requiring advanced data processing and understanding.',
+        icon: 'tabler:brain',
+        callToAction: {
+          class: 'more-info',
+          text: 'Learn More',
+          href: u('development/ia'),
+        },
+      },
+      {
+        title: 'High-Performance Websites',
+        description:
+          "We develop websites optimized for performance, SEO, security, and an exceptional user experience. For projects that require more than just <a class='text-accent' href='' title='Self-managed websites with WordPress'>WordPress</a>.",
+        icon: 'tabler:layout',
+        callToAction: {
+          class: 'more-info',
+          text: 'Learn More',
+          href: u('development/astro'),
+        },
+      },
+      {
+        title: 'Process Automation & API Development',
+        description:
+          'Automating repetitive tasks through software helps optimize business processes and improve system connectivity.',
+        icon: 'tabler:api',
+        callToAction: {
+          class: 'more-info',
+          text: 'Learn More',
+          href: u('development/automation'),
+        },
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Features3>
+  <FAQs
+    title="Custom Software, Web Applications, Mobile Apps, and Cloud-Based Tools"
+    subtitle="At gilsys, we specialize in developing technology solutions designed from scratch to meet the specific requirements of each project."
+    tagline=""
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'What does custom software mean?',
+        description:
+          'Custom software refers to the development of applications and technological tools <strong>that do not yet exist</strong>. This allows for complete adaptation to the client’s needs, eliminating the limitations of commercial platforms or pre-existing software solutions.',
+      },
+      {
+        title: 'Differences between custom software and personalized software',
+        description:
+          "While these may seem like similar concepts, it's important to highlight that custom software is created <strong>from scratch</strong>, whereas personalized software involves adapting or extending an existing tool to meet client needs. There is no one-size-fits-all solution—depending on the project, it may be better to develop custom software or use <a title='Customizable software solutions' href='" +
+          u('software') +
+          "' class='text-accent'>customizable software</a> as a base.",
+      },
+    ]}
+  />
+
+  <Features2
+    id="features"
+    tagline="Key Features"
+    title="Benefits of Custom Software"
+    subtitle="Unique solutions designed to meet each company's specific needs with efficiency, scalability, and innovation."
+    items={[
+      {
+        title: 'Tailor-Made Development for Each Business',
+        description:
+          "Custom software development ensures greater adaptability compared to commercial solutions. Each project is designed and developed in collaboration with the company to meet its specific needs. If necessary, we provide IT consulting to <a title='IT consulting to transform ideas into projects' href='" +
+          u('consultory') +
+          "' class='text-accent'>turn ideas into reality</a>.",
+        icon: 'tabler:brand-tailwind',
+      },
+      {
+        title: 'Fully Customizable User Interfaces',
+        description:
+          'Custom development eliminates the limitations of standard software. Designing intuitive, tailored interfaces enhances usability, boosts team efficiency for internal tools, and improves user experience for platforms and apps.',
+        icon: 'tabler:components',
+      },
+      {
+        title: 'Advanced Feature Development',
+        description:
+          'With full control over the source code, we can implement advanced, tailored functionalities to meet specific project requirements—creating software solutions as simple or complex as needed.',
+        icon: 'tabler:list-check',
+      },
+      {
+        title: 'Code Control & Updates',
+        description:
+          'Custom software development guarantees complete control over the source code and updates, providing flexibility and eliminating dependency on external vendors.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Scalability & Flexibility for Business Growth',
+        description:
+          'Custom-built solutions are designed to evolve alongside each project. Applications can be expanded or modified to incorporate new features, integrate emerging technologies, and scale in terms of infrastructure.',
+        icon: 'tabler:arrows-right-left',
+      },
+      {
+        title: 'Efficiency & Productivity',
+        description:
+          'Reducing time spent on repetitive tasks and minimizing human error is possible with custom software development, which optimizes processes and boosts business productivity.',
+        icon: 'tabler:arrows-right-left',
+      },
+      {
+        title: 'Innovation in Software Development',
+        description:
+          'Modern frameworks and artificial intelligence can be integrated to future-proof software and align it with current and upcoming business needs.',
+        icon: 'tabler:arrows-right-left',
+      },
+      {
+        title: 'Seamless Integration with Existing Systems',
+        description:
+          'Custom software development enables seamless integration with existing business systems and tools, enhancing connectivity and optimizing workflows without disruption.',
+        icon: 'tabler:arrows-right-left',
+      },
+      {
+        title: 'Long-Term Cost Savings Compared to Proprietary Software',
+        description:
+          'Custom software eliminates recurring licensing costs and forced adaptations, often providing a more cost-effective and sustainable solution in the long run.',
+        icon: 'tabler:arrows-right-left',
+      },
+    ]}
+  />
+  <Features
+    id="features"
+    tagline=""
+    title="Challenges & Solutions"
+    subtitle="Discover how custom software overcomes initial hurdles to deliver long-term benefits."
+    items={[
+      {
+        title: 'Higher Initial Cost Compared to Commercial Software',
+        description:
+          '<strong>Custom software</strong> requires a higher initial investment compared to standard solutions. This is due to the complete personalization of development and the creation from scratch. However, in the long run, costs are reduced by eliminating recurring license fees, adaptation costs, and third-party dependencies.',
+        icon: 'tabler:currency-dollar',
+      },
+      {
+        title: 'Longer Development Time',
+        description:
+          'Building custom software can take longer than implementing an off-the-shelf solution. At gilsys, we use <strong>agile methodologies</strong> to ensure an efficient process and prioritize critical functionalities, allowing phased implementation.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Dependency on the Development Provider',
+        description:
+          'Since the code is unique, there may be some dependency on the development team. At <strong>gilsys</strong>, we ensure <strong>complete transparency</strong> in the code and, if needed, we offer documentation and training services for the client’s technical teams, ensuring full autonomy.',
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Initial Management Complexity',
+        description:
+          'Adopting a brand-new tool may require an adaptation period for end-users. We develop <strong>intuitive interfaces</strong> and provide specialized training to ensure a smooth transition. Additionally, we can adjust the software after deployment based on user feedback.',
+        icon: 'tabler:settings',
+      },
+    ]}
+  />
+
+  <Content
+    isReversed
+    tagline="Discover What Makes Us Different"
+    title="Why Choose gilsys for <span class='custom-gradient'>Custom Software Development</span>?"
+    items={[
+      {
+        title: 'Commitment to Project Planning & Execution',
+        description:
+          'From the very beginning, we define exactly what the custom software project will include and establish a realistic timeline that aligns with its complexity.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Focused on Efficiency & Performance',
+        description:
+          'Our tools <strong>DON’T just work</strong>—we believe that every line of code should be a small masterpiece. We optimize the code and internal processes of the software to make it fast, reliable, and efficient.',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Ongoing Maintenance & Future Growth',
+        description:
+          'We work with you to plan the evolution of the software so it can grow alongside your business, integrating new functionalities as needed.',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Cutting-Edge Technology',
+        description:
+          'From artificial intelligence to cloud-based solutions, we use the most suitable technologies for your project—prioritizing innovation over simply reusing existing code when invention is needed.',
+        icon: 'tabler:cloud',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/programacion-software-a-medida.jpg',
+      alt: 'Custom software development source code',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        With over 20 years of experience in custom software development, we have worked on major projects across a wide
+        range of industries.
+      </p>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/13.jpg', alt: 'Abstract background' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get a Free Quote',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Call Us',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title"
+      >If what you need doesn’t exist, you need <br /><span class="custom-gradient">custom software</span></Fragment
+    >
+    <Fragment slot="subtitle">We prepare a tailored quote based on your specific needs.</Fragment>
+  </CallToAction>
+
+  <BlogLatestPosts title="Latest Blog Posts" linkText="Go to Blog" />
+</Layout>

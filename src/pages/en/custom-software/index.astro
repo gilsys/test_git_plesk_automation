@@ -1,0 +1,309 @@
+---
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+const metadata = {
+  title: 'Custom Software Development for Businesses | +20 Years',
+  description:
+    'We customize platforms like WordPress, PrestaShop, WooCommerce, Pimcore, and Metabase to create unique, tailored solutions adapted to each company.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    backgroundImage={{ alt: 'Abstract background', src: '~/assets/images/dots/14.jpg' }}
+    actions={[
+      { variant: 'primary', text: 'Get a Free Quote', href: u('contact') },
+      { variant: 'primary', text: 'Request a Demo', href: u('contact') },
+    ]}
+    tagline="We design and develop websites and tools using <strong>existing technologies</strong> as the foundation for your project."
+  >
+    <Fragment slot="title">Custom <span class="custom-gradient">Software Development</span></Fragment>
+    <Fragment slot="subtitle">
+      We customize platforms like
+      <a href={u('software/wp')} title="Custom WordPress Design" class="custom-gradient">WordPress</a>,
+      <a href={u('software/ecommerce')} title="PrestaShop Development" class="custom-gradient">PrestaShop</a>, <a
+        href={u('software/pimcore')}
+        title="Pimcore Development"
+        class="custom-gradient">Pimcore</a
+      >, and
+      <a href={u('software/metabase')} title="Metabase Development" class="custom-gradient">Metabase</a>
+      to deliver unique and personalized designs and functionalities, tailored to each project's specific needs.
+    </Fragment>
+  </Hero>
+
+  <Features3
+    id="features-services"
+    tagline="Services Based on Existing Platforms & Tools"
+    title="Managed Websites, E-commerce, CRM, BI, or PIM Require Development, but Not from Scratch."
+    subtitle={"We differentiate customizable software from <a class='text-accent' title='We develop new applications with custom programming' href='" +
+      u('software') +
+      "'>fully custom software</a>, where we create new applications and tools from the ground up."}
+    items={[
+      {
+        title: 'Web Development',
+        description:
+          'We develop web portals using <strong>WordPress</strong>, focusing on design and user experience, while also extending functionalities by developing custom plugins.',
+        icon: 'tabler:world',
+        callToAction: {
+          class: 'more-info',
+          text: 'Learn More',
+          href: u('software/wp'),
+        },
+      },
+      {
+        title: 'E-commerce',
+        description:
+          'We customize platforms like <strong>PrestaShop</strong> and <strong>WooCommerce</strong> to optimize online sales and extend functionality.',
+        icon: 'tabler:shopping-cart',
+        callToAction: {
+          class: 'more-info',
+          text: 'Learn More',
+          href: u('software/ecommerce'),
+        },
+      },
+      {
+        title: 'Customer Management',
+        description:
+          'We adapt <strong>CRM</strong> systems to enhance customer acquisition, tracking, and management according to business objectives.',
+        icon: 'tabler:users',
+        callToAction: {
+          class: 'more-info',
+          text: 'Learn More',
+          href: u('software/crm'),
+        },
+      },
+      {
+        title: 'Product Management',
+        description:
+          'We develop PIM tools based on <strong>Pimcore</strong> to centralize product management, multimedia assets, and workflows.',
+        icon: 'tabler:box',
+        callToAction: {
+          class: 'more-info',
+          text: 'Learn More',
+          href: u('software/pimcore'),
+        },
+      },
+      {
+        title: 'Business Intelligence',
+        description:
+          'We implement business analytics solutions with <strong>Metabase</strong>, allowing companies to analyze data, generate reports, and make strategic decisions.',
+        icon: 'tabler:chart-bar',
+        callToAction: {
+          class: 'more-info',
+          text: 'Learn More',
+          href: u('software/metabase'),
+        },
+      },
+    ]}
+  />
+  <FAQs
+    title="What is Customizable Software?"
+    items={[
+      {
+        title: 'What does customizable software mean?',
+        description:
+          'Customizable software involves modifying and extending existing platforms to adapt them to the specific needs of a project, leveraging a robust and reliable foundation.<br/><br/>Sometimes, it is not necessary to develop a project from scratch when certain base functionalities are already implemented in existing tools. With the right expertise in <strong>software development</strong>, we can customize and extend them according to the specific requirements of each project.',
+      },
+      {
+        title: 'What are the differences between customizable software and fully custom software?',
+        description:
+          `Customizable software is built on an existing technological foundation, which we can extend and <strong>adapt through programming</strong> to meet specific needs. On the other hand, when we talk about <a title='Custom application development for businesses' href='` +
+          u('software') +
+          `' class='text-accent'>fully custom software development</a>, we build everything from scratch to create a unique solution.<br/><br/>Choosing between custom development and customization depends on the level of personalization required and the long-term vision of the project.`,
+      },
+      {
+        title: 'Is it always better to use customizable software?',
+        description:
+          `Not necessarily. In many cases, customizable software is sufficient to adapt existing platforms to specific project needs, offering a faster and more cost-effective solution. 
+        However, when requirements are highly specific or an entirely innovative solution is needed, custom software development is the better option. This allows the system to be designed and developed from the ground up to meet all project requirements. In some cases, excessive customization of an existing tool may be more expensive than building a custom solution.
+        <br/><br/>
+        The key is to evaluate specific needs and long-term goals before deciding on the best approach. While not always necessary, gilsys offers <a class="text-accent" title="Technology consulting for development projects" href='` +
+          u('consultory') +
+          `'>consulting services</a> to analyze business ideas and explore different development options.`,
+      },
+      {
+        title: 'Examples?',
+        description:
+          `We can develop a high-performance custom website using <a class="text-accent" title="Custom high-speed web development" href='` +
+          u('development/astro') +
+          `'>ASTRO</a> for maximum speed, security, and efficiency. However, in some cases, it may be more suitable to work with <a class="text-accent" title="Custom WordPress Design" href='` +
+          u('software/wp') +
+          `'>WordPress</a>, which provides an advanced content management system that is easy for users to manage and can be extended with plugins.<br/><br/>
+        Similarly, we can build a completely custom CRM if the project requires it. However, in most cases, it is more efficient to base the project on an existing <a class="text-accent" title="Customer Management Software for Businesses" href='` +
+          u('software/crm') +
+          `'>CRM</a> that can be extended and customized through programming while maintaining a strong foundation.`,
+      },
+    ]}
+  />
+
+  <Features2
+    id="features"
+    tagline="Why Use Customizable Software?"
+    title="We Create Tailored Solutions by Building on Existing Technologies"
+    subtitle="Leverage existing platforms for faster, scalable, and cost-effective results."
+    items={[
+      {
+        title: 'Efficient Development',
+        description: 'Using an existing foundation reduces development time, allowing for a quicker implementation.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'More Cost-Effective',
+        description:
+          'Leveraging an existing platform can be a more cost-efficient approach compared to developing <a title="Fully Custom Software Development" href="' +
+          u('development') +
+          "' class='text-accent'>custom software</a> while still maintaining high levels of personalization.",
+        icon: 'tabler:currency-dollar',
+      },
+      {
+        title: 'Modular & Theme Customization',
+        description:
+          `Platforms like <a href='` +
+          u('software/wp') +
+          `' title="WordPress Development" class="text-accent">WordPress</a> and <a href='` +
+          u('software/ecommerce') +
+          `' title="E-commerce Development with PrestaShop" class="text-accent">PrestaShop</a> can be expanded with free, commercial, or custom-built modules, as well as fully tailored themes that reflect your company's brand identity.`,
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Flexible Scalability',
+        description:
+          'Customizable solutions allow businesses to start with essential functionalities and add new features as their needs grow.',
+        icon: 'tabler:line',
+      },
+      {
+        title: 'Lower Learning Curve',
+        description:
+          'Since these tools are widely used, users are often already familiar with their interfaces. Additionally, extensive online resources are available for troubleshooting and guidance.',
+        icon: 'tabler:school',
+      },
+      {
+        title: 'Regular Updates & Improvements',
+        description:
+          'The platforms we work with are constantly evolving, meaning that beyond custom developments, you will benefit from periodic updates with new features, security enhancements, and performance optimizations.',
+        icon: 'tabler:arrows-right-left',
+      },
+    ]}
+  />
+  <Features
+    id="features"
+    tagline=""
+    title="Challenges & Solutions"
+    subtitle="Working with customizable software presents challenges—discover how we address them to provide efficient and sustainable solutions."
+    items={[
+      {
+        title: 'Security Vulnerabilities in Open-Source Tools',
+        description:
+          'Open-source tools can be more susceptible to security issues. The solution is to have a <strong>regular update service</strong> and integrate the necessary security measures to protect the project.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Complexity in Updates',
+        description:
+          'When extensive customizations are applied, updates can become complicated. At gilsys, we follow <strong>best programming practices</strong> by avoiding modifications to the core code and encapsulating customizations into independent modules, ensuring compatibility with future versions.',
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Implementation Time & Complexity',
+        description:
+          'The time and complexity required to implement customizations may surpass that of fully custom software when a high degree of adaptation is needed. This must be evaluated before starting the project to determine the best technology for development.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Recurring Plugin Costs',
+        description:
+          'Using commercial plugins may involve subscription fees that result in recurring costs. At gilsys, we carefully analyze the best modules for integration, comparing costs and requirements with fully custom development to ensure the best solution.',
+        icon: 'tabler:currency-dollar',
+      },
+    ]}
+  />
+
+  <Content
+    isReversed
+    tagline="Beyond Custom Design—We Understand & Extend the Code."
+    title="How Can gilsys Help with Customizable Software Development?"
+    items={[
+      {
+        title: 'Adaptability Across Multiple Industries',
+        description:
+          'We have extensive experience adapting platforms to the specific operational needs and common requirements of various industries.',
+        icon: 'tabler:building',
+      },
+      {
+        title: 'Deep Expertise in Modules & Integrations',
+        description:
+          'We work with a wide range of modules and integrations, allowing us to recommend the most suitable options for each project.',
+        icon: 'tabler:chart-pie',
+      },
+      {
+        title: 'Agile & Efficient Methodology',
+        description:
+          'We meticulously plan each project, prioritizing critical functionalities and implementing solutions efficiently to meet deadlines.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Personalized Support & Maintenance',
+        description:
+          'We provide support services, preventive maintenance for updates, and ongoing development to implement improvements.',
+        icon: 'tabler:headset',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/software-personalizado.jpg',
+      alt: 'Customizable software, image with tablet and e-commerce blocks',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        We Understand the Tools and Know How to Adapt Them
+      </h3>
+      At gilsys, we are experts in software development—not only do we use the tools we customize, but we can also extend
+      them because we <strong>understand the source code</strong>.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    backgroundImage={{
+      src: '~/assets/images/dots/14.jpg',
+      alt: 'Abstract background, inspired by technology and software',
+    }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get a Free Quote',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Call Us',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title"
+      >We know many tools and can <span class="custom-gradient">customize them</span> for your business</Fragment
+    >
+    <Fragment slot="subtitle"
+      >We’ll advise you on the most suitable software for your industry and guide you on how it can be customized to fit
+      your needs.</Fragment
+    >
+  </CallToAction>
+
+  <BlogLatestPosts title="Latest Blog Posts" linkText="Go to Blog" />
+</Layout>

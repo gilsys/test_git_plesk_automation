@@ -1,0 +1,321 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+const metadata = {
+  title: 'IT Consulting',
+  description: `Advisory services for integrating artificial intelligence into businesses, analyzing technological landscapes, transforming ideas into projects, and optimizing data organization.`,
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="As software development experts, we provide a deeper perspective."
+    backgroundImage={{ alt: 'Abstract background', src: '~/assets/images/dots/20.jpg' }}
+  >
+    <Fragment slot="title"><span class="text-accent highlight">IT Consulting</span></Fragment>
+    <Fragment slot="subtitle"
+      >Expert guidance on AI integration, technological analysis, project transformation, and data organization
+      strategies.</Fragment
+    >
+  </Hero>
+
+  <Features3
+    id="features-services"
+    title="Consulting Led by Technical Specialists"
+    subtitle={"Our advisory services go beyond standard consulting firms. We specialize in <a title='Custom Software Development' class='text-accent' href='" +
+      u('software') +
+      "'>software development</a>, allowing us to offer a more technical and practical perspective when making decisions."}
+    tagline="Advisory services focused on results, not software sales."
+    items={[
+      {
+        title: 'AI Integration Advisory',
+        description: 'We identify opportunities to effectively introduce AI into business processes.',
+        icon: 'tabler:brain',
+        callToAction: {
+          class: 'more-info',
+          text: 'More Info',
+          href: '#ia',
+        },
+      },
+      {
+        title: 'Technological Landscape Analysis',
+        description: 'We audit systems and processes to identify strengths, weaknesses, and areas for improvement.',
+        icon: 'tabler:search',
+        callToAction: {
+          class: 'more-info',
+          text: 'More Info',
+          href: '#analisi-situacio-tecnologica',
+        },
+      },
+      {
+        title: 'Turning Ideas into Projects',
+        description:
+          'We transform initial ideas into real-world projects with clear technical proposals and well-defined phases.',
+        icon: 'tabler:bulb',
+        callToAction: {
+          class: 'more-info',
+          text: 'More Info',
+          href: '#transformar-idees-en-projectes',
+        },
+      },
+      {
+        title: 'Data Analysis & Organization',
+        description:
+          'We assess and propose optimizations for data structure and quality, enabling better strategic decision-making.',
+        icon: 'tabler:database',
+        callToAction: {
+          class: 'more-info',
+          text: 'More Info',
+          href: '#analisi-organitzacio-dades',
+        },
+      },
+      {
+        title: 'Solution Identification',
+        description: 'We evaluate and recommend tools that enhance existing processes and boost productivity.',
+        icon: 'tabler:tool',
+        callToAction: {
+          class: 'more-info',
+          text: 'More Info',
+          href: '#identificacio-solucions',
+        },
+      },
+    ]}
+  />
+  <Content
+    isReversed
+    tagline=""
+    title="<a title='Technology advisory for AI adaptation in businesses' name='ia'>AI Integration Advisory</a>"
+    subtitle="We analyze business tasks and processes to identify opportunities for integrating Artificial Intelligence."
+    items={[
+      {
+        title: 'Identifying Key Tasks',
+        description: 'We analyze processes where AI can add the most value and efficiency to the business.',
+      },
+      {
+        title: 'Tailored AI Solutions',
+        description:
+          'We recommend AI solutions that align with the client’s existing infrastructure and business needs.',
+      },
+      {
+        title: 'Strategic Implementation Plan',
+        description:
+          'We design a plan that considers operational impacts and training requirements for a smooth AI integration.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/estudio-integracion-ia.jpg',
+      alt: 'AI integration study',
+    }}
+  >
+    <Fragment slot="preContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">Identifying Where AI Can Drive Business Growth</h3>
+      <p class="text-muted">
+        Artificial Intelligence can bring significant value to businesses, but only if planned and integrated correctly.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Content
+    tagline=""
+    title=`<a title='Company technology analysis and automation potential' name='analisi-situacio-tecnologica'>Technological Situation Analysis</a>`
+    subtitle="We evaluate the business to identify opportunities for task automation and improvements in existing applications."
+    items={[
+      {
+        title: 'Review of Existing Tools',
+        description: 'We audit current systems to identify strengths and areas for improvement.',
+      },
+      {
+        title: 'Bottleneck Identification',
+        description: 'We analyze processes to detect and resolve performance or operational issues.',
+      },
+      {
+        title: 'Scalability Assessment',
+        description: 'We determine whether the current systems can scale effectively with business growth.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/consultoria-tecnologica.jpg',
+      alt: 'Technology consulting discussion over a glass table',
+    }}
+  >
+    <Fragment slot="preContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">
+        Understanding the Present to Plan for the Future
+      </h3>
+      <p class="text-muted">
+        We conduct a detailed audit of systems and processes to ensure every decision is based on real and up-to-date
+        information.
+      </p>
+    </Fragment>
+  </Content>
+  <Content
+    tagline=""
+    title=`<a title='Transform ideas into real project plans' name='transformar-idees-en-projectes'>Turning Ideas into Projects</a>`
+    subtitle="Consulting to define the technical and functional implementation process for an IT development project."
+    isReversed
+    items={[
+      {
+        title: 'Tailored Technical Proposals',
+        description: 'We define viable solutions based on experience and best practices.',
+      },
+      {
+        title: 'Phase-Based Prioritization',
+        description: 'We structure project phases to optimize resources and time efficiently.',
+      },
+      {
+        title: 'Custom Technological Solutions',
+        description: 'We propose tools tailored to the specific needs of the project.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/idea-proyecto.jpg',
+      alt: 'Turning ideas into projects',
+    }}
+  >
+    <Fragment slot="preContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">
+        Conceptualizing Ideas into Feasible Project Plans
+      </h3>
+      <p class="text-muted">
+        We work with businesses to turn initial ideas into structured project plans, defining how they will be
+        approached technically and the phases in which they will be implemented.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Content
+    tagline=""
+    title=`<a title="Study for classifying and structuring company data" name="analisi-organitzacio-dades">Data Analysis & Organization</a>`
+    subtitle="We study data sources to propose improvements and reorganization strategies."
+    items={[
+      {
+        title: 'Data Quality Review',
+        description: 'We analyze data consistency to ensure its reliability for strategic decision-making.',
+      },
+      {
+        title: 'Organizational Schemes',
+        description: 'We propose structured frameworks to improve data access and interpretation.',
+      },
+      {
+        title: 'Data Management Optimization',
+        description: 'We recommend tailored solutions to manage information more efficiently.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/analisis-clasificacion-datos.jpg',
+      alt: 'Data Organization',
+    }}
+  >
+    <Fragment slot="preContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">Organizing Information Effectively</h3>
+      <p class="text-muted">
+        Proper data analysis and classification are essential for making strategic decisions with clear and actionable
+        insights.
+      </p>
+    </Fragment>
+  </Content>
+
+  <Content
+    tagline=""
+    isReversed
+    title=`<a title="We analyze and propose the most suitable tools for each project" name='identificacio-solucions'>Solution Identification</a>`
+    subtitle="Consulting to evaluate commercial and open-source options that align with project requirements."
+    items={[
+      {
+        title: 'Market Option Assessment',
+        description: 'We analyze ready-made and customizable tools to find the best fit for the client’s needs.',
+      },
+      {
+        title: 'Complementary Proposals',
+        description: 'We suggest solutions that enhance existing tools without unnecessary replacements.',
+      },
+      {
+        title: 'Coherent Integration Plan',
+        description: 'We design an integration plan aligned with business strategy to ensure project success.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/integracion-circular.jpg',
+      alt: 'Circular Integration',
+    }}
+  >
+    <Fragment slot="preContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">Choosing the Right Tools</h3>
+      <p class="text-muted">
+        We analyze business needs to identify solutions that improve processes, whether through integrating new tools or
+        optimizing existing ones.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+  <Features
+    id="benefits"
+    tagline="Why trust gilsys?"
+    title="Benefits of Our Consulting"
+    subtitle="We help businesses optimize processes and improve results with sustainable and customized technological solutions."
+    items={[
+      {
+        title: 'Realistic Analysis and Personalized Approach',
+        description:
+          'We don’t propose generic solutions. We work based on the client’s real needs to offer useful and viable responses.',
+        icon: 'tabler:search',
+      },
+      {
+        title: 'Results-Oriented Transformation',
+        description:
+          'We turn ideas into concrete projects, accompanying each phase, from conceptualization to execution.',
+        icon: 'tabler:target',
+      },
+      {
+        title: 'Experience with Advanced Technology',
+        description:
+          'We have experience in various sectors and stay updated on the latest trends in tools and technological solutions.',
+        icon: 'tabler:devices',
+      },
+      {
+        title: 'Honesty and Sustainability',
+        description:
+          'We advise on what is most suitable for the company, avoiding unnecessary investments or drastic changes.',
+        icon: 'tabler:devices',
+      },
+    ]}
+  />
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/20.jpg', alt: 'Abstract background' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Free Quote',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Call',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Want to <span class="custom-gradient">migrate</span> old tools or <span class="custom-gradient"
+        >integrate applications</span
+      > into your business?
+    </Fragment>
+    <Fragment slot="subtitle"> Contact us, and we will take care of advising and executing your project. </Fragment>
+  </CallToAction>
+</Layout>

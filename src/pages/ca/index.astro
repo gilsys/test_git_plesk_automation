@@ -1,17 +1,16 @@
 ---
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import FourBlocks from '~/components/widgets/FourBlocks.astro';
 import Hero from '~/components/widgets/Hero.astro';
-import Stats from '~/components/widgets/Stats.astro';
-import Layout from '~/layouts/PageLayout.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
-import { getLangFromUrl, useRoutes } from '~/utils/i18n';
-import { header } from '~/i18n/ui.ts';
 import Hero2 from '~/components/widgets/Hero2.astro';
-import Note from '~/components/widgets/Note.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import { header } from '~/i18n/ui.ts';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 
 const metadata = {
   title: 'Programació a mida de software, apps, web i IA | +20 anys',
