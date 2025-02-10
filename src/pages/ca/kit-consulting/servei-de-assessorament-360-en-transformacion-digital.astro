@@ -1,13 +1,9 @@
 ---
+import CallToAction from '~/components/widgets/CallToAction.astro';
 import Features from '~/components/widgets/Features.astro';
 import Hero from '~/components/widgets/Hero.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
-import Layout from '~/layouts/PageLayout.astro';
-import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
-import Image from '~/components/common/Image.astro';
 import KitDigital from '~/components/widgets/KitDigital.astro';
-import { getLangFromUrl, useRoutes } from '~/utils/i18n';
-const u = useRoutes(getLangFromUrl(Astro.url));
+import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
   title: 'Servei d’assessorament “360” en transformació digital',
@@ -108,7 +104,7 @@ const metadata = {
   >
     <Fragment slot="title">
       No esperis més, sol·licita assessorament gratuït i impulsa la transformació digital de la teva pime mitjançant la
-<span class="custom-gradient">Intel·ligència Artificial</span>
+      <span class="custom-gradient">Intel·ligència Artificial</span>
     </Fragment>
     <Fragment slot="subtitle"
       >Contacta'ns i t'assessorarem de forma gratuïta gràcies a la subvenció del Kit Consulting sobre com la IA et pot

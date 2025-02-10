@@ -1,0 +1,106 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features from '~/components/widgets/Features.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import KitDigital from '~/components/widgets/KitDigital.astro';
+import Layout from '~/layouts/PageLayout.astro';
+const metadata = {
+  title: 'Servicio de asesoramiento en ventas digitales',
+  description:
+    'Asesoramiento en ventas digitales para PYMES. Analizamos tu situación, definimos estrategias y utilizamos IA para mejorar tus ventas en línea.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Subvención Kit Consulting"
+    backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/dots/22.jpg' }}
+  >
+    <Fragment slot="title">Servicio de asesoramiento en ventas digitales</Fragment>
+    <Fragment slot="subtitle"
+      >Asesoramiento en ventas digitales para PYMES. Analizamos tu situación, definimos estrategias y utilizamos IA para
+      mejorar tus ventas en línea.</Fragment
+    >
+  </Hero>
+
+  <Features
+    tagline="Servicio de asesoramiento <strong>subvencionado</strong>"
+    subtitle="Conocerás la inversión requerida y las medidas necesarias para su adopción.<br/>Se realizará un caso de uso y se implantará formación adaptada a tu pyme."
+    title="Definimos cómo integrar <span class='custom-gradient'>Inteligencia Artificial</span> y técnicas de marketing digital para mejorar el rendimiento de tus ventas en línea"
+    items={[
+      {
+        description:
+          'Analizar la situación actual de tu pyme en ventas digitales, posicionamiento en RRSS y presencia en internet.',
+        icon: 'tabler:activity',
+      },
+      {
+        description:
+          'Concienciar a tus empleados sobre la importancia y las técnicas de venta en línea y marketing digital.',
+        icon: 'tabler:user-check',
+      },
+      {
+        description:
+          'Definir una estrategia de ventas en línea y presencia digital (RRSS, posicionamiento en motores de búsqueda, Google Analytics, etc.) a medio y largo plazo, utilizando modelos predictivos basados en IA.',
+        icon: 'tabler:chart-line',
+      },
+      {
+        description:
+          'Desarrollar y ejecutar un caso de uso adaptado a tu pyme utilizando las técnicas apropiadas de inteligencia artificial, en el área de ventas digitales.',
+        icon: 'tabler:settings',
+      },
+      {
+        description: 'Identificación de oportunidades o posibles usos de la IA en el ámbito de las ventas digitales.',
+        icon: 'tabler:search',
+      },
+    ]}
+  />
+
+  <Features
+    title="El importe total subvencionado por Kit Consulting varía según el número de empleados"
+    subtitle="El importe máximo subvencionado para cada servicio de asesoramiento de Kit Consulting es siempre de 6.000€."
+    items={[
+      {
+        title: 'Importe total subvencionado:',
+        list: [
+          '<strong>De 10 a 49 empleados:</strong> 12.000€.<br/>Corresponde a 2 servicios de asesoramiento.',
+          '<strong>De 50 a 99 empleados:</strong> 18.000€.<br/>Corresponde a 3 servicios de asesoramiento.',
+          '<strong>De 100 a 250 empleados:</strong> 24.000€.<br/>Corresponde a 4 servicios de asesoramiento.',
+        ],
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Importe máximo disponible para el servicio de asesoramiento en ventas digitales:',
+        description: '6.000€',
+        icon: 'tabler:check',
+      },
+    ]}
+  />
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/22.jpg', alt: 'Fondo abstracto, inspirado en líneas y colores' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contactar',
+        href: 'contactar',
+      },
+      {
+        variant: 'primary',
+        text: 'Llamar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title"
+      >No esperes más, solicita asesoramiento gratuito sobre cómo mejorar tus ventas digitales utilizando <span
+        class="custom-gradient">Inteligencia Artificial</span
+      ></Fragment
+    >
+    <Fragment slot="subtitle"
+      >Contáctanos y te asesoraremos de forma gratuita gracias a la subvención del Kit Consulting sobre cómo la IA puede
+      ayudarte a potenciar tu empresa.</Fragment
+    >
+  </CallToAction>
+
+  <KitDigital />
+</Layout>

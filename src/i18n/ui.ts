@@ -205,15 +205,11 @@ export const routes = {
     'kit-consulting': '/es/kit-consulting',
     'kit-consulting/ai-advisory': '/es/kit-consulting/servicio-de-asesoramiento-en-inteligencia-artificial',
     'kit-consulting/basic-data-analysis': '/es/kit-consulting/servicio-de-asesoramiento-en-analisis-de-datos-basico',
-    'kit-consulting/advanced-data-analysis':
-    'kit-consulting/servicio-de-asesoramiento-en-analisis-de-datos-avanzado',
+    'kit-consulting/advanced-data-analysis': '/es/kit-consulting/servicio-de-asesoramiento-en-analisis-de-datos-avanzado',
     'kit-consulting/digital-sales-advisory': '/es/kit-consulting/servicio-de-asesoramiento-en-ventas-digitales',
-    'kit-consulting/business-process-advisory':
-    'kit-consulting/servicio-de-asesoramiento-en-procesos-de-negocio-o-proceso-de-produccion',
-    'kit-consulting/business-strategy-advisory':
-    'kit-consulting/servicio-de-asesoramiento-en-estrategia-y-rendimiento-de-negocio',
-    'kit-consulting/360-digital-transformation':
-    'kit-consulting/servicio-de-asesoramiento-360-en-transformacion-digital',
+    'kit-consulting/business-process-advisory': '/es/kit-consulting/servicio-de-asesoramiento-en-procesos-de-negocio-o-proceso-de-produccion',
+    'kit-consulting/business-strategy-advisory': '/es/kit-consulting/servicio-de-asesoramiento-en-estrategia-y-rendimiento-de-negocio',
+    'kit-consulting/360-digital-transformation': '/es/kit-consulting/servicio-de-asesoramiento-360-en-transformacion-digital',
    
     'consultory': '/es/consultoria-tecnologica',
     'migration': '/es/migracion-integracion',

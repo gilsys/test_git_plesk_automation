@@ -1,0 +1,121 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features from '~/components/widgets/Features.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import KitDigital from '~/components/widgets/KitDigital.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+const u = useRoutes(getLangFromUrl(Astro.url));
+const metadata = {
+  title: 'Servicio de asesoramiento en Inteligencia Artificial',
+  description:
+    'Servicios de asesoramiento en IA para PYMES. Planes personalizados, identificación de datos clave y capacitación en técnicas de IA.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Subvención Kit Consulting"
+    backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/dots/22.jpg' }}
+  >
+    <Fragment slot="title"
+      >Servicio de asesoramiento en <span class="custom-gradient">Inteligencia Artificial</span></Fragment
+    >
+    <Fragment slot="subtitle"
+      >Orientación sobre cómo implementar IA en tu empresa o negocio, <span class="custom-gradient">GRATIS</span>,
+      gracias a la subvención del Kit Consulting.</Fragment
+    >
+  </Hero>
+
+  <Features
+    tagline="Servicio de asesoramiento <strong>subvencionado</strong>"
+    subtitle="Conocerás la inversión requerida y las medidas necesarias para su adopción.<br/>Se realizará un caso de uso y se impartirá formación adaptada a tu pyme."
+    title="Estudiamos tu empresa y planificamos cómo integrar <span class='custom-gradient'>Inteligencia Artificial</span> para automatizar tareas y procesos de forma eficiente"
+    items={[
+      {
+        description:
+          'El Asesor Digital Adherido será el encargado de realizar una serie de actividades para garantizar la correcta implementación del plan de inteligencia artificial.',
+        icon: 'tabler:brain',
+      },
+      {
+        description:
+          "Identificación de conjuntos de datos relevantes para la <a href='" +
+          u('development/ia') +
+          "' title='Programación a medida con inteligencia artificial' class='text-accent'>implementación de algoritmos de IA</a>, permitiendo así una mejor comprensión de la información de tu pyme.",
+        icon: 'tabler:database',
+      },
+      {
+        description:
+          'Asesoramiento para la creación de protocolos de gobernanza de datos con normativas de IA, garantizando la validez y veracidad de los mismos cuando se aplique IA.',
+        icon: 'tabler:shield-lock',
+      },
+      {
+        description:
+          'Análisis de herramientas de IA para la gestión de datos, con recomendaciones basadas en la realidad y la capacidad de inversión de tu pyme.',
+        icon: 'tabler:tools',
+      },
+      {
+        description:
+          'Orientación sobre cómo las técnicas de IA pueden derivar información valiosa a partir de los datos existentes para impulsar la toma de decisiones estratégicas.',
+        icon: 'tabler:chart-pie',
+      },
+      {
+        description: 'Capacitación en el uso estratégico de las técnicas de IA en la gestión de datos.',
+        icon: 'tabler:user-check',
+      },
+      {
+        description:
+          'Desarrollo y ejecución de un caso de uso adaptado al negocio, relacionado con la aplicación de la inteligencia artificial.',
+        icon: 'tabler:settings',
+      },
+    ]}
+  />
+
+  <Features
+    title="El importe total subvencionado por Kit Consulting varía según el número de empleados"
+    subtitle="El importe máximo subvencionado por cada servicio de asesoramiento de Kit Consulting es siempre de 6.000€."
+    items={[
+      {
+        title: 'Importe total subvencionado:',
+        list: [
+          '<strong>De 10 a 49 empleados:</strong> 12.000€.<br/>Corresponde a 2 servicios de asesoramiento.',
+          '<strong>De 50 a 99 empleados:</strong> 18.000€.<br/>Corresponde a 3 servicios de asesoramiento.',
+          '<strong>De 100 a 250 empleados:</strong> 24.000€.<br/>Corresponde a 4 servicios de asesoramiento.',
+        ],
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Importe máximo disponible para el servicio de asesoramiento en inteligencia artificial:',
+        description: '6.000€',
+        icon: 'tabler:check',
+      },
+    ]}
+  />
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/22.jpg', alt: 'Fondo abstracto, inspirado en líneas y colores' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contactar',
+        href: 'contactar',
+      },
+      {
+        variant: 'primary',
+        text: 'Llamar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title"
+      >No esperes más, solicita asesoramiento gratuito en <span class="custom-gradient">Inteligencia Artificial</span
+      ></Fragment
+    >
+    <Fragment slot="subtitle"
+      >Contáctanos y te asesoraremos de forma gratuita gracias a la subvención del Kit Consulting sobre cómo la IA puede
+      ayudarte a potenciar tu empresa.</Fragment
+    >
+  </CallToAction>
+
+  <KitDigital />
+</Layout>

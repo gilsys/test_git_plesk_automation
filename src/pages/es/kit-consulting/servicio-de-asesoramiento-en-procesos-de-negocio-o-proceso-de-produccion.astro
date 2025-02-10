@@ -1,0 +1,117 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features from '~/components/widgets/Features.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import KitDigital from '~/components/widgets/KitDigital.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+const u = useRoutes(getLangFromUrl(Astro.url));
+const metadata = {
+  title: 'Servicio de asesoramiento en procesos de negocio o proceso de producción',
+  description:
+    'Asesoramiento en digitalización y mejora de procesos empresariales y productivos para PYMES. Utilizamos IA para optimizar y automatizar tus procesos.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Subvención Kit Consulting"
+    backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/dots/22.jpg' }}
+  >
+    <Fragment slot="title">Servicio de asesoramiento en procesos de negocio o proceso de producción</Fragment>
+    <Fragment slot="subtitle"
+      >Asesoramiento en digitalización y mejora de procesos empresariales y productivos para PYMES. Utilizamos IA para
+      optimizar y automatizar tus procesos.</Fragment
+    >
+  </Hero>
+
+  <Features
+    tagline="Servicio de asesoramiento <strong>subvencionado</strong>"
+    subtitle="Conocerás la inversión requerida y las medidas necesarias para su adopción.<br/>Se realizará un caso de uso y se impartirá formación adaptada a tu pyme."
+    title="Identificamos las áreas de mejora en los procesos empresariales de tu pyme y diseñamos un plan personalizado para mejorarlos utilizando <span class='custom-gradient'>Inteligencia Artificial</span>"
+    items={[
+      {
+        description:
+          'Comprender las metas estratégicas, puntos clave y objetivos de tu pyme y alinearlas con un enfoque en la digitalización, uso de la inteligencia artificial y mejora de los procesos empresariales (o, en su caso, proceso de fabricación seleccionado).',
+        icon: 'tabler:target',
+      },
+      {
+        description:
+          'Analizar los procesos empresariales que llevas a cabo actualmente, para identificar posibles mejoras. En el caso de los procesos productivos, se realizará un análisis del proceso de fabricación seleccionado, identificando áreas de oportunidad para la eficiencia, calidad y mejora continua.',
+        icon: 'tabler:clipboard-list',
+      },
+      {
+        description:
+          'Comunicar de manera efectiva a los empleados de tu pyme la relevancia estratégica de la digitalización de procesos, destacando cómo esto no solo optimiza el trabajo diario, sino que también fortalece la competitividad.',
+        icon: 'tabler:message-circle',
+      },
+      {
+        description:
+          "Proporcionar asesoramiento especializado en herramientas de gestión de procesos de negocio e inteligencia artificial, abarcando desde ventas y recursos humanos hasta la gestión de proyectos, y destacando soluciones específicas para mejorar la eficiencia y calidad. Si, en cambio, se ha optado por un proceso de fabricación, se proporcionará asesoramiento en herramientas y tecnología para <a href='" +
+          u('development/automation') +
+          "' title='Servicio de asesoramiento en procesos de negocio o proceso de producción' class='text-accent'>la optimización y automatización</a> de dicho proceso productivo.",
+        icon: 'tabler:tools',
+      },
+      {
+        description:
+          'Desarrollar y ejecutar un caso de uso adaptado a tu pyme, utilizando las técnicas apropiadas, para la optimización de un proceso de negocio o, en su caso, proceso de fabricación.',
+        icon: 'tabler:settings',
+      },
+      {
+        description:
+          'Identificar oportunidades o posibles usos de la IA en el ámbito de los procesos de negocio o, en su caso, procesos de producción.',
+        icon: 'tabler:brain',
+      },
+    ]}
+  />
+
+  <Features
+    title="El importe total subvencionado por Kit Consulting varía según el número de empleados"
+    subtitle="El importe máximo subvencionado por cada servicio de asesoramiento de Kit Consulting es siempre de 6.000€."
+    items={[
+      {
+        title: 'Importe total subvencionado:',
+        list: [
+          '<strong>De 10 a 49 empleados:</strong> 12.000€.<br/>Corresponde a 2 servicios de asesoramiento.',
+          '<strong>De 50 a 99 empleados:</strong> 18.000€.<br/>Corresponde a 3 servicios de asesoramiento.',
+          '<strong>De 100 a 250 empleados:</strong> 24.000€.<br/>Corresponde a 4 servicios de asesoramiento.',
+        ],
+        icon: 'tabler:check',
+      },
+      {
+        title:
+          'Importe máximo disponible para el servicio de asesoramiento en procesos de negocio o proceso de producción:',
+        description: '6.000€',
+        icon: 'tabler:check',
+      },
+    ]}
+  />
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/22.jpg', alt: 'Fondo abstracto, inspirado en líneas y colores' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contactar',
+        href: 'contactar',
+      },
+      {
+        variant: 'primary',
+        text: 'Llamar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title"
+      >No esperes más, solicita asesoramiento gratuito sobre cómo mejorar los procesos de tu empresa utilizando <span
+        class="custom-gradient">Inteligencia Artificial</span
+      ></Fragment
+    >
+    <Fragment slot="subtitle"
+      >Contáctanos y te asesoraremos de forma gratuita gracias a la subvención del Kit Consulting sobre cómo la IA puede
+      ayudar a potenciar tu empresa.</Fragment
+    >
+  </CallToAction>
+
+  <KitDigital />
+</Layout>

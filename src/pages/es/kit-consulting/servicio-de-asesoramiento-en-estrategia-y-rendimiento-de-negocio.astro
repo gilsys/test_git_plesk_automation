@@ -1,0 +1,115 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features from '~/components/widgets/Features.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import KitDigital from '~/components/widgets/KitDigital.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+const u = useRoutes(getLangFromUrl(Astro.url));
+const metadata = {
+  title: 'Servicio de asesoramiento en estrategia y rendimiento de negocio',
+  description:
+    'Asesoramiento en inteligencia artificial, estrategia de negocio y rendimiento para PYMES. Utilizamos IA para mejorar tu estrategia y rendimiento empresarial.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Subvención Kit Consulting"
+    backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/dots/22.jpg' }}
+  >
+    <Fragment slot="title">Servicio de asesoramiento en estrategia y rendimiento de negocio</Fragment>
+    <Fragment slot="subtitle"
+      >Asesoramiento en inteligencia de negocio y rendimiento para PYMES. Utilizamos IA para mejorar tu estrategia y
+      rendimiento empresarial.</Fragment
+    >
+  </Hero>
+
+  <Features
+    tagline="Servicio de asesoramiento <strong>subvencionado</strong>"
+    subtitle="Conocerás la inversión requerida y las medidas necesarias para su adopción.<br/>Se realizará un caso de uso y se implantará formación adaptada a tu pyme."
+    title="Evaluación y optimización de la inteligencia de negocio mediante <span class='custom-gradient'>Inteligencia Artificial</span> para mejorar la estrategia, el análisis competitivo y el rendimiento de tu pyme"
+    items={[
+      {
+        description:
+          'Analizar tu situación actual en inteligencia de negocio para evaluar necesidades, identificar brechas en el uso de tecnologías de inteligencia de negocio y detectar oportunidades de mejora.',
+        icon: 'tabler:chart-line',
+      },
+      {
+        description:
+          "Plantear recomendaciones para desarrollar habilidades analíticas y fomentar una cultura de toma de decisiones basada en el tratamiento de datos con <a href='" +
+          u('development/ia') +
+          "' title='Programación a medida con inteligencia artificial' class='text-accent'>algoritmos de inteligencia artificial</a> en el escenario competitivo actual.",
+        icon: 'tabler:brain',
+      },
+      {
+        description:
+          'Asesorarte en la incorporación de técnicas y herramientas avanzadas de aprendizaje automático, inteligencia artificial y minería de datos, entendiendo las especificidades de tu pyme y alineándolas con los objetivos del negocio.',
+        icon: 'tabler:tools',
+      },
+      {
+        description:
+          'Definir junto contigo una estrategia a medio y largo plazo para la implementación y optimización de la inteligencia de negocio basada en mejorar el rendimiento.',
+        icon: 'tabler:target',
+      },
+      {
+        description:
+          'Diseño y ejecución de un caso de uso que demuestre la efectividad de las técnicas de análisis de la competencia para mejorar la estrategia y el rendimiento del negocio.',
+        icon: 'tabler:chart-pie',
+      },
+      {
+        description:
+          'Identificación de oportunidades o posibles usos de la IA en el ámbito de la estrategia y rendimiento de negocio.',
+        icon: 'tabler:brain',
+      },
+    ]}
+  />
+
+  <Features
+    title="El importe total subvencionado por Kit Consulting varía según el número de empleados"
+    subtitle="El importe máximo subvencionado para cada servicio de asesoramiento de Kit Consulting es siempre de 6.000€."
+    items={[
+      {
+        title: 'Importe total subvencionado:',
+        list: [
+          '<strong>De 10 a 49 empleados:</strong> 12.000€.<br/>Corresponde a 2 servicios de asesoramiento.',
+          '<strong>De 50 a 99 empleados:</strong> 18.000€.<br/>Corresponde a 3 servicios de asesoramiento.',
+          '<strong>De 100 a 250 empleados:</strong> 24.000€.<br/>Corresponde a 4 servicios de asesoramiento.',
+        ],
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Importe máximo disponible para el servicio de asesoramiento en estrategia y rendimiento de negocio:',
+        description: '6.000€',
+        icon: 'tabler:check',
+      },
+    ]}
+  />
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/22.jpg', alt: 'Fondo abstracto, inspirado en líneas y colores' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contactar',
+        href: 'contactar',
+      },
+      {
+        variant: 'primary',
+        text: 'Llamar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title"
+      >No esperes más, solicita asesoramiento gratuito y mejora la estrategia y el rendimiento de negocio de tu empresa
+      utilizando <span class="custom-gradient">Inteligencia Artificial</span></Fragment
+    >
+    <Fragment slot="subtitle"
+      >Contáctanos y te asesoraremos de forma gratuita gracias a la subvención del Kit Consulting sobre cómo la IA puede
+      ayudar a potenciar tu empresa.</Fragment
+    >
+  </CallToAction>
+
+  <KitDigital />
+</Layout>

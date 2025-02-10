@@ -1,0 +1,116 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features from '~/components/widgets/Features.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import KitDigital from '~/components/widgets/KitDigital.astro';
+import Layout from '~/layouts/PageLayout.astro';
+const metadata = {
+  title: 'Servicio de asesoramiento “360” en transformación digital',
+  description:
+    'Asesoramiento integral en transformación digital para PYMES. Optimiza tus procesos y herramientas con una estrategia personalizada.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Subvención Kit Consulting"
+    backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/dots/22.jpg' }}
+  >
+    <Fragment slot="title">Servicio de asesoramiento “360” en transformación digital</Fragment>
+    <Fragment slot="subtitle"
+      >Asesoramiento integral en transformación digital para PYMES. Optimiza tus procesos y herramientas con una
+      estrategia personalizada.</Fragment
+    >
+  </Hero>
+
+  <Features
+    tagline="Servicio de asesoramiento <strong>subvencionado</strong>"
+    subtitle="Conocerás la inversión requerida y las medidas necesarias para su adopción.<br/>Se realizará un caso de uso y se impartirá formación adaptada a tu pyme."
+    title="Digitalizaremos los procesos de tu pyme e integraremos tecnologías innovadoras, aprovechando el potencial de la <span class='custom-gradient'>Inteligencia Artificial</span>"
+    items={[
+      {
+        description:
+          'Analizar los procesos comerciales existentes para identificar aquellas áreas de tu pyme que podrían beneficiarse de la digitalización.',
+        icon: 'tabler:briefcase',
+      },
+      {
+        description:
+          'Diseñar e implementar programas de concienciación para educar a tus empleados sobre la importancia estratégica de la transformación digital.',
+        icon: 'tabler:user-check',
+      },
+      {
+        description:
+          'Evaluar las herramientas y tecnologías ya en uso, ofreciéndote un asesoramiento para optimizar su rendimiento y alinearlas con tus objetivos de transformación digital.',
+        icon: 'tabler:tools',
+      },
+      {
+        description:
+          'Desarrollar una estrategia clara y personalizada que articule los objetivos, plazos y pasos específicos para la transformación digital.',
+        icon: 'tabler:target',
+      },
+      {
+        description:
+          'Establecer un marco para la innovación continua y la adaptabilidad a medida que evolucionan las tecnologías digitales.',
+        icon: 'tabler:refresh',
+      },
+      {
+        description:
+          'Desarrollo y ejecución de un caso de uso adaptado al negocio, utilizando las técnicas apropiadas, que permita conocer las ventajas de la utilización de herramientas digitales.',
+        icon: 'tabler:settings',
+      },
+      {
+        description:
+          'Identificación de oportunidades o posibles usos de la IA en el ámbito de la transformación digital.',
+        icon: 'tabler:brain',
+      },
+    ]}
+  />
+
+  <Features
+    title="El importe total subvencionado por Kit Consulting varía según el número de empleados"
+    subtitle="El importe máximo subvencionado por cada servicio de asesoramiento de Kit Consulting es siempre de 6.000€."
+    items={[
+      {
+        title: 'Importe total subvencionado:',
+        list: [
+          '<strong>De 10 a 49 empleados:</strong> 12.000€.<br/>Corresponde a 2 servicios de asesoramiento.',
+          '<strong>De 50 a 99 empleados:</strong> 18.000€.<br/>Corresponde a 3 servicios de asesoramiento.',
+          '<strong>De 100 a 250 empleados:</strong> 24.000€.<br/>Corresponde a 4 servicios de asesoramiento.',
+        ],
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Importe máximo disponible para el servicio de asesoramiento “360” en transformación digital:',
+        description: '6.000€',
+        icon: 'tabler:check',
+      },
+    ]}
+  />
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/22.jpg', alt: 'Fondo abstracto, inspirado en líneas y colores' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contactar',
+        href: 'contactar',
+      },
+      {
+        variant: 'primary',
+        text: 'Llamar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      No esperes más, solicita asesoramiento gratuito e impulsa la transformación digital de tu pyme mediante la
+      <span class="custom-gradient">Inteligencia Artificial</span>
+    </Fragment>
+    <Fragment slot="subtitle"
+      >Contáctanos y te asesoraremos de forma gratuita gracias a la subvención del Kit Consulting sobre cómo la IA puede
+      ayudar a potenciar tu empresa.</Fragment
+    >
+  </CallToAction>
+
+  <KitDigital />
+</Layout>
