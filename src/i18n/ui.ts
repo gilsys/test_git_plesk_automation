@@ -275,7 +275,7 @@ export const header = {
       },
       {
         _id: 'gilsys',
-        text: 'gilsys',
+        text: 'Gilsys',
         href: routes['ca']['gilsys'],
       },
       {
@@ -621,7 +621,7 @@ export const header = {
       },
       {
         _id: 'gilsys',
-        text: 'gilsys',
+        text: 'Gilsys',
         href: routes['es']['gilsys'],
       },
       {
@@ -964,7 +964,7 @@ export const header = {
       },
       {
         _id: 'gilsys',
-        text: 'gilsys',
+        text: 'Gilsys',
         href: routes['en']['gilsys'],
       },
       {
@@ -1167,7 +1167,7 @@ export const footer = {
             08580, Sant Quirze de Besora<br>
             Osona - Barcelona</a><br/>
     `,
-    footNote: `gilsys · Tots els drets reservats.`,
+    footNote: `Gilsys · Tots els drets reservats.`,
   },
   es: {
     links: [
@@ -1195,7 +1195,7 @@ export const footer = {
             08580, Sant Quirze de Besora<br>
             Osona - Barcelona</a><br/>
     `,
-    footNote: `gilsys · Todos los derechos reservados.`,
+    footNote: `Gilsys · Todos los derechos reservados.`,
   },
   en: {
     links: [
@@ -1223,6 +1223,6 @@ export const footer = {
             08580, Sant Quirze de Besora<br>
             Osona - Barcelona</a><br/>
     `,
-    footNote: `gilsys · All rights reserved.`,
+    footNote: `Gilsys · All rights reserved.`,
   },
 };
