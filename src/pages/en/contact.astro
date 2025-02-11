@@ -1,12 +1,84 @@
 ---
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
 import ContactForm from '~/components/widgets/ContactForm.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
-  title: 'Contact',
+  title: `Contact`,    
+  description: "Request a free quote or learn more about our services.",
 };
----
 
+---
 <Layout metadata={metadata}>
-  <ContactForm pageTitle={metadata.title} />
+  <Hero backgroundImage={{ alt: 'Abstract background', src: '~/assets/images/dots/03.jpg' }}>
+    <Fragment slot="title">
+      <span class="custom-gradient">Contact</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">Request a <span class='custom-gradient'>free quote</span> or learn more about our services.</Fragment>
+  </Hero>
+  <WidgetWrapper>
+    <div class="grid lg:grid-cols-2 gap-4">
+      <div class="order-2 lg:order-1 mt-10 lg:mt-0">
+        <iframe
+          class="w-full h-full min-h-[300px]"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=1,42.133102,2.237501,42.137102&marker=42.135102,2.234501"
+          allowfullscreen
+          loading="lazy"
+        >
+        </iframe>
+        <p>
+          <a href="https://www.google.com/maps?q=42.135102,2.234501" target="_blank" rel="noopener noreferrer" class="text-sm">
+            View on Google Maps
+          </a>
+        </p>
+      </div>
+      <div class="order-1 lg:order-2">
+        <ContactForm pageTitle={metadata.title} />
+      </div>
+    </div>
+  </WidgetWrapper>
+  <Features3
+    columns={4}
+    items={[
+       {
+        title: `Opening Hours`,
+        description: `Monday to Friday<br/>
+        09:00 AM - 06:00 PM`,
+        icon: 'tabler:clock'
+      },
+      {
+        title: `Address`,
+        description: `Passeig del Ter 48<br/>
+        08580 Sant Quirze de Besora<br/>
+        Barcelona<br/><br/>
+
+        <a class="btn btn-secondary"  href="https://www.google.com/maps?q=42.135102,2.234501" target="_blank" rel="noopener noreferrer" class="text-sm">
+            Navigate
+        </a>
+
+        `,
+        icon: 'tabler:navigation'
+      },
+      {
+        title: `Phone`,
+        description: `        
+        665 33 12 71<br/><br/>
+        <a class="btn" href='tel:+34665331271'>Call</a>
+        <a class="btn btn-secondary" href="https://wa.me/+34665331271">Whatsapp</a>
+        `,
+        icon: 'tabler:phone-call'
+      },      
+      {
+        title: `E-mail`,
+        description: `info@gilsys.com<br/><br/>
+        <a class="btn btn-secondary" href="mailto:info@gilsys.com">Send e-mail</a>
+        `,
+        icon: 'tabler:mail'
+      },
+    ]}
+    />
+
 </Layout>
