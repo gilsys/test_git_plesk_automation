@@ -4,6 +4,10 @@ import Features from '~/components/widgets/Features.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import KitDigital from '~/components/widgets/KitDigital.astro';
 import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+
 const metadata = {
   title: 'Servicio de asesoramiento “360” en transformación digital',
   description:
@@ -93,7 +97,7 @@ const metadata = {
       {
         variant: 'primary',
         text: 'Contactar',
-        href: 'contactar',
+        href: u('contact'),
       },
       {
         variant: 'primary',
