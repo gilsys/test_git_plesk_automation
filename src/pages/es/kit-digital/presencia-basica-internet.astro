@@ -5,6 +5,10 @@ import Features2 from '~/components/widgets/Features2.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import KitDigital from '~/components/widgets/KitDigital.astro';
 import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+
 const metadata = {
   title: 'Presencia Básica en Internet',
   description:
@@ -104,7 +108,7 @@ const metadata = {
       {
         variant: 'primary',
         text: 'Contactar',
-        href: 'contactar',
+        href: u('contact'),
       },
       {
         variant: 'primary',
