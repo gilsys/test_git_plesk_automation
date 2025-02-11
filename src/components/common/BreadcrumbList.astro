@@ -9,7 +9,7 @@ const breadcrumbJsonLd = items
   ? {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
-      '@id': 'https://innowise.com/artificial-intelligence-development-company/#breadcrumb',
+      '@id': Astro.url,
       itemListElement: items.map(({ text, href }, index) => {
         const isLast = index === items.length - 1;
         return {
