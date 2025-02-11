@@ -1,0 +1,326 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+const metadata = {
+  title: 'Client Management with a Custom CRM | +20 Years',
+  description:
+    'Improve your company’s client management with a tailor-made CRM. Centralize information, automate processes, and optimize marketing with a cloud-based tool.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Centralize information, automate processes, and optimize marketing with a cloud-based tool."
+    backgroundImage={{ alt: 'Abstract background', src: '~/assets/images/dots/25.jpg' }}
+  >
+    <Fragment slot="title">Client <span class="text-accent highlight">Management</span> with a Custom CRM</Fragment>
+    <Fragment slot="subtitle"> Enhance your company's client tracking with a tailor-made CRM. </Fragment>
+  </Hero>
+
+  <Content
+    isReversed
+    tagline=""
+    title="What is a CRM?"
+    subtitle="A CRM is a key software tool for efficiently and systematically managing client interactions."
+    items={[
+      {
+        title: 'Data Centralization',
+        description: 'All client information stored in a single database, accessible to the entire team.',
+      },
+      {
+        title: 'Process Automation',
+        description: 'Reduces manual tasks such as email sending or follow-ups.',
+      },
+      {
+        title: 'Analytics & Reports',
+        description: 'Generates clear reports on sales tracking, clients, and commercial strategies.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/crm-gestion-clientes.jpg',
+      alt: 'CRM for client management',
+    }}
+  >
+    <Fragment slot="preContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">Centralized Client Management & Tracking</h3>
+      <p class="text-muted">
+        Client management is one of the most important areas for any company looking to provide efficient service and
+        maintain strong relationships with its clients. Using a CRM (Customer Relationship Management) system
+        centralizes all relevant information.
+      </p>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="text-muted">
+        It enables structured and efficient client relationship management, including key details, contact information,
+        communication history, sales tracking, and task management.
+      </p>
+      <p class="text-muted mt-3">Having a CRM will allow your company or business to:</p>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Features2
+    id="features-services"
+    title="What features does a client management system offer?"
+    tagline="Its functionalities can be expanded and customized to fit each company's specific needs."
+    subtitle="A CRM is much more than just a client database."
+    items={[
+      {
+        title: 'Client & Contact Management',
+        list: [
+          'Complete client records with personal data, preferences, and communication history.',
+          'Client classification based on categories.',
+        ],
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Potential Clients',
+        list: [
+          'Registration of potential leads and tracking of sales interactions.',
+          'Automatic conversion of leads into real clients.',
+        ],
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Sales & Opportunity Tracking',
+        list: [
+          'Monitor the sales cycle from the first contact to closing.',
+          'Assign opportunities to team members to ensure proper follow-up.',
+        ],
+        icon: 'tabler:chart-bar',
+      },
+      {
+        title: 'Task & Project Management',
+        list: [
+          'Creation and assignment of tasks related to clients or sales.',
+          'Management of commercial projects with calendars and reminders.',
+        ],
+        icon: 'tabler:clipboard-check',
+      },
+      {
+        title: 'Process Automation',
+        list: ['Automated email reminders.', 'Automated marketing with promotional and follow-up emails.'],
+        icon: 'tabler:repeat',
+      },
+      {
+        title: 'Billing & Financial Management',
+        list: [
+          'Creation of quotes and invoices linked to clients.',
+          'Integration with accounting systems to synchronize financial data.',
+        ],
+        icon: 'tabler:currency-dollar',
+      },
+      {
+        title: 'Custom Reports & Analytics',
+        list: [
+          'Generation of charts and reports to analyze sales, client retention, and lost opportunities.',
+          'Creation of key performance indicators to enhance commercial efficiency.',
+        ],
+        icon: 'tabler:chart-pie',
+      },
+      {
+        title: 'Integration with Other Tools',
+        list: [
+          'Connection with ERP, CRM, marketing tools, or email applications.',
+          'Real-time data synchronization for unified business information.',
+        ],
+        icon: 'tabler:plug-connected',
+      },
+    ]}
+  />
+  <Features
+    title="Which Sectors Can Benefit from a Client Management Tool?"
+    subtitle="Small and medium-sized businesses (SMEs) often have limited resources, making it crucial to manage client relationships efficiently."
+    items={[
+      {
+        title: 'Lawyers',
+        description: 'Effectively manage client cases, legal documents, appointments, and client communication.',
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Financial Advisors',
+        description: 'Organize client information, accounts, investments, and communication all in one place.',
+        icon: 'tabler:briefcase',
+      },
+      {
+        title: 'Consultants',
+        description:
+          'Simplify client project management, track progress, invoices, and maintain seamless communication.',
+        icon: 'tabler:bulb',
+      },
+      {
+        title: 'Real Estate Agencies',
+        description:
+          'Improve client management, property listings, visits, offers, and communication to close more sales.',
+        icon: 'tabler:home',
+      },
+      {
+        title: 'Service Companies',
+        description: 'Centralize service requests, track client issues, and manage inquiries efficiently.',
+        icon: 'tabler:speakerphone',
+      },
+      {
+        title: 'B2B Companies',
+        description: 'Centralize leads, sales opportunities, client contacts, and monitor sales performance.',
+        icon: 'tabler:shopping-cart',
+      },
+      {
+        title: 'Non-Profit Organizations',
+        description: 'Manage relationships with donors, volunteers, and beneficiaries to maximize impact.',
+        icon: 'tabler:heart',
+      },
+      {
+        title: 'Public Administration',
+        description:
+          'Enhance communication with citizens, manage their requests, procedures, and relevant information.',
+        icon: 'tabler:fountain',
+      },
+    ]}
+  />
+
+  <Content
+    isReversed
+    tagline=""
+    title="CRM Expanded with Modules"
+    subtitle=""
+    items={[
+      {
+        title: 'Marketing Campaign Management',
+        description: 'Plan, execute, and monitor campaigns directly from the CRM.',
+      },
+      {
+        title: 'Commercial Visit Tracking',
+        description: 'Log and track in-person visits with clients or distributors.',
+      },
+      {
+        title: 'Document Management',
+        description: 'Store and quickly access client-related documents such as contracts or quotes.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/crm-marketing-flujo.jpg',
+      alt: 'CRM Software Modules',
+    }}
+  >
+    <Fragment slot="preContent">
+      <p>
+        A flexible CRM allows for
+        <a class="text-accent" title="Custom software development services" href={u('software')}
+          >custom module programming</a
+        >
+        to meet the specific needs of each business. Some examples of custom modules include:
+      </p>
+    </Fragment>
+    <Fragment slot="postContent">
+      <p>
+        This approach ensures that the CRM not only adapts to current operations but also evolves alongside business
+        growth.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+  <Features
+    id="benefits"
+    tagline="A custom CRM can transform client management and business processes into a strategic tool."
+    title="Benefits of a Custom CRM"
+    subtitle="Client information must be adapted according to the specific needs of each industry."
+    items={[
+      {
+        title: `Increased Business Efficiency`,
+        description: 'Optimizes processes and reduces manual tasks, allowing for more precise tracking.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Improved Communication',
+        description: 'Centralizes information to prevent errors and ensure better customer service.',
+        icon: 'tabler:message-circle',
+      },
+      {
+        title: 'Data-Driven Decisions',
+        description: 'Access to detailed reports and analytics to make strategic decisions with confidence.',
+        icon: 'tabler:chart-pie',
+      },
+      {
+        title: 'Scalability & Adaptability',
+        description:
+          'Over time, businesses evolve, and the client management system can be adapted accordingly, avoiding unnecessary migration costs in the short term.',
+        icon: 'tabler:arrows-maximize',
+      },
+    ]}
+  />
+
+  <Content
+    isReversed
+    tagline=""
+    title="Why implement a client management software with gilsys?"
+    subtitle=""
+    items={[
+      {
+        title: 'We understand the code and can customize it to fit your needs',
+        description: `It is difficult to find a company that not only implements client management software but also understands the source code and can adapt it to the specific needs of each industry.`,
+      },
+      {
+        title: 'Tailor-Made CRM Solutions',
+        description: 'We develop custom modules to adapt the CRM to your business’s daily operations.',
+      },
+      {
+        title: 'Integration with Other Systems',
+        description: 'We connect the CRM with other tools in your company, improving data flow and management.',
+      },
+      {
+        title: 'Transparency & Practicality',
+        description:
+          'We propose practical and efficient solutions, avoiding overly complex or expensive tools unless necessary.',
+      },
+      {
+        title: 'Ongoing Updates & Support',
+        description:
+          'From initial implementation, we provide support and updates to enhance functionality and security.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/gilsys-crm.jpg',
+      alt: 'Operators managing clients with software',
+    }}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    backgroundImage={{
+      src: '~/assets/images/dots/25.jpg',
+      alt: 'Abstract background inspired by technology and software',
+    }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Free Quote',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Call',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title"
+      >Do you need to <span class="custom-gradient">manage your clients</span> and maintain organized tracking?</Fragment
+    >
+    <Fragment slot="subtitle">We offer a customized CRM, tailored to your company’s needs.</Fragment>
+  </CallToAction>
+</Layout>

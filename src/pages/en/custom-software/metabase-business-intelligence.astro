@@ -1,0 +1,234 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+const metadata = {
+  title: 'Business Intelligence with Metabase',
+  description:
+    'Connect databases, analyze information, and turn insights into strategic decisions with Metabase, a Business Intelligence tool.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Tools that transform your data into key insights for decision-making."
+    backgroundImage={{ alt: 'Abstract background', src: '~/assets/images/dots/27.jpg' }}
+  >
+    <Fragment slot="title">
+      <span class="text-accent highlight">Business Intelligence</span> with Metabase
+    </Fragment>
+    <Fragment slot="subtitle"> We connect databases and create dashboards with graphs and key indicators. </Fragment>
+  </Hero>
+
+  <Content
+    isReversed
+    tagline="Instead of relying on assumptions or intuition, BI provides concrete data that allows executives to act with confidence and precision."
+    title="What is Business Intelligence?"
+    subtitle="BI helps companies understand their performance, identify patterns, and make data-driven decisions."
+    items={[
+      {
+        title: 'Identify Opportunities and Challenges',
+        description: 'Helps detect areas for improvement and leverage market opportunities.',
+      },
+      {
+        title: 'Improve Operational Efficiency',
+        description: 'Optimizes processes through detailed data analysis.',
+      },
+      {
+        title: 'Real-Time Monitoring',
+        description: 'Immediate access to metrics and performance to quickly adapt to changes.',
+      },
+      {
+        title: 'Data-Driven Decisions',
+        description: 'Provides clear insights for precise and efficient strategies.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/business-analytics-graficas-empresariales.jpg',
+      alt: 'Business Intelligence dashboards with graphs and data',
+    }}
+  >
+    <Fragment slot="preContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">Transform Data into Strategic Decisions</h3>
+      <p class="text-muted">
+        The concept of Business Intelligence (BI) refers to the use of tools and technologies to analyze business data
+        and convert it into clear and useful insights for decision-making. With BI, companies can gain a comprehensive
+        view of their performance, identify patterns and trends, and anticipate market needs or potential issues.
+      </p>
+    </Fragment>
+    <Fragment slot="postContent">
+      <h3 class="text-2xl font-bold tracking-tightsm:text-3xl mb-2">Which Businesses Need Business Intelligence?</h3>
+      <p class="text-muted">
+        BI tools are useful for <strong>companies of any industry and size</strong> that need to make data-driven decisions.<br
+        /><br />
+        They are especially relevant for marketing, sales, finance, and operations teams that need to monitor key metrics,
+        identify patterns or trends, and generate visual reports that are easy to understand <strong
+          >without requiring advanced SQL or programming knowledge</strong
+        >.
+      </p>
+    </Fragment>
+  </Content>
+
+  <Features
+    id="benefits"
+    tagline=""
+    title="Benefits of Business Intelligence"
+    subtitle="Discover the advantages of working with a team specialized in Metabase and BI."
+    items={[
+      {
+        title: 'Clear and Accurate Insights',
+        description: 'Access all your business data in one place, with clear reports that simplify decision-making.',
+        icon: 'tabler:eye',
+      },
+      {
+        title: 'Data-Driven Decision Making',
+        description: 'Eliminate guesswork and act with confidence thanks to objective and up-to-date data.',
+        icon: 'tabler:clipboard-list',
+      },
+      {
+        title: 'Time Savings',
+        description:
+          'Automated dashboards and scheduled reports allow you to spend less time analyzing data and more time implementing actions.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Custom Solutions',
+        description: 'Dashboards, queries, and visualizations fully tailored to your business needs.',
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Scalability and Flexibility',
+        description: 'Metabase grows with your business, allowing you to add new databases or dashboards as needed.',
+        icon: 'tabler:line',
+      },
+      {
+        title: 'Anticipate Trends and Future Scenarios',
+        description:
+          'BI allows you to analyze historical data, current trends, and forecast future scenarios to stay ahead of market changes.',
+        icon: 'tabler:clock-2',
+      },
+    ]}
+  />
+  <Content
+    isReversed
+    tagline=""
+    title="Advanced BI Features with <span class='custom-gradient'>Metabase</span>"
+    subtitle="At gilsys, we offer tailored solutions that maximize the potential of Metabase."
+    items={[
+      {
+        title: 'Advanced Dashboard Design',
+        list: [
+          'Creation of department-specific dashboards.',
+          'Filtered data and visualizations tailored to objectives.',
+        ],
+      },
+      {
+        title: 'Automation of Queries and Reports',
+        list: [
+          'Scheduling recurring reports with complex SQL queries.',
+          'Reducing manual intervention in report generation.',
+        ],
+      },
+      {
+        title: 'Integration with Existing Systems',
+        list: [
+          'Connection with SQL databases, CRMs, ERPs, and other tools.',
+          'Centralized and real-time synchronized data.',
+        ],
+      },
+      {
+        title: 'Database Optimization',
+        list: ['Restructuring databases to improve performance.', 'Efficient management of business data.'],
+      },
+      {
+        title: 'Customization of Key KPI Indicators',
+        list: [
+          'Specific metrics for sales, costs, and team performance.',
+          'Visualization of market trends and other key indicators.',
+        ],
+      },
+    ]}
+    image={{
+      src: '~/assets/images/metabase-panel.jpg',
+      alt: 'Metabase BI data panel',
+    }}
+  />
+
+  <Content
+    isReversed
+    tagline="It’s not easy to find a company specializing in Metabase"
+    title="Why trust gilsys for Business Intelligence implementation?"
+    items={[
+      {
+        title: 'Deep knowledge of SQL and databases:',
+        description:
+          'At gilsys, we have experience in structuring and optimizing databases to ensure they run efficiently with tools like Metabase.',
+        icon: 'tabler:building',
+      },
+      {
+        title: 'Metabase Specialists:',
+        description:
+          'We know how to maximize this tool’s potential, from basic functionalities to advanced configurations.',
+        icon: 'tabler:chart-pie',
+      },
+      {
+        title: 'Complete Adaptation',
+        description:
+          'We create dashboards, queries, and visualizations tailored to each client, avoiding standard solutions that don’t meet your needs.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Practical Approach',
+        description:
+          'We don’t just configure Metabase—we also train you to use it independently and get the most out of it.',
+        icon: 'tabler:headset',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/metabase-background.jpg',
+      alt: 'Customized Software Image',
+    }}
+  >
+    <Fragment slot="postContent">
+      <p>
+        Your company will gain access to one of the most powerful Business Intelligence tools, allowing you to transform
+        data into valuable insights.
+      </p>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    backgroundImage={{
+      src: '~/assets/images/dots/27.jpg',
+      alt: 'Abstract background inspired by technology and software',
+    }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Free Quote',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Call',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title"
+      >Do you need a <span class="custom-gradient">BI software</span> to improve decision-making?</Fragment
+    >
+    <Fragment slot="subtitle">
+      Our team is ready to implement Metabase and turn your business data into valuable insights.
+    </Fragment>
+  </CallToAction>
+</Layout>

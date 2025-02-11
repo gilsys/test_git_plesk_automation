@@ -1,0 +1,257 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+const metadata = {
+  title: 'Automation and API Development Company',
+  description: 'We automate repetitive tasks, optimize business processes, and synchronize data between programs.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Section -->
+  <Hero
+    tagline="We connect systems to reduce errors, time, and resources."
+    actions={[{ variant: 'primary', text: 'Get a Free Quote', href: u('contact') }]}
+    backgroundImage={{ alt: 'Abstract Background', src: '~/assets/images/dots/24.jpg' }}
+  >
+    <Fragment slot="title">
+      Development of <span class="text-accent highlight">Automation</span> and <span class="text-accent highlight"
+        >APIs</span
+      >
+    </Fragment>
+    <Fragment slot="subtitle">
+      We automate repetitive tasks, optimize business processes, and synchronize data between programs.
+    </Fragment>
+  </Hero>
+
+  <Content
+    isReversed
+    tagline=""
+    title="Eliminate Manual Processes and Gain Efficiency"
+    subtitle="Automation and API programming optimize business processes, saving repetitive tasks and improving connectivity between systems."
+    items={[
+      {
+        title: 'Custom Automations',
+        description: `We develop automatic systems that eliminate human intervention and save time. These solutions can be commands executed on demand or processes that operate automatically and permanently.`,
+      },
+      {
+        title: 'Custom API Development',
+        description: `We create APIs that connect applications, databases, and services, facilitating integration and interoperability. These APIs can connect internal systems with external services, improving business management.`,
+      },
+      {
+        title: 'Automation with Artificial Intelligence (AI)',
+        description:
+          `We leverage <a href='` +
+          u('development/ia') +
+          `' class='text-accent' title="AI Integration for Automating Tasks">AI capabilities</a> to implement intelligent automation solutions, such as data classification, automated responses, and personalized content generation.`,
+      },
+    ]}
+    image={{
+      src: '~/assets/images/automatizacion-diagrama-estados.jpg',
+      alt: 'State Diagram for Process Automation',
+    }}
+  />
+
+  <Features3
+    subtitle="We develop everything from simple automations to complex integrations"
+    title="Use Cases for Business Process Automation"
+    items={[
+      {
+        title: 'System Synchronization',
+        description:
+          'Creation of <strong>APIs</strong> to connect e-commerce platforms with invoicing or logistics management systems.',
+        icon: 'tabler:refresh',
+      },
+      {
+        title: 'Automation of Repetitive Processes',
+        description:
+          '<strong>Scripts</strong> that generate periodic reports, send personalized notifications, or automatically update inventories.',
+        icon: 'tabler:robot',
+      },
+      {
+        title: 'Integration with External Services',
+        description:
+          'Development of tools that <strong>connect payment gateways</strong> with enterprise platforms to ensure smooth purchasing and invoicing processes.',
+        icon: 'tabler:plug',
+      },
+      {
+        title: 'Real-Time Data Management',
+        description:
+          'Solutions that <strong>synchronize devices with databases</strong> to analyze information in real-time, providing useful insights for decision-making.',
+        icon: 'tabler:chart-bar',
+      },
+      {
+        title: 'Intelligent Classification',
+        description:
+          'Implementation of <strong>AI-based automations</strong> to organize products, documents, or information according to specific criteria.',
+        icon: 'tabler:sort-ascending',
+      },
+      {
+        title: 'Intelligent Response Tools',
+        description:
+          '<strong>Chatbots or virtual assistants</strong> that manage automated and improved customer responses.',
+        icon: 'tabler:message-circle',
+      },
+      {
+        title: 'Data Quality Control',
+        description:
+          'Functionality checks to <strong>detect potential issues in processes</strong> and generated data using algorithmic programming or <strong>artificial intelligence</strong>.',
+        icon: 'tabler:checklist',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Features3>
+  <Features
+    title="Advantages of Automation and APIs"
+    subtitle="Investing in automation <strong>always</strong> leads to increased efficiency in a company."
+    items={[
+      {
+        title: 'Time and Resource Savings',
+        description: 'Reduces repetitive manual tasks, allowing teams to focus on strategic activities.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Data Cleaning',
+        description: 'Optimizes <strong>data quality</strong>, eliminating duplicate or incorrect information.',
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Seamless Integration',
+        description: 'Connects business systems with external tools and services to ensure a unified experience.',
+        icon: 'tabler:plug-connected',
+      },
+      {
+        title: 'Scalability and Adaptability',
+        description:
+          'Solutions that grow with project needs, incorporating new functionalities without compromising the existing system.',
+        icon: 'tabler:arrows-maximize',
+      },
+      {
+        title: 'Improved Control and Security',
+        description: 'Solutions that enhance enterprise-level data quality and prevent potential errors.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Multi-State Workflow Automation',
+        description:
+          'We define and implement systems with multiple states, transitions, and business rules to automate and optimize processes.',
+        icon: 'tabler:shield-check',
+      },
+    ]}
+  />
+
+  <!-- Introduction -->
+  <Content
+    tagline=""
+    title=""
+    subtitle=""
+    items={[
+      {
+        title: 'Industrial and Logistics Companies',
+        description:
+          'Need to automate processes such as inventory management, order tracking, and transportation optimization, ensuring greater operational efficiency and real-time control.',
+      },
+      {
+        title: 'E-commerce and Online Sales Platforms',
+        description:
+          'Require APIs to connect product catalogs, order managers, invoicing systems, and payment gateways, improving synchronization and customer experience.',
+      },
+      {
+        title: 'Publishing and Content Companies',
+        description:
+          'Can optimize the automatic publication of articles, multimedia resource organization, and integration with other content distribution platforms.',
+      },
+      {
+        title: 'Organizations with Multiple Systems',
+        description:
+          'Companies working with various management tools like CRMs, ERPs, or BI systems that require APIs to integrate and synchronize data, avoiding duplication and errors.',
+      },
+      {
+        title: 'Companies with Complex Catalogs',
+        description: 'Those that need to manage large volumes of data, such as products or services.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/pins-red-conectados.png',
+      alt: 'Abstract image representing process and tool connections',
+    }}
+  >
+    <Fragment slot="preContent">
+      <h3 class="text-2xl font-bold tracking-tightsm:text-3xl mb-2">Who Benefits from Automation and APIs?</h3>
+      <p class="text-muted">
+        Automation is essential for companies looking to streamline processes, improve data integration with APIs, and
+        reduce the likelihood of human errors.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+  <Content
+    isReversed
+    tagline=""
+    title="Why Choose Gilsys for API Development and Automation?"
+    image={{
+      src: '~/assets/images/gilsys-automatizaciones.jpg',
+      alt: 'Automated Solutions',
+    }}
+    items={[
+      {
+        title: 'Proven Experience',
+        description:
+          'With years of experience in automation and API programming, Gilsys understands industry standards and best practices, providing robust and stable solutions.',
+        icon: 'tabler:certificate',
+      },
+      {
+        title: 'Personalized Approach for Each Project',
+        description:
+          'We don’t apply generic tools; we work closely with each client to understand their needs and develop tailor-made solutions perfectly adapted to their context.',
+        icon: 'tabler:target',
+      },
+      {
+        title: 'Innovation',
+        description:
+          'We stay up to date with the latest technologies and innovations to ensure that every project is prepared for present and future challenges, with a modern and scalable architecture.',
+        icon: 'tabler:bulb',
+      },
+      {
+        title: 'Deployments with Minimal Impact',
+        description:
+          'We plan and execute deployments and updates to reduce or eliminate service disruptions, ensuring a smooth transition for end users.',
+        icon: 'tabler:arrow-right-circle',
+      },
+    ]}
+  />
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/24.jpg', alt: 'Abstract Background' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get a Free Quote',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Call',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Implement <span class="custom-gradient">Process Automation</span> in Your Business
+    </Fragment>
+    <Fragment slot="subtitle">
+      Reducing errors and increasing productivity is a guaranteed investment for the future.
+    </Fragment>
+  </CallToAction>
+</Layout>

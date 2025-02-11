@@ -1,0 +1,455 @@
+---
+import Image from '~/components/common/Image.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Prices from '~/components/widgets/Pricing.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+const metadata = {
+  title: 'Online Store Development Company with PrestaShop and WooCommerce | +20 years',
+  description:
+    'Specialists in custom development and design of online stores with PrestaShop and WooCommerce, tailored solutions.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="We develop e-commerce for businesses of all sizes and industries."
+    backgroundImage={{ alt: 'Abstract background', src: '~/assets/images/dots/16.jpg' }}
+  >
+    <Fragment slot="title">
+      Online store development with<br />
+      <span class="text-accent highlight">PrestaShop</span> and <span class="text-accent highlight">WooCommerce</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      We create online stores with custom designs, develop tailor-made modules, and personalized themes.
+    </Fragment>
+  </Hero>
+
+  <Content
+    tagline="We develop e-commerce solutions for businesses in any industry"
+    title="What is an e-commerce, online store, or electronic commerce?"
+    subtitle="We are talking about platforms for <strong>small</strong> and <strong>large businesses</strong> that enable product sales and sales management."
+    items={[
+      {
+        title: 'Reach new customers',
+        description: 'The internet has no borders. An online store allows you to sell worldwide 24/7.',
+      },
+      {
+        title: 'Increase sales',
+        description: 'A professional and attractive online store enhances a company’s image and builds customer trust.',
+      },
+      {
+        title: 'Reduce costs',
+        description:
+          'An online store can be more cost-effective than a physical store, as it does not require a physical location, additional staff, etc.',
+      },
+      {
+        title: 'Gain valuable customer insights',
+        description:
+          'An online store allows you to collect data on your customers (preferences, shopping habits, etc.) to improve your marketing strategy.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/ecommerce.jpg',
+      alt: 'Web templates for customizing an online store',
+    }}
+  >
+    <Fragment slot="preContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">
+        The goal is simple: <span class="custom-gradient">sell online</span>
+      </h3>
+    </Fragment>
+  </Content>
+
+  <Content
+    isAfterContent
+    isReversed
+    tagline=""
+    title=""
+    subtitle=""
+    items={[
+      {
+        title: 'Manage the store and product catalog',
+        description: 'Having a tool for all necessary administration tasks.',
+      },
+      {
+        title: 'Integrate the platform with other software',
+        description: 'Synchronize data with external systems such as ERPs or CRMs.',
+      },
+      {
+        title: 'Grow',
+        description: 'Easily scale with increased sales volume or catalog expansion.',
+      },
+    ]}
+    image={{
+      id: 'online-cart-shop',
+      src: '~/assets/images/tienda-online.png',
+      alt: 'Custom designs for online stores',
+    }}
+  >
+    <Fragment slot="postContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2 mt-8">Who needs an e-commerce?</h3>
+      <p class="text-muted">
+        Any company in any industry looking to sell products, whether on a small or large scale, locally, nationally, or
+        internationally.
+      </p>
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2 mt-8">We use WooCommerce and PrestaShop</h3>
+      <p class="text-muted">
+        At gilsys, we specialize in developing customized online stores with PrestaShop and WooCommerce, two of the most
+        powerful and versatile e-commerce platforms on the market.
+      </p>
+    </Fragment>
+  </Content>
+
+  <WidgetWrapper containerClass={`max-w-xl pb-6 md:pb-6 lg:pb-6`}>
+    <a href="https://presatshop.com/" title="Prestashop - Online store engine" target="_blank">
+      <Image
+        class=""
+        widths={[400, 768]}
+        layout="constrained"
+        src="~/assets/images/prestashop-logo.jpg"
+        alt="Prestashop - Logo"
+      />
+    </a>
+  </WidgetWrapper>
+  <FAQs
+    classes={{ container: 'py-0 md:py-0 lg:py-0 ps-12' }}
+    title="PrestaShop: Robustness for Large Online Stores"
+    subtitle="PrestaShop is a platform exclusively designed for e-commerce. Its robust and scalable structure makes it ideal for large and complex catalogs, as well as for stores requiring advanced functionalities."
+    tagline=""
+  />
+  <WidgetWrapper containerClass={`max-w-xl my-0 mx-auto py-0 md:py-0 lg:py-0 ps-12`}>
+    <a href="https://presatshop.com/" title="Prestashop - Online store engine" target="_blank">
+      <Image src="~/assets/images/prestashop-backoffice.jpg" alt="PrestaShop - Store administration panel" />
+    </a>
+  </WidgetWrapper>
+  <FAQs
+    heading="Strengths of PrestaShop"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'Designed for large catalogs',
+        description: 'Can handle thousands of products without compromising performance.',
+      },
+      {
+        title: 'Built-in functionalities',
+        description:
+          'Includes advanced tools such as inventory management, discounts, taxes, and shipping without the need for plugins.',
+      },
+      {
+        title: 'Commercial modules',
+        description:
+          'A large marketplace of commercial modules is available to meet many common requirements for advanced stores.',
+      },
+      {
+        title: 'Scalability and customization',
+        description:
+          'At gilsys, we not only work with the most widely used commercial modules but also develop custom features to meet the specific needs of your project. PrestaShop offers a solid foundation for these types of customizations.',
+      },
+    ]}
+  />
+
+  <FAQs
+    heading="Limitations of PrestaShop"
+    subtitle=""
+    tagline=""
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'Initial complexity',
+        description: 'Requires more technical knowledge to set up and manage compared to WooCommerce.',
+      },
+      {
+        title: 'Less flexible for textual content',
+        description:
+          'Although informational pages can be added, it is not as agile as WordPress for handling content design and SEO.',
+      },
+    ]}
+  />
+
+  <WidgetWrapper containerClass={`max-w-xl my-0 mx-auto py-6 md:py-6 lg:py-6`}>
+    <a class="mx-auto" href="https://woocommerce.com/" title="WooCommerce - WordPress eCommerce engine" target="_blank">
+      <Image
+        class="max-w-xs mx-auto"
+        width={320}
+        layout="responsive"
+        src="~/assets/images/woocommerce.webp"
+        alt="WooCommerce - Logo"
+      />
+    </a>
+  </WidgetWrapper>
+
+  <FAQs
+    classes={{ container: 'py-0 md:py-0 lg:py-0 ps-12' }}
+    title="WooCommerce: E-commerce for <em>small and medium</em> catalogs, flexible and user-friendly."
+    subtitle={"WooCommerce is an extension of <a class='text-accent' title='CMS platform for website creation and content management' href='" +
+      u('software/wp') +
+      "' >WordPress</a> that turns any website into a fully functional and easy-to-manage online store. Ideal for projects that need to combine e-commerce with optimized textual content."}
+    tagline=""
+  />
+
+  <WidgetWrapper containerClass={`max-w-xl my-0 mx-auto py-6 md:py-6 lg:py-6`}>
+    <a href="https://woocommerce.com/" title="WooCommerce - WordPress eCommerce engine" target="_blank">
+      <Image
+        class=""
+        widths={[400, 768]}
+        layout="constrained"
+        src="~/assets/images/woocommerce-backoffice.jpg"
+        alt="WooCommerce - Store administration panel"
+      />
+    </a>
+  </WidgetWrapper>
+  <FAQs
+    heading="Strengths of WooCommerce"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'Integration with WordPress',
+        description:
+          'Allows the addition of blogs, informational pages, and other SEO content to enhance search engine visibility.',
+      },
+      {
+        title: 'Wide variety of plugins and themes',
+        description:
+          'There are many extensions to expand functionalities. At gilsys, we know the most commonly used modules and can develop custom ones if needed.',
+      },
+      {
+        title: 'Ease of use',
+        description:
+          'WooCommerce is user-friendly and intuitive, making it ideal for businesses with limited technical expertise.',
+      },
+      {
+        title: 'Low initial cost',
+        description: 'A suitable option for e-commerce businesses with tight budgets or in the startup phase.',
+      },
+    ]}
+  />
+
+  <FAQs
+    classes={{ container: 'max-w-6xl pt-0 md:pt-0 lg:pt-0' }}
+    title="Limitations of WooCommerce"
+    subtitle=""
+    tagline=""
+    items={[
+      {
+        title: 'Performance with large catalogs',
+        description: 'With a very high product volume, WooCommerce may experience performance issues.',
+        icon: 'tabler:chevron-right',
+      },
+      {
+        title: 'Dependency on plugins',
+        description: 'The need for multiple extensions can complicate management if best practices are not followed.',
+        icon: 'tabler:chevron-right',
+      },
+    ]}
+  />
+  <Prices
+    title="PrestaShop vs WooCommerce Comparison"
+    subtitle="Each platform offers advantages depending on the goals of the e-commerce project."
+    prices={[
+      {
+        title: 'PrestaShop',
+        subtitle: 'Large platforms with advanced functionalities.',
+        items: [
+          {
+            title: 'Catalog Size',
+            description: 'Large, with thousands of products.',
+          },
+          {
+            title: 'SEO & Content',
+            description: 'Less flexible for textual content.',
+          },
+          {
+            title: 'Customization & Modules',
+            description: 'Scalability with built-in functionalities and advanced modules.',
+          },
+          {
+            title: 'Performance',
+            description: 'High performance with large data volumes.',
+          },
+          {
+            title: 'Initial Cost',
+            description: 'Higher.',
+          },
+        ],
+      },
+      {
+        title: 'WooCommerce',
+        subtitle: 'Smaller stores with an attractive design.',
+        period: 'Per Month',
+        items: [
+          {
+            title: 'Catalog Size',
+            description: 'Small to medium.',
+          },
+          {
+            title: 'SEO & Content',
+            description: 'Excellent for content pages and SEO.',
+          },
+          {
+            title: 'Customization & Modules',
+            description: 'Compatible with plugins and custom modules.',
+          },
+          {
+            title: 'Performance',
+            description: 'May be limited with large catalogs.',
+          },
+          {
+            title: 'Initial Cost',
+            description: 'Lower.',
+          },
+        ],
+      },
+    ]}
+  />
+  <Features2
+    id="features"
+    tagline=""
+    title="How does gilsys work with PrestaShop and WooCommerce?"
+    subtitle={"We advise all types of businesses on <a href='" +
+      u('consultory') +
+      "' class='text-accent' title='Technology consulting for e-commerce'>how to launch their business online</a> with customized and efficient solutions."}
+    items={[
+      {
+        title: 'Technology Selection',
+        description:
+          'We recommend the best technology for each business, explaining the features of each e-commerce platform and avoiding unnecessary functionalities.',
+        icon: 'tabler:target',
+      },
+      {
+        title: 'Template, Layout, & Design',
+        description:
+          'We create custom layouts when needed or recommend the most suitable templates for each type of business, adapting them to each project’s requirements.',
+        icon: 'tabler:paint',
+      },
+      {
+        title: 'Custom Development & Personalization',
+        description:
+          'We develop modules and <strong>custom functionalities</strong>, adapting the store to the specific needs of the business and providing a unique and personalized solution.',
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'SEO Optimization',
+        description:
+          'We improve technical aspects to enhance your store’s search engine rankings with optimized content that follows current SEO standards.',
+        icon: 'tabler:search',
+      },
+      {
+        title: 'Translation & Internationalization',
+        description:
+          'We translate the platform into as many languages as needed and configure the corresponding currencies and taxes.',
+        icon: 'tabler:flag',
+      },
+      {
+        title: 'Integration with Other Applications',
+        description:
+          'We connect the store with ERP, CRM, or marketing tools to centralize management and optimize business processes.',
+        icon: 'tabler:database',
+      },
+      {
+        title: 'Online Payment Systems',
+        description:
+          'We integrate any payment gateway, including <a target="_blank" href="https://redsys.es/" class="text-accent" title="Payment with Redsys POS, direct bank connection">Card Payments & Bizum</a>, <a target="_blank" class="text-accent" href="https://www.paypal.com">PayPal</a>, <a target="_blank" class="text-accent" href="https://www.stripe.com" title="Stripe">Stripe</a>, <a target="_blank" class="text-accent" href="https://woocommerce.com/es/payments/" title="WooCommerce Payments">WooCommerce Payments</a>, or any other required by the project.',
+        icon: 'tabler:credit-card-pay',
+      },
+      {
+        title: 'Shipping & Logistics',
+        description:
+          'We integrate modules to send orders directly to transport companies, automating labeling and shipment tracking.',
+        icon: 'tabler:package-export',
+      },
+      {
+        title: 'Self-Management',
+        description:
+          'We provide the necessary training so that your business can manage the online store and sales independently.',
+        icon: 'tabler:box-padding',
+      },
+      {
+        title: 'Performance & Scalability',
+        description: 'We ensure that the platform runs smoothly and can scale according to project needs.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Maintenance & Regular Updates',
+        description: 'We handle technical updates so your business can focus solely on its products and promotion.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Continuous Innovation',
+        description:
+          `We are ready to adapt the platform to new requirements and integrate innovative solutions such as <a title="Development of features integrating artificial intelligence" class="text-accent" href='` +
+          u('development/ia') +
+          `'>artificial intelligence</a> or emerging technologies in the future.`,
+        icon: 'tabler:graph',
+      },
+    ]}
+  />
+  <Content
+    isReversed
+    tagline=""
+    title="Why trust gilsys to implement your online store?"
+    subtitle="Your e-commerce will be ready to stand out and grow, whether using WooCommerce for smaller projects or PrestaShop for stores with large and complex catalogs."
+    items={[
+      {
+        title: 'Experts in WooCommerce and PrestaShop',
+        description: `It’s not easy to find a company that not only customizes the design of PrestaShop and WooCommerce but also has a development team familiar with the source code, capable of creating custom templates, modules, and extensions.`,
+        icon: 'tabler:tools',
+      },
+      {
+        title: 'Responsible Customizations',
+        description:
+          'We follow best practices to ensure compatibility with future updates and offer sustainable, scalable solutions.',
+        icon: 'tabler:layout-dashboard',
+      },
+      {
+        title: 'Integration with Other Tools',
+        description:
+          `We connect your online store with tools such as <a class="text-accent" title="Data synchronization with customer management systems" href='` +
+          u('software/crm') +
+          `'>CRM</a>, ERP, marketing platforms, or inventory management systems, enabling <a title="Processes to automate data synchronization" class="text-accent" href='` +
+          u('development/automation') +
+          `'>automatic and seamless data synchronization</a>. This allows you to automate processes, centralize information, and optimize business management.`,
+        icon: 'tabler:link',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/ecommerce-carrito.png',
+      alt: 'Shopping cart representing e-commerce',
+    }}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+  <CallToAction
+    backgroundImage={{
+      src: '~/assets/images/dots/16.jpg',
+      alt: 'Abstract background inspired by technology and software',
+    }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Free Quote',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Call',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">Do you need to <span class="custom-gradient">sell online</span>? </Fragment>
+    <Fragment slot="subtitle"
+      >We handle projects from <strong>small stores</strong> to <strong>large platforms</strong>, with custom design and
+      advanced functionalities.</Fragment
+    >
+  </CallToAction>
+</Layout>

@@ -1,0 +1,329 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+const metadata = {
+  title: 'Consultoría TIC',
+  description: `Asesoramiento para integrar inteligencia artificial en la empresa, análisis de la situación tecnológica, transformación de ideas en proyectos y estudios para la organización de datos.`,
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Como expertos en desarrollo de software, podemos ofrecer una visión más profunda."
+    backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/dots/20.jpg' }}
+  >
+    <Fragment slot="title"><span class="text-accent highlight">Consultoría</span> TIC</Fragment>
+    <Fragment slot="subtitle"
+      >Asesoramiento para integrar inteligencia artificial en la empresa, análisis de la situación tecnológica,
+      transformación de ideas en proyectos y estudios para la organización de datos.</Fragment
+    >
+  </Hero>
+
+  <Features3
+    id="features-services"
+    title="Una consultoría hecha por técnicos especialistas"
+    subtitle={"Nuestro servicio de asesoramiento va más allá del de las empresas consultoras, estamos especializados en <a title='Programación de software a medida' class='text-accent' href='" +
+      u('software') +
+      "'>desarrollo de software</a>, por lo que podemos ayudar a tomar decisiones ofreciendo una visión más técnica."}
+    tagline="Asesoramiento no orientado a resultados comerciales, sino a soluciones reales."
+    items={[
+      {
+        title: 'Asesoramiento para la integración de inteligencia artificial',
+        description: 'Detectamos oportunidades para introducir IA de manera efectiva en los procesos empresariales.',
+        icon: 'tabler:brain',
+        callToAction: {
+          class: 'more-info',
+          text: 'Más información',
+          href: '#ia',
+        },
+      },
+      {
+        title: 'Análisis de la situación tecnológica',
+        description:
+          'Auditamos los sistemas y procesos para identificar puntos fuertes, debilidades y oportunidades de mejora.',
+        icon: 'tabler:search',
+        callToAction: {
+          class: 'more-info',
+          text: 'Más información',
+          href: '#analisis-situacion-tecnologica',
+        },
+      },
+      {
+        title: 'Transformación de ideas en proyectos',
+        description:
+          'Convertimos ideas iniciales en proyectos reales, con una propuesta técnica clara y fases definidas.',
+        icon: 'tabler:bulb',
+        callToAction: {
+          class: 'more-info',
+          text: 'Más información',
+          href: '#transformacion-ideas-proyectos',
+        },
+      },
+      {
+        title: 'Análisis y organización de datos',
+        description:
+          'Estudiamos y proponemos optimizaciones de la estructura y calidad de los datos para facilitar la toma de decisiones estratégicas.',
+        icon: 'tabler:database',
+        callToAction: {
+          class: 'more-info',
+          text: 'Más información',
+          href: '#analisis-organizacion-datos',
+        },
+      },
+      {
+        title: 'Identificación de soluciones',
+        description:
+          'Evaluamos y proponemos herramientas que complementen los procesos existentes y mejoren la productividad.',
+        icon: 'tabler:tool',
+        callToAction: {
+          class: 'more-info',
+          text: 'Más información',
+          href: '#identificacion-soluciones',
+        },
+      },
+    ]}
+  />
+  <Content
+    isReversed
+    tagline=""
+    title="<a title='Asesoramiento tecnológico para adaptar IA a la empresa' name='ia'>Asesoramiento para la integración de inteligencia artificial</a>"
+    subtitle="Analizamos las tareas y procesos de la empresa para identificar puntos donde integrar Inteligencia Artificial."
+    items={[
+      {
+        title: 'Identificación de tareas clave',
+        description: 'Analizamos procesos donde la IA puede aportar mayor valor y eficiencia a la empresa.',
+      },
+      {
+        title: 'Propuestas de herramientas adaptadas',
+        description: 'Recomendamos soluciones de inteligencia artificial compatibles con el entorno del cliente.',
+      },
+      {
+        title: 'Plan de implementación estratégico',
+        description:
+          'Diseñamos un plan que contempla impactos operativos y necesidades de formación para una integración exitosa.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/estudio-integracion-ia.jpg',
+      alt: 'Estudio para integrar inteligencia artificial',
+    }}
+  >
+    <Fragment slot="preContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">
+        Identificar en qué puntos la IA puede ayudar a cada empresa
+      </h3>
+      <p class="text-muted">
+        El uso de inteligencia artificial puede aportar un valor significativo a las empresas, pero solo si se planifica
+        e integra adecuadamente.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Content
+    tagline=""
+    title=`<a title='Análisis tecnológico de la empresa e identificación de posibles automatizaciones' name='analisis-situacion-tecnologica'>Análisis de la situación tecnológica</a>`
+    subtitle=`Estudio de la empresa para detectar posibles puntos donde automatizar tareas o mejorar las aplicaciones actuales.`
+    items={[
+      {
+        title: 'Revisión de herramientas actuales',
+        description: 'Auditamos la funcionalidad de las herramientas para identificar fortalezas y áreas de mejora.',
+      },
+      {
+        title: 'Identificación de cuellos de botella',
+        description: 'Analizamos procesos para detectar y resolver problemas de rendimiento u operativos.',
+      },
+      {
+        title: 'Valoración de escalabilidad',
+        description: 'Determinamos la capacidad de los sistemas para crecer junto con el negocio.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/consultoria-tecnologica.jpg',
+      alt: 'Consultoría tecnológica sobre mesa de vidrio',
+    }}
+  >
+    <Fragment slot="preContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">
+        Comprender el estado actual para planificar el futuro
+      </h3>
+      <p class="text-muted">
+        Realizamos una auditoría detallada de los sistemas y procesos para asegurar que cada decisión se base en
+        información real y actualizada.
+      </p>
+    </Fragment>
+  </Content>
+
+  <Content
+    tagline=""
+    title=`<a title='Transformamos ideas en planes de proyecto reales' name='transformacion-ideas-proyectos'>Transformación de ideas en proyectos</a>`
+    subtitle=`Consultoría para delimitar a nivel técnico y funcional el proceso de implementación de un proyecto de desarrollo informático.`
+    isReversed
+    items={[
+      {
+        title: 'Propuestas técnicas adecuadas',
+        description: 'Definimos soluciones viables basadas en experiencia y buenas prácticas.',
+      },
+      {
+        title: 'Priorización por fases',
+        description: 'Planificamos las fases del proyecto para optimizar recursos y tiempo.',
+      },
+      {
+        title: 'Soluciones tecnológicas personalizadas',
+        description: 'Proponemos herramientas ajustadas a las necesidades específicas del proyecto.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/idea-proyecto.jpg',
+      alt: 'Transformar ideas en proyectos',
+    }}
+  >
+    <Fragment slot="preContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">
+        Convertimos ideas en un plan de proyecto factible
+      </h3>
+      <p class="text-muted">
+        Trabajamos con empresas para transformar ideas iniciales en planes de proyecto, donde definimos cómo se abordará
+        a nivel técnico y en qué fases se dividirá su implementación.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+  <Content
+    tagline=""
+    title=""
+    title=`<a title="Estudio para clasificar los datos de la empresa" name="analisis-organizacion-datos">Análisis y organización de datos</a>`
+    subtitle=`Estudiamos los diferentes orígenes de datos para poder realizar propuestas de mejora y reorganización.`
+    items={[
+      {
+        title: 'Revisión de calidad de datos',
+        description: 'Analizamos la consistencia de los datos para garantizar su utilidad en la toma de decisiones.',
+      },
+      {
+        title: 'Creación de esquemas de organización',
+        description: 'Proponemos estructuras que mejoren el acceso y la interpretación de datos.',
+      },
+      {
+        title: 'Optimización de gestión de datos',
+        description: 'Recomendamos soluciones específicas para gestionar la información de manera más eficiente.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/analisis-clasificacion-datos.jpg',
+      alt: 'Organización de datos',
+    }}
+  >
+    <Fragment slot="preContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">Organizar la información con sentido</h3>
+      <p class="text-muted">
+        El análisis y clasificación de datos es clave para tomar decisiones estratégicas con una visión clara y útil.
+      </p>
+    </Fragment>
+  </Content>
+
+  <Content
+    tagline=""
+    isReversed
+    title=`<a title="Buscamos y proponemos las herramientas más adecuadas para cada proyecto" name='identificacion-soluciones'>Identificación de soluciones</a>`
+    subtitle=`Consultoría para estudiar opciones comerciales o de código abierto que se adapten a las necesidades de cada proyecto.`
+    items={[
+      {
+        title: 'Evaluación de opciones del mercado',
+        description:
+          'Analizamos herramientas finales o personalizables para encontrar las que mejor se adapten a las necesidades del cliente.',
+      },
+      {
+        title: 'Propuestas complementarias',
+        description:
+          'Proponemos soluciones que mejoren las herramientas actuales sin necesidad de sustituirlas innecesariamente.',
+      },
+      {
+        title: 'Plan de integración coherente',
+        description:
+          'Diseñamos un plan de integración alineado con la estrategia empresarial para garantizar el éxito del proyecto.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/integracion-circular.jpg',
+      alt: 'Integración circular',
+    }}
+  >
+    <Fragment slot="preContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">Seleccionar las herramientas más adecuadas</h3>
+      <p class="text-muted">
+        Revisamos las necesidades de la empresa para identificar qué soluciones pueden ayudar a mejorar sus procesos, ya
+        sea integrando nuevas herramientas o optimizando las existentes.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Features
+    id="benefits"
+    tagline="¿Por qué confiar en gilsys?"
+    title="Ventajas de nuestra consultoría"
+    subtitle="Ayudamos a las empresas a optimizar procesos y mejorar resultados con soluciones tecnológicas sostenibles y personalizadas."
+    items={[
+      {
+        title: 'Análisis realista y enfoque personalizado',
+        description:
+          'No proponemos soluciones generalistas. Trabajamos en base a las necesidades reales del cliente para ofrecer respuestas útiles y viables.',
+        icon: 'tabler:search',
+      },
+      {
+        title: 'Transformación orientada a resultados',
+        description:
+          'Convertimos ideas en proyectos concretos, acompañando cada fase, desde la conceptualización hasta la ejecución.',
+        icon: 'tabler:target',
+      },
+      {
+        title: 'Experiencia en tecnología avanzada',
+        description:
+          'Contamos con experiencia en sectores diversos y estudiamos las últimas tendencias en herramientas y soluciones tecnológicas.',
+        icon: 'tabler:devices',
+      },
+      {
+        title: 'Honestidad y sostenibilidad',
+        description:
+          'Aconsejamos lo que es más adecuado para la empresa, evitando inversiones innecesarias o cambios radicales.',
+        icon: 'tabler:devices',
+      },
+    ]}
+  />
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/20.jpg', alt: 'Fondo abstracto' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Presupuesto gratuito',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Llamar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title"
+      >¿Quieres <span class="custom-gradient">migrar</span> herramientas antiguas o <span class="custom-gradient"
+        >integrar aplicaciones</span
+      > en tu empresa?</Fragment
+    >
+    <Fragment slot="subtitle">Contáctanos y nos encargaremos de asesorarte y ejecutar tu proyecto.</Fragment>
+  </CallToAction>
+</Layout>

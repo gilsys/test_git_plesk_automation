@@ -10,7 +10,6 @@ import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 
 const u = useRoutes(getLangFromUrl(Astro.url));
 
-
 const metadata = {
   title: "Empresa de programació d'aplicacions web a mida | +20 anys",
   description:
@@ -20,27 +19,30 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <!-- Hero Section -->
-  <Hero tagline="Programem aplicacions a mida que s’ajusten al teu negoci."
-  actions={[
-    { variant: 'primary', text: 'Pressupost gratuït', href: u('contact') },
-  ]}
-  backgroundImage={{ alt:'Fons abstracte', src: '~/assets/images/dots/02.jpg'}}
+  <Hero
+    tagline="Programem aplicacions a mida que s’ajusten al teu negoci."
+    actions={[{ variant: 'primary', text: 'Pressupost gratuït', href: u('contact') }]}
+    backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/02.jpg' }}
   >
     <Fragment slot="title">
       Aplicacions web <span class="text-accent highlight">a mida</span>
     </Fragment>
     <Fragment slot="subtitle">
-      Dissenyem i desenvolupem eines i plataformes a mida per empreses, adaptades a objectius concrets, per optimitzar processos i oferir funcionalitats avançades.
+      Dissenyem i desenvolupem eines i plataformes a mida per empreses, adaptades a objectius concrets, per optimitzar
+      processos i oferir funcionalitats avançades.
     </Fragment>
   </Hero>
 
-  
   <Note linkText="Informa't" linkTitle="Més informació" linkHref={u('contact')}>
     <Fragment slot="h2">
       Subvencionable amb <span class="text-4xl">KIT Digital</span>
     </Fragment>
     <Fragment slot="p">
-      <a href={u('software/crm')} title="Gestió de clients subvencionable amb KIT Digital" class="text-accent font-medium cursor-pointer">🔗 Gestió de clients</a> - De 3.000€ a 29.000€
+      <a
+        href={u('software/crm')}
+        title="Gestió de clients subvencionable amb KIT Digital"
+        class="text-accent font-medium cursor-pointer">🔗 Gestió de clients</a
+      > - De 3.000€ a 29.000€
     </Fragment>
   </Note>
 
@@ -78,9 +80,11 @@ const metadata = {
         oferir funcionalitats a mida, adaptades a les necessitats concretes d’un projecte o empresa.
       </p>
       <p class="text-muted mt-4">
-        A diferència de les <a href={u('software/wp')} title="Disseny web amb WordPress" class="text-accent">pàgines web amb WordPress</a> o de les <a
+        A diferència de les <a href={u('software/wp')} title="Disseny web amb WordPress" class="text-accent"
+          >pàgines web amb WordPress</a
+        > o de les <a
           href={u('development/astro')}
-          title='Webs optimitzades per alt rendiment i SEO'
+          title="Webs optimitzades per alt rendiment i SEO"
           class="text-accent">pàgines web d'alt rendiment</a
         >, les aplicacions web van un pas més enllà i abarquen qualsevol tipus d'implementació avançada de serveis de
         programació d'eines cloud.
@@ -91,7 +95,8 @@ const metadata = {
       <p class="text-muted">
         Les aplicacions web a mida són ideals per a empreses, startups i institucions que necessiten solucions digitals
         personalitzades per automatitzar processos, gestionar dades complexes o oferir serveis al núvol. Són
-        especialment útils per a aquells projectes, interns o públics, amb requisits únics que no es cobreixen amb eines estàndard.
+        especialment útils per a aquells projectes, interns o públics, amb requisits únics que no es cobreixen amb eines
+        estàndard.
       </p>
     </Fragment>
   </Content>
@@ -112,13 +117,12 @@ const metadata = {
       },
       {
         title: 'Components moderns',
-        description:
-          `Utilitzem <a target="_blank" class="text-accent" title="Interfícies d'usuari amb metronic" href="https://keenthemes.com/metronic">Metronic</a> per a la creació d'interfície d'usuari. Metronic és un potent conjunt d'eines amb plantilles i components UI moderns, ideal per crear aplicacions web escalables, atractives i altament personalitzables.`,
+        description: `Utilitzem <a target="_blank" class="text-accent" title="Interfícies d'usuari amb metronic" href="https://keenthemes.com/metronic">Metronic</a> per a la creació d'interfície d'usuari. Metronic és un potent conjunt d'eines amb plantilles i components UI moderns, ideal per crear aplicacions web escalables, atractives i altament personalitzables.`,
       },
     ]}
     image={{
       src: '~/assets/images/metronic-ui-components.jpg',
-      alt: 'Interfícies d\'administració backoffice amb Metronic',
+      alt: "Interfícies d'administració backoffice amb Metronic",
     }}
   >
     <Fragment slot="preContent">
@@ -167,7 +171,7 @@ const metadata = {
           '<strong>Gestió optimitzada:</strong> Automatització de tasques repetitives.',
           '<strong>Productivitat millorada:</strong> Reducció del temps necessari per completar processos clau.',
           '<strong>Eliminació d’errors:</strong> Automatitzar processos crítics minimitza els riscos associats a errors manuals.',
-          ],
+        ],
         icon: 'tabler:settings',
       },
       {
@@ -176,7 +180,7 @@ const metadata = {
           '<strong>Noves funcionalitats</strong> sota demanda.',
           '<strong>Gestió de grans volums de dades</strong> sense comprometre el rendiment.',
           '<strong>Preparades pel futur:</strong> Integració amb tecnologies emergents.',
-          ],
+        ],
         icon: 'tabler:line',
       },
       {
@@ -185,7 +189,7 @@ const metadata = {
           '<strong>Actualitzacions instantànies</strong> sense necessitat de descàrregues.',
           '<strong>Manteniment remot:</strong> Ajustos i millores sense interrupcions significatives.',
           '<strong>Costos reduïts</strong> gràcies a la gestió centralitzada.',
-          ],
+        ],
         icon: 'tabler:cloud',
       },
       {
@@ -194,7 +198,7 @@ const metadata = {
           '<strong>Facilitat d’ús:</strong> Dissenys intuïtius per a una millor experiència d’usuari.',
           '<strong>Adaptabilitat</strong> visual a les necessitats del públic objectiu.',
           '<strong>Responsive design:</strong> Experiència coherent en qualsevol dispositiu.',
-          ],
+        ],
         icon: 'tabler:palette',
       },
       {
@@ -203,7 +207,7 @@ const metadata = {
           '<strong>Propietat del codi:</strong> Autonomia en modificacions o transferències.',
           '<strong>Independència</strong> de proveïdors.',
           '<strong>Seguretat</strong> personalitzada adaptada a normatives específiques.',
-          ],
+        ],
         icon: 'tabler:key',
       },
       {
@@ -212,7 +216,7 @@ const metadata = {
           '<strong>Sense instal·lació local:</strong> No ocupa espai ni requereix actualitzacions manuals.',
           '<strong>Flexibilitat d’ús:</strong> Compatible amb múltiples sistemes operatius.',
           '<strong>Menors requisits de hardware</strong> gràcies a la gestió des del servidor.',
-          ],
+        ],
         icon: 'tabler:rocket',
       },
       {
@@ -220,11 +224,10 @@ const metadata = {
         list: [
           '<strong>Treball en equip</strong> en temps real.',
           '<strong>Subscripcions i serveis en línia:</strong> Gestiona usuaris i serveis.',
-          ],
+        ],
         icon: 'tabler:users',
       },
-    ]
-    }
+    ]}
   />
 
   <Features
@@ -237,7 +240,7 @@ const metadata = {
         list: [
           '<strong>Plataformes de subscripció</strong> amb continguts exclusius, com formació en línia, serveis professionals o accés a eines especialitzades.',
           '<strong>Sistemes de gestió per a membres</strong>, clubs esportius o comunitats digitals, amb funcionalitats com planificació d’activitats, seguiment de resultats o comunicació interna.',
-          ],
+        ],
         icon: 'tabler:server',
       },
       {
@@ -245,7 +248,7 @@ const metadata = {
         list: [
           '<strong>Generació dinàmica de contractes, factures o certificats</strong>, adaptats a les dades específiques de cada usuari o client.',
           '<strong>Creació d’informes tècnics</strong> detallats a partir de dades analítiques per a sectors com educació, industrial o la logística.',
-          ],
+        ],
         icon: 'tabler:file-text',
       },
       {
@@ -254,7 +257,7 @@ const metadata = {
           '<strong>Sistemes per gestionar reserves online</strong>, com cites, serveis professionals o esdeveniments.',
           '<strong>Eines per configurar productes personalitzats</strong>, com configuradors de maquinària, equipaments industrials o productes personalitzats per a e-commerce.',
           '<strong>Gestió de projectes</strong> i contractacions amb seguiment d’etapes, assignació de tasques i generació d’informes de progrés.',
-          ],
+        ],
         icon: 'tabler:calendar-event',
       },
       {
@@ -262,7 +265,7 @@ const metadata = {
         list: [
           '<strong>Panells de control</strong> per monitoritzar mètriques de rendiment, com vendes, ús d’eines o estadístiques de trànsit en temps real.',
           '<strong>Sistemes de visualització d’informació</strong> amb gràfics, mapes i taules interactives per a la presa de decisions estratègiques.',
-          ],
+        ],
         icon: 'tabler:chart-pie',
       },
       {
@@ -270,7 +273,7 @@ const metadata = {
         list: [
           '</strong>Plataformes per administrar cursos</strong>, avaluacions i programes de certificació en sectors com l’automoció, la sanitat o la tecnologia.',
           '<strong>Eines de gamificació</strong> i seguiment per a formacions internes, amb indicadors de progrés i informes personalitzats.',
-          ],
+        ],
         icon: 'tabler:school',
       },
       {
@@ -279,22 +282,19 @@ const metadata = {
           '<strong>Sistemes per gestionar inventaris</strong>, comandes i distribució en temps real.',
           '<strong>Plataformes per a la gestió de clients</strong> completament a mida per adaptar-se a les necessitats específiques de l’empresa.',
           '<strong>Eines per automatitzar processos administratius</strong>, com avaluació del rendiment del personal.',
-          ],
+        ],
         icon: 'tabler:settings',
       },
-    ]
-    }
+    ]}
   />
 
   <Content
     isReversed
     tagline=""
-
     image={{
       src: '~/assets/images/aplicaciones-web-cloud.jpg',
       alt: 'Aplicacions web cloud',
     }}
-
     title="Per què escollir gilsys per al desenvolupament d’aplicacions web a mida?"
     items={[
       {
@@ -328,8 +328,7 @@ const metadata = {
         icon: 'tabler:headset',
       },
     ]}
-  >    
-
+  >
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-lightgray"></div>
     </Fragment>
@@ -350,16 +349,11 @@ const metadata = {
       },
     ]}
   >
-    <Fragment slot="title">La teva <span class="custom-gradient">aplicació web a mida</span>,<br/> només a un click</Fragment>
-    <Fragment slot="subtitle">Explica'ns les necessitats del teu projecte i prepararem un pressupost personalitzat.</Fragment>
+    <Fragment slot="title"
+      >La teva <span class="custom-gradient">aplicació web a mida</span>,<br /> només a un click</Fragment
+    >
+    <Fragment slot="subtitle"
+      >Explica'ns les necessitats del teu projecte i prepararem un pressupost personalitzat.</Fragment
+    >
   </CallToAction>
-
-
-
-
-
-
-
-
-
 </Layout>

@@ -1,0 +1,499 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+const metadata = {
+  title: 'Migración e Integración de Sistemas',
+  description: `Migración de bases de datos, renovación de software, integración de inteligencia artificial, sincronización de datos entre programas.`,
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Una migración a tiempo es una inversión de futuro."
+    backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/dots/03.jpg' }}
+  >
+    <Fragment slot="title"
+      ><span class="text-accent highlight">Migración</span> e <span class="text-accent highlight">integración</span
+      ></Fragment
+    >
+    <Fragment slot="subtitle"
+      >Creamos flujos de comunicación entre herramientas existentes, integramos nuevas y migramos sistemas antiguos
+      hacia soluciones más modernas.</Fragment
+    >
+  </Hero>
+
+  <Features3
+    id="features-services"
+    title="¿A qué nos referimos con <span class='custom-gradient'>migración e integración</span>?"
+    subtitle="Hacemos que las herramientas existentes trabajen de manera coordinada, trasladamos información de programas antiguos a nuevas aplicaciones e integramos herramientas para crear nuevos flujos de trabajo automatizados."
+    tagline="Modernización e integración de tus sistemas."
+    items={[
+      {
+        title: 'Renovación de software',
+        description:
+          'Actualizamos sistemas antiguos para mejorar el rendimiento y garantizar una infraestructura tecnológica robusta y sostenible.',
+        icon: 'tabler:device-desktop',
+        callToAction: {
+          class: 'more-info',
+          text: 'Más información',
+          href: '#renovacion-software',
+        },
+      },
+      {
+        title: 'Migración de datos',
+        description: 'Migramos bases de datos antiguas a nuevas aplicaciones sin pérdida de información.',
+        icon: 'tabler:device-desktop',
+        callToAction: {
+          class: 'more-info',
+          text: 'Más información',
+          href: '#migracion-datos',
+        },
+      },
+
+      {
+        title: 'Integración de inteligencia artificial',
+        description:
+          'Integramos procesos inteligentes, automatizaciones, análisis predictivo o sistemas de control de calidad en herramientas existentes.',
+        icon: 'tabler:brain',
+        callToAction: {
+          class: 'more-info',
+          text: 'Más información',
+          href: '#integracion-ia',
+        },
+      },
+      {
+        title: 'Conexión de software',
+        description:
+          'Sincronizamos información entre programas para asegurar un flujo de datos eficiente y coordinado entre sistemas nuevos y existentes.',
+        icon: 'tabler:arrows-exchange',
+        callToAction: {
+          class: 'more-info',
+          text: 'Más información',
+          href: '#conexion-software',
+        },
+      },
+      /*
+      {
+        title: 'Optimización de software',
+        description: 'Analizamos y mejoramos programas, aplicaciones y herramientas en términos de rendimiento y funcionalidad.',
+        icon: 'tabler:settings',
+        callToAction: {
+          class: 'more-info',
+          text: 'Más información',
+          href: '#TODO',
+        },
+      },
+      */
+      {
+        title: 'División y escalabilidad',
+        description:
+          'Transformamos sistemas monolíticos en arquitecturas distribuidas para facilitar el mantenimiento y la escalabilidad.',
+        icon: 'tabler:layers-intersect',
+        callToAction: {
+          class: 'more-info',
+          text: 'Más información',
+          href: '#division-escalabilidad',
+        },
+      },
+    ]}
+  />
+  <Content
+    isReversed
+    tagline=""
+    title="<a name='renovacion-software' title='Renovar programas y herramientas antiguas para sustituirlas por aplicaciones nuevas'>Renovación de software</a>"
+    subtitle="Mantener herramientas antiguas implica ineficiencia y reducción de productividad."
+    items={[
+      {
+        title: 'Migración de software obsoleto',
+        description:
+          `Sustitución de programas antiguos por aplicaciones más modernas, <a href='` +
+          u('development') +
+          `' title="Desarrollo de programas a medida" class="text-accent">desarrolladas a medida</a> con <a href='` +
+          u('software') +
+          `' class="text-accent" title='Desarrollo de programas basados en software personalizado'>software personalizado</a>.`,
+      },
+
+      {
+        title: 'Cambios en infraestructura',
+        description:
+          'Implementación de herramientas en la nube, ofreciendo mayor flexibilidad y reducción de costos de infraestructura.',
+      },
+      {
+        title: 'Actualizaciones preventivas',
+        description:
+          'Los sistemas antiguos son más vulnerables a ataques de seguridad y pueden ralentizar el crecimiento empresarial. Actualizarlos a tiempo evita problemas futuros y garantiza un funcionamiento óptimo.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/ui-ux-moderna.jpg',
+      alt: 'Interfaz de usuario moderna',
+    }}
+  >
+    <Fragment slot="preContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">
+        Invertir en renovar software es un ahorro a futuro
+      </h3>
+      <p class="text-muted">
+        Los sistemas antiguos suelen presentar problemas de seguridad, baja eficiencia y rendimiento limitado, lo que
+        puede comprometer la operatividad de una empresa. La modernización tecnológica implica actualizar software y
+        bases de datos para optimizar el rendimiento y asegurar una infraestructura tecnológica robusta.
+      </p>
+    </Fragment>
+    <Fragment slot="postContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">
+        ¿Por qué es importante contar con software actualizado en una empresa?
+      </h3>
+      <p class="text-muted">
+        Los sistemas antiguos son más vulnerables a ataques de seguridad y, además, pueden ralentizar el crecimiento
+        empresarial. Renovarlos a tiempo evita problemas futuros y garantiza una mayor eficiencia en el trabajo del
+        equipo.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Content
+    tagline=""
+    title="<a name='migracion-datos' title='Transferir bases de datos antiguas a nuevas plataformas'>Migración de datos</a>"
+    subtitle="Deja atrás los sistemas antiguos y abraza la innovación con una migración de datos segura y eficiente."
+    items={[
+      {
+        title: 'Migración de sistemas legacy',
+        description:
+          'Moderniza tu infraestructura tecnológica trasladando los datos desde sistemas antiguos (legacy) a plataformas más actuales y eficientes.',
+      },
+      {
+        title: 'Migración de bases de datos',
+        description:
+          'Optimiza la gestión de tus datos migrándolos a una base de datos más potente, escalable y segura.',
+      },
+      {
+        title: 'Integración de datos',
+        description:
+          'Unifica los datos provenientes de diversas fuentes en un único sistema coherente para obtener una visión completa de tu negocio.',
+      },
+      {
+        title: 'Migración a la nube',
+        description:
+          'Aprovecha las ventajas de la nube (flexibilidad, escalabilidad, seguridad) migrando tus datos a un entorno cloud.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/migracion-datos-antiguos.png',
+      alt: 'Migración de datos entre sistemas',
+    }}
+  >
+    <Fragment slot="preContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">Libera el potencial de los datos de tu empresa</h3>
+      <p class="text-muted">
+        En la era digital actual, los datos son uno de los activos más valiosos para cualquier empresa. La migración de
+        datos es un proceso esencial para garantizar que tus datos sean accesibles, seguros y estén en un formato que
+        pueda ser utilizado de manera eficiente para la toma de decisiones y la innovación.
+      </p>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="text-muted">
+        La migración de datos puede ser un proyecto complejo, pero con una planificación adecuada y la experiencia de un
+        equipo experto, puede convertirse en un proceso fluido y exitoso.
+      </p>
+      <p class="text-muted mt-3">
+        En gilsys, somos especialistas en migración de datos. Contamos con la experiencia y los conocimientos necesarios
+        para ayudarte a trasladar tus datos de manera segura y eficiente, minimizando el tiempo de inactividad y los
+        riesgos.
+      </p>
+    </Fragment>
+  </Content>
+  <Features
+    classes={{ container: 'pt-0 md:pt-0 lg:pt-0' }}
+    isAfterContent
+    title="¿Por qué es importante la migración de datos?"
+    items={[
+      {
+        title: 'Mejora de la eficiencia operativa',
+        description:
+          'La migración de datos permite optimizar procesos y reducir la complejidad de los sistemas, liberando recursos y mejorando la productividad.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Reducción de costos',
+        description:
+          'Al liberar recursos y evitar mantenimientos innecesarios de tecnologías obsoletas, la migración de datos supone un ahorro económico considerable.',
+        icon: 'tabler:cash',
+      },
+      {
+        title: 'Aumento de la seguridad',
+        description:
+          'Los datos migrados a plataformas modernas disfrutan de protocolos y medidas de protección más avanzadas, reduciendo el riesgo de ataques y vulnerabilidades.',
+        icon: 'tabler:shield-lock',
+      },
+      {
+        title: 'Catalizador para la innovación',
+        description:
+          'La migración de datos permite a las empresas adoptar nuevas tecnologías y explorar soluciones más avanzadas, impulsando la innovación y el crecimiento.',
+        icon: 'tabler:bulb',
+      },
+      {
+        title: 'Mejora en la toma de decisiones',
+        description:
+          'La migración de datos proporciona a la empresa información más accesible, consistente y actualizada, permitiendo un análisis más preciso y una mejor toma de decisiones.',
+        icon: 'tabler:chart-bar',
+      },
+      {
+        title: 'Mejora de la imagen de marca',
+        description:
+          'Una empresa con sistemas modernos y eficientes transmite una imagen de profesionalidad y confianza, mejorando la percepción de la marca por parte de clientes y colaboradores.',
+        icon: 'tabler:brand-google-maps',
+      },
+    ]}
+  />
+
+  <Content
+    isReversed
+    tagline=""
+    title="<a name='integracion-ia' title='Integrar IA en herramientas o procesos existentes'>Integración de inteligencia artificial</a>"
+    subtitle={`No solo podemos <a class="text-accent" title="Programación de nuevas aplicaciones que integran inteligencia artificial" href="` +
+      u('development/ia') +
+      `">programar nuevas aplicaciones</a>, sino que también podemos integrar la IA en herramientas existentes.`}
+    items={[
+      {
+        title: 'Automatización de procesos',
+        description:
+          'Automatización de procesos internos con machine learning, aprovechando datos empresariales para reducir costos y aumentar la eficiencia.',
+      },
+      {
+        title: 'Chatbots y asistentes virtuales',
+        description:
+          'Incorporación de chatbots o asistentes virtuales que trabajen con bases de datos existentes para mejorar la atención al cliente.',
+      },
+      {
+        title: 'Análisis predictivo',
+        description:
+          'Integración de sistemas de análisis predictivo en herramientas ya en uso para anticipar necesidades o tendencias empresariales.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/ia-integracion-software-abstracto.png',
+      alt: 'Abstracción de integración de software con inteligencia artificial',
+    }}
+  >
+    <Fragment slot="preContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">
+        Mejorar sistemas existentes con procesos inteligentes
+      </h3>
+      <p class="text-muted">
+        Integrar inteligencia artificial en sistemas ya existentes puede transformar las operaciones empresariales,
+        optimizando procesos y mejorando la toma de decisiones. No se trata de sustituir herramientas actuales, sino de
+        ampliarlas para aprovechar su potencial con funcionalidades avanzadas.
+      </p>
+    </Fragment>
+    <Fragment slot="postContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">¿Por qué es importante?</h3>
+      <p class="text-muted">
+        Incorporar inteligencia artificial en los procesos empresariales mejora la eficiencia operativa y permite tomar
+        decisiones basadas en datos, ofreciendo una ventaja competitiva sostenible.
+      </p>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+  <Content
+    tagline=""
+    title="<a name='conexion-software' title='Comunicar datos entre aplicaciones y programas de manera automática'>Conexión de software</a>"
+    subtitle="Sincronizar datos entre diferentes herramientas simplifica la gestión de información de la empresa y evita datos duplicados."
+    items={[
+      {
+        title: 'Conexión mediante APIs',
+        description:
+          `Desarrollamos <a class="text-accent" title="Automatización de procesos de sincronización de datos" href="` +
+          u('development/automation') +
+          `">integraciones y automatizaciones mediante APIs personalizadas</a> para sincronizar información entre sistemas.`,
+      },
+      {
+        title: 'Centralización de datos',
+        description:
+          'Unificamos datos para que sean accesibles en tiempo real desde diferentes plataformas, evitando duplicidad y redundancia.',
+      },
+      {
+        title: 'Conexión de sistemas antiguos',
+        description:
+          'Si bien siempre recomendamos la migración a herramientas más modernas cuando es posible, en caso de ser necesario, preparamos sistemas antiguos para exportar datos a tecnologías más avanzadas, permitiendo trabajar con información enriquecida.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/integracion-sistemas.png',
+      alt: 'Integración de software empresarial',
+    }}
+  >
+    <Fragment slot="preContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">
+        Hacer que las herramientas trabajen de manera coordinada
+      </h3>
+      <p class="text-muted">
+        Muchas empresas utilizan múltiples herramientas, pero a menudo estas no están conectadas entre sí, lo que genera
+        duplicación de datos, errores e ineficiencias.
+      </p>
+    </Fragment>
+    <Fragment slot="postContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">Beneficios de sincronizar software</h3>
+      <p class="text-muted">
+        Un sistema integrado reduce errores, mejora la eficiencia y permite una visión más clara de las operaciones.
+      </p>
+    </Fragment>
+  </Content>
+
+  <!--
+  <Content
+    tagline=""
+    title="Optimització de Software"
+    items={[
+      {
+        title: 'Auditoria de codi',
+        description: 'Identifiquem punts febles en termes de seguretat i rendiment per aplicar millores.',
+      },
+      {
+        title: 'Optimització de bases de dades',
+        description: 'Revisem i ajustem bases de dades per millorar el temps de resposta i l’eficiència general.',
+      },
+      {
+        title: 'Migració a tecnologies modernes',
+        description:
+          'Actualitzem sistemes obsolets a tecnologies modernes per assegurar sostenibilitat i compatibilitat futura.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/analisis-optimizacion-software.jpg',
+      alt: 'Persona mirant el codi amb lupa, optimitzant rendiment',
+    }}
+  >
+    <Fragment slot="preContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">
+        Analitzar, revisar i millorar i migrar per augmentar el rendiment
+      </h3>
+      <p class="text-muted">
+        L’optimització de software implica revisar projectes existents per identificar problemes i aplicar millores, o
+        fins i tot migrar-los a tecnologies més modernes quan sigui necessari.
+      </p>
+    </Fragment>
+    <Fragment slot="postContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">Per què és important?</h3>
+      <p class="text-muted">
+        Un sistema optimitzat consumeix menys recursos, és més segur i redueix costos a llarg termini gràcies a un
+        manteniment més senzill i eficient.
+      </p>
+    </Fragment>
+    
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+
+  </Content>
+-->
+  <Content
+    isReversed
+    tagline=""
+    title="<a name='division-escalabilidad' title='Dividir grandes sistemas en herramientas más especializadas y escalables'>División y Escalabilidad</a>"
+    subtitle="En ocasiones, utilizar un único programa o plataforma para intentar resolver muchos requisitos no es la mejor opción."
+    items={[
+      {
+        title: 'Separación de funcionalidades',
+        description: 'Dividimos sistemas monolíticos en bloques modulares para facilitar la gestión y escalabilidad.',
+      },
+      {
+        title: 'Desarrollo más ágil',
+        description: 'Permite ampliar o modificar solo las partes necesarias, reduciendo tiempo y costos.',
+      },
+      {
+        title: 'Reducción del impacto de errores',
+        description: 'Los bloques modulares son independientes, reduciendo el impacto de errores a nivel global.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/bloques-distribuidos.png',
+      alt: 'Dividir un proyecto en bloques escalables',
+    }}
+  >
+    <Fragment slot="preContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">Transformar monolitos en sistemas escalables</h3>
+      <p class="text-muted">
+        Los sistemas monolíticos pueden ser difíciles de mantener y actualizar. Dividir estos sistemas en bloques
+        modulares permite un desarrollo más ágil y escalabilidad.
+      </p>
+    </Fragment>
+    <Fragment slot="postContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">Beneficios de dividir y escalar</h3>
+      <p class="text-muted">
+        La división en bloques permite una gestión más manejable y facilita la incorporación de nuevas funcionalidades
+        con mínimo impacto.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Features
+    id="benefits"
+    tagline="Implementaciones ágiles y transparentes para el usuario"
+    title="¿Qué beneficios tiene realizar migraciones e integraciones con gilsys?"
+    subtitle="Realizamos migraciones de forma eficiente y convertimos las integraciones en oportunidades para evolucionar los sistemas de manera sostenible, sin invertir más de lo necesario."
+    items={[
+      {
+        title: 'Migración sin interrupciones',
+        description:
+          'Nos encargamos de que cada proceso de migración o integración se realice con el <strong>mínimo impacto posible</strong> en el funcionamiento diario. Planificamos y coordinamos cada etapa para mantener la continuidad operativa y reducir molestias a los usuarios finales.',
+        icon: 'tabler:arrows-horizontal',
+      },
+      {
+        title: 'Honestidad y enfoque personalizado',
+        description:
+          'En gilsys priorizamos las necesidades reales del cliente. Si no es necesario cambiarlo todo, o no tiene sentido a nivel económico hacerlo, lo comunicaremos de forma transparente. Recomendamos las prácticas y soluciones más adecuadas para cada proyecto, valorando siempre el costo-beneficio y el impacto a largo plazo.',
+        icon: 'tabler:message-circle',
+      },
+      {
+        title: 'Experiencia práctica en proyectos reales',
+        description: `Hemos trabajado con empresas de sectores muy diversos, resolviendo problemas concretos como la integración de sistemas independientes, la migración de herramientas a aplicaciones más modernas o la división de plataformas para convertirlas en más escalables a nivel de arquitectura y funcionalidad.`,
+        icon: 'tabler:chart-bar',
+      },
+      {
+        title: 'Desarrollo pensado para el futuro',
+        description:
+          'Cada migración e integración se plantea con una <strong>estrategia a largo plazo</strong>. Diseñamos sistemas flexibles que evolucionan con la empresa, permitiendo agregar nuevas funcionalidades, integrar herramientas modernas y adaptarse a los cambios tecnológicos sin necesidad de reconstruir desde cero.',
+        icon: 'tabler:leaf',
+      },
+    ]}
+  />
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/03.jpg', alt: 'Fondo abstracto' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Presupuesto gratuito',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Llamar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title"
+      >¿Quieres <span class="custom-gradient">migrar</span> herramientas antiguas o <span class="custom-gradient"
+        >integrar aplicaciones</span
+      > en tu empresa?</Fragment
+    >
+    <Fragment slot="subtitle">Contáctanos y nos encargaremos de asesorarte y ejecutar tu proyecto.</Fragment>
+  </CallToAction>
+</Layout>

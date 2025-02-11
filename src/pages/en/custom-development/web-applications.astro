@@ -1,0 +1,336 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+const u = useRoutes(getLangFromUrl(Astro.url));
+
+const metadata = {
+  title: 'Custom Web Application Development Company | +20 Years',
+  description:
+    'We design and develop custom web applications for businesses, tailored to optimize processes and provide advanced functionalities.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Section -->
+  <Hero
+    tagline="We develop custom applications that fit your business needs."
+    actions={[{ variant: 'primary', text: 'Get a free quote', href: u('contact') }]}
+    backgroundImage={{ alt: 'Abstract background', src: '~/assets/images/dots/02.jpg' }}
+  >
+    <Fragment slot="title">
+      Custom <span class="text-accent highlight">Web Applications</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      We design and develop tailored tools and platforms for businesses, adapted to specific objectives to optimize
+      processes and provide advanced functionalities.
+    </Fragment>
+  </Hero>
+
+  <!-- Introduction -->
+  <Content
+    tagline=""
+    title="What are custom web applications?"
+    subtitle="Cloud-based platforms for services and process automation."
+    items={[
+      {
+        title: 'Internal tools for businesses',
+        description: `Applications designed to meet specific business objectives, such as process optimization, project management, inventory control, and more.`,
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Interactive portals and customized platforms',
+        description: `We develop applications with intuitive interfaces for managing public or private services, including client portals, document management platforms, and collaboration tools.`,
+        icon: 'tabler:window',
+      },
+      {
+        title: 'SaaS services',
+        description: `Customer-oriented platforms that offer online services with advanced functionalities, which may require payments or subscriptions and have a professional aesthetic.`,
+        icon: 'tabler:search',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/webapp-metronic.jpg',
+      alt: 'E-commerce Storefront',
+    }}
+  >
+    <Fragment slot="preContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">We develop all kinds of cloud-based tools</h3>
+      <p class="text-muted">
+        When we talk about custom web applications, we refer to all types of digital tools specifically developed to
+        provide tailored functionalities, adapted to the unique needs of a business or project.
+      </p>
+      <p class="text-muted mt-4">
+        Unlike <a href={u('software/wp')} title="Web design with WordPress" class="text-accent"
+          >WordPress-based websites</a
+        > or <a href={u('development/astro')} title="High-performance SEO-optimized websites" class="text-accent"
+          >high-performance websites</a
+        >, custom web applications go beyond simple websites, offering advanced implementations of cloud-based software
+        solutions.
+      </p>
+    </Fragment>
+    <Fragment slot="postContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">Who needs custom web applications?</h3>
+      <p class="text-muted">
+        Custom web applications are ideal for businesses, startups, and institutions that require digital solutions to
+        automate processes, manage complex data, or offer cloud-based services. They are particularly useful for
+        internal or public projects with unique requirements that cannot be met with standard tools.
+      </p>
+    </Fragment>
+  </Content>
+  <Content
+    isReversed
+    tagline=""
+    title="A design tailored for each project"
+    items={[
+      {
+        title: 'Functional interfaces',
+        description: 'Ideal for internal applications where simplicity and efficiency are the main priorities.',
+      },
+      {
+        title: 'Attractive interfaces',
+        description:
+          'Necessary for SaaS projects or tools designed for the end-user, where visual appearance and accessibility play a key role.',
+      },
+      {
+        title: 'Modern components',
+        description: `We use <a target="_blank" class="text-accent" title="User interfaces with Metronic" href="https://keenthemes.com/metronic">Metronic</a> for UI development. Metronic is a powerful toolkit with modern UI templates and components, ideal for creating scalable, visually appealing, and highly customizable web applications.`,
+      },
+    ]}
+    image={{
+      src: '~/assets/images/metronic-ui-components.jpg',
+      alt: 'Back-office admin interfaces with Metronic',
+    }}
+  >
+    <Fragment slot="preContent">
+      <p class="text-muted">
+        At gilsys, we understand that every web application has specific objectives, and its design should reflect them.
+        That’s why our development team adapts user interfaces (UI) according to the type of project:
+      </p>
+    </Fragment>
+    <Fragment slot="postContent">
+      <p class="text-muted">
+        The goal is to create applications that not only function well but are also easy to use and visually appealing.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Features2
+    id="features"
+    title="Advantages of <span class='custom-gradient'>custom web applications</span> and <span class='custom-gradient'>cloud-based tools</span>"
+    subtitle="They offer unique benefits compared to standard solutions."
+    items={[
+      {
+        title: 'Flexibility',
+        list: [
+          '<strong>Complete adaptation:</strong> Functionalities, design, and architecture are developed according to the specific requirements of the project.',
+          '<strong>Advanced customization:</strong> Ability to integrate exclusive functionalities not found in generic tools.',
+          '<strong>Constant evolution:</strong> Systems can be adjusted to new needs or challenges that arise over time.',
+        ],
+        icon: 'tabler:arrows-maximize',
+      },
+      {
+        title: 'Easy access and online usability',
+        list: [
+          '<strong>Global accessibility:</strong> Users can access it from anywhere at any time.',
+          '<strong>Multi-device compatibility:</strong> Works on desktops, tablets, and smartphones without the need for specific versions.',
+          '<strong>Cross-platform support:</strong> Runs on any operating system with a compatible browser.',
+        ],
+        icon: 'tabler:device-laptop',
+      },
+      {
+        title: 'Automation and efficiency',
+        list: [
+          '<strong>Optimized management:</strong> Automates repetitive tasks.',
+          '<strong>Increased productivity:</strong> Reduces the time required to complete key processes.',
+          '<strong>Error elimination:</strong> Automating critical processes minimizes risks associated with manual errors.',
+        ],
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Scalability and growth adaptation',
+        list: [
+          '<strong>New functionalities</strong> available on demand.',
+          '<strong>Ability to manage large volumes of data</strong> without compromising performance.',
+          '<strong>Future-proof:</strong> Easily integrates with emerging technologies.',
+        ],
+        icon: 'tabler:line',
+      },
+      {
+        title: 'Ease of maintenance and updates',
+        list: [
+          '<strong>Instant updates</strong> without requiring downloads.',
+          '<strong>Remote maintenance:</strong> Adjustments and improvements without significant interruptions.',
+          '<strong>Reduced costs</strong> thanks to centralized management.',
+        ],
+        icon: 'tabler:cloud',
+      },
+      {
+        title: 'User-focused design',
+        list: [
+          '<strong>Ease of use:</strong> Intuitive designs for a better user experience.',
+          '<strong>Visual adaptability</strong> to meet the needs of the target audience.',
+          '<strong>Responsive design:</strong> A consistent experience across all devices.',
+        ],
+        icon: 'tabler:palette',
+      },
+      {
+        title: 'Full control and ownership',
+        list: [
+          '<strong>Code ownership:</strong> Full autonomy over modifications or transfers.',
+          '<strong>Independence</strong> from third-party providers.',
+          '<strong>Custom security</strong> adapted to specific compliance requirements.',
+        ],
+        icon: 'tabler:key',
+      },
+      {
+        title: 'Better performance compared to other solutions',
+        list: [
+          '<strong>No local installation required:</strong> Does not take up space or require manual updates.',
+          '<strong>Flexible usage:</strong> Compatible with multiple operating systems.',
+          '<strong>Lower hardware requirements</strong> thanks to server-side management.',
+        ],
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Optimized for collaborative projects and SaaS',
+        list: [
+          '<strong>Real-time teamwork</strong> capabilities.',
+          '<strong>Subscription-based services:</strong> Manage users and services efficiently.',
+        ],
+        icon: 'tabler:users',
+      },
+    ]}
+  />
+  <Features
+    tagline=""
+    title="Examples of Custom Web Applications"
+    subtitle="Custom web applications adapt to a wide range of needs and industries, becoming versatile solutions for process optimization, innovative services, or centralized operations."
+    items={[
+      {
+        title: 'SaaS Platforms and Online Services',
+        list: [
+          '<strong>Subscription platforms</strong> with exclusive content, such as online training, professional services, or access to specialized tools.',
+          '<strong>Membership management systems</strong> for sports clubs or digital communities, including activity planning, progress tracking, and internal communication.',
+        ],
+        icon: 'tabler:server',
+      },
+      {
+        title: 'Document Generation and Automation',
+        list: [
+          '<strong>Dynamic generation of contracts, invoices, or certificates</strong>, tailored to the specific data of each user or client.',
+          '<strong>Creation of detailed technical reports</strong> based on analytical data for industries such as education, logistics, or manufacturing.',
+        ],
+        icon: 'tabler:file-text',
+      },
+      {
+        title: 'Platforms for Managing Specialized Services',
+        list: [
+          '<strong>Online booking systems</strong> for appointments, professional services, or events.',
+          '<strong>Tools for configuring customized products</strong>, such as machinery configurators, industrial equipment, or personalized e-commerce products.',
+          '<strong>Project management</strong> and contract tracking with task assignment and progress reporting.',
+        ],
+        icon: 'tabler:calendar-event',
+      },
+      {
+        title: 'Data Management and Analytics Systems',
+        list: [
+          '<strong>Control panels</strong> for monitoring performance metrics such as sales, tool usage, or real-time traffic statistics.',
+          '<strong>Information visualization systems</strong> with interactive charts, maps, and tables for strategic decision-making.',
+        ],
+        icon: 'tabler:chart-pie',
+      },
+      {
+        title: 'Training and Development Tools',
+        list: [
+          '<strong>Platforms for managing courses</strong>, evaluations, and certification programs in industries such as automotive, healthcare, or technology.',
+          '<strong>Gamification tools</strong> and tracking for internal training, with progress indicators and personalized reports.',
+        ],
+        icon: 'tabler:school',
+      },
+      {
+        title: 'Business Operations Support Tools',
+        list: [
+          '<strong>Inventory management systems</strong> for real-time tracking of stock, orders, and distribution.',
+          '<strong>Custom CRM platforms</strong> fully adapted to meet the specific needs of a business.',
+          '<strong>Administrative process automation tools</strong>, such as employee performance evaluation systems.',
+        ],
+        icon: 'tabler:settings',
+      },
+    ]}
+  />
+
+  <Content
+    isReversed
+    tagline=""
+    image={{
+      src: '~/assets/images/aplicaciones-web-cloud.jpg',
+      alt: 'Cloud-based web applications',
+    }}
+    title="Why Choose Gilsys for Custom Web Application Development?"
+    items={[
+      {
+        title: 'Technical Expertise and Creativity',
+        description:
+          'At Gilsys, we combine advanced programming knowledge with a creative approach to designing unique applications.',
+        icon: 'tabler:bulb',
+      },
+      {
+        title: 'Adaptation Across Various Industries',
+        description:
+          'We have experience in projects across diverse industries, including healthcare, education, manufacturing, retail, and business services.',
+        icon: 'tabler:building',
+      },
+      {
+        title: 'Responsible Development',
+        description:
+          'We follow best practices to ensure sustainable code and long-term compatibility with future updates.',
+        icon: 'tabler:recycle',
+      },
+      {
+        title: 'Client-Centered Approach',
+        description:
+          'We work closely with clients to understand their needs and translate them into real, practical solutions.',
+        icon: 'tabler:heart-handshake',
+      },
+      {
+        title: 'Continuous Technical Support',
+        description:
+          'We offer maintenance and feature expansions to ensure that applications continue to meet evolving business needs.',
+        icon: 'tabler:headset',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/02.jpg', alt: 'Abstract background' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get a Free Quote',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Call Now',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title"
+      >Your <span class="custom-gradient">custom web application</span><br /> just one click away</Fragment
+    >
+    <Fragment slot="subtitle">Tell us about your project needs, and we will prepare a personalized quote.</Fragment>
+  </CallToAction>
+</Layout>

@@ -1,0 +1,329 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+const metadata = {
+  title: 'Software Development with Artificial Intelligence',
+  description: `Software development integrating AI into businesses, automating processes with ChatGPT, Google Gemini, and OpenSource LLMs. Near Vic (Osona, Barcelona).`,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Section -->
+  <Hero
+    tagline="Find us near Vic (Osona), in the province of Barcelona."
+    actions={[{ variant: 'primary', text: 'Get a Free Quote', href: u('contact') }]}
+    backgroundImage={{ alt: 'Abstract background', src: '~/assets/images/dots/06.jpg' }}
+  >
+    <Fragment slot="title">
+      Software Development Integrating<br /><span class="text-accent highlight">Artificial Intelligence</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      We develop software that integrates AI into businesses. We use ChatGPT, Google Gemini, and OpenSource LLMs to
+      automate processes and create applications that understand and reason.
+    </Fragment>
+  </Hero>
+
+  <FAQs
+    title="How Artificial Intelligence Impacts Software Development"
+    subtitle="With AI, we can go beyond traditionally programmed algorithms."
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'Creating Intelligent Tools That Learn and Reason',
+        description: `Traditional algorithmic programming follows explicitly coded instructions, while AI operates through adaptive algorithms that learn from training data.`,
+      },
+      {
+        title: 'Continuous Adaptability and Evolution',
+        description: `AI-based systems have the ability to learn and adapt continuously based on new data, evolving autonomously and reducing maintenance costs.`,
+      },
+      {
+        title: 'Advanced Data Understanding',
+        description: `AI excels at understanding and analyzing not just text but also images and videos. It enables the development of applications capable of identifying visual patterns, recognizing objects, or even interpreting emotions in multimedia content.`,
+      },
+      {
+        title: 'Knowledge-Based Problem Solving',
+        description: `AI can tackle problems requiring specialized knowledge thanks to its training on large volumes of data.`,
+      },
+    ]}
+  />
+  <Features2
+    columns={2}
+    title="How Can Artificial Intelligence Be Applied in Businesses?"
+    items={[
+      {
+        title: 'Custom AI Algorithm Development',
+        description: `Custom AI algorithms are ideal for companies with specific needs or unique challenges. Solutions for anomaly detection, pattern recognition, and advanced data classification.`,
+        list: [
+          '<strong>Error detection</strong> to automatically identify problems based on operational data.',
+          '<strong>Pattern recognition</strong> to predict behaviors in large data volumes.',
+          '<strong>Classifiers</strong> to organize products in catalogs or documents based on specific or automated criteria.',
+        ],
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Process Automation with Artificial Intelligence',
+        description:
+          'AI enables the automation of repetitive processes such as summary generation, automatic image tagging, or visual report creation.',
+        list: [
+          '<strong>Automatic summary generation</strong> for generic texts, contracts, or reports.',
+          '<strong>Image classification</strong> based on trained criteria.',
+          '<strong>Data processing</strong> and <strong>automatic visual report creation</strong>.',
+        ],
+        icon: 'tabler:robot',
+      },
+      {
+        title: 'Virtual Assistants and Chatbot Programming',
+        description:
+          'We develop virtual assistants and chatbots for customer support, appointment management, or automating customer service.',
+        list: [
+          '<strong>Sales support</strong> in real-time for online stores.',
+          '<strong>Appointment scheduling</strong> through conversational interfaces.',
+          '<strong>Automated customer support</strong> for businesses with high query volumes.',
+        ],
+        icon: 'tabler:message-circle',
+      },
+      {
+        title: 'Image Recognition and Visual Processing',
+        description:
+          'We implement image analysis systems for anomaly detection, facial recognition, and visual classification.',
+        list: [
+          '<strong>Anomaly detection</strong> in industrial products through images.',
+          '<strong>Facial recognition</strong> for restricted area access.',
+          '<strong>Automatic classification</strong> of multimedia resources in business databases.',
+        ],
+        icon: 'tabler:photo',
+      },
+      {
+        title: 'Natural Language Processing (NLP)',
+        description: 'NLP-based programs for summary generation, sentiment analysis, and automatic translation.',
+        list: [
+          '<strong>Automatic summary generation</strong> of complex data.',
+          '<strong>Sentiment analysis</strong> in customer comments and reviews.',
+          '<strong>Automatic translation</strong> and personalized text generation.',
+        ],
+        icon: 'tabler:language',
+      },
+      {
+        title: 'Predictive Analysis for Business Decision Making',
+        description: 'Using predictive models, we help businesses optimize inventory and adjust marketing strategies.',
+        list: [
+          '<strong>Demand forecasting</strong> to optimize inventory.',
+          '<strong>Pattern identification</strong> in customer behavior to refine marketing campaigns.',
+        ],
+        icon: 'tabler:chart-line',
+      },
+      {
+        title: 'Content Writing and Automatic Translation Tools',
+        description:
+          'Solutions for generating automatic texts, instant translations, and intelligent document summaries.',
+        list: [
+          '<strong>Automatic content writing</strong> for product descriptions, blog articles, or promotional texts tailored to the target audience.',
+          '<strong>Automatic translation</strong> for quickly adapting content across multiple languages, ensuring consistency and speed in international projects.',
+          '<strong>Meeting summaries</strong> and automatic text conversion for efficient tracking and documentation.',
+        ],
+        icon: 'tabler:file-text',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Features2>
+
+  <Features
+    columns={2}
+    tagline="The potential of AI in expert hands goes beyond <strong>prompt engineering</strong>."
+    title="Combining Artificial Intelligence with Custom Software Development"
+    subtitle="At gilsys, we combine custom software development with the latest AI technologies to create efficient, scalable tools aligned with business objectives."
+    items={[
+      {
+        title: `Custom AI Model Adaptation for Each Industry`,
+        description: `Every business has unique needs. We choose the best model suited to the project’s requirements, configure it, and train it for optimal performance.`,
+        icon: 'tabler:adjustments',
+      },
+      {
+        title: `AI Implementation to Improve Business Processes`,
+        description: `We develop systems that leverage AI to optimize internal processes, reducing costs and response times in document management, customer support, and task automation.`,
+        icon: 'tabler:settings-automation',
+      },
+      {
+        title: `Deployment on Local Servers or the Cloud`,
+        description: `We configure OpenSource AI models in local infrastructures or cloud services to ensure optimal performance and meet the security needs of each business.`,
+        icon: 'tabler:cloud',
+      },
+      {
+        title: 'Seamless Integration with Existing Applications and Systems',
+        description: `AI doesn’t have to be an isolated tool. We connect language models (LLMs) with CRMs, ERPs, online stores, product managers, and custom-built applications.`,
+        icon: 'tabler:blend-mode',
+      },
+    ]}
+  />
+  <Content title="Open Source LLM Solutions" subtitle="Large Language Model services on private servers.">
+    <Fragment slot="postContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">What is an Open Source LLM?</h3>
+      <p class="text-muted">
+        An Open Source Large Language Model (LLM) is a large-scale learning model made available to the public with
+        open-source code. This allows companies to download, customize, and install the model on their own servers,
+        ensuring complete control over data and applications. Unlike commercial solutions, Open Source LLMs offer full
+        flexibility and eliminate dependencies on third-party providers.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Features3
+    classes={{ container: 'pt-0 lg:pt-0' }}
+    items={[
+      {
+        title: 'Full Control',
+        description: 'Data and models are exclusively owned by the client, eliminating third-party dependencies.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Custom Adaptation',
+        description: 'Models can be selected and adjusted to meet the specific needs of each project.',
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Consistent Performance',
+        description: 'They can be installed on servers scaled according to project requirements.',
+        icon: 'tabler:server',
+      },
+      {
+        title: 'No Usage Restrictions',
+        description:
+          'Unlike commercial solutions, Open Source models can be used for any case, including private or sensitive projects, without contractual limitations.',
+        icon: 'tabler:infinity',
+      },
+      {
+        title: 'Collaborative Innovation',
+        description:
+          'The global community continuously contributes to improving and optimizing models, enabling the rapid implementation of the latest advancements.',
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Regulatory Compliance',
+        description:
+          'Keeping data and processes on private servers facilitates compliance with regulations such as GDPR and other privacy laws.',
+        icon: 'tabler:lock',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Features3>
+
+  <Features3
+    title="Who Needs Open Source Language Models?"
+    items={[
+      {
+        title: 'Companies Handling Sensitive Data',
+        description:
+          'Organizations that need to ensure data privacy can keep everything on their own servers, ensuring regulatory compliance.',
+        icon: 'tabler:shield-lock',
+      },
+      {
+        title: 'Startups with Limited Budgets',
+        description:
+          'Startups can leverage the low acquisition and usage costs to experiment and innovate without large initial investments.',
+        icon: 'tabler:coin',
+      },
+      {
+        title: 'Research and Development Teams',
+        description:
+          'Academic institutions and research centers can use models to analyze, fine-tune, and contribute to advancements in artificial intelligence.',
+        icon: 'tabler:school',
+      },
+      {
+        title: 'Companies Needing Customization',
+        description:
+          'For projects where commercial solutions do not fully meet specific needs, Open Source LLMs allow complete customization.',
+        icon: 'tabler:adjustments',
+      },
+      {
+        title: 'Organizations Concerned About Technological Independence',
+        description: 'Those looking to avoid reliance on external providers and ensure long-term sustainability.',
+        icon: 'tabler:world',
+      },
+      {
+        title: 'Companies Undergoing Digital Transformation',
+        description:
+          'Organizations that are renewing or expanding their technological infrastructure can leverage Open Source LLMs to accelerate the modernization of their systems with more flexible alternatives than commercial services.',
+        icon: 'tabler:file',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Features3>
+  <Content
+    isReversed
+    tagline=""
+    title="Why Choose Gilsys for AI Development?"
+    image={{
+      src: '~/assets/images/ia-software.jpg',
+      alt: 'Colorful Image',
+    }}
+    items={[
+      {
+        title: 'Technical Expertise',
+        description:
+          'At Gilsys, we have experience in AI integration and development, combining pre-trained commercial models with custom LLM-based solutions.',
+        icon: 'tabler:brain',
+      },
+      {
+        title: 'Adaptation to Various Industries',
+        description:
+          'We work with companies in healthcare, education, retail, and other sectors, providing tailored solutions.',
+        icon: 'tabler:building',
+      },
+      {
+        title: 'Innovative Vision',
+        description: 'We stay up to date with the latest AI trends to implement advanced and high-impact solutions.',
+        icon: 'tabler:headset',
+      },
+      {
+        title: 'Continuous Research and Internal Training',
+        description:
+          'We constantly research the latest developments to identify opportunities and apply cutting-edge AI solutions for companies that need them.',
+        icon: 'tabler:radio',
+      },
+    ]}
+  />
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/24.jpg', alt: 'Abstract Background' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get a Free Quote',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Call Now',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title"
+      >Don't Fall Behind, <span class="custom-gradient">Integrate AI</span> into Your Business</Fragment
+    >
+    <Fragment slot="subtitle"
+      >Companies integrating <strong>artificial intelligence</strong> into their processes today will be the best prepared
+      for the near future.</Fragment
+    >
+  </CallToAction>
+</Layout>

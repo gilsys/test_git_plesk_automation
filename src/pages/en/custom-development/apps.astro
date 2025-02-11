@@ -1,0 +1,362 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Prices from '~/components/widgets/Pricing.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+const metadata = {
+  title: `Mobile Application Development Company | +20 Years`,
+  description: `Multiplatform and hybrid app programming for iOS and Android, for mobile devices and tablets on the Apple Store and Google Play, integrated with AI.`,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Section -->
+  <Hero
+    tagline="Custom solutions with attractive design and cutting-edge technology."
+    actions={[{ variant: 'primary', text: 'Get a free quote', href: u('contact') }]}
+    backgroundImage={{ alt: 'Abstract background', src: '~/assets/images/dots/05.jpg' }}
+  >
+    <Fragment slot="title">
+      <span class="custom-gradient">Mobile Application</span> Development
+    </Fragment>
+    <Fragment slot="subtitle">
+      We develop <span class="custom-gradient">multiplatform applications</span>, <span class="custom-gradient"
+        >hybrid apps</span
+      >, for iOS and Android, available on the Apple Store and Google Play, integrated with AI.
+    </Fragment>
+  </Hero>
+
+  <!-- Introduction -->
+
+  <Features3
+    title="Native, Hybrid, or Web Applications"
+    tagline="Different approaches for mobile app development"
+    subtitle="We create apps for iOS and Android using hybrid technologies, whether by encapsulating web applications into mobile apps or developing with advanced technologies that compile into native code."
+  />
+
+  <!-- Comparison -->
+  <Features2
+    title="How do we develop mobile applications?"
+    subtitle=""
+    items={[
+      {
+        title: 'Development Efficiency',
+        description:
+          'We create <strong>hybrid applications</strong> that are cross-platform, reducing costs and development time without sacrificing functionality.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Flexible Functionalities',
+        description: `We use technologies that allow applications to access <strong>native device features</strong>, such as Bluetooth, push notifications, and location services.`,
+        icon: 'tabler:adjustments-alt',
+      },
+      {
+        title: 'Integrated Web Management',
+        description: `We complement mobile applications with <a class="text-accent" title="Custom web application development" href="${u('development/web')}">web applications</a> that enable real-time management of settings, users, and data.`,
+        icon: 'tabler:plug-connected',
+      },
+      {
+        title: 'Scalability and Evolution',
+        description:
+          'We design apps with the future in mind, ready to be updated and <strong>evolve</strong> with new functionalities as the project grows.',
+        icon: 'tabler:arrows-maximize',
+      },
+      {
+        title: 'Design Tailored to Each Project',
+        description: `We prioritize <strong>intuitive and clean UI design</strong>, adapted to the needs and expectations of the app's end users.`,
+        icon: 'tabler:palette',
+      },
+      {
+        title: 'Integrated with Artificial Intelligence',
+        description: `We leverage <a class="text-accent" title="Integrating AI into hybrid apps" href="${u('development/ia')}">AI</a> so that applications can solve complex problems when required, enabling tools capable of understanding and reasoning.`,
+        icon: 'tabler:brain',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Features2>
+  <!-- Comparison with Web Applications -->
+  <Features
+    title={`How do <span class="custom-gradient">hybrid mobile apps</span> differ from <a class="custom-gradient" title="Custom web application development" href="${u('development/web')}">web applications</a>?`}
+    items={[
+      {
+        title: 'Accessibility',
+        description:
+          'Hybrid mobile applications require installation and are not available on desktop devices, whereas web applications are accessible from any browser.',
+        icon: 'tabler:world',
+      },
+      {
+        title: 'Native Functionalities',
+        description:
+          'Mobile applications have access to features like the camera or Bluetooth, while web applications are limited by browser capabilities.',
+        icon: 'tabler:device-mobile',
+      },
+      {
+        title: 'Development Cost and Time',
+        description:
+          'Mobile apps are more expensive but offer advanced functionalities. Web applications are simpler and more adaptable.',
+        icon: 'tabler:currency-dollar',
+      },
+      {
+        title: 'Graphic Performance',
+        description: 'Mobile applications provide superior performance for demanding graphic tasks.',
+        icon: 'tabler:device-gamepad',
+      },
+      {
+        title: 'Updates',
+        description:
+          'Updating a web application is much faster than updating a mobile app, as published versions on Google Play and the Apple Store require approval from Google and Apple, respectively.',
+        icon: 'tabler:refresh',
+      },
+    ]}
+  />
+
+  <!-- Comparison -->
+  <FAQs
+    title="We develop mobile apps that can be managed via web applications"
+    subtitle={"Mobile applications are often complemented by a <a href='" +
+      u('development/web') +
+      "' class='text-accent'>web application</a> that centralizes management and facilitates operational control."}
+    items={[
+      {
+        title: 'Centralized Management',
+        description:
+          'Configuration of options, user administration, and data monitoring from a private web environment.',
+      },
+      {
+        title: 'Quick Updates',
+        description:
+          'Changes and content improvements are applied and immediately reflected in the mobile application.',
+      },
+      {
+        title: 'Seamless Synchronization',
+        description: 'Constant communication between the web and mobile app to keep data consistent and up to date.',
+      },
+      {
+        title: 'Metrics Analysis',
+        description:
+          'Access to statistics to analyze and subsequently improve the functionalities or content of the application.',
+      },
+    ]}
+  />
+  <Content
+    isReversed
+    tagline=""
+    title="Encapsulated Hybrid Web Applications"
+    subtitle="The tool will be available both as a responsive web version and as an installable app."
+    items={[
+      {
+        title: 'Reusable Code',
+        description: `The same code can be used for both mobile and web applications.`,
+      },
+      {
+        title: 'Integration with Native Functions, but Limited',
+        description: `Using plugins, they can access basic functions such as camera, GPS, or push notifications.`,
+      },
+      {
+        title: 'Distributed as an App',
+        description: `They are published in app stores, increasing visibility and accessibility for users.`,
+      },
+    ]}
+    image={{
+      src: '~/assets/images/app-mosaic-mockups.jpg',
+      alt: 'Mobile interface design',
+    }}
+  >
+    <Fragment slot="preContent">
+      <p class="text-muted">
+        Solutions developed using technologies that allow the creation of web applications, which can later be
+        encapsulated to function as a mobile application.
+      </p>
+    </Fragment>
+    <Fragment slot="postContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">When Do We Recommend Hybrid Web Apps?</h3>
+      <p class="text-muted">
+        They are ideal for projects that require both an interface accessible from <strong>standard web browsers</strong
+        >
+        and a version that can be distributed through app stores like <strong>Google Play</strong> or <strong
+          >Apple Store</strong
+        >.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Content
+    tagline=""
+    title="Native Hybrid Applications"
+    subtitle="Development focused exclusively on mobile devices, using hybrid technologies that optimize the creation process while maintaining greater integration with native device functions."
+    items={[
+      {
+        title: 'Native Functionalities',
+        description: `Full access to device functions such as Bluetooth, biometrics, access to mobile device information, and other advanced features.`,
+      },
+      {
+        title: 'Better User Experience',
+        description: `Developed to deliver performance close to that of a native app, but with the efficiency of shared code.`,
+      },
+      {
+        title: 'Not Compatible with Web',
+        description: `This type of application is designed exclusively for mobile devices and cannot be reused for browsers.`,
+      },
+    ]}
+    image={{
+      src: '~/assets/images/app-mockup.jpg',
+      alt: 'Multiplatform apps',
+    }}
+  >
+    <Fragment slot="preContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">Optimized Hybrid Solutions</h3>
+      <p class="text-muted">
+        We develop mobile applications based on advanced technologies to provide a smooth user experience, leveraging a
+        single codebase for multiple platforms. This approach ensures efficient development while taking advantage of
+        each device’s full potential.
+      </p>
+    </Fragment>
+    <Fragment slot="postContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">When Do We Recommend Native Hybrid Apps?</h3>
+      <p class="text-muted">
+        Native hybrid applications are useful whenever advanced access to mobile device functionalities is required.
+        They are also a good option when a web version is not needed, or if the web version has different requirements
+        than the mobile app.
+      </p>
+    </Fragment>
+  </Content>
+  <Prices
+    title="Comparison of Hybrid App Options"
+    subtitle="Each type offers advantages and limitations depending on the project needs."
+    prices={[
+      {
+        title: 'Hybrid Web Apps',
+        subtitle: 'Flexibility and compatibility.',
+        items: [
+          {
+            title: 'Flexibility',
+            description: 'Users can access it from a web browser or an installable application on their mobile device.',
+          },
+          {
+            title: 'Performance',
+            description: 'Good, but less fluid compared to native hybrid applications.',
+          },
+          {
+            title: 'User Experience',
+            description: 'Adequate, but does not reach the quality level of native hybrid apps.',
+          },
+          {
+            title: 'Cost',
+            description: 'Reduces costs if both a web version and a mobile app are required.',
+          },
+          {
+            title: 'Limitations',
+            description: 'Cannot access advanced native device functionalities.',
+          },
+        ],
+      },
+      {
+        title: 'Native Hybrid Apps',
+        subtitle: 'Advanced performance and functionality.',
+        items: [
+          {
+            title: 'Flexibility',
+            description: 'Full access to native functionalities such as Bluetooth, camera, GPS, and biometrics.',
+          },
+          {
+            title: 'Performance',
+            description: 'Excellent, comparable to a fully native application.',
+          },
+          {
+            title: 'User Experience',
+            description: 'Excellent, thanks to smooth performance and integration with the mobile environment.',
+          },
+          {
+            title: 'Cost',
+            description: 'Higher, especially if a complementary web application is required.',
+          },
+          {
+            title: 'Limitations',
+            description: 'Code cannot be reused for web browsers.',
+          },
+        ],
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Prices>
+
+  <Content
+    isReversed
+    tagline=""
+    title="Why trust Gilsys for mobile app development?"
+    subtitle=""
+    items={[
+      {
+        title: 'Proven Experience',
+        description:
+          'We have developed cross-platform applications for multiple industries, from the early days of mobile apps to the present.',
+        icon: 'tabler:tools',
+      },
+      {
+        title: 'Responsible Development',
+        description: `We follow best practices that allow applications to be maintained and evolved without compromising quality.`,
+        icon: 'tabler:components',
+      },
+      {
+        title: 'Comprehensive Solutions',
+        description:
+          `We create complete ecosystems that combine mobile apps with <a class='text-accent' title="Cloud-based tools for app management" href='` +
+          u('development/web') +
+          `'> cloud-based tools</a> to manage app data and content.`,
+        icon: 'tabler:cloud',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/app-programacion-diseno.jpg',
+      alt: 'Mobile interface design',
+    }}
+  >
+    <Fragment slot="content">
+      It’s not easy to find a company specialized in app development that has experience with both <strong
+        >native hybrid technologies</strong
+      > and <strong>web hybrid technologies</strong>.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/02.jpg', alt: 'Abstract background' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get a Free Quote',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Call Us',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">We can develop the <span class="custom-gradient">app</span> you envision</Fragment>
+    <Fragment slot="subtitle"
+      >Developing an app is a complex process—leave it to professionals with over 20 years of experience.</Fragment
+    >
+  </CallToAction>
+</Layout>
