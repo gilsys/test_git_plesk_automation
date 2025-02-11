@@ -1,13 +1,33 @@
 ---
-import { GoogleAnalytics } from '@astrolib/analytics';
 import { ANALYTICS } from 'astrowind:config';
+const id = ANALYTICS.vendors.googleAnalytics.id;
 ---
 
-{
-  ANALYTICS?.vendors?.googleAnalytics?.id ? (
-    <GoogleAnalytics
-      id={String(ANALYTICS.vendors.googleAnalytics.id)}
-      partytown={ANALYTICS?.vendors?.googleAnalytics?.partytown}
-    />
-  ) : null
-}
+<script
+    is:inline
+    src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+
+  <script>
+    declare global {
+      interface Window {
+        dataLayer: Record<string, any>[];
+        gtag: (...args: any[]) => void;
+      }
+    }
+
+    // This is the important part!
+    document.addEventListener("astro:page-load", () => {
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function gtag(...args: any[]) {
+        window.dataLayer.push(arguments);
+      };
+      window.gtag("js", new Date());
+      window.gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
+      });
+      window.gtag("config", "G-XXXXXXXXXX");
+    });
+  </script>
