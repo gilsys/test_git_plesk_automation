@@ -9,14 +9,14 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: gilsys
+    default: Gilsys
     template: '%s'
   description: ""
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: gilsys
+    site_name: Gilsys
     images:
       - url: '~/assets/images/default.png'
         width: 1200

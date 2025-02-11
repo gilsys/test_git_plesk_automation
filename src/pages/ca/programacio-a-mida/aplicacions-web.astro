@@ -101,6 +101,68 @@ const metadata = {
     </Fragment>
   </Content>
 
+  <Features
+    tagline=""
+    title="Exemples d’ús d’Aplicacions web a mida"
+    subtitle="Les aplicacions web a mida s’adapten a una àmplia varietat de necessitats i sectors, convertint-se en solucions versàtils per optimitzar processos, oferir serveis innovadors o centralitzar operacions."
+    items={[
+      {
+        title: 'Plataformes SaaS i serveis en línia',
+        list: [
+          '<strong>Plataformes de subscripció</strong> amb continguts exclusius, com formació en línia, serveis professionals o accés a eines especialitzades.',
+          '<strong>Sistemes de gestió per a membres</strong>, clubs esportius o comunitats digitals, amb funcionalitats com planificació d’activitats, seguiment de resultats o comunicació interna.',
+        ],
+        icon: 'tabler:server',
+      },
+      {
+        title: 'Generació i automatització de documents',
+        list: [
+          '<strong>Generació dinàmica de contractes, factures o certificats</strong>, adaptats a les dades específiques de cada usuari o client.',
+          '<strong>Creació d’informes tècnics</strong> detallats a partir de dades analítiques per a sectors com educació, industrial o la logística.',
+        ],
+        icon: 'tabler:file-text',
+      },
+      {
+        title: 'Plataformes per gestionar serveis especialitzats',
+        list: [
+          '<strong>Sistemes per gestionar reserves online</strong>, com cites, serveis professionals o esdeveniments.',
+          '<strong>Eines per configurar productes personalitzats</strong>, com configuradors de maquinària, equipaments industrials o productes personalitzats per a e-commerce.',
+          '<strong>Gestió de projectes</strong> i contractacions amb seguiment d’etapes, assignació de tasques i generació d’informes de progrés.',
+        ],
+        icon: 'tabler:calendar-event',
+      },
+      {
+        title: 'Sistemes de gestió i anàlisi de dades',
+        list: [
+          '<strong>Panells de control</strong> per monitoritzar mètriques de rendiment, com vendes, ús d’eines o estadístiques de trànsit en temps real.',
+          '<strong>Sistemes de visualització d’informació</strong> amb gràfics, mapes i taules interactives per a la presa de decisions estratègiques.',
+        ],
+        icon: 'tabler:chart-pie',
+      },
+      {
+        title: 'Eines de formació i desenvolupament',
+        list: [
+          '</strong>Plataformes per administrar cursos</strong>, avaluacions i programes de certificació en sectors com l’automoció, la sanitat o la tecnologia.',
+          '<strong>Eines de gamificació</strong> i seguiment per a formacions internes, amb indicadors de progrés i informes personalitzats.',
+        ],
+        icon: 'tabler:school',
+      },
+      {
+        title: 'Eines de suport a operacions empresarials',
+        list: [
+          '<strong>Sistemes per gestionar inventaris</strong>, comandes i distribució en temps real.',
+          '<strong>Plataformes per a la gestió de clients</strong> completament a mida per adaptar-se a les necessitats específiques de l’empresa.',
+          '<strong>Eines per automatitzar processos administratius</strong>, com avaluació del rendiment del personal.',
+        ],
+        icon: 'tabler:settings',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Features>
+
   <Content
     isReversed
     tagline=""
@@ -127,7 +189,7 @@ const metadata = {
   >
     <Fragment slot="preContent">
       <p class="text-muted">
-        A gilsys, entenem que cada aplicació web té uns objectius específics, i el seu disseny ha de reflectir-los. Per
+        A Gilsys, entenem que cada aplicació web té uns objectius específics, i el seu disseny ha de reflectir-los. Per
         això, el nostre equip de programadors adapta les interfícies d’usuari (UI) segons el tipus de projecte:
       </p>
     </Fragment>
@@ -136,9 +198,6 @@ const metadata = {
         L’objectiu és crear aplicacions que no només funcionin bé, sinó que també siguin fàcils d’utilitzar i agradables
         a nivell visual.
       </p>
-    </Fragment>
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-lightgray"></div>
     </Fragment>
   </Content>
 
@@ -228,65 +287,14 @@ const metadata = {
         icon: 'tabler:users',
       },
     ]}
-  />
+  >
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-lightgray"></div>
+  </Fragment>
+</Features2>
 
-  <Features
-    tagline=""
-    title="Exemples d’ús d’Aplicacions web a mida"
-    subtitle="Les aplicacions web a mida s’adapten a una àmplia varietat de necessitats i sectors, convertint-se en solucions versàtils per optimitzar processos, oferir serveis innovadors o centralitzar operacions."
-    items={[
-      {
-        title: 'Plataformes SaaS i serveis en línia',
-        list: [
-          '<strong>Plataformes de subscripció</strong> amb continguts exclusius, com formació en línia, serveis professionals o accés a eines especialitzades.',
-          '<strong>Sistemes de gestió per a membres</strong>, clubs esportius o comunitats digitals, amb funcionalitats com planificació d’activitats, seguiment de resultats o comunicació interna.',
-        ],
-        icon: 'tabler:server',
-      },
-      {
-        title: 'Generació i automatització de documents',
-        list: [
-          '<strong>Generació dinàmica de contractes, factures o certificats</strong>, adaptats a les dades específiques de cada usuari o client.',
-          '<strong>Creació d’informes tècnics</strong> detallats a partir de dades analítiques per a sectors com educació, industrial o la logística.',
-        ],
-        icon: 'tabler:file-text',
-      },
-      {
-        title: 'Plataformes per gestionar serveis especialitzats',
-        list: [
-          '<strong>Sistemes per gestionar reserves online</strong>, com cites, serveis professionals o esdeveniments.',
-          '<strong>Eines per configurar productes personalitzats</strong>, com configuradors de maquinària, equipaments industrials o productes personalitzats per a e-commerce.',
-          '<strong>Gestió de projectes</strong> i contractacions amb seguiment d’etapes, assignació de tasques i generació d’informes de progrés.',
-        ],
-        icon: 'tabler:calendar-event',
-      },
-      {
-        title: 'Sistemes de gestió i anàlisi de dades',
-        list: [
-          '<strong>Panells de control</strong> per monitoritzar mètriques de rendiment, com vendes, ús d’eines o estadístiques de trànsit en temps real.',
-          '<strong>Sistemes de visualització d’informació</strong> amb gràfics, mapes i taules interactives per a la presa de decisions estratègiques.',
-        ],
-        icon: 'tabler:chart-pie',
-      },
-      {
-        title: 'Eines de formació i desenvolupament',
-        list: [
-          '</strong>Plataformes per administrar cursos</strong>, avaluacions i programes de certificació en sectors com l’automoció, la sanitat o la tecnologia.',
-          '<strong>Eines de gamificació</strong> i seguiment per a formacions internes, amb indicadors de progrés i informes personalitzats.',
-        ],
-        icon: 'tabler:school',
-      },
-      {
-        title: 'Eines de suport a operacions empresarials',
-        list: [
-          '<strong>Sistemes per gestionar inventaris</strong>, comandes i distribució en temps real.',
-          '<strong>Plataformes per a la gestió de clients</strong> completament a mida per adaptar-se a les necessitats específiques de l’empresa.',
-          '<strong>Eines per automatitzar processos administratius</strong>, com avaluació del rendiment del personal.',
-        ],
-        icon: 'tabler:settings',
-      },
-    ]}
-  />
+
+  
 
   <Content
     isReversed
@@ -295,12 +303,12 @@ const metadata = {
       src: '~/assets/images/aplicaciones-web-cloud.jpg',
       alt: 'Aplicacions web cloud',
     }}
-    title="Per què escollir gilsys per al desenvolupament d’aplicacions web a mida?"
+    title="Per què escollir Gilsys per al desenvolupament d’aplicacions web a mida?"
     items={[
       {
         title: 'Experiència tècnica i creativitat',
         description:
-          'A gilsys, combinem coneixements avançats en programació amb un enfocament creatiu per dissenyar aplicacions úniques.',
+          'A Gilsys, combinem coneixements avançats en programació amb un enfocament creatiu per dissenyar aplicacions úniques.',
         icon: 'tabler:bulb',
       },
       {
@@ -328,10 +336,7 @@ const metadata = {
         icon: 'tabler:headset',
       },
     ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-lightgray"></div>
-    </Fragment>
+  >   
   </Content>
 
   <CallToAction

@@ -14,7 +14,7 @@ define('MAIL_USERNAME', 'c655777fb1803e');
 define('MAIL_PASSWORD', 'bfdcfa65cd163c');
 define('MAIL_PORT', 587);
 define('MAIL_FROM_ADDRESS', 'testing@gilsys.com');
-define('MAIL_FROM_NAME', 'gilsys');
+define('MAIL_FROM_NAME', 'Gilsys');
 define('MAIL_TO_ADDRESS', 'testing@gilsys.com');
 
 if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
@@ -56,7 +56,7 @@ function sendEmail($data) {
         $mail->addAddress(MAIL_TO_ADDRESS);
 
         $mail->isHTML(true);
-        $mail->Subject = 'gilsys - ' . $data['subject'];
+        $mail->Subject = 'Gilsys - ' . $data['subject'];
         $mail->Body = getHtmlContent($data);
         $mail->CharSet = 'UTF-8';
 
