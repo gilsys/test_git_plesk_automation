@@ -155,7 +155,7 @@ export const routes = {
     'kit-consulting/360-digital-transformation': '/ca/kit-consulting/servei-de-assessorament-360-en-transformacion-digital',
     
     
-    'consultory': '/ca/consultoria-tecnologica',
+    'consultory': '/ca/consultoria-tic',
     'migration': '/ca/migracio-integracio',
     'development': '/ca/programacio-a-mida',
     'development/web': '/ca/programacio-a-mida/aplicacions-web',
@@ -211,7 +211,7 @@ export const routes = {
     'kit-consulting/business-strategy-advisory': '/es/kit-consulting/servicio-de-asesoramiento-en-estrategia-y-rendimiento-de-negocio',
     'kit-consulting/360-digital-transformation': '/es/kit-consulting/servicio-de-asesoramiento-360-en-transformacion-digital',
    
-    'consultory': '/es/consultoria-tecnologica',
+    'consultory': '/es/consultoria-it',
     'migration': '/es/migracion-integracion',
     'development': '/es/programacion-a-medida',
     'development/web': '/es/programacion-a-medida/aplicaciones-web',
@@ -239,7 +239,7 @@ export const routes = {
     'home': '/en',
     'gilsys': '/en/about-us',
     
-    'consultory': '/en/technology-consulting',
+    'consultory': '/en/it-consulting',
     'migration': '/en/migration-integration',
     'development': '/en/custom-development',
     'development/web': '/en/custom-development/web-applications',

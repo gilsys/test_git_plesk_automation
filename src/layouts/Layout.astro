@@ -21,6 +21,7 @@ import type { MetaData as MetaDataType } from '~/types';
 import BreadcrumbList from '~/components/common/BreadcrumbList.astro';
 import CookieConsent from '~/components/CookieConsent.astro';
 import Analytics from '~/components/common/Analytics.astro';
+import { SITE } from 'astrowind:config';
 
 export interface Props {
   metadata?: MetaDataType;
@@ -44,7 +45,7 @@ const translatePath = useTranslatedPath(language);
         .map(
           (
             [lang, { code }] // Extrae el código del idioma
-          ) => <link rel="alternate" hreflang={code} href={translatePath(`${route}`, lang)} />
+          ) => <link rel="alternate" hreflang={code} href={`${SITE?.site}${translatePath(route, lang)}`} />
         )
     }
 
