@@ -1,0 +1,166 @@
+# Activar mod_rewrite
+RewriteEngine On
+
+# Forzar WWW y HTTPS (si aplica)
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^gilsys\.com$ [NC]
+RewriteRule ^(.*)$ https://www.gilsys.com/$1 [R=301,L]
+
+#############################
+# REDIRECCIONES CATALÁN (ca)
+#############################
+
+## Sección principal
+Redirect 301 /ca/gilsys/ /ca/empresa-tic
+Redirect 301 /ca/serveis/ /ca
+Redirect 301 /ca/kit-digital/ [NUEVA_URL]
+Redirect 301 /ca/kit-consulting/ [NUEVA_URL]
+Redirect 301 /ca/serveis/consultoria/ /ca/consultoria-tic
+Redirect 301 /ca/serveis/migracio/ /ca/migracio-integracio
+Redirect 301 /ca/serveis/software/ /ca/software-personalitzat
+Redirect 301 /ca/serveis/software/software/ /ca/software-personalitzat
+Redirect 301 /ca/serveis/software/app/ /ca/programacio-a-mida/aplicacions-web
+Redirect 301 /ca/serveis/software/gestors-productes-pim/ /ca/software-personalitzat/pimcore-barcelona
+Redirect 301 /ca/serveis/software/facturacio/ /ca/software-personalitzat/programa-gestio-clients
+Redirect 301 /ca/serveis/software/gestio-de-clients/ /ca/software-personalitzat/programa-gestio-clients
+Redirect 301 /ca/serveis/software/gestio-de-processos/ /ca/programacio-a-mida
+Redirect 301 /ca/serveis/software/ciberseguretat/ /ca/consultoria-tic
+Redirect 301 /ca/serveis/software/comunicacions-segures/ /ca/migracio-integracio
+Redirect 301 /ca/serveis/software/business-intelligence-i-analitica/ /ca/software-personalitzat/metabase-business-intelligence
+Redirect 301 /ca/serveis/software/inteligencia-artificial/ /ca/programacio-a-mida/ia-barcelona
+Redirect 301 /ca/serveis/software/xarxes-socials/ /ca
+Redirect 301 /ca/serveis/web/ /ca/programacio-a-mida/aplicacions-web
+Redirect 301 /ca/serveis/web/corporativa/ /ca/software-personalitzat
+Redirect 301 /ca/serveis/web/botiga/ /ca/software-personalitzat
+Redirect 301 /ca/serveis/web/intranet/ /ca/software-personalitzat
+Redirect 301 /ca/serveis/web/gestio-continguts/ /ca/software-personalitzat
+Redirect 301 /ca/serveis/web/interactiva/ /ca/software-personalitzat
+Redirect 301 /ca/serveis/web/posicionament/ /ca
+Redirect 301 /ca/serveis/web/renovacio/ /ca
+Redirect 301 /ca/serveis/web/hosting/ /ca
+
+## Kit Consulting
+Redirect 301 /ca/kit-consulting/servei-de-assessorament-en-analisis-de-dades-avancat/ [NUEVA_URL]
+Redirect 301 /ca/kit-consulting/servei-de-assessorament-en-estrategia-i-rendiment-de-negoci/ [NUEVA_URL]
+Redirect 301 /ca/kit-consulting/servei-de-assessorament-en-processos-de-negoci-o-proces-de-produccio/ [NUEVA_URL]
+Redirect 301 /ca/kit-consulting/servei-de-assessorament-en-vendes-digitals/ [NUEVA_URL]
+Redirect 301 /ca/kit-consulting/servei-de-assessorament-360-en-transformacion-digital/ [NUEVA_URL]
+Redirect 301 /ca/kit-consulting/servei-de-assessorament-en-intelligencia-artificial/ [NUEVA_URL]
+Redirect 301 /ca/kit-consulting/servei-dassessorament-en-analisi-de-dades-basic/ [NUEVA_URL]
+
+## Kit Digital
+Redirect 301 /ca/kit-digital/gestio-xarxes-socials/ [NUEVA_URL]
+Redirect 301 /ca/kit-digital/gestio-processos-ia/ [NUEVA_URL]
+Redirect 301 /ca/kit-digital/servei-de-ciberseguretat-gestionat/ [NUEVA_URL]
+Redirect 301 /ca/kit-digital/servei-oficina-virtual/ [NUEVA_URL]
+Redirect 301 /ca/kit-digital/business-intelligence-i-analitica-i-ia-associada/ [NUEVA_URL]
+Redirect 301 /ca/kit-digital/lloc-de-treball-segur/ [NUEVA_URL]
+Redirect 301 /ca/kit-digital/presencia-avancada-a-internet/ [NUEVA_URL]
+Redirect 301 /ca/kit-digital/gestio-de-clients-amb-ia-associada/ [NUEVA_URL]
+Redirect 301 /ca/kit-digital/marketplace/ [NUEVA_URL]
+
+## Landings
+Redirect 301 /ca/business-intelligence-subvencio-kit-digital/ [NUEVA_URL]
+Redirect 301 /ca/gestio-de-processos-subvencio-kit-digital/ [NUEVA_URL]
+Redirect 301 /ca/crm-subvencio-kit-digital/ [NUEVA_URL]
+
+#############################
+# REDIRECCIONES ESPAÑOL (es)
+#############################
+
+## Sección principal
+Redirect 301 /es/gilsys/ /es/empresa-it
+Redirect 301 /es/servicios/ /es
+Redirect 301 /es/kit-digital/ [NUEVA_URL]
+Redirect 301 /es/kit-consulting/ [NUEVA_URL]
+Redirect 301 /es/servicios/consultoria-tecnologica/ /es/consultoria-it
+Redirect 301 /es/servicios/migracion-integracion/ /es/migracion-integracion
+Redirect 301 /es/servicios/software-apps/ /es/programacion-a-medida
+Redirect 301 /es/servicios/desarrollo-web/ /es/programacion-a-medida/aplicaciones-web
+Redirect 301 /es/servicios/software-apps/programacion-software/ /es/programacion-a-medida
+Redirect 301 /es/servicios/software-apps/programacion-apps-moviles/ es/programacion-a-medida/apps
+Redirect 301 /es/servicios/software-apps/gestores-productos-pim/ /es/software-personalizado/pimcore-barcelona
+Redirect 301 /es/servicios/software-apps/facturacion-electronica/ /es/software-personalizado
+Redirect 301 /es/servicios/software-apps/integracion-redes-sociales/ /es/software-personalizado
+Redirect 301 /es/servicios/software-apps/gestion-de-clientes/ /es/software-personalizado/programa-gestion-clientes
+Redirect 301 /es/servicios/software-apps/gestion-de-procesos/ /es/programacion-a-medida
+Redirect 301 /es/servicios/software-apps/ciberseguridad/ /es/consultoria-it
+Redirect 301 /es/servicios/software-apps/comunicaciones-seguras/ /es/migracion-integracion
+Redirect 301 /es/servicios/software-apps/business-intelligence-y-analitica/ /es/software-personalizado/metabase-business-intelligence
+Redirect 301 /es/servicios/software-apps/inteligencia-artificial/ /es/programacion-a-medida/ia-barcelona
+Redirect 301 /es/servicios/desarrollo-web/paginas-web-corporativas/ /es/software-personalizado/web-wordpress
+Redirect 301 /es/servicios/desarrollo-web/comercio-electronico/ /es/software-personalizado/programacion-woocommerce-prestashop
+Redirect 301 /es/servicios/desarrollo-web/intranets-webs-privadas/ /es/programacion-a-medida
+Redirect 301 /es/servicios/desarrollo-web/gestion-contenidos/ /es/software-personalizado/web-wordpress
+Redirect 301 /es/servicios/desarrollo-web/paginas-web-interactivas/ /es/programacion-a-medida/aplicaciones-web
+Redirect 301 /es/servicios/desarrollo-web/posicionamiento-buscadores/ /es/consultoria-it
+Redirect 301 /es/servicios/desarrollo-web/renovacion-optimizacion/ /es/consultoria-it
+Redirect 301 /es/servicios/desarrollo-web/hosting/ /es/consultoria-it
+
+## Kit Digital
+Redirect 301 /es/kit-digital/presencia-basica-internet/ [NUEVA_URL]
+Redirect 301 /es/kit-digital/comercio-electronico/ [NUEVA_URL]
+Redirect 301 /es/kit-digital/gestion-de-clientes/ [NUEVA_URL]
+Redirect 301 /es/kit-digital/gestion-de-procesos/ [NUEVA_URL]
+Redirect 301 /es/kit-digital/business-intelligence-y-analitica/ [NUEVA_URL]
+Redirect 301 /es/kit-digital/factura-electronica/ [NUEVA_URL]
+Redirect 301 /es/kit-digital/ciberseguridad/ [NUEVA_URL]
+Redirect 301 /es/kit-digital/comunicaciones-seguras/ [NUEVA_URL]
+Redirect 301 /es/kit-digital/gestion-procesos-ia/ [NUEVA_URL]
+Redirect 301 /es/kit-digital/puesto-de-trabajo-seguro/ [NUEVA_URL]
+Redirect 301 /es/kit-digital/gestion-de-clientes-con-ia-asociada/ [NUEVA_URL]
+Redirect 301 /es/kit-digital/business-intelligence-y-analitica-e-ia-asociada/ [NUEVA_URL]
+Redirect 301 /es/kit-digital/servicio-de-ciberseguridad-gestionada/ [NUEVA_URL]
+Redirect 301 /es/kit-digital/gestion-procesos-ia/ [NUEVA_URL]
+Redirect 301 /es/kit-digital/puesto-de-trabajo-seguro/ [NUEVA_URL]
+Redirect 301 /es/kit-digital/gestion-de-clientes-con-ia-asociada/ [NUEVA_URL]
+Redirect 301 /es/kit-digital/business-intelligence-y-analitica-e-ia-asociada/ [NUEVA_URL]
+Redirect 301 /es/kit-digital/servicio-de-ciberseguridad-gestionada/ [NUEVA_URL]
+
+
+## Kit Consulting
+Redirect 301 /es/kit-consulting/servicio-de-asesoramiento-en-ventas-digitales/ [NUEVA_URL]
+Redirect 301 /es/kit-consulting/servicio-de-asesoramiento-en-analisis-de-datos-basico/ [NUEVA_URL]
+Redirect 301 /es/kit-consulting/servicio-de-asesoramiento-en-estrategia-y-rendimiento-de-negocio/ [NUEVA_URL]
+Redirect 301 /es/kit-consulting/servicio-de-asesoramiento-en-procesos-de-negocio-o-proceso-de-produccion/ [NUEVA_URL]
+Redirect 301 /es/kit-consulting/servicio-de-asesoramiento-en-analisis-de-datos-avanzado/ [NUEVA_URL]
+Redirect 301 /es/kit-consulting/servicio-de-asesoramiento-360-en-transformacion-digital/ [NUEVA_URL]
+Redirect 301 /es/kit-consulting/servicio-de-asesoramiento-en-inteligencia-artificial/ [NUEVA_URL]
+
+## Landings
+Redirect 301 /es/crm-100-subvencionable-con-el-kit-digital/ [NUEVA_URL]
+Redirect 301 /es/business-intelligence-subvencion-kit-digital/ [NUEVA_URL]
+Redirect 301 /es/gestion-procesos-subvencion-kit-digital/ [NUEVA_URL]
+
+
+#############################
+# REDIRECCIONES INGLÉS (en)
+#############################
+
+## Sección principal
+Redirect 301 /en/gilsys/ /en/it-company
+Redirect 301 /en/services/ /en
+Redirect 301 /en/contact/ [NUEVA_URL]
+Redirect 301 /en/services/technology-consulting/ /en/it-consulting
+Redirect 301 /en/services/migration-and-integration/ /en/migration-integration
+Redirect 301 /en/services/software-and-app-programming/ /en/custom-development
+Redirect 301 /en/services/web-development/ /en/custom-development/web-applications
+Redirect 301 /en/services/software-and-app-programming/software-programming/ [NUEVA_URL]
+Redirect 301 /en/services/software-and-app-programming/mobile-app-development/ [NUEVA_URL]
+Redirect 301 /en/services/software-and-app-programming/product-managers/ [NUEVA_URL]
+Redirect 301 /en/services/software-and-app-programming/integration-into-social-media/ [NUEVA_URL]
+Redirect 301 /en/services/software-and-app-programming/electronic-invoicing/ [NUEVA_URL]
+Redirect 301 /en/services/software-and-app-programming/customer-management/ [NUEVA_URL]
+Redirect 301 /en/services/software-and-app-programming/process-management/ [NUEVA_URL]
+Redirect 301 /en/services/software-and-app-programming/cybersecurity/ [NUEVA_URL]
+Redirect 301 /en/services/software-and-app-programming/secure-communications/ [NUEVA_URL]
+Redirect 301 /en/services/software-and-app-programming/business-intelligence-and-analytics/ [NUEVA_URL]
+Redirect 301 /en/services/software-and-app-programming/artificial-intelligence/ [NUEVA_URL]
+Redirect 301 /en/services/web-development/corporate-websites/ [NUEVA_URL]
+Redirect 301 /en/services/web-development/e-commerce/ [NUEVA_URL]
+Redirect 301 /en/services/web-development/intranets-and-private-websites/ [NUEVA_URL]
+Redirect 301 /en/services/web-development/content-management/ [NUEVA_URL]
+Redirect 301 /en/services/web-development/interactive-websites/ [NUEVA_URL]
+Redirect 301 /en/services/web-development/search-engine-optimization/ [NUEVA_URL]
+Redirect 301 /en/services/web-development/renovation-and-optimization/ [NUEVA_URL]
+Redirect 301 /en/services/web-development/hosting/ [NUEVA_URL]
