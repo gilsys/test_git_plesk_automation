@@ -126,7 +126,7 @@ export const ui = {
 export const routes = {
   ca: {
     'home': '/ca',
-    'gilsys': '/ca/sobre-nosaltres',
+    'gilsys': '/ca/empresa-tic',
     'kit-digital/basic-internet-presence': '/ca/kit-digital/presencia-basica-internet',
     'kit-digital': '/ca/kit-digital',
     'kit-digital/e-commerce': '/ca/kit-digital/botiga-electronica',
@@ -155,7 +155,7 @@ export const routes = {
     'kit-consulting/360-digital-transformation': '/ca/kit-consulting/servei-de-assessorament-360-en-transformacion-digital',
     
     
-    'consultory': '/ca/consultoria-tecnologica',
+    'consultory': '/ca/consultoria-tic',
     'migration': '/ca/migracio-integracio',
     'development': '/ca/programacio-a-mida',
     'development/web': '/ca/programacio-a-mida/aplicacions-web',
@@ -184,7 +184,7 @@ export const routes = {
   },
   es: {
     'home': '/es',
-    'gilsys': '/es/sobre-nosotros',
+    'gilsys': '/es/empresa-it',
     'kit-digital': '/es/kit-digital',
     'kit-digital/basic-internet-presence': '/es/kit-digital/presencia-basica-internet',
     'kit-digital/e-commerce': '/es/kit-digital/comercio-electronico',
@@ -212,7 +212,7 @@ export const routes = {
     'kit-consulting/business-strategy-advisory': '/es/kit-consulting/servicio-de-asesoramiento-en-estrategia-y-rendimiento-de-negocio',
     'kit-consulting/360-digital-transformation': '/es/kit-consulting/servicio-de-asesoramiento-360-en-transformacion-digital',
    
-    'consultory': '/es/consultoria-tecnologica',
+    'consultory': '/es/consultoria-it',
     'migration': '/es/migracion-integracion',
     'development': '/es/programacion-a-medida',
     'development/web': '/es/programacion-a-medida/aplicaciones-web',
@@ -239,22 +239,22 @@ export const routes = {
   },
   en: {
     'home': '/en',
-    'gilsys': '/en/about-us',
+    'gilsys': '/en/it-company',
     
-    'consultory': '/en/technology-consulting',
+    'consultory': '/en/it-consulting',
     'migration': '/en/migration-integration',
     'development': '/en/custom-development',
     'development/web': '/en/custom-development/web-applications',
     'development/apps': '/en/custom-development/apps',
     'development/automation': '/en/custom-development/process-automation',
-    'development/ia': '/en/custom-development/ai-barcelona',
+    'development/ia': '/en/custom-development/ai-spain',
     'development/astro': '/en/custom-development/high-performance-websites',
 
     'software': '/en/custom-software',
     'software/ecommerce': '/en/custom-software/woocommerce-prestashop-development',
     'software/metabase': '/en/custom-software/metabase-business-intelligence',
-    'software/pimcore': '/en/custom-software/pimcore-barcelona',
-    'software/crm': '/en/custom-software/customer-management-software',
+    'software/pimcore': '/en/custom-software/pimcore-spain',
+    'software/crm': '/en/custom-software/customer-relationship-management',
     'software/wp': '/en/custom-software/wordpress-web',
 
     'about': '/en/about-us',

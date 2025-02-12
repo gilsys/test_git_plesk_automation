@@ -12,14 +12,14 @@ import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 const u = useRoutes(getLangFromUrl(Astro.url));
 const metadata = {
   title: 'Software Development with Artificial Intelligence',
-  description: `Software development integrating AI into businesses, automating processes with ChatGPT, Google Gemini, and OpenSource LLMs. Near Vic (Osona, Barcelona).`,
+  description: `Software development integrating AI into businesses, automating processes with ChatGPT, Google Gemini, and OpenSource LLMs. Near Barcelona, Spain.`,
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- Hero Section -->
   <Hero
-    tagline="Find us near Vic (Osona), in the province of Barcelona."
+    tagline="Find us near Barcelona, Spain."
     actions={[{ variant: 'primary', text: 'Get a Free Quote', href: u('contact') }]}
     backgroundImage={{ alt: 'Abstract background', src: '~/assets/images/dots/06.jpg' }}
   >
