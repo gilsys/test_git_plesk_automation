@@ -8,9 +8,9 @@ import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 const u = useRoutes(getLangFromUrl(Astro.url));
 
 const metadata = {
-  title: "Anàlisi de dades avançat | Kit Consulting Osona (Barcelona)",
+  title: 'Anàlisi de dades avançat | Kit Consulting Osona (Barcelona)',
   description:
-    "Avancem en classificació de dades, definint un model de dades adaptat a la teva empresa, estudiant com la IA pot millorar la qualitat de la informació.",
+    'Avancem en classificació de dades, definint un model de dades adaptat a la teva empresa, estudiant com la IA pot millorar la qualitat de la informació.',
 };
 ---
 
@@ -19,13 +19,15 @@ const metadata = {
     tagline="Subvenció Kit Consulting des d'Osona, per empreses de Barcelona i Girona"
     actions={[
       { variant: 'primary', text: 'Sol·licitar informació', href: u('contact') },
-      { variant: 'primary', text: 'Preguntes freqüents', href: u('kit-consulting') }]
-      }
+      { variant: 'primary', text: 'Preguntes freqüents', href: u('kit-consulting') + '#faq' },
+    ]}
     backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/22.jpg' }}
   >
     <Fragment slot="title">Servei d’assessorament en anàlisi de dades (Avançat) </Fragment>
     <Fragment slot="subtitle"
-      >Si ja disposes d’un sistema d’anàlisi de dades bàsic, en aquest servei avancem en classificació de dades, definint un model de dades adaptat a la teva empresa, estudiant com la intel·ligència artificial pot millorar la qualitat de la informació.</Fragment
+      >Si ja disposes d’un sistema d’anàlisi de dades bàsic, en aquest servei avancem en classificació de dades,
+      definint un model de dades adaptat a la teva empresa, estudiant com la intel·ligència artificial pot millorar la
+      qualitat de la informació.</Fragment
     >
   </Hero>
 
@@ -41,7 +43,9 @@ const metadata = {
       },
       {
         description:
-          "Generar i obtenir informació de valor a partir del tractament de dades amb <a href='" + u('development/ia') + "' title='Programació a mida amb intel·ligència artificial' class='text-accent'>algoritmes d'intel·ligència artificial</a> per millorar la presa de decisions basades en les dades.",
+          "Generar i obtenir informació de valor a partir del tractament de dades amb <a href='" +
+          u('development/ia') +
+          "' title='Programació a mida amb intel·ligència artificial' class='text-accent'>algoritmes d'intel·ligència artificial</a> per millorar la presa de decisions basades en les dades.",
         icon: 'tabler:chart-line',
       },
       {
@@ -103,7 +107,8 @@ const metadata = {
     ]}
   >
     <Fragment slot="title"
-      >Si tens empresa a Barcelona o Girona, t'assessorem en <span class="custom-gradient">anàlisi avançat de dades</span
+      >Si tens empresa a Barcelona o Girona, t'assessorem en <span class="custom-gradient"
+        >anàlisi avançat de dades</span
       ></Fragment
     >
     <Fragment slot="subtitle"

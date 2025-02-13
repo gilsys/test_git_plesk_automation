@@ -32,7 +32,8 @@ const {
         containerClass
       )}
     >
-      {items.map(({ title, description, icon, callToAction, list, classes: itemClasses = {} }) => (
+{items.map(({ title, description, icon, highlightText , callToAction, list, classes: itemClasses = {} }) => (
+
         <div
           class={twMerge(
             'relative flex flex-col intersect-once intersect-quarter intercept-no-queue motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade',
@@ -44,6 +45,9 @@ const {
             <Icon name={icon || defaultIcon} class={twMerge('mb-2 w-10 h-10', defaultIconClass, itemClasses?.icon)} />
           )}
           <h3 class={twMerge('text-xl font-bold', titleClass, itemClasses?.title)}>{title}</h3>
+          {highlightText  && (
+            <p class="text-md text-primary mt-2">{highlightText}</p>
+          )}
           {description && (
             <p class={twMerge('text-muted mt-2', descriptionClass, itemClasses?.description)} set:html={description} />
           )}
