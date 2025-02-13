@@ -180,6 +180,7 @@ export const routes = {
     'blog': '/ca/blog',
     'terms': '/ca/avis-legal',
     'privacy-policy': '/ca/politica-privacitat',
+    'cookie-policy': '/ca/politica-cookies',
   },
   es: {
     'home': '/es',
@@ -232,7 +233,8 @@ export const routes = {
     'contact': '/es/contactar',
     'blog': '/es/blog',
     'terms': '/es/aviso-legal',
-    'privacy-policy': '/es/politica-de-privacidad',
+    'privacy-policy': '/es/politica-privacidad',
+    'cookie-policy': '/es/politica-cookies',
 
   },
   en: {
@@ -261,6 +263,7 @@ export const routes = {
     'blog': '/en/blog',
     'terms': '/en/legal-notice',
     'privacy-policy': '/en/privacy-policy',
+    'cookie-policy': '/en/cookie-policy',
     
   },
 };
@@ -1149,9 +1152,9 @@ export const footer = {
       header['ca']['links'].find((link) => link._id === 'services').links.find((link) => link._id === 'consultory')
     ],
     secondaryLinks: [
-      { text: 'Avís legal', href: '#' },
-      { text: 'Política de privacitat', href: '#'},
-      { text: 'Política de cookies', href: '#'},
+      { text: 'Avís legal', href: routes['ca']['terms'] },
+      { text: 'Política de privacitat', href: routes['ca']['privacy-policy'] },
+      { text: 'Política de cookies', href: routes['ca']['cookie-policy']},
     ],
     socialLinks: [
       { ariaLabel: 'Linked-in', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/company/gilsys' },
@@ -1177,9 +1180,9 @@ export const footer = {
       header['es']['links'].find((link) => link._id === 'services').links.find((link) => link._id === 'consultory')
     ],
     secondaryLinks: [
-      { text: 'Aviso legal', href: '#' },
-      { text: 'Política de privacidad', href: '#' },
-      { text: 'Política de cookies', href: '#' },
+      { text: 'Aviso legal', href: routes['es']['terms'] },
+      { text: 'Política de privacidad', href: routes['es']['privacy-policy'] },
+      { text: 'Política de cookies', href: routes['es']['cookie-policy'] },
     ],
     socialLinks: [
       { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/company/gilsys' },
@@ -1205,9 +1208,9 @@ export const footer = {
       header['en']['links'].find((link) => link._id === 'services').links.find((link) => link._id === 'consultory')
     ],
     secondaryLinks: [
-      { text: 'Legal Notice', href: '#' },
-      { text: 'Privacy Policy', href: '#' },
-      { text: 'Cookie Policy', href: '#' },
+      { text: 'Legal Notice', href: routes['en']['terms'] },
+      { text: 'Privacy Policy', href: routes['en']['privacy-policy']},
+      { text: 'Cookie Policy', href: routes['en']['cookie-policy']},
     ],
     socialLinks: [
       { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/company/gilsys' },
