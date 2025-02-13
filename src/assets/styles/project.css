@@ -370,7 +370,9 @@ body:not(.route-home) .wg-hero .btn-primary:hover{
 
 
 
-.wg-header #contact, .mobile-contact-btn{
+.wg-header #contact, 
+.mobile-contact-btn,
+.header-more-info {
   border-radius: 100%;
   border-radius: 9999px;
   margin-left: 0.5rem;
