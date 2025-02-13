@@ -31,7 +31,7 @@ const t = useTranslations(language);
         <a
           class:list={['mx-2 inline-block uppercase', { 'font-bold': language === lang }]}
           title={`${t('language.change_to')} ${t(`language.${lang}`)}`}
-          href={translatePath(`${route}`, lang)}
+          href={translatePath(`${route}`, lang) || translatePath('home', lang)}
         >
           {lang}
         </a>

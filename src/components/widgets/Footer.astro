@@ -126,6 +126,7 @@ const u = useRoutes(currentLang);
                 sizes="(max-width: 420px) 100px, 150px"
                 src="~/assets/images/tic-osona.png"
                 alt="TICOsona - Associació d'Empreses de Tecnologies de la Informació i la Comunicació d'Osona"
+                class="lg:pr-[5px]"
               />
             </a>
           </div>
@@ -133,10 +134,10 @@ const u = useRoutes(currentLang);
       </div>
     </div>
 
-    <div class="md:flex md:items-center md:justify-between">
+    <div class="md:flex md:items-center">
       {
         socialLinks?.length ? (
-          <ul class="flex mb-4 md:order-1 -ml-2 md:ml-4 md:mb-0 rtl:ml-0 rtl:-mr-2 rtl:md:ml-0 rtl:md:mr-4">
+          <ul class="flex mb-4 md:order-1 -ml-2 md:ml-4 md:mb-0 rtl:ml-0 rtl:-mr-2 rtl:md:ml-0 rtl:md:mr-4 md:flex-1 md:justify-end">
             {socialLinks.map(({ ariaLabel, href, text, icon }) => (
               <li>
                 <a
@@ -157,11 +158,11 @@ const u = useRoutes(currentLang);
         )
       }
 
-      <div class="text-sm mr-4 dark:text-muted">
+      <div class="text-sm md:text-xs lg:text-sm mr-4 dark:text-muted md:flex-1">
         <Fragment set:html={footNote} />
       </div>
 
-      <div class="text-sm text-muted flex gap-2 mt-2 text-right lg:absolute lg:w-[calc(100%-10px)] lg:text-center lg:block lg:-ms-[10px] xl:-ms-[20px]">
+      <div class="text-sm text-muted flex gap-2 mt-2 text-right md:justify-center">
         {
           secondaryLinks.map(({ text, href }, index) => (
             <>
