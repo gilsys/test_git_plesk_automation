@@ -102,7 +102,7 @@ if(breadcrumbTrail && breadcrumbTrail[0] && breadcrumbTrail[0].text === btn.text
             <ul class={`dropdown-submenu pl-1 xl:pl-4 grid gap-x-3 lg:gap-x-4 ${colsClass ? colsClass : ''}`}>
               {subLinks.map(({ text: text3, href: href3, title: title3, icon: icon3 }) => (
                 <li class="flex items-center space-x-2 mb-1">
-                  <div class="mt-1">
+                  <div>
                     <Icon
                       name={icon3 ? icon3 : 'tabler:check'}
                       class="w-7 h-7 lg:w-8 lg:h-8 font-bold p-1 text-primary"
@@ -110,7 +110,7 @@ if(breadcrumbTrail && breadcrumbTrail[0] && breadcrumbTrail[0].text === btn.text
                   </div>
                   <a
                     class:list={[
-                      'block whitespace-no-wrap hover:text-link dark:hover:text-white dark:hover:bg-gray-700 hover:text-accent',
+                      'block whitespace-no-wrap hover:text-link dark:hover:text-white dark:hover:bg-gray-700 hover:text-accent d-flex items-center',
                       { 'active':  breadcrumbTrail && breadcrumbTrail[2] && breadcrumbTrail[2].text === text3 && breadcrumbTrail[2].href === href3},
                     ]}
                     href={href3}
