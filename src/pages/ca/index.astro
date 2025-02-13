@@ -19,10 +19,51 @@ const metadata = {
 };
 
 const u = useRoutes(getLangFromUrl(Astro.url));
+
+// Obtiene la fecha y hora actuales *durante la compilación*
+const buildDate = new Date();
+
+const jsonLdWebsite = {
+  '@context': 'https://schema.org/',
+  '@type': 'WebSite',
+  '@id': 'https://www.gilsys.com/#website',
+  name: 'gilsys',
+  alternateName: metadata.title,
+  description: metadata.description,
+  url: 'https://www.gilsys.com/',
+  datePublished: '2025-02-14T11:26:41+00:00',
+  dateModified: buildDate.toISOString(),
+};
+
+
+const jsonLdCorporation = {
+  '@context': 'https://schema.org/',
+  '@id': 'https://www.gilsys.com/#organization',
+  '@type': 'Corporation',
+  name: 'gilsys',
+  legalname: 'gilsys',
+  description: metadata.description,
+  image: 'https://www.gilsys.com/logo-programacion-software-a-medida.jpg',
+  url: 'https://www.gilsys.com/',
+  logo: 'https://www.gilsys.com/gilsys-logo.jpg',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Barcelona',
+    addressRegion: 'Catalonia',
+    addressCountry: 'ES',
+    postalCode: '08580',
+    streetAddress: 'Passeig del Ter 48',
+  },
+  email: 'info@gilsys.com',
+  foundingDate: '01-01-2005',
+  telephone: '+34665331271',
+  sameAs: ['https://www.facebook.com/gilsysg6/', 'https://www.linkedin.com/company/gilsys'],
+};
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLdWebsite, null, 2)} />
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLdCorporation, null, 2)} />
 
   <Hero
     id="hero-home"
@@ -99,7 +140,7 @@ const u = useRoutes(getLangFromUrl(Astro.url));
 
   <FourBlocks
     id="serveis"
-    title="<a title='Serveis de programció a mida, software personalitzat, migració i integració i consultoria TIC' name='serveis'>Serveis d'enginyeria informàtica</a>"
+    title="Serveis d'enginyeria informàtica"
     information="No adaptis la teva empresa a la tecnologia, nosaltres <span class='text-black'>adaptem la tecnologia a la teva empresa</span>."
     blocks={[
       {
@@ -178,7 +219,7 @@ const u = useRoutes(getLangFromUrl(Astro.url));
       {
         title: 'Experiència contrastada',
         description:
-          'Més de <span class="text-accent highlight">20 anys</span> desenvolupant solucions tecnològiques per a empreses de diversos sectors, aporten una àmplia visió i experiència tècnica.',
+          'Més de <strong>20 anys</strong> desenvolupant solucions tecnològiques per a empreses de diversos sectors, aporten una àmplia visió i experiència tècnica.',
         icon: 'tabler:flag-2',
       },
       {
@@ -246,7 +287,7 @@ const u = useRoutes(getLangFromUrl(Astro.url));
     items={[
       {
         title: 'Què és el Kit Digital?',
-        description: `El govern d'Espanya impulsa el programa <a class="text-accent" href='https://www.acelerapyme.gob.es/kit-digital' target='_blank'>Kit Digital</a>, finançat per fons europeus Next Generation, per ajudar petites i mitjanes empreses, otorgant subvencions entre <span class="text-primary">3.000€</span> i <span class="text-primary">29.000€</span> per invertir en la implantació de noves tecnologies.`,
+        description: `El govern d'Espanya impulsa el programa <a class="text-accent" href='https://www.acelerapyme.gob.es/kit-digital' target='_blank'>Kit Digital</a>, finançat per fons europeus Next Generation, per ajudar petites i mitjanes empreses, otorgant subvencions entre <strong>3.000€</strong> i <strong>29.000€</strong> per invertir en la implantació de noves tecnologies.`,
       },
       {
         title: 'Som agents digitalitzadors',
@@ -283,7 +324,7 @@ const u = useRoutes(getLangFromUrl(Astro.url));
     items={[
       {
         title: 'Què és el Kit Consulting?',
-        description: `El programa <a class="text-accent" href='https://www.acelerapyme.gob.es/kit-consulting' target='_blank'>Kit Consulting</a>, impulsat pel govern d'Espanya amb fons europeus Next Generation, ofereix subvencions de <span class="text-primary">12.000€</span> a <span class="text-primary">24.000€</span> en diferents serveis d'assessorament digital.`,
+        description: `El programa <a class="text-accent" href='https://www.acelerapyme.gob.es/kit-consulting' target='_blank'>Kit Consulting</a>, impulsat pel govern d'Espanya amb fons europeus Next Generation, ofereix subvencions de <strong>12.000€</strong> a <strong>24.000€</strong> en diferents serveis d'assessorament digital.`,
       },
       {
         title: 'Som agents consultors',
