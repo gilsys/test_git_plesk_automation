@@ -9,21 +9,24 @@ import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 const u = useRoutes(getLangFromUrl(Astro.url));
 
 const metadata = {
-  title: 'Servei d’assessorament “360” en transformació digital',
+  title: 'Subvenció per assessorament “360” en transformació digital',
   description:
-    'Assessorament integral en transformació digital per a PIMES. Optimitza els teus processos i eines amb una estratègia personalitzada.',
+    `Consultoria per empreses de Barcelona i Girona sobre transformació digital i optimització de processos. Serveis d'assessorament subvencionats per Kit Consulting.`,
 };
 ---
 
 <Layout metadata={metadata}>
   <Hero
-    tagline="Subvenció Kit Consulting"
+    tagline="Subvenció Kit Consulting des d'Osona, per empreses de Barcelona i Girona"
+    actions={[
+      { variant: 'primary', text: 'Sol·licitar informació', href: u('contact') },
+      { variant: 'primary', text: 'Preguntes freqüents', href: u('kit-consulting') }]
+      }
     backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/22.jpg' }}
   >
-    <Fragment slot="title">Servei d’assessorament “360” en transformació digital </Fragment>
+    <Fragment slot="title">Servei d’assessorament “360” en transformació digital</Fragment>
     <Fragment slot="subtitle"
-      >Assessorament integral en transformació digital per a PIMES. Optimitza els teus processos i eines amb una
-      estratègia personalitzada.</Fragment
+      >Amb la subvenció de Kit Consulting, rebràs assessorament des d'Osona (Barcelona), en transformació digital i optimització de processos i eines amb una estratègia personalitzada.</Fragment
     >
   </Hero>
 
@@ -95,7 +98,7 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Contactar',
+        text: 'Sol·licitar informació',
         href: u('contact'),
       },
       {
@@ -106,12 +109,11 @@ const metadata = {
     ]}
   >
     <Fragment slot="title">
-      No esperis més, sol·licita assessorament gratuït i impulsa la transformació digital de la teva pime mitjançant la
+      Assessorem a empreses de les províncies de Barcelona i Girona, sobre com transformar el seu negoci i integrar
       <span class="custom-gradient">Intel·ligència Artificial</span>
     </Fragment>
     <Fragment slot="subtitle"
-      >Contacta'ns i t'assessorarem de forma gratuïta gràcies a la subvenció del Kit Consulting sobre com la IA et pot
-      ajudar a potenciar la teva empresa.</Fragment
+      >Contacta'ns i t'informarem de forma gratuïta gràcies a la subvenció del Kit Consulting sobre aplicar una transformació digital de 360º.</Fragment
     >
   </CallToAction>
 

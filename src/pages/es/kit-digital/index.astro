@@ -9,29 +9,34 @@ import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 
 const u = useRoutes(getLangFromUrl(Astro.url));
 const metadata = {
-  title: 'Kit Digital | Gilsys',
+  title: `Kit Digital para autónomos y empresas de Barcelona y Gerona`,
   description:
-    'Accede a ayudas del Kit Digital para digitalizar tu negocio con soluciones adaptadas. Descubre cómo obtener hasta 29.000€ en subvenciones.',
+    'Como agentes digitalizadores de Osona y expertos en programación e IA, ofrecemos servicios subvencionados hasta 29.000€, para empresas de Barcelona y Gerona.',
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
-
   <Hero
+  actions={[
+    { variant: 'primary', text: 'Contactar', href: u('contact') },
+    { variant: 'primary', text: 'Preguntas frecuentes', href: u('kit-digital') }]
+    }
     backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/dots/21.jpg' }}
-    actions={[{ variant: 'primary', text: 'Presupuesto gratuito', href: u('contact') }]}
-    tagline="Subvenciones para digitalizar tu empresa"
+    actions={[{ variant: 'primary', text: 'Contactar', href: u('contact') }]}
+    tagline="Somos agentes digitalizadores, con más de 20 años de experiencia"
   >
-    <Fragment slot="title"><span class="custom-gradient">Kit Digital</span></Fragment>
+    <Fragment slot="title"
+      ><span class="custom-gradient">Kit Digital para autónomos y empresas de Barcelona y Gerona</span></Fragment
+    >
     <Fragment slot="subtitle">
-      Digitaliza tu empresa con ayudas adaptadas a tus necesidades. Para autónomos y empresas de hasta 250 trabajadores.
+      Como agentes digitalizadores de Osona y expertos en programación e IA, ofrecemos servicios TIC subvencionados
+      hasta 29.000€, para autónomos y empresas de hasta 250 trabajadores.
     </Fragment>
   </Hero>
   <Features3
     id="features-kit-digital"
-    tagline="Subvenciones del Kit Digital"
-    title="Impulsa la digitalización de tu negocio con las ayudas del Kit Digital"
+    tagline="Si tienes un negocio en Barcelona o Gerona, aprovecha la subvención con nosotros."
+    title="Impulsamos la digitalización de tu negocio con las ayudas del Kit Digital en Barcelona y Gerona"
     subtitle="Descubre todas las subvenciones disponibles para la digitalización de tu empresa. Adaptamos las soluciones a tus necesidades."
     items={[
       {
@@ -252,6 +257,17 @@ const metadata = {
         description:
           'Los plazos pueden variar según la carga administrativa, pero desde el momento en que se concede la subvención, puedes comenzar a implementar las soluciones seleccionadas con nuestro soporte.',
       },
+
+      {
+        title: '¿Cuánto tiempo se tarda en recibir la ayuda?',
+        description:
+          'Los plazos pueden variar según la carga administrativa, pero desde el momento en que se concede la subvención, podemos empezar a tramitar las soluciones seleccionadas.',
+      },
+      {
+        title: '¿Cuánto tiempo se tarda en ejecutar un proyecto desde que se ha concedido la ayuda?',
+        description:
+          'El beneficiario dispone de 6 meses para elegir agente digitalizador para que ejecute el bono concedido. Una vez elegido, el agente digitalizador dispone de 3 meses para ejecutar el proyecto.',
+      },
       {
         title: '¿Es obligatorio invertir todo el importe de la subvención?',
         description:
@@ -262,6 +278,21 @@ const metadata = {
         description:
           'Como expertos en soluciones digitales y programación personalizada, no solo te ayudamos a acceder a las subvenciones, sino que también implementamos las herramientas más adecuadas para garantizar que la digitalización tenga un impacto real y duradero en tu negocio.',
       },
+      {
+        title: '¿Qué diferencia hay con Kit Consulting?',
+        description:
+          "Kit Digital es un servicio de transformación digital que incluye la implantación de herramientas o servicios, <a class='text-accent' href='" +
+          u('kit-consulting') +
+          "' title='Kit Consulting - Subvenciones en consultoría tecnológica'>Kit Consulting</a> es un servicio de asesoramiento y consultoría.",
+      },
+      {
+        title: '¿Solo trabajáis en las provincias de Barcelona y Gerona?',
+        description: `No, al tener la empresa en Osona, nos focalizamos en empresas de las provincias de Barcelona y Gerona, pero nos puedes contactar si tu empresa está ubicada en cualquier otra zona de España.`,
+      },
+      {
+        title: '¿Solo se puede solicitar en Catalunya?',
+        description: `No, se puede solicitar en toda España. Desde Gilsys, nos hemos centrado en promocionar el servicio como agentes digitalizadores en la zona de Catalunya, pero ofrecemos servicios a autónomos y empresas de todo el territorio español.`,
+      }
     ]}
   />
 
@@ -282,7 +313,7 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Presupuesto gratuito',
+        text: 'Contactar',
         href: u('contact'),
       },
       {
@@ -293,11 +324,10 @@ const metadata = {
     ]}
   >
     <Fragment slot="title"
-      >Aprovecha el <span class="custom-gradient">Kit Digital</span> y digitaliza tu negocio</Fragment
+      >Aprovecha el <span class="custom-gradient">Kit Digital</span> y digitaliza tu negocio con nosotros. Especializados en empresas de Barcelona y Gerona.</Fragment
     >
     <Fragment slot="subtitle">
-      Descubre las subvenciones disponibles y déjanos ayudarte a elegir e implementar las mejores soluciones para tu
-      negocio.
+      Descubre las subvenciones disponibles y déjanos ayudarte a elegir e implementar las mejores soluciones para tu negocio.
     </Fragment>
   </CallToAction>
 </Layout>

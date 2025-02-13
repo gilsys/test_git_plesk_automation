@@ -10,14 +10,19 @@ import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 const u = useRoutes(getLangFromUrl(Astro.url));
 
 const metadata = {
-  title: 'Servei de Ciberseguretat gestionat',
+  title: 'Kit Digital - Servei de Ciberseguretat gestionat',
   description:
     "Protecció empresarial amb tècniques EDR i MDR per a la detecció i resposta ràpida davant d'amenaces, monitoratge 24/7 i suport expert per a la teva PIME, de manera gratuïta amb el Kit Digital.",
 };
 ---
 
 <Layout metadata={metadata}>
-  <Hero tagline="Subvenció Kit Digital" backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/21.jpg' }}>
+  <Hero
+  actions={[
+    { variant: 'primary', text: 'Contactar', href: u('contact') },
+    { variant: 'primary', text: 'Preguntes freqüents', href: u('kit-digital') }]
+    }
+  tagline="Subvenció Kit Digital" backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/21.jpg' }}>
     <Fragment slot="title">Servei de Ciberseguretat gestionat</Fragment>
     <Fragment slot="subtitle">
         Servei de ciberseguretat gestionat que monitoritza, detecta i respon a amenaces en temps real.  

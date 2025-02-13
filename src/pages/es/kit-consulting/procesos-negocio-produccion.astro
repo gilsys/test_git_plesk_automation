@@ -7,20 +7,24 @@ import Layout from '~/layouts/PageLayout.astro';
 import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 const u = useRoutes(getLangFromUrl(Astro.url));
 const metadata = {
-  title: 'Servicio de asesoramiento en procesos de negocio o proceso de producción',
+  title: 'Asesoramiento en procesos de negocio o proceso de producción',
   description:
-    'Asesoramiento en digitalización y mejora de procesos empresariales y productivos para PYMES. Utilizamos IA para optimizar y automatizar tus procesos.',
+    'Consultoría en digitalización y mejora con IA de procesos empresariales y productivos para empresas de Barcelona y Gerona. Subvencionado con Kit Consulting.',
 };
 ---
 
 <Layout metadata={metadata}>
   <Hero
-    tagline="Subvención Kit Consulting"
+  tagline="Subvención Kit Consulting desde Osona, para empresas de Barcelona y Gerona"
+  actions={[
+    { variant: 'primary', text: 'Solicitar información', href: u('contact') },
+    { variant: 'primary', text: 'Preguntas frecuentes', href: u('kit-consulting') }]
+    }
     backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/dots/22.jpg' }}
   >
     <Fragment slot="title">Servicio de asesoramiento en procesos de negocio o proceso de producción</Fragment>
     <Fragment slot="subtitle"
-      >Asesoramiento en digitalización y mejora de procesos empresariales y productivos para PYMES. Utilizamos IA para
+      >Asesoramiento en digitalización y mejora de procesos empresariales y productivos para PYMES. Utilizamos inteligencia artificial para
       optimizar y automatizar tus procesos.</Fragment
     >
   </Hero>
@@ -28,7 +32,7 @@ const metadata = {
   <Features
     tagline="Servicio de asesoramiento <strong>subvencionado</strong>"
     subtitle="Conocerás la inversión requerida y las medidas necesarias para su adopción.<br/>Se realizará un caso de uso y se impartirá formación adaptada a tu pyme."
-    title="Identificamos las áreas de mejora en los procesos empresariales de tu pyme y diseñamos un plan personalizado para mejorarlos utilizando <span class='custom-gradient'>Inteligencia Artificial</span>"
+    title="Identificamos los procesos empresariales de tu pyme y diseñamos un plan personalizado para mejorarlos con <span class='custom-gradient'>Inteligencia Artificial</span>"
     items={[
       {
         description:
@@ -103,13 +107,12 @@ const metadata = {
     ]}
   >
     <Fragment slot="title"
-      >No esperes más, solicita asesoramiento gratuito sobre cómo mejorar los procesos de tu empresa utilizando <span
+      >Aprovecha la consultoría subvencionada sobre mejorar los procesos de tu empresa con <span
         class="custom-gradient">Inteligencia Artificial</span
-      ></Fragment
+      > </Fragment
     >
     <Fragment slot="subtitle"
-      >Contáctanos y te asesoraremos de forma gratuita gracias a la subvención del Kit Consulting sobre cómo la IA puede
-      ayudar a potenciar tu empresa.</Fragment
+      >Si tu empresa está en Barcelona o Gerona, contáctanos y te asesoraremos de forma gratuita gracias a la subvención del Kit Consulting.</Fragment
     >
   </CallToAction>
 

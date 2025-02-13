@@ -10,9 +10,9 @@ import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 const u = useRoutes(getLangFromUrl(Astro.url));
 
 const metadata = {
-  title: 'Kit Digital | Gilsys',
+  title: `Kit Digital per autònoms i empreses de Barcelona i Girona`,
   description:
-    'Accedeix a ajudes del Kit Digital per digitalitzar el teu negoci amb solucions adaptades. Descobreix com obtenir fins a 29.000€ en subvencions.',
+    "Com agents digitalitzadors d'Osona i experts en programació i IA, oferim serveis subvencionats fins a 29.000€, per autònoms i empreses de Barcelona i Girona."
 };
 ---
 
@@ -21,20 +21,19 @@ const metadata = {
 
   <Hero
     backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/21.jpg' }}
-    actions={[{ variant: 'primary', text: 'Pressupost gratuït', href: u('contact') }]}
-    tagline="Subvencions per digitalitzar la teva empresa"
+    actions={[{ variant: 'primary', text: 'Contactar', href: u('contact') }]}
+    tagline="Som agents digitalitzadors, amb més de 20 anys d'experiència"
   >
-    <Fragment slot="title"><span class="custom-gradient">Kit Digital</span></Fragment>
+    <Fragment slot="title"><span class="custom-gradient">Kit Digital per autònoms i empreses de Barcelona i Girona</span></Fragment>
     <Fragment slot="subtitle">
-      Digitalitza la teva empresa amb ajudes adaptades a les teves necessitats. Per a autònoms i empreses de fins a 250
-      treballadors.
+      Com agents digitalitzadors d'Osona i experts en programació i IA, oferim serveis TIC subvencionats fins a 29.000€, per autònoms i empreses de fins a 250 treballadors.
     </Fragment>
   </Hero>
 
   <Features3
     id="features-kit-digital"
-    tagline="Subvencions del Kit Digital"
-    title="Impulsa la digitalització del teu negoci amb les ajudes del Kit Digital"
+    tagline="Si tens una empresa a Barcelona o Girona, aprofita la subvenció amb nosaltres"
+    title="Impulsem la digitalització del teu negoci amb les ajudes del Kit Digital a Barcelona i Girona"
     subtitle="Descobreix totes les subvencions disponibles per a la digitalització de la teva empresa. Adaptem les solucions a les teves necessitats."
     items={[
       {
@@ -252,9 +251,14 @@ const metadata = {
           'A Gilsys som agents digitalitzadors certificats. Això significa que podem assessorar-te i implementar les solucions tecnològiques que millor s’adaptin a les necessitats de la teva empresa, sempre garantint que compleixin amb els requisits del programa Kit Digital.',
       },
       {
-        title: 'Quant temps es triga a rebre l’ajuda?',
+        title: 'Quant de temps es tarda en rebre l’ajuda?',
         description:
-          'Els terminis poden variar segons la càrrega administrativa, però des del moment en què es concedeix la subvenció, pots començar a implementar les solucions seleccionades amb el nostre suport.',
+          'Els terminis poden variar segons la càrrega administrativa, però des del moment en què es concedeix la subvenció, podem començar a tramitar les solucions seleccionades.',
+      },
+      {
+        title: "Quant de temps es tarda en executar un projecte des que s'ha concedit l’ajuda?",
+        description:
+          "El beneficiari disposa de 6 mesos per escollir agent digitalitzador per a que executi el bo concedit. Una vegada escollit, l'agent digitalitzador disposa de 3 mesos per a executar el projecte.",
       },
       {
         title: 'És obligatori invertir tot l’import de la subvenció?',
@@ -265,6 +269,21 @@ const metadata = {
         title: 'Per què triar Gilsys com a agent digitalitzador?',
         description:
           'Com a experts en solucions digitals i programació personalitzada, no només t’ajudem a accedir a les subvencions, sinó que també implementem les eines més adequades per garantir que la digitalització tingui un impacte real i durador en el teu negoci.',
+      },
+      {
+        title: "Quina diferència hi ha amb Kit Consulting?",
+        description:
+          "Kit Digital és un servei de transformació digital que inclou la implantació d'eines o serveis, <a class='text-accent' href='" + u('kit-consulting') + "' title='Kit Consulting - Subvencions en consultoria tecnològica'>Kit Consulting</a> és un servei d'assessorament i consultoria.",
+      },   
+      {
+        title: 'Només treballeu a les províncies de Barcelona i Girona?',
+        description:
+          `No, al tenir l'empresa a Osona, ens focalitzem en empreses de les províncies de Barcelona i Girona, però ens podeu contactar si la vostra empresa està ubicada a qualsevol altra zona d'Espanya.`,
+      },
+      {
+        title: 'Només es pot demanar a Catalunya?',
+        description:
+          `No, es pot demanar a tot Espanya. Des de Gilsys, ens hem centrat ens promocionar el servei com agents digitalitzadors a la zona de Catalunya, però oferim serveis a autònoms i empreses de tot el territori espanyol.`,
       },
     ]}
   />
@@ -286,7 +305,7 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Pressupost gratuït',
+        text: 'Contactar',
         href: u('contact'),
       },
       {
@@ -297,7 +316,7 @@ const metadata = {
     ]}
   >
     <Fragment slot="title"
-      >Aprofita el <span class="custom-gradient">Kit Digital</span> i digitalitza el teu negoci</Fragment
+      >Aprofita el <span class="custom-gradient">Kit Digital</span> i digitalitza el teu negoci amb nosaltres. Especialitzats en empreses de Barcelona i Girona.</Fragment
     >
     <Fragment slot="subtitle">
       Descobreix les subvencions disponibles i deixa'ns ajudar-te a escollir i implementar les millors solucions per el

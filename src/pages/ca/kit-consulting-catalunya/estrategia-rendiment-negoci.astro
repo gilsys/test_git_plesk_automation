@@ -8,21 +8,25 @@ import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 const u = useRoutes(getLangFromUrl(Astro.url));
 
 const metadata = {
-  title: 'Servei d’assessorament en estratègia i rendiment de negoci',
+  title: 'Subvenció per assessorament en estratègia i rendiment de negoci',
   description:
-    'Assessorament en intel·ligència artifical, estratègia de negoci i rendiment per a PIMES. Utilitzem IA per millorar la teva estratègia i rendiment empresarial.',
+  `Consultoria en intel·ligència artifical, estratègia de negoci i rendiment per a empreses de Barcelona i Girona. Subvencionat per Kit consulting.`,
 };
+
 ---
 
 <Layout metadata={metadata}>
   <Hero
-    tagline="Subvenció Kit Consulting"
+    tagline="Subvenció Kit Consulting des d'Osona, per empreses de Barcelona i Girona"
+    actions={[
+      { variant: 'primary', text: 'Sol·licitar informació', href: u('contact') },
+      { variant: 'primary', text: 'Preguntes freqüents', href: u('kit-consulting') }]
+      }
     backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/22.jpg' }}
   >
     <Fragment slot="title">Servei d’assessorament en estratègia i rendiment de negoci </Fragment>
     <Fragment slot="subtitle"
-      >Assessorament en intel·ligència de negoci i rendiment per a PIMES. Utilitzem IA per millorar la teva estratègia i
-      rendiment empresarial.</Fragment
+      >Consultoria en intel·ligència de negoci i rendiment per a PYMES. Utilitzem intel·ligència artificial per millorar la teva estratègia i rendiment empresarial.</Fragment
     >
   </Hero>
 
@@ -90,7 +94,7 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Contactar',
+        text: 'Sol·licitar informació',
         href: u('contact'),
       },
       {
@@ -101,11 +105,10 @@ const metadata = {
     ]}
   >
     <Fragment slot="title"
-      >No esperis més, sol·licita assessorament gratuït i millora l'estratègia i el rendiment de negoci de la teva
-      empresa fent ús de la <span class="custom-gradient">Intel·ligència Artificial</span></Fragment
+      >Millora amb nosaltres la teva estratègia de rendiment de negoci amb <span class="custom-gradient">intel·ligència artificial</span></Fragment
     >
     <Fragment slot="subtitle"
-      >Contacta'ns i t'assessorarem de forma gratuïta gràcies a la subvenció del Kit Consulting sobre com la IA et pot
+      >Si tens empresa a Barcelona o Girona, contacta'ns i t'assessorarem de forma gratuïta sobre com la IA et pot
       ajudar a potenciar la teva empresa.</Fragment
     >
   </CallToAction>

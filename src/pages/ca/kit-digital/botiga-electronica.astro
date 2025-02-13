@@ -10,14 +10,21 @@ import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 const u = useRoutes(getLangFromUrl(Astro.url));
 
 const metadata = {
-  title: 'Comerç electrònic',
+  title: 'Kit Digital - Subvenció per Comerç electrònic',
   description:
     'Creació de la teva botiga en línia amb disseny responsive, SEO, mètodes de pagament, enviament integrats i gestió de continguts.',
 };
 ---
 
 <Layout metadata={metadata}>
-  <Hero tagline="Subvenció Kit Digital" backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/21.jpg' }}>
+  <Hero tagline="Subvenció Kit Digital"
+  
+  actions={[
+    { variant: 'primary', text: 'Contactar', href: u('contact') },
+    { variant: 'primary', text: 'Preguntes freqüents', href: u('kit-digital') }]
+    }
+  
+  backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/21.jpg' }}>
     <Fragment slot="title">Comerç electrònic</Fragment>
     <Fragment slot="subtitle">
       Creem la teva <span class="custom-gradient">botiga en línia</span> amb <span class="custom-gradient"

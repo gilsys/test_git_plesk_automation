@@ -10,14 +10,19 @@ import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 const u = useRoutes(getLangFromUrl(Astro.url));
 
 const metadata = {
-  title: 'Gestió de clients',
+  title: 'Kit Digital - Subvenció per Gestió de clients',
   description:
     'Optimitza la gestió de relacions comercials amb els clients mitjançant eines digitals avançades i gestió documental centralitzada per a la teva PIME amb el Kit Digital.',
 };
 ---
 
 <Layout metadata={metadata}>
-  <Hero tagline="Subvenció Kit Digital" backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/21.jpg' }}>
+  <Hero
+  actions={[
+    { variant: 'primary', text: 'Contactar', href: u('contact') },
+    { variant: 'primary', text: 'Preguntes freqüents', href: u('kit-digital') }]
+    }
+  tagline="Subvenció Kit Digital" backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/21.jpg' }}>
     <Fragment slot="title">Gestió de clients</Fragment>
     <Fragment slot="subtitle">
       Implementa un sistema de <span class="custom-gradient">gestió de clients</span> eficient amb <span

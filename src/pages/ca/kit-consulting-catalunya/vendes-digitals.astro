@@ -9,18 +9,22 @@ import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 const u = useRoutes(getLangFromUrl(Astro.url));
 
 const metadata = {
-  title: 'Servei d’assessorament en vendes digitals',
+  title: 'Kit Consulting - Subvenció per assessorament en vendes digitals',
   description:
-    'Assessorament en vendes digitals per a PIMES. Analitzem la teva situació, definim estratègies i utilitzem IA per millorar les teves vendes en línia.',
+    'Consultoría per empreses on analitzem la teva situació, definim estratègies i utilitzem IA per millorar les teves vendes en línia, des d\'Osona (Barcelona).',
 };
 ---
 
 <Layout metadata={metadata}>
   <Hero
-    tagline="Subvenció Kit Consulting"
+    tagline="Subvenció Kit Consulting des d'Osona, per empreses de Barcelona i Girona"
+    actions={[
+      { variant: 'primary', text: 'Sol·licitar informació', href: u('contact') },
+      { variant: 'primary', text: 'Preguntes freqüents', href: u('kit-consulting') }]
+      }
     backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/22.jpg' }}
   >
-    <Fragment slot="title">Servei d’assessorament en vendes digitals </Fragment>
+    <Fragment slot="title">Servei d’assessorament en vendes digitals</Fragment>
     <Fragment slot="subtitle"
       >Assessorament en vendes digitals per a PIMES. Analitzem la teva situació, definim estratègies i utilitzem IA per
       millorar les teves vendes en línia.</Fragment
@@ -81,7 +85,7 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Contactar',
+        text: 'Sol·licitar informació',
         href: u('contact'),
       },
       {

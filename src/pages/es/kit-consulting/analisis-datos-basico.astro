@@ -7,29 +7,31 @@ import Layout from '~/layouts/PageLayout.astro';
 import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 const u = useRoutes(getLangFromUrl(Astro.url));
 const metadata = {
-  title: 'Servicio de asesoramiento en análisis de datos (Básico)',
+  title: 'Subvención para asesoramiento en análisis de datos (Básico)',
   description:
-    'Servicio de análisis de datos básico adaptado a las necesidades de tu pyme, con identificación de datos clave, selección de herramientas de IA, asesoramiento y desarrollo de un caso de uso práctico.',
+  `Desde gilsys (Osona), ofrecemos asesoramiento en análisis de datos básico a empreses de Barcelona y Girona, adaptado a las necesidades de tu empresa. Subvencionado por Kit Consulting.`,
 };
 ---
 
 <Layout metadata={metadata}>
   <Hero
-    tagline="Subvención Kit Consulting"
+    tagline="Subvención Kit Consulting desde Osona, para empresas de Barcelona y Girona"
+    actions={[
+      { variant: 'primary', text: 'Solicitar información', href: u('contact') },
+      { variant: 'primary', text: 'Preguntas frecuentes', href: u('kit-consulting') }]
+      }
     backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/dots/22.jpg' }}
   >
     <Fragment slot="title">Servicio de asesoramiento en análisis de datos (Básico)</Fragment>
     <Fragment slot="subtitle"
-      >Analizamos tu pyme y definimos un plan para integrar <span class="custom-gradient">Inteligencia Artificial</span
-      >, identificando los datos clave y las herramientas más eficientes para automatizar procesos y optimizar la toma
-      de decisiones.</Fragment
+      >Analizamos los datos de tu empresa y definimos un plan para integrar <span class='custom-gradient'>Inteligencia Artificial</span>, identificando los datos clave y las herramientas más eficientes para automatizar procesos y optimizar la toma de decisiones.</Fragment
     >
   </Hero>
 
   <Features
     tagline="Servicio de asesoramiento <strong>subvencionado</strong>"
     subtitle="Conocerás la inversión requerida y las medidas necesarias para su adopción.<br/>Se realizará un caso de uso y se impartirá formación adaptada a tu pyme."
-    title="Estudiamos tu empresa y planificamos cómo integrar <span class='custom-gradient'>Inteligencia Artificial</span> para automatizar tareas y procesos de forma eficiente"
+    title="Estudiamos empresas de Barcelona y Gerona y planificamos cómo integrar <span class='custom-gradient'>Inteligencia Artificial</span> para automatizar tareas y procesos de forma eficiente"
     items={[
       {
         description:
@@ -99,15 +101,15 @@ const metadata = {
       },
     ]}
   >
-    <Fragment slot="title"
-      >No esperes más, solicita asesoramiento gratuito en <span class="custom-gradient">análisis de datos</span
-      ></Fragment
-    >
-    <Fragment slot="subtitle"
-      >Contáctanos y te asesoraremos de forma gratuita gracias a la subvención del Kit Consulting sobre cómo la IA puede
-      ayudar a potenciar tu empresa.</Fragment
-    >
-  </CallToAction>
+  <Fragment slot="title"
+  >Ofrecemos asesoramiento gratuito en <span class="custom-gradient">análisis de datos básico</span
+  > a empresas de las provincias de Barcelona y Gerona
+  </Fragment
+>
+<Fragment slot="subtitle"
+  >Contáctanos y te asesoraremos sobre como la subvención de Kit Consulting en analisis de datos avanzado puede
+  mejorar a clasificar la información tu empresa.</Fragment
+>
 
   <KitDigital />
 </Layout>
