@@ -153,6 +153,7 @@ export interface Item {
   classes?: Record<string, string>;
   callToAction?: CallToAction;
   image?: Image;
+  highlightText?: string;
 }
 
 export interface Price {
