@@ -597,11 +597,11 @@ export const header = {
           },
         ],
       },
-      {
+      /*{
         _id: 'blog',
         text: 'Blog',
         href: routes['ca']['blog'],
-      },
+      },*/
       {
         _id: 'contact',
         text: 'Contactar',
@@ -940,11 +940,11 @@ export const header = {
           },
         ],
       },
-      {
+      /*{
         _id: 'blog',
         text: 'Blog',
         href: routes['es']['blog'],
-      },
+      },*/
       {
         _id: 'contact',
         text: 'Contactar',
@@ -1123,11 +1123,11 @@ export const header = {
           },
         ],
       },
-      {
+      /*{
         _id: 'blog',
         text: 'Blog',
         href: routes['en']['blog'],
-      },
+      },*/
       {
         _id: 'contact',
         text: 'Contact',
