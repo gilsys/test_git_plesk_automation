@@ -15,11 +15,11 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <Hero
-  tagline="Subvención Kit Consulting desde Osona, para empresas de Barcelona y Gerona"
-  actions={[
-    { variant: 'primary', text: 'Solicitar información', href: u('contact') },
-    { variant: 'primary', text: 'Preguntas frecuentes', href: u('kit-consulting') }]
-    }
+    tagline="Subvención Kit Consulting desde Osona, para empresas de Barcelona y Gerona"
+    actions={[
+      { variant: 'primary', text: 'Solicitar información', href: u('contact') },
+      { variant: 'primary', text: 'Preguntas frecuentes', href: u('kit-consulting') + '#faq' },
+    ]}
     backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/dots/22.jpg' }}
   >
     <Fragment slot="title"
@@ -112,11 +112,13 @@ const metadata = {
     ]}
   >
     <Fragment slot="title"
-      >¿Tu empresa está en la provincia de Barcelona o Gerona? Solicita nuestro asesoramiento en <span class="custom-gradient">Inteligencia Artificial</span
+      >¿Tu empresa está en la provincia de Barcelona o Gerona? Solicita nuestro asesoramiento en <span
+        class="custom-gradient">Inteligencia Artificial</span
       ></Fragment
     >
     <Fragment slot="subtitle"
-      >Contáctanos y te asesoraremos sobre como solicitar la subvención que te permitirá recibir asesoramiento sobre cómo la IA puede ayudarte a potenciar tu empresa.</Fragment
+      >Contáctanos y te asesoraremos sobre como solicitar la subvención que te permitirá recibir asesoramiento sobre
+      cómo la IA puede ayudarte a potenciar tu empresa.</Fragment
     >
   </CallToAction>
 

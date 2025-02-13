@@ -15,17 +15,17 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <Hero
-  tagline="Subvención Kit Consulting desde Osona, para empresas de Barcelona y Gerona"
-  actions={[
-    { variant: 'primary', text: 'Solicitar información', href: u('contact') },
-    { variant: 'primary', text: 'Preguntas frecuentes', href: u('kit-consulting') }]
-    }
+    tagline="Subvención Kit Consulting desde Osona, para empresas de Barcelona y Gerona"
+    actions={[
+      { variant: 'primary', text: 'Solicitar información', href: u('contact') },
+      { variant: 'primary', text: 'Preguntas frecuentes', href: u('kit-consulting') + '#faq' },
+    ]}
     backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/dots/22.jpg' }}
   >
     <Fragment slot="title">Servicio de asesoramiento en estrategia y rendimiento de negocio</Fragment>
     <Fragment slot="subtitle"
-      >Consultoría en inteligencia de negocio y rendimiento para PYMES. Utilizamos inteligencia artificial para mejorar tu estrategia y
-      rendimiento empresarial.</Fragment
+      >Consultoría en inteligencia de negocio y rendimiento para PYMES. Utilizamos inteligencia artificial para mejorar
+      tu estrategia y rendimiento empresarial.</Fragment
     >
   </Hero>
 
@@ -106,11 +106,13 @@ const metadata = {
     ]}
   >
     <Fragment slot="title"
-      >Si tienes un negocio en Barcelona o Gerona, te asesoramos sobre como mejorar la estrategia de tu empresa
-      con <span class="custom-gradient">IA</span></Fragment
+      >Si tienes un negocio en Barcelona o Gerona, te asesoramos sobre como mejorar la estrategia de tu empresa con <span
+        class="custom-gradient">IA</span
+      ></Fragment
     >
     <Fragment slot="subtitle"
-      >Contáctanos y te asesoraremos de forma gratuita sobre cómo definir una estrategia para maximizar el rendimiento de tu negocio enfocada a la inteligencia artificial.</Fragment
+      >Contáctanos y te asesoraremos de forma gratuita sobre cómo definir una estrategia para maximizar el rendimiento
+      de tu negocio enfocada a la inteligencia artificial.</Fragment
     >
   </CallToAction>
 
