@@ -1,33 +1,34 @@
 ---
 import { ANALYTICS } from 'astrowind:config';
-const id = ANALYTICS.vendors.googleAnalytics.id;
+
+const googleAnalyticsId  = ANALYTICS.vendors.googleAnalytics.id;
 ---
+<script is:inline define:vars={{ googleAnalyticsId }}>
+  window.GOOGLE_ANALYTICS_ID = googleAnalyticsId;
+</script>
+<script async is:inline src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`}></script>
 
-<script
-    is:inline
-    src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-
-  <script>
-    declare global {
-      interface Window {
-        dataLayer: Record<string, any>[];
-        gtag: (...args: any[]) => void;
-      }
+<script>
+  declare global {
+    interface Window {
+      dataLayer: Record<string, any>[];
+      gtag: (...args: any[]) => void;
     }
+  }
 
-    // This is the important part!
-    document.addEventListener("astro:page-load", () => {
-      window.dataLayer = window.dataLayer || [];
-      window.gtag = function gtag(...args: any[]) {
-        window.dataLayer.push(arguments);
-      };
-      window.gtag("js", new Date());
-      window.gtag("consent", "default", {
-        ad_storage: "denied",
-        ad_user_data: "denied",
-        ad_personalization: "denied",
-        analytics_storage: "denied",
-      });
-      window.gtag("config", "G-XXXXXXXXXX");
+  document.addEventListener("astro:page-load", () => {
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function gtag(...args: any[]) {
+      window.dataLayer.push(arguments);
+    };
+    window.gtag("js", new Date());
+
+    window.gtag("consent", "default", {
+      ad_storage: "denied",
+      ad_user_data: "denied",
+      ad_personalization: "denied",
+      analytics_storage: "denied",
     });
-  </script>
+    window.gtag("config",  window.GOOGLE_ANALYTICS_ID);
+  });
+</script>
