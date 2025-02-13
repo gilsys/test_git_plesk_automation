@@ -10,9 +10,9 @@ import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 const u = useRoutes(getLangFromUrl(Astro.url));
 
 const metadata = {
-  title: 'Kit Consulting | Gilsys',
+  title: `Consultoria IA amb Kit Consulting a Catalunya`,
   description:
-    'Accedeix al servei de Kit Consulting per optimitzar els processos i estratègies digitals de la teva empresa. Descobreix com obtenir assessorament especialitzat per transformar digitalment el teu negoci.',
+    "Som agents consultors, experts en Intel·ligència Artificial, oferim serveis d'assessorament, subvencionats, des d'Osona per empreses de Barcelona i Girona."
 };
 ---
 
@@ -21,20 +21,20 @@ const metadata = {
 
   <Hero
     backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/21.jpg' }}
-    actions={[{ variant: 'primary', text: 'Pressupost gratuït', href: u('contact') }]}
-    tagline="Subvencions per digitalitzar la teva empresa"
+    actions={[{ variant: 'primary', text: 'Sol·licitar informació', href: u('contact') }]}
+    tagline="Som agents consultors homologats, experts en <strong>Intel·ligència Artificial</strong>, programació i dades."
   >
-    <Fragment slot="title"><span class="custom-gradient">Kit Consulting</span></Fragment>
+    <Fragment slot="title">Consultoria subvencionada amb <span class="custom-gradient">Kit Consulting</span> a Catalunya</Fragment>
     <Fragment slot="subtitle">
-      Optimitza els processos i estratègies digitals de la teva empresa amb el nostre servei d’assessorament expert.
+      Serveis subvencionats d'assessorament digital, orientats a intel·ligència artificial, des d'Osona, per empreses de Barcelona i Girona.
     </Fragment>
   </Hero>
 
   <Features3
     id="features-kit-consulting"
-    tagline="Serveis d'assessorament del Kit Consulting"
-    title="Transforma digitalment el teu negoci amb el Kit Consulting"
-    subtitle="Explora les diferents àrees on podem ajudar-te amb un assessorament personalitzat i estratègic."
+    tagline="Serveis de consultoria i assessorament a Catalunya, subvencionats amb Kit Consulting"
+    title="Si tens empresa a la província de <span class='custom-gradient'>Barcelona</span> o <span class='custom-gradient'>Girona</span>, t'assessorem en transformació digital"
+    subtitle="Explora les diferents àrees on podem ajudar a la teva emrpesa amb assessorament personalitzat i estratègic."
     items={[
       {
         title: 'Assessorament en Intel·ligència Artificial',
@@ -49,7 +49,7 @@ const metadata = {
       },
       {
         title: 'Assessorament en anàlisi de dades (Bàsic)',
-        description: 'Aprèn a interpretar i utilitzar les dades per prendre millors decisions estratègiques.',
+        description: 'Analitzem les dades de la teva empresa i proposem divereses eines que puguin ajudar a millorar la seva organització, evaluant també opcions on intervingui intel·ligència artificial.',
         icon: 'tabler:chart-bar',
         callToAction: {
           class: 'more-info',
@@ -60,7 +60,7 @@ const metadata = {
       {
         title: 'Assessorament en anàlisi de dades (Avançat)',
         description:
-          'Implementa anàlisis avançades per descobrir oportunitats i optimitzar els resultats del teu negoci.',
+          'Avancem en classificació de dades, definint un model de dades adaptat al negoci de la teva empresa, focalitzant la importància de la intel·ligència artificial per millorar la qualitat de la informació.',
         icon: 'tabler:chart-pie',
         callToAction: {
           class: 'more-info',
@@ -70,7 +70,7 @@ const metadata = {
       },
       {
         title: 'Assessorament en vendes digitals',
-        description: 'Millora la teva estratègia de vendes digitals per incrementar ingressos i captar nous clients.',
+        description: 'Millora la teva estratègia de vendes digitals per incrementar ingressos i captar nous clients, estudiant com integrar intel·liència artificial.',
         icon: 'tabler:shopping-cart',
         callToAction: {
           class: 'more-info',
@@ -80,7 +80,7 @@ const metadata = {
       },
       {
         title: 'Assessorament en processos de negoci o procés de producció',
-        description: 'Optimitza i digitalitza els teus processos per guanyar en eficiència i reduir costos.',
+        description: 'Optimitza i digitalitza els teus processos per guanyar en eficiència i reduir costos, utilitzant intel·licència artificial.',
         icon: 'tabler:settings',
         callToAction: {
           class: 'more-info',
@@ -90,7 +90,7 @@ const metadata = {
       },
       {
         title: 'Assessorament en estratègia i rendiment de negoci',
-        description: 'Defineix i implementa estratègies per millorar el rendiment global de la teva empresa.',
+        description: 'Defineix i implementa estratègies amb intel·ligència artificial per millorar el rendiment global de la teva empresa.',
         icon: 'tabler:trending-up',
         callToAction: {
           class: 'more-info',
@@ -101,7 +101,7 @@ const metadata = {
       {
         title: 'Assessorament “360°” en transformació digital',
         description:
-          'Rep un assessorament integral per abordar la digitalització del teu negoci des de tots els angles.',
+          'Rep un assessorament integral per abordar la digitalització del teu negoci des de tots els angles aprofitant el potencial de la IA.',
         icon: 'tabler:circle',
         callToAction: {
           class: 'more-info',
@@ -115,8 +115,8 @@ const metadata = {
   <Content
     isReversed
     isImageSmall
-    tagline="Ajuts segons el tamany de la teva empresa"
-    title="Ajudes segons els segments del Kit Consulting"
+    tagline="Depenent del nombre de treballadors de l'empresa, variarà l'import de la subvenció"
+    title="Ajudes en assessorament segons els segments del Kit Consulting"
     items={[
       {
         title: 'Petites empreses',
@@ -140,14 +140,14 @@ const metadata = {
     }}
   />
 
-  <FAQs
-    title="Preguntes freqüents sobre el Kit Consulting"
+  <FAQs    
+    title="Preguntes freqüents sobre el Kit Consulting a Catalunya"
     items={[
       {
         title: 'Què és el Kit Consulting?',
         description:
           'És un servei d’assessorament especialitzat destinat a empreses que volen transformar-se digitalment, amb suport en estratègia, processos i tecnologia.',
-      },
+      },  
       {
         title: 'Qui pot beneficiar-se del Kit Consulting?',
         description:
@@ -163,8 +163,40 @@ const metadata = {
       {
         title: 'Quina és la funció de Gilsys en el Kit Consulting?',
         description:
-          'A Gilsys oferim assessorament especialitzat i t’ajudem a implementar les solucions més adequades per a la teva empresa.',
+          'A Gilsys, som agents consultors homologats. Podem executar Kit Consulting a aquelles empreses que disposin de la subvenció aprobada. Com experts en Intel·ligència artificial i desenvolupament de software, oferim serveis de <a class="text-accent" title="Consultoria en intel·ligència artificial" href=' + u('consultory')+ '>consultoria especialitzada</a>. A més, podem ajudar-te a implementar les solucions més adequades per a la teva empresa.',
       },
+      {
+        title: "Què diferencia Gilsys d'altres agents consultors?",
+        description:
+          'A Gilsys, som una empresa principalment tècnica, pel que el nostre enfoc és molt pràctic i podem anar més enllà que les empreses que només ofereixen orientació i assessorament. Hem treballat amb clients de sectors molt diversos, i això ens ha donat una visió molt àmplia de les millors estratègies a seguir a nivell tecnològic.',
+      },
+      {
+        title: "Kit Consulting inclou la implantació d'alguna eina?",
+        description:
+          "No, Kit Consulting es una subvenció que cubreix el servei de consultoria i assessorament, per analitzar l'empresa i els seus requisits però no inclou la implantació de cap eina, producte o servei. Per això existeix una altra subvenció, <a class='text-accent' title='Implantacions subvencionades amb kit digital' href='" + u('kit-digital') +"'>Kit Digital</a>, de la que també es possible beneficiar-se de forma parel·lela.",
+      },
+      {
+        title: "És compatible amb Kit Digital?",
+        description:
+          "Sí, una empresa pot sol·licitar i beneficiar-se de les dues subvencions.",
+      },    
+      {
+        title: "Quina diferència hi ha amb Kit Digital?",
+        description:
+          "Kit consulting és un servei d'assessorament i consultoria, i Kit Digital és un servei de transformació digital que inclou la implantació d'eines o serveis.",
+      },   
+      {
+        title: 'Només treballeu a les províncies de Barcelona i Girona?',
+        description:
+          `No, al tenir l'empresa a Osona, ens focalitzem en empreses de les províncies de Barcelona i Girona, però ens podeu consultar si la vostra empresa està ubicada a qualsevol altra zona de Catalunya.`,
+      },
+      {
+        title: 'Només es pot demanar a Catalunya?',
+        description:
+          `No, es pot demanar a tot Espanya, però des de Gilsys oferim aquest servei només a empreses de Catalunya, concretament províncies de Barcelona i Girona. Establim aquest límit per motius de proximitat a l'hora d'executar l'assessorament.`,
+      },
+
+      
     ]}
   />
 
@@ -185,7 +217,7 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Pressupost gratuït',
+        text: 'Sol·licitar informació',
         href: u('contact'),
       },
       {
@@ -196,10 +228,10 @@ const metadata = {
     ]}
   >
     <Fragment slot="title"
-      >Aprofita el <span class="custom-gradient">Kit Consulting</span> per transformar el teu negoci</Fragment
+      >Si tens empresa a la província de Barcelona o Girona, aprofita el <span class="custom-gradient">Kit Consulting</span> amb nosaltres i transforma el teu negoci</Fragment
     >
     <Fragment slot="subtitle">
-      Obtingues suport personalitzat en estratègia, tecnologia i processos per fer créixer la teva empresa.
+      Aconsegueix suport personalitzat de la mà d'experts en Intel·ligència Artificial, en estratègia, tecnologia i processos per fer créixer la teva empresa.
     </Fragment>
   </CallToAction>
 </Layout>

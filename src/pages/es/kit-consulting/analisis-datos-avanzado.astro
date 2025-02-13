@@ -7,28 +7,30 @@ import Layout from '~/layouts/PageLayout.astro';
 import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 const u = useRoutes(getLangFromUrl(Astro.url));
 const metadata = {
-  title: 'Servicio de asesoramiento en análisis de datos (Avanzado)',
+  title: "Análisis de datos avanzado | Kit Consulting Osona (Barcelona)",
   description:
-    'Servicio de análisis de datos avanzado adaptado a las necesidades de tu pyme, con identificación de datos clave, selección de herramientas de IA, asesoramiento y desarrollo de un caso de uso práctico.',
+    "Avanzamos en la clasificación de datos, definiendo un modelo de datos adaptado a tu empresa, estudiando como la IA puede mejorar la calidad de la información.",
 };
 ---
 
 <Layout metadata={metadata}>
   <Hero
-    tagline="Subvención Kit Consulting"
+    tagline="Subvención Kit Consulting desde Osona, para empresas de Barcelona y Gerona"
+    actions={[
+      { variant: 'primary', text: 'Solicitar información', href: u('contact') },
+      { variant: 'primary', text: 'Preguntas frecuentes', href: u('kit-consulting') }]
+      }
     backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/dots/22.jpg' }}
   >
     <Fragment slot="title">Servicio de asesoramiento en análisis de datos (Avanzado)</Fragment>
     <Fragment slot="subtitle"
-      >Si ya dispones de un sistema de análisis de datos básico, este servicio te proporciona un plan de análisis más
-      avanzado, priorizando el establecimiento, la mejora, la automatización y el aprendizaje de procesos para la
-      extracción y análisis de datos.</Fragment
+      >Si ya dispones de un sistema de análisis de datos básico, en este servicio avanzamos en la clasificación de datos, definiendo un modelo de datos adaptado a tu empresa, estudiando como la inteligencia artificial puede mejorar la calidad de la información.</Fragment
     >
   </Hero>
 
   <Features
     tagline="Servicio de asesoramiento <strong>subvencionado</strong>"
-    subtitle="Te acompañaremos en todo momento, definiendo las acciones para la implementación. Además, te proporcionaremos formación para garantizar una adopción satisfactoria de la IA en tu pyme."
+    subtitle="Acompañamos a tu empresa de Barcelona o Gerona en todo momento, definiendo las acciones para la implementación. Además, te proporcionaremos formación para garantizar una adopción satisfactoria de la IA en tu pyme."
     title="Analizamos tu empresa para diseñar una estrategia de integración de <span class='custom-gradient'>Inteligencia Artificial</span> enfocada en la extracción e interpretación de datos"
     items={[
       {
@@ -102,11 +104,11 @@ const metadata = {
     ]}
   >
     <Fragment slot="title"
-      >No esperes más, solicita asesoramiento gratuito en <span class="custom-gradient">análisis de datos</span
+      >Si tienes empresa en la provincia de Barcelona o Gerona, te ofrecemos asesoramiento gratuito en <span class="custom-gradient">análisis de datos avanzado</span
       ></Fragment
     >
     <Fragment slot="subtitle"
-      >Contáctanos y te asesoraremos de forma gratuita gracias a la subvención del Kit Consulting sobre cómo la IA puede
+      >Contáctanos y te asesoraremos sobre como la subvención de Kit Consulting en analisis de datos puede
       ayudar a potenciar tu empresa.</Fragment
     >
   </CallToAction>

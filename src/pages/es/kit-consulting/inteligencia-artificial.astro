@@ -7,15 +7,19 @@ import Layout from '~/layouts/PageLayout.astro';
 import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 const u = useRoutes(getLangFromUrl(Astro.url));
 const metadata = {
-  title: 'Servicio de asesoramiento en Inteligencia Artificial',
+  title: 'Kit Consulting - Subvención para asesoramiento en Inteligencia Artificial',
   description:
-    'Servicios de asesoramiento en IA para PYMES. Planes personalizados, identificación de datos clave y capacitación en técnicas de IA.',
+    'Servicios de asesoramiento en IA desde Osona, para empresas de Barcelona y Gerona. Planes personalizados y formación en inteligencia artificial.',
 };
 ---
 
 <Layout metadata={metadata}>
   <Hero
-    tagline="Subvención Kit Consulting"
+  tagline="Subvención Kit Consulting desde Osona, para empresas de Barcelona y Gerona"
+  actions={[
+    { variant: 'primary', text: 'Solicitar información', href: u('contact') },
+    { variant: 'primary', text: 'Preguntas frecuentes', href: u('kit-consulting') }]
+    }
     backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/dots/22.jpg' }}
   >
     <Fragment slot="title"
@@ -108,12 +112,11 @@ const metadata = {
     ]}
   >
     <Fragment slot="title"
-      >No esperes más, solicita asesoramiento gratuito en <span class="custom-gradient">Inteligencia Artificial</span
+      >¿Tu empresa está en la provincia de Barcelona o Gerona? Solicita nuestro asesoramiento en <span class="custom-gradient">Inteligencia Artificial</span
       ></Fragment
     >
     <Fragment slot="subtitle"
-      >Contáctanos y te asesoraremos de forma gratuita gracias a la subvención del Kit Consulting sobre cómo la IA puede
-      ayudarte a potenciar tu empresa.</Fragment
+      >Contáctanos y te asesoraremos sobre como solicitar la subvención que te permitirá recibir asesoramiento sobre cómo la IA puede ayudarte a potenciar tu empresa.</Fragment
     >
   </CallToAction>
 

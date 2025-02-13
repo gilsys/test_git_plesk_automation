@@ -10,14 +10,19 @@ import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 const u = useRoutes(getLangFromUrl(Astro.url));
 
 const metadata = {
-  title: 'Gestió de xarxes socials',
+  title: 'Kit Digital - Subvenció per Gestió de xarxes socials',
   description:
     'Millora la presència en línia de la teva empresa amb una estratègia de xarxes socials a mida i monitorització periòdica gràcies al Kit Digital.',
 };
 ---
 
 <Layout metadata={metadata}>
-  <Hero tagline="Subvenció Kit Digital" backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/21.jpg' }}>
+  <Hero
+  actions={[
+    { variant: 'primary', text: 'Contactar', href: u('contact') },
+    { variant: 'primary', text: 'Preguntes freqüents', href: u('kit-digital') }]
+    }
+  tagline="Subvenció Kit Digital" backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/21.jpg' }}>
     <Fragment slot="title">Gestió de xarxes socials</Fragment>
     <Fragment slot="subtitle">
       Impulsa la teva presència en línia amb estratègies de xarxes socials personalitzades i eficiència operativa,

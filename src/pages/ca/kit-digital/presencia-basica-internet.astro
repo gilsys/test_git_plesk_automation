@@ -10,14 +10,19 @@ import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 const u = useRoutes(getLangFromUrl(Astro.url));
 
 const metadata = {
-  title: 'Presència Bàsica a internet',
+  title: 'Kit Digital - Subvenció per Presència Bàsica a internet',
   description:
     'Creem la pàgina web amb WordPress per a la teva empresa o negoci, GRATIS, amb la subvenció del Kit Digital.',
 };
 ---
 
 <Layout metadata={metadata}>
-  <Hero tagline="Subvenció Kit Digital" backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/21.jpg' }}>
+  <Hero
+  actions={[
+    { variant: 'primary', text: 'Contactar', href: u('contact') },
+    { variant: 'primary', text: 'Preguntes freqüents', href: u('kit-digital') }]
+    }
+  tagline="Subvenció Kit Digital" backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/21.jpg' }}>
     <Fragment slot="title">Presència básica a Internet</Fragment>
     <Fragment slot="subtitle"
       >Creem la <span class="custom-gradient">pàgina web</span> amb <span class="custom-gradient">WordPress</span> per a

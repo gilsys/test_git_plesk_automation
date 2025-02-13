@@ -10,14 +10,19 @@ import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 const u = useRoutes(getLangFromUrl(Astro.url));
 
 const metadata = {
-  title: 'Serveis i eines d’oficina virtual',
+  title: 'Kit Digital - Subvenció per Serveis i eines d’oficina virtual',
   description:
     "Millora la col·laboració i la gestió de projectes amb les nostres eines d'Oficina Virtual. Gaudeix d'emmagatzematge al núvol i més de manera gratuïta amb el Kit Digital.",
 };
 ---
 
 <Layout metadata={metadata}>
-  <Hero tagline="Subvenció Kit Digital" backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/21.jpg' }}>
+  <Hero
+  actions={[
+    { variant: 'primary', text: 'Contactar', href: u('contact') },
+    { variant: 'primary', text: 'Preguntes freqüents', href: u('kit-digital') }]
+    }
+  tagline="Subvenció Kit Digital" backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/21.jpg' }}>
     <Fragment slot="title">Serveis i eines d’oficina virtual</Fragment>
     <Fragment slot="subtitle">
       Implanta solucions interactives i eficients per a la teva empresa amb eines de col·laboració, emmagatzematge i

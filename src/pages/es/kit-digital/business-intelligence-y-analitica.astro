@@ -10,7 +10,7 @@ import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 const u = useRoutes(getLangFromUrl(Astro.url));
 
 const metadata = {
-  title: 'Business Intelligence y analítica',
+  title: 'Kit Digital - Subvención en Business Intelligence y analítica',
   description:
     'Optimiza la toma de decisiones empresariales con herramientas de Business Intelligence (BI), integración de datos y paneles personalizados para tu PYME con Kit Digital.',
 };
@@ -18,6 +18,10 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <Hero
+  actions={[
+    { variant: 'primary', text: 'Contactar', href: u('contact') },
+    { variant: 'primary', text: 'Preguntas frecuentes', href: u('kit-digital') }]
+    }
     tagline="Subvención Kit Digital"
     backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/dots/21.jpg' }}
   >

@@ -9,14 +9,19 @@ import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 
 const u = useRoutes(getLangFromUrl(Astro.url));
 const metadata = {
-  title: 'Business Intelligence y analítica con IA asociada',
+  title: 'Kit Digital - Business Intelligence y analítica con IA asociada',
   description:
     'Mejora la toma de decisiones con capacitación en IA, integración y análisis de datos, y creación de paneles visuales. 100% subvencionado.',
 };
 ---
 
 <Layout metadata={metadata}>
-  <Hero tagline="Subvención Kit Digital" backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/dots/21.jpg' }}>
+  <Hero
+  actions={[
+    { variant: 'primary', text: 'Contactar', href: u('contact') },
+    { variant: 'primary', text: 'Preguntas frecuentes', href: u('kit-digital') }]
+    }
+  tagline="Subvención Kit Digital" backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/dots/21.jpg' }}>
     <Fragment slot="title">Business Intelligence y analítica con IA asociada</Fragment>
     <Fragment slot="subtitle">
         Impulsa tu empresa con <span class="custom-gradient">Business Intelligence</span> y 

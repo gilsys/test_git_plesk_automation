@@ -10,7 +10,7 @@ import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 const u = useRoutes(getLangFromUrl(Astro.url));
 
 const metadata = {
-  title: 'Lloc de treball segur',
+  title: 'Kit Digital - Subvenció per Lloc de treball segur',
   description:
     'Protegeix el teu equip i les teves dades amb solucions de seguretat avançades, garantint un entorn de treball segur i productiu gràcies al Kit Digital.',
 };
@@ -18,7 +18,12 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <Hero tagline="Subvenció Kit Digital" backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/21.jpg' }}>
+  <Hero
+  actions={[
+    { variant: 'primary', text: 'Contactar', href: u('contact') },
+    { variant: 'primary', text: 'Preguntes freqüents', href: u('kit-digital') }]
+    }
+  tagline="Subvenció Kit Digital" backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/21.jpg' }}>
     <Fragment slot="title">Lloc de treball segur</Fragment>
     <Fragment slot="subtitle">
         Protegeix el teu equip i les teves dades amb solucions de seguretat avançades, <span class="custom-gradient">GRATIS</span> gràcies a la subvenció del Kit Digital, per garantir un entorn de treball segur i productiu.

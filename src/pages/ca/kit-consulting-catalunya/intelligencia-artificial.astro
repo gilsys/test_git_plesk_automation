@@ -8,15 +8,19 @@ import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 const u = useRoutes(getLangFromUrl(Astro.url));
 
 const metadata = {
-  title: 'Servei d’assessorament en Intel·ligència Artificial',
+  title: 'Subvenció per assessorament en Intel·ligència Artificial',
   description:
-    "Serveis d'assessorament en IA per a PIMES. Plans personalitzats, identificació de dades clau i capacitació en tècniques de IA.",
+    "Serveis d'assessorament en IA per a empreses des d'Osona, provincia Barcelona i Girona. Plans personalitzats i formació en intel·ligència artificial.",
 };
 ---
 
 <Layout metadata={metadata}>
   <Hero
-    tagline="Subvenció Kit Consulting"
+    tagline="Subvenció Kit Consulting des d'Osona, per empreses de Barcelona i Girona"
+    actions={[
+      { variant: 'primary', text: 'Sol·licitar informació', href: u('contact') },
+      { variant: 'primary', text: 'Preguntes freqüents', href: u('kit-consulting') }]
+      }
     backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/22.jpg' }}
   >
     <Fragment slot="title"
@@ -31,7 +35,7 @@ const metadata = {
   <Features
     tagline="Servei d'assessorament <strong>subvencionat</strong>"
     subtitle="Coneixeràs la inversió requerida i les mesures necessàries per a la seva adopció.<br/>Es realitzarà un cas d'ús i s'implantarà formació adaptada a la teva pime."
-    title="Estudiem la teva empresa i planifiquem com integrar <span class='custom-gradient'>Intel·ligència Artificial</span> per automatitzar tasques i processos de forma eficient"
+    title="Estudiem i planifiquem com integrar <span class='custom-gradient'>Intel·ligència Artificial</span> a la teva empresa, per automatitzar tasques i processos de forma eficient"
     items={[
       {
         description:
@@ -97,7 +101,7 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Contactar',
+        text: 'Sol·licitar informació',
         href: u('contact'),
       },
       {
@@ -107,7 +111,8 @@ const metadata = {
       },
     ]}
   >
-    <Fragment slot="title">No esperis més, sol·licita assessorament gratuït en <span class="custom-gradient">Intel·ligència Artificial</span></Fragment>
+    <Fragment slot="title">
+       Assessorament gratuït en <span class="custom-gradient">Intel·ligència Artificial</span> per empreses de Barcelona i Girona</Fragment>
     <Fragment slot="subtitle"
       >Contacta'ns i t'assessorarem de forma gratuïta gràcies a la subvenció del Kit Consulting sobre com la IA et pot ajudar a potenciar la teva empresa.</Fragment
     >

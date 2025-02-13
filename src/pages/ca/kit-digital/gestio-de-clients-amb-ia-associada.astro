@@ -10,14 +10,20 @@ import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 const u = useRoutes(getLangFromUrl(Astro.url));
 
 const metadata = {
-  title: 'Gestió de clients',
+  title: 'Kit Digital - Subvenció per Gestió de clients',
   description:
     'Optimitza la gestió de relacions comercials amb els clients mitjançant eines digitals avançades i gestió documental centralitzada per a la teva PIME amb el Kit Digital.',
 };
 ---
 
 <Layout metadata={metadata}>
-    <Hero tagline="Subvenció Kit Digital" backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/21.jpg' }}>
+    <Hero
+    
+    actions={[
+      { variant: 'primary', text: 'Contactar', href: u('contact') },
+      { variant: 'primary', text: 'Preguntes freqüents', href: u('kit-digital') }]
+      }
+    tagline="Subvenció Kit Digital" backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/21.jpg' }}>
         <Fragment slot="title">Gestió de clients amb IA associada</Fragment>
         <Fragment slot="subtitle">
           Implanta un sistema de <span class="custom-gradient">gestió de clients</span> intel·ligent amb <span
@@ -29,6 +35,7 @@ const metadata = {
       
 
   <Features2
+    columns={1}
     tagline="Funcionalitats i serveis"
     subtitle="El principal objectiu d’aquesta categoria és la dotació de capacitacions en intel·ligència artificial per a optimitzar processos i agilitzar les interaccions i relacions amb els clients."
     title="Optimitza la gestió de clients i oportunitats amb eines digitals avançades fent ús de la IA"

@@ -8,15 +8,19 @@ import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 const u = useRoutes(getLangFromUrl(Astro.url));
 
 const metadata = {
-  title: 'Servei d’assessorament en processos de negoci o procés de producció',
+  title: 'Assessorament en processos de negoci o procés de producció',
   description:
-    'Assessorament en digitalització i millora de processos empresarials i productius per a PIMES. Utilitzem IA per optimitzar i automatitzar els teus processos.',
+    'Consultoria en digitalització i millora amb IA de processos empresarials i productius per a empreses de Barcelona i Girona. Subvencionat per Kit Consulting.',
 };
 ---
 
 <Layout metadata={metadata}>
   <Hero
-    tagline="Subvenció Kit Consulting"
+    tagline="Subvenció Kit Consulting des d'Osona, per empreses de Barcelona i Girona"
+    actions={[
+      { variant: 'primary', text: 'Sol·licitar informació', href: u('contact') },
+      { variant: 'primary', text: 'Preguntes freqüents', href: u('kit-consulting') }]
+      }
     backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/22.jpg' }}
   >
     <Fragment slot="title">Servei d’assessorament en processos de negoci o procés de producció </Fragment>
@@ -29,7 +33,7 @@ const metadata = {
   <Features
     tagline="Servei d'assessorament <strong>subvencionat</strong>"
     subtitle="Coneixeràs la inversió requerida i les mesures necessàries per a la seva adopció.<br/>Es realitzarà un cas d'ús i s'implantarà formació adaptada a la teva pime."
-    title="Identifiquem les àrees de millora en els processos empresarials de la teva pime i dissenyem un pla personalitzat per millorar-los fent us de <span class='custom-gradient'>Intel·ligència Artificial</span>"
+    title="Identifiquem els processos empresarials de la teva pime i dissenyem un pla personalitzat per millorar-los amb <span class='custom-gradient'>Intel·ligència Artificial</span>"
     items={[
       {
         description:
@@ -90,7 +94,7 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Contactar',
+        text: 'Sol·licitar informació',
         href: u('contact'),
       },
       {
@@ -101,12 +105,12 @@ const metadata = {
     ]}
   >
     <Fragment slot="title"
-      >No esperis més, sol·licita assessorament gratuït en com millorar els processos de la teva empresa fent ús de la <span
+      >Aprofita la consultoria subvencionada sobre millorar els processos de la teva empresa amb <span
         class="custom-gradient">Intel·ligència Artificial</span
       ></Fragment
     >
     <Fragment slot="subtitle"
-      >Contacta'ns i t'assessorarem de forma gratuïta gràcies a la subvenció del Kit Consulting sobre com la IA et pot
+      >Si la teva empresa està a la província de Barcelona o Girona, t'assessorarem de forma gratuïta gràcies a la subvenció del Kit Consulting sobre com la IA et pot
       ajudar a potenciar la teva empresa.</Fragment
     >
   </CallToAction>

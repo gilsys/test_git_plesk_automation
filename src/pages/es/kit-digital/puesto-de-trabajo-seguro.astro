@@ -11,7 +11,7 @@ const u = useRoutes(getLangFromUrl(Astro.url));
 
 
 const metadata = {
-  title: 'Puesto de trabajo seguro',
+  title: 'Kit Digital - Subvención en Puesto de trabajo seguro',
   description:
     'Protege tu equipo y tus datos con soluciones de seguridad avanzadas, garantizando un entorno de trabajo seguro y productivo gracias al Kit Digital.',
 };
@@ -19,6 +19,10 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <Hero
+  actions={[
+    { variant: 'primary', text: 'Contactar', href: u('contact') },
+    { variant: 'primary', text: 'Preguntas frecuentes', href: u('kit-digital') }]
+    }
     tagline="Subvención Kit Digital"
     backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/dots/21.jpg' }}
   >

@@ -11,7 +11,7 @@ import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 const u = useRoutes(getLangFromUrl(Astro.url));
 
 const metadata = {
-  title: 'Gestió de la facturació i factura electrònica',
+  title: 'Kit Digital - Subvención en Gestió de la facturació i factura electrònica',
   description:
     "Digitalitza el flux d'emissió i recepció de factures amb la nostra solució de facturació electrònica personalitzable per a la teva PIME amb el Kit Digital.",
 };
@@ -19,6 +19,10 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <Hero
+  actions={[
+    { variant: 'primary', text: 'Contactar', href: u('contact') },
+    { variant: 'primary', text: 'Preguntas frecuentes', href: u('kit-digital') }]
+    }
     tagline="Subvención Kit Digital"
     backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/dots/21.jpg' }}
   >

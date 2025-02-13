@@ -8,36 +8,36 @@ import Layout from '~/layouts/PageLayout.astro';
 import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 
 const u = useRoutes(getLangFromUrl(Astro.url));
+
 const metadata = {
-  title: 'Kit Consulting | Gilsys',
+  title: `Consultoría IA con Kit Consulting en Catalunya`,
   description:
-    'Accede al servicio de Kit Consulting para optimizar los procesos y estrategias digitales de tu empresa. Descubre cómo obtener asesoramiento especializado para transformar digitalmente tu negocio.',
+    "Somos agentes consultores, expertos en Inteligencia Artificial, ofrecemos servicios de asesoramiento, subvencionados, desde Osona para empresas de Barcelona y Gerona."
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
-
   <Hero
     backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/dots/21.jpg' }}
-    actions={[{ variant: 'primary', text: 'Presupuesto gratuito', href: u('contact') }]}
-    tagline="Subvenciones para digitalizar tu empresa"
+    actions={[{ variant: 'primary', text: 'Solicitar información', href: u('contact') }]}
+    tagline="Somos agentes consultores homologados, expertos en <strong>Inteligencia Artificial</strong>, programación y datos."
   >
-    <Fragment slot="title"><span class="custom-gradient">Kit Consulting</span></Fragment>
+    <Fragment slot="title">Consultoría subvencionada con <span class="custom-gradient">Kit Consulting</span> en Catalunya</Fragment>
     <Fragment slot="subtitle">
-      Optimiza los procesos y estrategias digitales de tu empresa con nuestro servicio de asesoramiento experto.
+      Servicios subvencionados de asesoramiento digital, orientados a inteligencia artificial, desde Osona, para empresas de Barcelona y Gerona.
     </Fragment>
   </Hero>
 
   <Features3
     id="features-kit-consulting"
-    tagline="Servicios de asesoramiento del Kit Consulting"
-    title="Transforma digitalmente tu negocio con el Kit Consulting"
-    subtitle="Explora las diferentes áreas en las que podemos ayudarte con un asesoramiento personalizado y estratégico."
+    tagline="Servicios de consultoría y asesoramiento en Catalunya, subvencionados con Kit Consulting"
+    title="Si tienes empresa en la provincia de <span class='custom-gradient'>Barcelona</span> o <span class='custom-gradient'>Gerona</span>, te asesoramos en transformación digital"
+    subtitle="Explora las diferentes áreas donde podemos ayudar a tu empresa con asesoramiento personalizado y estratégico."
     items={[
       {
         title: 'Asesoramiento en Inteligencia Artificial',
-        description: 'Descubre cómo aplicar la IA para optimizar procesos y mejorar la productividad de tu negocio.',
+        description:
+          'Descubre cómo aplicar la IA para optimizar procesos y mejorar la productividad de tu negocio.',
         icon: 'tabler:robot',
         callToAction: {
           class: 'more-info',
@@ -47,7 +47,7 @@ const metadata = {
       },
       {
         title: 'Asesoramiento en análisis de datos (Básico)',
-        description: 'Aprende a interpretar y utilizar los datos para tomar mejores decisiones estratégicas.',
+        description: 'Analizamos los datos de tu empresa y proponemos diversas herramientas que puedan ayudar a mejorar su organización, evaluando también opciones donde intervenga inteligencia artificial.',
         icon: 'tabler:chart-bar',
         callToAction: {
           class: 'more-info',
@@ -58,7 +58,7 @@ const metadata = {
       {
         title: 'Asesoramiento en análisis de datos (Avanzado)',
         description:
-          'Implementa análisis avanzados para descubrir oportunidades y optimizar los resultados de tu negocio.',
+          'Avanzamos en clasificación de datos, definiendo un modelo de datos adaptado al negocio de tu empresa, focalizando la importancia de la inteligencia artificial para mejorar la calidad de la información.',
         icon: 'tabler:chart-pie',
         callToAction: {
           class: 'more-info',
@@ -68,7 +68,7 @@ const metadata = {
       },
       {
         title: 'Asesoramiento en ventas digitales',
-        description: 'Mejora tu estrategia de ventas digitales para aumentar ingresos y captar nuevos clientes.',
+        description: 'Mejora tu estrategia de ventas digitales para incrementar ingresos y captar nuevos clientes, estudiando cómo integrar inteligencia artificial.',
         icon: 'tabler:shopping-cart',
         callToAction: {
           class: 'more-info',
@@ -77,8 +77,8 @@ const metadata = {
         },
       },
       {
-        title: 'Asesoramiento en procesos de negocio o producción',
-        description: 'Optimiza y digitaliza tus procesos para ganar en eficiencia y reducir costos.',
+        title: 'Asesoramiento en procesos de negocio o proceso de producción',
+        description: 'Optimiza y digitaliza tus procesos para ganar en eficiencia y reducir costes, utilizando inteligencia artificial.',
         icon: 'tabler:settings',
         callToAction: {
           class: 'more-info',
@@ -88,7 +88,7 @@ const metadata = {
       },
       {
         title: 'Asesoramiento en estrategia y rendimiento de negocio',
-        description: 'Define e implementa estrategias para mejorar el rendimiento global de tu empresa.',
+        description: 'Define e implementa estrategias con inteligencia artificial para mejorar el rendimiento global de tu empresa.',
         icon: 'tabler:trending-up',
         callToAction: {
           class: 'more-info',
@@ -99,7 +99,7 @@ const metadata = {
       {
         title: 'Asesoramiento “360°” en transformación digital',
         description:
-          'Recibe un asesoramiento integral para abordar la digitalización de tu negocio desde todos los ángulos.',
+          'Recibe un asesoramiento integral para abordar la digitalización de tu negocio desde todos los ángulos aprovechando el potencial de la IA.',
         icon: 'tabler:circle',
         callToAction: {
           class: 'more-info',
@@ -113,8 +113,8 @@ const metadata = {
   <Content
     isImageSmall
     isReversed
-    tagline="Ayudas según el tamaño de tu empresa"
-    title="Ayudas según los segmentos del Kit Consulting"
+    tagline="Dependiendo del número de trabajadores de la empresa, variará el importe de la subvención"
+    title="Ayudas en asesoramiento según los segmentos del Kit Consulting"
     items={[
       {
         title: 'Pequeñas empresas',
@@ -138,14 +138,14 @@ const metadata = {
     }}
   />
 
-  <FAQs
-    title="Preguntas frecuentes sobre el Kit Consulting"
+  <FAQs    
+    title="Preguntas frecuentes sobre el Kit Consulting en Catalunya"
     items={[
       {
         title: '¿Qué es el Kit Consulting?',
         description:
-          'Es un servicio de asesoramiento especializado destinado a empresas que desean transformarse digitalmente, con soporte en estrategia, procesos y tecnología.',
-      },
+          'Es un servicio de asesoramiento especializado destinado a empresas que quieren transformarse digitalmente, con soporte en estrategia, procesos y tecnología.',
+      },  
       {
         title: '¿Quién puede beneficiarse del Kit Consulting?',
         description:
@@ -156,13 +156,45 @@ const metadata = {
         description:
           `Contacta con nosotros en <a class="text-accent" href='` +
           u('contact') +
-          `'>Gilsys</a> para recibir información detallada y comenzar el proceso de solicitud.`,
+          `'>Gilsys</a> para recibir información detallada y empezar el proceso de solicitud.`,
       },
       {
         title: '¿Cuál es la función de Gilsys en el Kit Consulting?',
         description:
-          'En Gilsys ofrecemos asesoramiento especializado y te ayudamos a implementar las soluciones más adecuadas para tu empresa.',
+          'En Gilsys, somos agentes consultores homologados. Podemos ejecutar Kit Consulting a aquellas empresas que dispongan de la subvención aprobada. Como expertos en Inteligencia artificial y desarrollo de software, ofrecemos servicios de <a class="text-accent" title="Consultoría en inteligencia artificial" href=' + u('consultory')+ '>consultoría especializada</a>. Además, podemos ayudarte a implementar las soluciones más adecuadas para tu empresa.',
       },
+      {
+        title: "¿Qué diferencia a Gilsys de otros agentes consultores?",
+        description:
+          'En Gilsys, somos una empresa principalmente técnica, por lo que nuestro enfoque es muy práctico y podemos ir más allá que las empresas que solo ofrecen orientación y asesoramiento. Hemos trabajado con clientes de sectores muy diversos, y esto nos ha dado una visión muy amplia de las mejores estrategias a seguir a nivel tecnológico.',
+      },
+      {
+        title: "¿Kit Consulting incluye la implantación de alguna herramienta?",
+        description:
+          "No, Kit Consulting es una subvención que cubre el servicio de consultoría y asesoramiento, para analizar la empresa y sus requisitos pero no incluye la implantación de ninguna herramienta, producto o servicio. Para ello existe otra subvención, <a class='text-accent' title='Implantaciones subvencionadas con kit digital' href='" + u('kit-digital') +"'>Kit Digital</a>, de la que también es posible beneficiarse de forma paralela.",
+      },
+      {
+        title: "¿Es compatible con Kit Digital?",
+        description:
+          "Sí, una empresa puede solicitar y beneficiarse de las dos subvenciones.",
+      },    
+      {
+        title: "¿Qué diferencia hay con Kit Digital?",
+        description:
+          "Kit consulting es un servicio de asesoramiento y consultoría, y Kit Digital es un servicio de transformación digital que incluye la implantación de herramientas o servicios.",
+      },  
+      {
+        title: '¿Solo trabajan en las provincias de Barcelona y Gerona?',
+        description:
+          `No, al tener la empresa en Osona, nos focalizamos en empresas de las provincias de Barcelona y Gerona, pero nos puedes consultar si tu empresa está ubicada en cualquier otra zona de Catalunya.`,
+      },
+      {
+        title: '¿Solo se puede solicitar en Catalunya?',
+        description:
+          `No, se puede solicitar en toda España, pero desde Gilsys ofrecemos este servicio solo a empresas de Catalunya, concretamente provincias de Barcelona y Gerona. Establecemos este límite por motivos de proximidad a la hora de ejecutar el asesoramiento.`,
+      },
+
+      
     ]}
   />
 
@@ -183,7 +215,7 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Presupuesto gratuito',
+        text: 'Solicitar información',
         href: u('contact'),
       },
       {
@@ -194,10 +226,10 @@ const metadata = {
     ]}
   >
     <Fragment slot="title"
-      >Aprovecha el <span class="custom-gradient">Kit Consulting</span> para transformar tu negocio</Fragment
+      >Si tienes empresa en la provincia de Barcelona o Gerona, aprovecha el <span class="custom-gradient">Kit Consulting</span> con nosotros y transforma tu negocio</Fragment
     >
     <Fragment slot="subtitle">
-      Obtén soporte personalizado en estrategia, tecnología y procesos para hacer crecer tu empresa.
+      Consigue soporte personalizado de la mano de expertos en Inteligencia Artificial, en estrategia, tecnología y procesos para hacer crecer tu empresa.
     </Fragment>
   </CallToAction>
 </Layout>

@@ -8,20 +8,24 @@ import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 const u = useRoutes(getLangFromUrl(Astro.url));
 
 const metadata = {
-  title: 'Servei d’assessorament en anàlisi de dades (Bàsic)',
+  title: 'Subvenció per assessorament en anàlisi de dades (Bàsic)',
   description:
-    "Servei d'anàlisi de dades bàsic adaptat a les necessitats de la teva pime, amb identificació de dades clau, selecció d'eines d'IA, assessorament i desenvolupament d'un cas d'ús pràctic.",
+  `Des de gilsys (Osona), oferim assessorament en anàlisi de dades bàsic a empreses de Barcelona i Girona, adaptat a les necessitats de la teva empresa. Subvencionat per Kit Consulting.`,
 };
 ---
 
 <Layout metadata={metadata}>
   <Hero
-    tagline="Subvenció Kit Consulting"
+    tagline="Subvenció Kit Consulting des d'Osona, per empreses de Barcelona i Girona"
+    actions={[
+      { variant: 'primary', text: 'Sol·licitar informació', href: u('contact') },
+      { variant: 'primary', text: 'Preguntes freqüents', href: u('kit-consulting') }]
+      }
     backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/22.jpg' }}
   >
     <Fragment slot="title">Servei d’assessorament en anàlisi de dades (Bàsic)</Fragment>
     <Fragment slot="subtitle"
-      >Analitzem la teva pime i definim un pla per integrar <span class='custom-gradient'> Intel·ligència Artificial</span>, identificant les dades clau i les eines més eficients per automatitzar processos i optimitzar la presa de decisions.</Fragment
+      >Analitzem les dades de la teva empresa i definim un pla per integrar <span class='custom-gradient'>Intel·ligència Artificial</span>, identificant les dades clau i les eines més eficients per automatitzar processos.</Fragment
     >
   </Hero>
 
@@ -86,7 +90,7 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Contactar',
+        text: 'Sol·licitar informació',
         href: u('contact'),
       },
       {
@@ -97,8 +101,8 @@ const metadata = {
     ]}
   >
     <Fragment slot="title"
-      >No esperis més, sol·licita assessorament gratuït en <span class="custom-gradient">anàlisi de dades</span
-      ></Fragment
+      >Assessorament gratuït en <span class="custom-gradient">anàlisi de dades</span
+      > per empreses de Barcelona i Girona</Fragment
     >
     <Fragment slot="subtitle"
       >Contacta'ns i t'assessorarem de forma gratuïta gràcies a la subvenció del Kit Consulting sobre com la IA et pot
