@@ -62,10 +62,8 @@ const jsonLdCorporation = {
 ---
 
 <Layout metadata={metadata}>
-  <Fragment slot="head">
     <script type="application/ld+json" set:html={JSON.stringify(jsonLdWebsite, null, 2)} />
     <script type="application/ld+json" set:html={JSON.stringify(jsonLdCorporation, null, 2)} />
-  </Fragment>
 
   <Hero
     id="hero-home"
@@ -290,7 +288,7 @@ const jsonLdCorporation = {
     items={[
       {
         title: '¿Qué es el Kit Digital?',
-        description: `El gobierno de España impulsa el programa <a class="text-accent" href='https://www.acelerapyme.gob.es/kit-digital' target='_blank' rel='nofollow'>Kit Digital</a>, financiado por fondos europeos Next Generation, para ayudar a pequeñas y medianas empresas, otorgando subvenciones de entre <span class="text-primary">3.000€</span> y <span class="text-primary">29.000€</span> para invertir en la implantación de nuevas tecnologías.`,
+        description: `El gobierno de España impulsa el programa <a class="text-accent" href='https://www.acelerapyme.gob.es/kit-digital' target='_blank' rel='nofollow'>Kit Digital</a>, financiado por fondos europeos Next Generation, para ayudar a pequeñas y medianas empresas, otorgando subvenciones de entre <strong>3.000€</strong> y <strong>29.000€</strong> para invertir en la implantación de nuevas tecnologías.`,
       },
       {
         title: 'Somos agentes digitalizadores',
@@ -327,7 +325,7 @@ const jsonLdCorporation = {
     items={[
       {
         title: '¿Qué es el Kit Consulting?',
-        description: `El programa <a class="text-accent" href='https://www.acelerapyme.gob.es/kit-consulting' target='_blank' rel='nofollow'>Kit Consulting</a>, impulsado por el gobierno de España con fondos europeos Next Generation, ofrece subvenciones de <span class="text-primary">12.000€</span> a <span class="text-primary">24.000€</span> en diferentes servicios de asesoramiento digital.`,
+        description: `El programa <a class="text-accent" href='https://www.acelerapyme.gob.es/kit-consulting' target='_blank' rel='nofollow'>Kit Consulting</a>, impulsado por el gobierno de España con fondos europeos Next Generation, ofrece subvenciones de <strong>12.000€</strong> a <strong>24.000€</strong> en diferentes servicios de asesoramiento digital.`,
       },
       {
         title: 'Somos agentes consultores',

@@ -1,0 +1,127 @@
+# Activar mod_rewrite
+RewriteEngine On
+RewriteBase /
+
+
+RewriteRule ^ca/gilsys/$ /ca/empresa-tic [R=301,L]
+RewriteRule ^ca/serveis/$ /ca [R=301,L]
+RewriteRule ^ca/serveis/consultoria/$ /ca/consultoria-tic [R=301,L]
+RewriteRule ^ca/serveis/migracio/$ /ca/migracio-integracio [R=301,L]
+RewriteRule ^ca/serveis/software/$ /ca/software-personalitzat [R=301,L]
+RewriteRule ^ca/serveis/software/software/$ /ca/software-personalitzat [R=301,L]
+RewriteRule ^ca/serveis/software/app/$ /ca/programacio-a-mida/aplicacions-web [R=301,L]
+RewriteRule ^ca/serveis/software/gestors-productes-pim/$ /ca/software-personalitzat/pimcore-barcelona [R=301,L]
+RewriteRule ^ca/serveis/software/facturacio/$ /ca/software-personalitzat/programa-gestio-clients [R=301,L]
+RewriteRule ^ca/serveis/software/gestio-de-clients/$ /ca/software-personalitzat/programa-gestio-clients [R=301,L]
+RewriteRule ^ca/serveis/software/gestio-de-processos/$ /ca/programacio-a-mida [R=301,L]
+RewriteRule ^ca/serveis/software/ciberseguretat/$ /ca/consultoria-tic [R=301,L]
+RewriteRule ^ca/serveis/software/comunicacions-segures/$ /ca/migracio-integracio [R=301,L]
+RewriteRule ^ca/serveis/software/business-intelligence-i-analitica/$ /ca/software-personalitzat/metabase-business-intelligence [R=301,L]
+RewriteRule ^ca/serveis/software/inteligencia-artificial/$ /ca/programacio-a-mida/ia-barcelona [R=301,L]
+RewriteRule ^ca/serveis/software/xarxes-socials/$ /ca [R=301,L]
+RewriteRule ^ca/serveis/web/$ /ca/programacio-a-mida/aplicacions-web [R=301,L]
+RewriteRule ^ca/serveis/web/corporativa/$ /ca/software-personalitzat [R=301,L]
+RewriteRule ^ca/serveis/web/botiga/$ /ca/software-personalitzat [R=301,L]
+RewriteRule ^ca/serveis/web/intranet/$ /ca/software-personalitzat [R=301,L]
+RewriteRule ^ca/serveis/web/gestio-continguts/$ /ca/software-personalitzat [R=301,L]
+RewriteRule ^ca/serveis/web/interactiva/$ /ca/software-personalitzat [R=301,L]
+RewriteRule ^ca/serveis/web/posicionament/$ /ca [R=301,L]
+RewriteRule ^ca/serveis/web/renovacio/$ /ca [R=301,L]
+RewriteRule ^ca/serveis/web/hosting/$ /ca [R=301,L]
+
+## Kit Consulting
+RewriteRule ^ca/kit-consulting/servei-de-assessorament-en-analisis-de-dades-avancat/$ /ca/kit-consulting-catalunya/analisi-dades-avancat [R=301,L]
+RewriteRule ^ca/kit-consulting/servei-de-assessorament-en-estrategia-i-rendiment-de-negoci/$ /ca/kit-consulting-catalunya/estrategia-rendiment-negoci [R=301,L]
+RewriteRule ^ca/kit-consulting/servei-de-assessorament-en-processos-de-negoci-o-proces-de-produccio/$ /ca/kit-consulting-catalunya/processos-negoci-produccio [R=301,L]
+RewriteRule ^ca/kit-consulting/servei-de-assessorament-en-vendes-digitals/$ /ca/kit-consulting-catalunya/vendes-digitals [R=301,L]
+RewriteRule ^ca/kit-consulting/servei-de-assessorament-360-en-transformacion-digital/$ /ca/kit-consulting-catalunya/transformacion-digital-360 [R=301,L]
+RewriteRule ^ca/kit-consulting/servei-de-assessorament-en-intelligencia-artificial/$ /ca/kit-consulting-catalunya/intelligencia-artificial [R=301,L]
+RewriteRule ^ca/kit-consulting/servei-dassessorament-en-analisi-de-dades-basic/$ /ca/kit-consulting-catalunya/analisi-dades-basic [R=301,L]
+
+## Landings
+RewriteRule ^ca/business-intelligence-subvencio-kit-digital/$ /ca/kit-digital/business-intelligence-i-analitica [R=301,L]
+RewriteRule ^ca/gestio-de-processos-subvencio-kit-digital/$ /ca/kit-digital/gestio-de-processos [R=301,L]
+RewriteRule ^ca/crm-subvencio-kit-digital/$ /ca/kit-digital/gestion-de-clientes [R=301,L]
+
+#############################
+# REDIRECCIONES ESPAÑOL (es)
+#############################
+
+## Sección principal
+RewriteRule ^es/gilsys/$ /es/empresa-it [R=301,L]
+RewriteRule ^es/servicios/$ /es [R=301,L]
+RewriteRule ^es/servicios/consultoria-tecnologica/$ /es/consultoria-it [R=301,L]
+RewriteRule ^es/servicios/migracion-integracion/$ /es/migracion-integracion [R=301,L]
+RewriteRule ^es/servicios/software-apps/$ /es/programacion-a-medida [R=301,L]
+RewriteRule ^es/servicios/desarrollo-web/$ /es/programacion-a-medida/aplicaciones-web [R=301,L]
+RewriteRule ^es/servicios/software-apps/programacion-software/$ /es/programacion-a-medida [R=301,L]
+RewriteRule ^es/servicios/software-apps/programacion-apps-moviles/$ /es/programacion-a-medida/apps [R=301,L]
+RewriteRule ^es/servicios/software-apps/gestores-productos-pim/$ /es/software-personalizado/pimcore-barcelona [R=301,L]
+RewriteRule ^es/servicios/software-apps/facturacion-electronica/$ /es/software-personalizado [R=301,L]
+RewriteRule ^es/servicios/software-apps/integracion-redes-sociales/$ /es/software-personalizado [R=301,L]
+RewriteRule ^es/servicios/software-apps/gestion-de-clientes/$ /es/software-personalizado/programa-gestion-clientes [R=301,L]
+RewriteRule ^es/servicios/software-apps/gestion-de-procesos/$ /es/programacion-a-medida [R=301,L]
+RewriteRule ^es/servicios/software-apps/ciberseguridad/$ /es/consultoria-it [R=301,L]
+RewriteRule ^es/servicios/software-apps/comunicaciones-seguras/$ /es/migracion-integracion [R=301,L]
+RewriteRule ^es/servicios/software-apps/business-intelligence-y-analitica/$ /es/software-personalizado/metabase-business-intelligence [R=301,L]
+RewriteRule ^es/servicios/software-apps/inteligencia-artificial/$ /es/programacion-a-medida/ia-barcelona [R=301,L]
+RewriteRule ^es/servicios/desarrollo-web/paginas-web-corporativas/$ /es/software-personalizado/web-wordpress [R=301,L]
+RewriteRule ^es/servicios/desarrollo-web/comercio-electronico/$ /es/software-personalizado/programacion-woocommerce-prestashop [R=301,L]
+RewriteRule ^es/servicios/desarrollo-web/intranets-webs-privadas/$ /es/programacion-a-medida [R=301,L]
+RewriteRule ^es/servicios/desarrollo-web/gestion-contenidos/$ /es/software-personalizado/web-wordpress [R=301,L]
+RewriteRule ^es/servicios/desarrollo-web/paginas-web-interactivas/$ /es/programacion-a-medida/aplicaciones-web [R=301,L]
+RewriteRule ^es/servicios/desarrollo-web/posicionamiento-buscadores/$ /es/consultoria-it [R=301,L]
+RewriteRule ^es/servicios/desarrollo-web/renovacion-optimizacion/$ /es/consultoria-it [R=301,L]
+RewriteRule ^es/servicios/desarrollo-web/hosting/$ /es/consultoria-it [R=301,L]
+
+
+
+RewriteRule ^es/kit-consulting/servicio-de-asesoramiento-en-ventas-digitales/  /es/kit-consulting/ventas-digitales [R=301,L]
+RewriteRule ^es/kit-consulting/servicio-de-asesoramiento-en-analisis-de-datos-basico/ /es/kit-consulting/analisis-datos-basico [R=301,L]
+RewriteRule ^es/kit-consulting/servicio-de-asesoramiento-en-estrategia-y-rendimiento-de-negocio/ /es/kit-consulting/estrategia-rendimiento-negocio [R=301,L]
+RewriteRule ^es/kit-consulting/servicio-de-asesoramiento-en-procesos-de-negocio-o-proceso-de-produccion/ /es/kit-consulting/procesos-negocio-produccion [R=301,L]
+RewriteRule ^es/kit-consulting/servicio-de-asesoramiento-en-analisis-de-datos-avanzado/ /es/kit-consulting/analisis-datos-avanzado [R=301,L]
+RewriteRule ^es/kit-consulting/servicio-de-asesoramiento-360-en-transformacion-digital/ /es/kit-consulting/transformacion-digital-360 [R=301,L]
+RewriteRule ^es/kit-consulting/servicio-de-asesoramiento-en-inteligencia-artificial/ /es/kit-consulting/inteligencia-artificial [R=301,L]
+
+
+## Landings
+RewriteRule ^es/crm-100-subvencionable-con-el-kit-digital/$ /es/kit-digital/gestion-de-clientes [R=301,L]
+RewriteRule ^es/business-intelligence-subvencion-kit-digital/$ /es/kit-digital/business-intelligence-y-analitica [R=301,L]
+RewriteRule ^es/gestion-procesos-subvencion-kit-digital/$ /es/kit-digital/gestion-de-clientes [R=301,L]
+
+#############################
+# REDIRECCIONES INGLÉS (en)
+#############################
+
+## Sección principal
+RewriteRule ^en/gilsys/$ /en/it-company [R=301,L]
+RewriteRule ^en/services/$ /en [R=301,L]
+RewriteRule ^en/services/technology-consulting/$ /en/it-consulting [R=301,L]
+RewriteRule ^en/services/migration-and-integration/$ /en/migration-integration [R=301,L]
+RewriteRule ^en/services/software-and-app-programming/$ /en/custom-development [R=301,L]
+RewriteRule ^en/services/web-development/$ /en/custom-development/web-applications [R=301,L]
+RewriteRule ^en/services/web-development/corporate-websites/$ /en/custom-software/wordpress-web [R=301,L]
+RewriteRule ^en/services/web-development/e-commerce/$ /en/custom-software/woocommerce-prestashop-development [R=301,L]
+RewriteRule ^en/services/web-development/interactive-websites/$ /en/custom-development [R=301,L]
+RewriteRule ^en/services/web-development/renovation-and-optimization/$ /en/migration-integration [R=301,L]
+RewriteRule ^en/services/web-development/search-engine-optimization/$ /en/it-consulting [R=301,L]
+RewriteRule ^en/services/web-development/intranets-and-private-websites/$ /en/custom-development [R=301,L]
+
+RewriteRule ^en/services/web-development/content-management/$ /en/custom-software/wordpress-web [R=301,L]
+RewriteRule ^en/services/web-development/hosting/$ /en [R=301,L]
+
+RewriteRule ^en/services/software-and-app-programming/business-intelligence-and-analytics/$ /en/custom-software/metabase-business-intelligence [R=301,L]
+RewriteRule ^en/services/software-and-app-programming/artificial-intelligence/$ /en/custom-development/ia-spain [R=301,L]
+RewriteRule ^en/services/software-and-app-programming/secure-communications/$ /en/migration-integration [R=301,L]
+RewriteRule ^en/services/software-and-app-programming/software-programming/$ /en/custom-software [R=301,L]
+RewriteRule ^en/services/software-and-app-programming/mobile-app-development/$ /en/custom-development/apps [R=301,L]
+RewriteRule ^en/services/software-and-app-programming/product-managers/$ /en/custom-software/pimcore-spain [R=301,L]
+RewriteRule ^en/services/software-and-app-programming/integration-into-social-media/$ /en/custom-software [R=301,L]
+RewriteRule ^en/services/software-and-app-programming/electronic-invoicing/$ /en/custom-software [R=301,L]
+RewriteRule ^en/services/software-and-app-programming/customer-management/$ /en/custom-software [R=301,L]
+RewriteRule ^en/services/software-and-app-programming/process-management/$ /en/custom-software [R=301,L]
+RewriteRule ^en/services/software-and-app-programming/cybersecurity/$ /en/it-consulting [R=301,L]
+
+
+

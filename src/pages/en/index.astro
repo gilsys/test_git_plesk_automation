@@ -61,10 +61,8 @@ const jsonLdCorporation = {
 ---
 
 <Layout metadata={metadata}>
-  <Fragment slot="head">
     <script type="application/ld+json" set:html={JSON.stringify(jsonLdWebsite, null, 2)} />
     <script type="application/ld+json" set:html={JSON.stringify(jsonLdCorporation, null, 2)} />
-  </Fragment>
 
   <Hero
     id="hero-home"
@@ -276,84 +274,6 @@ const jsonLdCorporation = {
       { title: 'Lines of Code', amount: '+1M' },
     ]}
   />
-
-  <!-- Content Widget **************** -->
-
-  <!-- <Content
-    isImageSmall
-    classes={{
-      container: 'pb-10 md:pb-0 lg:pb-0',
-    }}
-    isAfterContent={false}
-    items={[
-      {
-        title: 'Què és el Kit Digital?',
-        description: `El govern d'Espanya impulsa el programa <a class="text-accent" href='https://www.acelerapyme.gob.es/kit-digital' target='_blank'>Kit Digital</a>, finançat per fons europeus Next Generation, per ajudar petites i mitjanes empreses, otorgant subvencions entre <span class="text-primary">3.000€</span> i <span class="text-primary">29.000€</span> per invertir en la implantació de noves tecnologies.`,
-      },
-      {
-        title: 'Som agents digitalitzadors',
-        description:
-          `A Gilsys som un agent digitalitzador certificat dins del programa Kit Digital. Podem ajudar-te a digitalitzar les subvencions.
-            <br />
-            <a href="` +
-          u('kit-digital') +
-          `" class="btn-primary mt-12 mb-12 w-auto">Més informació</a>`,
-      },
-    ]}
-    image={{
-      id: 'image-kit-digital',
-      src: '~/assets/images/kit-digital.jpg',
-      alt: `Kit Digital - Subvencions per implantació de transformació digital a pimes i autònoms`,
-    }}
-  >
-    <Fragment slot="content">
-      <h2 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">KIT DIGITAL</h2>
-      <p class="-mb-4">Subvencions per solucions digitals per a autònoms i empreses de fins a 250 treballadors.</p>
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-lightgray"></div>
-    </Fragment>
-  </Content> -->
-
-  <!-- Content Widget **************** -->
-
-  <!-- <Content
-    isReversed
-    isImageSmall
-    isAfterContent
-    items={[
-      {
-        title: 'Què és el Kit Consulting?',
-        description: `El programa <a class="text-accent" href='https://www.acelerapyme.gob.es/kit-consulting' target='_blank'>Kit Consulting</a>, impulsat pel govern d'Espanya amb fons europeus Next Generation, ofereix subvencions de <span class="text-primary">12.000€</span> a <span class="text-primary">24.000€</span> en diferents serveis d'assessorament digital.`,
-      },
-      {
-        title: 'Som agents consultors',
-        description:
-          `A Gilsys som un agent consultor certificat dins del programa Kit Consulting. T’ajudem a aprofitar les subvencions i dissenyar el full de ruta per a la transformació digital de la teva empresa.
-            <br />
-            <a href="` +
-          u('kit-consulting') +
-          `" class="btn-primary mt-12 mb-12 w-auto">Més informació</a>`,
-      },
-    ]}
-    image={{
-      id: 'image-kit-consulting',
-      src: '~/assets/images/kit-consulting.jpg',
-      alt: 'Kit Consulting - Subvencions per assessorament en transformació digital',
-    }}
-  >
-    <Fragment slot="content">
-      <h2 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">KIT CONSULTING</h2>
-      <p class="-mb-4">
-        Subvencions en serveis d'assessorament en transformació digital per a empreses d'entre 10 i 250 treballadors.
-      </p>
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-lightgray"></div>
-    </Fragment>
-  </Content> -->
 
   <!-- Features2 Widget ************** -->
   <Features2
