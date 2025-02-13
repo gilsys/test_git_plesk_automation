@@ -293,7 +293,7 @@ body.route-home .wg-hero img{
 
 .breadcrumb-container {
   background-color: rgba(0, 0, 0, 0.5);
-  @apply text-white absolute bottom-0 left-0 w-full py-2;
+  @apply text-white mt-[-36px] 2xl:mt-[-45px] sticky top-[117px] min-[861px]:top-[137px] 2xl:top-[143px] z-[1] left-0 w-full py-2;
 }
 
 nav[aria-label="breadcrumb"] li:not(:last-child)::after {

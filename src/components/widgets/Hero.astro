@@ -116,13 +116,14 @@ const breadcrumbData = route ? getBreadcrumb(language, route) : null;
       </div>
     </div>
   </div>
-  {
-    breadcrumbData && (
-      <div class="breadcrumb-container">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6">
-          <Breadcrumb items={breadcrumbData} />
-        </div>
-      </div>
-    )
-  }
 </section>
+
+{
+  breadcrumbData && (
+    <div class="breadcrumb-container">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <Breadcrumb items={breadcrumbData} />
+      </div>
+    </div>
+  )
+}
