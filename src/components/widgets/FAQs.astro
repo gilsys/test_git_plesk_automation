@@ -3,6 +3,8 @@ import Headline from '~/components/ui/Headline.astro';
 import ItemGrid from '~/components/ui/ItemGrid.astro';
 import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
 import type { Faqs as Props } from '~/types';
+import { stripHtmlTags } from '~/utils/utils';
+
 
 const {
   title = '',
@@ -11,12 +13,28 @@ const {
   heading = '',
   items = [],
   columns = 2,
-
+  schema = false,
   id,
   isDark = false,
   classes = {},
   bg = await Astro.slots.render('bg'),
 } = Astro.props;
+
+const faqJsonLd = schema
+  ? {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: items.map(({ title, description }) => ({
+        "@type": "Question",
+        name: stripHtmlTags(title),
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: stripHtmlTags(description),
+        },
+      })),
+    }
+  : null;
+
 ---
 
 <WidgetWrapper id={id} isDark={isDark} containerClass={`wg-faqs max-w-7xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
@@ -39,4 +57,9 @@ const {
       icon: 'flex-shrink-0 mt-1 w-6 h-6 text-primary',
     }}
   />
+
+  {schema && (
+    <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd, null, 2)} />
+  )}
+
 </WidgetWrapper>
