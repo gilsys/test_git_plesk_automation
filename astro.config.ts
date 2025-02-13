@@ -30,18 +30,7 @@ export default defineConfig({
 
   integrations: [tailwind({
     applyBaseStyles: false,
-  }), sitemap(
-    {
-        i18n: {
-          defaultLocale: 'es',
-          locales: {
-            en: 'en-US',
-            es: 'es-ES',
-            ca: 'ca-CA',
-          },
-        },
-    }
-  ), mdx(), icon({
+  }), mdx(), icon({
     include: {
       tabler: ['*'],
       'flat-color-icons': [

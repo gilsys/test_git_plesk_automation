@@ -172,8 +172,6 @@ export const routes = {
     'software/pimcore': '/ca/software-personalitzat/pimcore-barcelona',
     'software/crm': '/ca/software-personalitzat/programa-gestio-clients',
     'software/wp': '/ca/software-personalitzat/web-wordpress',
-
-    'about': '/ca/sobre-nosaltres',
     
 
     'contact': '/ca/contactar',
@@ -228,8 +226,6 @@ export const routes = {
     'software/crm': '/es/software-personalizado/programa-gestion-clientes',
     'software/wp': '/es/software-personalizado/web-wordpress',
 
-    'about': '/es/sobre-nosotros',
-
     'contact': '/es/contactar',
     'blog': '/es/blog',
     'terms': '/es/aviso-legal',
@@ -256,8 +252,6 @@ export const routes = {
     'software/pimcore': '/en/custom-software/pimcore-spain',
     'software/crm': '/en/custom-software/customer-relationship-management',
     'software/wp': '/en/custom-software/wordpress-web',
-
-    'about': '/en/about-us',
 
     'contact': '/en/contact',
     'blog': '/en/blog',
