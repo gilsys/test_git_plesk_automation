@@ -86,8 +86,7 @@ export const config: CookieConsentConfig = {
       en: {
         consentModal: {
           title: "We value your privacy 🍪",
-          description:
-            "At Gilsys, we only use essential cookies to understand how you navigate our website with Google Analytics and Google Tag Manager. We do not use trackers for advertising nor share data with third parties. You can accept all cookies or manage your preferences.",
+          description: "At Gilsys, we use essential cookies to ensure the proper functioning of our website and to enhance your browsing experience. We do not use tracking cookies for advertising or share data with third parties. You can accept all cookies or manage your preferences.",
           acceptAllBtn: "Accept",
           acceptNecessaryBtn: "Reject",
           showPreferencesBtn: "Manage preferences",
@@ -105,31 +104,39 @@ export const config: CookieConsentConfig = {
           serviceCounterLabel: "Service|Services",
           sections: [
             {
-              title: "Cookie Usage",
+              title: "Use of cookies",
+              description:"At Gilsys, we use essential cookies to ensure the proper functioning of the website and analytics cookies to understand how you interact with our site. This helps us improve performance and optimize your experience. These cookies may collect anonymized data such as your IP address or the type of device you use. We do not use cookies for advertising purposes or share data with third parties.",
+            },
+            {
+              title:
+                'Strictly Necessary Cookies <span class="pm__badge">Always Enabled</span>',
               description:
-                "At Gilsys, we use Google Analytics and Google Tag Manager to collect information about how you interact with our website. This allows us to measure site usage, improve performance, and optimize your experience. These cookies may collect data such as anonymized IP addresses or the type of device you are using. We do not use cookies for advertising nor share data with third parties.",
+                "These cookies are essential for the proper functioning of the website and cannot be disabled. They do not store any personally identifiable information and are used exclusively to ensure a secure and personalized experience. They include:<br><br> \
+                - <strong>cc_cookie</strong>: Saves your preferences regarding cookie usage.<br> \
+                - <strong>lang/strong>: Remembers your selected language to display content in your preferred language.<br><br> \
+                These cookies are necessary and cannot be managed from this panel.",
+              linkedCategory: "necessary",
             },
             {
               title: "Analytics Cookies",
               description:
-                "These cookies help us understand how you interact with the website through anonymous data collected by Google Tag Manager and Google Analytics.",
+                "These help us understand how you interact with the website through anonymous data collected by Google Tag Manager and Google Analytics.",
               linkedCategory: "analytics",
             },
             {
               title: "More information",
               description:
-                'If you have any questions regarding our use of cookies, <a class="cc__link" href="/en/contact">contact us</a>.',
+                'If you have any questions about our use of cookies, <a class="cc__link" href="/en/contact">contact us</a>.',
             },
           ],
         },
       },
-      
-
+  
       es: {
         consentModal: {
           title: "Valoramos tu privacidad 🍪",
           description:
-            "En Gilsys, solo usamos cookies esenciales para entender cómo navegas por nuestra web con Google Analytics y Google Tag Manager. No utilizamos rastreadores para publicidad ni compartimos datos con terceros. Puedes aceptar todas las cookies o gestionar tus preferencias.",
+            "En Gilsys utilizamos cookies esenciales para garantizar el correcto funcionamiento del sitio web y mejorar tu experiencia de navegación. No utilizamos rastreadores publicitarios ni compartimos datos con terceros. Puedes aceptar todas las cookies o gestionar tus preferencias.",
           acceptAllBtn: "Aceptar",
           acceptNecessaryBtn: "Rechazar",
           showPreferencesBtn: "Gestionar preferencias",
@@ -148,8 +155,18 @@ export const config: CookieConsentConfig = {
           sections: [
             {
               title: "Uso de cookies",
+              description: "En Gilsys utilizamos cookies esenciales para garantizar el correcto funcionamiento del sitio web y cookies de análisis para entender cómo interactúas con nuestra web. Esto nos permite mejorar su rendimiento y optimizar tu experiencia. Estas cookies pueden recopilar datos anonimizados como tu dirección IP o el tipo de dispositivo que utilizas. No usamos cookies con fines publicitarios ni compartimos datos con terceros.",
+
+            },
+            {
+              title:
+                'Cookies técnicas necesarias <span class="pm__badge">Siempre activas</span>',
               description:
-                "En Gilsys, utilizamos Google Analytics y Google Tag Manager para recopilar información sobre cómo interactúas con nuestra web. Esto nos permite medir el uso del sitio, mejorar su rendimiento y optimizar tu experiencia. Estas cookies pueden recopilar datos como direcciones IP anonimizadas o el tipo de dispositivo que utilizas. No usamos cookies para publicidad ni compartimos datos con terceros.",
+                "Estas cookies son imprescindibles para el funcionamiento del sitio web y no se pueden desactivar. No almacenan información personal identificable y se utilizan exclusivamente para garantizar una experiencia segura y personalizada. Incluyen:<br><br> \
+                - <strong>cc_cookie</strong>: Guarda tus preferencias sobre el uso de cookies.<br> \
+                - <strong>lang</strong>: Recuerda el idioma seleccionado para mostrar el contenido en tu idioma preferido.<br><br> \
+                Estas cookies son necesarias y no pueden ser gestionadas desde este panel.",
+              linkedCategory: "necessary",
             },
             {
               title: "Cookies de análisis",
@@ -165,21 +182,18 @@ export const config: CookieConsentConfig = {
           ],
         },
       },
-      
-
+    
       ca: {
         consentModal: {
           title: "Valorem la teva privacitat 🍪",
-          description:
-            "A Gilsys fem servir cookies essencials per entendre com navegues per la nostra web amb Google Analytics i Google Tag Manager. No utilitzem rastrejadors per publicitat ni compartim dades amb tercers. Pots acceptar totes les cookies o gestionar les teves preferències.",
+          description: "A Gilsys utilitzem cookies essencials per garantir el funcionament correcte del lloc web i millorar la teva experiència de navegació. No fem servir rastrejadors publicitaris ni compartim dades amb tercers. Pots acceptar totes les cookies o gestionar les teves preferències.",
           acceptAllBtn: "Acceptar",
           acceptNecessaryBtn: "Rebutjar",
           showPreferencesBtn: "Gestionar preferències",
-          footer:
-          `
-          <a href="${routes['ca']['terms']}">Avís legal</a>
-          <a href="${routes['ca']['privacy-policy']}">Política de privacitat</a>
-          <a href="${routes['ca']['cookie-policy']}">Política de cookies</a>`,
+          footer: `
+            <a href="${routes['ca']['terms']}">Avís legal</a>
+            <a href="${routes['ca']['privacy-policy']}">Política de privacitat</a>
+            <a href="${routes['ca']['cookie-policy']}">Política de cookies</a>`,
         },
         preferencesModal: {
           title: "Centre de preferències de cookies",
@@ -191,8 +205,18 @@ export const config: CookieConsentConfig = {
           sections: [
             {
               title: "Ús de les cookies",
+              description: "A Gilsys utilitzem cookies essencials per garantir el funcionament correcte del lloc web i cookies d’anàlisi per entendre com interactues amb la nostra web. Això ens permet millorar-ne el rendiment i optimitzar la teva experiència. Aquestes cookies poden recollir dades anonimitzades com la teva adreça IP o el tipus de dispositiu que utilitzes. No fem servir cookies amb finalitats publicitàries ni compartim dades amb tercers.",
+
+            },
+            {
+              title:
+                'Cookies tècniques necessàries <span class="pm__badge">Sempre Actives</span>',
               description:
-                "A Gilsys utilitzem Google Analytics i Google Tag Manager per recollir informació sobre com interactues amb la nostra web. Això ens permet mesurar l’ús del lloc, millorar-ne el rendiment i optimitzar la teva experiència. Aquestes cookies poden recollir dades com l’adreça IP anonimitzada o el tipus de dispositiu que utilitzes. No utilitzem cookies per publicitat ni compartim dades amb tercers.",
+                "Aquestes cookies són essencials per al funcionament del lloc web i no es poden desactivar. No emmagatzemen informació personal identificable i s’utilitzen exclusivament per garantir una experiència segura i personalitzada. Inclouen:<br><br> \
+                - <strong>cc_cookie</strong>: Guarda les teves preferències sobre l'ús de cookies.<br> \
+                - <strong>lang</strong>: Recorda l'idioma seleccionat per mostrar el contingut en la teva llengua preferida.<br><br> \
+                Aquestes cookies són necessàries i no es poden gestionar des d'aquest panell.",
+              linkedCategory: "necessary",
             },
             {
               title: "Cookies d’anàlisi",
@@ -207,7 +231,7 @@ export const config: CookieConsentConfig = {
             },
           ],
         },
-      },   
+      }      
     },
   },
 };
