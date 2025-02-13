@@ -9,6 +9,23 @@ declare global {
     }
   }
 
+  function waitForGtag(callback) {
+    const checkInterval = 100; // Intervalo de comprobación en milisegundos
+    const maxAttempts = 50; // Número máximo de intentos (5 segundos)
+  
+    let attempts = 0;
+    const intervalId = setInterval(() => {
+      if (typeof window.gtag === 'function') {
+        clearInterval(intervalId);
+        callback();
+      } else if (attempts >= maxAttempts) {
+        clearInterval(intervalId);
+        console.error("gtag not loaded.");
+      }
+      attempts++;
+    }, checkInterval);
+  }
+
 export const config: CookieConsentConfig = {
   root: "#cc-container",
   guiOptions: {
@@ -36,16 +53,16 @@ export const config: CookieConsentConfig = {
           onAccept: () => {
             console.log("ga4 accepted");
             
-            // Grant consent to the Google Analytics service
-            console.log("ga4 granted");
-
-            window.gtag("consent", "update", {
-              ad_storage: "granted",
-              ad_user_data: "granted",
-              ad_personalization: "granted",
-              analytics_storage: "granted",
-            });
-
+            waitForGtag(() => {
+              console.log("ga4 granted");
+          
+              window.gtag("consent", "update", {
+                ad_storage: "granted",
+                ad_user_data: "granted",
+                ad_personalization: "granted",
+                analytics_storage: "granted",
+              });
+            });           
           },
           onReject: () => {
             console.log("ga4 rejected");
