@@ -18,10 +18,53 @@ const metadata = {
 };
 
 const u = useRoutes(getLangFromUrl(Astro.url));
+
+// Obtiene la fecha y hora actuales *durante la compilación*
+const buildDate = new Date();
+
+const jsonLdWebsite = {
+  '@context': 'https://schema.org/',
+  '@type': 'WebSite',
+  '@id': 'https://www.gilsys.com/#website',
+  name: 'gilsys',
+  alternateName: metadata.title,
+  description: metadata.description,
+  url: 'https://www.gilsys.com/',
+  datePublished: '2025-02-14T11:26:41+00:00',
+  dateModified: buildDate.toISOString(),
+};
+
+
+const jsonLdCorporation = {
+  '@context': 'https://schema.org/',
+  '@id': 'https://www.gilsys.com/#organization',
+  '@type': 'Corporation',
+  name: 'gilsys',
+  legalname: 'gilsys',
+  description: metadata.description,
+  image: 'https://www.gilsys.com/logo-programacion-software-a-medida.jpg',
+  url: 'https://www.gilsys.com/',
+  logo: 'https://www.gilsys.com/gilsys-logo.jpg',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Barcelona',
+    addressRegion: 'Catalonia',
+    addressCountry: 'ES',
+    postalCode: '08580',
+    streetAddress: 'Passeig del Ter 48',
+  },
+  email: 'info@gilsys.com',
+  foundingDate: '01-01-2005',
+  telephone: '+34665331271',
+  sameAs: ['https://www.facebook.com/gilsysg6/', 'https://www.linkedin.com/company/gilsys'],
+};
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLdWebsite, null, 2)} />
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLdCorporation, null, 2)} />
+  </Fragment>
 
   <Hero
     id="hero-home"
