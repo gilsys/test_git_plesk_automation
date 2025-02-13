@@ -17,10 +17,10 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <Hero
-  actions={[
-    { variant: 'primary', text: 'Contactar', href: u('contact') },
-    { variant: 'primary', text: 'Preguntas frecuentes', href: u('kit-digital') }]
-    }
+    actions={[
+      { variant: 'primary', text: 'Contactar', href: u('contact') },
+      { variant: 'primary', text: 'Preguntas frecuentes', href: u('kit-digital') },
+    ]}
     backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/dots/21.jpg' }}
     actions={[{ variant: 'primary', text: 'Contactar', href: u('contact') }]}
     tagline="Somos agentes digitalizadores, con más de 20 años de experiencia"
@@ -44,6 +44,7 @@ const metadata = {
         description:
           'Implementa soluciones para analizar datos y tomar decisiones estratégicas con herramientas modernas.',
         icon: 'tabler:chart-bar',
+        highlightText: 'De 1.500€ a 8.000€',
         callToAction: {
           class: 'more-info',
           text: 'Más información',
@@ -54,6 +55,7 @@ const metadata = {
         title: 'Ciberseguridad',
         description: 'Protege tu negocio frente a posibles amenazas digitales con soluciones avanzadas.',
         icon: 'tabler:shield-check',
+        highlightText: 'De 250€ a 29.000€',
         callToAction: {
           class: 'more-info',
           text: 'Más información',
@@ -64,6 +66,7 @@ const metadata = {
         title: 'Comercio electrónico',
         description: 'Crea o mejora tu tienda en línea para incrementar tus ventas y llegar a nuevos clientes.',
         icon: 'tabler:shopping-cart',
+        highlightText: 'De 2.000€ a 5.000€',
         callToAction: {
           class: 'more-info',
           text: 'Más información',
@@ -74,6 +77,7 @@ const metadata = {
         title: 'Comunicaciones seguras',
         description: 'Mejora la seguridad de las comunicaciones empresariales con herramientas fiables y encriptadas.',
         icon: 'tabler:lock',
+        highlightText: 'De 250€ a 29.000€',
         callToAction: {
           class: 'more-info',
           text: 'Más información',
@@ -84,6 +88,7 @@ const metadata = {
         title: 'Gestión de clientes',
         description: 'Optimiza la captación y fidelización de clientes con soluciones CRM adaptadas.',
         icon: 'tabler:users',
+        highlightText: 'De 2.000€ a 14.000€',
         callToAction: {
           class: 'more-info',
           text: 'Más información',
@@ -94,6 +99,7 @@ const metadata = {
         title: 'Gestión de clientes con IA asociada',
         description: 'Incorpora inteligencia artificial para mejorar la relación con tus clientes.',
         icon: 'tabler:robot',
+        highlightText: 'De 18.000€ a 24.000€',
         callToAction: {
           class: 'more-info',
           text: 'Más información',
@@ -104,6 +110,7 @@ const metadata = {
         title: 'Gestión de facturación y factura electrónica',
         description: 'Simplifica y automatiza la gestión de la facturación con herramientas digitales eficientes.',
         icon: 'tabler:file-invoice',
+        highlightText: 'De 1.000€ a 3.000€',
         callToAction: {
           class: 'more-info',
           text: 'Más información',
@@ -114,6 +121,7 @@ const metadata = {
         title: 'Gestión de procesos',
         description: 'Mejora la eficiencia de tu negocio con herramientas para optimizar los procesos internos.',
         icon: 'tabler:settings',
+        highlightText: 'De 2.000€ a 18.000€',
         callToAction: {
           class: 'more-info',
           text: 'Más información',
@@ -124,6 +132,7 @@ const metadata = {
         title: 'Gestión de procesos con IA asociada',
         description: 'Automatiza y optimiza procesos mediante inteligencia artificial.',
         icon: 'tabler:brain',
+        highlightText: 'De 16.000€ a 19.000€',
         callToAction: {
           class: 'more-info',
           text: 'Más información',
@@ -134,6 +143,7 @@ const metadata = {
         title: 'Gestión de redes sociales',
         description: 'Gestiona y optimiza tu presencia en redes sociales con soluciones avanzadas.',
         icon: 'tabler:share',
+        highlightText: 'De 2.000€ a 5.000€',
         callToAction: {
           class: 'more-info',
           text: 'Más información',
@@ -144,6 +154,7 @@ const metadata = {
         title: 'Puesto de trabajo seguro',
         description: 'Garantiza la seguridad de los equipos y herramientas de trabajo con soluciones adaptadas.',
         icon: 'tabler:lock',
+        highlightText: 'Hasta 1.000€',
         callToAction: {
           class: 'more-info',
           text: 'Más información',
@@ -154,6 +165,7 @@ const metadata = {
         title: 'Marketplace',
         description: 'Crea y gestiona tu propia plataforma de ventas en línea para expandir tu negocio.',
         icon: 'tabler:shopping-bag',
+        highlightText: 'Hasta 2.000€',
         callToAction: {
           class: 'more-info',
           text: 'Más información',
@@ -164,6 +176,7 @@ const metadata = {
         title: 'Presencia avanzada en Internet',
         description: 'Mejora la visibilidad de tu negocio con una estrategia digital adaptada.',
         icon: 'tabler:world',
+        highlightText: 'De 2.000€ a 5.000€',
         callToAction: {
           class: 'more-info',
           text: 'Más información',
@@ -174,6 +187,7 @@ const metadata = {
         title: 'Servicio de Ciberseguridad Gestionada',
         description: 'Confía en expertos para monitorizar y gestionar la seguridad de tu negocio.',
         icon: 'tabler:shield',
+        highlightText: 'De 200€ a 29.000€',
         callToAction: {
           class: 'more-info',
           text: 'Más información',
@@ -184,6 +198,7 @@ const metadata = {
         title: 'Servicios y herramientas de oficina virtual',
         description: 'Implementa soluciones para trabajar en remoto de manera eficiente y segura.',
         icon: 'tabler:device-desktop-analytics',
+        highlightText: 'De 250€ a 29.000€',
         callToAction: {
           class: 'more-info',
           text: 'Más información',
@@ -192,6 +207,7 @@ const metadata = {
       },
     ]}
   />
+
   <Content
     isImageSmall
     isReversed
@@ -224,7 +240,8 @@ const metadata = {
   />
 
   <FAQs
-    title="Preguntas frecuentes sobre el Kit Digital"
+    schema
+    title="<a name='faq' title='Preguntas frecuentes sobre el Kit Digital'>Preguntas frecuentes sobre el Kit Digital </a>"
     items={[
       {
         title: '¿Qué es el Kit Digital?',
@@ -293,7 +310,7 @@ const metadata = {
       {
         title: '¿Solo se puede solicitar en Catalunya?',
         description: `No, se puede solicitar en toda España. Desde Gilsys, nos hemos centrado en promocionar el servicio como agentes digitalizadores en la zona de Catalunya, pero ofrecemos servicios a autónomos y empresas de todo el territorio español.`,
-      }
+      },
     ]}
   />
 
@@ -325,10 +342,12 @@ const metadata = {
     ]}
   >
     <Fragment slot="title"
-      >Aprovecha el <span class="custom-gradient">Kit Digital</span> y digitaliza tu negocio con nosotros. Especializados en empresas de Barcelona y Gerona.</Fragment
+      >Aprovecha el <span class="custom-gradient">Kit Digital</span> y digitaliza tu negocio con nosotros. Especializados
+      en empresas de Barcelona y Gerona.</Fragment
     >
     <Fragment slot="subtitle">
-      Descubre las subvenciones disponibles y déjanos ayudarte a elegir e implementar las mejores soluciones para tu negocio.
+      Descubre las subvenciones disponibles y déjanos ayudarte a elegir e implementar las mejores soluciones para tu
+      negocio.
     </Fragment>
   </CallToAction>
 </Layout>

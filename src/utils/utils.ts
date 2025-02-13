@@ -10,6 +10,8 @@ export const getFormatter = (url: URL): Intl.DateTimeFormat => {
   });
 };
 
+export const stripHtmlTags = (html: string): string => html.replace(/<[^>]*>/g, "");
+
 export const getFormattedDate = (date: Date, url: URL): string => {
   const formatter = getFormatter(url);
   return date ? formatter.format(date) : '';

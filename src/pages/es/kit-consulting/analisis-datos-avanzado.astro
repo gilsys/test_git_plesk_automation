@@ -7,9 +7,9 @@ import Layout from '~/layouts/PageLayout.astro';
 import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 const u = useRoutes(getLangFromUrl(Astro.url));
 const metadata = {
-  title: "Análisis de datos avanzado | Kit Consulting Osona (Barcelona)",
+  title: 'Análisis de datos avanzado | Kit Consulting Osona (Barcelona)',
   description:
-    "Avanzamos en la clasificación de datos, definiendo un modelo de datos adaptado a tu empresa, estudiando como la IA puede mejorar la calidad de la información.",
+    'Avanzamos en la clasificación de datos, definiendo un modelo de datos adaptado a tu empresa, estudiando como la IA puede mejorar la calidad de la información.',
 };
 ---
 
@@ -18,13 +18,15 @@ const metadata = {
     tagline="Subvención Kit Consulting desde Osona, para empresas de Barcelona y Gerona"
     actions={[
       { variant: 'primary', text: 'Solicitar información', href: u('contact') },
-      { variant: 'primary', text: 'Preguntas frecuentes', href: u('kit-consulting') }]
-      }
+      { variant: 'primary', text: 'Preguntas frecuentes', href: u('kit-consulting') + '#faq' },
+    ]}
     backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/dots/22.jpg' }}
   >
     <Fragment slot="title">Servicio de asesoramiento en análisis de datos (Avanzado)</Fragment>
     <Fragment slot="subtitle"
-      >Si ya dispones de un sistema de análisis de datos básico, en este servicio avanzamos en la clasificación de datos, definiendo un modelo de datos adaptado a tu empresa, estudiando como la inteligencia artificial puede mejorar la calidad de la información.</Fragment
+      >Si ya dispones de un sistema de análisis de datos básico, en este servicio avanzamos en la clasificación de
+      datos, definiendo un modelo de datos adaptado a tu empresa, estudiando como la inteligencia artificial puede
+      mejorar la calidad de la información.</Fragment
     >
   </Hero>
 
@@ -104,12 +106,13 @@ const metadata = {
     ]}
   >
     <Fragment slot="title"
-      >Si tienes empresa en la provincia de Barcelona o Gerona, te ofrecemos asesoramiento gratuito en <span class="custom-gradient">análisis de datos avanzado</span
+      >Si tienes empresa en la provincia de Barcelona o Gerona, te ofrecemos asesoramiento gratuito en <span
+        class="custom-gradient">análisis de datos avanzado</span
       ></Fragment
     >
     <Fragment slot="subtitle"
-      >Contáctanos y te asesoraremos sobre como la subvención de Kit Consulting en analisis de datos puede
-      ayudar a potenciar tu empresa.</Fragment
+      >Contáctanos y te asesoraremos sobre como la subvención de Kit Consulting en analisis de datos puede ayudar a
+      potenciar tu empresa.</Fragment
     >
   </CallToAction>
 

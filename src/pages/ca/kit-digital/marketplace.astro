@@ -20,7 +20,7 @@ const metadata = {
   <Hero
   actions={[
     { variant: 'primary', text: 'Contactar', href: u('contact') },
-    { variant: 'primary', text: 'Preguntes freqüents', href: u('kit-digital') }]
+    { variant: 'primary', text: 'Preguntes freqüents', href: u('kit-digital') + '#faq' }]
     }
   tagline="Subvenció Kit Digital" backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/21.jpg' }}>
     <Fragment slot="title">Marketplace</Fragment>
@@ -90,7 +90,11 @@ const metadata = {
       },
       {
         title: 'Import màxim per al servei de marketplace:',
-        description: 'Fins a 2.000€',
+        list: [
+          '<strong>De 0 a 3 empleats:</strong> 2.000€',
+          '<strong>De 50 a 99 empleats:</strong> 2.000€',
+          '<strong>De 100 a 250 empleats:</strong> 2.000€',
+        ],
         icon: 'tabler:check',
       },
     ]}

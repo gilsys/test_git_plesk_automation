@@ -153,6 +153,7 @@ export interface Item {
   classes?: Record<string, string>;
   callToAction?: CallToAction;
   image?: Image;
+  highlightText?: string;
 }
 
 export interface Price {
@@ -292,6 +293,7 @@ export interface Faqs extends Omit<Headline, 'classes'>, Widget {
   iconDown?: string;
   items?: Array<Item>;
   columns?: number;
+  schema?: boolean;
 }
 
 export interface Steps extends Omit<Headline, 'classes'>, Widget {
