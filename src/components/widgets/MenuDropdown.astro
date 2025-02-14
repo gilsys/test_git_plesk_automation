@@ -48,6 +48,7 @@ if(breadcrumbTrail && breadcrumbTrail[0] && breadcrumbTrail[0].text === btn.text
 
 <a
   id={btn._id}
+  title={btn.title}
   class:list={[
     'hover:text-accent dark:hover:text-white px-2 lg:px-4 py-3 flex items-center whitespace-nowrap md:text-sm min-[810px]:text-base hidden',
     { active: breadcrumbTrail && breadcrumbTrail[0] && breadcrumbTrail[0].text === btn.text },
@@ -123,7 +124,7 @@ if(breadcrumbTrail && breadcrumbTrail[0] && breadcrumbTrail[0].text === btn.text
               ))}
             </ul>
 
-            {true && href2 && (
+            {false && href2 && (
               <div class="text-end px-1 xl:px-2 absolute bottom-0 right-0">
                 <a class="header-more-info hover:text-accent py-1.5 px-3" href={href2} title={title2}>
                   {t('menu.more_info')}

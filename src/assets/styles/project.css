@@ -109,6 +109,17 @@
   transform: translateX(-50%);
   width: max-content;
 }
+.wg-features-3 .ui-itemgrid-2 .more-info.linkable{
+  bottom: 20px;
+  
+}
+.wg-features-3 .ui-itemgrid-2 .linkable svg{
+  margin: 0;
+}
+.wg-features-3 a.itemgrid-linkable{
+  padding-bottom: 5em;
+}
+
 
 .wg-features-3 .ui-itemgrid-2 > div{
   padding-bottom: 100px;
@@ -206,15 +217,20 @@ a.text-accent:hover {
   background-size: 1px 100% !important;
   color:#FFF;
 }
-p strong{
+
+section:not(.wg-hero) p strong{
   color: #000;
 }
 
 /*.wg-header #contact,*/
+
+
 body.route-home .wg-hero .text-accent,
 body.route-home .wg-hero .custom-gradient,
 body.route-gilsys .wg-hero .text-accent,
-body.route-gilsys .wg-hero .custom-gradient {
+body.route-gilsys .wg-hero .custom-gradient,
+.itemgrid-linkable:hover h3
+{
   background: linear-gradient(270deg, 
   rgba(0, 0, 0, 1),
   rgba(0, 0, 0, 1),
@@ -238,9 +254,6 @@ body.route-gilsys .wg-hero .custom-gradient {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
-
-
 
 
 .wg-hero h1, .wg-hero p{
@@ -439,4 +452,6 @@ address a{
     padding-bottom: 0px;    
   }
 }
+
+
 

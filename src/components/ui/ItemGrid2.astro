@@ -3,8 +3,11 @@ import type { ItemGrid as Props } from '~/types';
 import { Icon } from 'astro-icon/components';
 import { twMerge } from 'tailwind-merge';
 import Button from './Button.astro';
+import { getLangFromUrl, useTranslations } from '~/utils/i18n';
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
-const { items = [], columns, defaultIcon = '', classes = {} } = Astro.props;
+const { items = [], columns, defaultIcon = '', classes = {}, isLinkable= false } = Astro.props;
 
 const {
   container: containerClass = '',
@@ -13,58 +16,75 @@ const {
   title: titleClass = '',
   description: descriptionClass = '',
   icon: defaultIconClass = 'text-primary',
+  
 } = classes;
 ---
 
 {
   items && (
-    <div
-      class={twMerge(
-        `ui-itemgrid-2 grid gap-8 gap-x-12 sm:gap-y-8 ${
-          columns === 4
-            ? 'lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-2'
-            : columns === 3
-              ? 'lg:grid-cols-3 sm:grid-cols-2'
-              : columns === 2
-                ? 'sm:grid-cols-2 '
-                : ''
-        }`,
-        containerClass
-      )}
-    >
-{items.map(({ title, description, icon, highlightText , callToAction, list, classes: itemClasses = {} }) => (
+  <div
+  class={twMerge(
+    `ui-itemgrid-2 grid gap-8 gap-x-12 sm:gap-y-8 ${
+      columns === 4
+        ? 'lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-2'
+        : columns === 3
+          ? 'lg:grid-cols-3 sm:grid-cols-2'
+          : columns === 2
+            ? 'sm:grid-cols-2 '
+            : ''
+    }`,
+    containerClass
+  )}
+>
+  {items.map(({ title, description, icon, highlightText, callToAction, list, classes: itemClasses = {} }) => {
+    const Wrapper = isLinkable && callToAction ? 'a' : 'div';
+    const baseClasses = 'relative flex flex-col intersect-once intersect-quarter intercept-no-queue motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade';
+    const wrapperProps = isLinkable && callToAction ? { href: callToAction.href, 
+      title: t('common.more_info_about') + title,
+      class: twMerge(
+      baseClasses,
+      panelClass,
+      itemClasses?.panel,
+      'block hover:bg-gray-100 transition itemgrid-linkable' // Añadir efecto hover opcional
+    )} : { class: twMerge(
+      baseClasses,
+      panelClass,
+      itemClasses?.panel
+    )};
 
-        <div
-          class={twMerge(
-            'relative flex flex-col intersect-once intersect-quarter intercept-no-queue motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade',
-            panelClass,
-            itemClasses?.panel
-          )}
-        >
-          {(icon || defaultIcon) && (
-            <Icon name={icon || defaultIcon} class={twMerge('mb-2 w-10 h-10', defaultIconClass, itemClasses?.icon)} />
-          )}
-          <h3 class={twMerge('text-xl font-bold', titleClass, itemClasses?.title)}>{title}</h3>
-          {highlightText  && (
-            <p class="text-md text-primary mt-2">{highlightText}</p>
-          )}
-          {description && (
-            <p class={twMerge('text-muted mt-2', descriptionClass, itemClasses?.description)} set:html={description} />
-          )}
-           {list && (
-            <ul class="feature-list text-muted mt-2">
-              {list.map((item) => (
-                <li class="my-2" set:html={item}></li>
-              ))}
-            </ul>
-          )}
-          {callToAction && (
-            <div class="mt-2">
-              <Button {...callToAction} />
-            </div>
-          )}
-        </div>
-      ))}
-    </div>
+    return (
+      <Wrapper {...wrapperProps}>
+        {(icon || defaultIcon) && (
+          <Icon name={icon || defaultIcon} class={twMerge('mb-2 w-10 h-10', defaultIconClass, itemClasses?.icon)} />
+        )}
+        <h3 class={twMerge('text-xl font-bold', titleClass, itemClasses?.title)}>{title}</h3>
+        {highlightText && (
+          <p class="text-md text-primary mt-2">{highlightText}</p>
+        )}
+        {description && (
+          <p class={twMerge('text-muted mt-2', descriptionClass, itemClasses?.description)} set:html={description} />
+        )}
+        {list && (
+          <ul class="feature-list text-muted mt-2">
+            {list.map((item) => (
+              <li class="my-2" set:html={item}></li>
+            ))}
+          </ul>
+        )}
+        {!isLinkable && callToAction && (
+          <div class="mt-2">
+            <Button {...callToAction} />
+          </div>
+        )}
+        {isLinkable && callToAction && (
+          <div class="more-info linkable rounded-full text-center bg-primary p-2">
+            <Icon name="tabler:arrow-right" class="w-6 h-6 inline-block text-white" />
+          </div>
+        )}
+      </Wrapper>
+    );
+  })}
+</div>
+
   )
 }

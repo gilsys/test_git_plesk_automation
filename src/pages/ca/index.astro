@@ -43,9 +43,9 @@ const jsonLdCorporation = {
   name: 'gilsys',
   legalname: 'gilsys',
   description: metadata.description,
-  image: 'https://www.gilsys.com/logo-programacion-software-a-medida.jpg',
+  image: 'https://www.gilsys.com/programacion-software-a-medida.jpg',
   url: 'https://www.gilsys.com/',
-  logo: 'https://www.gilsys.com/gilsys-logo.jpg',
+  logo: 'https://www.gilsys.com/gilsys-logo-corp.jpg',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Barcelona',
@@ -92,29 +92,13 @@ const jsonLdCorporation = {
     </Fragment>
   </Hero>
 
-  <!--
-  <Hero2
-    classes={{ 
-      container: 'pb-0 md:pb-0 lg:pb-0',
-     }}
-    title="No et quedis enrere, integra <br/><span class='custom-gradient'>Intel·ligència Artificial</span> a la teva empresa"
-    subtitle={`Som una empresa d'enginyeria informàtica, especialitzada en desenvolupament de software. No només coneixem les darreres novetats en <a title='Programació a mida integrant intel·ligència artificial' class='text-accent' href='`+ u('development/ia')  +`'>intel·ligència artificial</a> sinó que les apliquem en eines empresarials, aplicacions web, apps mòbils a mida i automatització de processos.`}
-  >
-  <Fragment slot="preContent">
-    <div class="text-center -mt-4">
-      <a title="Programació a mida amb intel·ligència artificial per empreses" href={u('development/ia')} class="btn-primary w-auto">Més informació</a>
-    </div>
-  </Fragment>
-  
-  </Hero2>
- -->
   <Hero2
     tagline="Ajudem a empreses a adoptar intel·ligència artificial"
     actions={[
       {
         variant: 'primary',
         title: 'Programació a mida amb intel·ligència artificial per empreses',
-        text: 'Mes informació',
+        text: 'Descrubreix com aplicar IA a la teva empresa',
         href: u('development/ia'),
       },
     ]}
@@ -130,11 +114,7 @@ const jsonLdCorporation = {
 
     <Fragment slot="subtitle">
       Som una empresa d'enginyeria informàtica, especialitzada en desenvolupament de software. No només coneixem les
-      darreres novetats en <a
-        title="Programació a mida integrant intel·ligència artificial"
-        class="text-accent"
-        href={u('development/ia')}>intel·ligència artificial</a
-      > sinó que les apliquem en eines empresarials, aplicacions web, apps mòbils a mida i automatització de processos.
+      darreres novetats en intel·ligència artificial sinó que les apliquem en eines empresarials, aplicacions web, apps mòbils a mida i automatització de processos.
     </Fragment>
   </Hero2>
 
@@ -287,16 +267,18 @@ const jsonLdCorporation = {
     items={[
       {
         title: 'Què és el Kit Digital?',
-        description: `El govern d'Espanya impulsa el programa <a class="text-accent" href='https://www.acelerapyme.gob.es/kit-digital' target='_blank'>Kit Digital</a>, finançat per fons europeus Next Generation, per ajudar petites i mitjanes empreses, otorgant subvencions entre <strong>3.000€</strong> i <strong>29.000€</strong> per invertir en la implantació de noves tecnologies.`,
+        description: `El govern d'Espanya impulsa el programa <a title="Kit Digital - Subvención ajudar a digitalitzar autònoms i empreses" class="text-accent" href='https://www.acelerapyme.gob.es/kit-digital' target='_blank'>Kit Digital</a>, finançat per fons europeus Next Generation, per ajudar petites i mitjanes empreses, otorgant subvencions entre <strong>3.000€</strong> i <strong>29.000€</strong> per invertir en la implantació de noves tecnologies.`,
       },
       {
         title: 'Som agents digitalitzadors',
         description:
           `A Gilsys som un agent digitalitzador certificat dins del programa Kit Digital. Podem ajudar-te a digitalitzar les subvencions.
             <br />
-            <a href="` +
+            <a
+            title='Serveis de digitalització subvencionats pel Kit Digital'
+            href="` +
           u('kit-digital') +
-          `" class="btn-primary mt-12 mb-12 w-auto">Més informació</a>`,
+          `" class="btn-primary mt-12 mb-12 w-auto">Veure categories subvencionades</a>`,
       },
     ]}
     image={{
@@ -324,16 +306,18 @@ const jsonLdCorporation = {
     items={[
       {
         title: 'Què és el Kit Consulting?',
-        description: `El programa <a class="text-accent" href='https://www.acelerapyme.gob.es/kit-consulting' target='_blank'>Kit Consulting</a>, impulsat pel govern d'Espanya amb fons europeus Next Generation, ofereix subvencions de <strong>12.000€</strong> a <strong>24.000€</strong> en diferents serveis d'assessorament digital.`,
+        description: `El programa <a  title='Kit Consulting - Subvencions per assessorament en transformació digital i IA' class="text-accent" href='https://www.acelerapyme.gob.es/kit-consulting' target='_blank'>Kit Consulting</a>, impulsat pel govern d'Espanya amb fons europeus Next Generation, ofereix subvencions de <strong>12.000€</strong> a <strong>24.000€</strong> en diferents serveis d'assessorament digital.`,
       },
       {
         title: 'Som agents consultors',
         description:
           `A Gilsys som un agent consultor certificat dins del programa Kit Consulting. T’ajudem a aprofitar les subvencions i dissenyar el full de ruta per a la transformació digital de la teva empresa.
             <br />
-            <a href="` +
+            <a 
+            title='Serveis de consultoria subvencionats per empreses de Barcelona i Girona'
+            href="` +
           u('kit-consulting') +
-          `" class="btn-primary mt-12 mb-12 w-auto">Més informació</a>`,
+          `" class="btn-primary mt-12 mb-12 w-auto">Explorar assessoraments subvencionats</a>`,
       },
     ]}
     image={{

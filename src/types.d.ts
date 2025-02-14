@@ -222,6 +222,7 @@ export interface ItemGrid {
   columns?: number;
   defaultIcon?: string;
   classes?: Record<string, string>;
+  isLinkable?: boolean;
 }
 
 export interface Collapse {
@@ -285,6 +286,7 @@ export interface Features extends Omit<Headline, 'classes'>, Widget {
   isReversed?: boolean;
   isBeforeContent?: boolean;
   isAfterContent?: boolean;
+  isLinkableGrid?: boolean;
 }
 
 export interface Faqs extends Omit<Headline, 'classes'>, Widget {
