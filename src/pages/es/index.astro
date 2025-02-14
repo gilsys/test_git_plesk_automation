@@ -91,30 +91,13 @@ const jsonLdCorporation = {
       </span>
     </Fragment>
   </Hero>
-
-  <!--
-  <Hero2
-    classes={{ 
-      container: 'pb-0 md:pb-0 lg:pb-0',
-     }}
-    title="No et quedis enrere, integra <br/><span class='custom-gradient'>Intel·ligència Artificial</span> a la teva empresa"
-    subtitle={`Som una empresa d'enginyeria informàtica, especialitzada en desenvolupament de software. No només coneixem les darreres novetats en <a title='Programació a mida integrant intel·ligència artificial' class='text-accent' href='`+ u('development/ia')  +`'>intel·ligència artificial</a> sinó que les apliquem en eines empresarials, aplicacions web, apps mòbils a mida i automatització de processos.`}
-  >
-  <Fragment slot="preContent">
-    <div class="text-center -mt-4">
-      <a title="Programació a mida amb intel·ligència artificial per empreses" href={u('development/ia')} class="btn-primary w-auto">Más información</a>
-    </div>
-  </Fragment>
-  
-  </Hero2>
- -->
   <Hero2
     tagline="Ayudamos a empresas a adoptar inteligencia artificial"
     actions={[
       {
         variant: 'primary',
         title: 'Programación a medida con inteligencia artificial para empresas',
-        text: 'Más información',
+        text: 'Descubre cómo integrar IA en tu empresa',
         href: u('development/ia'),
       },
     ]}
@@ -130,11 +113,7 @@ const jsonLdCorporation = {
 
     <Fragment slot="subtitle">
       Somos una empresa de ingeniería informática especializada en desarrollo de software. No solo conocemos las últimas
-      novedades en <a
-        title="Programación a medida integrando inteligencia artificial"
-        class="text-accent"
-        href={u('development/ia')}>inteligencia artificial</a
-      >, sino que las aplicamos en herramientas empresariales, aplicaciones web, apps móviles a medida y automatización
+      novedades en inteligencia artificial, sino que las aplicamos en herramientas empresariales, aplicaciones web, apps móviles a medida y automatización
       de procesos.
     </Fragment>
   </Hero2>
@@ -220,7 +199,7 @@ const jsonLdCorporation = {
       {
         title: 'Experiencia comprobada',
         description:
-          'Más de <span class="text-accent highlight">20 años</span> desarrollando soluciones tecnológicas para empresas de diversos sectores, aportando una amplia visión y experiencia técnica.',
+          'Más de <strong>20 años</strong> desarrollando soluciones tecnológicas para empresas de diversos sectores, aportando una amplia visión y experiencia técnica.',
         icon: 'tabler:flag-2',
       },
       {
@@ -288,16 +267,18 @@ const jsonLdCorporation = {
     items={[
       {
         title: '¿Qué es el Kit Digital?',
-        description: `El gobierno de España impulsa el programa <a class="text-accent" href='https://www.acelerapyme.gob.es/kit-digital' target='_blank' rel='nofollow'>Kit Digital</a>, financiado por fondos europeos Next Generation, para ayudar a pequeñas y medianas empresas, otorgando subvenciones de entre <strong>3.000€</strong> y <strong>29.000€</strong> para invertir en la implantación de nuevas tecnologías.`,
+        description: `El gobierno de España impulsa el programa <a title="Kit Digital - Subvención para ayudar a digitaliar autónomos y empresas" class="text-accent" href='https://www.acelerapyme.gob.es/kit-digital' target='_blank'>Kit Digital</a>, financiado por fondos europeos Next Generation, para ayudar a pequeñas y medianas empresas, otorgando subvenciones de entre <strong>3.000€</strong> y <strong>29.000€</strong> para invertir en la implantación de nuevas tecnologías.`,
       },
       {
         title: 'Somos agentes digitalizadores',
         description:
           `En Gilsys somos un agente digitalizador certificado dentro del programa Kit Digital. Podemos ayudarte a digitalizar las subvenciones.
           <br />
-          <a href="` +
+          <a 
+          title='Categorías de servicios subvencionados por el Kit Digital'
+          href="` +
           u('kit-digital') +
-          `" class="btn-primary mt-12 mb-12 w-auto">Más información</a>`,
+          `" class="btn-primary mt-12 mb-12 w-auto">Ver categorías subvencionadas</a>`,
       },
     ]}
     image={{
@@ -325,16 +306,18 @@ const jsonLdCorporation = {
     items={[
       {
         title: '¿Qué es el Kit Consulting?',
-        description: `El programa <a class="text-accent" href='https://www.acelerapyme.gob.es/kit-consulting' target='_blank' rel='nofollow'>Kit Consulting</a>, impulsado por el gobierno de España con fondos europeos Next Generation, ofrece subvenciones de <strong>12.000€</strong> a <strong>24.000€</strong> en diferentes servicios de asesoramiento digital.`,
+        description: `El programa <a class="text-accent" title='Kit Consulting - Subvenciones para asesoramiento en transformación digital e IA' href='https://www.acelerapyme.gob.es/kit-consulting' target='_blank'>Kit Consulting</a>, impulsado por el gobierno de España con fondos europeos Next Generation, ofrece subvenciones de <strong>12.000€</strong> a <strong>24.000€</strong> en diferentes servicios de asesoramiento digital.`,
       },
       {
         title: 'Somos agentes consultores',
         description:
           `En Gilsys somos un agente consultor certificado dentro del programa Kit Consulting. Te ayudamos a aprovechar las subvenciones y diseñar la hoja de ruta para la transformación digital de tu empresa.
           <br />
-          <a href="` +
+          <a 
+          title='Asesoramiento subvencionado para empresas de Barcelona y Gerona'
+          href="` +
           u('kit-consulting') +
-          `" class="btn-primary mt-12 mb-12 w-auto">Más información</a>`,
+          `" class="btn-primary mt-12 mb-12 w-auto">Explorar asesoramientos subvencionados</a>`,
       },
     ]}
     image={{

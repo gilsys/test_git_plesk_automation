@@ -17,7 +17,9 @@ export const defaultLang = 'es';
 
 export const ui = {
   es: {
+    'common.home': 'Inicio',
     'common.page': 'Página',
+    'common.more_info_about': 'Ampliar información sobre ',
     'language.change_to': 'Cambiar idioma a',
     'language.es': 'Español',
     'language.ca': 'Catalán',
@@ -53,7 +55,9 @@ export const ui = {
     'cookie.settings': 'Configuración de cookies',
   },
   ca: {
+    'common.home': 'Inici',
     'common.page': 'Pàgina',
+    'common.more_info_about': 'Més informació sobre ',
     'language.change_to': 'Canviar idioma a',
     'language.es': 'Espanyol',
     'language.ca': 'Català',
@@ -89,7 +93,9 @@ export const ui = {
     'cookie.settings': 'Configuració de cookies',
   },
   en: {
+    'common.home': 'Home',
     'common.page': 'Page',
+    'common.more_info_about': 'More info about ',
     'language.change_to': 'Change language to',
     'language.es': 'Spanish',
     'language.ca': 'Catalan',
@@ -271,17 +277,19 @@ export const header = {
       {
         _id: 'home',
         text: 'Inici',
+        title: 'Pàgina principal',
         href: routes['ca']['home'],
       },
       {
         _id: 'gilsys',
         text: 'Gilsys',
+        title: 'Sobre nosaltres',
         href: routes['ca']['gilsys'],
       },
       {
         _id: 'kit-digital',
         text: 'Kit Digital',
-        title: 'Més informació del Kit Digital',
+        title: 'Agent digitalitzador Osona',
         href: routes['ca']['kit-digital'],
         links: [
           {
@@ -391,7 +399,7 @@ export const header = {
       {
         _id: 'kit-consulting',
         text: 'Kit Consulting',
-        title: 'Més informació del Kit Consulting',
+        title: 'Agent consultor Osona',
         href: routes['ca']['kit-consulting'],
         links: [
           {
@@ -441,6 +449,7 @@ export const header = {
       {
         _id: 'services',
         text: 'Serveis',
+        title: 'Serveis de programació',
         links: [
           {
             _id: 'development',
@@ -608,6 +617,7 @@ export const header = {
       {
         _id: 'contact',
         text: 'Contactar',
+        title: 'Formulari de contacte',
         href: routes['ca']['contact'],
       },
     ],
@@ -617,17 +627,19 @@ export const header = {
       {
         _id: 'home',
         text: 'Inicio',
+        title: 'Página principal',
         href: routes['es']['home'],
       },
       {
         _id: 'gilsys',
         text: 'Gilsys',
+        title: 'Sobre nosotros',
         href: routes['es']['gilsys'],
       },
       {
         _id: 'kit-digital',
         text: 'Kit Digital',
-        title: 'Más información sobre el Kit Digital',
+        title: 'Agente digitalizador Osona',
         href: routes['es']['kit-digital'],
         links: [
           {
@@ -737,7 +749,7 @@ export const header = {
       {
         _id: 'kit-consulting',
         text: 'Kit Consulting',
-        title: 'Más información sobre Kit Consulting',
+        title: 'Agente consultor en Osona',
         href: routes['es']['kit-consulting'],
         links: [
           {
@@ -787,6 +799,7 @@ export const header = {
       {
         _id: 'services',
         text: 'Servicios',
+        title: 'Servicios de programación',
         links: [
           {
             _id: 'development',
@@ -960,16 +973,19 @@ export const header = {
       {
         _id: 'home',
         text: 'Home',
+        title: 'Homepage',
         href: routes['en']['home'],
       },
       {
         _id: 'gilsys',
         text: 'Gilsys',
+        title: 'About us',
         href: routes['en']['gilsys'],
       },
       {
         _id: 'services',
         text: 'Services',
+        title: 'Developent services',
         links: [
           {
             _id: 'development',
@@ -1134,6 +1150,7 @@ export const header = {
       {
         _id: 'contact',
         text: 'Contact',
+        title: 'Contact form',
         href: routes['en']['contact'],
       },
     ],

@@ -86,7 +86,7 @@ const contactLink = links.find((link) => link._id === 'contact');
     ]}
   >
     <div class:list={[{ 'mr-auto rtl:mr-0 rtl:ml-auto': position === 'right' }, 'flex justify-between relative z-10']}>
-      <a class="flex items-center" href={u('home')}>
+      <a class="flex items-center" title={t('common.home')} href={u('home')}>
         <Logo />
       </a>
       <div class="flex items-center md:hidden">
@@ -108,6 +108,7 @@ const contactLink = links.find((link) => link._id === 'contact');
               ) : (
                 <a
                   id={_id}
+                  title={title}
                   class:list={[
                     'hover:text-accent dark:hover:text-white px-2 lg:px-4 py-3 flex items-center whitespace-nowrap  md:text-sm min-[810px]:text-base',
                     { active: href === currentPath && currentPath !== u('home') },
@@ -147,6 +148,7 @@ const contactLink = links.find((link) => link._id === 'contact');
           contactLink && (
             <div class="mr-auto py-2 px-4 md:hidden mobile-contact-btn hover:text-accent">
               <a
+                title={contactLink.title}
                 class:list={[
                   'hover:text-link dark:hover:text-white whitespace-nowrap',
                   { active: contactLink.href === currentPath },

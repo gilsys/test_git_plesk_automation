@@ -11,6 +11,7 @@ const {
   items = [],
   columns = 3,
   defaultIcon,
+  isLinkableGrid = false,
 
   id,
   isDark = false,
@@ -22,6 +23,7 @@ const {
 <WidgetWrapper id={id} isDark={isDark} containerClass={`wg-features-3 max-w-7xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
   <Headline title={title} subtitle={subtitle} tagline={tagline} classes={classes?.headline as Record<string, string>} />
   <ItemGrid2
+    isLinkable={isLinkableGrid}
     items={items}
     columns={columns}
     defaultIcon={defaultIcon}

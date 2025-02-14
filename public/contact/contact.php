@@ -9,13 +9,13 @@ header('Access-Control-Allow-Headers: X-Requested-With, Content-Type, Accept, Or
 header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, PATCH, OPTIONS');
 
 define('HONEYPOT', 'comments');
-define('MAIL_HOST', 'sandbox.smtp.mailtrap.io');
-define('MAIL_USERNAME', 'c655777fb1803e');
-define('MAIL_PASSWORD', 'bfdcfa65cd163c');
+define('MAIL_HOST', 'mail.gilsys.com');
+define('MAIL_USERNAME', 'noreply@gilsys.com');
+define('MAIL_PASSWORD', 'K37yie6!5123');
 define('MAIL_PORT', 587);
-define('MAIL_FROM_ADDRESS', 'testing@gilsys.com');
+define('MAIL_FROM_ADDRESS', 'noreply@gilsys.com');
 define('MAIL_FROM_NAME', 'Gilsys');
-define('MAIL_TO_ADDRESS', 'testing@gilsys.com');
+define('MAIL_TO_ADDRESS', 'info@gilsys.com');
 
 if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
     http_response_code(200);
