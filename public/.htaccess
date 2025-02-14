@@ -2,6 +2,7 @@
 RewriteEngine On
 RewriteBase /
 
+ErrorDocument 404 /404.html
 
 RewriteRule ^ca/gilsys/$ /ca/empresa-tic [R=301,L]
 RewriteRule ^ca/serveis/$ /ca [R=301,L]
