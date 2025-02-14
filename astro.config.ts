@@ -32,6 +32,7 @@ export default defineConfig({
   },
     
   site: 'https://www.gilsys.com',
+  trailingSlash: 'always',
 
   integrations: [tailwind({
     applyBaseStyles: false,
