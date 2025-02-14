@@ -4,6 +4,7 @@ import Content from '~/components/widgets/Content.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
 import Layout from '~/layouts/PageLayout.astro';
 import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 
@@ -28,6 +29,17 @@ const metadata = {
       hacia soluciones más modernas.</Fragment
     >
   </Hero>
+
+  <Note linkText="Informa't" linkTitle="Més informació" linkHref={u('kit-digital')}>
+    <Fragment slot="h2">
+      <span class="text-left max-[412px]:text-center block w-full">
+        <span class="inline-block md:block">
+          Subvencionable con
+          <span class="text-4xl md:inline block whitespace-nowrap">KIT Digital</span>
+        </span>
+      </span>
+    </Fragment>
+  </Note>
 
   <Features3
     id="features-services"

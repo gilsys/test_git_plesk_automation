@@ -3,6 +3,7 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features from '~/components/widgets/Features.astro';
 import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
 import Layout from '~/layouts/PageLayout.astro';
 import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 
@@ -16,25 +17,34 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-
-  <Hero tagline="Eines que transformen les teves dades en informació clau per a la presa de decisions."
-  backgroundImage={{alt: 'Fons abstracte',  src: '~/assets/images/dots/27.jpg'}}
+  <Hero
+    tagline="Eines que transformen les teves dades en informació clau per a la presa de decisions."
+    backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/27.jpg' }}
   >
     <Fragment slot="title">
       <span class="text-accent highlight">Business Intelligence</span> amb Metabase
     </Fragment>
-    <Fragment slot="subtitle">
-      Connectem bases de dades i creem panells amb gràfiques i indicadors.
-    </Fragment>
+    <Fragment slot="subtitle"> Connectem bases de dades i creem panells amb gràfiques i indicadors. </Fragment>
   </Hero>
+
+  <Note linkText="Informa't" linkTitle="Més informació" linkHref={u('kit-digital')}>
+    <Fragment slot="h2">
+      <span class="text-left max-[412px]:text-center block w-full">
+        <span class="inline-block md:block">
+          Subvencionable amb
+          <span class="text-4xl md:inline block whitespace-nowrap">KIT Digital</span>
+        </span>
+      </span>
+    </Fragment>
+  </Note>
 
   <Content
     isReversed
     tagline="En lloc de confiar en suposicions o intuïcions, BI ofereix dades concretes que permeten als directius actuar amb confiança i precisió."
     title="Què és Business Intelligence?"
     subtitle="BI permet a les empreses entendre el seu rendiment, identificar patrons i prendre decisions basades en dades concretes."
-    
-    items={[{
+    items={[
+      {
         title: 'Identificació d’oportunitats i reptes',
         description: 'Ajuda a detectar àrees de millora i a aprofitar oportunitats del mercat.',
       },
@@ -55,66 +65,73 @@ const metadata = {
       src: '~/assets/images/business-analytics-graficas-empresariales.jpg',
       alt: 'Panells amb gràfics i dades empresarials de BI',
     }}
->
+  >
+    <Fragment slot="preContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">Transformar dades en decisions estratègiques</h3>
+      <p class="text-muted">
+        El concepte de Business Intelligence (BI) fa referència a l’ús d’eines i tecnologies per analitzar dades
+        empresarials i convertir-les en informació clara i útil per a la presa de decisions. Amb BI, les empreses poden
+        accedir a una visió completa del seu rendiment, identificar patrons i tendències, i anticipar-se a les
+        necessitats del mercat o a possibles problemes.
+      </p>
+    </Fragment>
+    <Fragment slot="postContent">
+      <h3 class="text-2xl font-bold tracking-tightsm:text-3xl mb-2">
+        Quines empreses necessiten utilitzar Business Intelligence?
+      </h3>
+      <p class="text-muted">
+        Les eines de BI són útils per a empreses <strong>de qualsevol sector i mida</strong> que necessiten prendre decisions
+        basades en dades.<br /><br />
+        Són especialment rellevants per a equips de màrqueting, vendes, finances i operacions que han de monitoritzar mètriques
+        clau, identificar patrons o tendències i generar informes visuals fàcilment comprensibles <strong
+          >sense necessitat de coneixements avançats en SQL o programació</strong
+        >.
+      </p>
+    </Fragment>
+  </Content>
 
-<Fragment slot="preContent">
-    <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">
-        Transformar dades en decisions estratègiques
-    </h3>
-    <p class="text-muted">
-        El concepte de Business Intelligence (BI) fa referència a l’ús d’eines i tecnologies per analitzar dades empresarials i convertir-les en informació clara i útil per a la presa de decisions. Amb BI, les empreses poden accedir a una visió completa del seu rendiment, identificar patrons i tendències, i anticipar-se a les necessitats del mercat o a possibles problemes.
-
-    </p>
-  </Fragment>
-  <Fragment slot="postContent">
-    <h3 class="text-2xl font-bold tracking-tightsm:text-3xl mb-2">Quines empreses necessiten utilitzar Business Intelligence?</h3>
-    <p class="text-muted">       
-        Les eines de BI són útils per a empreses <strong>de qualsevol sector i mida</strong> que necessiten prendre decisions basades en dades.<br/><br/>
-        Són especialment rellevants per a equips de màrqueting, vendes, finances i operacions que han de monitoritzar mètriques clau, identificar patrons o tendències i generar informes visuals fàcilment comprensibles <strong>sense necessitat de coneixements avançats en SQL o programació</strong>.
-    </p>
-  </Fragment>
-
-</Content>
-
-
-<Features
-id="benefits"
-tagline=""
-title="Beneficis del Business Intelligence"
-subtitle="Descobreix els avantatges de treballar amb un equip expert en Metabase i BI."
-items={[{
-    title: 'Visió clara i precisa',
-    description: 'Accedeix a totes les dades del teu negoci en un sol lloc, amb informes clars que faciliten la presa de decisions.',
-    icon: 'tabler:eye',
-  },
-  {
-    title: 'Preses de decisions basades en dades',
-    description: 'Elimina la intuïció i actua amb confiança gràcies a dades objectives i actualitzades.',
-    icon: 'tabler:clipboard-list',
-  },
-  {
-    title: 'Estalvi de temps',
-    description: 'Panells automàtics i informes programats per dedicar menys temps a analitzar dades i més a implementar accions.',
-    icon: 'tabler:clock',
-  },
-  {
-    title: 'Solucions personalitzades',
-    description: 'Panells, consultes i visualitzacions completament adaptades al teu negoci.',
-    icon: 'tabler:settings',
-  },
-  {
-    title: 'Escalabilitat i flexibilitat',
-    description: 'Metabase creix amb la teva empresa, permetent afegir noves bases de dades o panells segons les necessitats.',
-    icon: 'tabler:line',
-  },
-  {
-  title: 'Anticipa tendències i escenaris futurs',
-  description:'El BI et permet analitzar dades històriques, tendències actuals i preveure escenaris futurs per anticipar-te als canvis del mercat.',
-    icon: 'tabler:clock-2',
-  },
-  
-]}
-/>
+  <Features
+    id="benefits"
+    tagline=""
+    title="Beneficis del Business Intelligence"
+    subtitle="Descobreix els avantatges de treballar amb un equip expert en Metabase i BI."
+    items={[
+      {
+        title: 'Visió clara i precisa',
+        description:
+          'Accedeix a totes les dades del teu negoci en un sol lloc, amb informes clars que faciliten la presa de decisions.',
+        icon: 'tabler:eye',
+      },
+      {
+        title: 'Preses de decisions basades en dades',
+        description: 'Elimina la intuïció i actua amb confiança gràcies a dades objectives i actualitzades.',
+        icon: 'tabler:clipboard-list',
+      },
+      {
+        title: 'Estalvi de temps',
+        description:
+          'Panells automàtics i informes programats per dedicar menys temps a analitzar dades i més a implementar accions.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Solucions personalitzades',
+        description: 'Panells, consultes i visualitzacions completament adaptades al teu negoci.',
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Escalabilitat i flexibilitat',
+        description:
+          'Metabase creix amb la teva empresa, permetent afegir noves bases de dades o panells segons les necessitats.',
+        icon: 'tabler:line',
+      },
+      {
+        title: 'Anticipa tendències i escenaris futurs',
+        description:
+          'El BI et permet analitzar dades històriques, tendències actuals i preveure escenaris futurs per anticipar-te als canvis del mercat.',
+        icon: 'tabler:clock-2',
+      },
+    ]}
+  />
 
   <Content
     isReversed
@@ -132,7 +149,7 @@ items={[{
       {
         title: 'Automatització de consultes i informes',
         list: [
-          "Programació d'informes recurrents amb consultes SQL complexes.",          
+          "Programació d'informes recurrents amb consultes SQL complexes.",
           "Reducció de la intervenció manual en la generació d'informes.",
         ],
       },
@@ -157,14 +174,12 @@ items={[{
           'Visualització de tendències de mercat i altres indicadors importants.',
         ],
       },
-    ]
-    }
+    ]}
     image={{
       src: '~/assets/images/metabase-panel.jpg',
       alt: 'Panel de datos BI de metabase',
     }}
   />
-
 
   <Content
     isReversed
@@ -180,18 +195,19 @@ items={[{
       {
         title: 'Especialistes en Metabase:',
         description:
-          "Sabem com treure el màxim potencial d’aquesta eina, des de funcionalitats bàsiques fins a configuracions avançades.",
+          'Sabem com treure el màxim potencial d’aquesta eina, des de funcionalitats bàsiques fins a configuracions avançades.',
         icon: 'tabler:chart-pie',
       },
       {
         title: 'Adaptació completa',
         description:
-          "Creem panells, consultes i visualitzacions específiques per a cada client, sense solucions estàndard que no s’ajustin a les teves necessitats.",
+          'Creem panells, consultes i visualitzacions específiques per a cada client, sense solucions estàndard que no s’ajustin a les teves necessitats.',
         icon: 'tabler:clock',
       },
       {
         title: 'Enfoc pràctic',
-        description: 'No només configurem Metabase, sinó que també et formem perquè puguis utilitzar-lo de manera independent i treure’n el màxim partit.',
+        description:
+          'No només configurem Metabase, sinó que també et formem perquè puguis utilitzar-lo de manera independent i treure’n el màxim partit.',
         icon: 'tabler:headset',
       },
     ]}
@@ -202,9 +218,9 @@ items={[{
   >
     <Fragment slot="postContent">
       <p>
-      La teva empresa tindrà accés a una de les eines més potents de Business Intelligence, que permetrà transformar les dades en informació valuosa.
+        La teva empresa tindrà accés a una de les eines més potents de Business Intelligence, que permetrà transformar
+        les dades en informació valuosa.
       </p>
-
     </Fragment>
 
     <Fragment slot="bg">
@@ -213,7 +229,7 @@ items={[{
   </Content>
 
   <CallToAction
-  backgroundImage={{ src: '~/assets/images/dots/27.jpg', alt: 'Fons abstracte, inspirat en tecnologia i software' }}
+    backgroundImage={{ src: '~/assets/images/dots/27.jpg', alt: 'Fons abstracte, inspirat en tecnologia i software' }}
     actions={[
       {
         variant: 'primary',
@@ -227,10 +243,11 @@ items={[{
       },
     ]}
   >
-    <Fragment slot="title">Necessites un <span class="custom-gradient">software de BI</span> per millorar la presa de disions?</Fragment>
+    <Fragment slot="title"
+      >Necessites un <span class="custom-gradient">software de BI</span> per millorar la presa de disions?</Fragment
+    >
     <Fragment slot="subtitle">
       El nostre equip està preparat per implantar Metabase i convertir les dades del teu negoci en informació valuosa.
     </Fragment>
   </CallToAction>
-
 </Layout>

@@ -4,6 +4,7 @@ import Content from '~/components/widgets/Content.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
 import Layout from '~/layouts/PageLayout.astro';
 import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 
@@ -21,13 +22,25 @@ const metadata = {
     backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/03.jpg' }}
   >
     <Fragment slot="title"
-      ><span class="text-accent highlight">Migració</span> i <span class="text-accent highlight">integració</span></Fragment
+      ><span class="text-accent highlight">Migració</span> i <span class="text-accent highlight">integració</span
+      ></Fragment
     >
     <Fragment slot="subtitle"
       >Creem fluxes de comunicació entre eines existents, n'integrem de noves i migrem sistemes antics cap a solucions
       més modernes.</Fragment
     >
   </Hero>
+
+  <Note linkText="Informa't" linkTitle="Més informació" linkHref={u('kit-digital')}>
+    <Fragment slot="h2">
+      <span class="text-left max-[412px]:text-center block w-full">
+        <span class="inline-block md:block">
+          Subvencionable amb
+          <span class="text-4xl md:inline block whitespace-nowrap">KIT Digital</span>
+        </span>
+      </span>
+    </Fragment>
+  </Note>
 
   <Features3
     id="features-services"
@@ -56,7 +69,7 @@ const metadata = {
           href: '#migracio-dades',
         },
       },
-      
+
       {
         title: "Integració d'intel·ligència artificial",
         description:
@@ -90,7 +103,7 @@ const metadata = {
           href: '#TODO',
         },
       },
-      */      
+      */
       {
         title: 'Divisió i escalabilitat',
         description:
@@ -107,7 +120,7 @@ const metadata = {
 
   <Content
     isReversed
-    id='renovacio-software'
+    id="renovacio-software"
     tagline=""
     title="Renovació de software"
     subtitle="Mantenir eines antigues implica ineficiència i reducció de productivitat."
@@ -163,7 +176,7 @@ const metadata = {
   </Content>
 
   <Content
-    id='migracio-dades'
+    id="migracio-dades"
     tagline=""
     title="Migració de dades"
     subtitle="Deixa enrere els sistemes antics i abraça la innovació amb una migració de dades segura i eficient."
@@ -231,7 +244,7 @@ const metadata = {
       {
         title: 'Reducció de costos',
         description:
-          "En alliberar recursos i evitar manteniments innecessaris de tecnologies antigues, la migració de dades significa un estalvi econòmic considerable.",
+          'En alliberar recursos i evitar manteniments innecessaris de tecnologies antigues, la migració de dades significa un estalvi econòmic considerable.',
         icon: 'tabler:cash',
       },
       {
@@ -243,7 +256,7 @@ const metadata = {
       {
         title: 'Catalitzador per a la innovació',
         description:
-        'La migració de dades permet a les empreses adoptar noves tecnologies i explorar solucions més avançades, impulsant la innovació i el creixement.',
+          'La migració de dades permet a les empreses adoptar noves tecnologies i explorar solucions més avançades, impulsant la innovació i el creixement.',
         icon: 'tabler:bulb',
       },
       {
@@ -262,11 +275,13 @@ const metadata = {
   />
 
   <Content
-  isReversed
+    isReversed
     tagline=""
-    id='integracio-ia'    
+    id="integracio-ia"
     title="Integració d'intel·ligència artificial"
-    subtitle={`No només podem <a class="text-accent" title="Programació de noves aplicacions que integren intel·ligència artificial" href="` + u('development/ia') + `">programar noves aplicacions</a>, sinó que podem integrar la IA a eines existents.`}
+    subtitle={`No només podem <a class="text-accent" title="Programació de noves aplicacions que integren intel·ligència artificial" href="` +
+      u('development/ia') +
+      `">programar noves aplicacions</a>, sinó que podem integrar la IA a eines existents.`}
     items={[
       {
         title: 'Automatització de processos',
@@ -310,29 +325,31 @@ const metadata = {
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-lightgray"></div>
     </Fragment>
-
   </Content>
 
-  <Content    
+  <Content
     tagline=""
-    id='connexio-software'
+    id="connexio-software"
     title="Connexió de software"
     subtitle="Sincronitzar dades entre diferents eines simplifica la gestió d'informació de l'empresa i evita dades duplicades."
     items={[
       {
         title: 'Connexió mitjançant APIs',
         description:
-          `Desenvolupem <a class="text-accent" title="Automatització de processos de sincronització de dades" href="` + u('development/automation') + `">integracions i automatitzacions mitjançant APIs personalitzades</a> per sincronitzar informació entre sistemes.`,
+          `Desenvolupem <a class="text-accent" title="Automatització de processos de sincronització de dades" href="` +
+          u('development/automation') +
+          `">integracions i automatitzacions mitjançant APIs personalitzades</a> per sincronitzar informació entre sistemes.`,
       },
       {
         title: 'Centralització de dades',
-        description: 'Unifiquem dades perquè siguin accessibles en temps real des de diferents plataformes, evitant duplicitat i rendundància.',
+        description:
+          'Unifiquem dades perquè siguin accessibles en temps real des de diferents plataformes, evitant duplicitat i rendundància.',
       },
       {
         title: 'Connexió de sistemes antics',
         description:
-          "Tot i que si és possible, sempre recomanem realitzar una migració a eines més modernes, en cas necessari de considerar-se necessari, preparem sistemes antics per exportar dades a tecnologies més modernes des d'on poder treballar i enriquir la informació."
-      }
+          "Tot i que si és possible, sempre recomanem realitzar una migració a eines més modernes, en cas necessari de considerar-se necessari, preparem sistemes antics per exportar dades a tecnologies més modernes des d'on poder treballar i enriquir la informació.",
+      },
     ]}
     image={{
       src: '~/assets/images/integracion-sistemas.png',
@@ -355,7 +372,7 @@ const metadata = {
       </p>
     </Fragment>
   </Content>
-<!--
+  <!--
   <Content
     tagline=""
     title="Optimització de Software"
@@ -405,7 +422,7 @@ const metadata = {
   <Content
     isReversed
     tagline=""
-    id='divisio-escalabilitat'
+    id="divisio-escalabilitat"
     title="Divisió i Escalabilitat"
     subtitle="En ocasions, utilitzar un únic programa o plataforma per intentar resoldre molts requisits no és la millor opció."
     items={[
@@ -442,7 +459,7 @@ const metadata = {
       </p>
     </Fragment>
     <Fragment slot="bg">
-      <div class="absolute inset-0  bg-lightgray"></div>
+      <div class="absolute inset-0 bg-lightgray"></div>
     </Fragment>
   </Content>
 
@@ -457,7 +474,7 @@ const metadata = {
         description:
           'Ens encarreguem que cada procés de migració o integració es realitzi amb el <strong>mínim impacte possible</strong> en el funcionament diari. Planifiquem i coordinem cada etapa per mantenir la continuïtat operativa i reduir molèsties als usuaris finals.',
         icon: 'tabler:arrows-horizontal',
-      },      
+      },
       {
         title: 'Honestedat i enfoc personalitzat',
         description:
@@ -466,8 +483,7 @@ const metadata = {
       },
       {
         title: 'Experiència pràctica en projectes reals',
-        description:
-          `Hem treballat amb empreses de sectors molt diversos, resolent problemes concrets com la integració de sistemes independents, la migració d'eines a aplicacions més modernes o dividint plataformes per convertir-les en més escalables a nivell d'arquitectura i funcional.`,
+        description: `Hem treballat amb empreses de sectors molt diversos, resolent problemes concrets com la integració de sistemes independents, la migració d'eines a aplicacions més modernes o dividint plataformes per convertir-les en més escalables a nivell d'arquitectura i funcional.`,
         icon: 'tabler:chart-bar',
       },
       {
@@ -494,7 +510,11 @@ const metadata = {
       },
     ]}
   >
-    <Fragment slot="title">Vols <span class="custom-gradient">migrar</span> eines antigues o <span class="custom-gradient">integrar aplicacions</span> a la teva empresa?</Fragment>
+    <Fragment slot="title"
+      >Vols <span class="custom-gradient">migrar</span> eines antigues o <span class="custom-gradient"
+        >integrar aplicacions</span
+      > a la teva empresa?</Fragment
+    >
     <Fragment slot="subtitle">Contacta'ns i ens encarregarem d'assessorar-te i executar el teu projecte.</Fragment>
   </CallToAction>
 </Layout>

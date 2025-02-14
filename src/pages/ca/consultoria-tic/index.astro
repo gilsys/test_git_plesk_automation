@@ -4,6 +4,7 @@ import Content from '~/components/widgets/Content.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
 import Layout from '~/layouts/PageLayout.astro';
 import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 
@@ -25,6 +26,17 @@ const metadata = {
       >Assessorament per integrar intel·ligència artificial a l'empresa, anàlisi de la situació tecnològica, transformació d’idees en projectes i estudis per organització de dades.</Fragment
     >
   </Hero>
+
+  <Note linkText="Informa't" linkTitle="Més informació" linkHref={u('kit-consulting')}>
+    <Fragment slot="h2">
+      <span class="text-left max-[412px]:text-center block w-full">
+        <span class="inline-block md:block">
+          Subvencionable amb
+          <span class="text-4xl md:inline block whitespace-nowrap">KIT Consulting</span>
+        </span>
+      </span>
+    </Fragment>
+  </Note>
 
   <Features3
     id="features-services"

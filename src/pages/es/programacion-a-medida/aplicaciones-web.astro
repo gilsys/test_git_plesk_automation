@@ -10,9 +10,8 @@ import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 
 const u = useRoutes(getLangFromUrl(Astro.url));
 
-
 const metadata = {
-  title: "Empresa de programación de aplicaciones web a medida | +20 años",
+  title: 'Empresa de programación de aplicaciones web a medida | +20 años',
   description:
     'Diseñamos y desarrollamos aplicaciones web a medida para empresas, adaptadas y personalizadas para optimizar procesos y ofrecer funcionalidades complejas.',
 };
@@ -20,21 +19,31 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <!-- Hero Section -->
-  <Hero tagline="Programamos aplicaciones a medida que se ajustan a tu negocio."
-  actions={[
-    { variant: 'primary', text: 'Presupuesto gratuito', href: u('contact') },
-  ]}
-  backgroundImage={{ alt:'Fondo abstracto', src: '~/assets/images/dots/02.jpg'}}
+  <Hero
+    tagline="Programamos aplicaciones a medida que se ajustan a tu negocio."
+    actions={[{ variant: 'primary', text: 'Presupuesto gratuito', href: u('contact') }]}
+    backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/dots/02.jpg' }}
   >
     <Fragment slot="title">
       Aplicaciones web <span class="text-accent highlight">a medida</span>
     </Fragment>
     <Fragment slot="subtitle">
-      Diseñamos y desarrollamos herramientas y plataformas a medida para empresas, adaptadas a objetivos concretos, para optimizar procesos y ofrecer funcionalidades avanzadas.
+      Diseñamos y desarrollamos herramientas y plataformas a medida para empresas, adaptadas a objetivos concretos, para
+      optimizar procesos y ofrecer funcionalidades avanzadas.
     </Fragment>
   </Hero>
 
-  
+  <Note linkText="Informa't" linkTitle="Més informació" linkHref={u('kit-digital')}>
+    <Fragment slot="h2">
+      <span class="text-left max-[412px]:text-center block w-full">
+        <span class="inline-block md:block">
+          Subvencionable con
+          <span class="text-4xl md:inline block whitespace-nowrap">KIT Digital</span>
+        </span>
+      </span>
+    </Fragment>
+  </Note>
+
   <!-- Introducción -->
   <Content
     tagline=""
@@ -63,235 +72,235 @@ const metadata = {
     }}
   >
     <Fragment slot="preContent">
-      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">Programamos todo tipo de herramientas en la nube</h3>
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">
+        Programamos todo tipo de herramientas en la nube
+      </h3>
       <p class="text-muted">
-        Cuando hablamos de aplicaciones web a medida, nos referimos a todo tipo de herramientas digitales programadas específicamente para ofrecer funcionalidades a medida, adaptadas a las necesidades concretas de un proyecto o empresa.
+        Cuando hablamos de aplicaciones web a medida, nos referimos a todo tipo de herramientas digitales programadas
+        específicamente para ofrecer funcionalidades a medida, adaptadas a las necesidades concretas de un proyecto o
+        empresa.
       </p>
       <p class="text-muted mt-4">
-        A diferencia de las <a href={u('software/wp')} title="Diseño web con WordPress" class="text-accent">páginas web con WordPress</a> o de las <a
+        A diferencia de las <a href={u('software/wp')} title="Diseño web con WordPress" class="text-accent"
+          >páginas web con WordPress</a
+        > o de las <a
           href={u('development/astro')}
-          title='Webs optimizadas para alto rendimiento y SEO'
+          title="Webs optimizadas para alto rendimiento y SEO"
           class="text-accent">páginas web de alto rendimiento</a
-        >, las aplicaciones web van un paso más allá y abarcan cualquier tipo de implementación avanzada de servicios de programación de herramientas cloud.
+        >, las aplicaciones web van un paso más allá y abarcan cualquier tipo de implementación avanzada de servicios de
+        programación de herramientas cloud.
       </p>
     </Fragment>
     <Fragment slot="postContent">
       <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">¿Quién necesita aplicaciones web?</h3>
       <p class="text-muted">
-        Las aplicaciones web a medida son ideales para empresas, startups e instituciones que necesitan soluciones digitales personalizadas para automatizar procesos, gestionar datos complejos u ofrecer servicios en la nube. Son especialmente útiles para aquellos proyectos, internos o públicos, con requisitos únicos que no se cubren con herramientas estándar.
+        Las aplicaciones web a medida son ideales para empresas, startups e instituciones que necesitan soluciones
+        digitales personalizadas para automatizar procesos, gestionar datos complejos u ofrecer servicios en la nube.
+        Son especialmente útiles para aquellos proyectos, internos o públicos, con requisitos únicos que no se cubren
+        con herramientas estándar.
       </p>
     </Fragment>
   </Content>
 
   <Features
-tagline=""
-title="Ejemplos de uso de Aplicaciones web a medida"
-subtitle="Las aplicaciones web a medida se adaptan a una amplia variedad de necesidades y sectores, convirtiéndose en soluciones versátiles para optimizar procesos, ofrecer servicios innovadores o centralizar operaciones."
-items={[
-  {
-    title: 'Plataformas SaaS y servicios en línea',
-    list: [
-      '<strong>Plataformas de suscripción</strong> con contenidos exclusivos, como formación en línea, servicios profesionales o acceso a herramientas especializadas.',
-      '<strong>Sistemas de gestión para miembros</strong>, clubes deportivos o comunidades digitales, con funcionalidades como planificación de actividades, seguimiento de resultados o comunicación interna.',
-    ],
-    icon: 'tabler:server',
-  },
-  {
-    title: 'Generación y automatización de documentos',
-    list: [
-      '<strong>Generación dinámica de contratos, facturas o certificados</strong>, adaptados a los datos específicos de cada usuario o cliente.',
-      '<strong>Creación de informes técnicos</strong> detallados a partir de datos analíticos para sectores como educación, industria o logística.',
-    ],
-    icon: 'tabler:file-text',
-  },
-  {
-    title: 'Plataformas para gestionar servicios especializados',
-    list: [
-      '<strong>Sistemas para gestionar reservas online</strong>, como citas, servicios profesionales o eventos.',
-      '<strong>Herramientas para configurar productos personalizados</strong>, como configuradores de maquinaria, equipamientos industriales o productos personalizados para e-commerce.',
-      '<strong>Gestión de proyectos</strong> y contrataciones con seguimiento de etapas, asignación de tareas y generación de informes de progreso.',
-    ],
-    icon: 'tabler:calendar-event',
-  },
-  {
-    title: 'Sistemas de gestión y análisis de datos',
-    list: [
-      '<strong>Paneles de control</strong> para monitorizar métricas de rendimiento, como ventas, uso de herramientas o estadísticas de tráfico en tiempo real.',
-      '<strong>Sistemas de visualización de información</strong> con gráficos, mapas y tablas interactivas para la toma de decisiones estratégicas.',
-    ],
-    icon: 'tabler:chart-pie',
-  },
-  {
-    title: 'Herramientas de formación y desarrollo',
-    list: [
-      '<strong>Plataformas para administrar cursos</strong>, evaluaciones y programas de certificación en sectores como automoción, sanidad o tecnología.',
-      '<strong>Herramientas de gamificación</strong> y seguimiento para formaciones internas, con indicadores de progreso e informes personalizados.',
-    ],
-    icon: 'tabler:school',
-  },
-  {
-    title: 'Herramientas de soporte a operaciones empresariales',
-    list: [
-      '<strong>Sistemas para gestionar inventarios</strong>, pedidos y distribución en tiempo real.',
-      '<strong>Plataformas para la gestión de clientes</strong> completamente a medida para adaptarse a las necesidades específicas de la empresa.',
-      '<strong>Herramientas para automatizar procesos administrativos</strong>, como evaluación del rendimiento del personal.',
-    ],
-    icon: 'tabler:settings',
-  },
-]
-}
->
-<Fragment slot="bg">
-  <div class="absolute inset-0 bg-lightgray"></div>
-</Fragment>
-</Features>
-
-
-
+    tagline=""
+    title="Ejemplos de uso de Aplicaciones web a medida"
+    subtitle="Las aplicaciones web a medida se adaptan a una amplia variedad de necesidades y sectores, convirtiéndose en soluciones versátiles para optimizar procesos, ofrecer servicios innovadores o centralizar operaciones."
+    items={[
+      {
+        title: 'Plataformas SaaS y servicios en línea',
+        list: [
+          '<strong>Plataformas de suscripción</strong> con contenidos exclusivos, como formación en línea, servicios profesionales o acceso a herramientas especializadas.',
+          '<strong>Sistemas de gestión para miembros</strong>, clubes deportivos o comunidades digitales, con funcionalidades como planificación de actividades, seguimiento de resultados o comunicación interna.',
+        ],
+        icon: 'tabler:server',
+      },
+      {
+        title: 'Generación y automatización de documentos',
+        list: [
+          '<strong>Generación dinámica de contratos, facturas o certificados</strong>, adaptados a los datos específicos de cada usuario o cliente.',
+          '<strong>Creación de informes técnicos</strong> detallados a partir de datos analíticos para sectores como educación, industria o logística.',
+        ],
+        icon: 'tabler:file-text',
+      },
+      {
+        title: 'Plataformas para gestionar servicios especializados',
+        list: [
+          '<strong>Sistemas para gestionar reservas online</strong>, como citas, servicios profesionales o eventos.',
+          '<strong>Herramientas para configurar productos personalizados</strong>, como configuradores de maquinaria, equipamientos industriales o productos personalizados para e-commerce.',
+          '<strong>Gestión de proyectos</strong> y contrataciones con seguimiento de etapas, asignación de tareas y generación de informes de progreso.',
+        ],
+        icon: 'tabler:calendar-event',
+      },
+      {
+        title: 'Sistemas de gestión y análisis de datos',
+        list: [
+          '<strong>Paneles de control</strong> para monitorizar métricas de rendimiento, como ventas, uso de herramientas o estadísticas de tráfico en tiempo real.',
+          '<strong>Sistemas de visualización de información</strong> con gráficos, mapas y tablas interactivas para la toma de decisiones estratégicas.',
+        ],
+        icon: 'tabler:chart-pie',
+      },
+      {
+        title: 'Herramientas de formación y desarrollo',
+        list: [
+          '<strong>Plataformas para administrar cursos</strong>, evaluaciones y programas de certificación en sectores como automoción, sanidad o tecnología.',
+          '<strong>Herramientas de gamificación</strong> y seguimiento para formaciones internas, con indicadores de progreso e informes personalizados.',
+        ],
+        icon: 'tabler:school',
+      },
+      {
+        title: 'Herramientas de soporte a operaciones empresariales',
+        list: [
+          '<strong>Sistemas para gestionar inventarios</strong>, pedidos y distribución en tiempo real.',
+          '<strong>Plataformas para la gestión de clientes</strong> completamente a medida para adaptarse a las necesidades específicas de la empresa.',
+          '<strong>Herramientas para automatizar procesos administrativos</strong>, como evaluación del rendimiento del personal.',
+        ],
+        icon: 'tabler:settings',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Features>
 
   <Content
-  isReversed
-  tagline=""
-  title="Un diseño pensado para cada proyecto"
-  items={[
-    {
-      title: 'Interfaces funcionales',
-      description: 'Ideales para aplicaciones de uso interno, donde la simplicidad y la eficiencia son prioritarias.',
-    },
-    {
-      title: 'Interfaces atractivas',
-      description:
-        'Necesarias para proyectos SaaS o herramientas orientadas al público final, donde la apariencia visual y la accesibilidad juegan un papel clave.',
-    },
-    {
-      title: 'Componentes modernos',
-      description:
-        `Utilizamos <a target="_blank" class="text-accent" title="Interfaces de usuario con Metronic" href="https://keenthemes.com/metronic">Metronic</a> para la creación de interfaces de usuario. Metronic es un potente conjunto de herramientas con plantillas y componentes UI modernos, ideal para crear aplicaciones web escalables, atractivas y altamente personalizables.`,
-    },
-  ]}
-  image={{
-    src: '~/assets/images/metronic-ui-components.jpg',
-    alt: 'Interfaces de administración backoffice con Metronic',
-  }}
->
-  <Fragment slot="preContent">
-    <p class="text-muted">
-      En Gilsys, entendemos que cada aplicación web tiene unos objetivos específicos, y su diseño debe reflejarlos. Por ello, nuestro equipo de programadores adapta las interfaces de usuario (UI) según el tipo de proyecto:
-    </p>
-  </Fragment>
-  <Fragment slot="postContent">
-    <p class="text-muted">
-      El objetivo es crear aplicaciones que no solo funcionen bien, sino que también sean fáciles de usar y agradables a nivel visual.
-    </p>
-  </Fragment>
-  
-</Content>
-
-
-<Features2
-id="features"
-title="Ventajas de las <span class='custom-gradient'>aplicaciones web</span> a medida y <span class='custom-gradient'>herramientas cloud</span>"
-subtitle="Aportan beneficios únicos en comparación con las soluciones estándar."
-items={[
-  {
-    title: 'Flexibilidad',
-    list: [
-      '<strong>Adaptación completa:</strong> Las funcionalidades, el diseño y la arquitectura se desarrollan según los requisitos específicos del proyecto.',
-      '<strong>Personalización avanzada:</strong> Posibilidad de integrar funcionalidades exclusivas que no se encuentran en herramientas genéricas.',
-      '<strong>Evolución constante:</strong> Los sistemas pueden ajustarse a nuevas necesidades o desafíos con el tiempo.',
-    ],
-    icon: 'tabler:arrows-maximize',
-  },
-  {
-    title: 'Facilidad de acceso y uso online',
-    list: [
-      '<strong>Accesibilidad global:</strong> Los usuarios pueden acceder desde cualquier lugar y en cualquier momento.',
-      '<strong>Multidispositivo:</strong> Funcionan en ordenadores, tablets y smartphones sin necesidad de versiones específicas.',
-      '<strong>Compatibilidad multiplataforma:</strong> Funcionan en cualquier sistema operativo con un navegador compatible.',
-    ],
-    icon: 'tabler:device-laptop',
-  },
-  {
-    title: 'Automatización y eficiencia',
-    list: [
-      '<strong>Gestión optimizada:</strong> Automatización de tareas repetitivas.',
-      '<strong>Productividad mejorada:</strong> Reducción del tiempo necesario para completar procesos clave.',
-      '<strong>Eliminación de errores:</strong> Automatizar procesos críticos minimiza los riesgos asociados a errores manuales.',
-    ],
-    icon: 'tabler:settings',
-  },
-  {
-    title: 'Adaptación al crecimiento',
-    list: [
-      '<strong>Nuevas funcionalidades</strong> bajo demanda.',
-      '<strong>Gestión de grandes volúmenes de datos</strong> sin comprometer el rendimiento.',
-      '<strong>Preparadas para el futuro:</strong> Integración con tecnologías emergentes.',
-    ],
-    icon: 'tabler:line',
-  },
-  {
-    title: 'Facilidad de mantenimiento y actualización',
-    list: [
-      '<strong>Actualizaciones instantáneas</strong> sin necesidad de descargas.',
-      '<strong>Mantenimiento remoto:</strong> Ajustes y mejoras sin interrupciones significativas.',
-      '<strong>Costes reducidos</strong> gracias a la gestión centralizada.',
-    ],
-    icon: 'tabler:cloud',
-  },
-  {
-    title: 'Diseño orientado al usuario',
-    list: [
-      '<strong>Facilidad de uso:</strong> Diseños intuitivos para una mejor experiencia de usuario.',
-      '<strong>Adaptabilidad</strong> visual a las necesidades del público objetivo.',
-      '<strong>Responsive design:</strong> Experiencia coherente en cualquier dispositivo.',
-    ],
-    icon: 'tabler:palette',
-  },
-  {
-    title: 'Control y propiedad total',
-    list: [
-      '<strong>Propiedad del código:</strong> Autonomía en modificaciones o transferencias.',
-      '<strong>Independencia</strong> de proveedores.',
-      '<strong>Seguridad</strong> personalizada adaptada a normativas específicas.',
-    ],
-    icon: 'tabler:key',
-  },
-  {
-    title: 'Mejor rendimiento respecto a otras soluciones',
-    list: [
-      '<strong>Sin instalación local:</strong> No ocupa espacio ni requiere actualizaciones manuales.',
-      '<strong>Flexibilidad de uso:</strong> Compatible con múltiples sistemas operativos.',
-      '<strong>Menores requisitos de hardware</strong> gracias a la gestión desde el servidor.',
-    ],
-    icon: 'tabler:rocket',
-  },
-  {
-    title: 'Optimización para proyectos colaborativos y SaaS',
-    list: [
-      '<strong>Trabajo en equipo</strong> en tiempo real.',
-      '<strong>Suscripciones y servicios en línea:</strong> Gestiona usuarios y servicios.',
-    ],
-    icon: 'tabler:users',
-  },
-]
-}
->
-<Fragment slot="bg">
-  <div class="absolute inset-0 bg-lightgray"></div>
-</Fragment>
-</Features2>
-
-
-
-<Content
     isReversed
     tagline=""
+    title="Un diseño pensado para cada proyecto"
+    items={[
+      {
+        title: 'Interfaces funcionales',
+        description: 'Ideales para aplicaciones de uso interno, donde la simplicidad y la eficiencia son prioritarias.',
+      },
+      {
+        title: 'Interfaces atractivas',
+        description:
+          'Necesarias para proyectos SaaS o herramientas orientadas al público final, donde la apariencia visual y la accesibilidad juegan un papel clave.',
+      },
+      {
+        title: 'Componentes modernos',
+        description: `Utilizamos <a target="_blank" class="text-accent" title="Interfaces de usuario con Metronic" href="https://keenthemes.com/metronic">Metronic</a> para la creación de interfaces de usuario. Metronic es un potente conjunto de herramientas con plantillas y componentes UI modernos, ideal para crear aplicaciones web escalables, atractivas y altamente personalizables.`,
+      },
+    ]}
+    image={{
+      src: '~/assets/images/metronic-ui-components.jpg',
+      alt: 'Interfaces de administración backoffice con Metronic',
+    }}
+  >
+    <Fragment slot="preContent">
+      <p class="text-muted">
+        En Gilsys, entendemos que cada aplicación web tiene unos objetivos específicos, y su diseño debe reflejarlos.
+        Por ello, nuestro equipo de programadores adapta las interfaces de usuario (UI) según el tipo de proyecto:
+      </p>
+    </Fragment>
+    <Fragment slot="postContent">
+      <p class="text-muted">
+        El objetivo es crear aplicaciones que no solo funcionen bien, sino que también sean fáciles de usar y agradables
+        a nivel visual.
+      </p>
+    </Fragment>
+  </Content>
 
+  <Features2
+    id="features"
+    title="Ventajas de las <span class='custom-gradient'>aplicaciones web</span> a medida y <span class='custom-gradient'>herramientas cloud</span>"
+    subtitle="Aportan beneficios únicos en comparación con las soluciones estándar."
+    items={[
+      {
+        title: 'Flexibilidad',
+        list: [
+          '<strong>Adaptación completa:</strong> Las funcionalidades, el diseño y la arquitectura se desarrollan según los requisitos específicos del proyecto.',
+          '<strong>Personalización avanzada:</strong> Posibilidad de integrar funcionalidades exclusivas que no se encuentran en herramientas genéricas.',
+          '<strong>Evolución constante:</strong> Los sistemas pueden ajustarse a nuevas necesidades o desafíos con el tiempo.',
+        ],
+        icon: 'tabler:arrows-maximize',
+      },
+      {
+        title: 'Facilidad de acceso y uso online',
+        list: [
+          '<strong>Accesibilidad global:</strong> Los usuarios pueden acceder desde cualquier lugar y en cualquier momento.',
+          '<strong>Multidispositivo:</strong> Funcionan en ordenadores, tablets y smartphones sin necesidad de versiones específicas.',
+          '<strong>Compatibilidad multiplataforma:</strong> Funcionan en cualquier sistema operativo con un navegador compatible.',
+        ],
+        icon: 'tabler:device-laptop',
+      },
+      {
+        title: 'Automatización y eficiencia',
+        list: [
+          '<strong>Gestión optimizada:</strong> Automatización de tareas repetitivas.',
+          '<strong>Productividad mejorada:</strong> Reducción del tiempo necesario para completar procesos clave.',
+          '<strong>Eliminación de errores:</strong> Automatizar procesos críticos minimiza los riesgos asociados a errores manuales.',
+        ],
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Adaptación al crecimiento',
+        list: [
+          '<strong>Nuevas funcionalidades</strong> bajo demanda.',
+          '<strong>Gestión de grandes volúmenes de datos</strong> sin comprometer el rendimiento.',
+          '<strong>Preparadas para el futuro:</strong> Integración con tecnologías emergentes.',
+        ],
+        icon: 'tabler:line',
+      },
+      {
+        title: 'Facilidad de mantenimiento y actualización',
+        list: [
+          '<strong>Actualizaciones instantáneas</strong> sin necesidad de descargas.',
+          '<strong>Mantenimiento remoto:</strong> Ajustes y mejoras sin interrupciones significativas.',
+          '<strong>Costes reducidos</strong> gracias a la gestión centralizada.',
+        ],
+        icon: 'tabler:cloud',
+      },
+      {
+        title: 'Diseño orientado al usuario',
+        list: [
+          '<strong>Facilidad de uso:</strong> Diseños intuitivos para una mejor experiencia de usuario.',
+          '<strong>Adaptabilidad</strong> visual a las necesidades del público objetivo.',
+          '<strong>Responsive design:</strong> Experiencia coherente en cualquier dispositivo.',
+        ],
+        icon: 'tabler:palette',
+      },
+      {
+        title: 'Control y propiedad total',
+        list: [
+          '<strong>Propiedad del código:</strong> Autonomía en modificaciones o transferencias.',
+          '<strong>Independencia</strong> de proveedores.',
+          '<strong>Seguridad</strong> personalizada adaptada a normativas específicas.',
+        ],
+        icon: 'tabler:key',
+      },
+      {
+        title: 'Mejor rendimiento respecto a otras soluciones',
+        list: [
+          '<strong>Sin instalación local:</strong> No ocupa espacio ni requiere actualizaciones manuales.',
+          '<strong>Flexibilidad de uso:</strong> Compatible con múltiples sistemas operativos.',
+          '<strong>Menores requisitos de hardware</strong> gracias a la gestión desde el servidor.',
+        ],
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Optimización para proyectos colaborativos y SaaS',
+        list: [
+          '<strong>Trabajo en equipo</strong> en tiempo real.',
+          '<strong>Suscripciones y servicios en línea:</strong> Gestiona usuarios y servicios.',
+        ],
+        icon: 'tabler:users',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Features2>
+
+  <Content
+    isReversed
+    tagline=""
     image={{
       src: '~/assets/images/aplicaciones-web-cloud.jpg',
       alt: 'Aplicaciones web cloud',
     }}
-
     title="¿Por qué elegir Gilsys para el desarrollo de aplicaciones web a medida?"
     items={[
       {
@@ -325,37 +334,28 @@ items={[
         icon: 'tabler:headset',
       },
     ]}
-  >    
-
-  </Content>
-
+  />
 
   <CallToAction
-  backgroundImage={{ src: '~/assets/images/dots/02.jpg', alt: 'Fondo abstracto' }}
-  actions={[
-    {
-      variant: 'primary',
-      text: 'Presupuesto gratuito',
-      href: u('contact'),
-    },
-    {
-      variant: 'primary',
-      text: 'Llamar',
-      href: 'tel:+34665331271',
-    },
-  ]}
->
-  <Fragment slot="title">Tu <span class="custom-gradient">aplicación web a medida</span>,<br/> a solo un clic</Fragment>
-  <Fragment slot="subtitle">Cuéntanos las necesidades de tu proyecto y prepararemos un presupuesto personalizado.</Fragment>
-</CallToAction>
-
-
-
-
-
-
-
-
-
-
+    backgroundImage={{ src: '~/assets/images/dots/02.jpg', alt: 'Fondo abstracto' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Presupuesto gratuito',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Llamar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title"
+      >Tu <span class="custom-gradient">aplicación web a medida</span>,<br /> a solo un clic</Fragment
+    >
+    <Fragment slot="subtitle"
+      >Cuéntanos las necesidades de tu proyecto y prepararemos un presupuesto personalizado.</Fragment
+    >
+  </CallToAction>
 </Layout>

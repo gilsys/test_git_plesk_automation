@@ -4,6 +4,7 @@ import Content from '~/components/widgets/Content.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
 import Layout from '~/layouts/PageLayout.astro';
 import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 
@@ -17,16 +18,26 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <Hero tagline="Centralitza informació, automatitza processos i optimitza el marketing amb una eina al núvol."
-  backgroundImage={{alt: 'Fons abstracte',  src: '~/assets/images/dots/25.jpg'}}
+  <Hero
+    tagline="Centralitza informació, automatitza processos i optimitza el marketing amb una eina al núvol."
+    backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/25.jpg' }}
   >
     <Fragment slot="title"
       >Gestió de <span class="text-accent highlight">Clients</span> amb un CRM Personalitzat</Fragment
     >
-    <Fragment slot="subtitle">
-      Millora el seguiment de clients de la teva empresa amb un CRM a mida.
-    </Fragment>
+    <Fragment slot="subtitle"> Millora el seguiment de clients de la teva empresa amb un CRM a mida. </Fragment>
   </Hero>
+
+  <Note linkText="Informa't" linkTitle="Més informació" linkHref={u('kit-digital')}>
+    <Fragment slot="h2">
+      <span class="text-left max-[412px]:text-center block w-full">
+        <span class="inline-block md:block">
+          Subvencionable amb
+          <span class="text-4xl md:inline block whitespace-nowrap">KIT Digital</span>
+        </span>
+      </span>
+    </Fragment>
+  </Note>
 
   <Content
     isReversed
@@ -64,23 +75,21 @@ const metadata = {
     </Fragment>
     <Fragment slot="content">
       <p class="text-muted">
-        Permet gestionar les relacions amb els clients de manera eficient i estructurada, com informació clau, dades de contacte, històric de comunicacions, seguiment de vendes i gestió de tasques.
+        Permet gestionar les relacions amb els clients de manera eficient i estructurada, com informació clau, dades de
+        contacte, històric de comunicacions, seguiment de vendes i gestió de tasques.
       </p>
       <p class="text-muted mt-3">Disposar d’un CRM permetrà a la teva empresa o negoci:</p>
     </Fragment>
-
-    
 
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-lightgray"></div>
     </Fragment>
   </Content>
 
-
   <Features2
     id="features-services"
     title="Quines funcionalitats ofereix un programa de gestió de clients?"
-    tagline='Les seves funcionalitats poden ser ampliades i personalitzades per adaptar-se a mida a cada empresa'
+    tagline="Les seves funcionalitats poden ser ampliades i personalitzades per adaptar-se a mida a cada empresa"
     subtitle="Un CRM és molt més que una base de dades de clients."
     items={[
       {
@@ -94,7 +103,7 @@ const metadata = {
       {
         title: 'Clients potencials',
         list: [
-          "Registre de possibles clients potencials i seguiment de les accions comercials realitzades.",
+          'Registre de possibles clients potencials i seguiment de les accions comercials realitzades.',
           'Transformació automàtica de clients potencials a clients reals.',
         ],
         icon: 'tabler:users',
@@ -117,10 +126,7 @@ const metadata = {
       },
       {
         title: 'Automatització de processos',
-        list: [
-          'Enviament de correus de recordatori.',
-          'Marketing automàtic amb correus de promocions i seguiment.',
-        ],
+        list: ['Enviament de correus de recordatori.', 'Marketing automàtic amb correus de promocions i seguiment.'],
         icon: 'tabler:repeat',
       },
       {
@@ -147,73 +153,63 @@ const metadata = {
         ],
         icon: 'tabler:plug-connected',
       },
-    ]
-    }
+    ]}
   />
 
-
-
   <Features
-  
-  title= "Quins sectors poden necessitar una eina per gestionar clients?"
-  subtitle="Les petites i mitjanes empreses (pimes) sovint tenen recursos limitats, per això és crucial que gestionin les seves relacions amb els clients de manera eficaç."
-
-  items={
-    [
-  {
-    title: 'Advocats',
-    description:
-      'Gestiona eficaçment els casos dels clients, el seguiment dels documents legals, les cites i la comunicació amb els clients.',
-    icon: 'tabler:users',
-  },
-  {
-    title: 'Gestors',
-    description:
-      'Organitza la informació dels clients, els seus comptes, les seves inversions i la comunicació amb ells en un sol lloc.',
-    icon: 'tabler:briefcase',
-  },
-  {
-    title: 'Consultors',
-    description:
-      'Simplifica la gestió dels projectes dels clients, el seguiment dels progressos, les factures i la comunicació amb ells.',
-    icon: 'tabler:bulb',
-  },
-  {
-    title: 'Agències immobiliàries',
-    description:
-      'Millora la gestió dels clients, les propietats, les visites, les ofertes i la comunicació amb els clients per tancar més vendes.',
-    icon: 'tabler:home',
-  },
-  {
-    title: 'Empreses de serveis',
-    description:
-      'Centralitza la gestió de les sol·licituds de servei, el seguiment dels problemes dels clients i la resolució de les seves consultes.',
-    icon: 'tabler:speakerphone',
-  },  
-  {
-    title: 'Empreses B2B',
-    description:
-      "Centralitza els leads (clients potencials), les oportunitats de venda, els contactes amb els clients i realitza un seguiment de les vendes.",
-    icon: 'tabler:shopping-cart',
-  },    
-  {
-    title: 'Organitzacions sense ànim de lucre',
-    description:
-      'Gestiona les relacions amb els donants, els voluntaris, els beneficiaris i la comunicació amb ells per a un major impacte.',
-    icon: 'tabler:heart',
-  },
-  {
-    title: 'Administracions públiques',
-    description:
-      'Millora la comunicació amb els ciutadans, gestiona les seves sol·licituds, els seus tràmits i la informació rellevant.',
-    icon: 'tabler:fountain',
-  },
-]
-  }
-  >
-
-
-  </Features>
+    title="Quins sectors poden necessitar una eina per gestionar clients?"
+    subtitle="Les petites i mitjanes empreses (pimes) sovint tenen recursos limitats, per això és crucial que gestionin les seves relacions amb els clients de manera eficaç."
+    items={[
+      {
+        title: 'Advocats',
+        description:
+          'Gestiona eficaçment els casos dels clients, el seguiment dels documents legals, les cites i la comunicació amb els clients.',
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Gestors',
+        description:
+          'Organitza la informació dels clients, els seus comptes, les seves inversions i la comunicació amb ells en un sol lloc.',
+        icon: 'tabler:briefcase',
+      },
+      {
+        title: 'Consultors',
+        description:
+          'Simplifica la gestió dels projectes dels clients, el seguiment dels progressos, les factures i la comunicació amb ells.',
+        icon: 'tabler:bulb',
+      },
+      {
+        title: 'Agències immobiliàries',
+        description:
+          'Millora la gestió dels clients, les propietats, les visites, les ofertes i la comunicació amb els clients per tancar més vendes.',
+        icon: 'tabler:home',
+      },
+      {
+        title: 'Empreses de serveis',
+        description:
+          'Centralitza la gestió de les sol·licituds de servei, el seguiment dels problemes dels clients i la resolució de les seves consultes.',
+        icon: 'tabler:speakerphone',
+      },
+      {
+        title: 'Empreses B2B',
+        description:
+          'Centralitza els leads (clients potencials), les oportunitats de venda, els contactes amb els clients i realitza un seguiment de les vendes.',
+        icon: 'tabler:shopping-cart',
+      },
+      {
+        title: 'Organitzacions sense ànim de lucre',
+        description:
+          'Gestiona les relacions amb els donants, els voluntaris, els beneficiaris i la comunicació amb ells per a un major impacte.',
+        icon: 'tabler:heart',
+      },
+      {
+        title: 'Administracions públiques',
+        description:
+          'Millora la comunicació amb els ciutadans, gestiona les seves sol·licituds, els seus tràmits i la informació rellevant.',
+        icon: 'tabler:fountain',
+      },
+    ]}
+  />
 
   <Content
     isReversed
@@ -231,8 +227,7 @@ const metadata = {
       },
       {
         title: 'Gestió documental',
-        description:
-          'Arxiu i accés ràpid a documents relacionats amb els clients, com contractes o pressupostos.',
+        description: 'Arxiu i accés ràpid a documents relacionats amb els clients, com contractes o pressupostos.',
       },
     ]}
     image={{
@@ -242,13 +237,15 @@ const metadata = {
   >
     <Fragment slot="preContent">
       <p>
-        Un CRM flexible permet 
-        <a class='text-accent' title='Serveis de programació a mida' href={u('software')}>programar mòduls a mida</a> que cobreixin necessitats específiques de cada negoci. Alguns exemples de mòduls personalitzats inclouen:
+        Un CRM flexible permet
+        <a class="text-accent" title="Serveis de programació a mida" href={u('software')}>programar mòduls a mida</a> que
+        cobreixin necessitats específiques de cada negoci. Alguns exemples de mòduls personalitzats inclouen:
       </p>
     </Fragment>
     <Fragment slot="postContent">
       <p>
-        Aquest enfoc permet que el CRM no només s’adapti a les operacions actuals, sinó que també pugui evolucionar amb el creixement del negoci.
+        Aquest enfoc permet que el CRM no només s’adapti a les operacions actuals, sinó que també pugui evolucionar amb
+        el creixement del negoci.
       </p>
     </Fragment>
     <Fragment slot="bg">
@@ -279,7 +276,8 @@ const metadata = {
       },
       {
         title: 'Escalabilitat i adaptabilitat',
-        description: "Amb el pas del temps, l'empresa pot patir canvis, el programa de gestió de clients es pot adaptar a aquests, evitant costos innecessaris de migracions a curt termini.",
+        description:
+          "Amb el pas del temps, l'empresa pot patir canvis, el programa de gestió de clients es pot adaptar a aquests, evitant costos innecessaris de migracions a curt termini.",
         icon: 'tabler:arrows-maximize',
       },
     ]}
@@ -318,31 +316,30 @@ const metadata = {
       src: '~/assets/images/gilsys-crm.jpg',
       alt: 'Operadores gesionant clients amb softawre',
     }}
-  >    
+  >
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-lightgray"></div>
     </Fragment>
   </Content>
 
   <CallToAction
-  backgroundImage={{ src: '~/assets/images/dots/25.jpg', alt: 'Fons abstracte, inspirat en tecnologia i software' }}
-  actions={[
-    {
-      variant: 'primary',
-      text: 'Pressupost gratuït',
-      href: u('contact'),
-    },
-    {
-      variant: 'primary',
-      text: 'Trucar',
-      href: 'tel:+34665331271',
-    },
-  ]}
->
-  <Fragment slot="title">Necessites <span class="custom-gradient">gestionar els teus clients</span> i portar un seguiment ordenat?</Fragment>
-  <Fragment slot="subtitle"
-    >T'oferim un CRM personalitzat, adaptat a les necessitats de la teva empresa.</Fragment
+    backgroundImage={{ src: '~/assets/images/dots/25.jpg', alt: 'Fons abstracte, inspirat en tecnologia i software' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Pressupost gratuït',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Trucar',
+        href: 'tel:+34665331271',
+      },
+    ]}
   >
-</CallToAction>
-
+    <Fragment slot="title"
+      >Necessites <span class="custom-gradient">gestionar els teus clients</span> i portar un seguiment ordenat?</Fragment
+    >
+    <Fragment slot="subtitle">T'oferim un CRM personalitzat, adaptat a les necessitats de la teva empresa.</Fragment>
+  </CallToAction>
 </Layout>

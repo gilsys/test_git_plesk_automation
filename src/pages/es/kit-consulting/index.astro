@@ -12,7 +12,7 @@ const u = useRoutes(getLangFromUrl(Astro.url));
 const metadata = {
   title: `Consultoría IA con Kit Consulting en Catalunya`,
   description:
-    "Somos agentes consultores, expertos en Inteligencia Artificial, ofrecemos servicios de asesoramiento, subvencionados, desde Osona para empresas de Barcelona y Gerona."
+    'Somos agentes consultores, expertos en Inteligencia Artificial, ofrecemos servicios de asesoramiento, subvencionados, desde Osona para empresas de Barcelona y Gerona.',
 };
 ---
 
@@ -22,9 +22,12 @@ const metadata = {
     actions={[{ variant: 'primary', text: 'Solicitar información', href: u('contact') }]}
     tagline="Somos agentes consultores homologados, expertos en <strong>Inteligencia Artificial</strong>, programación y datos."
   >
-    <Fragment slot="title">Consultoría subvencionada con <span class="custom-gradient">Kit Consulting</span> en Catalunya</Fragment>
+    <Fragment slot="title"
+      >Consultoría subvencionada con <span class="custom-gradient">Kit Consulting</span> en Catalunya</Fragment
+    >
     <Fragment slot="subtitle">
-      Servicios subvencionados de asesoramiento digital, orientados a inteligencia artificial, desde Osona, para empresas de Barcelona y Gerona.
+      Servicios subvencionados de asesoramiento digital, orientados a inteligencia artificial, desde Osona, para
+      empresas de Barcelona y Gerona.
     </Fragment>
   </Hero>
 
@@ -36,8 +39,7 @@ const metadata = {
     items={[
       {
         title: 'Asesoramiento en Inteligencia Artificial',
-        description:
-          'Descubre cómo aplicar la IA para optimizar procesos y mejorar la productividad de tu negocio.',
+        description: 'Descubre cómo aplicar la IA para optimizar procesos y mejorar la productividad de tu negocio.',
         icon: 'tabler:robot',
         callToAction: {
           class: 'more-info',
@@ -47,7 +49,8 @@ const metadata = {
       },
       {
         title: 'Asesoramiento en análisis de datos (Básico)',
-        description: 'Analizamos los datos de tu empresa y proponemos diversas herramientas que puedan ayudar a mejorar su organización, evaluando también opciones donde intervenga inteligencia artificial.',
+        description:
+          'Analizamos los datos de tu empresa y proponemos diversas herramientas que puedan ayudar a mejorar su organización, evaluando también opciones donde intervenga inteligencia artificial.',
         icon: 'tabler:chart-bar',
         callToAction: {
           class: 'more-info',
@@ -68,7 +71,8 @@ const metadata = {
       },
       {
         title: 'Asesoramiento en ventas digitales',
-        description: 'Mejora tu estrategia de ventas digitales para incrementar ingresos y captar nuevos clientes, estudiando cómo integrar inteligencia artificial.',
+        description:
+          'Mejora tu estrategia de ventas digitales para incrementar ingresos y captar nuevos clientes, estudiando cómo integrar inteligencia artificial.',
         icon: 'tabler:shopping-cart',
         callToAction: {
           class: 'more-info',
@@ -78,7 +82,8 @@ const metadata = {
       },
       {
         title: 'Asesoramiento en procesos de negocio o proceso de producción',
-        description: 'Optimiza y digitaliza tus procesos para ganar en eficiencia y reducir costes, utilizando inteligencia artificial.',
+        description:
+          'Optimiza y digitaliza tus procesos para ganar en eficiencia y reducir costes, utilizando inteligencia artificial.',
         icon: 'tabler:settings',
         callToAction: {
           class: 'more-info',
@@ -88,7 +93,8 @@ const metadata = {
       },
       {
         title: 'Asesoramiento en estrategia y rendimiento de negocio',
-        description: 'Define e implementa estrategias con inteligencia artificial para mejorar el rendimiento global de tu empresa.',
+        description:
+          'Define e implementa estrategias con inteligencia artificial para mejorar el rendimiento global de tu empresa.',
         icon: 'tabler:trending-up',
         callToAction: {
           class: 'more-info',
@@ -139,15 +145,15 @@ const metadata = {
   />
 
   <FAQs
-    id='faq'    
+    id="faq"
     schema
-    title='Preguntas frecuentes sobre el Kit Consulting en Catalunya'
+    title="Preguntas frecuentes sobre el Kit Consulting en Catalunya"
     items={[
       {
         title: '¿Qué es el Kit Consulting?',
         description:
           'Es un servicio de asesoramiento especializado destinado a empresas que quieren transformarse digitalmente, con soporte en estrategia, procesos y tecnología.',
-      },  
+      },
       {
         title: '¿Quién puede beneficiarse del Kit Consulting?',
         description:
@@ -163,40 +169,39 @@ const metadata = {
       {
         title: '¿Cuál es la función de Gilsys en el Kit Consulting?',
         description:
-          'En Gilsys, somos agentes consultores homologados. Podemos ejecutar Kit Consulting a aquellas empresas que dispongan de la subvención aprobada. Como expertos en Inteligencia artificial y desarrollo de software, ofrecemos servicios de <a class="text-accent" title="Consultoría en inteligencia artificial" href=' + u('consultory')+ '>consultoría especializada</a>. Además, podemos ayudarte a implementar las soluciones más adecuadas para tu empresa.',
+          'En Gilsys, somos agentes consultores homologados. Podemos ejecutar Kit Consulting a aquellas empresas que dispongan de la subvención aprobada. Como expertos en Inteligencia artificial y desarrollo de software, ofrecemos servicios de <a class="text-accent" title="Consultoría en inteligencia artificial" href=' +
+          u('consultory') +
+          '>consultoría especializada</a>. Además, podemos ayudarte a implementar las soluciones más adecuadas para tu empresa.',
       },
       {
-        title: "¿Qué diferencia a Gilsys de otros agentes consultores?",
+        title: '¿Qué diferencia a Gilsys de otros agentes consultores?',
         description:
           'En Gilsys, somos una empresa principalmente técnica, por lo que nuestro enfoque es muy práctico y podemos ir más allá que las empresas que solo ofrecen orientación y asesoramiento. Hemos trabajado con clientes de sectores muy diversos, y esto nos ha dado una visión muy amplia de las mejores estrategias a seguir a nivel tecnológico.',
       },
       {
-        title: "¿Kit Consulting incluye la implantación de alguna herramienta?",
+        title: '¿Kit Consulting incluye la implantación de alguna herramienta?',
         description:
-          "No, Kit Consulting es una subvención que cubre el servicio de consultoría y asesoramiento, para analizar la empresa y sus requisitos pero no incluye la implantación de ninguna herramienta, producto o servicio. Para ello existe otra subvención, <a class='text-accent' title='Implantaciones subvencionadas con kit digital' href='" + u('kit-digital') +"'>Kit Digital</a>, de la que también es posible beneficiarse de forma paralela.",
+          "No, Kit Consulting es una subvención que cubre el servicio de consultoría y asesoramiento, para analizar la empresa y sus requisitos pero no incluye la implantación de ninguna herramienta, producto o servicio. Para ello existe otra subvención, <a class='text-accent' title='Implantaciones subvencionadas con kit digital' href='" +
+          u('kit-digital') +
+          "'>Kit Digital</a>, de la que también es posible beneficiarse de forma paralela.",
       },
       {
-        title: "¿Es compatible con Kit Digital?",
-        description:
-          "Sí, una empresa puede solicitar y beneficiarse de las dos subvenciones.",
-      },    
+        title: '¿Es compatible con Kit Digital?',
+        description: 'Sí, una empresa puede solicitar y beneficiarse de las dos subvenciones.',
+      },
       {
-        title: "¿Qué diferencia hay con Kit Digital?",
+        title: '¿Qué diferencia hay con Kit Digital?',
         description:
-          "Kit consulting es un servicio de asesoramiento y consultoría, y Kit Digital es un servicio de transformación digital que incluye la implantación de herramientas o servicios.",
-      },  
+          'Kit consulting es un servicio de asesoramiento y consultoría, y Kit Digital es un servicio de transformación digital que incluye la implantación de herramientas o servicios.',
+      },
       {
         title: '¿Solo trabajan en las provincias de Barcelona y Gerona?',
-        description:
-          `No, al tener la empresa en Osona, nos focalizamos en empresas de las provincias de Barcelona y Gerona, pero nos puedes consultar si tu empresa está ubicada en cualquier otra zona de Catalunya.`,
+        description: `No, al tener la empresa en Osona, nos focalizamos en empresas de las provincias de Barcelona y Gerona, pero nos puedes consultar si tu empresa está ubicada en cualquier otra zona de Catalunya.`,
       },
       {
         title: '¿Solo se puede solicitar en Catalunya?',
-        description:
-          `No, se puede solicitar en toda España, pero desde Gilsys ofrecemos este servicio solo a empresas de Catalunya, concretamente provincias de Barcelona y Gerona. Establecemos este límite por motivos de proximidad a la hora de ejecutar el asesoramiento.`,
+        description: `No, se puede solicitar en toda España, pero desde Gilsys ofrecemos este servicio solo a empresas de Catalunya, concretamente provincias de Barcelona y Gerona. Establecemos este límite por motivos de proximidad a la hora de ejecutar el asesoramiento.`,
       },
-
-      
     ]}
   />
 
@@ -228,10 +233,13 @@ const metadata = {
     ]}
   >
     <Fragment slot="title"
-      >Si tienes empresa en la provincia de Barcelona o Gerona, aprovecha el <span class="custom-gradient">Kit Consulting</span> con nosotros y transforma tu negocio</Fragment
+      >Si tienes empresa en la provincia de Barcelona o Gerona, aprovecha el <span class="custom-gradient"
+        >Kit Consulting</span
+      > con nosotros y transforma tu negocio</Fragment
     >
     <Fragment slot="subtitle">
-      Consigue soporte personalizado de la mano de expertos en Inteligencia Artificial, en estrategia, tecnología y procesos para hacer crecer tu empresa.
+      Consigue soporte personalizado de la mano de expertos en Inteligencia Artificial, en estrategia, tecnología y
+      procesos para hacer crecer tu empresa.
     </Fragment>
   </CallToAction>
 </Layout>
