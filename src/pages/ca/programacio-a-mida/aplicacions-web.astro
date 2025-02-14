@@ -33,8 +33,7 @@ const metadata = {
     </Fragment>
   </Hero>
 
-  <!-- TODO Completar
-  <Note linkText="Informa't" linkTitle="Més informació" linkHref={u('contact')}>
+  <!-- <Note linkText="Informa't" linkTitle="Més informació" linkHref={u('contact')}>
     <Fragment slot="h2">
       Subvencionable amb <span class="text-4xl">KIT Digital</span>
     </Fragment>
@@ -45,8 +44,13 @@ const metadata = {
         class="text-accent font-medium cursor-pointer">🔗 Gestió de clients</a
       > - De 3.000€ a 29.000€
     </Fragment>
+  </Note> -->
+
+  <Note linkText="Informa't" linkTitle="Més informació" linkHref={u('kit-digital')}>
+    <Fragment slot="h2">
+      Subvencionable amb <br class="md:hidden" /><span class="text-4xl">KIT Digital</span>
+    </Fragment>
   </Note>
-   -->
 
   <!-- Introducció -->
   <Content
@@ -290,13 +294,10 @@ const metadata = {
       },
     ]}
   >
-  <Fragment slot="bg">
-    <div class="absolute inset-0 bg-lightgray"></div>
-  </Fragment>
-</Features2>
-
-
-  
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Features2>
 
   <Content
     isReversed
@@ -338,8 +339,7 @@ const metadata = {
         icon: 'tabler:headset',
       },
     ]}
-  >   
-  </Content>
+  />
 
   <CallToAction
     backgroundImage={{ src: '~/assets/images/dots/02.jpg', alt: 'Fons abstracte' }}
