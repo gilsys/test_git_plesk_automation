@@ -50,6 +50,7 @@ export const ui = {
     'affiliations': 'Afiliaciones',
     'affiliations.ccm': 'Socios de Consell empresarial d\'Osona',
     'affiliations.tic': 'Socios de TICOsona - Associació d\'Empreses de Tecnologies de la Informació i la Comunicació d\'Osona',
+    'cookie.settings': 'Configuración de cookies',
   },
   ca: {
     'common.page': 'Pàgina',
@@ -85,6 +86,7 @@ export const ui = {
     'affiliations': 'Afiliacions',
     'affiliations.ccm': 'Socios de Consell empresarial d\'Osona',
     'affiliations.tic': 'Socios de TICOsona - Associació d\'Empreses de Tecnologies de la Informació i la Comunicació d\'Osona',
+    'cookie.settings': 'Configuració de cookies',
   },
   en: {
     'common.page': 'Page',
@@ -120,6 +122,7 @@ export const ui = {
     'affiliations': 'Affiliations',
     'affiliations.ccm': 'Member of Consell empresarial d\'Osona',
     'affiliations.tic': 'Member of TICOsona - Associació d\'Empreses de Tecnologies de la Informació i la Comunicació d\'Osona',
+    'cookie.settings': 'Cookie settings',
   },
 } as const;
 
@@ -1148,7 +1151,7 @@ export const footer = {
     secondaryLinks: [
       { text: 'Avís legal', href: routes['ca']['terms'] },
       { text: 'Política de privacitat', href: routes['ca']['privacy-policy'] },
-      { text: 'Política de cookies', href: routes['ca']['cookie-policy']},
+      { text: 'Política de cookies', href: routes['ca']['cookie-policy']}
     ],
     socialLinks: [
       { ariaLabel: 'Linked-in', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/company/gilsys' },
