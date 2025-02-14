@@ -147,11 +147,11 @@ h1 .text-accent,
 
 /* h2.anchored{
   scroll-margin-top: 180px;
-} */
+} 
 
-section[id] {
+.wg-content[id] {
   scroll-margin-top: 180px;
-}
+}*/
 
 input[type="checkbox"] {
   accent-color: var(--aw-color-primary);;
