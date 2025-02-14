@@ -4,6 +4,7 @@ import { trimSlash } from '~/utils/permalinks';
 import { getLangFromUrl, useTranslations, findBreadcrumbTrail } from '~/utils/i18n';
 import type { MenuLink } from './Header.astro';
 import { getHeader } from '~/utils/i18n';
+import { SITE } from 'astrowind:config';
 
 export interface Props {
   btn: MenuLink;
@@ -16,7 +17,7 @@ interface DropdownMenuLink extends MenuLink {
 
 const { btn, links } = Astro.props;
 
-const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
+const currentPath = `/${trimSlash(new URL(Astro.url).pathname) + (SITE.trailingSlash ? '/' : '')}`;
 
 const language = getLangFromUrl(Astro.url);
 const t = useTranslations(language);
