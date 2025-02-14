@@ -145,7 +145,11 @@ h1 .text-accent,
 
 
 
-h2 a{
+/* h2.anchored{
+  scroll-margin-top: 180px;
+} */
+
+section[id] {
   scroll-margin-top: 180px;
 }
 
