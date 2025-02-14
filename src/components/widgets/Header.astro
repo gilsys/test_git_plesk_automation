@@ -10,6 +10,7 @@ import type { CallToAction } from '~/types';
 import { getLangFromUrl, getRouteFromUrl, useRoutes, useTranslatedPath, useTranslations } from '~/utils/i18n';
 import { languages } from '~/i18n/ui';
 import MenuDropdown from './MenuDropdown.astro';
+import { SITE } from 'astrowind:config';
 
 interface Link {
   text?: string;
@@ -50,7 +51,7 @@ const {
   showLangMenu = false,
 } = Astro.props;
 
-const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
+const currentPath = `/${trimSlash(new URL(Astro.url).pathname) + (SITE.trailingSlash ? '/' : '')}`;
 
 const language = getLangFromUrl(Astro.url);
 const route = getRouteFromUrl(Astro.url);
