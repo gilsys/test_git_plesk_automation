@@ -64,7 +64,7 @@ async function getBlogPosts(): Promise<Array<{ slug: string; lang: string; publi
 
       const publishDate = data.publishDate ? new Date(data.publishDate).toISOString() : new Date().toISOString();
 
-    return lang ? { slug, lang, publishDate } : null;
+    return lang && !data.draft ? { slug, lang, publishDate } : null;
   }).filter((post) => post !== null);
 }
 

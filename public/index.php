@@ -3,6 +3,11 @@
 $availableLanguages = ['es', 'ca', 'en'];
 $defaultLanguage = 'es';
 
+if (!empty($_COOKIE['lang']) && in_array($_COOKIE['lang'], $availableLanguages)) {
+    header("Location: /" . $_COOKIE['lang'], true, 302);
+    exit;
+}
+
 $userLanguages = explode(',', $_SERVER['HTTP_ACCEPT_LANGUAGE']);
 
 $languageList = [];
@@ -22,5 +27,5 @@ usort($languageList, function ($a, $b) {
 
 $userLanguage = !empty($languageList[0]) ? $languageList[0]['language'] : $defaultLanguage;
 
-header("Location: /$userLanguage", true, 302);
+header("Location: /" . $userLanguage, true, 302);
 exit;
