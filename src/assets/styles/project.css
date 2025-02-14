@@ -188,13 +188,24 @@ body.route-home .wg-hero p
   color: #000;
 }
 
-
-a.text-accent:hover{
+a.text-accent{
+  background:  linear-gradient(180deg, rgb(16 16 16 / 99%), rgb(16 16 16 / 99%));
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 1px 1px;
+  color: var(--aw-color-accent);
+  text-decoration: none;
+  transition: background-size .2s;
+}
+a.text-accent:hover {
+  background-size: 1px 100% !important;
+  color:#FFF;
+}
+p strong{
   color: #000;
 }
 
 /*.wg-header #contact,*/
-a.text-accent:hover,
 body.route-home .wg-hero .text-accent,
 body.route-home .wg-hero .custom-gradient,
 body.route-gilsys .wg-hero .text-accent,
@@ -410,4 +421,17 @@ body:not(.route-home) .wg-hero .btn-primary:hover{
   box-shadow: none;
 }
 
+
+address a{
+  margin-bottom: 3px;
+  padding-bottom: 3px;
+  display: inline-block;
+}
+
+@media only screen and (min-width : 1025px) and (max-width : 1535px) {
+  address a{
+    margin-bottom: 0px;
+    padding-bottom: 0px;    
+  }
+}
 

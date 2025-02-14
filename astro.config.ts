@@ -25,6 +25,11 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
   output: 'static',
+
+  server:{
+    host: true,
+    port: 4321
+  },
     
   site: 'https://www.gilsys.com',
 
