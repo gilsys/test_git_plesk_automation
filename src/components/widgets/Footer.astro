@@ -5,6 +5,7 @@ import { getLangFromUrl, useTranslations, useRoutes } from '~/utils/i18n';
 import Image from '../common/Image.astro';
 import Logo from '../Logo.astro';
 
+
 interface Link {
   text?: string;
   href?: string;
@@ -29,7 +30,7 @@ export interface Props {
   address?: string;
 }
 
-const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme = 'light', address = '', } = Astro.props;
+const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme = 'light', address = '' } = Astro.props;
 
 const currentLang = getLangFromUrl(Astro.url);
 const t = useTranslations(currentLang);
@@ -164,11 +165,11 @@ const u = useRoutes(currentLang);
         <Fragment set:html={footNote} />
       </div>
 
-      <div class="text-sm text-muted flex gap-2 mt-2 text-right md:justify-center">
+      <div class="text-sm text-muted grid grid-cols-2 gap-2 mt-2 text-center md:flex md:flex-row md:justify-center md:gap-4">
         {
           secondaryLinks.map(({ text, href }, index) => (
             <>
-              {index !== 0 ? ' · ' : ''}
+              {index !== 0 ? <span class="hidden md:inline-block"> · </span> : ''}
               <a
                 class="text-muted hover:text-gray-700 dark:text-gray-400 hover:underline transition duration-150 ease-in-out text-xs"
                 href={href}
@@ -177,7 +178,15 @@ const u = useRoutes(currentLang);
             </>
           ))
         }
+        <span class="hidden md:inline-block"> · </span>
+        <div
+          data-cc="show-preferencesModal"
+          class="block text-muted hover:text-gray-700 dark:text-gray-400 hover:underline transition duration-150 ease-in-out text-xs cursor-pointer"
+          set:html={t('cookie.settings')}
+        />
       </div>
+      
+      
     </div>
   </div>
 </footer>
