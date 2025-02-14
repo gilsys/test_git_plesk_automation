@@ -1,8 +1,9 @@
 ---
 import { UI } from 'astrowind:config';
+import { languages } from '~/i18n/ui';
 ---
 
-<script is:inline define:vars={{ defaultTheme: UI.theme }}>
+<script is:inline define:vars={{ defaultTheme: UI.theme, languages: Object.keys(languages) }}>
   if (window.basic_script) {
     return;
   }
@@ -150,6 +151,13 @@ import { UI } from 'astrowind:config';
         ticking = true;
       }
     });
+
+    const [, lang] = window.location.pathname.split('/');
+    if (languages.includes(lang)) {
+      const date = new Date();
+      date.setMonth(date.getMonth() + 6);
+      document.cookie = `lang=${lang}; expires=${date.toUTCString()}; path=/`;
+    }
   };
   const onPageShow = function () {
     document.documentElement.classList.add('motion-safe:scroll-smooth');
