@@ -1,5 +1,4 @@
 ---
-import Icon from 'node_modules/astro-icon/components/Icon.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features from '~/components/widgets/Features.astro';
@@ -8,6 +7,7 @@ import Hero from '~/components/widgets/Hero.astro';
 import Note from '~/components/widgets/Note.astro';
 import Layout from '~/layouts/PageLayout.astro';
 import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+import { Icon } from 'astro-icon/components';
 
 const u = useRoutes(getLangFromUrl(Astro.url));
 
