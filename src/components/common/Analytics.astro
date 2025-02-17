@@ -47,15 +47,10 @@ const googleAnalyticsId  = ANALYTICS.vendors.googleAnalytics.id;
   }
 
   if (isMobile()) {
-    if ('requestIdleCallback' in window) {
-      requestIdleCallback(loadGTM);
-    } else {
-      setTimeout(loadGTM, 500);
-    }
-
-    document.addEventListener("scroll", loadGTM, { once: true });
     document.addEventListener("click", loadGTM, { once: true });
+    document.addEventListener("scroll", loadGTM, { once: true });
+    document.addEventListener("touchstart", loadGTM, { once: true });
   } else {
-    loadGTM();
+    loadGTM(); // Cargar en Desktop inmediatamente
   }
 </script>
