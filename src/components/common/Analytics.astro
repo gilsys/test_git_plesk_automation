@@ -6,7 +6,6 @@ const googleAnalyticsId  = ANALYTICS.vendors.googleAnalytics.id;
 <script is:inline define:vars={{ googleAnalyticsId }}>
   window.GOOGLE_ANALYTICS_ID = googleAnalyticsId;
 </script>
-<script async is:inline src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`}></script>
 
 <script>
   declare global {
@@ -16,19 +15,47 @@ const googleAnalyticsId  = ANALYTICS.vendors.googleAnalytics.id;
     }
   }
 
-  document.addEventListener("astro:page-load", () => {
-    window.dataLayer = window.dataLayer || [];
-    window.gtag = function gtag(...args: any[]) {
-      window.dataLayer.push(arguments);
-    };
-    window.gtag("js", new Date());
+  function isMobile() {
+    return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent) || window.innerWidth < 768;
+  }
 
-    window.gtag("consent", "default", {
-      ad_storage: "denied",
-      ad_user_data: "denied",
-      ad_personalization: "denied",
-      analytics_storage: "denied",
-    });
-    window.gtag("config",  window.GOOGLE_ANALYTICS_ID);
-  });
+  function loadGTM() {
+    if (window.gtmLoaded) return;
+    window.gtmLoaded = true;
+
+    const script = document.createElement("script");
+    script.async = true;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${window.GOOGLE_ANALYTICS_ID}`;
+    document.head.appendChild(script);
+
+    script.onload = () => {
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function gtag() {
+        window.dataLayer.push(arguments);
+      };
+      window.gtag("js", new Date());
+
+      window.gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
+      });
+      
+      window.gtag("config", window.GOOGLE_ANALYTICS_ID);
+    };
+  }
+
+  if (isMobile()) {
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(loadGTM);
+    } else {
+      setTimeout(loadGTM, 500);
+    }
+
+    document.addEventListener("scroll", loadGTM, { once: true });
+    document.addEventListener("click", loadGTM, { once: true });
+  } else {
+    loadGTM();
+  }
 </script>
