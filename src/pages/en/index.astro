@@ -69,7 +69,7 @@ const jsonLdCorporation = {
     tagline=""
     actions={[
       { variant: 'primary', target: '_blank', text: 'Get a Free Quote', href: u('contact') },
-      { text: 'Services', href: '#services' },
+      { text: 'Services', href: '#software-services' },
     ]}
     backgroundImage={{
       src: '~/assets/images/neutral/bg-1.jpg',
@@ -91,30 +91,14 @@ const jsonLdCorporation = {
     </Fragment>
   </Hero>
 
-  <!--
-  <Hero2
-    classes={{ 
-      container: 'pb-0 md:pb-0 lg:pb-0',
-    }}
-    title="Stay ahead of the game, integrate <br/><span class='custom-gradient'>Artificial Intelligence</span> into your business"
-    subtitle={`We are a software engineering company specializing in custom software development. We don’t just stay up to date with the latest advancements in <a title='Custom development integrating artificial intelligence' class='text-accent' href='`+ u('development/ia')  +`'>artificial intelligence</a>—we actively apply them to business tools, web applications, custom mobile apps, and process automation.`}
-  >
-    <Fragment slot="preContent">
-      <div class="text-center -mt-4">
-        <a title="Custom AI-powered software development for businesses" href={u('development/ia')} class="btn-primary w-auto">Learn more</a>
-      </div>
-    </Fragment>
-
-  </Hero2>
-
- -->
+  
   <Hero2
     tagline="Helping businesses adopt artificial intelligence"
     actions={[
       {
         variant: 'primary',
         title: 'Custom AI-powered software development for businesses',
-        text: 'Learn more',
+        text: 'Discover how to apply AI to your business',
         href: u('development/ia'),
       },
     ]}
@@ -139,7 +123,7 @@ const jsonLdCorporation = {
   </Hero2>
 
   <FourBlocks
-    id="services"
+    id="software-services"
     title="Software Engineering Services"
     information="Don't adapt your business to technology, we <span class='text-black'>adapt technology to your business</span>."
     blocks={[

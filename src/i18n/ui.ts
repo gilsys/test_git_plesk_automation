@@ -18,8 +18,11 @@ export const defaultLang = 'es';
 export const ui = {
   es: {
     'common.home': 'Inicio',
+    'common.contact': 'Contactar',
     'common.page': 'Página',
     'common.more_info_about': 'Ampliar información sobre ',
+    '404.subtitle': 'Página no disponible.',
+    '404.text': 'Te invitamos a visitar nuestra web y explorar sus contenidos.<br/>Si no encuentras la información que buscas, no dudes en contactar con nosotros.',
     'language.change_to': 'Cambiar idioma a',
     'language.es': 'Español',
     'language.ca': 'Catalán',
@@ -56,8 +59,11 @@ export const ui = {
   },
   ca: {
     'common.home': 'Inici',
+    'common.contact': 'Contactar',
     'common.page': 'Pàgina',
     'common.more_info_about': 'Més informació sobre ',
+    '404.subtitle': 'Pàgina no trobada.',
+    '404.text': 'Et convidem a visitar la nostra web.<br/>Si no trobes la informació que cerques, no dubtis a contactar amb nosaltres.',
     'language.change_to': 'Canviar idioma a',
     'language.es': 'Espanyol',
     'language.ca': 'Català',
@@ -94,8 +100,11 @@ export const ui = {
   },
   en: {
     'common.home': 'Home',
+    'common.contact': 'Contact',
     'common.page': 'Page',
     'common.more_info_about': 'More info about ',
+    '404.subtitle': 'Page Not Found.',
+    '404.text': 'We invite you to visit our website and explore its content. <br/>If you can\'t find the information you\'re looking for, please don\'t hesitate to contact us.',
     'language.change_to': 'Change language to',
     'language.es': 'Spanish',
     'language.ca': 'Catalan',

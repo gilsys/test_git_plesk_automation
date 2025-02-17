@@ -1,6 +1,11 @@
 ---
 import Hero from '~/components/widgets/Hero.astro';
 import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes, useTranslations  } from '~/utils/i18n';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const u = useRoutes(getLangFromUrl(Astro.url));
 
 const metadata = {
   title: ``,    
@@ -9,9 +14,18 @@ const metadata = {
 
 ---
 <Layout metadata={metadata}>
-  <Hero backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/03.jpg' }}>
+  <Hero
+  actions={[
+    { variant: 'primary', text: t('common.home'), href: '/' + lang + '/' },
+    { variant: 'primary', text: t('common.contact'), href: u('contact') },
+  ]}
+  backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/dots/01.jpg' }}>
     <Fragment slot="title">
       <span class="custom-gradient">404</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      <span class="text-4xl">{t('404.subtitle')}</span>
+      <p class="text-muted mb-8" set:html={t('404.text')}/>
     </Fragment>
   </Hero>
 </Layout>

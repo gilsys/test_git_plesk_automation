@@ -18,6 +18,10 @@ const metadata = {
 <Layout metadata={metadata}>
   <Hero
     tagline="Subvención Kit Consulting"
+    actions={[
+      { variant: 'primary', text: 'Solicitar información', href: u('contact') },
+      { variant: 'primary', text: 'Preguntas frecuentes', href: u('kit-consulting') + '#faq' },
+    ]}
     backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/dots/22.jpg' }}
   >
     <Fragment slot="title">Servicio de asesoramiento en ventas digitales</Fragment>

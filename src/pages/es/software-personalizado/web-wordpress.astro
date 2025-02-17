@@ -20,7 +20,12 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <!-- Hero Section -->
-  <Hero tagline="Tu web con el CMS más popular."
+  <Hero 
+  actions={[
+    { variant: 'primary', text: 'Presupuesto gratuito', href: u('contact') },
+    { variant: 'primary', text: 'Solicitar demo', href: u('contact') },
+  ]}
+  tagline="Tu web con el CMS más popular."
   backgroundImage={{alt: 'Fondo abstracto',  src: '~/assets/images/dots/08.jpg'}}
   >
     <Fragment slot="title">

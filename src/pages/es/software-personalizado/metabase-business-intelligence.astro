@@ -17,7 +17,12 @@ const metadata = {
 
 <Layout metadata={metadata}>
 
-  <Hero tagline="Herramientas que transforman tus datos en información clave para la toma de decisiones."
+  <Hero
+  actions={[
+    { variant: 'primary', text: 'Presupuesto gratuito', href: u('contact') },
+    { variant: 'primary', text: 'Solicitar demo', href: u('contact') },
+  ]}
+  tagline="Herramientas que transforman tus datos en información clave para la toma de decisiones."
   backgroundImage={{alt: 'Fondo abstracto',  src: '~/assets/images/dots/27.jpg'}}
   >
     <Fragment slot="title">

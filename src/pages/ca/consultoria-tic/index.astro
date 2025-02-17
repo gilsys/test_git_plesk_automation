@@ -18,7 +18,9 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <Hero tagline="Com experts en desenvolupament de software, podem donar una visió més profunda."
+  <Hero 
+  actions={[{ variant: 'primary', text: 'Pressupost gratuït', href: u('contact') }]}
+  tagline="Com experts en desenvolupament de software, podem donar una visió més profunda."
   backgroundImage={{ alt:'Fons abstracte', src: '~/assets/images/dots/20.jpg'}}
   >
     <Fragment slot="title"><span class="text-accent highlight">Consultoria</span> TIC</Fragment>

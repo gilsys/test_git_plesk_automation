@@ -2,6 +2,7 @@
 const {
   h2 = await Astro.slots.render('h2'),
   p = await Astro.slots.render('p'),
+  links = await Astro.slots.render('links'),
   linkText = 'Informa\'t',
   linkTitle = '',
   linkHref = '',
@@ -10,7 +11,7 @@ const {
 ---
 
 <section class="wg-note not-prose shadow-lg bg-lightgray px-6 sm:px-8 md:px-12" {...(id ? { id } : {})}>
-  <div class="max-w-4xl mx-auto text-md text-center py-6 flex items-center xs:flex-row sm:justify-between sm:text-left max-[412px]:flex-col">
+  <div class="max-w-5xl mx-auto text-md text-center py-6 flex items-center xs:flex-row sm:justify-between sm:text-left max-[412px]:flex-col">
     <div class="w-full">
       {h2 && (
         <h2 class="text-xl sm:text-3xl font-bold leading-tight py-2 custom-gradient">
@@ -18,8 +19,13 @@ const {
         </h2>
       )}
 
+      {links && (
+        <div class="text-muted -ml-1">
+          <Fragment set:html={links} />
+        </div>
+      )}
       {p && (
-        <p class="text-muted">
+        <p class="text-muted -ml-1">
           <Fragment set:html={p} />
         </p>
       )}

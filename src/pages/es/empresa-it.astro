@@ -18,7 +18,9 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
-  <Hero backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/neutral/bg-4.jpg' }}>
+  <Hero
+  actions={[{ variant: 'primary', text: 'Contactar', href: u('contact') }]}
+  backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/neutral/bg-4.jpg' }}>
     <Fragment slot="title">
       <span class="custom-gradient">Gilsys</span> = Experiencia + calidad.
     </Fragment>
@@ -388,7 +390,7 @@ Finalmente, además de los servicios de desarrollo, también ofrecemos
       {
         variant: 'primary',
         text: 'Contactar',
-        href: 'contacto',
+        href: u('contact'),
       },
       {
         variant: 'primary',
