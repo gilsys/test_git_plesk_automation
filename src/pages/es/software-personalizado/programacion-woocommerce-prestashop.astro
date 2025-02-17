@@ -1,4 +1,5 @@
 ---
+import { Icon } from 'astro-icon/components';
 import Image from '~/components/common/Image.astro';
 import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
@@ -38,16 +39,29 @@ const metadata = {
     </Fragment>
   </Hero>
 
-  <Note linkText="Más información" linkTitle="Más información" linkHref={u('kit-digital')}>
+  <Note linkText="Contáctanos" linkTitle="Contactar con gilsys" linkHref={u('contact')}>
     <Fragment slot="h2">
-      <span class="text-left max-[412px]:text-center block w-full">
-        <span class="inline-block md:block">
-          Subvencionable con
-          <span class="text-4xl md:inline block whitespace-nowrap">KIT Digital</span>
-        </span>
-      </span>
+      <div>
+        <span>Subvencionable con </span><span class="text-4xl inline-block md:inline">KIT Digital</span>
+      </div>
+    </Fragment>
+    <Fragment slot="links">
+      <a
+        href={u('kit-digital')}
+        title="Subvenciones KIT Digital"
+        class="btn px-2 py-1 my-1"><Icon name="tabler:link" class="w-5 h-5 mr-1" /> KIT Digital</a
+      >
+      <a
+        href={u('kit-digital/e-commerce')}
+        title="Comercio electrónico subvencionable con KIT Digital"
+        class="btn px-2 py-1 my-1"><Icon name="tabler:link" class="w-5 h-5 mr-1" /> Comercio electrónico </a
+      >
+    </Fragment>
+    <Fragment slot="p">
+      <span class="block mt-3 mb-3">Subvenciones de 3.000€ a 29.000€ para empresas y autónomos.</span>
     </Fragment>
   </Note>
+  
 
   <Content
     tagline="Desarrollamos e-commerce adaptado para empresas de cualquier sector"

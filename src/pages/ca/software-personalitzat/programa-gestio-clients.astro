@@ -1,4 +1,5 @@
 ---
+import { Icon } from 'astro-icon/components';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features from '~/components/widgets/Features.astro';
@@ -19,10 +20,10 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <Hero
-  actions={[
-    { variant: 'primary', text: 'Pressupost gratuït', href: u('contact') },
-    { variant: 'primary', text: 'Sol·licitar demo', href: u('contact') },
-  ]}
+    actions={[
+      { variant: 'primary', text: 'Pressupost gratuït', href: u('contact') },
+      { variant: 'primary', text: 'Sol·licitar demo', href: u('contact') },
+    ]}
     tagline="Centralitza informació, automatitza processos i optimitza el marketing amb una eina al núvol."
     backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/25.jpg' }}
   >
@@ -32,14 +33,31 @@ const metadata = {
     <Fragment slot="subtitle"> Millora el seguiment de clients de la teva empresa amb un CRM a mida. </Fragment>
   </Hero>
 
-  <Note linkText="Més informació" linkTitle="Més informació" linkHref={u('kit-digital')}>
+  <Note linkText="Contacta'ns" linkTitle="Contactar amb gilsys" linkHref={u('contact')}>
     <Fragment slot="h2">
-      <span class="text-left max-[412px]:text-center block w-full">
-        <span class="inline-block md:block">
-          Subvencionable amb
-          <span class="text-4xl md:inline block whitespace-nowrap">KIT Digital</span>
-        </span>
-      </span>
+      <div>
+        <span>Subvencionable amb </span><span class="text-4xl inline-block md:inline">KIT Digital</span>
+      </div>
+    </Fragment>
+    <Fragment slot="links">
+      <a href={u('kit-digital')} title="Subvencions KIT Digital" class="btn px-2 py-1 my-1"
+        ><Icon name="tabler:link" class="w-5 h-5 mr-1" /> KIT Digital</a
+      >
+      <a
+        href={u('kit-digital/customer-management')}
+        title="Gestió de clients subvencionable amb KIT Digital"
+        class="btn px-2 py-1 my-1"
+        ><Icon name="tabler:link" class="w-5 h-5 mr-1" /> Gestió de clients
+      </a>
+      <a
+        href={u('kit-digital/ai-customer-management')}
+        title="Gestió de clients amb IA associada subvencionable amb KIT Digital"
+        class="btn px-2 py-1 my-1"
+        ><Icon name="tabler:link" class="w-5 h-5 mr-1" /> Gestió de clients amb IA
+      </a>
+    </Fragment>
+    <Fragment slot="p">
+      <span class="block mt-3 mb-3">Subvencions de 3.000€ a 29.000€ per empreses i autònoms.</span>
     </Fragment>
   </Note>
 

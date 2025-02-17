@@ -3,15 +3,20 @@ const {
   h2 = await Astro.slots.render('h2'),
   p = await Astro.slots.render('p'),
   links = await Astro.slots.render('links'),
-  linkText = 'Informa\'t',
+  linkText = "Informa't",
   linkTitle = '',
   linkHref = '',
   id,
-} = Astro.props
+} = Astro.props;
 ---
 
-<section class="wg-note not-prose shadow-lg bg-lightgray px-6 sm:px-8 md:px-12" {...(id ? { id } : {})}>
-  <div class="max-w-5xl mx-auto text-md text-center py-6 flex items-center xs:flex-row sm:justify-between sm:text-left max-[412px]:flex-col">
+<section
+  class="wg-note not-prose shadow-lg bg-lightgray px-6 sm:px-8 md:px-12"
+  {...(id ? { id } : {})}
+>
+  <div
+    class="max-w-5xl mx-auto text-md text-center py-6 flex items-center xs:flex-row sm:justify-between sm:text-left max-[840px]:block"
+  >
     <div class="w-full">
       {h2 && (
         <h2 class="text-xl sm:text-3xl font-bold leading-tight py-2 custom-gradient">
@@ -24,6 +29,7 @@ const {
           <Fragment set:html={links} />
         </div>
       )}
+
       {p && (
         <p class="text-muted -ml-1">
           <Fragment set:html={p} />
@@ -32,13 +38,14 @@ const {
     </div>
 
     {linkHref && (
-      <a 
-        class="btn btn-primary sm:mt-0 sm:ml-4 max-[412px]:mt-4 max-[412px]:max-w-[200px] max-[412px]:mx-auto whitespace-nowrap"
-        href={linkHref} 
-        title={linkTitle}
-      >
-        {linkText}
-      </a>
+    <a
+          class="btn btn-primary whitespace-nowrap text-center"
+          href={linkHref}
+          title={linkTitle}
+        >
+          {linkText}
+        </a>
     )}
   </div>
 </section>
+

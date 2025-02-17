@@ -1,4 +1,5 @@
 ---
+import { Icon } from 'astro-icon/components';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features from '~/components/widgets/Features.astro';
@@ -29,16 +30,24 @@ const metadata = {
     >
   </Hero>
 
-  <Note linkText="Més informació" linkTitle="Més informació" linkHref={u('kit-consulting')}>
+  <Note linkText="Contacta'ns" linkTitle="Contactar amb gilsys" linkHref={u('contact')}>
     <Fragment slot="h2">
-      <span class="text-left max-[412px]:text-center block w-full">
-        <span class="inline-block md:block">
-          Subvencionable amb
-          <span class="text-4xl md:inline block whitespace-nowrap">KIT Consulting</span>
-        </span>
-      </span>
+      <div>
+        <span>Subvencionable amb </span><span class="text-4xl inline-block md:inline">KIT Consulting</span>
+      </div>
+    </Fragment>
+    <Fragment slot="links">
+      <a
+        href={u('kit-consulting')}
+        title="Subvencions KIT Digital"
+        class="btn px-2 py-1 my-1"><Icon name="tabler:link" class="w-5 h-5 mr-1" /> KIT Consulting</a
+      >
+    </Fragment>
+    <Fragment slot="p">
+      <span class="block mt-3 mb-3">Subvencions de 12.000€ a 24.000€ per a petites i mitjanes empreses.</span>
     </Fragment>
   </Note>
+  
 
   <Features3
     isLinkableGrid

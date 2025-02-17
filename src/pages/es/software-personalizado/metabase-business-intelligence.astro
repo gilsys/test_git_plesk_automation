@@ -1,4 +1,5 @@
 ---
+import { Icon } from 'astro-icon/components';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features from '~/components/widgets/Features.astro';
@@ -16,31 +17,44 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-
   <Hero
-  actions={[
-    { variant: 'primary', text: 'Presupuesto gratuito', href: u('contact') },
-    { variant: 'primary', text: 'Solicitar demo', href: u('contact') },
-  ]}
-  tagline="Herramientas que transforman tus datos en información clave para la toma de decisiones."
-  backgroundImage={{alt: 'Fondo abstracto',  src: '~/assets/images/dots/27.jpg'}}
+    actions={[
+      { variant: 'primary', text: 'Presupuesto gratuito', href: u('contact') },
+      { variant: 'primary', text: 'Solicitar demo', href: u('contact') },
+    ]}
+    tagline="Herramientas que transforman tus datos en información clave para la toma de decisiones."
+    backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/dots/27.jpg' }}
   >
     <Fragment slot="title">
       <span class="text-accent highlight">Business Intelligence</span> con Metabase
     </Fragment>
-    <Fragment slot="subtitle">
-      Conectamos bases de datos y creamos paneles con gráficos e indicadores.
-    </Fragment>
+    <Fragment slot="subtitle"> Conectamos bases de datos y creamos paneles con gráficos e indicadores. </Fragment>
   </Hero>
 
-  <Note linkText="Más información" linkTitle="Más información" linkHref={u('kit-digital')}>
+  <Note linkText="Contáctanos" linkTitle="Contactar con gilsys" linkHref={u('contact')}>
     <Fragment slot="h2">
-      <span class="text-left max-[412px]:text-center block w-full">
-        <span class="inline-block md:block">
-          Subvencionable con
-          <span class="text-4xl md:inline block whitespace-nowrap">KIT Digital</span>
-        </span>
-      </span>
+      <div>
+        <span>Subvencionable con </span><span class="text-4xl inline-block md:inline">KIT Digital</span>
+      </div>
+    </Fragment>
+    <Fragment slot="links">
+      <a href={u('kit-digital')} title="Subvenciones KIT Digital" class="btn px-2 py-1 my-1"
+        ><Icon name="tabler:link" class="w-5 h-5 mr-1" /> KIT Digital</a
+      >
+      <a
+        href={u('kit-digital/bi-analytics')}
+        title="Business Intelligence y analítica subvencionado con KIT Digital"
+        class="btn px-2 py-1 my-1"><Icon name="tabler:link" class="w-5 h-5 mr-1" /> Business Intelligence y analítica</a
+      >
+      <a
+        href={u('kit-digital/ai-bi-analytics')}
+        title="Business Intelligence e IA asociada subvencionado con KIT Digital"
+        class="btn px-2 py-1 my-1"
+        ><Icon name="tabler:link" class="w-5 h-5 mr-1" /> Business Intelligence e IA asociada</a
+      >
+    </Fragment>
+    <Fragment slot="p">
+      <span class="block mt-3 mb-3">Subvenciones de 3.000€ a 29.000€ para empresas y autónomos.</span>
     </Fragment>
   </Note>
 
@@ -49,8 +63,8 @@ const metadata = {
     tagline="En lugar de confiar en suposiciones o intuiciones, BI ofrece datos concretos que permiten a los directivos actuar con confianza y precisión."
     title="¿Qué es Business Intelligence?"
     subtitle="BI permite a las empresas entender su rendimiento, identificar patrones y tomar decisiones basadas en datos concretos."
-    
-    items={[{
+    items={[
+      {
         title: 'Identificación de oportunidades y retos',
         description: 'Ayuda a detectar áreas de mejora y aprovechar oportunidades del mercado.',
       },
@@ -71,64 +85,75 @@ const metadata = {
       src: '~/assets/images/business-analytics-graficas-empresariales.jpg',
       alt: 'Paneles con gráficos y datos empresariales de BI',
     }}
->
-<Fragment slot="preContent">
-  <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">
-      Transformar datos en decisiones estratégicas
-  </h3>
-  <p class="text-muted">
-      El concepto de Business Intelligence (BI) hace referencia al uso de herramientas y tecnologías para analizar datos empresariales y convertirlos en información clara y útil para la toma de decisiones. Con BI, las empresas pueden acceder a una visión completa de su rendimiento, identificar patrones y tendencias, y anticiparse a las necesidades del mercado o a posibles problemas.
-  </p>
-</Fragment>
-<Fragment slot="postContent">
-  <h3 class="text-2xl font-bold tracking-tightsm:text-3xl mb-2">¿Qué empresas necesitan utilizar Business Intelligence?</h3>
-  <p class="text-muted">       
-      Las herramientas de BI son útiles para empresas <strong>de cualquier sector y tamaño</strong> que necesiten tomar decisiones basadas en datos.<br/><br/>
-      Son especialmente relevantes para equipos de marketing, ventas, finanzas y operaciones que deben monitorizar métricas clave, identificar patrones o tendencias y generar informes visuales fácilmente comprensibles <strong>sin necesidad de conocimientos avanzados en SQL o programación</strong>.
-  </p>
-</Fragment>
+  >
+    <Fragment slot="preContent">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">Transformar datos en decisiones estratégicas</h3>
+      <p class="text-muted">
+        El concepto de Business Intelligence (BI) hace referencia al uso de herramientas y tecnologías para analizar
+        datos empresariales y convertirlos en información clara y útil para la toma de decisiones. Con BI, las empresas
+        pueden acceder a una visión completa de su rendimiento, identificar patrones y tendencias, y anticiparse a las
+        necesidades del mercado o a posibles problemas.
+      </p>
+    </Fragment>
+    <Fragment slot="postContent">
+      <h3 class="text-2xl font-bold tracking-tightsm:text-3xl mb-2">
+        ¿Qué empresas necesitan utilizar Business Intelligence?
+      </h3>
+      <p class="text-muted">
+        Las herramientas de BI son útiles para empresas <strong>de cualquier sector y tamaño</strong> que necesiten tomar
+        decisiones basadas en datos.<br /><br />
+        Son especialmente relevantes para equipos de marketing, ventas, finanzas y operaciones que deben monitorizar métricas
+        clave, identificar patrones o tendencias y generar informes visuales fácilmente comprensibles <strong
+          >sin necesidad de conocimientos avanzados en SQL o programación</strong
+        >.
+      </p>
+    </Fragment>
+  </Content>
 
-</Content>
+  <Features
+    id="benefits"
+    tagline=""
+    title="Beneficios del Business Intelligence"
+    subtitle="Descubre las ventajas de trabajar con un equipo experto en Metabase y BI."
+    items={[
+      {
+        title: 'Visión clara y precisa',
+        description:
+          'Accede a todos los datos de tu negocio en un solo lugar, con informes claros que facilitan la toma de decisiones.',
+        icon: 'tabler:eye',
+      },
+      {
+        title: 'Toma de decisiones basada en datos',
+        description: 'Elimina la intuición y actúa con confianza gracias a datos objetivos y actualizados.',
+        icon: 'tabler:clipboard-list',
+      },
+      {
+        title: 'Ahorro de tiempo',
+        description:
+          'Paneles automáticos e informes programados para dedicar menos tiempo a analizar datos y más a implementar acciones.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Soluciones personalizadas',
+        description: 'Paneles, consultas y visualizaciones completamente adaptadas a tu negocio.',
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Escalabilidad y flexibilidad',
+        description:
+          'Metabase crece con tu empresa, permitiendo añadir nuevas bases de datos o paneles según las necesidades.',
+        icon: 'tabler:line',
+      },
+      {
+        title: 'Anticipa tendencias y escenarios futuros',
+        description:
+          'El BI te permite analizar datos históricos, tendencias actuales y prever escenarios futuros para anticiparte a los cambios del mercado.',
+        icon: 'tabler:clock-2',
+      },
+    ]}
+  />
 
-<Features
-id="benefits"
-tagline=""
-title="Beneficios del Business Intelligence"
-subtitle="Descubre las ventajas de trabajar con un equipo experto en Metabase y BI."
-items={[{
-  title: 'Visión clara y precisa',
-  description: 'Accede a todos los datos de tu negocio en un solo lugar, con informes claros que facilitan la toma de decisiones.',
-  icon: 'tabler:eye',
-},
-{
-  title: 'Toma de decisiones basada en datos',
-  description: 'Elimina la intuición y actúa con confianza gracias a datos objetivos y actualizados.',
-  icon: 'tabler:clipboard-list',
-},
-{
-  title: 'Ahorro de tiempo',
-  description: 'Paneles automáticos e informes programados para dedicar menos tiempo a analizar datos y más a implementar acciones.',
-  icon: 'tabler:clock',
-},
-{
-  title: 'Soluciones personalizadas',
-  description: 'Paneles, consultas y visualizaciones completamente adaptadas a tu negocio.',
-  icon: 'tabler:settings',
-},
-{
-  title: 'Escalabilidad y flexibilidad',
-  description: 'Metabase crece con tu empresa, permitiendo añadir nuevas bases de datos o paneles según las necesidades.',
-  icon: 'tabler:line',
-},
-{
-  title: 'Anticipa tendencias y escenarios futuros',
-  description:'El BI te permite analizar datos históricos, tendencias actuales y prever escenarios futuros para anticiparte a los cambios del mercado.',
-  icon: 'tabler:clock-2',
-},
-]}
-/>
-
-<Content
+  <Content
     isReversed
     tagline=""
     title="Funcionalidades BI avanzadas con <span class='custom-gradient'>Metabase</span>"
@@ -144,8 +169,8 @@ items={[{
       {
         title: 'Automatización de consultas e informes',
         list: [
-          "Programación de informes recurrentes con consultas SQL complejas.",          
-          "Reducción de la intervención manual en la generación de informes.",
+          'Programación de informes recurrentes con consultas SQL complejas.',
+          'Reducción de la intervención manual en la generación de informes.',
         ],
       },
       {
@@ -169,8 +194,7 @@ items={[{
           'Visualización de tendencias de mercado y otros indicadores importantes.',
         ],
       },
-    ]
-    }
+    ]}
     image={{
       src: '~/assets/images/metabase-panel.jpg',
       alt: 'Panel de datos BI de Metabase',
@@ -191,18 +215,19 @@ items={[{
       {
         title: 'Especialistas en Metabase:',
         description:
-          "Sabemos cómo aprovechar al máximo esta herramienta, desde funcionalidades básicas hasta configuraciones avanzadas.",
+          'Sabemos cómo aprovechar al máximo esta herramienta, desde funcionalidades básicas hasta configuraciones avanzadas.',
         icon: 'tabler:chart-pie',
       },
       {
         title: 'Adaptación completa',
         description:
-          "Creamos paneles, consultas y visualizaciones específicas para cada cliente, sin soluciones estándar que no se ajusten a tus necesidades.",
+          'Creamos paneles, consultas y visualizaciones específicas para cada cliente, sin soluciones estándar que no se ajusten a tus necesidades.',
         icon: 'tabler:clock',
       },
       {
         title: 'Enfoque práctico',
-        description: 'No solo configuramos Metabase, sino que también te formamos para que puedas utilizarlo de manera independiente y sacarle el máximo provecho.',
+        description:
+          'No solo configuramos Metabase, sino que también te formamos para que puedas utilizarlo de manera independiente y sacarle el máximo provecho.',
         icon: 'tabler:headset',
       },
     ]}
@@ -213,7 +238,8 @@ items={[{
   >
     <Fragment slot="postContent">
       <p>
-      Tu empresa tendrá acceso a una de las herramientas más potentes de Business Intelligence, que permitirá transformar los datos en información valiosa.
+        Tu empresa tendrá acceso a una de las herramientas más potentes de Business Intelligence, que permitirá
+        transformar los datos en información valiosa.
       </p>
     </Fragment>
 
@@ -223,7 +249,7 @@ items={[{
   </Content>
 
   <CallToAction
-  backgroundImage={{ src: '~/assets/images/dots/27.jpg', alt: 'Fondo abstracto, inspirado en tecnología y software' }}
+    backgroundImage={{ src: '~/assets/images/dots/27.jpg', alt: 'Fondo abstracto, inspirado en tecnología y software' }}
     actions={[
       {
         variant: 'primary',
@@ -237,11 +263,12 @@ items={[{
       },
     ]}
   >
-    <Fragment slot="title">¿Necesitas un <span class="custom-gradient">software de BI</span> para mejorar la toma de decisiones?</Fragment>
+    <Fragment slot="title"
+      >¿Necesitas un <span class="custom-gradient">software de BI</span> para mejorar la toma de decisiones?</Fragment
+    >
     <Fragment slot="subtitle">
-      Nuestro equipo está preparado para implementar Metabase y convertir los datos de tu negocio en información valiosa.
+      Nuestro equipo está preparado para implementar Metabase y convertir los datos de tu negocio en información
+      valiosa.
     </Fragment>
-</CallToAction>
-
-
+  </CallToAction>
 </Layout>
