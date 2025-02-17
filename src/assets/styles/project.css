@@ -419,7 +419,7 @@ body:not(.route-home) .wg-hero .btn-primary:hover{
   }
 
   25% {
-    filter: hue-rotate(15deg) brightness(120%) saturate(100%);
+    filter: hue-rotate(15deg) brightness(115%) saturate(100%);
   }
 
   50% {
@@ -455,3 +455,26 @@ address a{
 
 
 
+
+#hero-home img{
+  animation: brightnessRotation 8s infinite linear;
+
+}
+
+@keyframes brightnessRotation {
+  0% {
+    filter: brightness(100%);
+  }
+  25% {
+    filter: brightness(110%);
+  }
+  50% {
+    filter: brightness(113%);    
+  }
+  75% {
+    filter: brightness(100%);
+  }
+  100% {
+    filter: brightness(100%);
+  }
+}
