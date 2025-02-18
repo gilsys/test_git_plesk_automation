@@ -22,7 +22,10 @@ declare global {
         clearInterval(intervalId);
         console.error("gtag not loaded.");
       }
-      attempts++;
+      if (window.gtmLoaded){
+        attempts++;
+      }
+
     }, checkInterval);
   }
 
@@ -66,6 +69,14 @@ export const config: CookieConsentConfig = {
           },
           onReject: () => {
             console.log("ga4 rejected");
+
+            window.gtag("consent", "update", {
+              ad_storage: "denied",
+              ad_user_data: "denied",
+              ad_personalization: "denied",
+              analytics_storage: "denied",
+            });
+            
           },
           cookies: [
             {

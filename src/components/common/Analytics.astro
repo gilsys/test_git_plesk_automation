@@ -1,5 +1,6 @@
 ---
 import { ANALYTICS } from 'astrowind:config';
+import { languages } from '~/i18n/ui';
 
 const googleAnalyticsId  = ANALYTICS.vendors.googleAnalytics.id;
 ---
@@ -25,7 +26,7 @@ const googleAnalyticsId  = ANALYTICS.vendors.googleAnalytics.id;
 
     const script = document.createElement("script");
     script.async = true;
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${window.GOOGLE_ANALYTICS_ID}`;
+    script.src = `https://www.googletagmanager.com/gtm.js?id=${window.GOOGLE_ANALYTICS_ID}`;
     document.head.appendChild(script);
 
     script.onload = () => {
@@ -55,7 +56,51 @@ const googleAnalyticsId  = ANALYTICS.vendors.googleAnalytics.id;
 
     document.addEventListener("scroll", loadGTM, { once: true });
     document.addEventListener("click", loadGTM, { once: true });
+    document.addEventListener("touch", loadGTM, { once: true });
   } else {
     loadGTM();
   }
+</script>
+
+<script is:inline define:vars={{ languages: Object.keys(languages) }}>
+  function addEvent(data) {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push(data);
+  }
+
+  document.addEventListener('astro:page-load', () => {
+    addEvent({
+      event: 'page_view',
+      page_path: window.location.pathname,
+      page_title: document.title,
+    });
+
+    document.querySelectorAll('[href]').forEach((item) => {
+      item.addEventListener('click', (e) => {
+        const link = e.target.closest('[href]');
+        const [, lang] = window.location.pathname.split('/');
+
+        const section = link.closest('section');
+        let sectionTitle = section?.querySelector('h1, h2, h3')?.textContent.trim() || null;
+
+        if(!sectionTitle) {
+          if(link.closest('header')) {
+            sectionTitle = 'Header';
+          } else if(link.closest('footer')) {
+            sectionTitle = 'Footer';
+          }
+        }
+
+        addEvent({
+          event: 'link_click',
+          href: link.getAttribute('href'),
+          text: link.textContent.trim(),
+          title: link.getAttribute('title')?.trim() || null,
+          lang: languages.includes(lang) ? lang : null,
+          page: window.location.pathname,
+          section: sectionTitle
+        });
+      });
+    });
+  });
 </script>
