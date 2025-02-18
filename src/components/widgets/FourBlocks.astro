@@ -57,18 +57,17 @@ const {
     {
       blocks.map((block) => (
         <article class="mb-6 transition intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade">
-          <div class="relative md:h-64 bg-gray-400 dark:bg-slate-700 rounded shadow-lg mb-6">
+          <div class="relative bg-gray-400 dark:bg-slate-700 rounded shadow-lg mb-6">
             {block.image && (
               <a href={block.link} title={block.title}>
                 <Image
                   src={block.image}
                   class="w-full md:h-full rounded shadow-lg bg-gray-400 dark:bg-slate-700"
-                  widths={[400, 900]}
-                  width={400}
-                  sizes="(max-width: 900px) 400px, 900px"
+                  widths={[290, 363, 720, 480]}
+                  width={363}
+                  sizes="(max-width: 480px) 480px, (max-width: 767px) 720px, (max-width: 1023px) 480px, (max-width: 1535px) 290px, 363px"
                   alt={block.title}
-                  aspectRatio="16:9"
-                  layout="cover"
+                  layout="fullWidth"
                   loading="lazy"
                   decoding="async"
                 />
