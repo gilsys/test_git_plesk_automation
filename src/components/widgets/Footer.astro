@@ -21,15 +21,16 @@ interface Links {
 }
 
 export interface Props {
-  links: Array<Links>;
+  links: Array<Links>;  
   secondaryLinks: Array<Link>;
+  tertiaryLinks: Array<Link>;
   socialLinks: Array<Link>;
   footNote?: string;
   theme?: string;
   address?: string;
 }
 
-const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme = 'light', address = '' } = Astro.props;
+const { socialLinks = [], secondaryLinks = [], tertiaryLinks = [], links = [], footNote = '', theme = 'light', address = '' } = Astro.props;
 
 const currentLang = getLangFromUrl(Astro.url);
 const t = useTranslations(currentLang);
@@ -86,7 +87,33 @@ const u = useRoutes(currentLang);
           </div>
         ))
       }
-    </div>
+    
+  </div>
+
+
+  <div class="grid grid-cols-12 xl:grid-cols-12 gap-4 gap-y-8 sm:gap-8 py-8 md:py-12">
+    <div class="col-span-6 md:col-span-3 lg:col-span-3 xl:col-span-2 md:min-w-[11rem] min-[1120px]:w-52">
+      <div class="dark:text-gray-300 font-medium mb-2">
+        <div class="text-right lg:text-center -mb-10 lg:-mb-3 text-xs lg:text-sm">{t('affiliations')}</div>
+      </div>
+      <ul class="text-sm">
+        {tertiaryLinks.map(({ text, href, ariaLabel, title }) => (
+          <li class="mb-2 tertiary-link">
+            <a
+              class="hover:text-accent text-muted dark:text-gray-400 transition duration-150 ease-in-out text-xs min-[500px]:text-[0.800rem] xl:text-sm"
+              href={href}
+              aria-label={ariaLabel}
+              title={title}
+            >
+              <Fragment set:html={text} />
+            </a>
+          </li>
+        ))}
+      </ul>
+      </div>
+  </div>
+
+
 
     <div class="flex flex-col items-stretch lg:items-center">
       <div class="flex gap-8 mt-4">

@@ -1,0 +1,181 @@
+---
+import { Icon } from 'astro-icon/components';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+
+const metadata = {
+  title: 'Empresa de programació a mida amb Angular | +20 anys',
+  description: `Som un equip de programadors experts en Angular, desenvolupem eines professionals amb aquest llenguatge de programació. Pressupost gratuït! Estem a Osona, Barcelona.`,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Section -->
+  <Hero
+    tagline="Ens trobaràs prop de Vic (Osona), a la província de Barcelona."
+    actions={[{ variant: 'primary', text: 'Pressupost gratuït', href: u('contact') }]}
+    backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/geometric-2/4.jpg' }}
+  >
+    <Fragment slot="title">
+      Programem amb <span class="text-accent highlight">Angular</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      Som un equip de programadors experts en Angular, desenvolupem eines professionals amb aquest llenguatge de
+      programació.
+    </Fragment>
+  </Hero>
+
+  <Content
+  subtitle='PHP és un dels llenguatges de programació web més robustos i utilitzats.'
+    title="Desarrollo de aplicaciones con <span class='custom-gradient'>Angular</span> en Osona, provincia de Barcelona"
+    image={{
+      src: '~/assets/images/estudio-integracion-ia.jpg',
+      alt: 'Estudi per integrar intel·ligència artificial',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        En el mundo digital actual, contar con aplicaciones web rápidas, escalables y de alto rendimiento es clave para cualquier negocio. 
+        Nuestro equipo de especialistas en Angular, con amplia experiencia en el desarrollo frontend, 
+        crea soluciones a medida adaptadas a las necesidades de cada empresa sin limitación geográfica. 
+      </p>
+      <p class="text-muted mt-4">
+        Además, con Apache Cordova, extendemos la funcionalidad de Angular para desarrollar aplicaciones móviles híbridas, compatibles con iOS y Android.
+      </p>
+    </Fragment>
+  </Content>
+
+  <Content
+    title="Soluciones innovadoras con Angular"
+    classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}
+  >
+    <Fragment slot="preContent">
+      <p class="text-muted">
+        Angular es un framework moderno desarrollado por Google, ideal para la construcción de interfaces dinámicas y eficientes. 
+        Utilizamos esta tecnología para diseñar aplicaciones escalables, optimizadas y con una experiencia de usuario superior, 
+        tanto en entornos web como en dispositivos móviles.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Features3
+  title='¿Por qué Angular es una gran opción para tu proyecto?'
+    classes={{ container: 'pt-0 md:pt-0 lg:pt-0' }}
+    items={[
+      {
+        description: `Estructura modular y reutilizable, facilitando el mantenimiento y la escalabilidad.`,
+        icon: 'tabler:settings',
+      },
+      {
+        description: `Rendimiento optimizado, gracias a la carga diferida y la arquitectura basada en componentes.`,
+        icon: 'tabler:window',
+      },
+      {
+        description: `Seguridad integrada, con medidas avanzadas contra vulnerabilidades y ataques.`,
+        icon: 'tabler:search',
+      },
+      {
+        description: `Compatible con entornos empresariales, integrándose perfectamente con APIs REST y otras tecnologías.`,
+        icon: 'tabler:search',
+      },
+      {
+        description: `Desarrollo de apps híbridas, usando Apache Cordova para llevar tus aplicaciones web a dispositivos móviles.`,
+        icon: 'tabler:search',
+      },
+      {
+        description: `Soporte de Google y comunidad activa, asegurando mejoras constantes y actualizaciones frecuentes.`,
+        icon: 'tabler:search',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Features3>
+
+  <Content
+    title="Transformamos tus ideas en aplicaciones web y móviles híbridas"
+    image={{
+      src: '~/assets/images/estudio-integracion-ia.jpg',
+      alt: 'Estudi per integrar intel·ligència artificial',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        Ya sea que necesites una nueva aplicación desde cero o quieras mejorar un sistema existente, nos encargamos de todo el proceso: 
+        desde el diseño inicial hasta el despliegue y la optimización continua.
+      </p>
+    </Fragment>
+  </Content>
+
+  <Content
+    isReversed
+    title="Migración y modernización a Angular"
+    image={{
+      src: '~/assets/images/estudio-integracion-ia.jpg',
+      alt: 'Estudi per integrar intel·ligència artificial',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        Si tu plataforma actual ha quedado obsoleta, te ayudamos a migrarla a Angular, garantizando un proceso ágil y sin afectar la operatividad de tu negocio. 
+        Implementamos código limpio, actualizado y alineado con las mejores prácticas de desarrollo.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Content
+    title="Soporte y mantenimiento continuo"
+    image={{
+      src: '~/assets/images/estudio-integracion-ia.jpg',
+      alt: 'Estudi per integrar intel·ligència artificial',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        Nuestros expertos están disponibles para asegurar que tu aplicación se mantenga estable, segura y en constante evolución. 
+        Ofrecemos mantenimiento correctivo, preventivo y evolutivo para que tu proyecto siempre funcione al máximo nivel.
+      </p>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/24.jpg', alt: 'Fons abstracte' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Pressupost gratuït',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Trucar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title"
+      >Deixa de buscar, <span class="custom-gradient">som especialistes en Angular</span> | +20 anys</Fragment
+    >
+    <Fragment slot="subtitle"
+      >PHP continu empreses que estan integrant <strong>intel·ligència artificial</strong> en els seus processos seran les que millor
+      preparades estaran en un futur proper.</Fragment
+    >
+  </CallToAction>
+</Layout>

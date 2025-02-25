@@ -478,3 +478,7 @@ address a{
     filter: brightness(100%);
   }
 }
+
+.tertiary-link{
+  display: inline-block;
+}

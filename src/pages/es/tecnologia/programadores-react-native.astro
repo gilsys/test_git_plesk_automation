@@ -1,0 +1,173 @@
+---
+import { Icon } from 'astro-icon/components';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+
+const metadata = {
+  title: 'Empresa de programación a medida con React Native | +20 anys',
+  description: `Somos un equipo de programadores expertos en React Native, desarrollamos herramientas profesionales con este lenguaje de programación. ¡Presupuesto gratuito! Estamos en Osona, Barcelona.`,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Section -->
+  <Hero
+    tagline="Nos encontrarás cerca de Vic (Osona), en la provincia de Barcelona."
+    actions={[{ variant: 'primary', text: 'Pressupost gratuït', href: u('contact') }]}
+    backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/geometric-2/4.jpg' }}
+  >
+    <Fragment slot="title">
+      Programamos amb <span class="text-accent highlight">React Native</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+        Servicios de desarrollo React Native desde Osona, provincia de Barcelona.
+    </Fragment>
+  </Hero>
+
+  <Content
+  subtitle='[TO DO]'
+    title="¿Buscas expertos en <span class='custom-gradient'>React Native</span> para el desarrollo de aplicaciones móviles en la provincia de Barcelona?"
+    image={{
+      src: '~/assets/images/estudio-integracion-ia.jpg',
+      alt: 'Estudi per integrar intel·ligència artificial',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        Nuestro equipo de desarrolladores altamente capacitados se especializa en la <strong>creación de aplicaciones móviles personalizadas, </strong>
+        escalables y de alto rendimiento utilizando React Native. 
+      </p>
+      <p class="text-muted mt-4">
+        Diseñamos soluciones de  <a
+        href={u('development')}
+        class="text-accent"
+        title="Programació de software a mida amb React Native">software a medida</a
+      >, 
+        para empresas y emprendedores, 
+        ofreciendo aplicaciones innovadoras para clientes sin limitaciones geográficas.
+      </p>
+    </Fragment>
+  </Content>
+
+  <Content
+    title="Desarrollo de aplicaciones móviles con React Native"
+    classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}
+  >
+    <Fragment slot="preContent">
+      <p class="text-muted">
+        Ofrecemos servicios de  <strong>desarrollo de aplicaciones móviles en React Native</strong>  , 
+        proporcionando soluciones robustas y adaptadas a las necesidades de cada cliente.
+        React Native permite la creación de aplicaciones <strong>nativas para iOS y Android</strong>  desde un único código base,
+        reduciendo costes y tiempos de desarrollo comparado con aplicaciones nativas, sin comprometer el rendimiento.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  
+  <Features
+    title="Beneficios de elegir React Native para tu proyecto"
+    items={[
+      {
+        title: 'Aplicaciones personalizadas:',
+        list: ['Adaptamos cada solución a las necesidades específicas de tu negocio.'],
+        icon: 'tabler:adjustments',
+      },
+      {
+        title: 'Desarrollo multiplataforma:',
+        list: [
+          'Una sola aplicación compatible con iOS y Android.',
+        ],
+        icon: 'tabler:devices',
+      },
+      {
+        title: 'Óptimo rendimiento: ',
+        list: [
+          'Aplicaciones adaptables a nuevas funcionalidades sin reescribir grandes porciones de código.',
+        ],
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Comunidad y soporte: ',
+        list: [
+          'Respaldado por una comunidad global y actualizaciones constantes.',
+        ],
+        icon: 'tabler:users',
+      },
+    ]}
+  />
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+
+  <Content
+    title="Migración y optimización de aplicaciones a React Native"
+    image={{
+      src: '~/assets/images/estudio-integracion-ia.jpg',
+      alt: 'Estudi per integrar intel·ligència artificial',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        Si cuentas con una aplicación en otra tecnología y deseas <strong>migrarla a React Native</strong>, garantizamos una transición sin interrupciones. 
+        Optimizamos el rendimiento y la experiencia de usuario, asegurando una integración sin complicaciones con los sistemas existentes.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+        <div class="absolute inset-0 bg-lightgray"></div>
+      </Fragment>
+  </Content>
+
+  <Content
+    isReversed
+    title="Mantenimiento y evolución de aplicaciones React Native"
+    image={{
+      src: '~/assets/images/estudio-integracion-ia.jpg',
+      alt: 'Estudi per integrar intel·ligència artificial',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        Si necesitas <strong>actualizar, mejorar o mantener tu aplicación React Native,</strong> nuestro equipo ofrece soporte técnico continuo. 
+        Implementamos mejoras técnicas, nuevas funcionalidades y aseguramos la compatibilidad con las versiones más recientes de iOS y Android.
+      </p>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/24.jpg', alt: 'Fons abstracte' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Pressupost gratuït',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Trucar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title"
+      >Deixa de buscar, <span class="custom-gradient">som especialistes en React Native</span></Fragment
+    >
+    <Fragment slot="subtitle"
+      >[TO DO] PHP continu empreses que estan integrant <strong>intel·ligència artificial</strong> en els seus processos seran les que millor
+      preparades estaran en un futur proper.</Fragment
+    >
+  </CallToAction>
+</Layout>

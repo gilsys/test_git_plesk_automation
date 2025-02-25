@@ -1,0 +1,158 @@
+---
+import { Icon } from 'astro-icon/components';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+
+const metadata = {
+  title: 'Empresa de programación a medida con Metronic | +20 años',
+  description: `Somos un equipo de programadores expertos en Metronic, desarrollamos herramientas profesionales con este framwerok. ¡Presupuesto gratuito! Estamos en Osona, Barcelona.`,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Section -->
+  <Hero
+    tagline="Nos encontrarás cerca de Vic (Osona), en la provincia de Barcelona."
+    actions={[{ variant: 'primary', text: 'Pressupost gratuït', href: u('contact') }]}
+    backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/geometric-2/4.jpg' }}
+  >
+    <Fragment slot="title">
+        Desarrollo de soluciones con <span class="text-accent highlight">Metronic</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      Somos un equipo de programadores expertos en Metronic, desarrollamos herramientas profesionales con este framework.
+    </Fragment>
+  </Hero>
+
+  <Content
+  subtitle='Metronic es uno de los frameworks más eficientes y escalables.'
+    title="Desarrollo de aplicaciones con <span class='custom-gradient'>Metronic</span>"
+    image={{
+      src: '~/assets/images/estudio-integracion-ia.jpg',
+      alt: 'Estudi per integrar intel·ligència artificial',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        Las plataformas de administración y gestión de datos requieren interfaces atractivas, eficientes y escalables. 
+        En nuestro equipo, trabajamos con Metronic, uno de los sistemas de plantillas más avanzados para el desarrollo de backoffice, 
+        paneles de administración y aplicaciones web altamente funcionales. 
+      </p>
+      <p class="text-muted mt-4">
+        Desplegamos soluciones a medida desde Osona, en la provincia de Barcelona, 
+        para clientes sin límite geográfico. 
+      </p>
+    </Fragment>
+  </Content>
+
+  <Content
+    title="Metronic: Potencia y flexibilidad en aplicaciones de administración"
+    classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}
+  >
+    <Fragment slot="preContent">
+      <p class="text-muted">
+        Metronic es un potente framework de diseño basado en Bootstrap y Angular, ideal para desarrollar sistemas de gestión con una interfaz moderna, 
+        intuitiva y adaptable a distintos dispositivos. Gracias a su amplia colección de componentes y su estructura optimizada, 
+        permite acelerar el desarrollo de aplicaciones empresariales y mejorar la usabilidad del software.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Features
+    title="Ventajas de utilizar Metronic en proyectos de programación a medida:"
+    items={[
+      {
+        list: ['Diseño moderno y responsive, adaptable a cualquier dispositivo.'],
+        icon: 'tabler:check',
+      },
+      {
+        list: [
+          'Biblioteca extensa de componentes, que agiliza el desarrollo sin comprometer la personalización.',
+        ],
+        icon: 'tabler:check',
+      },
+      {
+        list: [
+          'Integración con frameworks avanzados, como SlimFramework.',
+        ],
+        icon: 'tabler:check',
+      },
+      {
+        list: [
+          'Optimización para rendimiento y carga rápida, asegurando tiempos de respuesta eficientes.',
+        ],
+        icon: 'tabler:check',
+      },
+      {
+        list: [
+          'Personalización total, permitiendo adaptar cada elemento a las necesidades del proyecto.',
+        ],
+        icon: 'tabler:check',
+      },
+    ]}
+  />
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+
+    <Features3
+    items={[
+      {
+        title: 'Construcción de paneles de administración y aplicaciones funcionales',
+        description: `Desde paneles de administración para gestionar contenido hasta plataformas avanzadas para el control empresarial, Metronic ofrece la flexibilidad necesaria para crear soluciones intuitivas y eficientes.`,
+        icon: 'tabler:layout-dashboard',
+      },
+      {
+        title: 'Transformación y modernización con Metronic',
+        description: `Si tu sistema de administración necesita una actualización, realizamos migraciones y optimización a Metronic, asegurando una transición fluida y sin interrupciones en la operatividad.`,
+        icon: 'tabler:refresh',
+      },
+      {
+        title: 'Mantenimiento y soporte para soluciones con Metronic',
+        description: `Nos encargamos de mantener y mejorar las plataformas creadas con Metronic, asegurando que estén actualizadas, protegidas y adaptadas a las últimas tendencias tecnológicas. Implementamos mejoras constantes en rendimiento, seguridad y experiencia de usuario.`,
+        icon: 'tabler:tools',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Features3>
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/24.jpg', alt: 'Fons abstracte' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Pressupost gratuït',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Trucar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title"
+      >Deja de buscar, <span class="custom-gradient">somos especialistas en Metronic</span> | +20 años</Fragment
+    >
+    <Fragment slot="subtitle"
+      >[TODO] PHP continu empreses que estan integrant <strong>intel·ligència artificial</strong> en els seus processos seran les que millor
+      preparades estaran en un futur proper.</Fragment
+    >
+  </CallToAction>
+</Layout>

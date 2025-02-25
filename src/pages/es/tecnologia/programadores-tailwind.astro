@@ -1,0 +1,192 @@
+---
+import { Icon } from 'astro-icon/components';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import FourBlocks from '~/components/widgets/FourBlocks.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+
+const metadata = {
+  title: 'Empresa de programación a medida con Tailwind | +20 anys',
+  description: `Somos un equipo de programadores expertos en Tailwind, desarrollamos herramientas profesionales con este framework. ¡Presupuesto gratuito! Estamos en Osona, Barcelona.`,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Section -->
+  <Hero
+    tagline="Desarrollo de interfaces modernas con Tailwind CSS en Osona, provincia de Barcelona"
+    actions={[{ variant: 'primary', text: 'Pressupost gratuït', href: u('contact') }]}
+    backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/geometric-2/4.jpg' }}
+  >
+    <Fragment slot="title">
+        Desarrollamos con <span class="text-accent highlight">Tailwind</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+        Somos un equipo de programadores expertos en Tailwind, desarrollamos herramientas profesionales con este framework.
+    </Fragment>
+  </Hero>
+
+  <Content
+    title="<span class='custom-gradient'>Tailwind </span>CSS:  Eficiencia y personalización"
+    image={{
+      src: '~/assets/images/estudio-integracion-ia.jpg',
+      alt: 'Estudi per integrar intel·ligència artificial',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        En Gilsys, creemos en la importancia de interfaces de usuario limpias, rápidas y altamente personalizables. Por ello, 
+        apostamos por Tailwind CSS, un framework de estilos que nos permite construir diseños escalables y optimizados sin la rigidez de los sistemas tradicionales. 
+      </p>
+    </Fragment>
+  </Content>
+
+  <Content
+    title="Diseños escalables, optimizados y altamente personalizables"
+    classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}
+  >
+    <Fragment slot="preContent">
+      <p class="text-muted">
+        A diferencia de los frameworks convencionales que imponen estilos predefinidos, Tailwind CSS proporciona un enfoque basado en clases utilitarias, 
+        permitiendo una <strong>personalización total</strong> sin necesidad de escribir CSS adicional. Es la mejor opción para interfaces modernas, adaptables y de alto rendimiento.
+      </p>
+     
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Features3
+  title='¿Por qué elegir Tailwind CSS para tu proyecto?'
+    classes={{ container: 'pt-0 md:pt-0 lg:pt-0' }}
+    items={[
+      {
+        description: `Máxima flexibilidad, sin restricciones de estilos predeterminados.`,
+        icon: 'tabler:palette',
+      },
+      {
+        description: `Optimización del rendimiento, gracias a su sistema de clases utilitarias y eliminación de código innecesario.`,
+        icon: 'tabler:bolt',
+      },
+      {
+        description: `Diseños responsive con facilidad, facilitando la escritura de código para adaptar interfaces a cualquier dispositivo de forma natural.`,
+        icon: 'tabler:devices',
+      },
+      {
+        description: `Escalabilidad sin complicaciones, permitiendo extender los estilos sin generar archivos CSS enormes.`,
+        icon: 'tabler:stack-back',
+      },
+      {
+        description: `Compatibilidad con cualquier tecnología, integrándose perfectamente con frameworks como React, Angular o SlimFramework.`,
+        icon: 'tabler:plug',
+      },
+      {
+        description: `Reducción de tiempos de desarrollo, facilitando la creación de componentes reutilizables sin sobrecarga de estilos.`,
+        icon: 'tabler:clock',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Features3>
+
+  <Content
+    title="Nuestra experiencia con Tailwind CSS en Gilsys"
+    subtitle='Conocemos bien la tecnología, la muestra es nuestra web corporativa, programada usando Astro y Tailwind.'
+    image={{
+      src: '~/assets/images/estudio-integracion-ia.jpg',
+      alt: 'Estudi per integrar intel·ligència artificial',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        Esta metodología de trabajo nos compromete a desarrollar soluciones de calidad sin caer en la repetición de código y asegurando un mantenimiento sencillo. 
+        En Gilsys, disfrutamos de este compromiso, ya que nos permite aprovechar al máximo nuestra experiencia y 
+        crear interfaces altamente optimizadas con total libertad creativa.
+      </p>
+    </Fragment>
+  </Content>
+
+  <Content
+    isReversed
+    title="Mantenimiento y evolución con Tailwind CSS"
+    image={{
+      src: '~/assets/images/estudio-integracion-ia.jpg',
+      alt: 'Estudi per integrar intel·ligència artificial',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        En Gilsys, no solo implementamos Tailwind CSS en nuestros desarrollos, sino que también ofrecemos evolución y mantenimiento,
+         permitiendo que cada interfaz se mantenga moderna, accesible y rápida.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  
+  <Features
+    title="Nuestros servicios incluyen:"
+    items={[
+      {
+        list: ['Optimización de código CSS y reducción de estilos redundantes.'],
+        icon: 'tabler:code',
+      },
+      {
+        list: [
+          'Mantenimiento de interfaces y actualización de diseños.',
+        ],
+        icon: 'tabler:tool',
+      },
+      {
+        list: [
+          'Conversión de proyectos tradicionales a Tailwind CSS.',
+        ],
+        icon: 'tabler:exchange',
+      },
+      {
+        list: [
+          'Integración con frameworks y sistemas de diseño existentes.',
+        ],
+        icon: 'tabler:plug',
+      },
+    ]}  
+    />
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/24.jpg', alt: 'Fons abstracte' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Pressupost gratuït',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Trucar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title"
+      >Deja de buscar, <span class="custom-gradient">somos especialistas en Tailwind</span></Fragment
+    >
+    <Fragment slot="subtitle"
+      >[TODO] PHP continu empreses que estan integrant <strong>intel·ligència artificial</strong> en els seus processos seran les que millor
+      preparades estaran en un futur proper.</Fragment
+    >
+  </CallToAction>
+</Layout>

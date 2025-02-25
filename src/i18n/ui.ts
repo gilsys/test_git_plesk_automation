@@ -197,6 +197,10 @@ export const routes = {
     'terms': '/ca/avis-legal/',
     'privacy-policy': '/ca/politica-privacitat/',
     'cookie-policy': '/ca/politica-cookies/',
+
+
+
+    'technology/php' : '/ca/tecnologia/programadors-php/'
   },
   es: {
     'home': '/es/',
@@ -249,6 +253,18 @@ export const routes = {
     'terms': '/es/aviso-legal/',
     'privacy-policy': '/es/politica-privacidad/',
     'cookie-policy': '/es/politica-cookies/',
+
+    'technology/php' : '/es/tecnologia/programadores-php/',
+    'technology/react-native' : '/es/tecnologia/programadores-react-native/',
+    'technology/angular' : '/es/tecnologia/programadores-angular/',
+    'technology/metronic' : '/es/tecnologia/programadores-metronic/',
+    'technology/slim-framework' : '/es/tecnologia/programadores-slim-framework/',
+    'technology/tailwind' : '/es/tecnologia/programadores-tailwind/',
+    'technology/bootstrap' : '/es/tecnologia/programadores-bootstrap/',
+    'technology/mysql': '/es/tecnologia/programadores-mysql/',
+    'technology/oracle': '/es/tecnologia/programadores-oracle/',
+    'technology/mongodb': '/es/tecnologia/programadores-mongodb/',
+    'technology/html-css': '/es/tecnologia/programadores-html-css/'
 
   },
   en: {
@@ -975,7 +991,7 @@ export const header = {
         text: 'Contactar',
         href: routes['es']['contact'],
       },
-    ],
+    ]
   },
   en: {
     links: [
@@ -1206,6 +1222,59 @@ export const footer = {
       { text: 'Aviso legal', href: routes['es']['terms'] },
       { text: 'Política de privacidad', href: routes['es']['privacy-policy'] },
       { text: 'Política de cookies', href: routes['es']['cookie-policy'] },
+    ],
+    tertiaryLinks :
+     [
+      {
+        href: routes['es']['technology/php'],
+        title: 'Eines de Business Intelligence i analítica de dades',
+        text: 'PHP'
+      },
+      {
+        href: routes['es']['technology/react-native'],
+        title: 'Eines de Business Intelligence i analítica de dades',
+        text: 'React Native'
+      },
+      {
+        href: routes['es']['technology/metronic'],
+        title: 'Eines de Business Intelligence i analítica de dades',
+        text: 'Metronic'
+      },
+      {
+        href: routes['es']['technology/slim-framework'],
+        title: 'Eines de Business Intelligence i analítica de dades',
+        text: 'Slim Framework'
+      },
+      {
+        href: routes['es']['technology/tailwind'],
+        title: 'Eines de Business Intelligence i analítica de dades',
+        text: 'Tailwind'
+      },
+      {
+        href: routes['es']['technology/bootstrap'],
+        title: 'Eines de Business Intelligence i analítica de dades',
+        text: 'Bootstrap'
+      },
+      {
+        href: routes['es']['technology/mysql'],
+        title: 'Eines de Business Intelligence i analítica de dades',
+        text: 'MySQL'
+      },
+      {
+        href: routes['es']['technology/oracle'],
+        title: 'Eines de Business Intelligence i analítica de dades',
+        text: 'Oracle'
+      },
+      {
+        href: routes['es']['technology/mongodb'],
+        title: 'Eines de Business Intelligence i analítica de dades',
+        text: 'MongoDB'
+      },
+      {
+        href: routes['es']['technology/html-css'],
+        title: 'Eines de Business Intelligence i analítica de dades',
+        text: 'HTML y CSS'
+      },
     ],
     socialLinks: [
       { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/company/gilsys' },

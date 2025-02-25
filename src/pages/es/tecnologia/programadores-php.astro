@@ -1,0 +1,170 @@
+---
+import { Icon } from 'astro-icon/components';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+
+const metadata = {
+  title: 'Empresa de programación a medida con PHP | +20 años',
+  description: `Nuestro equipo de programadores expertos en PHP, desarrolla herramientas profesionales con este lenguaje de programación. ¡Presupuesto gratuito! Estamos en Osona, Barcelona.`,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Section -->
+  <Hero
+    tagline="Somos una empresa con más de 20 años de experiencia programando en PHP."
+    actions={[{ variant: 'primary', text: 'Pressupost gratuït', href: u('contact') }]}
+    backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/geometric-2/4.jpg' }}
+  >
+    <Fragment slot="title">
+      Programación web con <span class="text-accent highlight">PHP</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      Nuestro equipo de programadores expertos en PHP, desarrolla herramientas profesionales con este lenguaje de programación.
+    </Fragment>
+  </Hero>
+
+  <Content
+  subtitle='PHP es uno de los lenguajes de programación web más robustos y utilizados.'
+    title="<span class='custom-gradient'>PHP</span>: La base para aplicaciones web sólidas y escalables"
+    image={{
+      src: '~/assets/images/estudio-integracion-ia.jpg',
+      alt: 'Estudi per integrar intel·ligència artificial',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        Si buscas especialistas en programación PHP en la provincia de Barcelona, has llegado al lugar indicado. Nuestro
+        equipo domina PHP desde la versión 5.5 hasta la más reciente, utilizando siempre las mejores prácticas de
+        programación para garantizar soluciones seguras, eficientes y escalables.
+      </p>
+      <p class="text-muted mt-4">
+        Nos especializamos en la creación de <a
+          href={u('development')}
+          class="text-accent"
+          title="Programació de software a mida amb PHP">software a medida</a
+        >, adaptado a las necesidades específicas de cada cliente, sin restricciones geográficas.
+      </p>
+    </Fragment>
+  </Content>
+
+  <Content
+    title="Nuestra metodología de desarrollo PHP [TODO]"
+    classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}
+  >
+    <Fragment slot="preContent">
+      <p class="text-muted">
+        El desarrollo con PHP nos permite ofrecer soluciones dinámicas y robustas para empresas de todos los tamaños.
+        Desde plataformas corporativas hasta sistemas personalizados, PHP sigue siendo una de las tecnologías más
+        confiables y versátiles.
+      </p>
+      <p class="text-muted mt-4">
+        Utiltizat des de fa anys com a base de moltes eines i que ha anat evolucionant al llarg del temps per encara a dia d'avui, continuar estant un dels més utilitzats per a la programació a mida de projectes informàtics.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Features3
+  columns={2}
+  title='Nuestra metodología de desarrollo PHP'
+    classes={{ container: 'pt-0 md:pt-0 lg:pt-0' }}
+    items={[
+      {
+        description: `Implementamos arquitecturas modernas y optimizadas, asegurando aplicaciones rápidas y de alto rendimiento.`,
+        icon: 'tabler:rocket',
+      },
+      {
+        description: `Utilizamos frameworks avanzados como Laravel, Symfony para maximizar la eficiencia y escalabilidad.`,
+        icon: 'tabler:code',
+      },
+      {
+        description: `Priorizamos la seguridad del software, integrando protocolos avanzados para proteger datos e información.`,
+        icon: 'tabler:shield-lock',
+      },
+      {
+        description: `Diseñamos plataformas modulares y flexibles, listas para futuras actualizaciones y expansiones.`,
+        icon: 'tabler:palette',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Features3>
+
+  <Content
+    title="Migración y modernización de aplicaciones en PHP"
+    image={{
+      src: '~/assets/images/estudio-integracion-ia.jpg',
+      alt: 'Estudi per integrar intel·ligència artificial',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        Si tu software actual necesita una actualización o está desarrollado en otra tecnología, te ayudamos con una
+        migración estructurada a PHP, optimizando código, mejorando el rendimiento y asegurando una transición sin
+        interrupciones.
+        <a
+          title='Serveis de digitalització subvencionats pel Kit Digital'
+          href={u('kit-digital')} class="btn-primary mt-12 mb-12 w-auto">Veure categories subvencionades</a>
+      </p>
+    </Fragment>
+  </Content>
+
+  <Content
+    isReversed
+    title="Mantenimiento y evolución continua"
+    image={{
+      src: '~/assets/images/estudio-integracion-ia.jpg',
+      alt: 'Estudi per integrar intel·ligència artificial',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        Nuestro equipo proporciona soporte técnico para garantizar que tu aplicación PHP permanezca actualizada,
+        funcional y libre de vulnerabilidades. Ofrecemos mantenimiento preventivo, actualizaciones de seguridad y
+        mejoras funcionales según las necesidades de tu negocio.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/24.jpg', alt: 'Fons abstracte' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Pressupost gratuït',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Trucar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title"
+      >Deja de buscar, <span class="custom-gradient">somos especialistas en PHP</span> des de 2004</Fragment
+    >
+    <Fragment slot="subtitle"
+      >PHP continu empreses que estan integrant <strong>intel·ligència artificial</strong> en els seus processos seran les que millor
+      preparades estaran en un futur proper.</Fragment
+    >
+  </CallToAction>
+</Layout>
