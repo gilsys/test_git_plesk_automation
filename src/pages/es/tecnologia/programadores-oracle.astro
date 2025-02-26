@@ -10,8 +10,8 @@ import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 const u = useRoutes(getLangFromUrl(Astro.url));
 
 const metadata = {
-  title: 'Servicios de desarrollo con Oracle | +20 anys',
-  description: `Somos un equipo de programadores expertos en diseños de bases de datos Oracle. ¡Presupuesto gratuito! Estamos en Osona, Barcelona.`,
+  title: 'Diseño de bases de datos con Oracle',
+  description: `En Gilsys, creamos modelos de datos y programamos PL/SQL usando bases de datos Oracle. Estamos en Osona, Barcelona.`,
 };
 ---
 
@@ -23,27 +23,26 @@ const metadata = {
     backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/geometric-2/4.jpg' }}
   >
     <Fragment slot="title">
-        Desarrollo con <span class="text-accent highlight">Oracle Database</span>
+      Desarrollo de bases de datos con <span class="text-accent highlight">Oracle Database</span>
     </Fragment>
-    <Fragment slot="subtitle">
-      [TO DO]
-    </Fragment>
+    <Fragment slot="subtitle"> Creamos modelos de datos y programamos PL/SQL usando bases de datos Oracle. </Fragment>
   </Hero>
 
   <Content
-    title="<span class='custom-gradient'>Oracle Database:  </span>La solución robusta para datos empresariales"
+    title="<span class='custom-gradient'>Oracle Database:</span> La base de datos líder para empresas"
     image={{
-      src: '~/assets/images/estudio-integracion-ia.jpg',
-      alt: 'Estudi per integrar intel·ligència artificial',
+      src: '~/assets/images/oracle-loog.jpg',
+      alt: 'Logotipo de Oracle',
     }}
   >
     <Fragment slot="content">
       <p class="text-muted">
-        En Gilsys, trabajamos con Oracle Database, disponemos de experiencia desde la versión 10 hasta las versiones actuales.
-       
+        En Gilsys, hemos realizado diferentes proyectos trabajado con Oracle Database, la base de datos relacional más
+        robusta y confiable del mercado.
       </p>
       <p class="text-muted mt-4">
-        Nos enfocamos en diseñar bases de datos aprovechando las capacidades de PL/SQL para ofrecer rendimiento y eficiencia en entornos empresariales.
+        Nuestro equipo de analistas y programadores especialistas te ayudará a diseñar, desarrollar e implementar
+        soluciones a medida, optimizadas para satisfacer las necesidades específicas de tu proyecto empresarial.
       </p>
     </Fragment>
   </Content>
@@ -54,10 +53,15 @@ const metadata = {
   >
     <Fragment slot="preContent">
       <p class="text-muted">
-        Oracle es una de las bases de datos más potentes y confiables del mercado. En Gilsys, utilizamos sus avanzadas funcionalidades para estructurar, 
-        consultar y almacenar datos manteniendo integridad referencial y escalabilidad empresarial.
+        Oracle es una de las bases de datos más potentes y confiables del mercado. En Gilsys, utilizamos sus ventajas
+        para estructurar, consultar y almacenar datos manteniendo integridad referencial y organizando la información de
+        forma correcta.
       </p>
-     
+      <p class="text-center">
+        <a title="Web oficial de Oracle Database" href="#ROGER" class="btn-primary mt-12 mb-12 w-auto"
+          >Conoce más sobre Oracle Database</a
+        >
+      </p>
     </Fragment>
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-lightgray"></div>
@@ -65,128 +69,134 @@ const metadata = {
   </Content>
 
   <Features3
-  columns={3}
-  title='Beneficios de usar MySQL en tus proyectos'
-    classes={{ container: 'pt-0 md:pt-0 lg:pt-0' }}
+    columns={3}
+    title='Beneficios de usar <span class="custom-gradient">Oracle Database</span> en tus proyectos'
+    subtitle="Oracle database es la base de datos más popular para proyectos empresariales críticos."
     items={[
-       {
-        description: `Alta capacidad de procesamiento, ideal para entornos de misión crítica.`,
+      {
+        title: 'Alto rendimiento',
+        description: `Procesamiento veloz y eficiente, ideal para entornos de misión crítica que requieren alta disponibilidad.`,
         icon: 'tabler:cpu',
       },
       {
-        description: `PL/SQL avanzado, permitiendo desarrollo de procedimientos almacenados eficientes.`,
+        title: 'PL/SQL avanzado',
+        description: `Permite el desarrollo de procedimientos almacenados complejos y eficientes para una lógica de negocio optimizada.`,
         icon: 'tabler:code',
       },
       {
-        description: `Seguridad avanzada con roles y privilegios, protegiendo el acceso a los datos.`,
+        title: 'Seguridad robusta',
+        description: `Control de acceso granular con roles y privilegios, que protege la información sensible y garantiza el cumplimiento de normativas.`,
         icon: 'tabler:shield-lock',
       },
       {
-        description: `Optimización de rendimiento con particionamiento e índices inteligentes.`,
+        title: 'Optimización de rendimiento',
+        description: `Técnicas avanzadas como el particionamiento y los índices inteligentes que mejoran la velocidad y eficiencia de las consultas.`,
         icon: 'tabler:brand-speedtest',
       },
       {
-        description: `Alta disponibilidad y recuperación ante desastres, garantizando continuidad del negocio.`,
+        title: 'Alta disponibilidad',
+        description: `Mecanismos de recuperación ante desastres que garantizan la continuidad del negocio, incluso en situaciones imprevistas.`,
         icon: 'tabler:shield-check',
       },
       {
-        description: `Escalabilidad para grandes volúmenes de datos y entornos distribuidos.`,
+        title: 'Escalabilidad',
+        description: `Adaptable a grandes volúmenes de datos y entornos distribuidos, ideal para empresas en crecimiento.`,
         icon: 'tabler:network',
       },
     ]}
-  >
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-lightgray"></div>
-    </Fragment>
-  </Features3>
+  />
 
   <Content
-    isReversed
-    title="Nuestra experiencia con Oracle en Gilsys"
-    image={{
-      src: '~/assets/images/estudio-integracion-ia.jpg',
-      alt: 'Estudi per integrar intel·ligència artificial',
-    }}
-  >
-    <Fragment slot="content">
-      <p class="text-muted">
-        Desde Oracle 10 hasta las versiones más recientes, hemos desarrollado y optimizado bases de datos para empresas de distintos sectores. 
-        Contamos con experiencia en PL/SQL, permitiéndonos crear procedimientos almacenados, triggers y funciones eficientes para mejorar el rendimiento de los sistemas.
-      </p>
-    </Fragment>
-  </Content>
-
-  <Content
-    title="Desarrollo y optimización con PL/SQL"
-    image={{
-      src: '~/assets/images/estudio-integracion-ia.jpg',
-      alt: 'Estudi per integrar intel·ligència artificial',
-    }}
-  >
-    <Fragment slot="content">
-      <p class="text-muted">
-        Oracle ofrece PL/SQL, un lenguaje de programación potente que permite mejorar el rendimiento de las consultas y la manipulación de datos en la base de datos. 
-      </p>
-    </Fragment>
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-lightgray"></div>
-    </Fragment>
-  </Content>
-
-  
-  <Features
-  title="Nuestros servicios incluyen:"
-  items={[
-    {
-      description: 'Desarrollo de procedimientos almacenados y funciones en PL/SQL.',
-      icon: 'tabler:code',
-    },
-    {
-       description:'Optimización de consultas SQL y mejora del rendimiento.',
-      icon: 'tabler:rocket',
-    },
-    {
-       description:'Diseño de bases de datos con modelado relacional en Oracle',
-      icon: 'tabler:table',
-    },
-    {
-      description:'Migración de bases de datos entre versiones y plataformas.',
-      icon: 'tabler:switch-vertical',
-    },
-    {
-       description:'Auditoría de seguridad y control de acceso.',
-      icon: 'tabler:shield-check',
-    },
-    {
-       description:'Estrategias de respaldo y recuperación de datos.',
-      icon: 'tabler:cloud-download',
-    },
-  ]}
-/>
-
-
-<CallToAction
-backgroundImage={{ src: '~/assets/images/dots/24.jpg', alt: 'Fondo abstracto' }}
-actions={[
-  {
-    variant: 'primary',
-    text: 'Presupuesto gratuito',
-    href: u('contact'),
-  },
-  {
-    variant: 'primary',
-    text: 'Llamar',
-    href: 'tel:+34665331271',
-  },
-]}
+  isReversed
+  tagline="Experiencia y servicios de Gilsys con Oracle "
+  title="Aprovechamos el máximo rendimiento con PL/SQL" 
+  image={{
+    src: '~/assets/images/estudio-integracion-ia.jpg',
+    alt: 'Expertos en Oracle PL/SQL',
+  }}
 >
+  <Fragment slot="preContent">
+    <p class="text-muted">
+      La trayectoria con Oracle Database en Gilsys se extiende desde versiones tempranas como la 10 hasta las más recientes. Esta experiencia ha permitido obtener una comprensión de su evolución y capacidades.
+    </p>
+  </Fragment>
+    <Fragment slot="content">
+      <p class="text-muted mt-4">
+        <strong>PL/SQL</strong>, el lenguaje de programación nativo de Oracle, es la herramienta clave para aprovechar al máximo el potencial de la base de datos. Nuestro conocimiento de PL/SQL nos permite crear soluciones que mejoran el rendimiento de consultas y la gestión de datos.
+      </p>
+      <p class="text-muted mt-4">
+        En Gilsys, desarrollamos procedimientos almacenados, triggers y funciones con un enfoque en la eficiencia, adaptados a las necesidades específicas de cada proyecto para un rendimiento óptimo del sistema.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+</Content>
+
+  <Features
+    title=`Qué servicios ofrecemos con <span class='custom-gradient'>Oracle Database</span>?`
+    items={[
+      {
+        title: 'Desarrollo PL/SQL',
+        description:
+          'Creamos paquetes, procedimientos almacenados y funciones personalizadas para optimizar la lógica de tu negocio y el rendimiento de la base de datos.',
+        icon: 'tabler:code',
+      },
+      {
+        title: 'Optimización de consultas',
+        description:
+          'Ajustamos tus consultas SQL para asegurar la máxima eficiencia y reducir los tiempos de respuesta.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Diseño de bases de datos',
+        description:
+          'Modelamos y diseñamos bases de datos relacionales robustas y escalables que se adaptan a tus necesidades, incluyendo la creación de nuevas tablas.',
+        icon: 'tabler:table',
+      },
+      {
+        title: 'Migración de bases de datos',
+        description:
+          'Trasladamos tus bases de datos entre diferentes versiones y plataformas de forma segura y eficiente.',
+        icon: 'tabler:switch-vertical',
+      },
+      {
+        title: 'Creación de tablas y vistas',
+        description:
+          'Diseñamos y creamos nuevas tablas y vistas para organizar y acceder a tus datos de forma eficiente.',
+        icon: 'tabler:database',
+      },
+      {
+        title: 'Comunicación con herramientas externas',
+        description:
+          'Integramos tu base de datos Oracle con otras herramientas y sistemas, independientemente de la tecnología en la que estén desarrollados.',
+        icon: 'tabler:plug',
+      },
+    ]}
+  >
+    </Features>
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/24.jpg', alt: 'Fondo abstracto' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Presupuesto gratuito',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Llamar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
     <Fragment slot="title"
-      >Deja de buscar, <span class="custom-gradient">somos especialistas en Oracle</span></Fragment
+      >¿Necesitas servicios para trabajar con bases de datos <span class="custom-gradient">Oracle</span>?</Fragment
     >
     <Fragment slot="subtitle"
-      >[TODO] PHP continu empreses que estan integrant <strong>intel·ligència artificial</strong> en els seus processos seran les que millor
-      preparades estaran en un futur proper.</Fragment
+      >En Gilsys tenemos experiencia, contáctanos y diseñaremos o analizaremos tu base de datos en base a los requisitos
+      de tu proyecto.</Fragment
     >
   </CallToAction>
 </Layout>

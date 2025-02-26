@@ -10,37 +10,36 @@ import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 const u = useRoutes(getLangFromUrl(Astro.url));
 
 const metadata = {
-  title: 'Empresa de programación a medida con HTML y CSS | +20 anys',
-  description: `Somos un equipo de programadores expertos en HTML y CSS, y desarrollamos herramientas profesionales con estos lenguajes de programación. ¡Presupuesto gratuito! Estamos en Osona, Barcelona.`,
+  title: 'Diseño y programación en HTML y CSS',
+  description: `Como empresa de desarrollo a medida, ofrecemos programación de interfaces web en HTML y CSS de forma profesional, priorizando SEO.`,
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- Hero Section -->
   <Hero
-    tagline="Maquetación de diseños a medida con HTML y CSS en Osona, provincia de Barcelona"
-    actions={[{ variant: 'primary', text: 'Pressupost gratuït', href: u('contact') }]}
-    backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/geometric-2/4.jpg' }}
+    tagline="HTML y CSS han recorrido un largo camino desde sus inicios"
+    actions={[{ variant: 'primary', text: 'Presupuesto gratuito', href: u('contact') }]}
+    backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/geometric-2/4.jpg' }}
   >
     <Fragment slot="title">
-      Programamos con <span class="text-accent highlight">HTML y CSS</span>
+      Diseño y desarrollo con <span class="text-accent highlight">HTML y CSS</span>
     </Fragment>
     <Fragment slot="subtitle">
-      Somos un equipo de programadores expertos en HTML y CSS, y desarrollamos herramientas profesionales con estos
-      lenguajes de programación.
+      Como empresa de desarrollo a medida, ofrecemos maquetación de interfaces web en HTML y CSS de forma profesional.
     </Fragment>
   </Hero>
   <Content
     title="<span class='custom-gradient'>HTML y CSS:</span> La esencia de una web estructurada y funcional"
     image={{
-      src: '~/assets/images/estudio-integracion-ia.jpg',
-      alt: 'Presupuesto gratuito',
+      src: '~/assets/images/html-css-logo.jpg',
+      alt: 'Logotipos de HTML y CSS',
     }}
   >
     <Fragment slot="content">
       <p class="text-muted">
         En Gilsys, entendemos que <strong>HTML y CSS</strong> son la base de toda experiencia web. Aunque son lenguajes fundamentales
-        en el desarrollo, dominar estos lenguajes es esencial para crear interfaces modernas, accesibles y bien estructuradas.
+        en el desarrollo, su dominio es esencial para crear interfaces modernas, accesibles y bien estructuradas.
       </p>
       <p class="text-muted mt-4">
         En un entorno donde los frameworks evolucionan constantemente, HTML sigue siendo el lenguaje universal que todos
@@ -50,48 +49,57 @@ const metadata = {
   </Content>
 
   <Content
+    isReversed
     title="Los pilares imprescindibles en el desarrollo web actual"
+    subtitle="En Gilsys, dominamos las últimas novedades de HTML y CSS para ofrecerte soluciones web de vanguardia."
     classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}
+    image={{
+      src: '~/assets/images/html-css-image.jpg',
+      alt: 'Imagen de escena de HTML y CSS',
+    }}
   >
-    <Fragment slot="preContent">
+    <Fragment slot="content">
       <p class="text-muted">
-        A pesar de su antigüedad, <strong>HTML y CSS</strong> siguen siendo imprescindibles en el desarrollo web. El dominio
-        de estos lenguajes permite estructurar correctamente el contenido, garantizando accesibilidad y compatibilidad con
-        todos los dispositivos y navegadores.
+        En Gilsys, no nos limitamos a conocer los fundamentos de HTML y CSS. Nuestros programadores se mantienen
+        actualizados con las últimas especificaciones y funcionalidades de estos lenguajes.
       </p>
-    </Fragment>
+      <p class="text-muted mt-4">
+        Esta constante actualización nos permite construir sitios web con una estructura sólida y eficiente.
+      </p>
+    </Fragment>    
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-lightgray"></div>
     </Fragment>
   </Content>
 
-  <Features3
+  <Features2
     columns={2}
-    title="Importancia de un código HTML semántico y bien estructurado"
-    classes={{ container: 'pt-0 md:pt-0 lg:pt-0' }}
+    title="Importancia de un código HTML semántico y limpio"
+    subtitle="Un código bien estructurado beneficia a usuarios y motores de búsqueda."
     items={[
       {
         title: 'Accesibilidad mejorada',
-        description: `El código bien estructurado facilita la navegación para usuarios con discapacidades y mejora la legibilidad para motores de búsqueda.`,
-        icon: 'tabler:eye',
+        description: `Facilitando la lectura por parte de los motores de búsqueda y lectores de pantalla.`,
+        icon: 'tabler:disabled-2', // Icono para accesibilidad
       },
       {
-        title: 'SEO más eficiente',
-        description: `Un HTML semántico permite que los buscadores comprendan mejor el contenido, lo que favorece un mejor posicionamiento.`,
-        icon: 'tabler:chart-bar',
+        title: 'SEO optimizado',
+        description: `Permitiendo que los buscadores indexen correctamente el contenido.`,
+        icon: 'tabler:world-www', // Icono para SEO y web
       },
       {
-        title: 'Mantenimiento simplificado',
-        description: `Estructuras organizadas reducen el esfuerzo en futuras modificaciones y colaboraciones.`,
-        icon: 'tabler:edit',
+        title: 'Mantenimiento eficiente',
+        description: `Con estructuras organizadas y fáciles de interpretar.`,
+        icon: 'tabler:tools', // Icono para mantenimiento y herramientas
       },
       {
-        title: 'Compatibilidad garantizada',
-        description: `Un código limpio y estándar asegura su correcta interpretación en cualquier navegador o dispositivo.`,
-        icon: 'tabler:devices',
+        title: 'Compatibilidad universal',
+        description: `Garantizando que cualquier navegador pueda interpretar el código correctamente.`,
+        icon: 'tabler:browser', // Icono para compatibilidad y navegadores
       },
     ]}
-  />
+  >
+  </Features2>
 
   <Content
     title="CSS puro: Más que estilos, animaciones y transiciones"
@@ -102,7 +110,7 @@ const metadata = {
   >
     <Fragment slot="content">
       <p class="text-muted">
-        CSS ha evolucionado hasta convertirse en un lenguaje con capacidades avanzadas que mejoran la interacción y la
+        CSS ha evolucionado hasta convertirse en un lenguaje con capacidades avanzadas para mejorar la interacción y la
         estética de una página web.
       </p>
       <p class="text-muted mt-4">
@@ -113,84 +121,76 @@ const metadata = {
   </Content>
 
   <Features
-    title="Ventajas de las animaciones y transiciones en CSS"
-    items={[
-      {
-        title: 'Interactividad mejorada',
-        description: `Pequeñas animaciones crean una experiencia de usuario más fluida y atractiva.`,
-        icon: 'tabler:cursor-text',
-      },
-      {
-        title: 'Rendimiento optimizado',
-        description: `Las transiciones en CSS consumen menos recursos que las soluciones basadas en JavaScript.`,
-        icon: 'tabler:flame',
-      },
-      {
-        title: 'Compatibilidad con navegadores',
-        description: `Las animaciones CSS funcionan en la mayoría de los navegadores modernos sin necesidad de ajustes adicionales.`,
-        icon: 'tabler:browser-check',
-      },
-      {
-        title: 'Carga rápida',
-        description: `Al evitar el uso de bibliotecas externas, se reduce el tiempo de carga del sitio.`,
-        icon: 'tabler:gauge',
-      },
-    ]}
-  />
+  title="Ventajas de utilizar animaciones y transiciones en CSS"
+  items={[
+    {
+      title: 'Experiencia de usuario mejorada',
+      description: 'Hacen la navegación más atractiva y dinámica.',
+      icon: 'tabler:user-check', // Icono para experiencia de usuario
+    },
+    {
+      title: 'Rendimiento optimizado',
+      description: 'CSS maneja las animaciones de forma más eficiente que JavaScript.',
+      icon: 'tabler:chart-line', // Icono para rendimiento
+    },
+    {
+      title: 'Compatibilidad con navegadores',
+      description: 'Asegurando una visualización coherente en todos los navegadores modernos.',
+      icon: 'tabler:world', // Icono para compatibilidad
+    },
+    {
+      title: 'Carga más rápida',
+      description: 'Al eliminar la dependencia de bibliotecas externas.',
+      icon: 'tabler:bolt', // Icono para velocidad
+    },
+  ]}
+>
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-lightgray"></div>
+  </Fragment>
+</Features>
 
   <Content
     isReversed
-    title="Nuestra experiencia en Gilsys con HTML y CSS"
+    title="Gilsys ofrece HTML y CSS bajo control"
+    subtitle='En Gilsys, trabajamos con HTML y CSS a nivel avanzado, asegurando que cada línea de código sea limpia, semántica y eficiente.'
     image={{
       src: '~/assets/images/estudio-integracion-ia.jpg',
       alt: 'Estudi per integrar intel·ligència artificial',
     }}
-  >
-    <Fragment slot="content">
-      <p class="text-muted">
-        En Gilsys, trabajamos con HTML y CSS a nivel avanzado, asegurando que cada línea de código sea limpia, semántica
-        y eficiente.
-      </p>
-      <p class="text-muted mt-4">
-        Maquetamos proyectos a medida, adaptándonos a las necesidades de cada cliente para ofrecer soluciones
-        personalizadas, responsivas y optimizadas.
-      </p>
-    </Fragment>
-  </Content>
-
-  <Features
-    title="Nuestros servicios incluyen:"
     items={[
       {
-        title: 'Maquetación con HTML semántico',
-        description: `Estructuración optimizada para mejorar la accesibilidad y el SEO.`,
-        icon: 'tabler:layout',
+        title: "Maquetación HTML semántica",
+        description: 'Maquetación avanzada con HTML semántico.',
+        icon: 'tabler:html', // Icono para HTML5
       },
       {
-        title: 'Desarrollo de estilos avanzados',
-        description: `Personalización total de la interfaz con CSS puro y preprocesadores como Sass.`,
-        icon: 'tabler:palette',
+        title: "Estilos CSS a medida",
+        description: 'Desarrollo de estilos personalizados con CSS puro.',
+        icon: 'tabler:file-type-css', // Icono para CSS3
       },
       {
-        title: 'Efectos visuales sin JavaScript',
-        description: `Uso de transiciones y animaciones CSS para mejorar la experiencia sin sobrecargar el rendimiento.`,
-        icon: 'tabler:sparkles',
+        title: "Animaciones y transiciones CSS",
+        description: 'Implementación de animaciones y transiciones CSS para mejorar la usabilidad.',
+        icon: 'tabler:eye-exclamation', // Icono para animaciones
       },
       {
-        title: 'Optimización del código',
-        description: `Mejoramos la eficiencia del código para ofrecer una carga rápida y compatibilidad.`,
-        icon: 'tabler:settings',
+        title: "Optimización de código",
+        description: 'Código límpio y ligero ofreciendo rendimiento y accesibilidad.',
+        icon: 'tabler:bolt', // Icono para rendimiento
       },
       {
-        title: 'Compatibilidad con dispositivos y navegadores',
-        description: `Garantizamos una visualización consistente en cualquier entorno digital.`,
-        icon: 'tabler:world',
+        title: "Compatibilidad multiplataforma",
+        description: 'Compatibilidad con todos los navegadores y dispositivos.',
+        icon: 'tabler:world', // Icono para compatibilidad
       },
     ]}
-  />
+  >   
+  </Content>
+
 
   <Content
-    title="Integración de HTML y CSS con otras tecnologías"
+    title="Integración de HTML y CSS con otras tecnologías"    
     image={{
       src: '~/assets/images/angular-programacion#ROGER.jpg',
       alt: 'Imagen que refleja desarrollo web y apps con Angular',
@@ -200,7 +200,7 @@ const metadata = {
         description: 'Preprocesadores como Sass y Less para una mejor gestión de estilos.',
       },
       {
-        description: 'Frameworks como Tailwind CSS y Bootstrap para proyectos que requieren escalabilidad.',
+        description: 'Frameworks como <a href="#ROGER">Tailwind CSS</a> y <a href="#ROGER">Bootstrap</a> para proyectos que requieren escalabilidad.',
       },
       {
         description: 'JavaScript para efectos interactivos más complejos',
@@ -216,11 +216,8 @@ const metadata = {
         sus capacidades:
       </p>
     </Fragment>
-    <Fragment slot="postContent">
-      <p class="text-muted">
-        Si buscas una maquetación avanzada con HTML y CSS, con código limpio y semántico, en Gilsys estamos preparados
-        para ofrecerte una solución que combine estética, rendimiento y accesibilidad.
-      </p>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
     </Fragment>
   </Content>
 
@@ -243,8 +240,7 @@ const metadata = {
       >Si estás buscando especialistas en <span class="custom-gradient">HTML y CSS</span>, los has encontrado.</Fragment
     >
     <Fragment slot="subtitle"
-      >Estamos a tu disposición para elaborar una propuesta de desarrollo en HTML y CSS y crear una maquetación a medida
-      para tu proyecto.
-    </Fragment>
+      >Estamos a tu disposición para elaborar desarrollar tu proyecto en HTML y CSS, creando una maquetación a medida.</Fragment
+    >
   </CallToAction>
 </Layout>
