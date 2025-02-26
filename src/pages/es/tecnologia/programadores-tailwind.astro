@@ -36,22 +36,24 @@ const metadata = {
   </Hero>
 
   <Content
-    title="<span class='custom-gradient'>Tailwind </span>CSS:  Eficiencia y personalización"
-    image={{
-      src: '~/assets/images/estudio-integracion-ia.jpg',
-      alt: 'Estudi per integrar intel·ligència artificial',
-    }}
-  >
-    <Fragment slot="content">
-      <p class="text-muted">
-        En Gilsys, creemos en la importancia de interfaces de usuario limpias, rápidas y altamente personalizables. Por ello, 
-        apostamos por Tailwind CSS, un framework de estilos que nos permite construir diseños escalables y optimizados sin la rigidez de los sistemas tradicionales. 
-      </p>
-    </Fragment>
-  </Content>
+  title="<span class='custom-gradient'>Tailwind </span>CSS: Eficiencia y adaptabilidad"
+  subtitle="El framework CSS que revoluciona el diseño web con su innovador enfoque <em>utility-first</em>."
+  image={{
+    src: '~/assets/images/tailwind-logo.jpg',
+    alt: 'Logotipo de Tailwind CSS',
+  }}
+>
+  <Fragment slot="content">
+    <p class="text-muted">
+      En Gilsys, creemos en la importancia de interfaces de usuario limpias, rápidas y altamente personalizables. Por ello, 
+      apostamos por Tailwind CSS, un framework de estilos que nos permite construir diseños escalables y optimizados sin la rigidez de los sistemas tradicionales. 
+    </p>    
+  </Fragment>
+</Content>
 
   <Content
     title="Diseños escalables, optimizados y altamente personalizables"
+    subtitle='Interfaces de usuario adaptadas a todos los dispositivos'
     classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}
   >
     <Fragment slot="preContent">
@@ -59,7 +61,9 @@ const metadata = {
         A diferencia de los frameworks convencionales que imponen estilos predefinidos, Tailwind CSS proporciona un enfoque basado en clases utilitarias, 
         permitiendo una <strong>personalización total</strong> sin necesidad de escribir CSS adicional. Es la mejor opción para interfaces modernas, adaptables y de alto rendimiento.
       </p>
-     
+      <p class="text-center">
+        <a title="Web oficial de MySQL" href="#ROGER" class="btn-primary mt-12 mb-12 w-auto">Conoce más sobre Tailwind CSS</a>
+      </p>
     </Fragment>
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-lightgray"></div>
@@ -68,7 +72,6 @@ const metadata = {
 
   <Features3
   title='¿Por qué elegir Tailwind CSS para tu proyecto?'
-    classes={{ container: 'pt-0 md:pt-0 lg:pt-0' }}
     items={[
       {
         description: `Máxima flexibilidad, sin restricciones de estilos predeterminados.`,
@@ -96,9 +99,7 @@ const metadata = {
       },
     ]}
   >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-lightgray"></div>
-    </Fragment>
+    
   </Features3>
 
   <Content
@@ -112,24 +113,10 @@ const metadata = {
   >
     <Fragment slot="content">
       <p class="text-muted">
-        Esta metodología de trabajo nos compromete a desarrollar soluciones de calidad sin caer en la repetición de código y asegurando un mantenimiento sencillo. 
-        En Gilsys, disfrutamos de este compromiso, ya que nos permite aprovechar al máximo nuestra experiencia y 
-        crear interfaces altamente optimizadas con total libertad creativa.
+        Como empresa de desarrollo, aprovechamos esta tecnología para desarrollar soluciones de calidad sin caer en la repetición de código y asegurando un mantenimiento ágil.
       </p>
-    </Fragment>
-  </Content>
-
-  <Content
-    title="Mantenimiento y evolución con Tailwind CSS"
-    image={{
-      src: '~/assets/images/estudio-integracion-ia.jpg',
-      alt: 'Estudi per integrar intel·ligència artificial',
-    }}
-  >
-    <Fragment slot="content">
-      <p class="text-muted">
-        En Gilsys, no solo implementamos Tailwind CSS en nuestros desarrollos, sino que también ofrecemos evolución y mantenimiento,
-         permitiendo que cada interfaz se mantenga moderna, accesible y rápida.
+      <p class="text-muted mt-4">
+        En Gilsys, disfrutamos de este compromiso, ya que nos permite aprovechar al máximo nuestra experiencia y crear interfaces optimizadas con libertad creativa.
       </p>
     </Fragment>
     <Fragment slot="bg">
@@ -164,26 +151,25 @@ const metadata = {
     />
 
     <CallToAction
-    backgroundImage={{ src: '~/assets/images/dots/24.jpg', alt: 'Fondo abstracto' }}
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Presupuesto gratuito',
-        href: u('contact'),
-      },
-      {
-        variant: 'primary',
-        text: 'Llamar',
-        href: 'tel:+34665331271',
-      },
-    ]}
-  >
-    <Fragment slot="title"
-      >Deja de buscar, <span class="custom-gradient">somos especialistas en Tailwind</span></Fragment
-    >
-    <Fragment slot="subtitle"
-      >[TODO] PHP continu empreses que estan integrant <strong>intel·ligència artificial</strong> en els seus processos seran les que millor
-      preparades estaran en un futur proper.</Fragment
-    >
-  </CallToAction>
+  backgroundImage={{ src: '~/assets/images/dots/24.jpg', alt: 'Fondo abstracto' }}
+  actions={[
+    {
+      variant: 'primary',
+      text: 'Solicita tu presupuesto',
+      href: u('contact'),
+    },
+    {
+      variant: 'secondary',
+      text: 'Contáctanos',
+      href: 'tel:+34665331271',
+    },
+  ]}
+>
+  <Fragment slot="title">
+    Desarrolla tu interfaz de vanguardia con Gilsys y <span class="custom-gradient">Tailwind CSS</span>
+  </Fragment>
+  <Fragment slot="subtitle">
+    Deja la interfaz de usuario en manos de nuestro equipo de programación, tu diseño lucirá con un alto nivel de rendimiento.
+  </Fragment>
+</CallToAction>
 </Layout>
