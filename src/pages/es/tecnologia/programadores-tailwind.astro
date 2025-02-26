@@ -15,23 +15,23 @@ import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 const u = useRoutes(getLangFromUrl(Astro.url));
 
 const metadata = {
-  title: 'Empresa de programación a medida con Tailwind | +20 anys',
-  description: `Somos un equipo de programadores expertos en Tailwind, desarrollamos herramientas profesionales con este framework. ¡Presupuesto gratuito! Estamos en Osona, Barcelona.`,
+  title: 'Empresa de diseño de interfaces con Tailwind CSS',
+  description: 'Diseñamos interfaces únicas y a medida. Nuestro equipo de programación es experto en desarrollar experiencias web intuitivas y optimizadas para cada proyecto.',
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- Hero Section -->
   <Hero
-    tagline="Desarrollo de interfaces modernas con Tailwind CSS en Osona, provincia de Barcelona"
-    actions={[{ variant: 'primary', text: 'Pressupost gratuït', href: u('contact') }]}
-    backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/geometric-2/4.jpg' }}
+    tagline="Diseñamos interfaces únicas y a medida. "
+    actions={[{ variant: 'primary', text: 'Presupuesto gratuito', href: u('contact') }]}
+    backgroundImage={{ alt: 'Fondo abstarcto', src: '~/assets/images/geometric-2/4.jpg' }}
   >
     <Fragment slot="title">
-        Desarrollamos con <span class="text-accent highlight">Tailwind</span>
+        Diseño de interfaces de usuario con <span class="text-accent highlight">Tailwind CSS</span>
     </Fragment>
     <Fragment slot="subtitle">
-        Somos un equipo de programadores expertos en Tailwind, desarrollamos herramientas profesionales con este framework.
+      Nuestro equipo de programación es experto en desarrollar experiencias web intuitivas y optimizadas para cada proyecto.
     </Fragment>
   </Hero>
 
