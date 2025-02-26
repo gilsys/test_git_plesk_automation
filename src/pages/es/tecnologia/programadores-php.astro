@@ -23,7 +23,7 @@ const metadata = {
   <!-- Hero Section -->
   <Hero
     tagline="Somos una empresa con más de 20 años de experiencia programando en PHP."
-    actions={[{ variant: 'primary', text: 'Pressupost gratuït', href: u('contact') }]}
+    actions={[{ variant: 'primary', text: 'Presupuesto gratuito', href: u('contact') }]}
     backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/geometric-2/4.jpg' }}
   >
     <Fragment slot="title">
@@ -106,6 +106,7 @@ const metadata = {
   </Features3>
 
   <Content
+    isReversed
     title="Migración y modernización de aplicaciones en PHP"
     image={{
       src: '~/assets/images/estudio-integracion-ia.jpg',
@@ -125,7 +126,6 @@ const metadata = {
   </Content>
 
   <Content
-    isReversed
     title="Mantenimiento y evolución continua"
     image={{
       src: '~/assets/images/estudio-integracion-ia.jpg',
@@ -145,16 +145,16 @@ const metadata = {
   </Content>
 
   <CallToAction
-    backgroundImage={{ src: '~/assets/images/dots/24.jpg', alt: 'Fons abstracte' }}
+    backgroundImage={{ src: '~/assets/images/dots/24.jpg', alt: 'Fondo abstracto' }}
     actions={[
       {
         variant: 'primary',
-        text: 'Pressupost gratuït',
+        text: 'Presupuesto gratuito',
         href: u('contact'),
       },
       {
         variant: 'primary',
-        text: 'Trucar',
+        text: 'Llamar',
         href: 'tel:+34665331271',
       },
     ]}

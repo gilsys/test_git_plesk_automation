@@ -24,11 +24,14 @@ const metadata = {
   <!-- Hero Section -->
   <Hero
     tagline="Diseño de bases de datos Oracle y programación PL/SQL desde la provincia de Barcelona"
-    actions={[{ variant: 'primary', text: 'Pressupost gratuït', href: u('contact') }]}
+    actions={[{ variant: 'primary', text: 'Presupuesto gratuito', href: u('contact') }]}
     backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/geometric-2/4.jpg' }}
   >
     <Fragment slot="title">
         Desarrollo con <span class="text-accent highlight">Oracle Database</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      [TO DO]
     </Fragment>
   </Hero>
 
@@ -104,6 +107,7 @@ const metadata = {
   </Features3>
 
   <Content
+    isReversed
     title="Nuestra experiencia con Oracle en Gilsys"
     image={{
       src: '~/assets/images/estudio-integracion-ia.jpg',
@@ -119,7 +123,6 @@ const metadata = {
   </Content>
 
   <Content
-    isReversed
     title="Desarrollo y optimización con PL/SQL"
     image={{
       src: '~/assets/images/estudio-integracion-ia.jpg',
@@ -141,48 +144,48 @@ const metadata = {
   title="Nuestros servicios incluyen:"
   items={[
     {
-      list: ['Desarrollo de procedimientos almacenados y funciones en PL/SQL.'],
+      description: 'Desarrollo de procedimientos almacenados y funciones en PL/SQL.',
       icon: 'tabler:code',
     },
     {
-      list: ['Optimización de consultas SQL y mejora del rendimiento.'],
+       description:'Optimización de consultas SQL y mejora del rendimiento.',
       icon: 'tabler:rocket',
     },
     {
-      list: ['Diseño de bases de datos con modelado relacional en Oracle.'],
+       description:'Diseño de bases de datos con modelado relacional en Oracle',
       icon: 'tabler:table',
     },
     {
-      list: ['Migración de bases de datos entre versiones y plataformas.'],
+      description:'Migración de bases de datos entre versiones y plataformas.',
       icon: 'tabler:switch-vertical',
     },
     {
-      list: ['Auditoría de seguridad y control de acceso.'],
+       description:'Auditoría de seguridad y control de acceso.',
       icon: 'tabler:shield-check',
     },
     {
-      list: ['Estrategias de respaldo y recuperación de datos.'],
+       description:'Estrategias de respaldo y recuperación de datos.',
       icon: 'tabler:cloud-download',
     },
   ]}
 />
 
 
-  <CallToAction
-    backgroundImage={{ src: '~/assets/images/dots/24.jpg', alt: 'Fons abstracte' }}
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Pressupost gratuït',
-        href: u('contact'),
-      },
-      {
-        variant: 'primary',
-        text: 'Trucar',
-        href: 'tel:+34665331271',
-      },
-    ]}
-  >
+<CallToAction
+backgroundImage={{ src: '~/assets/images/dots/24.jpg', alt: 'Fondo abstracto' }}
+actions={[
+  {
+    variant: 'primary',
+    text: 'Presupuesto gratuito',
+    href: u('contact'),
+  },
+  {
+    variant: 'primary',
+    text: 'Llamar',
+    href: 'tel:+34665331271',
+  },
+]}
+>
     <Fragment slot="title"
       >Deja de buscar, <span class="custom-gradient">somos especialistas en Oracle</span></Fragment
     >

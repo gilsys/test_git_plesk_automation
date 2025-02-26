@@ -23,7 +23,7 @@ const metadata = {
   <!-- Hero Section -->
   <Hero
     tagline="Nos encontrarás cerca de Vic (Osona), en la provincia de Barcelona."
-    actions={[{ variant: 'primary', text: 'Pressupost gratuït', href: u('contact') }]}
+    actions={[{ variant: 'primary', text: 'Presupuesto gratuito', href: u('contact') }]}
     backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/geometric-2/4.jpg' }}
   >
     <Fragment slot="title">
@@ -82,38 +82,36 @@ const metadata = {
     items={[
       {
         title: 'Aplicaciones personalizadas:',
-        list: ['Adaptamos cada solución a las necesidades específicas de tu negocio.'],
+        description: 'Adaptamos cada solución a las necesidades específicas de tu negocio.',
         icon: 'tabler:adjustments',
       },
       {
         title: 'Desarrollo multiplataforma:',
-        list: [
+        description:
           'Una sola aplicación compatible con iOS y Android.',
-        ],
         icon: 'tabler:devices',
       },
       {
         title: 'Óptimo rendimiento: ',
-        list: [
+        description: 
           'Aplicaciones adaptables a nuevas funcionalidades sin reescribir grandes porciones de código.',
-        ],
         icon: 'tabler:rocket',
       },
       {
         title: 'Comunidad y soporte: ',
-        list: [
+        description: 
           'Respaldado por una comunidad global y actualizaciones constantes.',
-        ],
         icon: 'tabler:users',
       },
     ]}
-  />
-
+  >
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-lightgray"></div>
     </Fragment>
+  </Features>
 
   <Content
+    isReversed
     title="Migración y optimización de aplicaciones a React Native"
     image={{
       src: '~/assets/images/estudio-integracion-ia.jpg',
@@ -126,13 +124,9 @@ const metadata = {
         Optimizamos el rendimiento y la experiencia de usuario, asegurando una integración sin complicaciones con los sistemas existentes.
       </p>
     </Fragment>
-    <Fragment slot="bg">
-        <div class="absolute inset-0 bg-lightgray"></div>
-      </Fragment>
   </Content>
 
   <Content
-    isReversed
     title="Mantenimiento y evolución de aplicaciones React Native"
     image={{
       src: '~/assets/images/estudio-integracion-ia.jpg',
@@ -145,25 +139,28 @@ const metadata = {
         Implementamos mejoras técnicas, nuevas funcionalidades y aseguramos la compatibilidad con las versiones más recientes de iOS y Android.
       </p>
     </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
   </Content>
 
   <CallToAction
-    backgroundImage={{ src: '~/assets/images/dots/24.jpg', alt: 'Fons abstracte' }}
+    backgroundImage={{ src: '~/assets/images/dots/24.jpg', alt: 'Fondo abstracto' }}
     actions={[
       {
         variant: 'primary',
-        text: 'Pressupost gratuït',
+        text: 'Presupuesto gratuito',
         href: u('contact'),
       },
       {
         variant: 'primary',
-        text: 'Trucar',
+        text: 'Llamar',
         href: 'tel:+34665331271',
       },
     ]}
   >
     <Fragment slot="title"
-      >Deixa de buscar, <span class="custom-gradient">som especialistes en React Native</span></Fragment
+      >Deja de buscar, <span class="custom-gradient">somos especialistas en React Native</span></Fragment
     >
     <Fragment slot="subtitle"
       >[TO DO] PHP continu empreses que estan integrant <strong>intel·ligència artificial</strong> en els seus processos seran les que millor

@@ -24,7 +24,7 @@ const metadata = {
   <!-- Hero Section -->
   <Hero
     tagline="Desarrollo ágil y eficiente con Slim Framework en Osona, provincia de Barcelona"
-    actions={[{ variant: 'primary', text: 'Pressupost gratuït', href: u('contact') }]}
+    actions={[{ variant: 'primary', text: 'Presupuesto gratuito', href: u('contact') }]}
     backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/geometric-2/4.jpg' }}
   >
     <Fragment slot="title">
@@ -102,6 +102,7 @@ const metadata = {
   </Features3>
 
   <Content
+    isReversed
     title="Experiencia avanzada con Slim Framework en Gilsys"
     image={{
       src: '~/assets/images/estudio-integracion-ia.jpg',
@@ -121,7 +122,6 @@ const metadata = {
   </Content>
 
   <Content
-    isReversed
     title="Mantenimiento y evolución con Slim Framework"
     image={{
       src: '~/assets/images/estudio-integracion-ia.jpg',
@@ -144,41 +144,35 @@ const metadata = {
     title="Ofrecemos:"
     items={[
       {
-        list: ['Optimización de código y mejoras de rendimiento.'],
+        description: 'Optimización de código y mejoras de rendimiento.',
         icon: 'tabler:check',
       },
       {
-        list: [
-          'Mantenimiento correctivo y evolutivo para aplicaciones basadas en Slim.',
-        ],
+         description: 'Mantenimiento correctivo y evolutivo para aplicaciones basadas en Slim.',
         icon: 'tabler:check',
       },
       {
-        list: [
-          'Actualización de proyectos antiguos a versiones más recientes del framework.',
-        ],
+        description: 'Actualización de proyectos antiguos a versiones más recientes del framework.',
         icon: 'tabler:check',
       },
       {
-        list: [
-          'Integración con bases de datos y servicios externos.',
-        ],
+         description: 'Integración con bases de datos y servicios externos.',
         icon: 'tabler:check',
       },
     ]}  
     />
 
-  <CallToAction
-    backgroundImage={{ src: '~/assets/images/dots/24.jpg', alt: 'Fons abstracte' }}
+    <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/24.jpg', alt: 'Fondo abstracto' }}
     actions={[
       {
         variant: 'primary',
-        text: 'Pressupost gratuït',
+        text: 'Presupuesto gratuito',
         href: u('contact'),
       },
       {
         variant: 'primary',
-        text: 'Trucar',
+        text: 'Llamar',
         href: 'tel:+34665331271',
       },
     ]}
