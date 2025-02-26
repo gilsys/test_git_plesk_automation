@@ -14,29 +14,30 @@ import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 const u = useRoutes(getLangFromUrl(Astro.url));
 
 const metadata = {
-  title: 'Empresa de programación a medida con React Native | +20 anys',
-  description: `Somos un equipo de programadores expertos en React Native, desarrollamos herramientas profesionales con este lenguaje de programación. ¡Presupuesto gratuito! Estamos en Osona, Barcelona.`,
+  title: 'Empresa de desarrollo de aplicaciones con React Native',
+  description: `Somos expertos en programación de apps para móviles multiplataforma a medida con React Native, creando aplicaciones híbridas para Android e iOS`,
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- Hero Section -->
   <Hero
-    tagline="Nos encontrarás cerca de Vic (Osona), en la provincia de Barcelona."
+    tagline="Nos encontrarás en Osona, en la provincia de Barcelona."
     actions={[{ variant: 'primary', text: 'Presupuesto gratuito', href: u('contact') }]}
     backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/geometric-2/4.jpg' }}
   >
     <Fragment slot="title">
-      Programamos amb <span class="text-accent highlight">React Native</span>
+      Empresa de desarrollo de aplicaciones con <span class="text-accent highlight">React Native</span>
     </Fragment>
     <Fragment slot="subtitle">
-        Servicios de desarrollo React Native desde Osona, provincia de Barcelona.
+      Programamos apps híbridas para móviles (iOS y Android), completamente a medida programando con React Native.
     </Fragment>
   </Hero>
 
   <Content
-  subtitle='[TO DO]'
-    title="¿Buscas expertos en <span class='custom-gradient'>React Native</span> para el desarrollo de aplicaciones móviles en la provincia de Barcelona?"
+    subtitle="[TO DO]"
+    title="¿Buscas expertos en <span class='custom-gradient'>React Native</span> en la provincia de Barcelona?"
+    subtitle="En Gilsys podemos desarrollar la aplicación móvil que necesitas."
     image={{
       src: '~/assets/images/estudio-integracion-ia.jpg',
       alt: 'Estudi per integrar intel·ligència artificial',
@@ -44,31 +45,46 @@ const metadata = {
   >
     <Fragment slot="content">
       <p class="text-muted">
-        Nuestro equipo de desarrolladores altamente capacitados se especializa en la <strong>creación de aplicaciones móviles personalizadas, </strong>
-        escalables y de alto rendimiento utilizando React Native. 
+        Nuestro equipo de desarrolladores se especializa en la <strong
+          >creación de aplicaciones móviles personalizadas,
+        </strong>
+        escalables y de alto rendimiento utilizando React Native.
       </p>
       <p class="text-muted mt-4">
-        Diseñamos soluciones de  <a
-        href={u('development')}
-        class="text-accent"
-        title="Programació de software a mida amb React Native">software a medida</a
-      >, 
-        para empresas y emprendedores, 
-        ofreciendo aplicaciones innovadoras para clientes sin limitaciones geográficas.
+        Una solución híbrida, multiplataforma, que permite disponer de un código único que una vez compilado puede
+        distribuirse para ser ejecutado en dispositivos iOS y Android.
+      </p>
+      <p class="text-center">
+        <a
+          title="Servicios de programación de apliciones para móviles"
+          href="#ROGER"
+          class="btn-primary mt-12 mb-12 w-auto">Explora nuestros servicios de desarrollo de apps</a>
       </p>
     </Fragment>
   </Content>
 
   <Content
-    title="Desarrollo de aplicaciones móviles con React Native"
+    isReversed
+    title="React Native es el Framework líder para desarrollar aplicaciones híbridas"
+    subtitle="Su capacidad para crear apps nativas para iOS y Android con un único código, reduce costes y tiempo de desarrollo sin sacrificar rendimiento"
     classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}
   >
     <Fragment slot="preContent">
       <p class="text-muted">
-        Ofrecemos servicios de  <strong>desarrollo de aplicaciones móviles en React Native</strong>  , 
-        proporcionando soluciones robustas y adaptadas a las necesidades de cada cliente.
-        React Native permite la creación de aplicaciones <strong>nativas para iOS y Android</strong>  desde un único código base,
-        reduciendo costes y tiempos de desarrollo comparado con aplicaciones nativas, sin comprometer el rendimiento.
+        React Native es un framework de código abierto desarrollado por Facebook que permite construir aplicaciones
+        móviles nativas utilizando JavaScript y React.
+      </p>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="text-muted">
+        A diferencia de otras soluciones híbridas o multiplataforma, React Native no crea aplicaciones web <em>disfrazadas</em>
+        de apps nativas, sino que genera interfaces de usuario realmente nativas, ofreciendo una experiencia de usuario
+        (UX) fluida y un rendimiento comparable al de las apps desarrolladas con lenguajes nativos como Swift o Java.
+      </p>
+      <p class="text-center">
+        <a title="Página oficial de React Native" href="#ROGER" class="btn-primary mt-12 mb-12 w-auto"
+          >Conoce más sobre React Native</a
+        >
       </p>
     </Fragment>
     <Fragment slot="bg">
@@ -76,73 +92,110 @@ const metadata = {
     </Fragment>
   </Content>
 
-  
   <Features
     title="Beneficios de elegir React Native para tu proyecto"
     items={[
       {
-        title: 'Aplicaciones personalizadas:',
+        title: 'Aplicaciones personalizadas',
         description: 'Adaptamos cada solución a las necesidades específicas de tu negocio.',
         icon: 'tabler:adjustments',
       },
       {
-        title: 'Desarrollo multiplataforma:',
-        description:
-          'Una sola aplicación compatible con iOS y Android.',
+        title: 'Desarrollo multiplataforma',
+        description: 'Una sola aplicación compatible con iOS y Android.',
         icon: 'tabler:devices',
       },
       {
-        title: 'Óptimo rendimiento: ',
-        description: 
-          'Aplicaciones adaptables a nuevas funcionalidades sin reescribir grandes porciones de código.',
+        title: 'Ampliable y evolucionable',
+        description: 'Aplicaciones adaptables a nuevas funcionalidades sin reescribir grandes porciones de código.',
         icon: 'tabler:rocket',
       },
       {
-        title: 'Comunidad y soporte: ',
-        description: 
-          'Respaldado por una comunidad global y actualizaciones constantes.',
+        title: 'Comunidad y soporte',
+        description: 'Respaldado por una comunidad global y actualizaciones constantes.',
         icon: 'tabler:users',
+      },
+      {
+        title: 'Rendimiento cercano al nativo',
+        description: 'Experiencia de usuario fluida y natural.',
+        icon: 'tabler:bolt', // Icono para rendimiento
+      },
+      {
+        title: 'Flexibilidad y escalabilidad',
+        description: 'Adaptable a proyectos de cualquier tamaño.',
+        icon: 'tabler:arrows-maximize', // Icono para escalabilidad
+      },
+    ]}
+  />
+
+  <Features2
+    title="Servicios de React Native ofrecidos por Gilsys"
+    subtitle="Ofrecemos un amplio abanico de servicios de React Native para llevar tu aplicación móvil al siguiente nivel"
+    image={{
+      src: '~/assets/images/estudio-integracion-ia.jpg',
+      alt: 'Desarrollo y optimización de aplicaciones React Native',
+    }}
+    items={[
+      {
+        title: 'Desarrollo desde cero',
+        description:
+          'Creamos aplicaciones móviles multiplataforma nativas para iOS y Android, adaptadas a tus necesidades y objetivos.',
+        icon: 'tabler:device-mobile',
+      },
+      {
+        title: 'Migración de aplicaciones',
+        description:
+          'Trasladamos tu aplicación existente a React Native, optimizando su rendimiento y reduciendo costes de mantenimiento.',
+        icon: 'tabler:arrows-transfer-down',
+      },
+      {
+        title: 'Mantenimiento y soporte',
+        description:
+          'Actualizamos, mejoramos y solucionamos problemas en tu aplicación React Native, asegurando su compatibilidad y rendimiento a largo plazo.',
+        icon: 'tabler:tools',
+      },
+      {
+        title: 'Funcionalidades personalizadas',
+        description:
+          'Implementamos nuevas funcionalidades y características específicas para tu aplicación, mejorando la experiencia del usuario.',
+        icon: 'tabler:puzzle',
+      },
+      {
+        title: 'Integración con APIs',
+        description:
+          'Conectamos tu aplicación React Native con otras plataformas y servicios para ampliar sus capacidades.',
+        icon: 'tabler:plug',
+      },
+      {
+        title: 'Optimización de rendimiento',
+        description:
+          'Mejoramos la velocidad y eficiencia de tu aplicación React Native, garantizando una experiencia de usuario fluida y satisfactoria.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Diseño UI/UX',
+        description:
+          'Creamos interfaces atractivas y fáciles de usar, que mejoran la interacción del usuario con tu aplicación.',
+        icon: 'tabler:color-swatch',
+      },
+      {
+        title: 'Pruebas y control de calidad',
+        description:
+          'Realizamos pruebas exhaustivas para asegurar la estabilidad, seguridad y funcionalidad de tu aplicación React Native.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Consultoría y asesoramiento',
+        description:
+          'Te guiamos en la toma de decisiones sobre el desarrollo de tu aplicación React Native, ofreciéndote soluciones personalizadas y eficientes.',
+        icon: 'tabler:bulb',
       },
     ]}
   >
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-lightgray"></div>
     </Fragment>
-  </Features>
-
-  <Content
-    isReversed
-    title="Migración y optimización de aplicaciones a React Native"
-    image={{
-      src: '~/assets/images/estudio-integracion-ia.jpg',
-      alt: 'Estudi per integrar intel·ligència artificial',
-    }}
-  >
-    <Fragment slot="content">
-      <p class="text-muted">
-        Si cuentas con una aplicación en otra tecnología y deseas <strong>migrarla a React Native</strong>, garantizamos una transición sin interrupciones. 
-        Optimizamos el rendimiento y la experiencia de usuario, asegurando una integración sin complicaciones con los sistemas existentes.
-      </p>
-    </Fragment>
-  </Content>
-
-  <Content
-    title="Mantenimiento y evolución de aplicaciones React Native"
-    image={{
-      src: '~/assets/images/estudio-integracion-ia.jpg',
-      alt: 'Estudi per integrar intel·ligència artificial',
-    }}
-  >
-    <Fragment slot="content">
-      <p class="text-muted">
-        Si necesitas <strong>actualizar, mejorar o mantener tu aplicación React Native,</strong> nuestro equipo ofrece soporte técnico continuo. 
-        Implementamos mejoras técnicas, nuevas funcionalidades y aseguramos la compatibilidad con las versiones más recientes de iOS y Android.
-      </p>
-    </Fragment>
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-lightgray"></div>
-    </Fragment>
-  </Content>
+  </Features2>
 
   <CallToAction
     backgroundImage={{ src: '~/assets/images/dots/24.jpg', alt: 'Fondo abstracto' }}
@@ -160,11 +213,11 @@ const metadata = {
     ]}
   >
     <Fragment slot="title"
-      >Deja de buscar, <span class="custom-gradient">somos especialistas en React Native</span></Fragment
+      >Si necesitas especialistas en <span class="custom-gradient">React Native</span>, cuenta con Gilsys</Fragment
     >
     <Fragment slot="subtitle"
-      >[TO DO] PHP continu empreses que estan integrant <strong>intel·ligència artificial</strong> en els seus processos seran les que millor
-      preparades estaran en un futur proper.</Fragment
+      >Desde la provincia de Barcelona, implementamos proyectos con React Native para clientes, nacionales e
+      internacionales de cualquier sector profesional.</Fragment
     >
   </CallToAction>
 </Layout>
