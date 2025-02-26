@@ -15,8 +15,8 @@ import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 const u = useRoutes(getLangFromUrl(Astro.url));
 
 const metadata = {
-  title: 'Servicios de desarrollo con MySQL | +20 anys',
-  description: `Somos un equipo de programadores expertos en diseños de bases de datos MySQL. ¡Presupuesto gratuito! Estamos en Osona, Barcelona.`,
+  title: 'Expertos en desarrollo de bases de datos con MySQL',
+  description: `Programamos bases de datos relacionales con MySQL. Diseñamos modelos de datos complejos y optimizados para cada proyecto. ¡Presupuesto gratuito! Desde Osona, Barcelona.`,
 };
 ---
 
@@ -28,15 +28,17 @@ const metadata = {
     backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/geometric-2/4.jpg' }}
   >
     <Fragment slot="title">
-        Servicios de desarrollo <span class="text-accent highlight">MySQL</span>
+      Servicios de desarrollo de bases de datos con <span class="text-accent highlight">MySQL</span>
     </Fragment>
     <Fragment slot="subtitle">
-        Diseño a medida e implementación de soluciones MySQL avanzadas.
+      Diseñamos modelos de datos relacionales para Mysql, específicos para cada proyecto, desde soluciones simples a muy
+      complejas.
     </Fragment>
   </Hero>
 
   <Content
     title="<span class='custom-gradient'>MySQL: </span>La clave para una gestión eficiente de datos"
+    subtitle="Aprovechamos toda la potencia del motor de base de datos más popular del mundo."
     image={{
       src: '~/assets/images/estudio-integracion-ia.jpg',
       alt: 'Estudi per integrar intel·ligència artificial',
@@ -44,23 +46,49 @@ const metadata = {
   >
     <Fragment slot="content">
       <p class="text-muted">
-        En Gilsys, somos especialistas en MySQL y MariaDB, con experiencia desde la versión 3 hasta la actual. 
-        Diseñamos bases de datos SQL relacionales con una estructura lo más flexible posible, 
-        permitiendo adaptarse a cambios de enfoque sin requerir reestructuraciones drásticas, optimizando así la escalabilidad y evolución de cada proyecto.
+        En Gilsys, somos especialistas en <strong>MySQL</strong> y <strong>MariaDB</strong>, con experiencia desde la
+        versión 3 hasta la actual. Diseñamos bases de datos SQL relacionales, preparando una estructura lo más flexible
+        posible, permitiendo adaptarse a cambios de enfoque sin requerir reestructuraciones drásticas, optimizando así
+        la escalabilidad y evolución de cada proyecto.
       </p>
     </Fragment>
   </Content>
 
   <Content
-    title="Eficiencia y optimización en la gestión de datos"
+    title="El motor de base de datos más popular del mundo"
+    subtitle="Con años de trayectoria, MySQL sigue siendo una solución indiscutible en gestión de datos relacionales para muchos proyectos."
     classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}
   >
     <Fragment slot="preContent">
       <p class="text-muted">
-        MySQL es una de las bases de datos relacionales más utilizadas en el mundo. En Gilsys, 
-        aprovechamos todo su potencial para estructurar información de manera eficiente, asegurando integridad referencial, optimización de consultas e índices.
+        MySQL ostenta el título de la base de datos relacional más utilizada globalmente, un liderazgo respaldado por su robustez, versatilidad y comunidad activa. Su popularidad se debe a factores clave:
       </p>
-     
+      <ul class="text-muted list-disc list-inside">
+        <li>
+          <strong>Código abierto y gratuito:</strong> Ideal para proyectos de cualquier escala, desde startups hasta grandes
+          corporaciones.
+        </li>
+        <li>
+          <strong>Rendimiento optimizado:</strong> Capaz de manejar grandes volúmenes de datos y consultas complejas con
+          eficiencia.
+        </li>
+        <li>
+          <strong>Compatibilidad multiplataforma:</strong> Funciona en diversos sistemas operativos, brindando flexibilidad
+          en la implementación.
+        </li>
+        <li>
+          <strong>Ecosistema robusto:</strong> Amplia gama de herramientas y bibliotecas que facilitan el desarrollo y la
+          administración.
+        </li>
+      </ul>
+      <p class="text-muted mt-4">
+        En Gilsys, aprovechamos todo el potencial de MySQL para estructurar información de manera eficiente, asegurando
+        integridad referencial, optimización de consultas e índices, y garantizando la base sólida que tu proyecto
+        necesita.
+      </p>
+      <p class="text-center">
+        <a title="Web oficial de MySQL" href="#ROGER" class="btn-primary mt-12 mb-12 w-auto">Conoce más sobre MySQL</a>
+      </p>
     </Fragment>
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-lightgray"></div>
@@ -68,139 +96,148 @@ const metadata = {
   </Content>
 
   <Features3
-  columns={3}
-  title='Beneficios de usar MySQL en tus proyectos'
-    classes={{ container: 'pt-0 md:pt-0 lg:pt-0' }}
+    columns={3}
+    title="Beneficios de usar MySQL en tus proyectos"
+    subtitle="Desde aplicaciones web hasta soluciones empresariales, MySQL se adapta a tus necesidades con potencia y flexibilidad."
     items={[
       {
+        title: `Estructura consistente`,
         description: `Las bases de datos creadas tienen una estructura bien definida, garantizando consistencia y fiabilidad.`,
         icon: 'tabler:database',
       },
       {
+        title: `Análisis y optimización de consultas`,
         description: `Permite analizar y optimizar consultas SQL, mejorando tiempos de respuesta.`,
         icon: 'tabler:chart-line',
       },
       {
+        title: `Integridad`,
         description: `Ofrece integridad referencial con claves primarias y foráneas, asegurando coherencia en los datos.`,
         icon: 'tabler:key',
       },
       {
-        description: `Alta compatibilidad con la mayoría de herramientas de <strong>Business Intelligence</strong>.`,
+        title: `Compatibilidad`,
+        description: `Alta compatibilidad con la mayoría de herramientas de <a href="#ROGER(link BI)" class="text-accent" title="Herramientas de Business Intelligence para crear informes">Business Intelligence</a>.`,
         icon: 'tabler:chart-pie',
       },
       {
+        title: `Seguridad`,
         description: `Seguridad avanzada y control de acceso, protegiendo la información sensible.`,
         icon: 'tabler:shield-check',
       },
       {
+        title: 'Escalabilidad',
         description: `Escalabilidad comprobada, adaptándose a proyectos de cualquier tamaño.`,
         icon: 'tabler:arrows-maximize',
       },
       {
-        description: `Almacenamiento de datos flexible, utilizando el formato JSON, que permite estructuras más flexibles dentro de un entorno relacional.`,
+        title: 'Campos flexibles',
+        description: `Almacenamiento de datos flexible, permitiendo usar el <strong>formato JSON</strong>, que almacena estructuras más flexibles dentro de un entorno relacional.`,
         icon: 'tabler:json',
       },
       {
-        description: `Capacidad de cifrado de campos, proporcionando mayor seguridad en la gestión de datos sensibles.`,
+        title: 'Cifrado',
+        description: `Capacidad de <strong>cifrado de campos</strong>, proporcionando mayor seguridad en la gestión de datos sensibles.`,
         icon: 'tabler:lock',
       },
       {
-        description: `Soporte para TDE (Transparent Data Encryption) en MariaDB, permitiendo la encriptación de datos en reposo para mayor protección de información de sectores sensibles.`,
+        title: 'Encriptación',
+        description: `<strong>Soporte para TDE</strong> (Transparent Data Encryption) en MariaDB, permitiendo la encriptación de datos en reposo para mayor protección de información de sectores sensibles.`,
         icon: 'tabler:shield-lock',
       },
     ]}
-  >
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-lightgray"></div>
-    </Fragment>
-  </Features3>
+  />
 
   <Content
-    title="Nuestra experiencia con MySQL en Gilsys"
-    image={{
-      src: '~/assets/images/estudio-integracion-ia.jpg',
-      alt: 'Estudi per integrar intel·ligència artificial',
-    }}
-  >
-    <Fragment slot="content">
+  isReversed
+  title="MySQL de alto rendimiento: La experiencia Gilsys al servicio de tus datos"
+  subtitle="En Gilsys, potenciamos tus proyectos con la robustez de MySQL y MariaDB, soluciones confiables para datos estructurados."
+  image={{
+      src: '~/assets/images/mysql-escenario.jpg',
+      alt: 'Escenario de MySQL y modelo de datos',
+  }}
+>
+  <Fragment slot="preContent">
       <p class="text-muted">
-        Desde MySQL 3 hasta la versión más reciente, hemos trabajado en diseño, modelado y optimización de bases de datos para proyectos de distinta escala.
-         Nuestra experiencia nos permite adaptar cada base de datos a las necesidades específicas de nuestros clientes, 
-         asegurando estructuras eficientes y estables para su uso en producción.
-      </p>
-      <p class="text-muted mt-4"> Aplicamos buenas prácticas en el diseño del modelo de datos y en la creación de las consultas SQL, 
-        evitando cuellos de botella en rendimiento y ofreciendo una gestión de datos más <strong>rápida y fiable.</strong></p>
-    </Fragment>
-  </Content>
-
-  <Content
-    isReversed
-    title="Modelado y optimización de bases de datos MySQL"
-    image={{
-      src: '~/assets/images/estudio-integracion-ia.jpg',
-      alt: 'Estudi per integrar intel·ligència artificial',
-    }}
-  >
-    <Fragment slot="content">
+          Con más de dos décadas de experiencia, en Gilsys nos especializamos en el diseño, modelado y optimización de bases de datos MySQL para proyectos de toda envergadura.
+      </p>      
+  </Fragment>
+  <Fragment slot="content">
       <p class="text-muted">
-        La estructuración correcta de una base de datos no es fácil, y es una clave fundamental para el rendimiento y estabilidad de cualquier <strong>herramienta, web, o aplicación.</strong> 
-      </p>
-    </Fragment>
-    <Fragment slot="bg">
+          Nuestra amplia trayectoria nos permite adaptar meticulosamente cada base de datos a las necesidades únicas de nuestros clientes, garantizando estructuras eficientes, escalables y robustas, preparadas para entornos de producción exigentes.
+      </p>      
+  </Fragment>
+  <Fragment slot="postContent">
+    <p class="text-muted mt-4">
+        Implementamos las mejores prácticas en el diseño de modelos de datos y la creación de consultas SQL, priorizando la optimización del rendimiento para evitar cuellos de botella y asegurar una gestión de datos ágil y fiable. Al elegir Gilsys, inviertes en una base de datos que no solo soporta las demandas actuales de tu proyecto, sino que también se anticipa a su crecimiento futuro.
+    </p>
+</Fragment>
+  <Fragment slot="bg">
       <div class="absolute inset-0 bg-lightgray"></div>
-    </Fragment>
-  </Content>
+  </Fragment>
+</Content>
 
-  
   <Features
-  title="Nuestros servicios incluyen:"
-  items={[
-    {
-      list: ['Diseño y modelado de bases de datos MySQL/MariaDB.'],
-      icon: 'tabler:database',
-    },
-    {
-      list: ['Optimización de consultas y mejora del rendimiento de índices.'],
-      icon: 'tabler:rocket',
-    },
-    {
-      list: ['Migración de bases de datos entre versiones y plataformas.'],
-      icon: 'tabler:world-upload',
-    },
-    {
-      list: ['Seguridad y control de accesos.'],
-      icon: 'tabler:shield-lock',
-    },
-    {
-      list: ['Implementación de estrategias de backup y recuperación de datos.'],
-      icon: 'tabler:cloud-upload',
-    },
-  ]}
-/>
-
+    title="Servicios de diseño de bases de datos con MySQL"
+    subtitle="La gestión experta de tus datos es nuestra prioridad, entendemos que son el cimiento de cualquier solución tecnológica sólida."
+    items={[
+      {
+        title: 'Diseño y modelado de bases de datos MySQL/MariaDB',
+        description: 'Creamos estructuras de bases de datos relacionales eficientes y optimizadas para cada proyecto.',
+        icon: 'tabler:database',
+      },
+      {
+        title: 'Optimización de consultas y mejora del rendimiento de índices',
+        description:
+          'Aceleramos tus operaciones, optimizando consultas y ajustando índices para tiempos de respuesta más rápidos.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Migración de bases de datos entre versiones y plataformas',
+        description:
+          'Facilitamos la transición de tus datos, permitiendo una migración segura y sin pérdida de información.',
+        icon: 'tabler:world-upload',
+      },
+      {
+        title: 'Seguridad y control de accesos',
+        description: 'Protegemos tu información con medidas de seguridad avanzadas y un control de acceso granular.',
+        icon: 'tabler:shield-lock',
+      },
+      {
+        title: 'Implementación de estrategias de backup y recuperación de datos',
+        description:
+          'Aseguramos la integridad de tus datos con estrategias de respaldo y recuperación confiables y eficientes.',
+        icon: 'tabler:cloud-upload',
+      },
+      {
+        title: 'Encriptación de datos y comunicaciones',
+        description:
+          'Implementamos soluciones de cifrado robustas para proteger tus datos sensibles en reposo y en tránsito.',
+        icon: 'tabler:lock-access',
+      },
+    ]}
+  />
 
   <CallToAction
     backgroundImage={{ src: '~/assets/images/dots/24.jpg', alt: 'Fons abstracte' }}
     actions={[
       {
         variant: 'primary',
-        text: 'Pressupost gratuït',
+        text: 'Presupuesto gratuito',
         href: u('contact'),
       },
       {
         variant: 'primary',
-        text: 'Trucar',
+        text: 'Llamar',
         href: 'tel:+34665331271',
       },
     ]}
   >
     <Fragment slot="title"
-      >Deja de buscar, <span class="custom-gradient">somos especialistas en MySQL</span></Fragment
+      >Deja tus datos en manos de expertos, somos <span class="custom-gradient">especialistas en MySQL</span></Fragment
     >
     <Fragment slot="subtitle"
-      >[TODO] PHP continu empreses que estan integrant <strong>intel·ligència artificial</strong> en els seus processos seran les que millor
-      preparades estaran en un futur proper.</Fragment
+      >La gestión correcta de datos es el primer paso hacia la implementación exitosa de soluciones tecnológicas.</Fragment
     >
   </CallToAction>
 </Layout>
