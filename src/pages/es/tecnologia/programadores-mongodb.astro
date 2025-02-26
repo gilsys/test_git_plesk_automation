@@ -1,14 +1,9 @@
 ---
-import { Icon } from 'astro-icon/components';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Content from '~/components/widgets/Content.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
-import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Features3 from '~/components/widgets/Features3.astro';
-import FourBlocks from '~/components/widgets/FourBlocks.astro';
 import Hero from '~/components/widgets/Hero.astro';
-import Note from '~/components/widgets/Note.astro';
 import Layout from '~/layouts/PageLayout.astro';
 import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 
@@ -23,7 +18,7 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- Hero Section -->
   <Hero
-    tagline="Bases de datos no relacionales, priorizando la máxima eficiencia"
+    tagline="Bases de datos no relacionales: priorizando la máxima eficiencia"
     actions={[{ variant: 'primary', text: 'Presupuesto gratuito', href: u('contact') }]}
     backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/geometric-2/4.jpg' }}
   >
@@ -55,7 +50,7 @@ const metadata = {
   </Content>
 
   <Content
-    title="Gestión flexible y escalable para datos dinámicos y distribuidos."
+    title="Gestión flexible y escalable de datos dinámicos y distribuidos."
     classes={{ container: 'pb-2 md:pb-2 lg:pb-2' }}
   >
     <Fragment slot="preContent">
@@ -95,7 +90,7 @@ const metadata = {
         icon: 'tabler:search',
       },
       {
-        description: `Alta disponibilidad y replicación automática, minimizando riesgos de pérdida de datos.`,
+        description: `Alta disponibilidad y replicación automática, minimizando el riesgo de pérdida de datos.`,
         icon: 'tabler:refresh',
       },
       {
@@ -114,7 +109,7 @@ const metadata = {
   <Features2
   columns={2}
   title="Casos en los que MongoDB es la mejor opción"
-  subtitle='MongoDB es ideal para aplicaciones que requieren almacenar una gran cantidad de datos no relacionados, por ejemplo:'
+  subtitle='MongoDB es ideal para aplicaciones que requieren almacenar grandes volúmenes de datos no relacionados, por ejemplo:'
   items={[
     {
       title: 'Aplicaciones con gran cantidad de contenido',
@@ -146,7 +141,7 @@ const metadata = {
 
   <Content
     isReversed
-    title="¿Cuando usamos MongoDB en Gilsys?"
+    title="¿Cuándo usamos MongoDB en Gilsys?"
     image={{
       src: '~/assets/images/estudio-integracion-ia.jpg',
       alt: 'Estudi per integrar intel·ligència artificial',
@@ -155,7 +150,7 @@ const metadata = {
     <Fragment slot="content">
       <p class="text-muted">
         En Gilsys, hemos implementado <strong>MongoDB</strong> en diferentes proyectos para mejorar el rendimiento y la escalabilidad de las aplicaciones, siempre que se requiera una estructura de datos no relacionada.
-        Las bases de datos NoSQL están optimizadas para almacenar, consultar y analizar una <strong>gran cantidad de datos</strong> con la máxima eficiencia.
+        Las bases de datos NoSQL están optimizadas para almacenar, consultar y analizar <strong>grandes volúmenes de datos</strong> con máxima eficiencia.
       </p>
       <p class="text-muted mt-4">
         Gracias a nuestro conocimiento en arquitecturas no relacionales, ayudamos a empresas a migrar desde bases de datos relacionales tradicionales hacia soluciones más flexibles y adaptables a las necesidades actuales.
@@ -190,7 +185,8 @@ const metadata = {
       >Confía en Gilsys para implementar bases de datos con <span class="custom-gradient">MongoDB</span></Fragment
     >
     <Fragment slot="subtitle"
-      >Expertos en NoSQL y SQL, te guiaremos para elegir la mejor solución. Descubre la mejor forma de almacenar tus datos.</Fragment
+      >Somos expertos en NoSQL y SQL, y te guiaremos para elegir la mejor solución.
+      </Fragment
     >
   </CallToAction>
 </Layout>

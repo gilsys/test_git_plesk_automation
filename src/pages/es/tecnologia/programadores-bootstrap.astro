@@ -1,14 +1,8 @@
 ---
-import { Icon } from 'astro-icon/components';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Content from '~/components/widgets/Content.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
-import Features from '~/components/widgets/Features.astro';
-import Features2 from '~/components/widgets/Features2.astro';
 import Features3 from '~/components/widgets/Features3.astro';
-import FourBlocks from '~/components/widgets/FourBlocks.astro';
 import Hero from '~/components/widgets/Hero.astro';
-import Note from '~/components/widgets/Note.astro';
 import Layout from '~/layouts/PageLayout.astro';
 import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 
@@ -23,7 +17,7 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- Hero Section -->
   <Hero
-    tagline="Ún único código, múltiples formatos de presentación."
+    tagline="Un único código, múltiples formatos de presentación."
     actions={[{ variant: 'primary', text: 'Presupuesto gratuito', href: u('contact') }]}
     backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/geometric-2/4.jpg' }}
   >
@@ -31,7 +25,7 @@ const metadata = {
       Desarrollo de interfaces responsive con <span class="text-accent highlight">Bootstrap</span>
     </Fragment>
     <Fragment slot="subtitle">
-      Disponemos de un equipo de programadores expertos en Bootstrap, preparados para crear herramientas profesionales
+      Contamos con un equipo de programadores expertos en Bootstrap, listos para desarrollar herramientas profesionales
       con este framework.
     </Fragment>
   </Hero>
@@ -50,8 +44,8 @@ const metadata = {
         aplicaciones web intuitivas y adaptables a cualquier dispositivo.
       </p>
       <p class="text-muted mt-4">
-        Su flexibilidad lo hace ideal tanto para frontends dinámicos como para backends con maquetación responsive,
-        asegurando una experiencia fluida y accesible para cualquier usuario.
+        Su flexibilidad lo hace ideal para frontends dinámicos y backends con maquetación responsive, garantizando una
+        experiencia fluida y accesible para todos los usuarios."
       </p>
     </Fragment>
   </Content>
@@ -67,8 +61,7 @@ const metadata = {
   >
     <Fragment slot="content">
       <p class="text-muted">
-        Bootstrap proporciona una base sólida para la creación de interfaces ordenadas y profesionales sin necesidad de
-        escribir código CSS desde cero. Su sistema de cuadrícula flexible, componentes predefinidos y enfoque
+        Bootstrap ofrece una base sólida para diseñar interfaces ordenadas y profesionales sin necesidad de escribir código CSS desde cero. Su sistema de cuadrícula flexible, componentes predefinidos y enfoque
         mobile-first nos permiten acelerar el proceso de desarrollo sin comprometer la personalización.
       </p>
     </Fragment>
@@ -76,51 +69,60 @@ const metadata = {
       <div class="absolute inset-0 bg-lightgray"></div>
     </Fragment>
   </Content>
-
   <Features3
-    title="Beneficios de usar Bootstrap en tu proyecto"
-    items={[
-      {
-        description: `Diseño responsive nativo, facilitando la adaptación en todos los dispositivos.`,
-        icon: 'tabler:devices',
-      },
-      {
-        description: `Ideal para frontends y backends con maquetación responsive, facilitando la organización de información y visualización de datos.`,
-        icon: 'tabler:list',
-      },
-      {
-        description: `Amplia colección de componentes, listas para su implementación inmediata.`,
-        icon: 'tabler:package',
-      },
-      {
-        description: `Sistema de cuadrícula flexible, adaptándose a cualquier estructura visual.`,
-        icon: 'tabler:layout-board',
-      },
-      {
-        description: `Compatibilidad total con todos los navegadores modernos.`,
-        icon: 'tabler:world',
-      },
-      {
-        description: `Ecosistema robusto, con una comunidad activa y actualizaciones constantes.`,
-        icon: 'tabler:users',
-      },
-      {
-        description: `Personalización avanzada, permitiendo modificar variables y estilos según las necesidades del proyecto.`,
-        icon: 'tabler:adjustments-horizontal',
-      },
-      {
-        description: `Rápido prototipado y desarrollo, acelerando el tiempo de lanzamiento al mercado.`,
-        icon: 'tabler:rocket',
-      },
-      {
-        description: `Documentación extensa y clara, facilitando el aprendizaje y la resolución de problemas.`,
-        icon: 'tabler:book',
-      },
-    ]}
-  />
+  title="Beneficios de usar Bootstrap en tu proyecto"
+  items={[
+    {
+      title: "Diseño adaptable en cualquier pantalla",
+      description: `Bootstrap garantiza que tu interfaz se vea bien en cualquier dispositivo sin esfuerzo adicional.`,
+      icon: 'tabler:screen-share',
+    },
+    {
+      title: "Estructura optimizada para el desarrollo",
+      description: `Organiza la información y el contenido de manera eficiente, facilitando la maquetación y el mantenimiento.`,
+      icon: 'tabler:layout-grid',
+    },
+    {
+      title: "Componentes listos para producción",
+      description: `Incluye botones, formularios, alertas y más, reduciendo el tiempo de desarrollo sin sacrificar personalización.`,
+      icon: 'tabler:components',
+    },
+    {
+      title: "Sistema de cuadrícula flexible",
+      description: `Permite crear diseños fluidos y bien estructurados, ajustándose dinámicamente a cada necesidad del proyecto.`,
+      icon: 'tabler:squares-diagonal',
+    },
+    {
+      title: "Compatibilidad con todos los navegadores",
+      description: `Funciona sin problemas en Chrome, Firefox, Edge, Safari y otros, asegurando una experiencia homogénea para los usuarios.`,
+      icon: 'tabler:browser-check',
+    },
+    {
+      title: "Comunidad y ecosistema en constante evolución",
+      description: `Miles de desarrolladores contribuyen con mejoras, plugins y soluciones, haciendo de Bootstrap una opción sólida y actualizada.`,
+      icon: 'tabler:users-group',
+    },
+    {
+      title: "Personalización avanzada sin esfuerzo",
+      description: `Ajusta estilos, colores y variables con facilidad para que el diseño se adapte a la identidad de tu proyecto.`,
+      icon: 'tabler:settings',
+    },
+    {
+      title: "Acelera el tiempo de desarrollo",
+      description: `Reduce la curva de aprendizaje y lanza proyectos más rápido con sus herramientas y utilidades integradas.`,
+      icon: 'tabler:bolt',
+    },
+    {
+      title: "Documentación detallada y accesible",
+      description: `Encuentra ejemplos prácticos y guías claras para implementar cualquier funcionalidad sin complicaciones.`,
+      icon: 'tabler:manual-gearbox',
+    },
+  ]}
+/>
+
 
   <Content
-    title="En Gilsys, conocemos Boostrap desde sus inicios"
+    title="En Gilsys, conocemos Bootstrap desde sus inicios"
     image={{
       src: '~/assets/images/estudio-integracion-ia.jpg',
       alt: 'Estudi per integrar intel·ligència artificial',
@@ -151,32 +153,36 @@ const metadata = {
       },
       {
         title: 'Adaptación de interfaces antiguas a versiones modernas',
-        description: 'Al disponer de  nuevas versiones de forma regular, nos permite implementar mejoras estéticas y funcionales.',
+        description:
+          'Gracias a sus actualizaciones regulares, podemos implementar mejoras estéticas y funcionales.',
         icon: 'tabler:tool',
-      },      
+      },
       {
         title: 'Integración con otros frameworks y tecnologías web.',
-        description: 'Como expertos en desarrollo a medida, podemos integrar componentes adicionales o programarlos a medida.',
+        description:
+          'Como expertos en desarrollo a medida, podemos integrar componentes adicionales o programarlos a medida.',
         icon: 'tabler:plug',
       },
     ]}
   >
     <Fragment slot="preContent">
       <p class="text-muted">
-        En Gilsys, Bootstrap no es solo una herramienta, es parte de nuestro ADN. Con años de experiencia y una profunda pasión por este framework, creamos interfaces excepcionales que combinan funcionalidad y diseño de vanguardia.
-        Nos encargamos de que cada interfaz no solo se mantenga actualizada y funcional, sino que también refleje las últimas tendencias en diseño web. 
-      </p>      
+        En Gilsys, Bootstrap no es solo una herramienta, es parte de nuestro ADN. Con años de experiencia y una profunda
+        pasión por este framework, creamos interfaces excepcionales que combinan funcionalidad y diseño de vanguardia.
+        Nos encargamos de que cada interfaz no solo se mantenga actualizada y funcional, sino que también refleje las
+        últimas tendencias en diseño web.
+      </p>
     </Fragment>
-    <Fragment slot="postContent">      
-      <p class="text-muted">        
-        Desde Gilsys, nos encargamos de que cada interfaz no solo se mantenga actualizada y funcional, sino que también refleje las últimas tendencias en diseño web. 
+    <Fragment slot="postContent">
+      <p class="text-muted">
+        Desde Gilsys, nos encargamos de que cada interfaz no solo se mantenga actualizada y funcional, sino que también
+        refleje las últimas tendencias en diseño web.
       </p>
     </Fragment>
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-lightgray"></div>
     </Fragment>
   </Content>
-
 
   <CallToAction
     backgroundImage={{ src: '~/assets/images/dots/24.jpg', alt: 'Fondo abstracto' }}
@@ -194,10 +200,10 @@ const metadata = {
     ]}
   >
     <Fragment slot="title"
-      >Somos <span class="custom-gradient">especialistas en Bootstrap</span>, deja la maquetación en nuestras manos.</Fragment
+      >Somos <span class="custom-gradient">especialistas en Bootstrap</span><br> Deja la maquetación en nuestras manos</Fragment
     >
     <Fragment slot="subtitle"
-      >Nos encargamos del diseño, maquetación y adaptación responsive de las interfaces de usuario de tu proyecto.</Fragment
+      >Nos encargamos del diseño, maquetación y adaptación responsive de la interfaz de usuario de tu proyecto.</Fragment
     >
   </CallToAction>
 </Layout>

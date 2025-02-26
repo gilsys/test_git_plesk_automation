@@ -1,13 +1,8 @@
 ---
-import { Icon } from 'astro-icon/components';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Content from '~/components/widgets/Content.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
-import Features from '~/components/widgets/Features.astro';
-import Features2 from '~/components/widgets/Features2.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import Hero from '~/components/widgets/Hero.astro';
-import Note from '~/components/widgets/Note.astro';
 import Layout from '~/layouts/PageLayout.astro';
 import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 
@@ -30,7 +25,7 @@ const metadata = {
       Desarrollo a medida con <span class="text-accent highlight">PHP</span>
     </Fragment>
     <Fragment slot="subtitle">
-      Disponemos de un equipo de programadores expertos en PHP para desarrollar herramientas profesionales utilizando este lenguaje de programación.
+      Contamos con un equipo de programadores expertos en PHP especializados en el desarrollo de herramientas profesionales.
     </Fragment>
   </Hero>
 
@@ -44,8 +39,7 @@ const metadata = {
   >
     <Fragment slot="content">
       <p class="text-muted">
-        En Gilsys encontrarás un equipo de especialistas en programación PHP con amplia experiencia, dominamos PHP desde sus versiones más tempranas hasta las más recientes, aplicando siempre las mejores prácticas 
-        para garantizar soluciones seguras, eficientes y escalables.
+        En Gilsys contamos con un equipo de especialistas en programación PHP con amplia experiencia. Dominamos PHP desde sus primeras versiones hasta las más recientes, aplicando siempre las mejores prácticas para garantizar soluciones seguras, eficientes y escalables.
       </p>
       <p class="text-muted mt-4">
         Nos especializamos en la creación de <a href={u('development')} class="text-accent" title='Servicios de programación de software a medida'>software a medida</a>, adaptado a las necesidades específicas de cada cliente, sin restricciones geográficas.
@@ -65,8 +59,7 @@ const metadata = {
 >
   <Fragment slot="preContent">
     <p class="text-muted">
-      A pesar del auge de nuevas tecnologías, PHP se mantiene como un pilar fundamental en el desarrollo web, impulsando millones de sitios web y aplicaciones en todo el mundo. Su versatilidad, robustez y gran comunidad lo convierten en una opción ideal para proyectos de cualquier escala.
-    </p>
+      A pesar del auge de nuevas tecnologías, PHP sigue siendo un pilar fundamental del desarrollo web, impulsando millones de sitios y aplicaciones en todo el mundo.</p>
     <p class="text-muted mt-4">
       PHP es la base de plataformas de renombre como WordPress, PrestaShop, Pimcore o Magento, que dominan el mercado de los gestores de contenido y el comercio electrónico. Su adaptabilidad a diferentes necesidades y su constante evolución lo mantienen como un lenguaje relevante y con un futuro prometedor. 
     </p>
@@ -90,12 +83,12 @@ items={[
   {
     title: 'Arquitecturas optimizadas',
     description: `Implementamos arquitecturas modernas y optimizadas, asegurando aplicaciones rápidas y de alto rendimiento.`,
-    icon: 'tabler:rocket',
+    icon: 'tabler:layers-linked',
   },
   {
     title: 'Frameworks avanzados',
-    description: `Utilizamos frameworks avanzados para maximizar la eficiencia y escalabilidad.`,
-    icon: 'tabler:code',
+    description: `Trabajamos con frameworks avanzados para optimizar la eficiencia y escalabilidad de los proyectos.`,
+    icon: 'tabler:stack',
   },
   {
     title: 'Seguridad robusta',
@@ -105,17 +98,17 @@ items={[
   {
     title: 'Diseño modular',
     description: `Diseñamos plataformas modulares y flexibles, listas para futuras actualizaciones y expansiones.`,
-    icon: 'tabler:palette',
+    icon: 'tabler:components',
   },
   {
     title: 'Código de calidad',
     description: `Escribimos código limpio, mantenible y eficiente, siguiendo las mejores prácticas de desarrollo PHP.`,
-    icon: 'tabler:code',
+    icon: 'tabler:checklist',
   },
   {
     title: 'Mantenimiento y evolución',
     description: `Ofrecemos mantenimiento preventivo, actualizaciones de seguridad y mejoras funcionales según las necesidades de tu negocio.`,
-    icon: 'tabler:graph',
+    icon: 'tabler:refresh',
   },
 ]}
 >
@@ -131,9 +124,7 @@ items={[
   >
     <Fragment slot="content">
       <p class="text-muted">
-        Si tu software actual necesita una actualización o está desarrollado en otra tecnología, te ayudamos con una
-        migración estructurada a PHP, optimizando código, mejorando el rendimiento y asegurando una transición sin
-        interrupciones.
+        Si tu software actual requiere una actualización o está desarrollado en otra tecnología, te ayudamos a migrarlo a PHP mediante un proceso estructurado, optimizando el código, mejorando el rendimiento y garantizando una transición sin interrupciones.
         <a
           title='Renovación de software'
           href={u('migration')} class="btn-primary mt-12 mb-12 w-auto">Servicios de migración y renovación</a>
@@ -159,10 +150,10 @@ items={[
     ]}
   >
     <Fragment slot="title"
-      >Cuéntanos tu proyecto, somos especialistas en<span class="custom-gradient"> PHP</span> des de 2004</Fragment
+      >Cuéntanos tu proyecto, somos especialistas en<span class="custom-gradient"> PHP</span> desde 2004</Fragment
     >
     <Fragment slot="subtitle"
-      >Creamos soluciones PHP a medida que impulsan el crecimiento de tu negocio, ¿Arrancamos?</Fragment
+      >Creamos soluciones PHP a medida que impulsan el crecimiento de tu negocio, ¿Empezamos?</Fragment
     >
   </CallToAction>
 </Layout>
