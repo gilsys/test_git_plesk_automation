@@ -478,9 +478,3 @@ address a{
     filter: brightness(100%);
   }
 }
-
-.tertiary-link{
-  display: flex;
-  justify-content: space-between;
-  background-color: rgb(220,220,220);
-}

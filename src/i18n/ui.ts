@@ -56,6 +56,7 @@ export const ui = {
     'affiliations.ccm': 'Socios de Consell empresarial d\'Osona',
     'affiliations.tic': 'Socios de TICOsona - Associació d\'Empreses de Tecnologies de la Informació i la Comunicació d\'Osona',
     'cookie.settings': 'Configuración de cookies',
+    'technology': 'Tecnologias destacadas'
   },
   ca: {
     'common.home': 'Inici',

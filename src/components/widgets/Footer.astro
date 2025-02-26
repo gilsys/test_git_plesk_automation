@@ -21,7 +21,7 @@ interface Links {
 }
 
 export interface Props {
-  links: Array<Links>;  
+  links: Array<Links>;
   secondaryLinks: Array<Link>;
   tertiaryLinks: Array<Link>;
   socialLinks: Array<Link>;
@@ -30,7 +30,15 @@ export interface Props {
   address?: string;
 }
 
-const { socialLinks = [], secondaryLinks = [], tertiaryLinks = [], links = [], footNote = '', theme = 'light', address = '' } = Astro.props;
+const {
+  socialLinks = [],
+  secondaryLinks = [],
+  tertiaryLinks = [],
+  links = [],
+  footNote = '',
+  theme = 'light',
+  address = '',
+} = Astro.props;
 
 const currentLang = getLangFromUrl(Astro.url);
 const t = useTranslations(currentLang);
@@ -48,7 +56,7 @@ const u = useRoutes(currentLang);
     class="relative max-w-7xl mx-auto px-4 sm:px-6 dark:text-slate-300 intersect-once intersect-quarter intercept-no-queue motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
   >
     <div
-      class="grid grid-cols-12 lg:grid-cols-[repeat(16,_minmax(0,_1fr))] xl:grid-cols-12 gap-4 gap-y-8 sm:gap-8 py-8 md:py-12"
+      class="grid grid-cols-12 lg:grid-cols-[repeat(16,_minmax(0,_1fr))] xl:grid-cols-12 gap-4 gap-y-8 sm:gap-8 py-8 md:py-12 md:pb-4"
     >
       <div class="hidden lg:block col-span-12 lg:col-span-3 lg:-mt-6">
         <div class="mb-2 hidden sm:block">
@@ -87,36 +95,25 @@ const u = useRoutes(currentLang);
           </div>
         ))
       }
-    
-  </div>
+    </div>
 
-
-  <div class="grid grid-cols-12 xl:grid-cols-12 gap-4 gap-y-8 sm:gap-8 py-8 md:py-12">
-    <div class="col-span-6 md:col-span-3 lg:col-span-3 xl:col-span-2 md:min-w-[11rem] min-[1120px]:w-52">
-      <div class="dark:text-gray-300 font-medium mb-2">
-        <div class="text-right lg:text-center -mb-10 lg:-mb-3 text-xs lg:text-sm">{t('affiliations')}</div>
-      </div>
-      <ul class="text-sm">
-        {tertiaryLinks.map(({ text, href, ariaLabel, title }) => (
-          <li class="mb-2 tertiary-link">
-            <a
-              class="hover:text-accent text-muted dark:text-gray-400 transition duration-150 ease-in-out text-xs min-[500px]:text-[0.800rem] xl:text-sm"
-              href={href}
-              aria-label={ariaLabel}
-              title={title}
-            >
-              <Fragment set:html={text} />
-            </a>
-          </li>
-        ))}
+    <div class="mx-auto md:pb-4">
+      <div class="text-center mb-4 text-xs lg:text-sm">{t('technology')}</div>
+      <ul class="flex flex-wrap lg:flex-nowrap justify-center gap-y-2 space-x-2 md:gap-y-4 md:space-x-4">
+        {
+          tertiaryLinks.map(({ text, href, ariaLabel, title }) => (
+            <li class="tertiary-link whitespace-nowrap bg-[rgb(238,238,238)] rounded-full px-3 py-2 text-sm">
+              <a class="hover:text-accent text-muted text-xs" href={href} aria-label={ariaLabel} title={title}>
+                <Fragment set:html={text} />
+              </a>
+            </li>
+          ))
+        }
       </ul>
-      </div>
-  </div>
-
-
+    </div>
 
     <div class="flex flex-col items-stretch lg:items-center">
-      <div class="flex gap-8 mt-4">
+      <div class="flex gap-8 mt-8">
         <div class="lg:hidden flex-grow">
           <div class="mb-2">
             <a class="flex items-center" title={SITE?.name} href={u('home')}>
@@ -144,7 +141,7 @@ const u = useRoutes(currentLang);
                 alt="Logo Consell empresarial d'Osona"
               />
             </a>
-            
+
             <a
               class="block mt-4 md:mt-0 py-1 pb-2"
               href="https://ticosona.info"
@@ -160,7 +157,6 @@ const u = useRoutes(currentLang);
                 class="lg:pr-[5px]"
               />
             </a>
-            
           </div>
         </div>
       </div>
@@ -190,7 +186,9 @@ const u = useRoutes(currentLang);
         )
       }
 
-      <div class="text-xs dark:text-muted min-[820px]:flex-1 whitespace-nowrap order-3 min-[820px]:order-1 mt-2 mb-2 text-center min-[820px]:text-left w-full min-[820px]:w-auto min-[820px]:mr-4">
+      <div
+        class="text-xs dark:text-muted min-[820px]:flex-1 whitespace-nowrap order-3 min-[820px]:order-1 mt-2 mb-2 text-center min-[820px]:text-left w-full min-[820px]:w-auto min-[820px]:mr-4"
+      >
         <Fragment set:html={footNote} />
       </div>
 
