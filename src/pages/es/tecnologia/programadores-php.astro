@@ -14,96 +14,112 @@ import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 const u = useRoutes(getLangFromUrl(Astro.url));
 
 const metadata = {
-  title: 'Empresa de programación a medida con PHP | +20 años',
-  description: `Nuestro equipo de programadores expertos en PHP, desarrolla herramientas profesionales con este lenguaje de programación. ¡Presupuesto gratuito! Estamos en Osona, Barcelona.`,
+  title: 'Desarrollo a medida con PHP',
+  description: `Nuestro equipo de programadores expertos en PHP, desarrolla aplicaciones profesionales para empresas con este lenguaje de programación.`,
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- Hero Section -->
   <Hero
-    tagline="Somos una empresa con más de 20 años de experiencia programando en PHP."
+    tagline="Más de 20 años creando soluciones web a medida con PHP."
     actions={[{ variant: 'primary', text: 'Presupuesto gratuito', href: u('contact') }]}
-    backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/geometric-2/4.jpg' }}
+    backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/geometric-2/4.jpg' }}
   >
     <Fragment slot="title">
-      Programación web con <span class="text-accent highlight">PHP</span>
+      Desarrollo a medida con <span class="text-accent highlight">PHP</span>
     </Fragment>
     <Fragment slot="subtitle">
-      Nuestro equipo de programadores expertos en PHP, desarrolla herramientas profesionales con este lenguaje de programación.
+      Disponemos de un equipo de programadores expertos en PHP para desarrollar herramientas profesionales utilizando este lenguaje de programación.
     </Fragment>
   </Hero>
 
   <Content
-  subtitle='PHP es uno de los lenguajes de programación web más robustos y utilizados.'
-    title="<span class='custom-gradient'>PHP</span>: La base para aplicaciones web sólidas y escalables"
+  title="<span class='custom-gradient'>PHP</span>: La base para aplicaciones web sólidas y escalables"
+    subtitle='PHP es uno de los lenguajes de programación web más robustos y utilizados.'
     image={{
-      src: '~/assets/images/estudio-integracion-ia.jpg',
-      alt: 'Estudi per integrar intel·ligència artificial',
+      src: '~/assets/images/php-logo.jpg',
+      alt: 'Logotipo PHP',
     }}
   >
     <Fragment slot="content">
       <p class="text-muted">
-        Si buscas especialistas en programación PHP en la provincia de Barcelona, has llegado al lugar indicado. Nuestro
-        equipo domina PHP desde la versión 5.5 hasta la más reciente, utilizando siempre las mejores prácticas de
-        programación para garantizar soluciones seguras, eficientes y escalables.
+        En Gilsys encontrarás un equipo de especialistas en programación PHP con amplia experiencia, dominamos PHP desde sus versiones más tempranas hasta las más recientes, aplicando siempre las mejores prácticas 
+        para garantizar soluciones seguras, eficientes y escalables.
       </p>
       <p class="text-muted mt-4">
-        Nos especializamos en la creación de <a
-          href={u('development')}
-          class="text-accent"
-          title="Programació de software a mida amb PHP">software a medida</a
-        >, adaptado a las necesidades específicas de cada cliente, sin restricciones geográficas.
+        Nos especializamos en la creación de <a href={u('development')} class="text-accent" title='Servicios de programación de software a medida'>software a medida</a>, adaptado a las necesidades específicas de cada cliente, sin restricciones geográficas.
+      </p>
+      <p class="text-center">
+        <a
+          title="Desarrollo de aplicaciones web a medida en PHP"
+          href={u('development/web')}
+          class="btn-primary mt-12 mb-12 w-auto">Descubre nuestros servicios de desarrollo web</a>
       </p>
     </Fragment>
   </Content>
 
   <Content
-    title="Nuestra metodología de desarrollo PHP [TODO]"
-    classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}
-  >
-    <Fragment slot="preContent">
-      <p class="text-muted">
-        El desarrollo con PHP nos permite ofrecer soluciones dinámicas y robustas para empresas de todos los tamaños.
-        Desde plataformas corporativas hasta sistemas personalizados, PHP sigue siendo una de las tecnologías más
-        confiables y versátiles.
-      </p>
-      <p class="text-muted mt-4">
-        Utiltizat des de fa anys com a base de moltes eines i que ha anat evolucionant al llarg del temps per encara a dia d'avui, continuar estant un dels més utilitzats per a la programació a mida de projectes informàtics.
-      </p>
-    </Fragment>
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-lightgray"></div>
-    </Fragment>
-  </Content>
+  title="Desarrollo PHP: La potencia de un lenguaje que sigue vigente"
+  classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}
+>
+  <Fragment slot="preContent">
+    <p class="text-muted">
+      A pesar del auge de nuevas tecnologías, PHP se mantiene como un pilar fundamental en el desarrollo web, impulsando millones de sitios web y aplicaciones en todo el mundo. Su versatilidad, robustez y gran comunidad lo convierten en una opción ideal para proyectos de cualquier escala.
+    </p>
+    <p class="text-muted mt-4">
+      PHP es la base de plataformas de renombre como WordPress, PrestaShop, Pimcore o Magento, que dominan el mercado de los gestores de contenido y el comercio electrónico. Su adaptabilidad a diferentes necesidades y su constante evolución lo mantienen como un lenguaje relevante y con un futuro prometedor. 
+    </p>
+    <p class="text-center">
+      <a
+        title="Web oficial de PHP"
+        href="https://www.php.net"
+        class="btn-primary mt-12 mb-12 w-auto">Conoce más sobre PHP</a
+      >
+    </p>    
+  </Fragment>
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-lightgray"></div>
+  </Fragment>
+</Content>
 
-  <Features3
-  columns={2}
-  title='Nuestra metodología de desarrollo PHP'
-    classes={{ container: 'pt-0 md:pt-0 lg:pt-0' }}
-    items={[
-      {
-        description: `Implementamos arquitecturas modernas y optimizadas, asegurando aplicaciones rápidas y de alto rendimiento.`,
-        icon: 'tabler:rocket',
-      },
-      {
-        description: `Utilizamos frameworks avanzados como Laravel, Symfony para maximizar la eficiencia y escalabilidad.`,
-        icon: 'tabler:code',
-      },
-      {
-        description: `Priorizamos la seguridad del software, integrando protocolos avanzados para proteger datos e información.`,
-        icon: 'tabler:shield-lock',
-      },
-      {
-        description: `Diseñamos plataformas modulares y flexibles, listas para futuras actualizaciones y expansiones.`,
-        icon: 'tabler:palette',
-      },
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-lightgray"></div>
-    </Fragment>
-  </Features3>
+<Features3
+columns={3}
+title='¿Qué ofrecemos como empresa de desarrollo en PHP?'
+items={[
+  {
+    title: 'Arquitecturas optimizadas',
+    description: `Implementamos arquitecturas modernas y optimizadas, asegurando aplicaciones rápidas y de alto rendimiento.`,
+    icon: 'tabler:rocket',
+  },
+  {
+    title: 'Frameworks avanzados',
+    description: `Utilizamos frameworks avanzados para maximizar la eficiencia y escalabilidad.`,
+    icon: 'tabler:code',
+  },
+  {
+    title: 'Seguridad robusta',
+    description: `Priorizamos la seguridad del software, integrando protocolos avanzados para proteger datos e información.`,
+    icon: 'tabler:shield-lock',
+  },
+  {
+    title: 'Diseño modular',
+    description: `Diseñamos plataformas modulares y flexibles, listas para futuras actualizaciones y expansiones.`,
+    icon: 'tabler:palette',
+  },
+  {
+    title: 'Código de calidad',
+    description: `Escribimos código limpio, mantenible y eficiente, siguiendo las mejores prácticas de desarrollo PHP.`,
+    icon: 'tabler:code',
+  },
+  {
+    title: 'Mantenimiento y evolución',
+    description: `Ofrecemos mantenimiento preventivo, actualizaciones de seguridad y mejoras funcionales según las necesidades de tu negocio.`,
+    icon: 'tabler:graph',
+  },
+]}
+>
+</Features3>
 
   <Content
     isReversed
@@ -119,30 +135,13 @@ const metadata = {
         migración estructurada a PHP, optimizando código, mejorando el rendimiento y asegurando una transición sin
         interrupciones.
         <a
-          title='Serveis de digitalització subvencionats pel Kit Digital'
-          href={u('kit-digital')} class="btn-primary mt-12 mb-12 w-auto">Veure categories subvencionades</a>
+          title='Renovación de software'
+          href={u('migration')} class="btn-primary mt-12 mb-12 w-auto">Servicios de migración y renovación</a>
       </p>
     </Fragment>
   </Content>
 
-  <Content
-    title="Mantenimiento y evolución continua"
-    image={{
-      src: '~/assets/images/estudio-integracion-ia.jpg',
-      alt: 'Estudi per integrar intel·ligència artificial',
-    }}
-  >
-    <Fragment slot="content">
-      <p class="text-muted">
-        Nuestro equipo proporciona soporte técnico para garantizar que tu aplicación PHP permanezca actualizada,
-        funcional y libre de vulnerabilidades. Ofrecemos mantenimiento preventivo, actualizaciones de seguridad y
-        mejoras funcionales según las necesidades de tu negocio.
-      </p>
-    </Fragment>
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-lightgray"></div>
-    </Fragment>
-  </Content>
+
 
   <CallToAction
     backgroundImage={{ src: '~/assets/images/dots/24.jpg', alt: 'Fondo abstracto' }}
@@ -160,11 +159,10 @@ const metadata = {
     ]}
   >
     <Fragment slot="title"
-      >Deja de buscar, <span class="custom-gradient">somos especialistas en PHP</span> des de 2004</Fragment
+      >Cuéntanos tu proyecto, somos especialistas en<span class="custom-gradient"> PHP</span> des de 2004</Fragment
     >
     <Fragment slot="subtitle"
-      >PHP continu empreses que estan integrant <strong>intel·ligència artificial</strong> en els seus processos seran les que millor
-      preparades estaran en un futur proper.</Fragment
+      >Creamos soluciones PHP a medida que impulsan el crecimiento de tu negocio, ¿Arrancamos?</Fragment
     >
   </CallToAction>
 </Layout>
