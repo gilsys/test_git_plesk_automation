@@ -1,13 +1,9 @@
 ---
-import { Icon } from 'astro-icon/components';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Content from '~/components/widgets/Content.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
 import Features from '~/components/widgets/Features.astro';
-import Features2 from '~/components/widgets/Features2.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import Hero from '~/components/widgets/Hero.astro';
-import Note from '~/components/widgets/Note.astro';
 import Layout from '~/layouts/PageLayout.astro';
 import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 
@@ -37,7 +33,7 @@ const metadata = {
 
   <Content
     subtitle="Lanzado en 2013, sigue siendo el framework número uno para la creación de interfaces funcionales."
-    title="Con <span class='custom-gradient'>Metronic</span>, programamos atractivas aplicaciones para administración"
+    title="Desarrollamos aplicaciones de administración atractivas y funcionales con <span class='custom-gradient'>Metronic</span>"
     image={{
       src: '~/assets/images/estudio-integracion-ia.jpg',
       alt: 'Estudi per integrar intel·ligència artificial',
@@ -45,7 +41,7 @@ const metadata = {
   >
     <Fragment slot="content">
       <p class="text-muted">
-        Las plataformas de administración y gestión de datos requieren <strong>funcionales</strong>, <strong
+        Las plataformas de administración y gestión de datos deben ser <strong>funcionales</strong>, <strong
           >intuitivas</strong
         > y <strong>estables</strong>. Nuestro equipo de programadores trabaja habitualmente con Metronic, uno de los
         sistemas de plantillas más avanzados para el desarrollo de backoffice, paneles de administración y aplicaciones
@@ -66,36 +62,36 @@ const metadata = {
         title: 'Diseño moderno y responsive',
         description:
           'Adaptable a cualquier dispositivo, asegurando una experiencia de usuario óptima en móviles, tabletas y ordenadores.',
-        icon: 'tabler:check',
+        icon: 'tabler:devices',
       },
       {
         title: 'Biblioteca extensa de componentes',
         description:
           'Agiliza el desarrollo sin comprometer la personalización, ofreciendo una amplia gama de elementos prediseñados y listos para usar.',
-        icon: 'tabler:check',
+        icon: 'tabler:components',
       },
       {
         title: 'Integración con frameworks avanzados',
         description:
           'Compatible con frameworks como <a href="#ROGER">SlimFramework</a>, facilitando la creación de aplicaciones robustas y escalables.',
-        icon: 'tabler:check',
+        icon: 'tabler:code-plus',
       },
       {
         title: 'Rendimiento y carga rápida',
         description: 'Optimizado para asegurar tiempos de respuesta eficientes y una experiencia de usuario fluida.',
-        icon: 'tabler:check',
+        icon: 'tabler:rocket',
       },
       {
         title: 'Personalización',
         description:
           'Permite a desarrolladores expertos, adaptar cada elemento a las necesidades específicas del proyecto, desde la apariencia hasta la funcionalidad.',
-        icon: 'tabler:check',
+        icon: 'tabler:adjustments-alt',
       },
       {
-        title: 'Multiples estructuras de base',
+        title: 'Múltiples estructuras de base',
         description:
           'Ofrece diferentes plantillas dentro de su paquete, para poder disponer directamente de una base sobre la que trabajar, según el enfoque de cada proyecto.',
-        icon: 'tabler:check',
+        icon: 'tabler:stack',
       },
     ]}
   >
@@ -106,7 +102,7 @@ const metadata = {
 
   <Features3
   title='¿Cómo usamos Metronic en Gilsys?'
-  subtitle='Cieratmente es un framework que <strong>nos encanta</strong>, lo usamos en casi todas las soluciones de administración que desarrollamos a medida.'
+  subtitle='Ciertamente, es un framework que nos encanta; lo usamos en casi todas las soluciones de administración que desarrollamos a medida.'
     items={[
       {
         title: 'Construcción de paneles de administración y aplicaciones funcionales',
@@ -120,7 +116,7 @@ const metadata = {
       },
       {
         title: 'Mantenimiento y soporte para soluciones con Metronic',
-        description: `Nos encargamos de mantener y mejorar las plataformas creadas con Metronic, asegurando que estén actualizadas, protegidas y adaptadas a las últimas tendencias tecnológicas. Implementamos mejoras constantes en rendimiento, seguridad y experiencia de usuario.`,
+        description: `Mantenemos y mejoramos las plataformas desarrolladas con Metronic, asegurando que siempre estén actualizadas, protegidas y alineadas con las últimas tendencias tecnológicas.`,
         icon: 'tabler:tools',
       },
     ]}
@@ -128,12 +124,11 @@ const metadata = {
     
   </Features3>
 
-  <Content title="Versiones con Tailwind y Boostrap" classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}>
+  <Content title="Versiones con Tailwind y Bootstrap" classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}>
     <Fragment slot="preContent">
       <p class="text-muted">
-        Existen dos versiones del framework, pudiendo escoger entre <a href='#ROGER' class="text-accent">Bootstrap</a> o <a href='#ROGER' class="text-accent">Tailwind</a>. Independientemente de la
-        elegida, se dispondrá de una gran colección de componentes y su estructura optimizada, permite acelerar el desarrollo de
-        aplicaciones empresariales y facilitar el uso al usuario.</p>
+        Metronic ofrece dos versiones: una basada en <a href='#ROGER' class="text-accent">Bootstrap</a> y otra en <a href='#ROGER' class="text-accent">Tailwind</a>, permitiendo elegir la que mejor se adapte a cada proyecto. Ambas versiones incluyen una amplia colección de componentes y una estructura optimizada, lo que acelera el desarrollo de aplicaciones empresariales y mejora la experiencia del usuario.
+      </p>         
       <p class="text-center">
         <a
           title="Web oficial de Metronic"
@@ -167,7 +162,7 @@ const metadata = {
       >Tanto si conoces <span class="custom-gradient">Metronic</span> como si no, desde Gilsys te lo recomendamos</Fragment
     >
     <Fragment slot="subtitle"
-      >Nos encargamos de preparar una interfaz atractiva para tu proyecto, para que los usuarios se sientan cómodos y disfruten utilizando la herramienta creada.</Fragment
+      >Nos encargamos de preparar una interfaz atractiva para tu proyecto para que los usuarios se sientan cómodos y disfruten utilizando la herramienta creada.</Fragment
     >
   </CallToAction>
 </Layout>

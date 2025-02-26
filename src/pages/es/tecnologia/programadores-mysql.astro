@@ -1,14 +1,9 @@
 ---
-import { Icon } from 'astro-icon/components';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Content from '~/components/widgets/Content.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
 import Features from '~/components/widgets/Features.astro';
-import Features2 from '~/components/widgets/Features2.astro';
 import Features3 from '~/components/widgets/Features3.astro';
-import FourBlocks from '~/components/widgets/FourBlocks.astro';
 import Hero from '~/components/widgets/Hero.astro';
-import Note from '~/components/widgets/Note.astro';
 import Layout from '~/layouts/PageLayout.astro';
 import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 
@@ -31,8 +26,8 @@ const metadata = {
       Servicios de desarrollo de bases de datos con <span class="text-accent highlight">MySQL</span>
     </Fragment>
     <Fragment slot="subtitle">
-      Diseñamos modelos de datos relacionales para Mysql, específicos para cada proyecto, desde soluciones simples a muy
-      complejas.
+      Diseñamos modelos de datos relacionales para MySQL, específicos para cada proyecto, desde soluciones simples hasta
+      muy complejas.
     </Fragment>
   </Hero>
 
@@ -47,9 +42,9 @@ const metadata = {
     <Fragment slot="content">
       <p class="text-muted">
         En Gilsys, somos especialistas en <strong>MySQL</strong> y <strong>MariaDB</strong>, con experiencia desde la
-        versión 3 hasta la actual. Diseñamos bases de datos SQL relacionales, preparando una estructura lo más flexible
-        posible, permitiendo adaptarse a cambios de enfoque sin requerir reestructuraciones drásticas, optimizando así
-        la escalabilidad y evolución de cada proyecto.
+        versión 3 hasta la actual. Diseñamos bases de datos SQL relacionales con una estructura flexible, permitiendo su
+        adaptación a cambios de enfoque sin requerir reestructuraciones drásticas. Esto optimiza la escalabilidad y
+        evolución de cada proyecto.
       </p>
     </Fragment>
   </Content>
@@ -61,7 +56,8 @@ const metadata = {
   >
     <Fragment slot="preContent">
       <p class="text-muted">
-        MySQL ostenta el título de la base de datos relacional más utilizada globalmente, un liderazgo respaldado por su robustez, versatilidad y comunidad activa. Su popularidad se debe a factores clave:
+        MySQL es la base de datos relacional más utilizada a nivel global, con un liderazgo respaldado por su robustez,
+        versatilidad y una comunidad activa. Su popularidad se debe a factores clave:
       </p>
       <ul class="text-muted list-disc list-inside">
         <li>
@@ -127,7 +123,7 @@ const metadata = {
       },
       {
         title: 'Escalabilidad',
-        description: `Escalabilidad comprobada, adaptándose a proyectos de cualquier tamaño.`,
+        description: `Escalabilidad comprobada, capaz de adaptarse a proyectos de cualquier tamaño.`,
         icon: 'tabler:arrows-maximize',
       },
       {
@@ -137,7 +133,7 @@ const metadata = {
       },
       {
         title: 'Cifrado',
-        description: `Capacidad de <strong>cifrado de campos</strong>, proporcionando mayor seguridad en la gestión de datos sensibles.`,
+        description: `Capacidad de <strong>cifrado de campos</strong> para garantizar mayor seguridad en la gestión de datos sensibles.`,
         icon: 'tabler:lock',
       },
       {
@@ -149,33 +145,39 @@ const metadata = {
   />
 
   <Content
-  isReversed
-  title="MySQL de alto rendimiento: La experiencia Gilsys al servicio de tus datos"
-  subtitle="En Gilsys, potenciamos tus proyectos con la robustez de MySQL y MariaDB, soluciones confiables para datos estructurados."
-  image={{
+    isReversed
+    title="MySQL de alto rendimiento: La experiencia Gilsys al servicio de tus datos"
+    subtitle="En Gilsys, potenciamos tus proyectos con la robustez de MySQL y MariaDB, soluciones confiables para datos estructurados."
+    image={{
       src: '~/assets/images/mysql-escenario.jpg',
       alt: 'Escenario de MySQL y modelo de datos',
-  }}
->
-  <Fragment slot="preContent">
+    }}
+  >
+    <Fragment slot="preContent">
       <p class="text-muted">
-          Con más de dos décadas de experiencia, en Gilsys nos especializamos en el diseño, modelado y optimización de bases de datos MySQL para proyectos de toda envergadura.
-      </p>      
-  </Fragment>
-  <Fragment slot="content">
+        Con más de dos décadas de experiencia, en Gilsys nos especializamos en el diseño, modelado y optimización de
+        bases de datos MySQL para proyectos de cualquier escala.
+      </p>
+    </Fragment>
+    <Fragment slot="content">
       <p class="text-muted">
-          Nuestra amplia trayectoria nos permite adaptar meticulosamente cada base de datos a las necesidades únicas de nuestros clientes, garantizando estructuras eficientes, escalables y robustas, preparadas para entornos de producción exigentes.
-      </p>      
-  </Fragment>
-  <Fragment slot="postContent">
-    <p class="text-muted mt-4">
-        Implementamos las mejores prácticas en el diseño de modelos de datos y la creación de consultas SQL, priorizando la optimización del rendimiento para evitar cuellos de botella y asegurar una gestión de datos ágil y fiable. Al elegir Gilsys, inviertes en una base de datos que no solo soporta las demandas actuales de tu proyecto, sino que también se anticipa a su crecimiento futuro.
-    </p>
-</Fragment>
-  <Fragment slot="bg">
+        Nuestra amplia trayectoria nos permite adaptar meticulosamente cada base de datos a las necesidades únicas de
+        nuestros clientes, garantizando estructuras eficientes, escalables y robustas, preparadas para entornos de
+        producción exigentes.
+      </p>
+    </Fragment>
+    <Fragment slot="postContent">
+      <p class="text-muted mt-4">
+        Implementamos las mejores prácticas en el diseño de modelos de datos y la creación de consultas SQL, priorizando
+        la optimización del rendimiento para evitar cuellos de botella y asegurar una gestión de datos ágil y fiable. Al
+        elegir Gilsys, inviertes en una base de datos que no solo soporta las demandas actuales de tu proyecto, sino que
+        también se anticipa a su crecimiento futuro.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
       <div class="absolute inset-0 bg-lightgray"></div>
-  </Fragment>
-</Content>
+    </Fragment>
+  </Content>
 
   <Features
     title="Servicios de diseño de bases de datos con MySQL"
@@ -237,7 +239,7 @@ const metadata = {
       >Deja tus datos en manos de expertos, somos <span class="custom-gradient">especialistas en MySQL</span></Fragment
     >
     <Fragment slot="subtitle"
-      >La gestión correcta de datos es el primer paso hacia la implementación exitosa de soluciones tecnológicas.</Fragment
-    >
+      >La correcta gestión de datos es el primer paso hacia la implementación exitosa de soluciones tecnológicas.
+    </Fragment>
   </CallToAction>
 </Layout>
