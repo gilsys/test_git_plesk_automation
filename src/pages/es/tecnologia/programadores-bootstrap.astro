@@ -15,54 +15,62 @@ import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 const u = useRoutes(getLangFromUrl(Astro.url));
 
 const metadata = {
-  title: 'Empresa de programación a medida con Bootstrap | +20 anys',
-  description: `Somos un equipo de programadores expertos en Tailwind, desarrollamos herramientas profesionales con este framework. ¡Presupuesto gratuito! Estamos en Osona, Barcelona.`,
+  title: 'Programadores con Bootstrap',
+  description: `Con Bootstrap, creamos interfaces de usuario (Frontend) responsive, adaptadas a móvil, tablet y ordenador. Realizamos maquetación y diseño a medida. ¡Presupuesto gratuito!`,
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- Hero Section -->
   <Hero
-    tagline="Desarrollo de interfaces con Bootstrap desde Osona, provincia de Barcelona"
-    actions={[{ variant: 'primary', text: 'Pressupost gratuït', href: u('contact') }]}
-    backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/geometric-2/4.jpg' }}
+    tagline="Ún único código, múltiples formatos de presentación."
+    actions={[{ variant: 'primary', text: 'Presupuesto gratuito', href: u('contact') }]}
+    backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/geometric-2/4.jpg' }}
   >
     <Fragment slot="title">
-        Desarrollamos con <span class="text-accent highlight">Bootstrap</span>
+      Desarrollo de interfaces responsive con <span class="text-accent highlight">Bootstrap</span>
     </Fragment>
     <Fragment slot="subtitle">
-        Somos un equipo de programadores expertos en Bootstrap, desarrollamos herramientas profesionales con este framework.
+      Disponemos de un equipo de programadores expertos en Bootstrap, preparados para crear herramientas profesionales
+      con este framework.
     </Fragment>
   </Hero>
 
   <Content
-    title="<span class='custom-gradient'>Bootstrap: </span> Impulsando Interfaces Modernas y Responsivas"
+    title="<span class='custom-gradient'>Bootstrap: </span> Diseñamos interfaces modernas y adaptables"
     image={{
-      src: '~/assets/images/estudio-integracion-ia.jpg',
-      alt: 'Estudi per integrar intel·ligència artificial',
+      src: '~/assets/images/bootstrap-logo.jpg',
+      alt: 'Logotipo Bootstrap - Framework para interfaces responsive',
     }}
   >
     <Fragment slot="content">
       <p class="text-muted">
-        En Gilsys, utilizamos Bootstrap para construir interfaces modernas, responsive y altamente funcionales. 
-        Como uno de los frameworks CSS más utilizados en el mundo, Bootstrap ofrece una solución sólida y eficiente para diseñar aplicaciones web intuitivas y 
-        adaptables a cualquier dispositivo. 
+        En Gilsys, utilizamos Bootstrap para construir interfaces modernas, responsive y altamente funcionales. Como uno
+        de los frameworks CSS más utilizados en el mundo, Bootstrap ofrece una solución sólida y eficiente para diseñar
+        aplicaciones web intuitivas y adaptables a cualquier dispositivo.
       </p>
-      <p class="text-muted mt-4">Su flexibilidad lo hace ideal tanto para frontends dinámicos como para backends con maquetación responsive,
-        asegurando una experiencia fluida y accesible para cualquier usuario. </p>
+      <p class="text-muted mt-4">
+        Su flexibilidad lo hace ideal tanto para frontends dinámicos como para backends con maquetación responsive,
+        asegurando una experiencia fluida y accesible para cualquier usuario.
+      </p>
     </Fragment>
   </Content>
 
   <Content
-    title="Versatilidad y rapidez en el desarrollo web"
+    title=`Creamos interfaces de usuario <span class="custom-gradient">responsive</span>`
+    subtitle=`Adaptadas a móvil, tablet y ordenador`
     classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}
+    image={{
+      src: '~/assets/images/bootstrap-responsive.jpg',
+      alt: 'Escenario para Bootstrap - Interfaces responsive',
+    }}
   >
-    <Fragment slot="preContent">
+    <Fragment slot="content">
       <p class="text-muted">
-        Bootstrap proporciona una base sólida para la creación de interfaces ordenadas y profesionales sin necesidad de escribir código CSS desde cero. 
-        Su sistema de cuadrícula flexible, componentes predefinidos y enfoque mobile-first nos permiten acelerar el proceso de desarrollo sin comprometer la personalización.
+        Bootstrap proporciona una base sólida para la creación de interfaces ordenadas y profesionales sin necesidad de
+        escribir código CSS desde cero. Su sistema de cuadrícula flexible, componentes predefinidos y enfoque
+        mobile-first nos permiten acelerar el proceso de desarrollo sin comprometer la personalización.
       </p>
-     
     </Fragment>
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-lightgray"></div>
@@ -70,11 +78,10 @@ const metadata = {
   </Content>
 
   <Features3
-  title='Beneficios de usar Bootstrap en tu proyecto'
-    classes={{ container: 'pt-0 md:pt-0 lg:pt-0' }}
+    title="Beneficios de usar Bootstrap en tu proyecto"
     items={[
       {
-        description: `Diseño responsivo nativo, garantizando compatibilidad en todos los dispositivos.`,
+        description: `Diseño responsive nativo, facilitando la adaptación en todos los dispositivos.`,
         icon: 'tabler:devices',
       },
       {
@@ -101,15 +108,19 @@ const metadata = {
         description: `Personalización avanzada, permitiendo modificar variables y estilos según las necesidades del proyecto.`,
         icon: 'tabler:adjustments-horizontal',
       },
+      {
+        description: `Rápido prototipado y desarrollo, acelerando el tiempo de lanzamiento al mercado.`,
+        icon: 'tabler:rocket',
+      },
+      {
+        description: `Documentación extensa y clara, facilitando el aprendizaje y la resolución de problemas.`,
+        icon: 'tabler:book',
+      },
     ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-lightgray"></div>
-    </Fragment>
-  </Features3>
+  />
 
   <Content
-    title="Nuestra experiencia con Bootstrap en Gilsys"
+    title="En Gilsys, conocemos Boostrap desde sus inicios"
     image={{
       src: '~/assets/images/estudio-integracion-ia.jpg',
       alt: 'Estudi per integrar intel·ligència artificial',
@@ -117,9 +128,10 @@ const metadata = {
   >
     <Fragment slot="content">
       <p class="text-muted">
-        Desde la versión 3 de Bootstrap hasta la actual, hemos trabajado con este framework para desarrollar aplicaciones eficientes y con interfaces atractivas. 
-        Gracias a nuestra experiencia, podemos adaptarlo a proyectos de distinta complejidad, desde sitios web empresariales hasta plataformas interactivas y 
-        backoffices avanzados.
+        Desde la versión 3 de Bootstrap hasta la actual, hemos trabajado con este framework para desarrollar
+        aplicaciones eficientes y con interfaces atractivas. Gracias a nuestra experiencia, podemos adaptarlo a
+        proyectos de distinta complejidad, desde sitios web empresariales hasta plataformas interactivas y backoffices
+        avanzados.
       </p>
     </Fragment>
   </Content>
@@ -131,11 +143,33 @@ const metadata = {
       src: '~/assets/images/estudio-integracion-ia.jpg',
       alt: 'Estudi per integrar intel·ligència artificial',
     }}
+    items={[
+      {
+        title: 'Optimización de código',
+        description: 'Implicando reducción de estilos innecesarios',
+        icon: 'tabler:code',
+      },
+      {
+        title: 'Adaptación de interfaces antiguas a versiones modernas',
+        description: 'Al disponer de  nuevas versiones de forma regular, nos permite implementar mejoras estéticas y funcionales.',
+        icon: 'tabler:tool',
+      },      
+      {
+        title: 'Integración con otros frameworks y tecnologías web.',
+        description: 'Como expertos en desarrollo a medida, podemos integrar componentes adicionales o programarlos a medida.',
+        icon: 'tabler:plug',
+      },
+    ]}
   >
-    <Fragment slot="content">
+    <Fragment slot="preContent">
       <p class="text-muted">
-        En Gilsys, no solo implementamos Bootstrap en nuestros proyectos, sino que también garantizamos su mantenimiento y evolución, 
-        asegurando que cada interfaz permanezca actualizada, funcional y alineada con las últimas tendencias del diseño web.
+        En Gilsys, Bootstrap no es solo una herramienta, es parte de nuestro ADN. Con años de experiencia y una profunda pasión por este framework, creamos interfaces excepcionales que combinan funcionalidad y diseño de vanguardia.
+        Nos encargamos de que cada interfaz no solo se mantenga actualizada y funcional, sino que también refleje las últimas tendencias en diseño web. 
+      </p>      
+    </Fragment>
+    <Fragment slot="postContent">      
+      <p class="text-muted">        
+        Desde Gilsys, nos encargamos de que cada interfaz no solo se mantenga actualizada y funcional, sino que también refleje las últimas tendencias en diseño web. 
       </p>
     </Fragment>
     <Fragment slot="bg">
@@ -143,56 +177,27 @@ const metadata = {
     </Fragment>
   </Content>
 
-  
-  <Features
-    title="Nuestros servicios incluyen:"
-    items={[
-      {
-        list: ['Optimización de código y reducción de estilos innecesarios.'],
-        icon: 'tabler:code',
-      },
-      {
-        list: [
-          'Mantenimiento y actualización de proyectos basados en Bootstrap.',
-        ],
-        icon: 'tabler:tool',
-      },
-      {
-        list: [
-          'Adaptación de interfaces antiguas a versiones modernas del framework.',
-        ],
-        icon: 'tabler:exchange',
-      },
-      {
-        list: [
-          'Integración con otros frameworks y tecnologías web.',
-        ],
-        icon: 'tabler:plug',
-      },
-    ]}  
-    />
 
   <CallToAction
-    backgroundImage={{ src: '~/assets/images/dots/24.jpg', alt: 'Fons abstracte' }}
+    backgroundImage={{ src: '~/assets/images/dots/24.jpg', alt: 'Fondo abstracto' }}
     actions={[
       {
         variant: 'primary',
-        text: 'Pressupost gratuït',
+        text: 'Presupuesto gratuito',
         href: u('contact'),
       },
       {
         variant: 'primary',
-        text: 'Trucar',
+        text: 'Llamar',
         href: 'tel:+34665331271',
       },
     ]}
   >
     <Fragment slot="title"
-      >Deja de buscar, <span class="custom-gradient">somos especialistas en Bootstrap</span></Fragment
+      >Somos <span class="custom-gradient">especialistas en Bootstrap</span>, deja la maquetación en nuestras manos.</Fragment
     >
     <Fragment slot="subtitle"
-      >[TODO] PHP continu empreses que estan integrant <strong>intel·ligència artificial</strong> en els seus processos seran les que millor
-      preparades estaran en un futur proper.</Fragment
+      >Nos encargamos del diseño, maquetación y adaptación responsive de las interfaces de usuario de tu proyecto.</Fragment
     >
   </CallToAction>
 </Layout>

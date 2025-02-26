@@ -15,31 +15,31 @@ import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 const u = useRoutes(getLangFromUrl(Astro.url));
 
 const metadata = {
-  title: 'Servicios de desarrollo con MongoDB | +20 anys',
-  description: `Somos un equipo de programadores que desarrollamos herramientas profesionales que utilizan MongoDB. ¡Presupuesto gratuito! Estamos en Osona, Barcelona.`,
+  title: 'Programación de bases de datos con MongoDB',
+  description: `Servicios de desarrollo con MongoDB a nivel profesional. Los programadores de nuestra empresa realizan el diseño y desarrollo de bases de datos NoSQL, no relacionales.`,
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- Hero Section -->
   <Hero
-    tagline="Bases de datos NoSQL con MongoDB desde Osona, provincia de Barcelona"
-    actions={[{ variant: 'primary', text: 'Pressupost gratuït', href: u('contact') }]}
-    backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/geometric-2/4.jpg' }}
+    tagline="Bases de datos no relacionales, priorizando la máxima eficiencia"
+    actions={[{ variant: 'primary', text: 'Presupuesto gratuito', href: u('contact') }]}
+    backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/geometric-2/4.jpg' }}
   >
     <Fragment slot="title">
-        Desarrollo con <span class="text-accent highlight">MongoDB:</span>
+        Desarrollo de bases de datos con <span class="text-accent highlight">MongoDB</span>
     </Fragment>
     <Fragment slot="subtitle">
-        Soluciones NoSQL Avanzadas
+        Diseñamos e implementamos bases de datos NoSQL, rápidas y escalables para aplicaciones web y móviles.
     </Fragment>
   </Hero>
 
   <Content
     title="<span class='custom-gradient'>MongoDB y NoSQL: </span>La evolución del almacenamiento de datos"
     image={{
-      src: '~/assets/images/estudio-integracion-ia.jpg',
-      alt: 'Estudi per integrar intel·ligència artificial',
+      src: '~/assets/images/mongodb-logo.jpg',
+      alt: 'Logotipo MongoDB',
     }}
   >
     <Fragment slot="content">
@@ -56,15 +56,22 @@ const metadata = {
 
   <Content
     title="Gestión flexible y escalable para datos dinámicos y distribuidos."
-    classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}
+    classes={{ container: 'pb-2 md:pb-2 lg:pb-2' }}
   >
     <Fragment slot="preContent">
       <p class="text-muted">
         <strong>MongoDB</strong> es una base de datos NoSQL diseñada para manejar datos no estructurados y semiestructurados de forma óptima. 
         A diferencia de los sistemas SQL tradicionales, MongoDB almacena documentos en formato BSON (similar a JSON), lo que permite mayor <strong>agilidad,
             velocidad y escalabilidad</strong> en el procesamiento de datos.
+
       </p>
-     
+     <p class="text-center">
+        <a
+          title="Web oficial de MongoDB"
+          href="#ROGER"
+          class="btn-primary mt-12 mb-12 w-auto">Conoce más sobre MongoDB</a
+        >
+      </p>
     </Fragment>
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-lightgray"></div>
@@ -74,7 +81,6 @@ const metadata = {
   <Features3
   columns={3}
   title='Ventajas de usar MongoDB sobre bases de datos SQL'
-    classes={{ container: 'pt-0 md:pt-0 lg:pt-0' }}
     items={[
        {
         description: `Flexibilidad en la estructura de datos, permitiendo esquemas dinámicos sin necesidad de definir relaciones rígidas.`,
@@ -103,13 +109,44 @@ const metadata = {
     ]}
   >
 
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-lightgray"></div>
-    </Fragment>
   </Features3>
 
+  <Features2
+  columns={2}
+  title="Casos en los que MongoDB es la mejor opción"
+  subtitle='MongoDB es ideal para aplicaciones que requieren almacenar una gran cantidad de datos no relacionados, por ejemplo:'
+  items={[
+    {
+      title: 'Aplicaciones con gran cantidad de contenido',
+      description: 'Almacena y gestiona contenido flexible y diverso, adaptándose a estructuras cambiantes.',
+      icon: 'tabler:file-text',
+    },
+    {
+      title: 'Catálogos de productos y comercio electrónico',
+      description: 'Maneja grandes volúmenes de datos de productos con atributos variables y jerarquías complejas.',
+      icon: 'tabler:shopping-cart',
+    },
+    {
+      title: 'Aplicaciones móviles y de Internet de las Cosas (IoT)',
+      description: 'Recopila y procesa datos en tiempo real de dispositivos, sensores y usuarios móviles.',
+      icon: 'tabler:device-mobile',
+    },
+    {
+      title: 'Análisis de datos en tiempo real y Big Data',
+      description: 'Escala horizontalmente para manejar grandes volúmenes de datos y realizar análisis rápidos.',
+      icon: 'tabler:chart-bar',
+    }
+  ]}
+>
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-lightgray"></div>
+  </Fragment>
+</Features2>
+
+
   <Content
-    title="Nuestra experiencia con MongoDB en Gilsys"
+    isReversed
+    title="¿Cuando usamos MongoDB en Gilsys?"
     image={{
       src: '~/assets/images/estudio-integracion-ia.jpg',
       alt: 'Estudi per integrar intel·ligència artificial',
@@ -117,117 +154,43 @@ const metadata = {
   >
     <Fragment slot="content">
       <p class="text-muted">
-        En Gilsys, hemos implementado <strong>MongoDB</strong> en diversos proyectos para mejorar el rendimiento y la escalabilidad de las aplicaciones. Diseñamos bases de datos optimizadas para almacenar, consultar y analizar datos con la máxima eficiencia.
+        En Gilsys, hemos implementado <strong>MongoDB</strong> en diferentes proyectos para mejorar el rendimiento y la escalabilidad de las aplicaciones, siempre que se requiera una estructura de datos no relacionada.
+        Las bases de datos NoSQL están optimizadas para almacenar, consultar y analizar una <strong>gran cantidad de datos</strong> con la máxima eficiencia.
       </p>
       <p class="text-muted mt-4">
-        Gracias a nuestro conocimiento en arquitecturas NoSQL, ayudamos a empresas a migrar desde bases de datos relacionales tradicionales hacia soluciones más flexibles y adaptables a las necesidades actuales.
+        Gracias a nuestro conocimiento en arquitecturas no relacionales, ayudamos a empresas a migrar desde bases de datos relacionales tradicionales hacia soluciones más flexibles y adaptables a las necesidades actuales.
+      </p>
+      <p class="text-center">
+        <a
+          title="Migración de datos desde plataformas antiguas"
+          href="#ROGER"
+          class="btn-primary mt-12 mb-12 w-auto">Conoce más sobre migración de datos</a
+        >
       </p>
     </Fragment>
   </Content>
   
-  <Features
-  title="Casos en los que MongoDB es la mejor opción"
-  subtitle='MongoDB es ideal para aplicaciones que requieren alta flexibilidad y rendimiento, como:'
-  items={[
-    {
-      list: ['Desarrollo de procedimientos almacenados y funciones en PL/SQL.'],
-      icon: 'tabler:code',
-    },
-    {
-      list: ['Optimización de consultas SQL y mejora del rendimiento.'],
-      icon: 'tabler:rocket',
-    },
-    {
-      list: ['Diseño de bases de datos con modelado relacional en Oracle.'],
-      icon: 'tabler:database',
-    },
-    {
-      list: ['Migración de bases de datos entre versiones y plataformas.'],
-      icon: 'tabler:exchange',
-    },
-    {
-      list: ['Auditoría de seguridad y control de acceso.'],
-      icon: 'tabler:shield-check',
-    },
-    {
-      list: ['Estrategias de respaldo y recuperación de datos.'],
-      icon: 'tabler:cloud-download',
-    },
-  ]}
-  >
-  <Fragment slot="bg">
-    <div class="absolute inset-0 bg-lightgray"></div>
-  </Fragment>
-</Features>
-
-<Content
-    title="Modelado y optimización de bases de datos en MongoDB"
-    image={{
-      src: '~/assets/images/estudio-integracion-ia.jpg',
-      alt: 'Estudi per integrar intel·ligència artificial',
-    }}
-  >
-    <Fragment slot="content">
-      <p class="text-muted">
-        El diseño eficiente de una base de datos NoSQL es fundamental para maximizar su rendimiento. En Gilsys, 
-        aplicamos buenas prácticas de modelado de datos en MongoDB, garantizando estructuras eficientes.
-      </p>
-    </Fragment>
-  </Content>
-
-<Features
-  title="Nuestros servicios incluyen:"
-  items={[
-    {
-      list: ['Diseño y modelado de bases de datos NoSQL con MongoDB.'],
-      icon: 'tabler:database',
-    },
-    {
-      list: ['Optimización de consultas y mejora del rendimiento.'],
-      icon: 'tabler:bolt',
-    },
-    {
-      list: ['Migración desde SQL a NoSQL.'],
-      icon: 'tabler:exchange',
-    },
-    {
-      list: ['Estrategias de replicación y sharding para escalabilidad.'],
-      icon: 'tabler:git-branch',
-    },
-    {
-      list: ['Implementación de índices avanzados para mejorar la velocidad de consulta.'],
-      icon: 'tabler:hash',
-    },
-  ]}
-  >
-  <Fragment slot="bg">
-    <div class="absolute inset-0 bg-lightgray"></div>
-  </Fragment>
-</Features>
-
-
-
+  
   <CallToAction
     backgroundImage={{ src: '~/assets/images/dots/24.jpg', alt: 'Fons abstracte' }}
     actions={[
       {
         variant: 'primary',
-        text: 'Pressupost gratuït',
+        text: 'Presupuesto gratuito',
         href: u('contact'),
       },
       {
         variant: 'primary',
-        text: 'Trucar',
+        text: 'Llamar',
         href: 'tel:+34665331271',
       },
     ]}
   >
     <Fragment slot="title"
-      >Deja de buscar, <span class="custom-gradient">somos especialistas en MongoDB</span></Fragment
+      >Confía en Gilsys para implementar bases de datos con <span class="custom-gradient">MongoDB</span></Fragment
     >
     <Fragment slot="subtitle"
-      >[TODO] PHP continu empreses que estan integrant <strong>intel·ligència artificial</strong> en els seus processos seran les que millor
-      preparades estaran en un futur proper.</Fragment
+      >Expertos en NoSQL y SQL, te guiaremos para elegir la mejor solución. Descubre la mejor forma de almacenar tus datos.</Fragment
     >
   </CallToAction>
 </Layout>

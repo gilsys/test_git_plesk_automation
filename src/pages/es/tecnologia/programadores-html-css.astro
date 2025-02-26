@@ -15,7 +15,7 @@ import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 const u = useRoutes(getLangFromUrl(Astro.url));
 
 const metadata = {
-  title: 'Empresa de programación a medida con HTML y CSS | +20 anys',
+  title: 'Empresa de maquetación a medida con HTML y CSS',
   description: `Somos un equipo de programadores expertos en HTML y CSS, desarrollamos herramientas profesionales con estos lenguajes de programación. ¡Presupuesto gratuito! Estamos en Osona, Barcelona.`,
 };
 ---
@@ -23,15 +23,15 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- Hero Section -->
   <Hero
-    tagline="Maquetación de diseños a medida con HTML y CSS en Osona, provincia de Barcelona"
+    tagline="Maquetación de diseños y programación a medida con HTML y CSS"
     actions={[{ variant: 'primary', text: 'Pressupost gratuït', href: u('contact') }]}
     backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/geometric-2/4.jpg' }}
   >
     <Fragment slot="title">
-        Programamos con <span class="text-accent highlight">HTML y CSS</span>
+        Programación, maquetación y diseño con <span class="text-accent highlight">HTML y CSS</span>
     </Fragment>
     <Fragment slot="subtitle">
-        Somos un equipo de programadores expertos en HTML y CSS, desarrollamos herramientas profesionales con estos lenguajes de programación.
+        Somos un equipo de programadores expertos en HTML y CSS, a nivel experto, teniendo en cuenta los requisitos más actuales.
     </Fragment>
   </Hero>
 
@@ -39,7 +39,7 @@ const metadata = {
     title="<span class='custom-gradient'>HTML y CSS:</span> La esencia de una web estructurada y funcional"
     image={{
       src: '~/assets/images/estudio-integracion-ia.jpg',
-      alt: 'Estudi per integrar intel·ligència artificial',
+      alt: 'Presupuesto gratuito',
     }}
   >
     <Fragment slot="content">
@@ -211,12 +211,12 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Pressupost gratuït',
+        text: 'Presupuesto gratuito',
         href: u('contact'),
       },
       {
         variant: 'primary',
-        text: 'Trucar',
+        text: 'Llamar',
         href: 'tel:+34665331271',
       },
     ]}

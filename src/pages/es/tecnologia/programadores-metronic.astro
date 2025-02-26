@@ -14,29 +14,30 @@ import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 const u = useRoutes(getLangFromUrl(Astro.url));
 
 const metadata = {
-  title: 'Empresa de programación a medida con Metronic | +20 años',
-  description: `Somos un equipo de programadores expertos en Metronic, desarrollamos herramientas profesionales con este framwerok. ¡Presupuesto gratuito! Estamos en Osona, Barcelona.`,
+  title: 'Programación de interfaces de administración a medida con Metronic',
+  description: `Nuestra empresa utiliza Metronic, un framework basado en Bootstrap o Tailwind, para desarrollar interfaces de administración profesionales.`,
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- Hero Section -->
   <Hero
-    tagline="Nos encontrarás cerca de Vic (Osona), en la provincia de Barcelona."
-    actions={[{ variant: 'primary', text: 'Pressupost gratuït', href: u('contact') }]}
-    backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/geometric-2/4.jpg' }}
+    tagline="Interfaces de usuario funcionales, intuitivas y estables."
+    actions={[{ variant: 'primary', text: 'Presupuesto gratuito', href: u('contact') }]}
+    backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/geometric-2/4.jpg' }}
   >
     <Fragment slot="title">
-        Desarrollo de soluciones con <span class="text-accent highlight">Metronic</span>
+      Programación de interfaces de administración con <span class="text-accent highlight">Metronic</span>
     </Fragment>
     <Fragment slot="subtitle">
-      Somos un equipo de programadores expertos en Metronic, desarrollamos herramientas profesionales con este framework.
+      Recomendamos Metronic, el framework que nos permite diseñar y programar la parte gráfica de aplicaciones web con
+      objetivos principalmente funcionales.
     </Fragment>
   </Hero>
 
   <Content
-  subtitle='Metronic es uno de los frameworks más eficientes y escalables.'
-    title="Desarrollo de aplicaciones con <span class='custom-gradient'>Metronic</span>"
+    subtitle="Lanzado en 2013, sigue siendo el framework número uno para la creación de interfaces funcionales."
+    title="Con <span class='custom-gradient'>Metronic</span>, programamos atractivas aplicaciones para administración"
     image={{
       src: '~/assets/images/estudio-integracion-ia.jpg',
       alt: 'Estudi per integrar intel·ligència artificial',
@@ -44,71 +45,68 @@ const metadata = {
   >
     <Fragment slot="content">
       <p class="text-muted">
-        Las plataformas de administración y gestión de datos requieren interfaces atractivas, eficientes y escalables. 
-        En nuestro equipo, trabajamos con Metronic, uno de los sistemas de plantillas más avanzados para el desarrollo de backoffice, 
-        paneles de administración y aplicaciones web altamente funcionales. 
+        Las plataformas de administración y gestión de datos requieren <strong>funcionales</strong>, <strong
+          >intuitivas</strong
+        > y <strong>estables</strong>. Nuestro equipo de programadores trabaja habitualmente con Metronic, uno de los
+        sistemas de plantillas más avanzados para el desarrollo de backoffice, paneles de administración y aplicaciones
+        web altamente funcionales.
+        <a
+          title="Programación de aplicaciones web a medida"
+          href={u('development/web')}
+          class="btn-primary mt-12 mb-12 w-auto">Conoce más sobre programación de aplicaciones web</a
+        >
       </p>
-      <p class="text-muted mt-4">
-        Desplegamos soluciones a medida desde Osona, en la provincia de Barcelona, 
-        para clientes sin límite geográfico. 
-      </p>
-    </Fragment>
-  </Content>
-
-  <Content
-    title="Metronic: Potencia y flexibilidad en aplicaciones de administración"
-    classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}
-  >
-    <Fragment slot="preContent">
-      <p class="text-muted">
-        Metronic es un potente framework de diseño basado en Bootstrap y Angular, ideal para desarrollar sistemas de gestión con una interfaz moderna, 
-        intuitiva y adaptable a distintos dispositivos. Gracias a su amplia colección de componentes y su estructura optimizada, 
-        permite acelerar el desarrollo de aplicaciones empresariales y mejorar la usabilidad del software.
-      </p>
-    </Fragment>
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-lightgray"></div>
     </Fragment>
   </Content>
 
   <Features
-    title="Ventajas de utilizar Metronic en proyectos de programación a medida:"
+    title="Ventajas de utilizar Metronic en proyectos de programación a medida"
     items={[
       {
-        list: ['Diseño moderno y responsive, adaptable a cualquier dispositivo.'],
+        title: 'Diseño moderno y responsive',
+        description:
+          'Adaptable a cualquier dispositivo, asegurando una experiencia de usuario óptima en móviles, tabletas y ordenadores.',
         icon: 'tabler:check',
       },
       {
-        list: [
-          'Biblioteca extensa de componentes, que agiliza el desarrollo sin comprometer la personalización.',
-        ],
+        title: 'Biblioteca extensa de componentes',
+        description:
+          'Agiliza el desarrollo sin comprometer la personalización, ofreciendo una amplia gama de elementos prediseñados y listos para usar.',
         icon: 'tabler:check',
       },
       {
-        list: [
-          'Integración con frameworks avanzados, como SlimFramework.',
-        ],
+        title: 'Integración con frameworks avanzados',
+        description:
+          'Compatible con frameworks como <a href="#ROGER">SlimFramework</a>, facilitando la creación de aplicaciones robustas y escalables.',
         icon: 'tabler:check',
       },
       {
-        list: [
-          'Optimización para rendimiento y carga rápida, asegurando tiempos de respuesta eficientes.',
-        ],
+        title: 'Rendimiento y carga rápida',
+        description: 'Optimizado para asegurar tiempos de respuesta eficientes y una experiencia de usuario fluida.',
         icon: 'tabler:check',
       },
       {
-        list: [
-          'Personalización total, permitiendo adaptar cada elemento a las necesidades del proyecto.',
-        ],
+        title: 'Personalización',
+        description:
+          'Permite a desarrolladores expertos, adaptar cada elemento a las necesidades específicas del proyecto, desde la apariencia hasta la funcionalidad.',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Multiples estructuras de base',
+        description:
+          'Ofrece diferentes plantillas dentro de su paquete, para poder disponer directamente de una base sobre la que trabajar, según el enfoque de cada proyecto.',
         icon: 'tabler:check',
       },
     ]}
-  />
+  >
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-lightgray"></div>
     </Fragment>
+  </Features>
 
-    <Features3
+  <Features3
+  title='¿Cómo usamos Metronic en Gilsys?'
+  subtitle='Cieratmente es un framework que <strong>nos encanta</strong>, lo usamos en casi todas las soluciones de administración que desarrollamos a medida.'
     items={[
       {
         title: 'Construcción de paneles de administración y aplicaciones funcionales',
@@ -127,32 +125,49 @@ const metadata = {
       },
     ]}
   >
+    
+  </Features3>
+
+  <Content title="Versiones con Tailwind y Boostrap" classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}>
+    <Fragment slot="preContent">
+      <p class="text-muted">
+        Existen dos versiones del framework, pudiendo escoger entre <a href='#ROGER' class="text-accent">Bootstrap</a> o <a href='#ROGER' class="text-accent">Tailwind</a>. Independientemente de la
+        elegida, se dispondrá de una gran colección de componentes y su estructura optimizada, permite acelerar el desarrollo de
+        aplicaciones empresariales y facilitar el uso al usuario.</p>
+      <p class="text-center">
+        <a
+          title="Web oficial de Metronic"
+          href="#ROGER"
+          class="btn-primary mt-12 mb-12 w-auto">Conoce más sobre Metronic</a
+        >
+      </p>
+    </Fragment>
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-lightgray"></div>
     </Fragment>
-  </Features3>
+  </Content>
+  
 
   <CallToAction
-    backgroundImage={{ src: '~/assets/images/dots/24.jpg', alt: 'Fons abstracte' }}
+    backgroundImage={{ src: '~/assets/images/dots/24.jpg', alt: 'Fondo abstracto' }}
     actions={[
       {
         variant: 'primary',
-        text: 'Pressupost gratuït',
+        text: 'Presupuesto gratuito',
         href: u('contact'),
       },
       {
         variant: 'primary',
-        text: 'Trucar',
+        text: 'Llamar',
         href: 'tel:+34665331271',
       },
     ]}
   >
     <Fragment slot="title"
-      >Deja de buscar, <span class="custom-gradient">somos especialistas en Metronic</span> | +20 años</Fragment
+      >Tanto si conoces <span class="custom-gradient">Metronic</span> como si no, desde Gilsys te lo recomendamos</Fragment
     >
     <Fragment slot="subtitle"
-      >[TODO] PHP continu empreses que estan integrant <strong>intel·ligència artificial</strong> en els seus processos seran les que millor
-      preparades estaran en un futur proper.</Fragment
+      >Nos encargamos de preparar una interfaz atractiva para tu proyecto, para que los usuarios se sientan cómodos y disfruten utilizando la herramienta creada.</Fragment
     >
   </CallToAction>
 </Layout>

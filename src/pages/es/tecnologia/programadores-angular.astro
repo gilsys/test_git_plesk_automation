@@ -14,56 +14,54 @@ import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 const u = useRoutes(getLangFromUrl(Astro.url));
 
 const metadata = {
-  title: 'Empresa de programació a mida amb Angular | +20 anys',
-  description: `Som un equip de programadors experts en Angular, desenvolupem eines professionals amb aquest llenguatge de programació. Pressupost gratuït! Estem a Osona, Barcelona.`,
+  title: 'Empresa de programación frontend con Angular',
+  description: `En Gilsys ofrecemos programación a medida de aplicaciones web con Angular, creamos interfaces profesionales con este lenguaje de programación. ¡Presupuesto gratuito!`,
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Section -->
   <Hero
-    tagline="Ens trobaràs prop de Vic (Osona), a la província de Barcelona."
-    actions={[{ variant: 'primary', text: 'Pressupost gratuït', href: u('contact') }]}
-    backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/geometric-2/4.jpg' }}
+    tagline="Interfaces modernas y ligeras, para aplicaciones web o apps móviles."
+    actions={[{ variant: 'primary', text: 'Presupuesto gratuito', href: u('contact') }]}
+    backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/geometric-2/4.jpg' }}
   >
     <Fragment slot="title">
-      Programem amb <span class="text-accent highlight">Angular</span>
+      Programación de aplicaciones web con <span class="text-accent highlight">Angular</span>
     </Fragment>
     <Fragment slot="subtitle">
-      Som un equip de programadors experts en Angular, desenvolupem eines professionals amb aquest llenguatge de
-      programació.
+      Creamos interfaces Frontend profesionales con este lenguaje de programación basado en Javascript.
     </Fragment>
   </Hero>
 
   <Content
-  subtitle='PHP és un dels llenguatges de programació web més robustos i utilitzats.'
-    title="Desarrollo de aplicaciones con <span class='custom-gradient'>Angular</span> en Osona, provincia de Barcelona"
+    subtitle="Angular permite crear herramientas eficientes y escalables."
+    title="Desarrollo de aplicaciones web y apps móviles con <span class='custom-gradient'>Angular</span>"
     image={{
-      src: '~/assets/images/estudio-integracion-ia.jpg',
-      alt: 'Estudi per integrar intel·ligència artificial',
+      src: '~/assets/images/logo-angular#ROGER.jpg',
+      alt: 'Logotipo Angular',
     }}
   >
     <Fragment slot="content">
       <p class="text-muted">
-        En el mundo digital actual, contar con aplicaciones web rápidas, escalables y de alto rendimiento es clave para cualquier negocio. 
-        Nuestro equipo de especialistas en Angular, con amplia experiencia en el desarrollo frontend, 
-        crea soluciones a medida adaptadas a las necesidades de cada empresa sin limitación geográfica. 
+        En el mundo digital actual, contar con aplicaciones web rápidas, escalables y de alto rendimiento es clave para
+        cualquier negocio. Nuestro equipo de especialistas en Angular, con amplia experiencia en el desarrollo frontend,
+        crea soluciones a medida adaptadas a las necesidades de cada empresa.
       </p>
       <p class="text-muted mt-4">
-        Además, con Apache Cordova, extendemos la funcionalidad de Angular para desarrollar aplicaciones móviles híbridas, compatibles con iOS y Android.
+        Además, con Apache Cordova, extendemos la funcionalidad de Angular para desarrollar <a
+          href="#ROGER"
+          class="text-accent">aplicaciones móviles híbridas</a
+        >, compatibles con iOS y Android.
       </p>
     </Fragment>
   </Content>
 
-  <Content
-    title="Soluciones innovadoras con Angular"
-    classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}
-  >
+  <Content title="Soluciones innovadoras" classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}>
     <Fragment slot="preContent">
       <p class="text-muted">
-        Angular es un framework moderno desarrollado por Google, ideal para la construcción de interfaces dinámicas y eficientes. 
-        Utilizamos esta tecnología para diseñar aplicaciones escalables, optimizadas y con una experiencia de usuario superior, 
-        tanto en entornos web como en dispositivos móviles.
+        Angular es un framework moderno desarrollado por Google, ideal para la construcción de interfaces dinámicas y
+        eficientes. Utilizamos esta tecnología para diseñar aplicaciones escalables, optimizadas y con una experiencia
+        de usuario superior, tanto en entornos web como en dispositivos móviles.
       </p>
     </Fragment>
     <Fragment slot="bg">
@@ -72,32 +70,32 @@ const metadata = {
   </Content>
 
   <Features3
-  title='¿Por qué Angular es una gran opción para tu proyecto?'
+    title="¿Por qué Angular es una gran opción para tu proyecto?"
     classes={{ container: 'pt-0 md:pt-0 lg:pt-0' }}
     items={[
       {
         description: `Estructura modular y reutilizable, facilitando el mantenimiento y la escalabilidad.`,
-        icon: 'tabler:settings',
+        icon: 'tabler:components', // Icono para componentes y módulos
       },
       {
         description: `Rendimiento optimizado, gracias a la carga diferida y la arquitectura basada en componentes.`,
-        icon: 'tabler:window',
+        icon: 'tabler:rocket', // Icono para rendimiento y velocidad
       },
       {
         description: `Seguridad integrada, con medidas avanzadas contra vulnerabilidades y ataques.`,
-        icon: 'tabler:search',
+        icon: 'tabler:shield-check', // Icono para seguridad y protección
       },
       {
         description: `Compatible con entornos empresariales, integrándose perfectamente con APIs REST y otras tecnologías.`,
-        icon: 'tabler:search',
+        icon: 'tabler:server', // Icono para servidores y APIs
       },
       {
         description: `Desarrollo de apps híbridas, usando Apache Cordova para llevar tus aplicaciones web a dispositivos móviles.`,
-        icon: 'tabler:search',
+        icon: 'tabler:device-mobile', // Icono para dispositivos móviles y aplicaciones híbridas
       },
       {
         description: `Soporte de Google y comunidad activa, asegurando mejoras constantes y actualizaciones frecuentes.`,
-        icon: 'tabler:search',
+        icon: 'tabler:brand-google', // Icono para Google y su soporte
       },
     ]}
   >
@@ -107,16 +105,38 @@ const metadata = {
   </Features3>
 
   <Content
-    title="Transformamos tus ideas en aplicaciones web y móviles híbridas"
+    title="Con Angular, transformamos tus ideas en aplicaciones web y móviles híbridas"
     image={{
-      src: '~/assets/images/estudio-integracion-ia.jpg',
-      alt: 'Estudi per integrar intel·ligència artificial',
+      src: '~/assets/images/angular-programacion#ROGER.jpg',
+      alt: 'Imagen que refleja desarrollo web y apps con Angular',
     }}
+    items={[
+      {
+        title: 'Diseño basado en Componentes',
+        description:
+          'Creamos una arquitectura modular basada en componentes reutilizables, definiendo claramente la estructura y el flujo de datos de tu aplicación Angular.',
+      },
+      {
+        title: 'Desarrollo con TypeScript',
+        description:
+          'Implementamos la lógica de la aplicación utilizando TypeScript, aprovechando las ventajas de tipado estático y orientación a objetos para un código más robusto y mantenible.',
+      },
+      {
+        title: 'Despliegue y Optimización',
+        description:
+          'Utilizamos Angular CLI para generar builds optimizados y desplegamos tu aplicación en entornos de producción, asegurando un rendimiento óptimo y una carga rápida.',
+      },
+      {
+        title: 'Actualizaciones y Mantenimiento con Angular CLI',
+        description:
+          'Mantenemos tu aplicación actualizada con las últimas versiones de Angular utilizando Angular CLI, y ofrecemos soporte continuo para resolver cualquier incidencia y asegurar su correcto funcionamiento a largo plazo.',
+      },
+    ]}
   >
     <Fragment slot="content">
       <p class="text-muted">
-        Ya sea que necesites una nueva aplicación desde cero o quieras mejorar un sistema existente, nos encargamos de todo el proceso: 
-        desde el diseño inicial hasta el despliegue y la optimización continua.
+        Ya sea que necesites una nueva aplicación desde cero o quieras mejorar un sistema existente, aprovechamos al
+        máximo las capacidades de Angular:
       </p>
     </Fragment>
   </Content>
@@ -131,9 +151,15 @@ const metadata = {
   >
     <Fragment slot="content">
       <p class="text-muted">
-        Si tu plataforma actual ha quedado obsoleta, te ayudamos a migrarla a Angular, garantizando un proceso ágil y sin afectar la operatividad de tu negocio. 
-        Implementamos código limpio, actualizado y alineado con las mejores prácticas de desarrollo.
+        Si tu plataforma actual ha quedado obsoleta, te ayudamos a migrarla a Angular, garantizando un proceso ágil y
+        sin afectar la operatividad de tu negocio. Implementamos código limpio, actualizado y alineado con las mejores
+        prácticas de desarrollo.
       </p>
+      <a
+        title="Migración de herramientas web a tecnología Angular"
+        href={u('migration')}
+        class="btn-primary mt-12 mb-12 w-auto">Renovación de software</a
+      >
     </Fragment>
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-lightgray"></div>
@@ -149,33 +175,39 @@ const metadata = {
   >
     <Fragment slot="content">
       <p class="text-muted">
-        Nuestros expertos están disponibles para asegurar que tu aplicación se mantenga estable, segura y en constante evolución. 
-        Ofrecemos mantenimiento correctivo, preventivo y evolutivo para que tu proyecto siempre funcione al máximo nivel.
+        Nuestros expertos están disponibles para asegurar que tu aplicación se mantenga estable, segura y en constante
+        evolución. Ofrecemos mantenimiento correctivo, preventivo y evolutivo para que tu proyecto siempre funcione al
+        máximo nivel.
+        <a
+          title="Migración de herramientas web a tecnología Angular"
+          href={u('migration')}
+          class="btn-primary mt-12 mb-12 w-auto">Conoce más sobre nuestra empresa</a
+        >
       </p>
     </Fragment>
   </Content>
 
   <CallToAction
-    backgroundImage={{ src: '~/assets/images/dots/24.jpg', alt: 'Fons abstracte' }}
+    backgroundImage={{ src: '~/assets/images/dots/24.jpg', alt: 'Fondo abstracto' }}
     actions={[
       {
         variant: 'primary',
-        text: 'Pressupost gratuït',
+        text: 'Presupuesto gratuito',
         href: u('contact'),
       },
       {
         variant: 'primary',
-        text: 'Trucar',
+        text: 'Llamar',
         href: 'tel:+34665331271',
       },
     ]}
   >
     <Fragment slot="title"
-      >Deixa de buscar, <span class="custom-gradient">som especialistes en Angular</span> | +20 anys</Fragment
+      >Si estás buscando especialistas en <span class="custom-gradient">Angular</span>, los has encontrado.</Fragment
     >
     <Fragment slot="subtitle"
-      >PHP continu empreses que estan integrant <strong>intel·ligència artificial</strong> en els seus processos seran les que millor
-      preparades estaran en un futur proper.</Fragment
+      >Estamos a tu disposición para elaborar una propuesta de desarrollo en Angular, creando una maquetación a medida
+      para tu proyecto.</Fragment
     >
   </CallToAction>
 </Layout>
