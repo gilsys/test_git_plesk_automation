@@ -12,13 +12,13 @@ const u = useRoutes(getLangFromUrl(Astro.url));
 const metadata = {
   title: 'Desarrollo de Aplicaciones Web con JavaScript',
   description:
-    'En Gilsys, con más de 20 años de experiencia, nuestros expertos en JavaScript programan desde aplicaciones web avanzadas hasta soluciones a medida.',
+    'En Gilsys, con más de 20 años de experiencia, desarrollamos aplicaciones web avanzadas y soluciones a medida con JavaScript.',
 };
 ---
 
 <Layout metadata={metadata}>
   <Hero
-    tagline="JavaScript: Un lenguaje esencial para el desarrollo moderno"
+    tagline="JavaScript: La clave del desarrollo web moderno"
     actions={[{ variant: 'primary', text: 'Presupuesto gratuito', href: u('contact') }]}
     backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/geometric-2/4.jpg' }}
   >
@@ -26,8 +26,8 @@ const metadata = {
       Desarrollo de aplicaciones web con <span class="text-accent highlight">JavaScript</span>
     </Fragment>
     <Fragment slot="subtitle">
-      Con más de 20 años de experiencia, nuestros expertos en JavaScript programan desde aplicaciones web avanzadas
-      hasta soluciones a medida.
+      Más de 20 años de experiencia creando soluciones innovadoras con JavaScript, desde aplicaciones web avanzadas
+      hasta desarrollos a medida para empresas.
     </Fragment>
   </Hero>
 
@@ -41,10 +41,9 @@ const metadata = {
   >
     <Fragment slot="content">
       <p class="text-muted">
-         Lenguaje que conocemos
-        desde el inicio de nuestra empresa, nos ha acompañado durante más de 20 años y su evolución lo ha convertido en un
-        lenguaje transversal, fundamental no solo para la interactividad web, sino también para el desarrollo de aplicaciones
-        robustas y soluciones para herramientas avanzadas.
+        Desde nuestros inicios, JavaScript ha sido una parte esencial de nuestro trabajo. Su evolución lo ha convertido
+        en un lenguaje fundamental, no solo para la interactividad web, sino también para el desarrollo de aplicaciones
+        robustas y soluciones avanzadas.
       </p>
     </Fragment>
   </Content>
@@ -52,73 +51,73 @@ const metadata = {
   <Features2
     columns={2}
     title="Desde Gilsys personalizamos tu proyecto desarrollando con <span class='custom-gradient'>JavaScript</span>"
-    subtitle="Nos permite ofrecer como desarrolladores expertos, adaptabilidad, rendimiento y eficiencia para soluciones web a medida."
+    subtitle="Como expertos en desarrollo, ofrecemos soluciones web a medida con máxima adaptabilidad, rendimiento y eficiencia."
     items={[
-        {
-            title: 'Adaptabilidad',
-            description: 'De web apps a herramientas del servidor, JavaScript cubre múltiples necesidades.',
-            icon: 'tabler:arrows-right-left',
-        },
-        {
-            title: 'Alto rendimiento',
-            description: 'Crea soluciones ligeras y potentes que maximizan la eficiencia sin sacrificar funcionalidad.',
-            icon: 'tabler:rocket',
-        },
-        {
-            title: 'Desarrollo simplificado',
-            description: 'Acelera el proceso de desarrollo con un lenguaje que facilita la implementación rápida de ideas.',
-            icon: 'tabler:bolt',
-        },
-        {
-            title: 'Alcance universal',
-            description: 'Asegura la compatibilidad y accesibilidad de tu proyecto en cualquier dispositivo y navegador.',
-            icon: 'tabler:world',
-        },
+      {
+        title: 'Adaptabilidad',
+        description: 'De web apps a herramientas del servidor, JavaScript cubre múltiples necesidades.',
+        icon: 'tabler:arrows-right-left',
+      },
+      {
+        title: 'Alto rendimiento',
+        description: 'Desarrolla soluciones optimizadas y eficientes sin comprometer la funcionalidad.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Desarrollo simplificado',
+        description: 'Acelera el proceso de desarrollo con un lenguaje que facilita la implementación rápida de ideas.',
+        icon: 'tabler:bolt',
+      },
+      {
+        title: 'Compatibilidad total',
+        description: 'Asegura la compatibilidad y accesibilidad de tu proyecto en cualquier dispositivo y navegador.',
+        icon: 'tabler:world',
+      },
     ]}
   >
-     <Fragment slot="bg">
+    <Fragment slot="bg">
       <div class="absolute inset-0 bg-lightgray"></div>
     </Fragment>
   </Features2>
 
-
   <Features
-  title="Utilizamos JavaScript como lenguaje de programación versátil"
-  subtitle='Desde Gilsys, podemos trabajar con cualquier herramienta que utilice el lenguaje JS'
-  items={[
-    {
-      title: 'Desarrollo web front-end',
-      description: 'Crea interfaces interactivas, animaciones y manipula el DOM en tiempo real para una experiencia de usuario mejorada.',
-      icon: 'tabler:browser',
-    },
-    {
-      title: 'Desarrollo web back-end',
-      description: 'Utiliza Node.js para construir aplicaciones web escalables y eficientes en el servidor.',
-      icon: 'tabler:server',
-    },
-    {
-      title: 'Desarrollo móvil',
-      description: 'Construye aplicaciones móviles multiplataforma con frameworks como React Native e Ionic.',
-      icon: 'tabler:device-mobile',
-    },
-    {
-      title: 'Desarrollo de escritorio',
-      description: 'Crea aplicaciones de escritorio multiplataforma con Electron, utilizando tecnologías web.',
-      icon: 'tabler:devices-pc',
-    },
-    {
-      title: 'Internet de las cosas (IoT)',
-      description: 'Programa la lógica de dispositivos conectados, como sensores y actuadores.',
-      icon: 'tabler:smart-home',
-    },
-    {
-      title: 'Componentes interactivos y gráficos',
-      description: 'Desarrollamos componentes web interactivos, visualizaciones de datos, gráficos y otras soluciones personalizadas con JavaScript.',
-      icon: 'tabler:chart-bar',
-    },
-  ]}
->
-</Features>
+    title="Utilizamos JavaScript como lenguaje de programación versátil"
+    subtitle="Desde Gilsys, podemos trabajar con cualquier herramienta que utilice el lenguaje JS"
+    items={[
+      {
+        title: 'Desarrollo web front-end',
+        description:
+          'Crea interfaces interactivas, animaciones y manipula el DOM en tiempo real para una experiencia de usuario mejorada.',
+        icon: 'tabler:browser',
+      },
+      {
+        title: 'Desarrollo web back-end',
+        description: 'Utiliza Node.js para construir aplicaciones web escalables y eficientes en el servidor.',
+        icon: 'tabler:server',
+      },
+      {
+        title: 'Desarrollo móvil',
+        description: 'Construye aplicaciones móviles multiplataforma con frameworks como React Native e Ionic.',
+        icon: 'tabler:device-mobile',
+      },
+      {
+        title: 'Desarrollo de escritorio',
+        description: 'Crea aplicaciones de escritorio multiplataforma con Electron, utilizando tecnologías web.',
+        icon: 'tabler:devices-pc',
+      },
+      {
+        title: 'Internet de las cosas (IoT)',
+        description: 'Programa la lógica de dispositivos conectados, como sensores y actuadores.',
+        icon: 'tabler:smart-home',
+      },
+      {
+        title: 'Componentes interactivos y gráficos',
+        description:
+          'Desarrollamos componentes web interactivos, visualizaciones de datos, gráficos y otras soluciones personalizadas con JavaScript.',
+        icon: 'tabler:chart-bar',
+      },
+    ]}
+  />
 
   <Content
     isReversed
@@ -163,7 +162,7 @@ const metadata = {
       <span class="custom-gradient">JavaScript:</span> Transforma tu proyecto con Gilsys
     </Fragment>
     <Fragment slot="subtitle">
-      Descubre cómo JavaScript puede impulsar tu negocio. Contacta con nosotros y empieza a construir el futuro.
+      Aprovecha el potencial de JavaScript para tu negocio. Contáctanos y lleva tu proyecto al siguiente nivel.
     </Fragment>
   </CallToAction>
 </Layout>
