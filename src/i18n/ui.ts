@@ -1228,52 +1228,52 @@ export const footer = {
      [
       {
         href: routes['es']['technology/php'],
-        title: 'Eines de Business Intelligence i analítica de dades',
+        title: 'Desarrollo a medida con PHP',
         text: 'PHP'
       },
       {
         href: routes['es']['technology/react-native'],
-        title: 'Eines de Business Intelligence i analítica de dades',
+        title: 'Programamos con React Native',
         text: 'React Native'
       },
       {
         href: routes['es']['technology/metronic'],
-        title: 'Eines de Business Intelligence i analítica de dades',
+        title: 'Programación de interfaces de administración con Metronic',
         text: 'Metronic'
       },
       {
         href: routes['es']['technology/slim-framework'],
-        title: 'Eines de Business Intelligence i analítica de dades',
+        title: ' Desarrollamos con Slim Framework',
         text: 'Slim Framework'
       },
       {
         href: routes['es']['technology/tailwind'],
-        title: 'Eines de Business Intelligence i analítica de dades',
+        title: 'Diseño de interfaces de usuario con Tailwind CSS',
         text: 'Tailwind'
       },
       {
         href: routes['es']['technology/bootstrap'],
-        title: 'Eines de Business Intelligence i analítica de dades',
+        title: 'Desarrollo de interfaces responsive con Bootstrap',
         text: 'Bootstrap'
       },
       {
         href: routes['es']['technology/mysql'],
-        title: 'Eines de Business Intelligence i analítica de dades',
+        title: 'Servicios de desarrollo de bases de datos con MySQL',
         text: 'MySQL'
       },
       {
         href: routes['es']['technology/oracle'],
-        title: 'Eines de Business Intelligence i analítica de dades',
+        title: 'Desarrollo de bases de datos Oracle Database',
         text: 'Oracle'
       },
       {
         href: routes['es']['technology/mongodb'],
-        title: 'Eines de Business Intelligence i analítica de dades',
+        title: ' Desarrollo de bases de datos con MongoDB',
         text: 'MongoDB'
       },
       {
         href: routes['es']['technology/html-css'],
-        title: 'Eines de Business Intelligence i analítica de dades',
+        title: 'Programamos interfaces con HTML y CSS',
         text: 'HTML y CSS'
       },
     ],
