@@ -1,5 +1,4 @@
 ---
-import { Icon } from 'astro-icon/components';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features from '~/components/widgets/Features.astro';
@@ -12,7 +11,7 @@ const u = useRoutes(getLangFromUrl(Astro.url));
 
 const metadata = {
   title: 'Desarrollo de software a medida con Java',
-  description: `En Gilsys, creamos soluciones empresariales robustas y escalables con Java. Expertos en desarrollo Java desde 2004.`,
+  description: `En Gilsys, desarrollamos soluciones empresariales robustas y escalables con Java. Somos expertos en desarrollo Java desde 2004.`,
 };
 ---
 
@@ -25,14 +24,14 @@ const metadata = {
     <Fragment slot="title">
       Desarrollo de software a medida con <span class="text-accent highlight">Java</span>
     </Fragment>
-    <Fragment slot="subtitle"> Programamos plataformas empresariales robustas y seguras. </Fragment>
+    <Fragment slot="subtitle"> Desarrollamos plataformas empresariales seguras y de alto rendimiento. </Fragment>
   </Hero>
 
   <Content
     classes={{ container: 'contains-logo' }}
     isImageSmall
     title="Desarrollamos proyectos de alto nivel con <span class='custom-gradient'>Java</span>"
-    subtitle="Java se utiliza en casi todas las industrias, incluidas las finanzas, el comercio electrónico, las empresas, las aplicaciones móviles, distribuidas y de big data."
+    subtitle="Java está presente en múltiples industrias, incluyendo finanzas, comercio electrónico, desarrollo empresarial, aplicaciones móviles, sistemas distribuidos y Big Data."
     image={{
       id: 'java-logo',
       src: '~/assets/images/tecnology/java-logo2.svg',
@@ -42,8 +41,8 @@ const metadata = {
     <Fragment slot="content">
       <p class="text-muted">
         En Gilsys, Java es uno de los pilares de nuestra experiencia en desarrollo de software. Desde nuestros inicios,
-        hemos confiado en la robustez, versatilidad y seguridad de Java para crear soluciones empresariales de alto
-        rendimiento.
+        hemos apostado por Java debido a su robustez, versatilidad y seguridad para desarrollar soluciones empresariales
+        de alto rendimiento.
       </p>
       <p class="text-muted mt-4">
         Nuestro equipo de expertos en Java se especializa en la creación de software a medida, adaptando cada solución a
@@ -89,10 +88,10 @@ const metadata = {
   >
     <Fragment slot="preContent">
       <p class="text-muted">
-        Java es un lenguaje de programación de alto nivel, orientado a objetos, que se ha consolidado como una de las
-        tecnologías más populares y versátiles en el mundo del desarrollo de software. Su capacidad para crear
-        aplicaciones robustas, escalables y seguras lo convierte en la opción predilecta para empresas de todos los
-        tamaños. Su popularidad se debe a varios factores:
+        Java es un lenguaje de programación de alto nivel y orientado a objetos que se ha consolidado como una de las
+        tecnologías más utilizadas y versátiles en el desarrollo de software. Su capacidad para desarrollar aplicaciones
+        robustas, escalables y seguras lo convierte en la elección ideal para empresas de cualquier tamaño. Su
+        popularidad se debe a varios factores:
       </p>
     </Fragment>
     <Fragment slot="postContent">
@@ -120,8 +119,8 @@ const metadata = {
         icon: 'tabler:shield-check',
       },
       {
-        title: 'Multiplataforma',
-        description: 'Aplicaciones que funcionan en cualquier sistema operativo con la máquina virtual Java (JVM).',
+        title: 'Compatibilidad multiplataforma',
+        description: 'Funciona en cualquier sistema operativo gracias a la máquina virtual Java (JVM).',
         icon: 'tabler:world',
       },
       {
@@ -208,6 +207,9 @@ const metadata = {
       },
     ]}
   >
+    <Fragment slot="title">
+      Impulsamos tu empresa con desarrollos avanzados en <span class="custom-gradient">Java</span></Fragment
+    >
     <Fragment slot="title">
       Impulsamos tu empresa con desarrollos avanzados en <span class="custom-gradient">Java</span></Fragment
     >

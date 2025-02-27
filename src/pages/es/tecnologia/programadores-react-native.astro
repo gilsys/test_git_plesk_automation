@@ -1,13 +1,9 @@
 ---
-import { Icon } from 'astro-icon/components';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Content from '~/components/widgets/Content.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
-import Features3 from '~/components/widgets/Features3.astro';
 import Hero from '~/components/widgets/Hero.astro';
-import Note from '~/components/widgets/Note.astro';
 import Layout from '~/layouts/PageLayout.astro';
 import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 
@@ -62,6 +58,8 @@ const metadata = {
           href="#ROGER"
           class="btn-primary mt-12 mb-12 w-auto">Explora nuestros servicios de desarrollo de apps</a
         >
+          class="btn-primary mt-12 mb-12 w-auto">Explora nuestros servicios de desarrollo de apps</a
+        >
       </p>
     </Fragment>
   </Content>
@@ -74,8 +72,8 @@ const metadata = {
   >
     <Fragment slot="preContent">
       <p class="text-muted">
-        React Native es un framework de código abierto desarrollado por Facebook que permite construir aplicaciones
-        móviles nativas utilizando JavaScript y React.
+        React Native es un framework de código abierto creado por Meta (antes Facebook) que permite desarrollar
+        aplicaciones móviles nativas con JavaScript y React.
       </p>
     </Fragment>
     <Fragment slot="content">
@@ -121,8 +119,8 @@ const metadata = {
         icon: 'tabler:users',
       },
       {
-        title: 'Rendimiento cercano al nativo',
-        description: 'Experiencia de usuario fluida y natural.',
+        title: 'Rendimiento optimizado',
+        description: 'Experiencia de usuario fluida, con una velocidad comparable a las apps nativas.',
         icon: 'tabler:bolt', // Icono para rendimiento
       },
       {
@@ -150,7 +148,7 @@ const metadata = {
       {
         title: 'Migración de aplicaciones',
         description:
-          'Trasladamos tu aplicación existente a React Native, optimizando su rendimiento y reduciendo costes de mantenimiento.',
+          'Convertimos tu aplicación a React Native, mejorando su rendimiento y reduciendo los costes de mantenimiento.',
         icon: 'tabler:arrows-transfer-down',
       },
       {
@@ -174,7 +172,7 @@ const metadata = {
       {
         title: 'Optimización de rendimiento',
         description:
-          'Mejoramos la velocidad y eficiencia de tu aplicación React Native, garantizando una experiencia de usuario fluida y satisfactoria.',
+          'Mejoramos la velocidad y eficiencia de tu aplicación para ofrecer una experiencia fluida y sin retrasos.',
         icon: 'tabler:rocket',
       },
       {
@@ -221,8 +219,8 @@ const metadata = {
       >Si necesitas especialistas en <span class="custom-gradient">React Native</span>, cuenta con Gilsys</Fragment
     >
     <Fragment slot="subtitle"
-      >Desde la provincia de Barcelona, implementamos proyectos con React Native para clientes, nacionales e
-      internacionales de cualquier sector profesional.</Fragment
-    >
+      >Desde Barcelona, desarrollamos proyectos con React Native para clientes de cualquier sector, tanto a nivel
+      nacional como internacional.
+    </Fragment>
   </CallToAction>
 </Layout>
