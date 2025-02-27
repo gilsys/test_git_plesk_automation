@@ -1,13 +1,8 @@
 ---
-import { Icon } from 'astro-icon/components';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Content from '~/components/widgets/Content.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
-import Features from '~/components/widgets/Features.astro';
-import Features2 from '~/components/widgets/Features2.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import Hero from '~/components/widgets/Hero.astro';
-import Note from '~/components/widgets/Note.astro';
 import Layout from '~/layouts/PageLayout.astro';
 import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 
@@ -29,7 +24,7 @@ const metadata = {
       Programación de aplicaciones web con <span class="text-accent highlight">Angular</span>
     </Fragment>
     <Fragment slot="subtitle">
-      Creamos interfaces Frontend profesionales con este lenguaje de programación basado en Javascript.
+      Creamos interfaces frontend profesionales con este framework basado en JavaScript.
     </Fragment>
   </Hero>
 
@@ -74,30 +69,36 @@ const metadata = {
     classes={{ container: 'pt-0 md:pt-0 lg:pt-0' }}
     items={[
       {
-        description: `Estructura modular y reutilizable, facilitando el mantenimiento y la escalabilidad.`,
-        icon: 'tabler:components', // Icono para componentes y módulos
+          title: 'Estructura modular',
+          description: `Diseño basado en módulos independientes y reutilizables, lo que facilita el mantenimiento y permite que la aplicación crezca con facilidad.`,
+          icon: 'tabler:components', // Icono para componentes y módulos
       },
       {
-        description: `Rendimiento optimizado, gracias a la carga diferida y la arquitectura basada en componentes.`,
-        icon: 'tabler:rocket', // Icono para rendimiento y velocidad
+          title: 'Rendimiento optimizado',
+          description: `Aplicación web rápida y eficiente, gracias a técnicas como la carga diferida y una arquitectura basada en componentes.`,
+          icon: 'tabler:rocket', // Icono para rendimiento y velocidad
       },
       {
-        description: `Seguridad integrada, con medidas avanzadas contra vulnerabilidades y ataques.`,
-        icon: 'tabler:shield-check', // Icono para seguridad y protección
+          title: 'Seguridad integrada',
+          description: `Protección robusta con medidas de seguridad avanzadas que previenen vulnerabilidades y ataques.`,
+          icon: 'tabler:shield-check', // Icono para seguridad y protección
       },
       {
-        description: `Compatible con entornos empresariales, integrándose perfectamente con APIs REST y otras tecnologías.`,
-        icon: 'tabler:server', // Icono para servidores y APIs
+          title: 'Compatibilidad empresarial',
+          description: `Compatible con entornos empresariales, permitiendo una integración fluida con APIs REST y otras tecnologías.`,
+          icon: 'tabler:server', // Icono para servidores y APIs
       },
       {
-        description: `Desarrollo de apps híbridas, usando Apache Cordova para llevar tus aplicaciones web a dispositivos móviles.`,
-        icon: 'tabler:device-mobile', // Icono para dispositivos móviles y aplicaciones híbridas
+          title: 'Desarrollo de apps híbridas',
+          description: `Creación de aplicaciones móviles híbridas con Apache Cordova, que se ejecutan en dispositivos móviles a partir de tu aplicación web.`,
+          icon: 'tabler:device-mobile', // Icono para dispositivos móviles y aplicaciones híbridas
       },
       {
-        description: `Soporte de Google y comunidad activa, asegurando mejoras constantes y actualizaciones frecuentes.`,
-        icon: 'tabler:brand-google', // Icono para Google y su soporte
+          title: 'Soporte y comunidad',
+          description: `Respaldo de Google y una comunidad activa de desarrolladores, lo que garantiza un desarrollo continuo y actualizaciones frecuentes.`,
+          icon: 'tabler:brand-google', // Icono para Google y su soporte
       },
-    ]}
+  ]}
   >
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-lightgray"></div>
@@ -151,9 +152,7 @@ const metadata = {
   >
     <Fragment slot="content">
       <p class="text-muted">
-        Si tu plataforma actual ha quedado obsoleta, te ayudamos a migrarla a Angular, garantizando un proceso ágil y
-        sin afectar la operatividad de tu negocio. Implementamos código limpio, actualizado y alineado con las mejores
-        prácticas de desarrollo.
+        Si tu plataforma actual está obsoleta, te ayudamos a migrarla a Angular mediante un proceso ágil y sin interrupciones en tu operatividad.
       </p>
       <a
         title="Migración de herramientas web a tecnología Angular"
@@ -175,9 +174,7 @@ const metadata = {
   >
     <Fragment slot="content">
       <p class="text-muted">
-        Nuestros expertos están disponibles para asegurar que tu aplicación se mantenga estable, segura y en constante
-        evolución. Ofrecemos mantenimiento correctivo, preventivo y evolutivo para que tu proyecto siempre funcione al
-        máximo nivel.
+        Nuestros expertos garantizan que tu aplicación se mantenga estable, segura y en constante evolución.
         <a
           title="Migración de herramientas web a tecnología Angular"
           href={u('migration')}
@@ -206,8 +203,7 @@ const metadata = {
       >Si estás buscando especialistas en <span class="custom-gradient">Angular</span>, los has encontrado.</Fragment
     >
     <Fragment slot="subtitle"
-      >Estamos a tu disposición para elaborar una propuesta de desarrollo en Angular, creando una maquetación a medida
-      para tu proyecto.</Fragment
+      >Estamos listos para elaborar una propuesta de desarrollo en Angular y diseñar una maquetación a medida para tu proyecto.</Fragment
     >
   </CallToAction>
 </Layout>

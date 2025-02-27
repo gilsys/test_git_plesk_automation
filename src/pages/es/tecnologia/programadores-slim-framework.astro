@@ -15,28 +15,28 @@ import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 const u = useRoutes(getLangFromUrl(Astro.url));
 
 const metadata = {
-  title: 'Empresa de programación a medida con Slim Framework | +20 anys',
-  description: `Somos un equipo de programadores expertos en Slimframework, desarrollamos herramientas profesionales con este framework. ¡Presupuesto gratuito! Estamos en Osona, Barcelona.`,
+  title: 'Empresa de desarrollo a medida con Slim Framework',
+  description: `Programamos con Slim Framework, basado en PHP. Creamos aplicaciones web, API's y cualquier tipo de herramienta web profesional. Estamos en Osona, Barcelona.`,
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- Hero Section -->
   <Hero
-    tagline="Desarrollo ágil y eficiente con Slim Framework en Osona, provincia de Barcelona"
+    tagline="Desarrollo ágil y eficiente con Slim Framework"
     actions={[{ variant: 'primary', text: 'Presupuesto gratuito', href: u('contact') }]}
     backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/geometric-2/4.jpg' }}
   >
     <Fragment slot="title">
-        Desarrollamos con <span class="text-accent highlight">Slim Framework</span>
+        Desarrollos con <span class="text-accent highlight">Slim Framework</span>
     </Fragment>
     <Fragment slot="subtitle">
-        Somos un equipo de programadores expertos en Slim Framework, desarrollamos herramientas profesionales con este framework.
+        Somos programadores expertos en Slim Framework, desarrollamos herramientas profesionales, API's y cualquier tipo de herramienta web profesional.
     </Fragment>
   </Hero>
 
   <Content
-    title="<span class='custom-gradient'>Slim Framework</span>: una solución ligera y flexible"
+    title="<span class='custom-gradient'>Slim Framework</span>: una solución ligera y flexible basada en PHP"
     image={{
       src: '~/assets/images/estudio-integracion-ia.jpg',
       alt: 'Estudi per integrar intel·ligència artificial',
@@ -45,16 +45,16 @@ const metadata = {
     <Fragment slot="content">
       <p class="text-muted">
         En Gilsys, apostamos por soluciones ligeras y altamente optimizadas, y por ello trabajamos con Slim Framework, 
-        un microframework PHP que nos permite construir aplicaciones ordenadas, modulares y sin sobrecarga innecesaria. 
+        un microframework PHP que nos permite construir aplicaciones ordenadas, modulares y <strong>sin sobrecarga innecesaria</strong>.
       </p>
       <p class="text-muted mt-4">
-        Conocemos Slim desde su versión 3, y a lo largo del tiempo hemos desarrollado módulos y extensiones propias que amplían su funcionalidad sin comprometer su esencia minimalista.
+        Conocemos Slim desde sus primeras versiones, y a lo largo del tiempo hemos desarrollado módulos y extensiones propias que amplían su funcionalidad sin comprometer su esencia minimalista.
       </p>
     </Fragment>
   </Content>
 
   <Content
-    title="Slim Framework: La base ideal para desarrollos PHP eficientes"
+    title="<span class='custom-gradient'>Slim Framework</span>: La base ideal para desarrollos PHP eficientes"
     classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}
   >
     <Fragment slot="preContent">
@@ -62,6 +62,9 @@ const metadata = {
         A diferencia de otros frameworks pesados que incluyen múltiples características innecesarias, 
         Slim ofrece una <strong>solución ligera y flexible</strong>,centrada en la simplicidad y la optimización del rendimiento. 
         Es una excelente opción para APIs, microservicios y aplicaciones modulares que requieren rapidez y estructura sin sacrificar la escalabilidad.
+      </p>
+      <p class="text-center">
+        <a title="Web oficial de Slim Framework" href="#ROGER" class="btn-primary mt-12 mb-12 w-auto">Conoce más sobre Slim Framework</a>
       </p>
      
     </Fragment>
@@ -72,34 +75,40 @@ const metadata = {
 
   <Features3
   title='¿Por qué elegir Slim Framework para tu proyecto?'
-    classes={{ container: 'pt-0 md:pt-0 lg:pt-0' }}
-    items={[
-      {
-        description: `Ligereza extrema, sin sobrecargas innecesarias, lo que se traduce en mayor rendimiento.`,
-        icon: 'tabler:feather',
-      },
-      {
-        description: `Estructura clara y ordenada, perfecta para desarrollos modulares y mantenibles.`,
-        icon: 'tabler:layout-grid',
-      },
-      {
-        description: `Escalabilidad sin restricciones, adaptándose fácilmente al crecimiento del proyecto.`,
-        icon: 'tabler:arrows-maximize',
-      },
-      {
-        description: `Base ideal para APIs y microservicios, con una arquitectura optimizada para integraciones rápidas y seguras.`,
-        icon: 'tabler:api',
-      },
-      {
-        description: `Compromiso con la calidad, ya que el uso de Slim obliga a desarrollar soluciones eficientes desde el primer momento.`,
-        icon: 'tabler:award',
-      },
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-lightgray"></div>
-    </Fragment>
-  </Features3>
+  items={[
+    {
+      title: 'Rendimiento excepcional',
+      description: `Su ligereza extrema, sin componentes innecesarios, se traduce en un rendimiento superior y tiempos de respuesta rápidos.`,
+      icon: 'tabler:bolt', // Icono para velocidad y rendimiento
+    },
+    {
+      title: 'Código organizado',
+      description: `Fomenta una estructura clara y ordenada, facilitando el desarrollo modular y el mantenimiento a largo plazo.`,
+      icon: 'tabler:folders', // Icono para estructura y organización
+    },
+    {
+      title: 'Adaptabilidad',
+      description: `Se adapta con facilidad al crecimiento del proyecto, permitiendo escalar la aplicación sin complicaciones.`,
+      icon: 'tabler:arrows-diagonal', // Icono para escalabilidad y crecimiento
+    },
+    {
+      title: 'Ideal para APIs',
+      description: `Su arquitectura, optimizada para la creación de APIs y microservicios, facilita integraciones rápidas y seguras.`,
+      icon: 'tabler:api', // Icono para APIs
+    },
+    {
+      title: 'Desarrollo eficiente',
+      description: `Promueve la creación de soluciones eficientes y optimizadas desde el inicio, asegurando la calidad del código.`,
+      icon: 'tabler:check', // Icono para calidad y verificación
+    },
+    {
+      title: 'Framework predilecto',
+      description: `En Gilsys, Slim Framework es uno de nuestros frameworks favoritos por su versatilidad y eficiencia en el desarrollo web.`,
+      icon: 'tabler:heart', // Icono para favorito
+    },
+  ]}
+>
+</Features3>
 
   <Content
     isReversed
@@ -109,58 +118,72 @@ const metadata = {
       alt: 'Estudi per integrar intel·ligència artificial',
     }}
   >
-    <Fragment slot="content">
+    <Fragment slot="preContent">
       <p class="text-muted">
-        Desde la versión 3 de Slim, hemos trabajado en ampliar sus capacidades con módulos y extensiones propias, 
-        permitiéndonos potenciar sus funcionalidades básicas sin sacrificar su esencia minimalista. Gracias a nuestra experiencia, 
+        Gracias a nuestra experiencia, 
         podemos desarrollar soluciones rápidas y personalizadas, aprovechando al máximo las ventajas de Slim sin caer en la sobrecarga de código innecesario.
       </p>
+    </Fragment>
+
+    <Fragment slot="content">
       <p class="text-muted mt-4">
-        Este enfoque nos compromete como equipo de desarrollo a diseñar soluciones de calidad, evitando el desperdicio de recursos y tiempos de ejecución innecesarios.
+        Además, esta tecnología nos permite crear tanto herramientas de FrontOffice integrándolo con <a class="text-accent" href="#ROGER" title="Framework CSS para creación de interfaces modernas">Tailwind CSS</a> o <a class="text-accent" title="Framework CSS para diseño responsive" href="#ROGER">Bootstrap</a>, o herramientas de administración Backoffice, trabajando idealmente con <a class="text-accent"  href="#ROGER" title="Motor de plantillas para paneles de administración">Metronic</a>.
+      </p>
+    </Fragment>
+    <Fragment slot="postContent">
+      <p class="text-muted mt-4">
+        En Gilsys, no solo desarrollamos aplicaciones con Slim Framework, sino que también ofrecemos servicios para evolutivos y mantenimiento con el fin de mantener cada proyecto actualizado, seguro y en constante mejora.
       </p>
     </Fragment>
   </Content>
 
-  <Content
-    title="Mantenimiento y evolución con Slim Framework"
-    image={{
-      src: '~/assets/images/estudio-integracion-ia.jpg',
-      alt: 'Estudi per integrar intel·ligència artificial',
-    }}
-  >
-    <Fragment slot="content">
-      <p class="text-muted">
-        En Gilsys, no solo desarrollamos aplicaciones con Slim Framework, sino que también ofrecemos servicios para evolutivos y mantenimiento con el fin de mantener
-         cada proyecto actualizado, seguro y en constante mejora.
-      </p>
-    </Fragment>
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-lightgray"></div>
-    </Fragment>
-  </Content>
 
   
   <Features
-    title="Ofrecemos:"
-    items={[
-      {
-        description: 'Optimización de código y mejoras de rendimiento.',
-        icon: 'tabler:check',
-      },
-      {
-         description: 'Mantenimiento correctivo y evolutivo para aplicaciones basadas en Slim.',
-        icon: 'tabler:check',
-      },
-      {
-        description: 'Actualización de proyectos antiguos a versiones más recientes del framework.',
-        icon: 'tabler:check',
-      },
-      {
-         description: 'Integración con bases de datos y servicios externos.',
-        icon: 'tabler:check',
-      },
-    ]}  
-    />
+  title="Servicios de desarrollo con Slim Framework:"
+  items={[
+    {
+      title: 'Aplicaciones web a medida',
+      description: 'Desarrollamos aplicaciones web a medida, desde pequeños proyectos hasta complejas plataformas empresariales.',
+      icon: 'tabler:world',
+    },
+    {
+      title: 'Integraciones',
+      description: 'Integramos tu aplicación Slim Framework con bases de datos, APIs y otros servicios externos.',
+      icon: 'tabler:plug',
+    },
+    {
+      title: 'Desarrollo de APIs REST',
+      description: 'Creamos APIs RESTful robustas y escalables utilizando Slim Framework.',
+      icon: 'tabler:api',
+    },
+    {
+      title: 'Desarrollo de microservicios',
+      description: 'Construimos microservicios independientes y eficientes con Slim Framework.',
+      icon: 'tabler:box-multiple',
+    },
+    {
+      title: 'Optimización de código',
+      description: 'Analizamos y optimizamos tu código Slim Framework para mejorar el rendimiento y la eficiencia de tu aplicación.',
+      icon: 'tabler:bolt',
+    },
+    {
+      title: 'Mantenimiento de aplicaciones',
+      description: 'Ofrecemos mantenimiento correctivo y evolutivo para aplicaciones existentes basadas en Slim Framework.',
+      icon: 'tabler:tools',
+    },
+    {
+      title: 'Actualización de proyectos',
+      description: 'Actualizamos proyectos antiguos a las últimas versiones de Slim Framework, mejorando la seguridad y el rendimiento.',
+      icon: 'tabler:refresh',
+    },
+    {
+      title: 'Consultoría y soporte',
+      description: 'Te asesoramos en la mejor manera de utilizar Slim Framework para tu proyecto y te ofrecemos soporte técnico continuo.',
+      icon: 'tabler:headset',
+    },
+  ]}
+/>
 
     <CallToAction
     backgroundImage={{ src: '~/assets/images/dots/24.jpg', alt: 'Fondo abstracto' }}
@@ -178,11 +201,10 @@ const metadata = {
     ]}
   >
     <Fragment slot="title"
-      >Deja de buscar, <span class="custom-gradient">somos especialistas en Slim Framework</span></Fragment
+      >Si quieres implementar un proyecto eficiente y ligero: <span class="custom-gradient">Slim Framework</span></Fragment
     >
     <Fragment slot="subtitle"
-      >[TODO] PHP continu empreses que estan integrant <strong>intel·ligència artificial</strong> en els seus processos seran les que millor
-      preparades estaran en un futur proper.</Fragment
+      >Confía en nuestra experiencia con nuestro Framework PHP favorito, tu proyecto gozará de un rendimiento superior.</Fragment
     >
   </CallToAction>
 </Layout>

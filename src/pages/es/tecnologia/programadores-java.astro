@@ -1,0 +1,210 @@
+---
+import { Icon } from 'astro-icon/components';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+
+const metadata = {
+  title: 'Desarrollo de software a medida con Java',
+  description: `En Gilsys, creamos soluciones empresariales robustas y escalables con Java. Expertos en desarrollo Java desde 2004.`,
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Más de 20 años de experiencia en desarrollo Java."
+    actions={[{ variant: 'primary', text: 'Presupuesto gratuito', href: u('contact') }]}
+    backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/geometric-2/4.jpg' }}
+  >
+    <Fragment slot="title">
+      Desarrollo de software a medida con <span class="text-accent highlight">Java</span>
+    </Fragment>
+    <Fragment slot="subtitle"> Programamos plataformas empresariales robustas y seguras. </Fragment>
+  </Hero>
+
+  <Content
+    title="Desarrollamos proyectos de alto nivel con <span class='custom-gradient'>Java</span>"
+    subtitle="Java se utiliza en casi todas las industrias, incluidas las finanzas, el comercio electrónico, las empresas, las aplicaciones móviles, distribuidas y de big data."
+    image={{
+      src: '~/assets/images/estudio-integracion-ia.jpg',
+      alt: 'Desarrollo de software empresarial con Java',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        En Gilsys, Java es uno de los pilares de nuestra experiencia en desarrollo de software. Desde nuestros inicios,
+        hemos confiado en la robustez, versatilidad y seguridad de Java para crear soluciones empresariales de alto
+        rendimiento.
+      </p>
+      <p class="text-muted mt-4">
+        Nuestro equipo de expertos en Java se especializa en la creación de software a medida, adaptando cada solución a
+        las necesidades y objetivos específicos de tu empresa.
+      </p>
+      <p class="text-center">
+        <a
+          title="Servicios sobre desarrollo de aplicaciones web a medida"
+          href={u('development/web')}
+          class="btn-primary mt-12 mb-12 w-auto">Explora nuestros servicios de desarrollo web</a
+        >
+      </p>
+    </Fragment>
+  </Content>
+
+  <Content
+    isReversed
+    title="<span class='custom-gradient'>Java</span>: Un lenguaje que ha sobrevivido al tiempo y que sigue impulsando la innovación empresarial"
+    subtitle="Robusto, versátil y seguro, Java es la elección ideal para soluciones empresariales de alto rendimiento."
+    classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}
+    items={[
+      {
+        title: 'Portabilidad',
+        description: 'Se ejecuta en cualquier plataforma con la máquina virtual Java (JVM).',
+        icon: 'tabler:arrow-autofit-width', // Icono para portabilidad
+      },
+      {
+        title: 'Escalabilidad',
+        description: 'Ideal para aplicaciones empresariales de gran envergadura.',
+        icon: 'tabler:arrows-maximize', // Icono para escalabilidad
+      },
+      {
+        title: 'Seguridad',
+        description: 'Robusto sistema de seguridad para proteger datos sensibles.',
+        icon: 'tabler:shield-lock', // Icono para seguridad
+      },
+      {
+        title: 'Gran comunidad',
+        description: 'Amplio soporte y recursos disponibles.',
+        icon: 'tabler:users', // Icono para comunidad
+      },
+    ]}
+  >
+    <Fragment slot="preContent">
+      <p class="text-muted">
+        Java es un lenguaje de programación de alto nivel, orientado a objetos, que se ha consolidado como una de las
+        tecnologías más populares y versátiles en el mundo del desarrollo de software. Su capacidad para crear
+        aplicaciones robustas, escalables y seguras lo convierte en la opción predilecta para empresas de todos los
+        tamaños. Su popularidad se debe a varios factores:
+      </p>
+    </Fragment>
+    <Fragment slot="postContent">
+      <p class="text-center">
+        <a title="Página oficial de Java" href="#ROGER" class="btn-primary mt-12 mb-12 w-auto">Conoce más sobre Java</a>
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Features
+    title="Ventajas de elegir Java para tu proyecto"
+      subtitle="Soluciones a medida para empresas que buscan un futuro digital."
+    items={[
+      {
+        title: 'Aplicaciones robustas y escalables',
+        description: 'Ideal para proyectos empresariales complejos que requieren un alto rendimiento y disponibilidad.',
+        icon: 'tabler:building-skyscraper',
+      },
+      {
+        title: 'Seguridad de alto nivel',
+        description: 'Protege tu información sensible con las características de seguridad avanzadas de Java.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Multiplataforma',
+        description: 'Aplicaciones que funcionan en cualquier sistema operativo con la máquina virtual Java (JVM).',
+        icon: 'tabler:world',
+      },
+      {
+        title: 'Desarrollo a medida',
+        description:
+          'Adaptamos cada solución a tus necesidades específicas, creando aplicaciones personalizadas y eficientes.',
+        icon: 'tabler:adjustments',
+      },
+      {
+        title: 'Comunidad y soporte',
+        description:
+          'Benefíciate de una gran comunidad de desarrolladores y un amplio ecosistema de herramientas y recursos.',
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Mantenimiento a largo plazo',
+        description:
+          'Java es un lenguaje maduro y estable, con un ciclo de vida largo que facilita el mantenimiento de las aplicaciones.',
+        icon: 'tabler:calendar-time',
+      },
+    ]}
+  />
+
+  <Features2
+  title="Servicios de desarrollo Java en Gilsys"
+  subtitle='Java es la base, existen múltiples frameworks con los que trabajar para crear soluciones robustas, desde Gilsys trabajamos con <strong>Spring</strong>.'
+  image={{
+    src: '~/assets/images/estudio-integracion-ia.jpg',
+    alt: 'Desarrollo de software a medida con Java',
+  }}
+  items={[
+    {
+      title: 'Desarrollo de aplicaciones empresariales',
+      description: 'Creamos aplicaciones robustas y escalables para optimizar tus procesos de negocio.',
+      icon: 'tabler:building-store',
+    },
+    {
+      title: 'Desarrollo de APIs y microservicios',
+      description: 'Construimos APIs RESTful y microservicios eficientes para integrar tus sistemas y servicios.',
+      icon: 'tabler:api',
+    },
+    {
+      title: 'Migración y modernización de aplicaciones',
+      description: 'Modernizamos tus aplicaciones Java existentes o las migramos a nuevas plataformas y tecnologías.',
+      icon: 'tabler:arrows-right-left',
+    },
+    {
+      title: 'Mantenimiento y soporte',
+      description: 'Ofrecemos soporte técnico y mantenimiento para tus aplicaciones Java, revisando su estabilidad y adecuación a nuevas funcionalidades.',
+      icon: 'tabler:tools',
+    },
+    {
+      title: 'Integración con nuevas herramientas',
+      description: 'Conectamos tus plataformas Java existentes con nuevas herramientas y tecnologías para ampliar su funcionalidad.',
+      icon: 'tabler:plug',
+    },
+    {
+      title: 'Mejora de plataformas existentes',
+      description: 'Implementamos mejoras y nuevas funcionalidades en tus plataformas Java existentes, optimizando su rendimiento y seguridad.',
+      icon: 'tabler:arrow-up-right',
+    },
+  ]}
+>
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-lightgray"></div>
+  </Fragment>
+</Features2>
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/dots/24.jpg', alt: 'Fondo abstracto' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Presupuesto gratuito',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Llamar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title"> Impulsamos tu empresa con desarrollos avanzados en <span class='custom-gradient'>Java</span></Fragment>
+    <Fragment slot="subtitle">
+      En Gilsys, te ayudamos a <strong>construir</strong>, <strong>ampliar</strong> o <strong>migrar</strong> la base tecnológica para un futuro digital exitoso.
+    </Fragment>
+  </CallToAction>
+</Layout>
