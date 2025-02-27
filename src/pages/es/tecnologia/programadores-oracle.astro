@@ -29,9 +29,11 @@ const metadata = {
   </Hero>
 
   <Content
+    isImageSmall
     title="<span class='custom-gradient'>Oracle Database:</span> La base de datos líder para empresas"
     image={{
-      src: '~/assets/images/oracle-loog.jpg',
+      id: 'oracle-logo',
+      src: '~/assets/images/tecnology/oracle-logo2.svg',
       alt: 'Logotipo de Oracle',
     }}
   >
@@ -107,31 +109,35 @@ const metadata = {
   />
 
   <Content
-  isReversed
-  tagline="Experiencia y servicios de Gilsys con Oracle "
-  title="Aprovechamos el máximo rendimiento con PL/SQL" 
-  image={{
-    src: '~/assets/images/estudio-integracion-ia.jpg',
-    alt: 'Expertos en Oracle PL/SQL',
-  }}
->
-  <Fragment slot="preContent">
-    <p class="text-muted">
-      La trayectoria con Oracle Database en Gilsys se extiende desde versiones tempranas como la 10 hasta las más recientes. Esta experiencia ha permitido obtener una comprensión de su evolución y capacidades.
-    </p>
-  </Fragment>
+    isReversed
+    tagline="Experiencia y servicios de Gilsys con Oracle "
+    title="Aprovechamos el máximo rendimiento con PL/SQL"
+    image={{
+      src: '~/assets/images/estudio-integracion-ia.jpg',
+      alt: 'Expertos en Oracle PL/SQL',
+    }}
+  >
+    <Fragment slot="preContent">
+      <p class="text-muted">
+        La trayectoria con Oracle Database en Gilsys se extiende desde versiones tempranas como la 10 hasta las más
+        recientes. Esta experiencia ha permitido obtener una comprensión de su evolución y capacidades.
+      </p>
+    </Fragment>
     <Fragment slot="content">
       <p class="text-muted mt-4">
-        <strong>PL/SQL</strong>, el lenguaje de programación nativo de Oracle, es la herramienta clave para aprovechar al máximo el potencial de la base de datos. Nuestro conocimiento de PL/SQL nos permite crear soluciones que mejoran el rendimiento de consultas y la gestión de datos.
+        <strong>PL/SQL</strong>, el lenguaje de programación nativo de Oracle, es la herramienta clave para aprovechar
+        al máximo el potencial de la base de datos. Nuestro conocimiento de PL/SQL nos permite crear soluciones que
+        mejoran el rendimiento de consultas y la gestión de datos.
       </p>
       <p class="text-muted mt-4">
-        En Gilsys, desarrollamos procedimientos almacenados, triggers y funciones con un enfoque en la eficiencia, adaptados a las necesidades específicas de cada proyecto para un rendimiento óptimo del sistema.
+        En Gilsys, desarrollamos procedimientos almacenados, triggers y funciones con un enfoque en la eficiencia,
+        adaptados a las necesidades específicas de cada proyecto para un rendimiento óptimo del sistema.
       </p>
     </Fragment>
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-lightgray"></div>
     </Fragment>
-</Content>
+  </Content>
 
   <Features
     title=`Qué servicios ofrecemos con <span class='custom-gradient'>Oracle Database</span>?`
@@ -173,8 +179,7 @@ const metadata = {
         icon: 'tabler:plug',
       },
     ]}
-  >
-    </Features>
+  />
 
   <CallToAction
     backgroundImage={{ src: '~/assets/images/dots/24.jpg', alt: 'Fondo abstracto' }}

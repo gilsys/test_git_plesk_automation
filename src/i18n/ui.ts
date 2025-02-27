@@ -199,9 +199,17 @@ export const routes = {
     'privacy-policy': '/ca/politica-privacitat/',
     'cookie-policy': '/ca/politica-cookies/',
 
-
-
-    'technology/php' : '/ca/tecnologia/programadors-php/'
+    'technology/php' : '/ca/tecnologia/programadors-php/',
+    'technology/react-native' : '/ca/tecnologia/programadors-react-native/',
+    'technology/angular' : '/ca/tecnologia/programadors-angular/',
+    'technology/metronic' : '/ca/tecnologia/programadors-metronic/',
+    'technology/slim-framework' : '/ca/tecnologia/programadors-slim-framework/',
+    'technology/tailwind' : '/ca/tecnologia/programadors-tailwind/',
+    'technology/bootstrap' : '/ca/tecnologia/programadors-bootstrap/',
+    'technology/mysql': '/ca/tecnologia/programadors-mysql/',
+    'technology/oracle': '/ca/tecnologia/programadors-oracle/',
+    'technology/mongodb': '/ca/tecnologia/programadors-mongodb/',
+    'technology/html-css': '/ca/tecnologia/programadors-html-css/',
   },
   es: {
     'home': '/es/',
@@ -265,7 +273,9 @@ export const routes = {
     'technology/mysql': '/es/tecnologia/programadores-mysql/',
     'technology/oracle': '/es/tecnologia/programadores-oracle/',
     'technology/mongodb': '/es/tecnologia/programadores-mongodb/',
-    'technology/html-css': '/es/tecnologia/programadores-html-css/'
+    'technology/java': '/es/tecnologia/programadores-java/',
+    'technology/javascript': '/es/tecnologia/programadores-javascript/',
+
 
   },
   en: {

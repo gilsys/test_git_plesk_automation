@@ -29,10 +29,13 @@ const metadata = {
   </Hero>
 
   <Content
+    classes={{ container: 'contains-logo' }}
+    isImageSmall
     title="Desarrollamos proyectos de alto nivel con <span class='custom-gradient'>Java</span>"
     subtitle="Java se utiliza en casi todas las industrias, incluidas las finanzas, el comercio electrónico, las empresas, las aplicaciones móviles, distribuidas y de big data."
     image={{
-      src: '~/assets/images/estudio-integracion-ia.jpg',
+      id: 'java-logo',
+      src: '~/assets/images/tecnology/java-logo2.svg',
       alt: 'Desarrollo de software empresarial con Java',
     }}
   >
@@ -104,7 +107,7 @@ const metadata = {
 
   <Features
     title="Ventajas de elegir Java para tu proyecto"
-      subtitle="Soluciones a medida para empresas que buscan un futuro digital."
+    subtitle="Soluciones a medida para empresas que buscan un futuro digital."
     items={[
       {
         title: 'Aplicaciones robustas y escalables',
@@ -143,49 +146,52 @@ const metadata = {
   />
 
   <Features2
-  title="Servicios de desarrollo Java en Gilsys"
-  subtitle='Java es la base, existen múltiples frameworks con los que trabajar para crear soluciones robustas, desde Gilsys trabajamos con <strong>Spring</strong>.'
-  image={{
-    src: '~/assets/images/estudio-integracion-ia.jpg',
-    alt: 'Desarrollo de software a medida con Java',
-  }}
-  items={[
-    {
-      title: 'Desarrollo de aplicaciones empresariales',
-      description: 'Creamos aplicaciones robustas y escalables para optimizar tus procesos de negocio.',
-      icon: 'tabler:building-store',
-    },
-    {
-      title: 'Desarrollo de APIs y microservicios',
-      description: 'Construimos APIs RESTful y microservicios eficientes para integrar tus sistemas y servicios.',
-      icon: 'tabler:api',
-    },
-    {
-      title: 'Migración y modernización de aplicaciones',
-      description: 'Modernizamos tus aplicaciones Java existentes o las migramos a nuevas plataformas y tecnologías.',
-      icon: 'tabler:arrows-right-left',
-    },
-    {
-      title: 'Mantenimiento y soporte',
-      description: 'Ofrecemos soporte técnico y mantenimiento para tus aplicaciones Java, revisando su estabilidad y adecuación a nuevas funcionalidades.',
-      icon: 'tabler:tools',
-    },
-    {
-      title: 'Integración con nuevas herramientas',
-      description: 'Conectamos tus plataformas Java existentes con nuevas herramientas y tecnologías para ampliar su funcionalidad.',
-      icon: 'tabler:plug',
-    },
-    {
-      title: 'Mejora de plataformas existentes',
-      description: 'Implementamos mejoras y nuevas funcionalidades en tus plataformas Java existentes, optimizando su rendimiento y seguridad.',
-      icon: 'tabler:arrow-up-right',
-    },
-  ]}
->
-  <Fragment slot="bg">
-    <div class="absolute inset-0 bg-lightgray"></div>
-  </Fragment>
-</Features2>
+    title="Servicios de desarrollo Java en Gilsys"
+    subtitle="Java es la base, existen múltiples frameworks con los que trabajar para crear soluciones robustas, desde Gilsys trabajamos con <strong>Spring</strong>."
+    image={{
+      src: '~/assets/images/estudio-integracion-ia.jpg',
+      alt: 'Desarrollo de software a medida con Java',
+    }}
+    items={[
+      {
+        title: 'Desarrollo de aplicaciones empresariales',
+        description: 'Creamos aplicaciones robustas y escalables para optimizar tus procesos de negocio.',
+        icon: 'tabler:building-store',
+      },
+      {
+        title: 'Desarrollo de APIs y microservicios',
+        description: 'Construimos APIs RESTful y microservicios eficientes para integrar tus sistemas y servicios.',
+        icon: 'tabler:api',
+      },
+      {
+        title: 'Migración y modernización de aplicaciones',
+        description: 'Modernizamos tus aplicaciones Java existentes o las migramos a nuevas plataformas y tecnologías.',
+        icon: 'tabler:arrows-right-left',
+      },
+      {
+        title: 'Mantenimiento y soporte',
+        description:
+          'Ofrecemos soporte técnico y mantenimiento para tus aplicaciones Java, revisando su estabilidad y adecuación a nuevas funcionalidades.',
+        icon: 'tabler:tools',
+      },
+      {
+        title: 'Integración con nuevas herramientas',
+        description:
+          'Conectamos tus plataformas Java existentes con nuevas herramientas y tecnologías para ampliar su funcionalidad.',
+        icon: 'tabler:plug',
+      },
+      {
+        title: 'Mejora de plataformas existentes',
+        description:
+          'Implementamos mejoras y nuevas funcionalidades en tus plataformas Java existentes, optimizando su rendimiento y seguridad.',
+        icon: 'tabler:arrow-up-right',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Features2>
 
   <CallToAction
     backgroundImage={{ src: '~/assets/images/dots/24.jpg', alt: 'Fondo abstracto' }}
@@ -202,9 +208,12 @@ const metadata = {
       },
     ]}
   >
-    <Fragment slot="title"> Impulsamos tu empresa con desarrollos avanzados en <span class='custom-gradient'>Java</span></Fragment>
+    <Fragment slot="title">
+      Impulsamos tu empresa con desarrollos avanzados en <span class="custom-gradient">Java</span></Fragment
+    >
     <Fragment slot="subtitle">
-      En Gilsys, te ayudamos a <strong>construir</strong>, <strong>ampliar</strong> o <strong>migrar</strong> la base tecnológica para un futuro digital exitoso.
+      En Gilsys, te ayudamos a <strong>construir</strong>, <strong>ampliar</strong> o <strong>migrar</strong> la base tecnológica
+      para un futuro digital exitoso.
     </Fragment>
   </CallToAction>
 </Layout>

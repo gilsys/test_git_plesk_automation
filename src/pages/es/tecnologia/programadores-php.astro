@@ -25,94 +25,105 @@ const metadata = {
       Desarrollo a medida con <span class="text-accent highlight">PHP</span>
     </Fragment>
     <Fragment slot="subtitle">
-      Contamos con un equipo de programadores expertos en PHP especializados en el desarrollo de herramientas profesionales.
+      Contamos con un equipo de programadores expertos en PHP especializados en el desarrollo de herramientas
+      profesionales.
     </Fragment>
   </Hero>
 
   <Content
-  title="<span class='custom-gradient'>PHP</span>: La base para aplicaciones web sólidas y escalables"
-    subtitle='PHP es uno de los lenguajes de programación web más robustos y utilizados.'
+    isImageSmall
+    title="<span class='custom-gradient'>PHP</span>: La base para aplicaciones web sólidas y escalables"
+    subtitle="PHP es uno de los lenguajes de programación web más robustos y utilizados."
     image={{
-      src: '~/assets/images/php-logo.jpg',
+      id: 'php-logo',
+      src: '~/assets/images/tecnology/php-logo.png',
       alt: 'Logotipo PHP',
     }}
   >
     <Fragment slot="content">
       <p class="text-muted">
-        En Gilsys contamos con un equipo de especialistas en programación PHP con amplia experiencia. Dominamos PHP desde sus primeras versiones hasta las más recientes, aplicando siempre las mejores prácticas para garantizar soluciones seguras, eficientes y escalables.
+        En Gilsys contamos con un equipo de especialistas en programación PHP con amplia experiencia. Dominamos PHP
+        desde sus primeras versiones hasta las más recientes, aplicando siempre las mejores prácticas para garantizar
+        soluciones seguras, eficientes y escalables.
       </p>
       <p class="text-muted mt-4">
-        Nos especializamos en la creación de <a href={u('development')} class="text-accent" title='Servicios de programación de software a medida'>software a medida</a>, adaptado a las necesidades específicas de cada cliente, sin restricciones geográficas.
+        Nos especializamos en la creación de <a
+          href={u('development')}
+          class="text-accent"
+          title="Servicios de programación de software a medida">software a medida</a
+        >, adaptado a las necesidades específicas de cada cliente, sin restricciones geográficas.
       </p>
       <p class="text-center">
         <a
           title="Desarrollo de aplicaciones web a medida en PHP"
           href={u('development/web')}
-          class="btn-primary mt-12 mb-12 w-auto">Descubre nuestros servicios de desarrollo web</a>
+          class="btn-primary mt-12 mb-12 w-auto">Descubre nuestros servicios de desarrollo web</a
+        >
       </p>
     </Fragment>
   </Content>
 
   <Content
-  title="Desarrollo PHP: La potencia de un lenguaje que sigue vigente"
-  classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}
->
-  <Fragment slot="preContent">
-    <p class="text-muted">
-      A pesar del auge de nuevas tecnologías, PHP sigue siendo un pilar fundamental del desarrollo web, impulsando millones de sitios y aplicaciones en todo el mundo.</p>
-    <p class="text-muted mt-4">
-      PHP es la base de plataformas de renombre como WordPress, PrestaShop, Pimcore o Magento, que dominan el mercado de los gestores de contenido y el comercio electrónico. Su adaptabilidad a diferentes necesidades y su constante evolución lo mantienen como un lenguaje relevante y con un futuro prometedor. 
-    </p>
-    <p class="text-center">
-      <a
-        title="Web oficial de PHP"
-        href="https://www.php.net"
-        class="btn-primary mt-12 mb-12 w-auto">Conoce más sobre PHP</a
-      >
-    </p>    
-  </Fragment>
-  <Fragment slot="bg">
-    <div class="absolute inset-0 bg-lightgray"></div>
-  </Fragment>
-</Content>
+    title="Desarrollo PHP: La potencia de un lenguaje que sigue vigente"
+    classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}
+  >
+    <Fragment slot="preContent">
+      <p class="text-muted">
+        A pesar del auge de nuevas tecnologías, PHP sigue siendo un pilar fundamental del desarrollo web, impulsando
+        millones de sitios y aplicaciones en todo el mundo.
+      </p>
+      <p class="text-muted mt-4">
+        PHP es la base de plataformas de renombre como WordPress, PrestaShop, Pimcore o Magento, que dominan el mercado
+        de los gestores de contenido y el comercio electrónico. Su adaptabilidad a diferentes necesidades y su constante
+        evolución lo mantienen como un lenguaje relevante y con un futuro prometedor.
+      </p>
+      <p class="text-center">
+        <a title="Web oficial de PHP" href="https://www.php.net" class="btn-primary mt-12 mb-12 w-auto"
+          >Conoce más sobre PHP</a
+        >
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
 
-<Features3
-columns={3}
-title='¿Qué ofrecemos como empresa de desarrollo en PHP?'
-items={[
-  {
-    title: 'Arquitecturas optimizadas',
-    description: `Implementamos arquitecturas modernas y optimizadas, asegurando aplicaciones rápidas y de alto rendimiento.`,
-    icon: 'tabler:layers-linked',
-  },
-  {
-    title: 'Frameworks avanzados',
-    description: `Trabajamos con frameworks avanzados para optimizar la eficiencia y escalabilidad de los proyectos.`,
-    icon: 'tabler:stack',
-  },
-  {
-    title: 'Seguridad robusta',
-    description: `Priorizamos la seguridad del software, integrando protocolos avanzados para proteger datos e información.`,
-    icon: 'tabler:shield-lock',
-  },
-  {
-    title: 'Diseño modular',
-    description: `Diseñamos plataformas modulares y flexibles, listas para futuras actualizaciones y expansiones.`,
-    icon: 'tabler:components',
-  },
-  {
-    title: 'Código de calidad',
-    description: `Escribimos código limpio, mantenible y eficiente, siguiendo las mejores prácticas de desarrollo PHP.`,
-    icon: 'tabler:checklist',
-  },
-  {
-    title: 'Mantenimiento y evolución',
-    description: `Ofrecemos mantenimiento preventivo, actualizaciones de seguridad y mejoras funcionales según las necesidades de tu negocio.`,
-    icon: 'tabler:refresh',
-  },
-]}
->
-</Features3>
+  <Features3
+    columns={3}
+    title="¿Qué ofrecemos como empresa de desarrollo en PHP?"
+    items={[
+      {
+        title: 'Arquitecturas optimizadas',
+        description: `Implementamos arquitecturas modernas y optimizadas, asegurando aplicaciones rápidas y de alto rendimiento.`,
+        icon: 'tabler:layers-linked',
+      },
+      {
+        title: 'Frameworks avanzados',
+        description: `Trabajamos con frameworks avanzados para optimizar la eficiencia y escalabilidad de los proyectos.`,
+        icon: 'tabler:stack',
+      },
+      {
+        title: 'Seguridad robusta',
+        description: `Priorizamos la seguridad del software, integrando protocolos avanzados para proteger datos e información.`,
+        icon: 'tabler:shield-lock',
+      },
+      {
+        title: 'Diseño modular',
+        description: `Diseñamos plataformas modulares y flexibles, listas para futuras actualizaciones y expansiones.`,
+        icon: 'tabler:components',
+      },
+      {
+        title: 'Código de calidad',
+        description: `Escribimos código limpio, mantenible y eficiente, siguiendo las mejores prácticas de desarrollo PHP.`,
+        icon: 'tabler:checklist',
+      },
+      {
+        title: 'Mantenimiento y evolución',
+        description: `Ofrecemos mantenimiento preventivo, actualizaciones de seguridad y mejoras funcionales según las necesidades de tu negocio.`,
+        icon: 'tabler:refresh',
+      },
+    ]}
+  />
 
   <Content
     isReversed
@@ -124,15 +135,15 @@ items={[
   >
     <Fragment slot="content">
       <p class="text-muted">
-        Si tu software actual requiere una actualización o está desarrollado en otra tecnología, te ayudamos a migrarlo a PHP mediante un proceso estructurado, optimizando el código, mejorando el rendimiento y garantizando una transición sin interrupciones.
-        <a
-          title='Renovación de software'
-          href={u('migration')} class="btn-primary mt-12 mb-12 w-auto">Servicios de migración y renovación</a>
+        Si tu software actual requiere una actualización o está desarrollado en otra tecnología, te ayudamos a migrarlo
+        a PHP mediante un proceso estructurado, optimizando el código, mejorando el rendimiento y garantizando una
+        transición sin interrupciones.
+        <a title="Renovación de software" href={u('migration')} class="btn-primary mt-12 mb-12 w-auto"
+          >Servicios de migración y renovación</a
+        >
       </p>
     </Fragment>
   </Content>
-
-
 
   <CallToAction
     backgroundImage={{ src: '~/assets/images/dots/24.jpg', alt: 'Fondo abstracto' }}

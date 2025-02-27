@@ -478,3 +478,9 @@ address a{
     filter: brightness(100%);
   }
 }
+
+.contains-logo img{
+  box-shadow: none;
+  max-width: 250px;
+}
+

@@ -32,10 +32,13 @@ const metadata = {
   </Hero>
 
   <Content
+    isImageSmall
+    classes={{ container: 'contains-logo' }}
     subtitle="Lanzado en 2013, sigue siendo el framework número uno para la creación de interfaces funcionales."
     title="Desarrollamos aplicaciones de administración atractivas y funcionales con <span class='custom-gradient'>Metronic</span>"
     image={{
-      src: '~/assets/images/estudio-integracion-ia.jpg',
+      id: 'metronic-logo',
+      src: '~/assets/images/tecnology/metronic-logo2.svg',
       alt: 'Estudi per integrar intel·ligència artificial',
     }}
   >
@@ -101,8 +104,8 @@ const metadata = {
   </Features>
 
   <Features3
-  title='¿Cómo usamos Metronic en Gilsys?'
-  subtitle='Ciertamente, es un framework que nos encanta; lo usamos en casi todas las soluciones de administración que desarrollamos a medida.'
+    title="¿Cómo usamos Metronic en Gilsys?"
+    subtitle="Ciertamente, es un framework que nos encanta; lo usamos en casi todas las soluciones de administración que desarrollamos a medida."
     items={[
       {
         title: 'Construcción de paneles de administración y aplicaciones funcionales',
@@ -120,20 +123,21 @@ const metadata = {
         icon: 'tabler:tools',
       },
     ]}
-  >
-    
-  </Features3>
+  />
 
   <Content title="Versiones con Tailwind y Bootstrap" classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}>
     <Fragment slot="preContent">
       <p class="text-muted">
-        Metronic ofrece dos versiones: una basada en <a href='#ROGER' class="text-accent">Bootstrap</a> y otra en <a href='#ROGER' class="text-accent">Tailwind</a>, permitiendo elegir la que mejor se adapte a cada proyecto. Ambas versiones incluyen una amplia colección de componentes y una estructura optimizada, lo que acelera el desarrollo de aplicaciones empresariales y mejora la experiencia del usuario.
-      </p>         
-      <p class="text-center">
-        <a
-          title="Web oficial de Metronic"
+        Metronic ofrece dos versiones: una basada en <a href="#ROGER" class="text-accent">Bootstrap</a> y otra en <a
           href="#ROGER"
-          class="btn-primary mt-12 mb-12 w-auto">Conoce más sobre Metronic</a
+          class="text-accent">Tailwind</a
+        >, permitiendo elegir la que mejor se adapte a cada proyecto. Ambas versiones incluyen una amplia colección de
+        componentes y una estructura optimizada, lo que acelera el desarrollo de aplicaciones empresariales y mejora la
+        experiencia del usuario.
+      </p>
+      <p class="text-center">
+        <a title="Web oficial de Metronic" href="#ROGER" class="btn-primary mt-12 mb-12 w-auto"
+          >Conoce más sobre Metronic</a
         >
       </p>
     </Fragment>
@@ -141,7 +145,6 @@ const metadata = {
       <div class="absolute inset-0 bg-lightgray"></div>
     </Fragment>
   </Content>
-  
 
   <CallToAction
     backgroundImage={{ src: '~/assets/images/dots/24.jpg', alt: 'Fondo abstracto' }}
@@ -162,7 +165,8 @@ const metadata = {
       >Tanto si conoces <span class="custom-gradient">Metronic</span> como si no, desde Gilsys te lo recomendamos</Fragment
     >
     <Fragment slot="subtitle"
-      >Nos encargamos de preparar una interfaz atractiva para tu proyecto para que los usuarios se sientan cómodos y disfruten utilizando la herramienta creada.</Fragment
+      >Nos encargamos de preparar una interfaz atractiva para tu proyecto para que los usuarios se sientan cómodos y
+      disfruten utilizando la herramienta creada.</Fragment
     >
   </CallToAction>
 </Layout>

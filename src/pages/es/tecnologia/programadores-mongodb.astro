@@ -23,28 +23,30 @@ const metadata = {
     backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/geometric-2/4.jpg' }}
   >
     <Fragment slot="title">
-        Desarrollo de bases de datos con <span class="text-accent highlight">MongoDB</span>
+      Desarrollo de bases de datos con <span class="text-accent highlight">MongoDB</span>
     </Fragment>
     <Fragment slot="subtitle">
-        Diseñamos e implementamos bases de datos NoSQL, rápidas y escalables para aplicaciones web y móviles.
+      Diseñamos e implementamos bases de datos NoSQL, rápidas y escalables para aplicaciones web y móviles.
     </Fragment>
   </Hero>
 
   <Content
+    isImageSmall
     title="<span class='custom-gradient'>MongoDB y NoSQL: </span>La evolución del almacenamiento de datos"
     image={{
-      src: '~/assets/images/mongodb-logo.jpg',
+      id: 'mongodb-logo',
+      src: '~/assets/images/tecnology/mongodb-logo2.svg',
       alt: 'Logotipo MongoDB',
     }}
   >
     <Fragment slot="content">
       <p class="text-muted">
-        En Gilsys, somos especialistas en <strong>MongoDB</strong>, uno de los sistemas de bases de datos NoSQL más avanzados y eficientes del mercado. 
-      
+        En Gilsys, somos especialistas en <strong>MongoDB</strong>, uno de los sistemas de bases de datos NoSQL más
+        avanzados y eficientes del mercado.
       </p>
       <p class="text-muted mt-4">
-        Con amplia experiencia en el diseño de arquitecturas de datos NoSQL, ayudamos a empresas a gestionar grandes volúmenes de información de manera <strong>flexible, 
-        escalable y eficiente</strong>.
+        Con amplia experiencia en el diseño de arquitecturas de datos NoSQL, ayudamos a empresas a gestionar grandes
+        volúmenes de información de manera <strong>flexible, escalable y eficiente</strong>.
       </p>
     </Fragment>
   </Content>
@@ -55,16 +57,13 @@ const metadata = {
   >
     <Fragment slot="preContent">
       <p class="text-muted">
-        <strong>MongoDB</strong> es una base de datos NoSQL diseñada para manejar datos no estructurados y semiestructurados de forma óptima. 
-        A diferencia de los sistemas SQL tradicionales, MongoDB almacena documentos en formato BSON (similar a JSON), lo que permite mayor <strong>agilidad,
-            velocidad y escalabilidad</strong> en el procesamiento de datos.
-
+        <strong>MongoDB</strong> es una base de datos NoSQL diseñada para manejar datos no estructurados y semiestructurados
+        de forma óptima. A diferencia de los sistemas SQL tradicionales, MongoDB almacena documentos en formato BSON (similar
+        a JSON), lo que permite mayor <strong>agilidad, velocidad y escalabilidad</strong> en el procesamiento de datos.
       </p>
-     <p class="text-center">
-        <a
-          title="Web oficial de MongoDB"
-          href="#ROGER"
-          class="btn-primary mt-12 mb-12 w-auto">Conoce más sobre MongoDB</a
+      <p class="text-center">
+        <a title="Web oficial de MongoDB" href="#ROGER" class="btn-primary mt-12 mb-12 w-auto"
+          >Conoce más sobre MongoDB</a
         >
       </p>
     </Fragment>
@@ -74,10 +73,10 @@ const metadata = {
   </Content>
 
   <Features3
-  columns={3}
-  title='Ventajas de usar MongoDB sobre bases de datos SQL'
+    columns={3}
+    title="Ventajas de usar MongoDB sobre bases de datos SQL"
     items={[
-       {
+      {
         description: `Flexibilidad en la estructura de datos, permitiendo esquemas dinámicos sin necesidad de definir relaciones rígidas.`,
         icon: 'tabler:layers-subtract',
       },
@@ -102,42 +101,39 @@ const metadata = {
         icon: 'tabler:cloud',
       },
     ]}
-  >
-
-  </Features3>
+  />
 
   <Features2
-  columns={2}
-  title="Casos en los que MongoDB es la mejor opción"
-  subtitle='MongoDB es ideal para aplicaciones que requieren almacenar grandes volúmenes de datos no relacionados, por ejemplo:'
-  items={[
-    {
-      title: 'Aplicaciones con gran cantidad de contenido',
-      description: 'Almacena y gestiona contenido flexible y diverso, adaptándose a estructuras cambiantes.',
-      icon: 'tabler:file-text',
-    },
-    {
-      title: 'Catálogos de productos y comercio electrónico',
-      description: 'Maneja grandes volúmenes de datos de productos con atributos variables y jerarquías complejas.',
-      icon: 'tabler:shopping-cart',
-    },
-    {
-      title: 'Aplicaciones móviles y de Internet de las Cosas (IoT)',
-      description: 'Recopila y procesa datos en tiempo real de dispositivos, sensores y usuarios móviles.',
-      icon: 'tabler:device-mobile',
-    },
-    {
-      title: 'Análisis de datos en tiempo real y Big Data',
-      description: 'Escala horizontalmente para manejar grandes volúmenes de datos y realizar análisis rápidos.',
-      icon: 'tabler:chart-bar',
-    }
-  ]}
->
-  <Fragment slot="bg">
-    <div class="absolute inset-0 bg-lightgray"></div>
-  </Fragment>
-</Features2>
-
+    columns={2}
+    title="Casos en los que MongoDB es la mejor opción"
+    subtitle="MongoDB es ideal para aplicaciones que requieren almacenar grandes volúmenes de datos no relacionados, por ejemplo:"
+    items={[
+      {
+        title: 'Aplicaciones con gran cantidad de contenido',
+        description: 'Almacena y gestiona contenido flexible y diverso, adaptándose a estructuras cambiantes.',
+        icon: 'tabler:file-text',
+      },
+      {
+        title: 'Catálogos de productos y comercio electrónico',
+        description: 'Maneja grandes volúmenes de datos de productos con atributos variables y jerarquías complejas.',
+        icon: 'tabler:shopping-cart',
+      },
+      {
+        title: 'Aplicaciones móviles y de Internet de las Cosas (IoT)',
+        description: 'Recopila y procesa datos en tiempo real de dispositivos, sensores y usuarios móviles.',
+        icon: 'tabler:device-mobile',
+      },
+      {
+        title: 'Análisis de datos en tiempo real y Big Data',
+        description: 'Escala horizontalmente para manejar grandes volúmenes de datos y realizar análisis rápidos.',
+        icon: 'tabler:chart-bar',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Features2>
 
   <Content
     isReversed
@@ -149,23 +145,22 @@ const metadata = {
   >
     <Fragment slot="content">
       <p class="text-muted">
-        En Gilsys, hemos implementado <strong>MongoDB</strong> en diferentes proyectos para mejorar el rendimiento y la escalabilidad de las aplicaciones, siempre que se requiera una estructura de datos no relacionada.
-        Las bases de datos NoSQL están optimizadas para almacenar, consultar y analizar <strong>grandes volúmenes de datos</strong> con máxima eficiencia.
+        En Gilsys, hemos implementado <strong>MongoDB</strong> en diferentes proyectos para mejorar el rendimiento y la escalabilidad
+        de las aplicaciones, siempre que se requiera una estructura de datos no relacionada. Las bases de datos NoSQL están
+        optimizadas para almacenar, consultar y analizar <strong>grandes volúmenes de datos</strong> con máxima eficiencia.
       </p>
       <p class="text-muted mt-4">
-        Gracias a nuestro conocimiento en arquitecturas no relacionales, ayudamos a empresas a migrar desde bases de datos relacionales tradicionales hacia soluciones más flexibles y adaptables a las necesidades actuales.
+        Gracias a nuestro conocimiento en arquitecturas no relacionales, ayudamos a empresas a migrar desde bases de
+        datos relacionales tradicionales hacia soluciones más flexibles y adaptables a las necesidades actuales.
       </p>
       <p class="text-center">
-        <a
-          title="Migración de datos desde plataformas antiguas"
-          href="#ROGER"
-          class="btn-primary mt-12 mb-12 w-auto">Conoce más sobre migración de datos</a
+        <a title="Migración de datos desde plataformas antiguas" href="#ROGER" class="btn-primary mt-12 mb-12 w-auto"
+          >Conoce más sobre migración de datos</a
         >
       </p>
     </Fragment>
   </Content>
-  
-  
+
   <CallToAction
     backgroundImage={{ src: '~/assets/images/dots/24.jpg', alt: 'Fons abstracte' }}
     actions={[
@@ -184,9 +179,6 @@ const metadata = {
     <Fragment slot="title"
       >Confía en Gilsys para implementar bases de datos con <span class="custom-gradient">MongoDB</span></Fragment
     >
-    <Fragment slot="subtitle"
-      >Somos expertos en NoSQL y SQL, y te guiaremos para elegir la mejor solución.
-      </Fragment
-    >
+    <Fragment slot="subtitle">Somos expertos en NoSQL y SQL, y te guiaremos para elegir la mejor solución. </Fragment>
   </CallToAction>
 </Layout>

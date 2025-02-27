@@ -31,9 +31,11 @@ const metadata = {
   </Hero>
 
   <Content
+    isImageSmall
     title="<span class='custom-gradient'>Bootstrap: </span> Diseñamos interfaces modernas y adaptables"
     image={{
-      src: '~/assets/images/bootstrap-logo.jpg',
+      id: 'bootstrap-logo',
+      src: '~/assets/images/tecnology/bootstrap-logo.svg',
       alt: 'Logotipo Bootstrap - Framework para interfaces responsive',
     }}
   >
@@ -61,8 +63,9 @@ const metadata = {
   >
     <Fragment slot="content">
       <p class="text-muted">
-        Bootstrap ofrece una base sólida para diseñar interfaces ordenadas y profesionales sin necesidad de escribir código CSS desde cero. Su sistema de cuadrícula flexible, componentes predefinidos y enfoque
-        mobile-first nos permiten acelerar el proceso de desarrollo sin comprometer la personalización.
+        Bootstrap ofrece una base sólida para diseñar interfaces ordenadas y profesionales sin necesidad de escribir
+        código CSS desde cero. Su sistema de cuadrícula flexible, componentes predefinidos y enfoque mobile-first nos
+        permiten acelerar el proceso de desarrollo sin comprometer la personalización.
       </p>
     </Fragment>
     <Fragment slot="bg">
@@ -70,56 +73,55 @@ const metadata = {
     </Fragment>
   </Content>
   <Features3
-  title="Beneficios de usar Bootstrap en tu proyecto"
-  items={[
-    {
-      title: "Diseño adaptable en cualquier pantalla",
-      description: `Bootstrap garantiza que tu interfaz se vea bien en cualquier dispositivo sin esfuerzo adicional.`,
-      icon: 'tabler:screen-share',
-    },
-    {
-      title: "Estructura optimizada para el desarrollo",
-      description: `Organiza la información y el contenido de manera eficiente, facilitando la maquetación y el mantenimiento.`,
-      icon: 'tabler:layout-grid',
-    },
-    {
-      title: "Componentes listos para producción",
-      description: `Incluye botones, formularios, alertas y más, reduciendo el tiempo de desarrollo sin sacrificar personalización.`,
-      icon: 'tabler:components',
-    },
-    {
-      title: "Sistema de cuadrícula flexible",
-      description: `Permite crear diseños fluidos y bien estructurados, ajustándose dinámicamente a cada necesidad del proyecto.`,
-      icon: 'tabler:squares-diagonal',
-    },
-    {
-      title: "Compatibilidad con todos los navegadores",
-      description: `Funciona sin problemas en Chrome, Firefox, Edge, Safari y otros, asegurando una experiencia homogénea para los usuarios.`,
-      icon: 'tabler:browser-check',
-    },
-    {
-      title: "Comunidad y ecosistema en constante evolución",
-      description: `Miles de desarrolladores contribuyen con mejoras, plugins y soluciones, haciendo de Bootstrap una opción sólida y actualizada.`,
-      icon: 'tabler:users-group',
-    },
-    {
-      title: "Personalización avanzada sin esfuerzo",
-      description: `Ajusta estilos, colores y variables con facilidad para que el diseño se adapte a la identidad de tu proyecto.`,
-      icon: 'tabler:settings',
-    },
-    {
-      title: "Acelera el tiempo de desarrollo",
-      description: `Reduce la curva de aprendizaje y lanza proyectos más rápido con sus herramientas y utilidades integradas.`,
-      icon: 'tabler:bolt',
-    },
-    {
-      title: "Documentación detallada y accesible",
-      description: `Encuentra ejemplos prácticos y guías claras para implementar cualquier funcionalidad sin complicaciones.`,
-      icon: 'tabler:manual-gearbox',
-    },
-  ]}
-/>
-
+    title="Beneficios de usar Bootstrap en tu proyecto"
+    items={[
+      {
+        title: 'Diseño adaptable en cualquier pantalla',
+        description: `Bootstrap garantiza que tu interfaz se vea bien en cualquier dispositivo sin esfuerzo adicional.`,
+        icon: 'tabler:screen-share',
+      },
+      {
+        title: 'Estructura optimizada para el desarrollo',
+        description: `Organiza la información y el contenido de manera eficiente, facilitando la maquetación y el mantenimiento.`,
+        icon: 'tabler:layout-grid',
+      },
+      {
+        title: 'Componentes listos para producción',
+        description: `Incluye botones, formularios, alertas y más, reduciendo el tiempo de desarrollo sin sacrificar personalización.`,
+        icon: 'tabler:components',
+      },
+      {
+        title: 'Sistema de cuadrícula flexible',
+        description: `Permite crear diseños fluidos y bien estructurados, ajustándose dinámicamente a cada necesidad del proyecto.`,
+        icon: 'tabler:squares-diagonal',
+      },
+      {
+        title: 'Compatibilidad con todos los navegadores',
+        description: `Funciona sin problemas en Chrome, Firefox, Edge, Safari y otros, asegurando una experiencia homogénea para los usuarios.`,
+        icon: 'tabler:browser-check',
+      },
+      {
+        title: 'Comunidad y ecosistema en constante evolución',
+        description: `Miles de desarrolladores contribuyen con mejoras, plugins y soluciones, haciendo de Bootstrap una opción sólida y actualizada.`,
+        icon: 'tabler:users-group',
+      },
+      {
+        title: 'Personalización avanzada sin esfuerzo',
+        description: `Ajusta estilos, colores y variables con facilidad para que el diseño se adapte a la identidad de tu proyecto.`,
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Acelera el tiempo de desarrollo',
+        description: `Reduce la curva de aprendizaje y lanza proyectos más rápido con sus herramientas y utilidades integradas.`,
+        icon: 'tabler:bolt',
+      },
+      {
+        title: 'Documentación detallada y accesible',
+        description: `Encuentra ejemplos prácticos y guías claras para implementar cualquier funcionalidad sin complicaciones.`,
+        icon: 'tabler:manual-gearbox',
+      },
+    ]}
+  />
 
   <Content
     title="En Gilsys, conocemos Bootstrap desde sus inicios"
@@ -153,8 +155,7 @@ const metadata = {
       },
       {
         title: 'Adaptación de interfaces antiguas a versiones modernas',
-        description:
-          'Gracias a sus actualizaciones regulares, podemos implementar mejoras estéticas y funcionales.',
+        description: 'Gracias a sus actualizaciones regulares, podemos implementar mejoras estéticas y funcionales.',
         icon: 'tabler:tool',
       },
       {
@@ -200,7 +201,7 @@ const metadata = {
     ]}
   >
     <Fragment slot="title"
-      >Somos <span class="custom-gradient">especialistas en Bootstrap</span><br> Deja la maquetación en nuestras manos</Fragment
+      >Somos <span class="custom-gradient">especialistas en Bootstrap</span><br /> Deja la maquetación en nuestras manos</Fragment
     >
     <Fragment slot="subtitle"
       >Nos encargamos del diseño, maquetación y adaptación responsive de la interfaz de usuario de tu proyecto.</Fragment
