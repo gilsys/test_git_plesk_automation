@@ -273,6 +273,7 @@ export const routes = {
     'technology/mysql': '/es/tecnologia/programadores-mysql/',
     'technology/oracle': '/es/tecnologia/programadores-oracle/',
     'technology/mongodb': '/es/tecnologia/programadores-mongodb/',
+    'technology/html-css': '/es/tecnologia/programadores-html-css/',
     'technology/java': '/es/tecnologia/programadores-java/',
     'technology/javascript': '/es/tecnologia/programadores-javascript/',
 
