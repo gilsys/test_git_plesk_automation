@@ -36,7 +36,7 @@ const metadata = {
     title="<span class='custom-gradient'>Bootstrap: </span> Diseñamos interfaces modernas y adaptables"
     image={{
       id: 'bootstrap-logo',
-      src: '~/assets/images/tecnology/bootstrap-logo.svg',
+      src: '~/assets/images/tecnologia/bootstrap-logo.svg',
       alt: 'Logotipo Bootstrap - Framework para interfaces responsive',
     }}
   >
@@ -48,17 +48,20 @@ const metadata = {
       </p>
       <p class="text-muted mt-4">
         Su flexibilidad lo hace ideal para frontends dinámicos y backends con maquetación responsive, garantizando una
-        experiencia fluida y accesible para todos los usuarios."
+        experiencia fluida y accesible para todos los usuarios.
       </p>
+      <p class="text-muted mt-4">
+        <a title="Desarrollo de aplicaciones web a medida" href={u('development/web')} class="btn-primary mt-12 mb-12 w-auto">Explora nuestros servicios de desarrollo web a medida</a>
+      </p>
+
     </Fragment>
   </Content>
 
   <Content
     title=`Creamos interfaces de usuario <span class="custom-gradient">responsive</span>`
     subtitle=`Adaptadas a móvil, tablet y ordenador`
-    classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}
     image={{
-      src: '~/assets/images/bootstrap-responsive.jpg',
+      src: '~/assets/images/tecnologia/bootstrap-responsive.png',
       alt: 'Escenario para Bootstrap - Interfaces responsive',
     }}
   >
@@ -67,6 +70,9 @@ const metadata = {
         Bootstrap ofrece una base sólida para diseñar interfaces ordenadas y profesionales sin necesidad de escribir
         código CSS desde cero. Su sistema de cuadrícula flexible, componentes predefinidos y enfoque mobile-first nos
         permiten acelerar el proceso de desarrollo sin comprometer la personalización.
+      </p>
+      <p class="text-muted mt-4">
+        <a title="Página oficial de Bootstrap" href="#ROGER" class="btn-primary mt-12 mb-12 w-auto">Visita la web oficial de Boostrap</a>
       </p>
     </Fragment>
     <Fragment slot="bg">
@@ -125,10 +131,12 @@ const metadata = {
   />
 
   <Content
-    title="En Gilsys, conocemos Bootstrap desde sus inicios"
+    isImageSmall
+    title="En Gilsys hemos confiado en Bootstrap desde sus inicios"
+    subtitle="Hemos apostado por este framework desde sus primeras versiones, lo cual nos aporta una visión profunda de su funcionamiento."
     image={{
-      src: '~/assets/images/estudio-integracion-ia.jpg',
-      alt: 'Estudi per integrar intel·ligència artificial',
+      src: '~/assets/images/tecnologia/bootstrap-interfaz.png',
+      alt: 'Intergaz de usuario y componentes Bootstrap',
     }}
   >
     <Fragment slot="content">
@@ -139,19 +147,22 @@ const metadata = {
         avanzados.
       </p>
     </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
   </Content>
 
   <Content
     isReversed
     title="Mantenimiento y evolución con Bootstrap"
     image={{
-      src: '~/assets/images/estudio-integracion-ia.jpg',
-      alt: 'Estudi per integrar intel·ligència artificial',
+      src: '~/assets/images/tecnologia/bootstrap-uiux.jpg',
+      alt: 'Bootstrap UI UX imagen',
     }}
     items={[
       {
         title: 'Optimización de código',
-        description: 'Implicando reducción de estilos innecesarios',
+        description: 'Implicando reducción de estilos innecesarios.',
         icon: 'tabler:code',
       },
       {
@@ -181,9 +192,7 @@ const metadata = {
         refleje las últimas tendencias en diseño web.
       </p>
     </Fragment>
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-lightgray"></div>
-    </Fragment>
+    
   </Content>
 
   <CallToAction
