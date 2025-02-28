@@ -1253,6 +1253,11 @@ export const footer = {
         text: 'Metronic'
       },
       {
+        href: routes['es']['technology/angular'],
+        title: 'Programación de interfaces con Angular',
+        text: 'Angular'
+      },
+      {
         href: routes['es']['technology/slim-framework'],
         title: ' Desarrollamos con Slim Framework',
         text: 'Slim Framework'
@@ -1286,6 +1291,16 @@ export const footer = {
         href: routes['es']['technology/html-css'],
         title: 'Programamos interfaces con HTML y CSS',
         text: 'HTML y CSS'
+      },
+      {
+        href: routes['es']['technology/java'],
+        title: 'Servicios de desarrollo con Java',
+        text: 'Java'
+      },
+      {
+        href: routes['es']['technology/javascript'],
+        title: 'Programamos con Javascript',
+        text: 'Javascript'
       },
     ],
     socialLinks: [
