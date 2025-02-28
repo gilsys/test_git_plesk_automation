@@ -55,8 +55,8 @@ const metadata = {
   </Content>
 
   <Content
-    title="Soluciones innovadoras"
-    subtitle="Construimos aplicaciones eficientes con tecnología de vanguardia."
+    title="Soluciones innovadoras desarrolladas con <span class='custom-gradient'>Angular</span>"
+    subtitle="Programamos aplicaciones web y móbiles con tecnología de vanguardia."
     classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}
   >
     <Fragment slot="preContent">
@@ -64,6 +64,9 @@ const metadata = {
         Angular es un framework moderno desarrollado por Google, ideal para la construcción de interfaces dinámicas y
         eficientes. Utilizamos esta tecnología para diseñar aplicaciones escalables, optimizadas y con una experiencia
         de usuario superior, tanto en entornos web como en dispositivos móviles.
+      </p>
+      <p class="text-center">
+        <a title="Página oficial de Angular" href="#ROGER" class="btn-primary mt-12 mb-12 w-auto">Conoce más sobre Angular</a>
       </p>
     </Fragment>
     <Fragment slot="bg">
@@ -73,7 +76,6 @@ const metadata = {
 
   <Features3
     title="¿Por qué Angular es una gran opción para tu proyecto?"
-    classes={{ container: 'pt-0 md:pt-0 lg:pt-0' }}
     items={[
       {
         title: 'Estructura modular',
@@ -107,15 +109,14 @@ const metadata = {
       },
     ]}
   >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-lightgray"></div>
-    </Fragment>
+    
   </Features3>
 
   <Content
-    title="Con Angular, transformamos tus ideas en aplicaciones web y móviles híbridas"
+    title="Con Angular tenemos las mejores herramientas para potenciar tu proyecto"
+    subtitle='A nivel tecnológico, es un sistema muy moderno, popular y con una gran comunidad de usuarios.'
     image={{
-      src: '~/assets/images/tecnology/angular-image2.jpg',
+      src: '~/assets/images/tecnologia/angular-desarrollo.png',
       alt: 'Imagen que refleja desarrollo web y apps con Angular',
     }}
     items={[
@@ -130,12 +131,12 @@ const metadata = {
           'Implementamos la lógica de la aplicación utilizando TypeScript, aprovechando las ventajas de tipado estático y orientación a objetos para un código más robusto y mantenible.',
       },
       {
-        title: 'Despliegue y Optimización',
+        title: 'Despliegue y optimización',
         description:
           'Utilizamos Angular CLI para generar builds optimizados y desplegamos tu aplicación en entornos de producción, asegurando un rendimiento óptimo y una carga rápida.',
       },
       {
-        title: 'Actualizaciones y Mantenimiento con Angular CLI',
+        title: 'Actualizaciones y mantenimiento con Angular CLI',
         description:
           'Mantenemos tu aplicación actualizada con las últimas versiones de Angular utilizando Angular CLI, y ofrecemos soporte continuo para resolver cualquier incidencia y asegurar su correcto funcionamiento a largo plazo.',
       },
@@ -176,10 +177,35 @@ const metadata = {
   </Content>
 
   <Content
-    title="Soporte y mantenimiento continuo"
+  isReversed
+  title="Tres soluciones con un mismo código: <span class='custom-gradient'>Web</span> + <span class='custom-gradient'>Android</span> + <span class='custom-gradient'>iOS</span>"
+  subtitle='Con Angular podemos crear aplicaciones web y apps híbridas multiplataforma.'
+  image={{
+    src: '~/assets/images/tecnologia/angular-programacion.png',
+    alt: 'Desarrollo de aplicaciones web y móviles con Angular',
+  }}
+  items={[
+    {
+      title: 'Desarrollo multidispositivo con Angular',
+      description:
+        'Creamos aplicaciones web y móviles de vanguardia con un único código base. Desde la concepción hasta el lanzamiento, te acompañamos en cada paso, ofreciendo una experiencia de usuario fluida en iOS y Android.',
+    },
+    {
+      title: '¿Tu plataforma actual te limita?',
+      description:
+        `Migramos tu software a Angular de forma ágil y segura, minimizando el impacto en tu operación y maximizando el rendimiento.<br/><br/><a title="" href={u('migration')} class="btn-primary mt-4 w-auto">Servicios de renovación de software</a>`,
+    },
+    ]}
+
+>
+</Content>
+
+  <Content
+    title="Soporte y mantenimiento en aplicaciones <span class='custom-gradient'>Angular</span>"
+    subtitle='Servicios de mantenimiento para mantener los desarrollos actualizados'
     image={{
-      src: '~/assets/images/tecnology/angular-image3.jpg',
-      alt: 'Estudi per integrar intel·ligència artificial',
+      src: '~/assets/images/tecnologia/angular-mantenimiento.jpg',
+      alt: 'Ordenadores con código de programción en la pantalla',
     }}
   >
     <Fragment slot="content">
@@ -194,6 +220,9 @@ const metadata = {
           class="btn-primary mt-12 mb-12 w-auto">Conoce más sobre nuestra empresa</a
         >
       </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
     </Fragment>
   </Content>
 
