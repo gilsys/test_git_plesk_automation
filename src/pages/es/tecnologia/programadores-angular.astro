@@ -29,13 +29,13 @@ const metadata = {
   </Hero>
 
   <Content
-    isImageSmall
     classes={{ container: 'contains-logo' }}
+    isImageSmall
     subtitle="Angular permite crear herramientas eficientes y escalables."
     title="Desarrollo de aplicaciones web y apps móviles con <span class='custom-gradient'>Angular</span>"
     image={{
       id: 'angular-logo',
-      src: '~/assets/images/tecnology/angular-logo.png',
+      src: '~/assets/images/tecnologia/angular-logo.png',
       alt: 'Logotipo Angular',
     }}
   >
@@ -66,7 +66,9 @@ const metadata = {
         de usuario superior, tanto en entornos web como en dispositivos móviles.
       </p>
       <p class="text-center">
-        <a title="Página oficial de Angular" href="#ROGER" class="btn-primary mt-12 mb-12 w-auto">Conoce más sobre Angular</a>
+        <a title="Página oficial de Angular" href="https://angular.dev/" class="btn-primary mt-12 mb-12 w-auto"
+          >Conoce más sobre Angular</a
+        >
       </p>
     </Fragment>
     <Fragment slot="bg">
@@ -108,13 +110,11 @@ const metadata = {
         icon: 'tabler:brand-google', // Icono para Google y su soporte
       },
     ]}
-  >
-    
-  </Features3>
+  />
 
   <Content
     title="Con Angular tenemos las mejores herramientas para potenciar tu proyecto"
-    subtitle='A nivel tecnológico, es un sistema muy moderno, popular y con una gran comunidad de usuarios.'
+    subtitle="A nivel tecnológico, es un sistema muy moderno, popular y con una gran comunidad de usuarios."
     image={{
       src: '~/assets/images/tecnologia/angular-desarrollo.png',
       alt: 'Imagen que refleja desarrollo web y apps con Angular',
@@ -142,7 +142,7 @@ const metadata = {
       },
     ]}
   >
-    <Fragment slot="content">
+    <Fragment slot="preContent">
       <p class="text-muted">
         Ya sea que necesites una nueva aplicación desde cero o quieras mejorar un sistema existente, aprovechamos al
         máximo las capacidades de Angular:
@@ -154,8 +154,8 @@ const metadata = {
     isReversed
     title="Migración y modernización a Angular"
     image={{
-      src: '~/assets/images/tecnology/angular-image1.jpg',
-      alt: 'Estudi per integrar intel·ligència artificial',
+      src: '~/assets/images/tecnologia/angular-migracion.jpg',
+      alt: 'Imagen que refleja la migracion con Angular',
     }}
   >
     <Fragment slot="content">
@@ -177,32 +177,29 @@ const metadata = {
   </Content>
 
   <Content
-  isReversed
-  title="Tres soluciones con un mismo código: <span class='custom-gradient'>Web</span> + <span class='custom-gradient'>Android</span> + <span class='custom-gradient'>iOS</span>"
-  subtitle='Con Angular podemos crear aplicaciones web y apps híbridas multiplataforma.'
-  image={{
-    src: '~/assets/images/tecnologia/angular-programacion.png',
-    alt: 'Desarrollo de aplicaciones web y móviles con Angular',
-  }}
-  items={[
-    {
-      title: 'Desarrollo multidispositivo con Angular',
-      description:
-        'Creamos aplicaciones web y móviles de vanguardia con un único código base. Desde la concepción hasta el lanzamiento, te acompañamos en cada paso, ofreciendo una experiencia de usuario fluida en iOS y Android.',
-    },
-    {
-      title: '¿Tu plataforma actual te limita?',
-      description:
-        `Migramos tu software a Angular de forma ágil y segura, minimizando el impacto en tu operación y maximizando el rendimiento.<br/><br/><a title="" href={u('migration')} class="btn-primary mt-4 w-auto">Servicios de renovación de software</a>`,
-    },
+    isReversed
+    title="Tres soluciones con un mismo código: <span class='custom-gradient'>Web</span> + <span class='custom-gradient'>Android</span> + <span class='custom-gradient'>iOS</span>"
+    subtitle="Con Angular podemos crear aplicaciones web y apps híbridas multiplataforma."
+    image={{
+      src: '~/assets/images/tecnologia/angular-programacion.png',
+      alt: 'Desarrollo de aplicaciones web y móviles con Angular',
+    }}
+    items={[
+      {
+        title: 'Desarrollo multidispositivo con Angular',
+        description:
+          'Creamos aplicaciones web y móviles de vanguardia con un único código base. Desde la concepción hasta el lanzamiento, te acompañamos en cada paso, ofreciendo una experiencia de usuario fluida en iOS y Android.',
+      },
+      {
+        title: '¿Tu plataforma actual te limita?',
+        description: `Migramos tu software a Angular de forma ágil y segura, minimizando el impacto en tu operación y maximizando el rendimiento.<br/><br/><a title="" href={u('migration')} class="btn-primary mt-4 w-auto">Servicios de renovación de software</a>`,
+      },
     ]}
-
->
-</Content>
+  />
 
   <Content
     title="Soporte y mantenimiento en aplicaciones <span class='custom-gradient'>Angular</span>"
-    subtitle='Servicios de mantenimiento para mantener los desarrollos actualizados'
+    subtitle="Servicios de mantenimiento para mantener los desarrollos actualizados"
     image={{
       src: '~/assets/images/tecnologia/angular-mantenimiento.jpg',
       alt: 'Ordenadores con código de programción en la pantalla',
