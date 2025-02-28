@@ -54,9 +54,13 @@ const metadata = {
 
   <Content
     title="Gestión flexible y escalable de datos dinámicos y distribuidos."
-    classes={{ container: 'pb-2 md:pb-2 lg:pb-2' }}
+    image={{
+      id: 'php-logo',
+      src: '~/assets/images/tecnologia/mongodb-escena-pantalla.png',
+      alt: 'Logotipo PHP',
+    }}
   >
-    <Fragment slot="preContent">
+    <Fragment slot="content">
       <p class="text-muted">
         <strong>MongoDB</strong> es una base de datos NoSQL diseñada para manejar datos no estructurados y semiestructurados
         de forma óptima. A diferencia de los sistemas SQL tradicionales, MongoDB almacena documentos en formato BSON (similar
@@ -163,7 +167,7 @@ const metadata = {
   </Content>
 
   <CallToAction
-    backgroundImage={{ src: '~/assets/images/dots/24.jpg', alt: 'Fondo abstracto' }}
+    backgroundImage={{ src: '~/assets/images/geometric-2/4.jpg', alt: 'Fondo abstracto' }}
     actions={[
       {
         variant: 'primary',

@@ -56,12 +56,8 @@ const metadata = {
     title="Los pilares imprescindibles en el desarrollo web actual"
     subtitle="En Gilsys, dominamos las últimas novedades de HTML y CSS para ofrecerte soluciones web de vanguardia."
     classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}
-    image={{
-      src: '~/assets/images/tecnologia/html-pilares.jpg',
-      alt: 'Imagen de escena de HTML y CSS',
-    }}
   >
-    <Fragment slot="content">
+    <Fragment slot="preContent">
       <p class="text-muted">
         En Gilsys, no nos limitamos a conocer los fundamentos de HTML y CSS. Nuestros programadores se mantienen
         actualizados con las últimas especificaciones y funcionalidades de estos lenguajes.
@@ -69,13 +65,18 @@ const metadata = {
       <p class="text-muted mt-4">
         Esta constante actualización nos permite construir sitios web con una estructura sólida y eficiente.
       </p>
+      <p class="text-center">
+        <a title="Web oficial de MySQL" href="#ROGER" class="btn-primary mt-12 mb-12 w-auto"
+          >Explora nuestros servicios de aplicaciones web</a
+        >
+      </p>
     </Fragment>
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-lightgray"></div>
     </Fragment>
   </Content>
 
-  <Features2
+  <Features
     columns={2}
     title="Importancia de un código HTML semántico y limpio"
     subtitle="Un código bien estructurado beneficia a usuarios y motores de búsqueda."

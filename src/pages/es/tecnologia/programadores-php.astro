@@ -31,7 +31,7 @@ const metadata = {
   </Hero>
 
   <Content
-    classes={{ container: 'contains-logo' }}
+    classes={{ container: 'contains-logo pb-0 md:pb-0 lg:pb-0'}}
     isImageSmall
     title="<span class='custom-gradient'>PHP</span>: La base para aplicaciones web sólidas y escalables"
     subtitle="PHP es uno de los lenguajes de programación web más robustos y utilizados."
@@ -144,10 +144,13 @@ const metadata = {
         >
       </p>
     </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
   </Content>
 
   <CallToAction
-    backgroundImage={{ src: '~/assets/images/dots/24.jpg', alt: 'Fondo abstracto' }}
+    backgroundImage={{ src: '~/assets/images/geometric-2/4.jpg', alt: 'Fondo abstracto' }}
     actions={[
       {
         variant: 'primary',
