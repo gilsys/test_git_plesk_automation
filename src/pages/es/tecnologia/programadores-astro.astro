@@ -1,0 +1,173 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+const metadata = {
+  title: 'Desarrollo web con Astro: SEO, rendimiento y seguridad',
+  description:
+    'En Gilsys programamos páginas web con Astro. Mejoramos el SEO on-page con el nuevo framework frontend y optimizamos la velocidad, seguridad y rendimiento de tu web. Desde Osona, Barcelona',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="El futuro del desarrollo web está aquí: <strong>rápido, eficiente y seguro</strong>."
+    actions={[{ variant: 'primary', text: 'Presupuesto gratuito', href: u('contact') }]}
+    backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/geometric-2/4.jpg' }}
+  >
+    <Fragment slot="title">
+      Desarrollo web con <span class="text-accent highlight">ASTRO</span>: rendimento, SEO y seguridad
+    </Fragment>
+    <Fragment slot="subtitle">
+      Programamos páginas web ultrarrápidas y seguras con Astro, maximizando tu visibilidad en buscadores y ofreciendo la mejor experiencia de usuario.
+    </Fragment>
+  </Hero>
+
+  <Content
+    classes={{ container: 'contains-logo' }}
+    isImageSmall
+    title="¿Buscas una web <span class='custom-gradient'>rápida y optimizada para SEO</span>?"
+    subtitle="Astro es un framework frontend que mejora el rendimiento de las páginas web con técnicas avanzadas de optimización y precarga."
+    image={{
+      id: 'astro-logo',
+      src: '~/assets/images/tecnologia/astro-logo.svg',
+      alt: 'Logotipo de Astro',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        En Gilsys, estamos a la vanguardia de las nuevas tecnologías. Por eso, utilizamos Astro, un
+        nuevo framework frontend que mejora el <strong>rendimiento</strong> de las web, ofreciendo además una mejor <strong>optimización para buscadores</strong> y <strong>seguridad</strong>.<br />
+      </p>
+      
+      <p class="text-muted mt-4">
+        Puedes obtener más información sobre nuestros servicios de desarrollo de webs de alto rendimiento en el siguiente apartado:
+      </p>
+      <p>
+        <a
+          title="Desarrollo de webs de alto rendimiento con ASTRO"
+          href={u('development/astro')}
+          class="btn-primary mt-12 mb-12 w-auto">Servicios de desarrollo de webs de alto rendimiento</a
+        >
+      </p>
+    </Fragment>
+  </Content>
+
+  <Content
+    isReversed
+    title="<span class='custom-gradient'>Astro</span>: El framework web que mejora rendimiento, seguridad y SEO on-page"
+    subtitle="A Google le encatará tu nueva web creada en ASTRO, tu SEO mejorará de forma espectacular."
+    image={{
+      src: '~/assets/images/tecnologia/astro-desarrollo-web.png',
+      alt: 'Diseño y desarrollo de webs con Astro',
+    }}
+  >
+    <Fragment slot="preContent">
+    </Fragment>
+    <Fragment slot="content">
+      <p class="text-muted">
+        A diferencia de otras soluciones, Astro no envía JavaScript al navegador por defecto, lo que reduce el tiempo de carga y mejora el rendimiento hasta niveles dificilmente alcanzables con otras herramientas.
+      </p>
+      <p class="text-muted mt-4">
+        En Gilsys, como empresa de desarrollo de software, aprechamos el control de código que nos ofrece ASTRO y ajustamos con precisión muchos aspectos que con el conocmiento adecuado, permiten mejorar el SEO on-page.
+      </p>
+      <p class="text-center">
+        <a title="Página oficial de Astro" href="https://astro.build/" class="btn-primary mt-12 mb-12 w-auto"
+          >Conoce más sobre Astro</a
+        >
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+  <Features2
+    title="Servicios de Astro ofrecidos por Gilsys"
+    subtitle="Ofrecemos un amplio abanico de servicios con Astro, el framework que llevará tu web al siguiente nivel."
+    items={[
+      {
+        title: 'Desarrollo desde cero',
+        description: 'Creamos tu página web a medida, adaptada a tu estética corporativa y objetivos.',
+        icon: 'tabler:device-mobile',
+      },
+      {
+        title: 'Migración de páginas existentes',
+        description: 'Convertimos tu web a Astro, mejorando su rendimiento y reduciendo los costes de mantenimiento.',
+        icon: 'tabler:arrows-transfer-down',
+      },
+      {
+        title: 'SEO on-page',
+        description: 'Mejoramos la programación de las páginas para optimizar el SEO on-page.',
+        icon: 'tabler:plug',
+      },
+      
+      {
+        title: 'Funcionalidades personalizadas',
+        description:
+          'Implementamos nuevas funcionalidades y características específicas para tu web, mejorando la experiencia del usuario.',
+        icon: 'tabler:puzzle',
+      },
+      {
+        title: 'Optimización Google PageSpeed Insights',
+        description:
+          'Mejoramos la velocidad y eficiencia de tu web para ofrecer una puntuación máxima en Google PageSpeed Insights.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Diseño UI/UX',
+        description:
+          'Creamos webs atractivas y fáciles de usar, que mejoran la interacción del usuario con tu web.',
+        icon: 'tabler:color-swatch',
+      },
+      {
+        title: 'Mantenimiento y soporte',
+        description:
+          'Actualizamos, mejoramos y solucionamos problemas en tu web Astro, asegurando su compatibilidad y rendimiento a largo plazo.',
+        icon: 'tabler:tools',
+      },
+      {
+        title: 'Pruebas y control de calidad',
+        description:
+          'Realizamos pruebas exhaustivas para asegurar la estabilidad, seguridad y funcionalidad de tu web Astro.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Consultoría y asesoramiento',
+        description:
+          'Te guiamos en la toma de decisiones sobre el desarrollo de tu web Astro, ofreciéndote soluciones personalizadas y eficientes.',
+        icon: 'tabler:bulb',
+      },
+    ]}
+  >
+    
+  </Features2>
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/geometric-2/4.jpg', alt: 'Fondo abstracto' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Presupuesto gratuito',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Llamar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title"
+      >Si necesitas especialistas en <span class="custom-gradient">Astro</span>, cuenta con Gilsys</Fragment
+    >
+    <Fragment slot="subtitle">
+      Si el rendimiento y posicionamiento de la web de tu empresa es una prioridad, confia en ASTRO, la tecnología con la que desde Gilsys potenciaremos tu site.
+    </Fragment>
+  </CallToAction>
+</Layout>

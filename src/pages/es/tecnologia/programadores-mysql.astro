@@ -20,7 +20,7 @@ const metadata = {
   <Hero
     tagline="Diseño de bases de datos MySQL desde Osona, provincia de Barcelona"
     actions={[{ variant: 'primary', text: 'Pressupost gratuït', href: u('contact') }]}
-    backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/geometric-2/4.jpg' }}
+    backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/geometric-2/4.jpg' }}
   >
     <Fragment slot="title">
       Servicios de desarrollo de bases de datos con <span class="text-accent highlight">MySQL</span>
@@ -32,13 +32,14 @@ const metadata = {
   </Hero>
 
   <Content
+    classes={{ container: 'contains-logo' }}
     isImageSmall
     title="<span class='custom-gradient'>MySQL: </span>La clave para una gestión eficiente de datos"
     subtitle="Aprovechamos toda la potencia del motor de base de datos más popular del mundo."
     image={{
       id: 'mysql-logo',
-      src: '~/assets/images/tecnology/mysql-logo.svg',
-      alt: 'Estudi per integrar intel·ligència artificial',
+      src: '~/assets/images/tecnologia/mysql-logo.svg',
+      alt: 'Logotipo MySQL',
     }}
   >
     <Fragment slot="content">
@@ -55,30 +56,42 @@ const metadata = {
     title="El motor de base de datos más popular del mundo"
     subtitle="Con años de trayectoria, MySQL sigue siendo una solución indiscutible en gestión de datos relacionales para muchos proyectos."
     classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}
+    image={{
+      src: '~/assets/images/tecnologia/mysql-escenario-delfin.png',
+      alt: 'Delfin saltando sobre un ordenador',
+    }}
+    items={[
+      {
+        title: `Código abierto y gratuito`,
+        description: `Ideal para proyectos de cualquier escala, desde startups hasta grandes corporaciones.`,
+        icon: 'tabler:code', // Puedes elegir otro icono más representativo
+      },
+      {
+        title: `Rendimiento optimizado`,
+        description: `Capaz de manejar grandes volúmenes de datos y consultas complejas con eficiencia.`,
+        icon: 'tabler:rocket', // Puedes elegir otro icono más representativo
+      },
+      {
+        title: `Compatibilidad multiplataforma`,
+        description: `Funciona en diversos sistemas operativos, brindando flexibilidad en la implementación.`,
+        icon: 'tabler:devices', // Puedes elegir otro icono más representativo
+      },
+      {
+        title: `Ecosistema robusto`,
+        description: `Amplia gama de herramientas y bibliotecas que facilitan el desarrollo y la administración.`,
+        icon: 'tabler:puzzle', // Puedes elegir otro icono más representativo
+      },
+    ]}
+
   >
     <Fragment slot="preContent">
       <p class="text-muted">
         MySQL es la base de datos relacional más utilizada a nivel global, con un liderazgo respaldado por su robustez,
         versatilidad y una comunidad activa. Su popularidad se debe a factores clave:
       </p>
-      <ul class="text-muted list-disc list-inside">
-        <li>
-          <strong>Código abierto y gratuito:</strong> Ideal para proyectos de cualquier escala, desde startups hasta grandes
-          corporaciones.
-        </li>
-        <li>
-          <strong>Rendimiento optimizado:</strong> Capaz de manejar grandes volúmenes de datos y consultas complejas con
-          eficiencia.
-        </li>
-        <li>
-          <strong>Compatibilidad multiplataforma:</strong> Funciona en diversos sistemas operativos, brindando flexibilidad
-          en la implementación.
-        </li>
-        <li>
-          <strong>Ecosistema robusto:</strong> Amplia gama de herramientas y bibliotecas que facilitan el desarrollo y la
-          administración.
-        </li>
-      </ul>
+    </Fragment>
+      
+      <Fragment slot="postContent">
       <p class="text-muted mt-4">
         En Gilsys, aprovechamos todo el potencial de MySQL para estructurar información de manera eficiente, asegurando
         integridad referencial, optimización de consultas e índices, y garantizando la base sólida que tu proyecto
@@ -151,8 +164,8 @@ const metadata = {
     title="MySQL de alto rendimiento: La experiencia Gilsys al servicio de tus datos"
     subtitle="En Gilsys, potenciamos tus proyectos con la robustez de MySQL y MariaDB, soluciones confiables para datos estructurados."
     image={{
-      src: '~/assets/images/mysql-escenario.jpg',
-      alt: 'Escenario de MySQL y modelo de datos',
+      src: '~/assets/images/tecnologia/mysql-data.jpg',
+      alt: 'Documentos de gráficos y tablas empresariales',
     }}
   >
     <Fragment slot="preContent">
@@ -223,7 +236,7 @@ const metadata = {
   />
 
   <CallToAction
-    backgroundImage={{ src: '~/assets/images/dots/24.jpg', alt: 'Fons abstracte' }}
+    backgroundImage={{ src: '~/assets/images/geometric-2/4.jpg', alt: 'Fondo abstracto' }}
     actions={[
       {
         variant: 'primary',

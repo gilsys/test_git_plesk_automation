@@ -20,7 +20,7 @@ const metadata = {
   <Hero
     tagline="Nos encontrarás en Osona, en la provincia de Barcelona."
     actions={[{ variant: 'primary', text: 'Presupuesto gratuito', href: u('contact') }]}
-    backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/geometric-2/4.jpg' }}
+    backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/geometric-2/4.jpg' }}
   >
     <Fragment slot="title">
       Empresa de desarrollo de aplicaciones con <span class="text-accent highlight">React Native</span>
@@ -31,13 +31,14 @@ const metadata = {
   </Hero>
 
   <Content
+    classes={{ container: 'contains-logo pb-0 md:pb-0 lg:pb-0' }}
     isImageSmall
     title="¿Buscas expertos en <span class='custom-gradient'>React Native</span> en la provincia de Barcelona?"
     subtitle="En Gilsys podemos desarrollar la aplicación móvil que necesitas."
     image={{
       id: 'react-native-logo',
-      src: '~/assets/images/tecnology/react-native-logo.svg',
-      alt: 'Estudi per integrar intel·ligència artificial',
+      src: '~/assets/images/tecnologia/react-native-logo.svg',
+      alt: 'Logotipo de React Native',
     }}
   >
     <Fragment slot="content">
@@ -66,6 +67,10 @@ const metadata = {
     title="React Native es el Framework líder para desarrollar aplicaciones híbridas"
     subtitle="Su capacidad para crear apps nativas para iOS y Android con un único código, reduce costes y tiempo de desarrollo sin sacrificar rendimiento"
     classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}
+    image={{
+      src: '~/assets/images/tecnologia/react-native-estilo-mobile.png',
+      alt: 'Desarrollo y optimización de aplicaciones React Native',
+    }}
   >
     <Fragment slot="preContent">
       <p class="text-muted">
@@ -129,10 +134,6 @@ const metadata = {
   <Features2
     title="Servicios de React Native ofrecidos por Gilsys"
     subtitle="Ofrecemos un amplio abanico de servicios de React Native para llevar tu aplicación móvil al siguiente nivel"
-    image={{
-      src: '~/assets/images/estudio-integracion-ia.jpg',
-      alt: 'Desarrollo y optimización de aplicaciones React Native',
-    }}
     items={[
       {
         title: 'Desarrollo desde cero',
@@ -196,7 +197,7 @@ const metadata = {
   </Features2>
 
   <CallToAction
-    backgroundImage={{ src: '~/assets/images/dots/24.jpg', alt: 'Fondo abstracto' }}
+    backgroundImage={{ src: '~/assets/images/geometric-2/4.jpg', alt: 'Fondo abstracto' }}
     actions={[
       {
         variant: 'primary',

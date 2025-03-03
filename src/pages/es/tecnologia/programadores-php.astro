@@ -31,12 +31,13 @@ const metadata = {
   </Hero>
 
   <Content
+    classes={{ container: 'contains-logo pb-0 md:pb-0 lg:pb-0'}}
     isImageSmall
     title="<span class='custom-gradient'>PHP</span>: La base para aplicaciones web sólidas y escalables"
     subtitle="PHP es uno de los lenguajes de programación web más robustos y utilizados."
     image={{
       id: 'php-logo',
-      src: '~/assets/images/tecnology/php-logo.png',
+      src: '~/assets/images/tecnologia/php-logo.png',
       alt: 'Logotipo PHP',
     }}
   >
@@ -129,8 +130,8 @@ const metadata = {
     isReversed
     title="Migración y modernización de aplicaciones en PHP"
     image={{
-      src: '~/assets/images/estudio-integracion-ia.jpg',
-      alt: 'Estudi per integrar intel·ligència artificial',
+      src: '~/assets/images/tecnologia/php-desarrollo-tags.png',
+      alt: 'Ordenador mostrando elementos visuales relacionados con PHP, etiquetas y símbolos',
     }}
   >
     <Fragment slot="content">
@@ -143,10 +144,13 @@ const metadata = {
         >
       </p>
     </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
   </Content>
 
   <CallToAction
-    backgroundImage={{ src: '~/assets/images/dots/24.jpg', alt: 'Fondo abstracto' }}
+    backgroundImage={{ src: '~/assets/images/geometric-2/4.jpg', alt: 'Fondo abstracto' }}
     actions={[
       {
         variant: 'primary',

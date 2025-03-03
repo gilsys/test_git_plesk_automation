@@ -20,7 +20,7 @@ const metadata = {
   <Hero
     tagline="Desarrollo ágil y eficiente con Slim Framework"
     actions={[{ variant: 'primary', text: 'Presupuesto gratuito', href: u('contact') }]}
-    backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/geometric-2/4.jpg' }}
+    backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/geometric-2/4.jpg' }}
   >
     <Fragment slot="title">
       Desarrollos con <span class="text-accent highlight">Slim Framework</span>
@@ -32,12 +32,13 @@ const metadata = {
   </Hero>
 
   <Content
+    classes={{ container: 'contains-logo' }}
     isImageSmall
     title="<span class='custom-gradient'>Slim Framework</span>: una solución ligera y flexible basada en PHP"
     image={{
       id: 'slim-framework-logo',
-      src: '~/assets/images/tecnology/slim-framework-logo.png',
-      alt: 'Estudi per integrar intel·ligència artificial',
+      src: '~/assets/images/tecnologia/slim-framework-logo.png',
+      alt: 'Logotipo de Slim Framework',
     }}
   >
     <Fragment slot="content">
@@ -114,8 +115,8 @@ const metadata = {
     isReversed
     title="Experiencia avanzada con Slim Framework en Gilsys"
     image={{
-      src: '~/assets/images/estudio-integracion-ia.jpg',
-      alt: 'Estudi per integrar intel·ligència artificial',
+      src: '~/assets/images/tecnologia/slim-framework-escena.png',
+      alt: 'Pantalla mostrando un elefante caminando por un bosque verde y frondoso.',
     }}
   >
     <Fragment slot="preContent">
@@ -123,6 +124,7 @@ const metadata = {
         Gracias a nuestra experiencia, desarrollamos soluciones rápidas y personalizadas, aprovechando al máximo las
         ventajas de Slim sin generar sobrecarga de código.
       </p>
+      
     </Fragment>
 
     <Fragment slot="content">
@@ -131,8 +133,8 @@ const metadata = {
           class="text-accent"
           href="#ROGER"
           title="Framework CSS para creación de interfaces modernas">Tailwind CSS</a
-        > o <a class="text-accent" title="Framework CSS para diseño responsive" href="#ROGER">Bootstrap</a>, 
-        como para BackOffice, donde trabajamos idealmente con <a
+        > o <a class="text-accent" title="Framework CSS para diseño responsive" href="#ROGER">Bootstrap</a>, como para
+        BackOffice, donde trabajamos idealmente con <a
           class="text-accent"
           href="#ROGER"
           title="Motor de plantillas para paneles de administración">Metronic</a
@@ -144,6 +146,9 @@ const metadata = {
         En Gilsys, no solo desarrollamos aplicaciones con Slim Framework, sino que también ofrecemos servicios para
         evolutivos y mantenimiento con el fin de mantener cada proyecto actualizado, seguro y en constante mejora.
       </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
     </Fragment>
   </Content>
 
@@ -199,7 +204,7 @@ const metadata = {
   />
 
   <CallToAction
-    backgroundImage={{ src: '~/assets/images/dots/24.jpg', alt: 'Fondo abstracto' }}
+    backgroundImage={{ src: '~/assets/images/geometric-2/4.jpg', alt: 'Fondo abstracto' }}
     actions={[
       {
         variant: 'primary',
@@ -219,7 +224,6 @@ const metadata = {
     >
     <Fragment slot="subtitle"
       >Confía en nuestra experiencia con Slim Framework. Tu proyecto destacará por su rendimiento y eficiencia.
-      </Fragment
-    >
+    </Fragment>
   </CallToAction>
 </Layout>

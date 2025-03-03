@@ -32,14 +32,14 @@ const metadata = {
   </Hero>
 
   <Content
+    classes={{ container: 'contains-logo pb-0 md:pb-0 lg:pb-0' }}
     isImageSmall
-    classes={{ container: 'contains-logo' }}
     subtitle="Lanzado en 2013, sigue siendo el framework número uno para la creación de interfaces funcionales."
     title="Desarrollamos aplicaciones de administración atractivas y funcionales con <span class='custom-gradient'>Metronic</span>"
     image={{
       id: 'metronic-logo',
-      src: '~/assets/images/tecnology/metronic-logo2.svg',
-      alt: 'Estudi per integrar intel·ligència artificial',
+      src: '~/assets/images/tecnologia/metronic-logo.svg',
+      alt: 'Logotipo Metronic',
     }}
   >
     <Fragment slot="content">
@@ -76,7 +76,7 @@ const metadata = {
       {
         title: 'Integración con frameworks avanzados',
         description:
-          'Compatible con frameworks como <a href="#ROGER">SlimFramework</a>, facilitando la creación de aplicaciones robustas y escalables.',
+          'Compatible con frameworks como <a href="' + u('technology/slim-framework') + '" class="text-accent">SlimFramework</a>, facilitando la creación de aplicaciones robustas y escalables.',
         icon: 'tabler:code-plus',
       },
       {
@@ -125,18 +125,21 @@ const metadata = {
     ]}
   />
 
-  <Content title="Versiones con Tailwind y Bootstrap" classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}>
+  <Content
+    title="Versiones con Tailwind y Bootstrap"
+    classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}
+  >
     <Fragment slot="preContent">
       <p class="text-muted">
-        Metronic ofrece dos versiones: una basada en <a href="#ROGER" class="text-accent">Bootstrap</a> y otra en <a
-          href="#ROGER"
+        Metronic ofrece dos versiones: una basada en <a href={u('technology/bootstrap')} class="text-accent">Bootstrap</a> y otra en <a
+          href={u('technology/tailwind')}
           class="text-accent">Tailwind</a
         >, permitiendo elegir la que mejor se adapte a cada proyecto. Ambas versiones incluyen una amplia colección de
         componentes y una estructura optimizada, lo que acelera el desarrollo de aplicaciones empresariales y mejora la
         experiencia del usuario.
       </p>
       <p class="text-center">
-        <a title="Web oficial de Metronic" href="#ROGER" class="btn-primary mt-12 mb-12 w-auto"
+        <a title="Web oficial de Metronic" href="https://keenthemes.com/metronic" class="btn-primary mt-12 mb-12 w-auto"
           >Conoce más sobre Metronic</a
         >
       </p>
@@ -147,7 +150,7 @@ const metadata = {
   </Content>
 
   <CallToAction
-    backgroundImage={{ src: '~/assets/images/dots/24.jpg', alt: 'Fondo abstracto' }}
+    backgroundImage={{ src: '~/assets/images/geometric-2/4.jpg', alt: 'Fondo abstracto' }}
     actions={[
       {
         variant: 'primary',

@@ -32,12 +32,13 @@ const metadata = {
   </Hero>
 
   <Content
+    classes={{ container: 'contains-logo' }}
     isImageSmall
     title="Desarrolos con <span class='custom-gradient'>JavaScript:</span> Mucho más que interactividad"
     subtitle="En Gilsys, reconocemos a <strong>JavaScript</strong> como un pilar del desarrollo actual."
     image={{
       id: 'javascript-logo',
-      src: '~/assets/images/tecnology/javascript-logo.svg',
+      src: '~/assets/images/tecnologia/javascript-logo.svg',
       alt: 'Logotipo de JavaScript',
     }}
   >
@@ -126,7 +127,7 @@ const metadata = {
     title="Gilsys: Pioneros en desarrollo <span class='custom-gradient'>JavaScript</span>"
     subtitle="Más de dos décadas impulsando la innovación con JavaScript."
     image={{
-      src: '~/assets/images/estudio-integracion-ia.jpg',
+      src: '~/assets/images/tecnologia/javascript-lenguaje-programacion.png',
       alt: 'Desarrollo JavaScript en Gilsys',
     }}
   >
@@ -146,7 +147,7 @@ const metadata = {
   </Content>
 
   <CallToAction
-    backgroundImage={{ src: '~/assets/images/dots/24.jpg', alt: 'Fondo abstracto' }}
+    backgroundImage={{ src: '~/assets/images/geometric-2/4.jpg', alt: 'Fondo abstracto' }}
     actions={[
       {
         variant: 'primary',
@@ -161,9 +162,12 @@ const metadata = {
     ]}
   >
     <Fragment slot="title">
-      En Gilsys encontrarás más de dos décadas de experiencia desarrollando con <span class="custom-gradient">JavaScript</span>
+      En Gilsys encontrarás más de dos décadas de experiencia desarrollando con <span class="custom-gradient"
+        >JavaScript</span
+      >
     </Fragment>
     <Fragment slot="subtitle">
-      Aprovechamos el potencial de JavaScript para programar soluciones empresariales a medida de forma profesional.     </Fragment>
+      Aprovechamos el potencial de JavaScript para programar soluciones empresariales a medida de forma profesional.
+    </Fragment>
   </CallToAction>
 </Layout>

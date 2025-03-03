@@ -20,7 +20,7 @@ const metadata = {
   <Hero
     tagline="Diseño de bases de datos Oracle y programación PL/SQL desde la provincia de Barcelona"
     actions={[{ variant: 'primary', text: 'Presupuesto gratuito', href: u('contact') }]}
-    backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/geometric-2/4.jpg' }}
+    backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/geometric-2/4.jpg' }}
   >
     <Fragment slot="title">
       Desarrollo de bases de datos con <span class="text-accent highlight">Oracle Database</span>
@@ -29,11 +29,12 @@ const metadata = {
   </Hero>
 
   <Content
+    classes={{ container: 'contains-logo' }}
     isImageSmall
     title="<span class='custom-gradient'>Oracle Database:</span> La base de datos líder para empresas"
     image={{
       id: 'oracle-logo',
-      src: '~/assets/images/tecnology/oracle-logo2.svg',
+      src: '~/assets/images/tecnologia/oracle-logo.svg',
       alt: 'Logotipo de Oracle',
     }}
   >
@@ -113,7 +114,7 @@ const metadata = {
     tagline="Experiencia y servicios de Gilsys con Oracle "
     title="Aprovechamos el máximo rendimiento con PL/SQL"
     image={{
-      src: '~/assets/images/estudio-integracion-ia.jpg',
+      src: '~/assets/images/tecnologia/oracle-abstracto.jpg',
       alt: 'Expertos en Oracle PL/SQL',
     }}
   >
@@ -182,7 +183,7 @@ const metadata = {
   />
 
   <CallToAction
-    backgroundImage={{ src: '~/assets/images/dots/24.jpg', alt: 'Fondo abstracto' }}
+    backgroundImage={{ src: '~/assets/images/geometric-2/4.jpg', alt: 'Fondo abstracto' }}
     actions={[
       {
         variant: 'primary',
@@ -201,7 +202,6 @@ const metadata = {
     >
     <Fragment slot="subtitle"
       >Contáctanos y diseñaremos o analizaremos tu base de datos en función de las necesidades de tu proyecto.
-      </Fragment
-    >
+    </Fragment>
   </CallToAction>
 </Layout>

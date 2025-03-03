@@ -30,11 +30,12 @@ const metadata = {
     </Fragment>
   </Hero>
   <Content
+    classes={{ container: 'contains-logo' }}
     isImageSmall
     title="<span class='custom-gradient'>HTML y CSS:</span> La esencia de una web estructurada y funcional"
     image={{
       id: 'html-css-logo',
-      src: '~/assets/images/tecnology/html-css-logo.png',
+      src: '~/assets/images/tecnologia/html-css-logo.png',
       alt: 'Logotipos de HTML y CSS',
     }}
   >
@@ -55,12 +56,8 @@ const metadata = {
     title="Los pilares imprescindibles en el desarrollo web actual"
     subtitle="En Gilsys, dominamos las últimas novedades de HTML y CSS para ofrecerte soluciones web de vanguardia."
     classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}
-    image={{
-      src: '~/assets/images/html-css-image.jpg',
-      alt: 'Imagen de escena de HTML y CSS',
-    }}
   >
-    <Fragment slot="content">
+    <Fragment slot="preContent">
       <p class="text-muted">
         En Gilsys, no nos limitamos a conocer los fundamentos de HTML y CSS. Nuestros programadores se mantienen
         actualizados con las últimas especificaciones y funcionalidades de estos lenguajes.
@@ -68,13 +65,18 @@ const metadata = {
       <p class="text-muted mt-4">
         Esta constante actualización nos permite construir sitios web con una estructura sólida y eficiente.
       </p>
+      <p class="text-center">
+        <a title="Aplicaciones web a medida" href={u('development/web')} class="btn-primary mt-12 mb-12 w-auto"
+          >Explora nuestros servicios de aplicaciones web</a
+        >
+      </p>
     </Fragment>
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-lightgray"></div>
     </Fragment>
   </Content>
 
-  <Features2
+  <Features
     columns={2}
     title="Importancia de un código HTML semántico y limpio"
     subtitle="Un código bien estructurado beneficia a usuarios y motores de búsqueda."
@@ -105,8 +107,8 @@ const metadata = {
   <Content
     title="CSS puro: Más que estilos, animaciones y transiciones"
     image={{
-      src: '~/assets/images/estudio-integracion-ia.jpg',
-      alt: 'Estudi per integrar intel·ligència artificial',
+      src: '~/assets/images/tecnologia/html-css-styles.JPG',
+      alt: 'Pantalla con un gradiante de colores',
     }}
   >
     <Fragment slot="content">
@@ -156,8 +158,8 @@ const metadata = {
     title="Gilsys ofrece HTML y CSS bajo control"
     subtitle="En Gilsys, trabajamos con HTML y CSS a nivel avanzado, asegurando que cada línea de código sea limpia, semántica y eficiente."
     image={{
-      src: '~/assets/images/estudio-integracion-ia.jpg',
-      alt: 'Estudi per integrar intel·ligència artificial',
+      src: '~/assets/images/tecnologia/html-css-control.jpg',
+      alt: 'Ordenadores con codigo en las pantallas',
     }}
     items={[
       {
@@ -191,8 +193,8 @@ const metadata = {
   <Content
     title="Integración de HTML y CSS con otras tecnologías"
     image={{
-      src: '~/assets/images/angular-programacion#ROGER.jpg',
-      alt: 'Imagen que refleja desarrollo web y apps con Angular',
+      src: '~/assets/images/tecnologia/html-codigo.jpg',
+      alt: 'Código fuente HTML',
     }}
     items={[
       {
@@ -200,17 +202,17 @@ const metadata = {
       },
       {
         description:
-          'Frameworks como <a href="#ROGER">Tailwind CSS</a> y <a href="#ROGER">Bootstrap</a> para proyectos que requieren escalabilidad.',
+          'Frameworks como <a title="Pagina de tecnologias de Tailwind" href="' + u('technology/tailwind') + '" class="text-accent">Tailwind CSS</a> y <a title="Pagina de tecnologias de Bootstrap" href="' + u('technology/bootstrap') + '" class="text-accent">Bootstrap</a> para proyectos que requieren escalabilidad.',
       },
       {
-        description: 'JavaScript para efectos interactivos más complejos',
+        description: '<a title="Tecnologias de JavaScript" href="' + u('technology/javascript') + '" class="text-accent">JavaScript</a> para efectos interactivos más complejos',
       },
       {
         description: 'Optimización para SEO y accesibilidad con código semántico y estructurado.',
       },
     ]}
   >
-    <Fragment slot="content">
+    <Fragment slot="preContent">
       <p class="text-muted">
         Además de trabajar con HTML y CSS puro, integramos estas tecnologías con herramientas modernas para potenciar
         sus capacidades:
@@ -222,7 +224,7 @@ const metadata = {
   </Content>
 
   <CallToAction
-    backgroundImage={{ src: '~/assets/images/dots/24.jpg', alt: 'Fondo abstracto' }}
+    backgroundImage={{ src: '~/assets/images/geometric-2/4.jpg', alt: 'Fondo abstracto' }}
     actions={[
       {
         variant: 'primary',
