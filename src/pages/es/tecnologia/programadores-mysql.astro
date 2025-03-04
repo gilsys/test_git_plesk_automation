@@ -82,7 +82,6 @@ const metadata = {
         icon: 'tabler:puzzle', // Puedes elegir otro icono más representativo
       },
     ]}
-
   >
     <Fragment slot="preContent">
       <p class="text-muted">
@@ -90,15 +89,17 @@ const metadata = {
         versatilidad y una comunidad activa. Su popularidad se debe a factores clave:
       </p>
     </Fragment>
-      
-      <Fragment slot="postContent">
+
+    <Fragment slot="postContent">
       <p class="text-muted mt-4">
         En Gilsys, aprovechamos todo el potencial de MySQL para estructurar información de manera eficiente, asegurando
         integridad referencial, optimización de consultas e índices, y garantizando la base sólida que tu proyecto
         necesita.
       </p>
       <p class="text-center">
-        <a title="Web oficial de MySQL" href="#ROGER" class="btn-primary mt-12 mb-12 w-auto">Conoce más sobre MySQL</a>
+        <a title="Web oficial de MySQL" href="https://www.mysql.com/" class="btn-primary mt-12 mb-12 w-auto"
+          >Conoce más sobre MySQL</a
+        >
       </p>
     </Fragment>
     <Fragment slot="bg">
@@ -128,7 +129,10 @@ const metadata = {
       },
       {
         title: `Compatibilidad`,
-        description: `Alta compatibilidad con la mayoría de herramientas de <a href="#ROGER(link BI)" class="text-accent" title="Herramientas de Business Intelligence para crear informes">Business Intelligence</a>.`,
+        description:
+          `Alta compatibilidad con la mayoría de herramientas de <a href="` +
+          u('software/metabase') +
+          `" class="text-accent" title="Herramientas de Business Intelligence para crear informes">Business Intelligence</a>.`,
         icon: 'tabler:chart-pie',
       },
       {

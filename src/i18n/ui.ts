@@ -210,6 +210,7 @@ export const routes = {
     'technology/oracle': '/ca/tecnologia/programadors-oracle/',
     'technology/mongodb': '/ca/tecnologia/programadors-mongodb/',
     'technology/html-css': '/ca/tecnologia/programadors-html-css/',
+    'technology/astro': '/ca/tecnologia/programadors-astro/',
   },
   es: {
     'home': '/es/',
@@ -263,6 +264,7 @@ export const routes = {
     'privacy-policy': '/es/politica-privacidad/',
     'cookie-policy': '/es/politica-cookies/',
 
+    'technology' : '/es/tecnologia/',
     'technology/php' : '/es/tecnologia/programadores-php/',
     'technology/react-native' : '/es/tecnologia/programadores-react-native/',
     'technology/angular' : '/es/tecnologia/programadores-angular/',
@@ -276,6 +278,7 @@ export const routes = {
     'technology/html-css': '/es/tecnologia/programadores-html-css/',
     'technology/java': '/es/tecnologia/programadores-java/',
     'technology/javascript': '/es/tecnologia/programadores-javascript/',
+    'technology/astro': '/es/tecnologia/programadores-astro/',
 
 
   },
@@ -1301,6 +1304,11 @@ export const footer = {
         href: routes['es']['technology/javascript'],
         title: 'Programamos con Javascript',
         text: 'Javascript'
+      },
+      {
+        href: routes['es']['technology/astro'],
+        title: 'Programamos con Astro',
+        text: 'Astro'
       },
     ],
     socialLinks: [
