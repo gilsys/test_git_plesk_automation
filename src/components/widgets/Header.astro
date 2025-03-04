@@ -97,31 +97,37 @@ const contactLink = links.find((link) => link._id === 'contact');
       class="items-center w-full md:w-auto hidden md:flex md:ml-auto mt-4 md:mt-0 text-default overflow-y-auto overflow-x-hidden md:overflow-y-visible md:overflow-x-visible md:justify-self-center 2xl:text-sm"
       aria-label="Main navigation"
     >
-      <ul
-        class="flex flex-col md:flex-row md:self-center w-full md:w-auto tracking-[0.01rem] md:justify-center pt-7 md:pt-0"
-      >
-        {
-          links.map(({ text, href, title, links, _id }) => (
-            <li class:list={[`menu-item-${_id}`, { 'dropdown group': links?.length }]}>
-              {links?.length ? (
-                <MenuDropdown btn={{ text, href, title, _id }} links={links} />
-              ) : (
-                <a
-                  id={_id}
-                  title={title}
-                  class:list={[
-                    'hover:text-accent dark:hover:text-white px-2 lg:px-4 py-3 flex items-center whitespace-nowrap  md:text-sm min-[810px]:text-base',
-                    { active: href === currentPath && currentPath !== u('home') },
-                  ]}
-                  href={href}
-                >
-                  {text}
-                </a>
-              )}
-            </li>
-          ))
+    <ul
+    class="flex flex-col md:flex-row md:self-center w-full md:w-auto tracking-[0.01rem] md:justify-center pt-7 md:pt-0"
+  >
+    {
+      links.map(({ text, href, title, links, _id }) => {
+        if (_id === 'technology') {
+          return null; // No renderizar el elemento si el id es 'xxx'
         }
-      </ul>
+  
+        return (
+          <li class:list={[`menu-item-${_id}`, { 'dropdown group': links?.length }]}>
+            {links?.length ? (
+              <MenuDropdown btn={{ text, href, title, _id }} links={links} />
+            ) : (
+              <a
+                id={_id}
+                title={title}
+                class:list={[
+                  'hover:text-accent dark:hover:text-white px-2 lg:px-4 py-3 flex items-center whitespace-nowrap  md:text-sm min-[810px]:text-base',
+                  { active: href === currentPath && currentPath !== u('home') },
+                ]}
+                href={href}
+              >
+                {text}
+              </a>
+            )}
+          </li>
+        );
+      })
+    }
+  </ul>
     </nav>
     <div
       class:list={[

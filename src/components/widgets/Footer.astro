@@ -99,11 +99,11 @@ const u = useRoutes(currentLang);
 
     <div class="mx-auto md:pb-4">
       <div class="dark:text-gray-300 font-medium mb-2 text-center">
-        <a class="hover:text-accent" href={u('technology')} title="Tecnologías">
+        <a class="hover:text-accent" href={u('technology')} title="Tecnologías para desarrollo de software a medida">
           {t('technology')}
         </a>
       </div>
-      <ul class="flex flex-wrap lg:flex-nowrap justify-center gap-y-2 space-x-2 md:gap-y-4 md:space-x-4">
+      <ul class="flex flex-wrap justify-center gap-y-2 space-x-2 md:gap-y-4 md:space-x-4">
         {
           tertiaryLinks.sort((a, b) => a.text.localeCompare(b.text)).map(({ text, href, ariaLabel, title }) => (
             <li class="tertiary-link whitespace-nowrap bg-[rgb(238,238,238)] rounded-full px-3 py-2 text-sm">

@@ -1006,6 +1006,97 @@ export const header = {
         text: 'Contactar',
         href: routes['es']['contact'],
       },
+      {
+        _id: 'technology',
+        text: 'Tecnologias',        
+        title: 'Tecnologías para desarrollo de software',
+        href: routes['es']['technology'],
+        links: [
+          {
+            href: routes['es']['technology/angular'],
+            title: 'Programación de aplicaciones web con Angular',
+            text: 'Angular',
+            icon: 'tabler:brand-angular',
+          },
+          {
+            href: routes['es']['technology/astro'],
+            title: 'Desarrollo web con ASTRO: rendimento, SEO y seguridad',
+            text: 'Astro',
+            icon: 'tabler:rocket',
+          },
+          {
+            href: routes['es']['technology/bootstrap'],
+            title: 'Desarrollo de interfaces responsive con Bootstrap',
+            text: 'Bootstrap',
+            icon: 'tabler:brand-bootstrap',
+          },
+          {
+            href: routes['es']['technology/html-css'],
+            title: 'Diseño y desarrollo con HTML y CSS',
+            text: 'HTML i CSS',
+            icon: 'tabler:code',
+          },
+          {
+            href: routes['es']['technology/java'],
+            title: 'Desarrollo de software a medida con Java',
+            text: 'Java',
+            icon: 'tabler:coffee',
+          },
+          {
+            href: routes['es']['technology/javascript'],
+            title: 'Desarrollo de aplicaciones web con JavaScript',
+            text: 'JavaScript',
+            icon: 'tabler:brand-javascript',
+          },
+          {
+            href: routes['es']['technology/metronic'],
+            title: 'Programación de interfaces de administración con Metronic',
+            text: 'Metronic',
+            icon: 'tabler:layout-dashboard',
+          },
+          {
+            href: routes['es']['technology/mongodb'],
+            title: 'Desarrollo de bases de datos con MongoDB',
+            text: 'MongoDB',
+            icon: 'tabler:brand-mongodb',
+          },
+          {
+            href: routes['es']['technology/mysql'],
+            title: 'Servicios de desarrollo de bases de datos con MySQL',
+            text: 'MySQL',
+            icon: 'tabler:brand-mysql',
+          },{
+            href: routes['es']['technology/oracle'],
+            title: 'Desarrollo de bases de datos con Oracle Database',
+            text: 'Oracle',
+            icon: 'tabler:database',
+          },
+          {
+            href: routes['es']['technology/php'],
+            title: 'Desarrollo a medida con PHP',
+            text: 'PHP',
+            icon: 'tabler:brand-php',
+          },
+          {
+            href: routes['es']['technology/react-native'],
+            title: 'Empresa de desarrollo de aplicaciones con React Native',
+            text: 'React Native',
+            icon: 'tabler:brand-react',
+          },
+          {
+            href: routes['es']['technology/slim-framework'],
+            title: 'Desarrollos con Slim Framework',
+            text: 'Slim Framework',
+            icon: 'tabler:ease-in-out',
+          },
+          {
+            href: routes['es']['technology/tailwind'],
+            title: 'Diseño de interfaces de usuario con Tailwind CSS',
+            text: 'Tailwind',
+            icon: 'tabler:brand-tailwind',
+          },
+        ],
+      },
     ]
   },
   en: {

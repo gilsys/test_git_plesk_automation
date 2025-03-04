@@ -1,16 +1,14 @@
 ---
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
-import Content from '~/components/widgets/Content.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Features from '~/components/widgets/Features.astro';
-import Features2 from '~/components/widgets/Features2.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Layout from '~/layouts/PageLayout.astro';
 import { getLangFromUrl, useRoutes } from '~/utils/i18n';
-
 const u = useRoutes(getLangFromUrl(Astro.url));
+
 
 const metadata = {
   title: 'Tecnologías de desarrollo de software',
@@ -138,7 +136,7 @@ const metadata = {
       {
         title: 'Oracle',
         description: 'La base de datos empresarial para proyectos que requieren alto rendimiento y seguridad.',
-        icon: 'tabler:database', // Cambiado a un icono más representativo de Oracle
+        icon: 'tabler:database', 
         callToAction: {
           class: 'more-info',
           text: 'Más información',
