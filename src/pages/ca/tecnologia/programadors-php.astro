@@ -1,0 +1,173 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+
+const metadata = {
+  title: 'Desenvolupament a mida amb PHP',
+  description: `El nostre equip de programadors experts en PHP, desenvolupa aplicacions professionals per a empreses amb aquest llenguatge de programació.`,
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Més de 20 anys creant solucions web a mida amb PHP."
+    actions={[{ variant: 'primary', text: 'Pressupost gratuït', href: u('contact') }]}
+    backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/geometric-2/4.jpg' }}
+  >
+    <Fragment slot="title">
+      Desenvolupament a mida amb <span class="text-accent highlight">PHP</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      Comptem amb un equip de programadors experts en PHP especialitzats en el desenvolupament d'eines
+      professionals.
+    </Fragment>
+  </Hero>
+
+  <Content
+    classes={{ container: 'contains-logo pb-0 md:pb-0 lg:pb-0'}}
+    isImageSmall
+    title="<span class='custom-gradient'>PHP</span>: La base per a aplicacions web sòlides i escalables"
+    subtitle="PHP és un dels llenguatges de programació web més robusts i utilitzats."
+    image={{
+      id: 'php-logo',
+      src: '~/assets/images/tecnologia/php-logo.png',
+      alt: 'Logotip PHP',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        A Gilsys comptem amb un equip d'especialistes en programació PHP amb àmplia experiència. Dominem PHP
+        des de les seves primeres versions fins a les més recents, aplicant sempre les millors pràctiques per garantir
+        solucions segures, eficients i escalables.
+      </p>
+      <p class="text-muted mt-4">
+        Ens especialitzem en la creació de <a
+          href={u('development')}
+          class="text-accent"
+          title="Serveis de programació de programari a mida">programari a mida</a
+        >, adaptat a les necessitats específiques de cada client, sense restriccions geogràfiques.
+      </p>
+      <p class="text-center">
+        <a
+          title="Desenvolupament d'aplicacions web a mida en PHP"
+          href={u('development/web')}
+          class="btn-primary mt-12 mb-12 w-auto">Descobreix els nostres serveis de desenvolupament web</a
+        >
+      </p>
+    </Fragment>
+  </Content>
+
+  <Content
+    title="Desenvolupament PHP: La potència d'un llenguatge que segueix vigent"
+    classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}
+  >
+    <Fragment slot="preContent">
+      <p class="text-muted">
+        Malgrat l'auge de noves tecnologies, PHP segueix sent un pilar fonamental del desenvolupament web, impulsant
+        milions de llocs i aplicacions a tot el món.
+      </p>
+      <p class="text-muted mt-4">
+        PHP és la base de plataformes de renom com WordPress, PrestaShop, Pimcore o Magento, que dominen el mercat
+        dels gestors de contingut i el comerç electrònic. La seva adaptabilitat a diferents necessitats i la seva constant
+        evolució el mantenen com un llenguatge rellevant i amb un futur prometedor.
+      </p>
+      <p class="text-center">
+        <a title="Web oficial de PHP" href="https://www.php.net" class="btn-primary mt-12 mb-12 w-auto"
+          >Coneix més sobre PHP</a
+        >
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Features3
+    columns={3}
+    title="Què oferim com a empresa de desenvolupament en PHP?"
+    items={[
+      {
+        title: 'Arquitectures optimitzades',
+        description: `Implementem arquitectures modernes i optimitzades, assegurant aplicacions ràpides i d'alt rendiment.`,
+        icon: 'tabler:layers-linked',
+      },
+      {
+        title: 'Frameworks avançats',
+        description: `Treballem amb frameworks avançats per optimitzar l'eficiència i escalabilitat dels projectes.`,
+        icon: 'tabler:stack',
+      },
+      {
+        title: 'Seguretat robusta',
+        description: `Prioritzem la seguretat del programari, integrant protocols avançats per protegir dades i informació.`,
+        icon: 'tabler:shield-lock',
+      },
+      {
+        title: 'Disseny modular',
+        description: `Dissenyem plataformes modulars i flexibles, llestes per a futures actualitzacions i expansions.`,
+        icon: 'tabler:components',
+      },
+      {
+        title: 'Codi de qualitat',
+        description: `Escrivim codi net, mantenible i eficient, seguint les millors pràctiques de desenvolupament PHP.`,
+        icon: 'tabler:checklist',
+      },
+      {
+        title: 'Manteniment i evolució',
+        description: `Oferim manteniment preventiu, actualitzacions de seguretat i millores funcionals segons les necessitats del teu negoci.`,
+        icon: 'tabler:refresh',
+      },
+    ]}
+  />
+
+  <Content
+    isReversed
+    title="Migració i modernització d'aplicacions en PHP"
+    image={{
+      src: '~/assets/images/tecnologia/php-desarrollo-tags.png',
+      alt: 'Ordinador mostrant elements visuals relacionats amb PHP, etiquetes i símbols',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        Si el teu programari actual requereix una actualització o està desenvolupat en una altra tecnologia, t'ajudem a migrar-lo
+        a PHP mitjançant un procés estructurat, optimitzant el codi, millorant el rendiment i garantint una
+        transició sense interrupcions.
+        <a title="Renovació de programari" href={u('migration')} class="btn-primary mt-12 mb-12 w-auto"
+          >Descobreix com modernitzar la teva aplicació</a
+        >
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/geometric-2/4.jpg', alt: 'Fons abstracte' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Pressupost gratuït',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Trucar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title"
+      >Explica'ns el teu projecte, som especialistes en<span class="custom-gradient"> PHP</span> des del 2004</Fragment
+    >
+    <Fragment slot="subtitle"
+      >Creem solucions PHP a mida que impulsen el creixement del teu negoci, comencem?</Fragment
+    >
+  </CallToAction>
+</Layout>

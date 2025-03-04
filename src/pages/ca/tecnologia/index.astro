@@ -1,0 +1,292 @@
+---
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+const u = useRoutes(getLangFromUrl(Astro.url));
+
+const metadata = {
+  title: 'Tecnologies de desenvolupament de programari',
+  description:
+    "A Gilsys, dominem diferents tecnologies de desenvolupament de programari i llenguatges de programació, per programar solucions a mida que s'adapten a cada projecte.",
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    actions={[{ variant: 'primary', text: 'Pressupost gratuït', href: u('contact') }]}
+    backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/geometric-2/4.jpg' }}
+    tagline="Programem solucions a mida amb una gran varietat de llenguatges."
+  >
+    <Fragment slot="title">
+      <span class="text-accent highlight">Tecnologies</span> per el desenvolupament de programari
+    </Fragment>
+    <Fragment slot="subtitle">
+      Cada projecte requereix una combinació de diferents tecnologies, triades de forma precisa per crear solucions a
+      mida de cada empresa.
+    </Fragment>
+  </Hero>
+
+  <Features3
+    isLinkableGrid
+    title="Experts en programació amb múltiples <span class='custom-gradient'>llenguatges</span> i <span class='custom-gradient'>tecnologies</span>"
+    subtitle="Durant més de 20 anys hem treballat amb moltes tecnologies.<br/>Actualment, destaquem les següents:"
+    items={[
+      {
+        title: 'Angular',
+        description: "El framework de JavaScript per crear interfícies d'usuari per aplicacions web i mòbils.",
+        icon: 'tabler:brand-angular',
+        callToAction: {
+          class: 'more-info',
+          text: 'Més informació',
+          href: u('technology/angular'),
+        },
+      },
+      {
+        title: 'Astro',
+        description:
+          'Framework de nova generació per crear pàgines web ultraràpides, segures i amb SEO on-page optimitzat.',
+        icon: 'tabler:rocket',
+        callToAction: {
+          class: 'more-info',
+          text: 'Més informació',
+          href: u('technology/astro'),
+        },
+      },
+      {
+        title: 'Bootstrap',
+        description: 'El framework CSS més popular per crear interfícies responsive, adaptades a qualsevol dispositiu.',
+        icon: 'tabler:brand-bootstrap',
+        callToAction: {
+          class: 'more-info',
+          text: 'Més informació',
+          href: u('technology/bootstrap'),
+        },
+      },
+      {
+        title: 'HTML & CSS',
+        description: 'Les tecnologies base del web, essencials per a qualsevol projecte.',
+        icon: 'tabler:code',
+        callToAction: {
+          class: 'more-info',
+          text: 'Més informació',
+          href: u('technology/html-css'),
+        },
+      },
+      {
+        title: 'Java',
+        description:
+          'El llenguatge de programació robust i versàtil per desenvolupament backend i aplicacions empresarials.',
+        icon: 'tabler:coffee',
+        callToAction: {
+          class: 'more-info',
+          text: 'Més informació',
+          href: u('technology/java'),
+        },
+      },
+      {
+        title: 'JavaScript',
+        description:
+          'El llenguatge de programació essencial per interactividad web ha evolucionat per ser molt més versàtil.',
+        icon: 'tabler:brand-javascript',
+        callToAction: {
+          class: 'more-info',
+          text: 'Més informació',
+          href: u('technology/javascript'),
+        },
+      },
+      {
+        title: 'Metronic',
+        description:
+          "La millor plantilla web per crear interfícies d'administració professionals, funcionals i modernes.",
+        icon: 'tabler:layout-dashboard',
+        callToAction: {
+          class: 'more-info',
+          text: 'Més informació',
+          href: u('technology/metronic'),
+        },
+      },
+      {
+        title: 'MongoDB',
+        description: 'La base de dades NoSQL per projectes que requereixen flexibilitat i escalabilitat.',
+        icon: 'tabler:brand-mongodb',
+        callToAction: {
+          class: 'more-info',
+          text: 'Més informació',
+          href: u('technology/mongodb'),
+        },
+      },
+      {
+        title: 'MySQL',
+        description:
+          'La base de dades relacional més popular per projectes que necessiten un sistema de gestió de dades eficient.',
+        icon: 'tabler:brand-mysql',
+        callToAction: {
+          class: 'more-info',
+          text: 'Més informació',
+          href: u('technology/mysql'),
+        },
+      },
+      {
+        title: 'Oracle',
+        description: 'La base de dades empresarial per projectes que requereixen alt rendiment i seguretat.',
+        icon: 'tabler:database',
+        callToAction: {
+          class: 'more-info',
+          text: 'Més informació',
+          href: u('technology/oracle'),
+        },
+      },
+      {
+        title: 'PHP',
+        description: 'El llenguatge de programació del costat del servidor que impulsa una gran part del web.',
+        icon: 'tabler:brand-php',
+        callToAction: {
+          class: 'more-info',
+          text: 'Més informació',
+          href: u('technology/php'),
+        },
+      },
+      {
+        title: 'React Native',
+        description: 'El framework per crear aplicacions mòbils natives amb JavaScript.',
+        icon: 'tabler:brand-react',
+        callToAction: {
+          class: 'more-info',
+          text: 'Més informació',
+          href: u('technology/react-native'),
+        },
+      },
+      {
+        title: 'Slim Framework',
+        description:
+          'El microframework PHP per crear APIs i aplicacions web, sense sobrecàrrega de funcionalitats innecessàries.',
+        icon: 'tabler:ease-in-out',
+        callToAction: {
+          class: 'more-info',
+          text: 'Més informació',
+          href: u('technology/slim-framework'),
+        },
+      },
+      {
+        title: 'Tailwind CSS',
+        description:
+          "El framework CSS que accelera el desenvolupament web i millora el rendiment. Amb classes predefinides, agilitza la programació d'interfícies responsive personalitzades.",
+        icon: 'tabler:brand-tailwind',
+        callToAction: {
+          class: 'more-info',
+          text: 'Més informació',
+          href: u('technology/tailwind'),
+        },
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Features3>
+
+  <Features
+    id="features"
+    title="Desenvolupament, personalització, migració, integració i assessorament"
+    subtitle="El codi de programació és el nostre aliat per poder desenvolupar projectes adaptats a cada client."
+    items={[
+      {
+        title: 'Desenvolupament de programari a mida',
+        description:
+          'La nostra àmplia experiència en diversos llenguatges de programació ens permet crear programari totalment adaptat a les teves necessitats específiques.',
+        icon: 'tabler:code',
+      },
+      {
+        title: 'Personalització de programari existent',
+        description:
+          'Modifiquem i adaptem programari existent, basat en llenguatges i tecnologies que dominem, per optimitzar el seu funcionament i ajustar-lo als teus requeriments.',
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Migració entre plataformes',
+        description:
+          'Realitzem migracions fluides entre plataformes que utilitzen llenguatges de programació coneguts, garantint la continuïtat i eficiència de les teves operacions.',
+        icon: 'tabler:transfer-in',
+      },
+      {
+        title: "Integració d'eines",
+        description:
+          'Integrem eines i sistemes, aprofitant el nostre coneixement dels seus llenguatges de programació, per crear solucions cohesives i eficients.',
+        icon: 'tabler:plug',
+      },
+      {
+        title: 'Consultoria especialitzada',
+        description:
+          'Oferim serveis de consultoria basats en un coneixement profund de múltiples llenguatges i tecnologies, assessorant-te en la presa de decisions estratègiques.',
+        icon: 'tabler:bulb',
+      },
+      {
+        title: 'Solució de problemes en programari de tercers',
+        description:
+          'El nostre enteniment profund de diversos llenguatges de programació ens permet diagnosticar i solucionar problemes en eines desenvolupades per tercers, optimitzant el seu rendiment.',
+        icon: 'tabler:tools',
+      },
+    ]}
+  />
+
+  <FAQs
+    title="Per què és important el domini de <span class='custom-gradient'>tantes tecnologies</span>?"
+    subtitle="Entenem que dominar una gran varietat de tecnologies ens permet tenir una perspectiva sòlida per escollir la millor combinació per a cada projecte."
+    tagline=""
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'Adaptació a les necessitats del projecte',
+        description:
+          'El nostre ampli coneixement de diverses tecnologies ens permet seleccionar les eines més adequades per a cada projecte, assegurant solucions eficients i exitoses.',
+      },
+      {
+        title: 'Innovació i avantguarda',
+        description:
+          "Ens mantenim al dia amb les últimes tendències i tecnologies, oferint-te solucions innovadores i competitives que t'impulsen cap al futur.",
+      },
+      {
+        title: 'Selecció precisa',
+        description:
+          'Hem analitzat, estudiat i utilitzat les tecnologies que considerem millors per complir cada funcionalitat específica de forma òptima.',
+      },
+      {
+        title: 'Integració de sistemes',
+        description:
+          'La nostra comprensió de diferents llenguatges de programació facilita la integració de sistemes i redueix els possibles problemes.',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </FAQs>
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/geometric-2/4.jpg', alt: 'Fons abstracte' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Pressupost gratuït',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Trucar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Impulsem el teu projecte programant amb les <span class="custom-gradient">tecnologies</span> més adequades
+    </Fragment>
+    <Fragment slot="subtitle">Contacta'ns i descobreix com podem desenvolupar el teu projecte.</Fragment>
+  </CallToAction>
+
+  <BlogLatestPosts title="Últimes entrades del blog" linkText="Anar al blog" />
+</Layout>

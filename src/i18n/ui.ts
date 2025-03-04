@@ -98,6 +98,7 @@ export const ui = {
     'affiliations.ccm': 'Socios de Consell empresarial d\'Osona',
     'affiliations.tic': 'Socios de TICOsona - Associació d\'Empreses de Tecnologies de la Informació i la Comunicació d\'Osona',
     'cookie.settings': 'Configuració de cookies',
+    'technology': 'Tecnologias destacades'
   },
   en: {
     'common.home': 'Home',
@@ -139,6 +140,7 @@ export const ui = {
     'affiliations.ccm': 'Member of Consell empresarial d\'Osona',
     'affiliations.tic': 'Member of TICOsona - Associació d\'Empreses de Tecnologies de la Informació i la Comunicació d\'Osona',
     'cookie.settings': 'Cookie settings',
+    'technology': 'Featured technologies'
   },
 } as const;
 
@@ -199,6 +201,7 @@ export const routes = {
     'privacy-policy': '/ca/politica-privacitat/',
     'cookie-policy': '/ca/politica-cookies/',
 
+    'technology' : '/ca/tecnologia/',
     'technology/php' : '/ca/tecnologia/programadors-php/',
     'technology/react-native' : '/ca/tecnologia/programadors-react-native/',
     'technology/angular' : '/ca/tecnologia/programadors-angular/',
@@ -307,7 +310,20 @@ export const routes = {
     'terms': '/en/legal-notice/',
     'privacy-policy': '/en/privacy-policy/',
     'cookie-policy': '/en/cookie-policy/',
-    
+
+    'technology' : '/en/technology/',
+    'technology/php' : '/en/technology/developers-php/',
+    'technology/react-native' : '/en/technology/developers-react-native/',
+    'technology/angular' : '/en/technology/developers-angular/',
+    'technology/metronic' : '/en/technology/developers-metronic/',
+    'technology/slim-framework' : '/en/technology/developers-slim-framework/',
+    'technology/tailwind' : '/en/technology/developers-tailwind/',
+    'technology/bootstrap' : '/en/technology/developers-bootstrap/',
+    'technology/mysql': '/en/technology/developers-mysql/',
+    'technology/oracle': '/en/technology/developers-oracle/',
+    'technology/mongodb': '/en/technology/developers-mongodb/',
+    'technology/html-css': '/en/technology/developers-html-css/',
+    'technology/astro': '/en/technology/developers-astro/',
   },
 };
 
@@ -1301,6 +1317,79 @@ export const footer = {
       { text: 'Política de privacitat', href: routes['ca']['privacy-policy'] },
       { text: 'Política de cookies', href: routes['ca']['cookie-policy']}
     ],
+    tertiaryLinks :
+    [
+      {
+        href: routes['ca']['technology/php'],
+        title: 'Desenvolupament a mida amb PHP',
+        text: 'PHP'
+      },
+      {
+        href: routes['ca']['technology/react-native'],
+        title: 'Programem amb React Native',
+        text: 'React Native'
+      },
+      {
+        href: routes['ca']['technology/metronic'],
+        title: 'Programació d\'interfícies d\'administració amb Metronic',
+        text: 'Metronic'
+      },
+      {
+        href: routes['ca']['technology/angular'],
+        title: 'Programació d\'interfícies amb Angular',
+        text: 'Angular'
+      },
+      {
+        href: routes['ca']['technology/slim-framework'],
+        title: ' Desenvolupem amb Slim Framework',
+        text: 'Slim Framework'
+      },
+      {
+        href: routes['ca']['technology/tailwind'],
+        title: 'Disseny d\'interfícies d\'usuari amb Tailwind CSS',
+        text: 'Tailwind'
+      },
+      {
+        href: routes['ca']['technology/bootstrap'],
+        title: 'Desenvolupament d\'interfícies responsive amb Bootstrap',
+        text: 'Bootstrap'
+      },
+      {
+        href: routes['ca']['technology/mysql'],
+        title: 'Serveis de desenvolupament de bases de dades amb MySQL',
+        text: 'MySQL'
+      },
+      {
+        href: routes['ca']['technology/oracle'],
+        title: 'Desenvolupament de bases de dades Oracle Database',
+        text: 'Oracle'
+      },
+      {
+        href: routes['ca']['technology/mongodb'],
+        title: ' Desenvolupament de bases de dades amb MongoDB',
+        text: 'MongoDB'
+      },
+      {
+        href: routes['ca']['technology/html-css'],
+        title: 'Programem interfícies amb HTML i CSS',
+        text: 'HTML i CSS'
+      },
+      {
+        href: routes['ca']['technology/java'],
+        title: 'Serveis de desenvolupament amb Java',
+        text: 'Java'
+      },
+      {
+        href: routes['ca']['technology/javascript'],
+        title: 'Programem amb Javascript',
+        text: 'Javascript'
+      },
+      {
+        href: routes['ca']['technology/astro'],
+        title: 'Programem amb Astro',
+        text: 'Astro'
+      },
+    ],
     socialLinks: [
       { ariaLabel: 'Linked-in', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/company/gilsys' },
       //{ ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
@@ -1429,6 +1518,78 @@ export const footer = {
       { text: 'Legal Notice', href: routes['en']['terms'] },
       { text: 'Privacy Policy', href: routes['en']['privacy-policy']},
       { text: 'Cookie Policy', href: routes['en']['cookie-policy']},
+    ],
+    tertiaryLinks: [
+      {
+          href: routes['en']['technology/php'],
+          title: 'Custom Development with PHP',
+          text: 'PHP'
+      },
+      {
+          href: routes['en']['technology/react-native'],
+          title: 'We Program with React Native',
+          text: 'React Native'
+      },
+      {
+          href: routes['en']['technology/metronic'],
+          title: 'Programming Administration Interfaces with Metronic',
+          text: 'Metronic'
+      },
+      {
+          href: routes['en']['technology/angular'],
+          title: 'Programming Interfaces with Angular',
+          text: 'Angular'
+      },
+      {
+          href: routes['en']['technology/slim-framework'],
+          title: 'We Develop with Slim Framework',
+          text: 'Slim Framework'
+      },
+      {
+          href: routes['en']['technology/tailwind'],
+          title: 'User Interface Design with Tailwind CSS',
+          text: 'Tailwind'
+      },
+      {
+          href: routes['en']['technology/bootstrap'],
+          title: 'Responsive Interface Development with Bootstrap',
+          text: 'Bootstrap'
+      },
+      {
+          href: routes['en']['technology/mysql'],
+          title: 'Database Development Services with MySQL',
+          text: 'MySQL'
+      },
+      {
+          href: routes['en']['technology/oracle'],
+          title: 'Oracle Database Development',
+          text: 'Oracle'
+      },
+      {
+          href: routes['en']['technology/mongodb'],
+          title: 'Database Development with MongoDB',
+          text: 'MongoDB'
+      },
+      {
+          href: routes['en']['technology/html-css'],
+          title: 'We Program Interfaces with HTML and CSS',
+          text: 'HTML and CSS'
+      },
+      {
+          href: routes['en']['technology/java'],
+          title: 'Development Services with Java',
+          text: 'Java'
+      },
+      {
+          href: routes['en']['technology/javascript'],
+          title: 'We Program with JavaScript',
+          text: 'JavaScript'
+      },
+      {
+          href: routes['en']['technology/astro'],
+          title: 'We Program with Astro',
+          text: 'Astro'
+      },
     ],
     socialLinks: [
       { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/company/gilsys' },
