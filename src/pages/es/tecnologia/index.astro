@@ -1,0 +1,298 @@
+---
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+
+const metadata = {
+  title: 'Tecnologías de desarrollo de software',
+  description:
+    'En Gilsys, dominamos diferentes tecnologías de desarrollo de software y lenguajes de programación, para programar soluciones a medida que se adaptan a cada proyecto.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    actions={[{ variant: 'primary', text: 'Presupuesto gratuito', href: u('contact') }]}
+    backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/geometric-2/4.jpg' }}
+    tagline="Programamos soluciones a medida con una gran variedad de lenguajes."
+  >
+    <Fragment slot="title">
+      <span class="text-accent highlight"> Tecnologías</span> para desarrollo de software
+    </Fragment>
+    <Fragment slot="subtitle">
+      Cada proyecto requiere una combinación de diferentes tecnologías, elegidas de forma precisa para crear soluciones
+      a medida de cada empresea.
+    </Fragment>
+  </Hero>
+
+  <Features3
+    isLinkableGrid    
+    title="Expertos en programación con múltiples <span class='custom-gradient'>lenguajes</span> y <span class='custom-gradient'>tecnologías</span>"
+    subtitle="Durante más de 20 años hemos trabajado con muchas tecnologías.<br/>En la actualidad, destacamos las siguientes:"
+    items={[
+      {
+        title: 'Angular',
+        description: 'El framework de JavaScript para crear interfaces de usuario para apliaciones web y móbiles.',
+        icon: 'tabler:brand-angular',
+        callToAction: {
+          class: 'more-info',
+          text: 'Más información',
+          href: u('technology/angular'),
+        },
+      },
+      {
+        title: 'Astro',
+        description:
+          'Framework de nueva generación para crear páginas web ultrarrápidas, seguras y con SEO on-page optimizado.',
+        icon: 'tabler:rocket',
+        callToAction: {
+          class: 'more-info',
+          text: 'Más información',
+          href: u('technology/astro'),
+        },
+      },
+      {
+        title: 'Bootstrap',
+        description:
+          'El framework CSS más popular para crear interfaces responsive, adaptadas a cualquier dispositivo.',
+        icon: 'tabler:brand-bootstrap',
+        callToAction: {
+          class: 'more-info',
+          text: 'Más información',
+          href: u('technology/bootstrap'),
+        },
+      },
+      {
+        title: 'HTML & CSS',
+        description: 'Las tecnologías base de la web, esenciales para cualquier proyecto.',
+        icon: 'tabler:code',
+        callToAction: {
+          class: 'more-info',
+          text: 'Más información',
+          href: u('technology/html-css'),
+        },
+      },
+      {
+        title: 'Java',
+        description:
+          'El lenguaje de programación robusto y versátil para desarrollo backend y aplicaciones empresariales.',
+        icon: 'tabler:coffee',
+        callToAction: {
+          class: 'more-info',
+          text: 'Más información',
+          href: u('technology/java'),
+        },
+      },
+      {
+        title: 'JavaScript',
+        description:
+          'El lenguaje de programación esencial para interactividad web ha evolucionado para ser mucho más versátil.',
+        icon: 'tabler:brand-javascript',
+        callToAction: {
+          class: 'more-info',
+          text: 'Más información',
+          href: u('technology/javascript'),
+        },
+      },
+      {
+        title: 'Metronic',
+        description:
+          'La mejor plantilla web para crear interfaces de administración profesionales, funcionales y modernas.',
+        icon: 'tabler:layout-dashboard',
+        callToAction: {
+          class: 'more-info',
+          text: 'Más información',
+          href: u('technology/metronic'),
+        },
+      },
+      {
+        title: 'MongoDB',
+        description: 'La base de datos NoSQL para proyectos que requieren flexibilidad y escalabilidad.',
+        icon: 'tabler:brand-mongodb',
+        callToAction: {
+          class: 'more-info',
+          text: 'Más información',
+          href: u('technology/mongodb'),
+        },
+      },
+      {
+        title: 'MySQL',
+        description:
+          'La base de datos relacional más popular para proyectos que necesitan un sistema de gestión de datos eficiente.',
+        icon: 'tabler:brand-mysql',
+        callToAction: {
+          class: 'more-info',
+          text: 'Más información',
+          href: u('technology/mysql'),
+        },
+      },
+      {
+        title: 'Oracle',
+        description: 'La base de datos empresarial para proyectos que requieren alto rendimiento y seguridad.',
+        icon: 'tabler:database', // Cambiado a un icono más representativo de Oracle
+        callToAction: {
+          class: 'more-info',
+          text: 'Más información',
+          href: u('technology/oracle'),
+        },
+      },
+      {
+        title: 'PHP',
+        description: 'El lenguaje de programación del lado del servidor que impulsa una gran parte de la web.',
+        icon: 'tabler:brand-php',
+        callToAction: {
+          class: 'more-info',
+          text: 'Más información',
+          href: u('technology/php'),
+        },
+      },
+      {
+        title: 'React Native',
+        description: 'El framework para crear aplicaciones móviles nativas con JavaScript.',
+        icon: 'tabler:brand-react',
+        callToAction: {
+          class: 'more-info',
+          text: 'Más información',
+          href: u('technology/react-native'),
+        },
+      },
+      {
+        title: 'Slim Framework',
+        description:
+          'El microframework PHP para crear APIs y aplicaciones web, sin sobrecarga de funcionalidades innecesarias.',
+        icon: 'tabler:ease-in-out',
+        callToAction: {
+          class: 'more-info',
+          text: 'Más información',
+          href: u('technology/slim-framework'),
+        },
+      },
+      {
+        title: 'Tailwind CSS',
+        description:
+          'El framework CSS que acelera el desarrollo web y mejora el rendimiento. Con clases predefinidas, agiliza la programación de interfaces responsive personalizadas.',
+        icon: 'tabler:brand-tailwind',
+        callToAction: {
+          class: 'more-info',
+          text: 'Más información',
+          href: u('technology/tailwind'),
+        },
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Features3>
+
+  <Features
+    id="features"
+    title="Desarrollo, personalización, migración, integración y asesoramiento"
+    subtitle="El código de programación es nuestro aliado para poder desarrollar proyectos adaptados a cada cliente."    
+     items={[
+      {
+        title: 'Desarrollo de software a medida',
+        description:
+          'Nuestra amplia experiencia en diversos lenguajes de programación nos permite crear software totalmente adaptado a tus necesidades específicas.',
+        icon: 'tabler:code',
+      },
+      {
+        title: 'Personalización de software existente',
+        description:
+          'Modificamos y adaptamos software existente, basado en lenguajes y tecnologías que dominamos, para optimizar su funcionamiento y ajustarlo a tus requerimientos.',
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Migración entre plataformas',
+        description:
+          'Realizamos migraciones fluidas entre plataformas que utilizan lenguajes de programación conocidos, garantizando la continuidad y eficiencia de tus operaciones.',
+        icon: 'tabler:transfer-in',
+      },
+      {
+        title: 'Integración de herramientas',
+        description:
+          'Integramos herramientas y sistemas, aprovechando nuestro conocimiento de sus lenguajes de programación, para crear soluciones cohesivas y eficientes.',
+        icon: 'tabler:plug',
+      },
+      {
+        title: 'Consultoría especializada',
+        description:
+          'Ofrecemos servicios de consultoría basados en un conocimiento profundo de múltiples lenguajes y tecnologías, asesorándote en la toma de decisiones estratégicas.',
+        icon: 'tabler:bulb',
+      },
+      {
+        title: 'Solución de problemas en software de terceros',
+        description:
+          'Nuestro entendimiento profundo de diversos lenguajes de programación nos permite diagnosticar y solucionar problemas en herramientas desarrolladas por terceros, optimizando su rendimiento.',
+        icon: 'tabler:tools',
+      },
+    ]}
+  />
+
+  <FAQs
+    title="¿Por qué es importante el dominio de <span class='custom-gradient'>tantas tecnologías</span>?"
+    subtitle="Entendemos que dominar una gran variedad de tecnologías nos permite tener una presectiva sólida para escoger la mejor combinación para cada proyecto."
+    tagline=""
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'Adaptación a las necesidades del proyecto',
+        description:
+          'Nuestro amplio conocimiento de diversas tecnologías nos permite seleccionar las herramientas más adecuadas para cada proyecto, asegurando soluciones eficientes y exitosas.',
+      },
+      {
+        title: 'Innovación y vanguardia',
+        description:
+          'Nos mantenemos al día con las últimas tendencias y tecnologías, ofreciéndote soluciones innovadoras y competitivas que te impulsan hacia el futuro.',
+      },
+      {
+        title: 'Selección precisa',
+        description:
+          'Hemos analizado, estudiado y utilizado las tecnologías que consideramos mejores para cumplir cada funcionalidad específica de forma óptima.',
+      },
+      {
+        title: 'Integración de sistemas',
+        description:
+          'Nuestra comprensión de diferentes lenguajes de programación facilita la integración de sistemas y reduce los posibles problemas.',
+      },
+    ]}
+  >
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-lightgray"></div>
+  </Fragment>
+  </FAQs>
+
+ 
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/geometric-2/4.jpg', alt: 'Fondo abstracto' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Presupuesto gratuito',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Llamar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Impulsamos tu proyecto programando con las <span class="custom-gradient">tecnologías</span> más adecuadas
+    </Fragment>
+    <Fragment slot="subtitle">Contáctanos y descubre como podemos desarrollar tu proyecto.</Fragment>
+  </CallToAction>
+
+  <BlogLatestPosts title="Últimas entradas del blog" linkText="Ir al blog" />
+</Layout>
