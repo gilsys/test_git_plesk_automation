@@ -1,0 +1,188 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+
+const metadata = {
+  title: 'Serveis de programació de bases de dades amb MongoDB',
+  description: `Serveis de desenvolupament amb MongoDB a nivell professional. Els programadors de la nostra empresa realitzen el disseny i desenvolupament de bases de dades NoSQL, no relacionals.`,
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Bases de dades no relacionals: prioritzant la màxima eficiència"
+    actions={[{ variant: 'primary', text: 'Pressupost gratuït', href: u('contact') }]}
+    backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/geometric-2/4.jpg' }}
+  >
+    <Fragment slot="title">
+      Desenvolupament de bases de dades amb <span class="text-accent highlight">MongoDB</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      Dissenyem i implementem bases de dades NoSQL, ràpides i escalables per a aplicacions web i mòbils.
+    </Fragment>
+  </Hero>
+
+  <Content
+    classes={{ container: 'contains-logo' }}
+    isImageSmall
+    title="<span class='custom-gradient'>MongoDB i NoSQL: </span>L'evolució de l'emmagatzematge de dades"
+    image={{
+      id: 'mongodb-logo',
+      src: '~/assets/images/tecnologia/mongodb-logo.svg',
+      alt: 'Logotip MongoDB',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        A Gilsys, som especialistes en <strong>MongoDB</strong>, un dels sistemes de bases de dades NoSQL més
+        avançats i eficients del mercat.
+      </p>
+      <p class="text-muted mt-4">
+        Amb àmplia experiència en el disseny d'arquitectures de dades NoSQL, ajudem a empreses a gestionar grans
+        volums d'informació de manera <strong>flexible, escalable i eficient</strong>.
+      </p>
+    </Fragment>
+  </Content>
+
+  <Content
+    title="Gestió flexible i escalable de dades dinàmiques i distribuïdes."
+    image={{
+      id: 'php-logo',
+      src: '~/assets/images/tecnologia/mongodb-escena-pantalla.png',
+      alt: 'Logotip PHP',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        <strong>MongoDB</strong> és una base de dades NoSQL dissenyada per gestionar dades no estructurades i semiestructurades
+        de forma òptima. A diferència dels sistemes SQL tradicionals, MongoDB emmagatzema documents en format BSON (similar
+        a JSON), la qual cosa permet major <strong>agilitat, velocitat i escalabilitat</strong> en el processament de dades.
+      </p>
+      <p class="text-center">
+        <a title="Web oficial de MongoDB" target="_blank"  href="https://www.mongodb.com/" class="btn-primary mt-12 mb-12 w-auto"
+          >Coneix més sobre MongoDB</a
+        >
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Features3
+    columns={3}
+    title="Avantatges d'usar MongoDB sobre bases de dades SQL"
+    items={[
+      {
+        description: `Flexibilitat en l'estructura de dades, permetent esquemes dinàmics sense necessitat de definir relacions rígides.`,
+        icon: 'tabler:layers-subtract',
+      },
+      {
+        description: `Escalabilitat horitzontal, suportant grans volums de dades sense afectar el rendiment.`,
+        icon: 'tabler:arrows-maximize',
+      },
+      {
+        description: `Consultes ràpides i eficients, gràcies al seu model basat en documents.`,
+        icon: 'tabler:search',
+      },
+      {
+        description: `Alta disponibilitat i replicació automàtica, minimitzant el risc de pèrdua de dades.`,
+        icon: 'tabler:refresh',
+      },
+      {
+        description: `Millor rendiment en aplicacions amb dades no estructurades o canviants.`,
+        icon: 'tabler:bolt',
+      },
+      {
+        description: `Fàcil integració amb aplicacions modernes i entorns cloud-native.`,
+        icon: 'tabler:cloud',
+      },
+    ]}
+  />
+
+  <Features2
+    columns={2}
+    title="Casos en els quals MongoDB és la millor opció"
+    subtitle="MongoDB és ideal per a aplicacions que requereixen emmagatzemar grans volums de dades no relacionades, per exemple:"
+    items={[
+      {
+        title: 'Aplicacions amb gran quantitat de contingut',
+        description: 'Emmagatzema i gestiona contingut flexible i divers, adaptant-se a estructures canviants.',
+        icon: 'tabler:file-text',
+      },
+      {
+        title: 'Catàlegs de productes i comerç electrònic',
+        description: 'Gestiona grans volums de dades de productes amb atributs variables i jerarquies complexes.',
+        icon: 'tabler:shopping-cart',
+      },
+      {
+        title: 'Aplicacions mòbils i d\'Internet de les Coses (IoT)',
+        description: 'Recopila i processa dades en temps real de dispositius, sensors i usuaris mòbils.',
+        icon: 'tabler:device-mobile',
+      },
+      {
+        title: 'Anàlisi de dades en temps real i Big Data',
+        description: 'Escala horitzontalment per gestionar grans volums de dades i realitzar anàlisis ràpides.',
+        icon: 'tabler:chart-bar',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Features2>
+
+  <Content
+    isReversed
+    title="Quan usem MongoDB a Gilsys?"
+    image={{
+      src: '~/assets/images/tecnologia/mongodb-hoja-db.png',
+      alt: 'MongoDB logo hoja',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        A Gilsys, hem implementat <strong>MongoDB</strong> en diferents projectes per millorar el rendiment i l'escalabilitat
+        de les aplicacions, sempre que es requereixi una estructura de dades no relacionada. Les bases de dades NoSQL estan
+        optimitzades per emmagatzemar, consultar i analitzar <strong>grans volums de dades</strong> amb màxima eficiència.
+      </p>
+      <p class="text-muted mt-4">
+        Gràcies al nostre coneixement en arquitectures no relacionals, ajudem a empreses a migrar des de bases de
+        dades relacionals tradicionals cap a solucions més flexibles i adaptables a les necessitats actuals.
+      </p>
+      <p class="text-center">
+        <a title="Migració de dades des de plataformes antigues" href={u('migration')} class="btn-primary mt-12 mb-12 w-auto"
+          >Coneix més sobre migració de dades</a
+        >
+      </p>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/geometric-2/4.jpg', alt: 'Fondo abstracto' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Pressupost gratuït',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+          text: 'Trucar',
+          href: 'tel:+34665331271',
+        },
+      ]}
+    >
+      <Fragment slot="title"
+        >Confia en Gilsys per implementar bases de dades amb <span class="custom-gradient">MongoDB</span></Fragment
+      >
+      <Fragment slot="subtitle">Som experts en NoSQL i SQL, i et guiarem per triar la millor solució. </Fragment>
+    </CallToAction>
+  </Layout>

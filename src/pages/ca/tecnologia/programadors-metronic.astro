@@ -1,0 +1,173 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+
+const metadata = {
+  title: 'Programació d\'interfícies d\'administració a mida amb Metronic',
+  description: `La nostra empresa utilitza Metronic, un framework basat en Bootstrap o Tailwind, per desenvolupar interfícies d'administració professionals.`,
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Interfícies d'usuari funcionals, intuitives i estables."
+    actions={[{ variant: 'primary', text: 'Pressupost gratuït', href: u('contact') }]}
+    backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/geometric-2/4.jpg' }}
+  >
+    <Fragment slot="title">
+      Programació d'interfícies d'administració amb <span class="text-accent highlight">Metronic</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      Recomanem Metronic, el framework que ens permet dissenyar i programar la part gràfica d'aplicacions web amb
+      objectius principalment funcionals.
+    </Fragment>
+  </Hero>
+
+  <Content
+    classes={{ container: 'contains-logo pb-0 md:pb-0 lg:pb-0' }}
+    isImageSmall
+    subtitle="Llançat el 2013, continua sent el framework número u per a la creació d'interfícies funcionals."
+    title="Desenvolupem aplicacions d'administració atractives i funcionals amb <span class='custom-gradient'>Metronic</span>"
+    image={{
+      id: 'metronic-logo',
+      src: '~/assets/images/tecnologia/metronic-logo.svg',
+      alt: 'Logotip Metronic',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        Les plataformes d'administració i gestió de dades han de ser <strong>funcionals</strong>, <strong
+          >intuitives</strong
+        > i <strong>estables</strong>. El nostre equip de programadors treballa habitualment amb Metronic, un dels
+        sistemes de plantilles més avançats per al desenvolupament de backoffice, panells d'administració i aplicacions
+        web altament funcionals.
+        <a
+          title="Programació d'aplicacions web a mida"
+          href={u('development/web')}
+          class="btn-primary mt-12 mb-12 w-auto">Coneix més sobre programació d'aplicacions web</a
+        >
+      </p>
+    </Fragment>
+  </Content>
+
+  <Features
+    title="Avantatges d'utilitzar Metronic en projectes de programació a mida"
+    items={[
+      {
+        title: 'Disseny modern i responsive',
+        description:
+          'Adaptable a qualsevol dispositiu, assegurant una experiència d\'usuari òptima en mòbils, tauletes i ordinadors.',
+        icon: 'tabler:devices',
+      },
+      {
+        title: 'Biblioteca extensa de components',
+        description:
+          'Agilitza el desenvolupament sense comprometre la personalització, oferint una àmplia gamma d\'elements predissenyats i llestos per usar.',
+        icon: 'tabler:components',
+      },
+      {
+        title: 'Integració amb frameworks avançats',
+        description:
+          'Compatible amb frameworks com <a href="' + u('technology/slim-framework') + '" class="text-accent">SlimFramework</a>, facilitant la creació d\'aplicacions robustes i escalables.',
+        icon: 'tabler:code-plus',
+      },
+      {
+        title: 'Rendiment i càrrega ràpida',
+        description: 'Optimitzat per assegurar temps de resposta eficients i una experiència d\'usuari fluida.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Personalització',
+        description:
+          'Permet a desenvolupadors experts, adaptar cada element a les necessitats específiques del projecte, des de l\'aparença fins a la funcionalitat.',
+        icon: 'tabler:adjustments-alt',
+      },
+      {
+        title: 'Múltiples estructures de base',
+        description:
+          'Ofereix diferents plantilles dins del seu paquet, per poder disposar directament d\'una base sobre la qual treballar, segons l\'enfocament de cada projecte.',
+        icon: 'tabler:stack',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Features>
+
+  <Features3
+    title="Com utilitzem Metronic a Gilsys?"
+    subtitle="Certament, és un framework que ens encanta; l'utilitzem en gairebé totes les solucions d'administració que desenvolupem a mida."
+    items={[
+      {
+        title: 'Construcció de panells d\'administració i aplicacions funcionals',
+        description: `Des de panells d'administració per gestionar contingut fins a plataformes avançades per al control empresarial, Metronic ofereix la flexibilitat necessària per crear solucions intuitives i eficients.`,
+        icon: 'tabler:layout-dashboard',
+      },
+      {
+        title: 'Transformació i modernització amb Metronic',
+        description: `Si el teu sistema d'administració necessita una actualització, realitzem migracions i optimització a Metronic, assegurant una transició fluida i sense interrupcions en l'operativitat.`,
+        icon: 'tabler:refresh',
+      },
+      {
+        title: 'Manteniment i suport per a solucions amb Metronic',
+        description: `Mantenim i millorem les plataformes desenvolupades amb Metronic, assegurant que sempre estiguin actualitzades, protegides i alineades amb les últimes tendències tecnològiques.`,
+        icon: 'tabler:tools',
+      },
+    ]}
+  />
+
+  <Content
+    title="Versions amb Tailwind i Bootstrap"
+    classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}
+  >
+    <Fragment slot="preContent">
+      <p class="text-muted">
+        Metronic ofereix dues versions: una basada en <a href={u('technology/bootstrap')} class="text-accent">Bootstrap</a> i una altra en <a
+          href={u('technology/tailwind')}
+          class="text-accent">Tailwind</a
+        >, permetent triar la que millor s'adapti a cada projecte. Ambdues versions inclouen una àmplia col·lecció de
+        components i una estructura optimitzada, la qual cosa accelera el desenvolupament d'aplicacions empresarials i millora l'experiència de l'usuari.
+      </p>
+      <p class="text-center">
+        <a title="Web oficial de Metronic" target="_blank" href="https://keenthemes.com/metronic" class="btn-primary mt-12 mb-12 w-auto"
+          >Coneix més sobre Metronic</a
+        >
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/geometric-2/4.jpg', alt: 'Fons abstracte' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Pressupost gratuït',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Trucar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title"
+      >Tant si coneixes <span class="custom-gradient">Metronic</span> comsi no, des de Gilsys te'l recomanem</Fragment
+      >
+      <Fragment slot="subtitle"
+        >Ens encarreguem de preparar una interfície atractiva per al teu projecte perquè els usuaris se sentin còmodes i
+        gaudeixin utilitzant l'eina creada.</Fragment
+      >
+    </CallToAction>
+  </Layout>

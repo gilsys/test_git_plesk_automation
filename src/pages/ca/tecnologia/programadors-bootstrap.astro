@@ -1,0 +1,219 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+
+const metadata = {
+  title: 'Empresa de programació amb Bootstrap',
+  description: `Amb Bootstrap, creem interfícies d'usuari (Frontend) responsive, adaptades a mòbil, tauleta i ordinador. Realitzem maquetació i disseny a mida. Pressupost gratuït!`,
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Un únic codi, múltiples formats de presentació."
+    actions={[{ variant: 'primary', text: 'Pressupost gratuït', href: u('contact') }]}
+    backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/geometric-2/4.jpg' }}
+  >
+    <Fragment slot="title">
+      Desenvolupament d'interfícies responsive amb <span class="text-accent highlight">Bootstrap</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      Comptem amb un equip de programadors experts en Bootstrap, preparats per desenvolupar eines professionals
+      amb aquest framework.
+    </Fragment>
+  </Hero>
+
+  <Content
+    classes={{ container: 'contains-logo pb-0 md:pb-0 lg:pb-0' }}
+    isImageSmall
+    title="<span class='custom-gradient'>Bootstrap: </span> Dissenyem interfícies modernes i adaptables"
+    image={{
+      id: 'bootstrap-logo',
+      src: '~/assets/images/tecnologia/bootstrap-logo.svg',
+      alt: 'Logotip Bootstrap - Framework per a interfícies responsive',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        A Gilsys, utilitzem Bootstrap per construir interfícies modernes, responsive i altament funcionals. Com un
+        dels frameworks CSS més utilitzats al món, Bootstrap ofereix una solució sòlida i eficient per dissenyar
+        aplicacions web intuitives i adaptables a qualsevol dispositiu.
+      </p>
+      <p class="text-muted mt-4">
+        La seva flexibilitat el fa ideal per a frontends dinàmics i backends amb maquetació responsive, garantint una
+        experiència fluida i accessible per a tots els usuaris.
+      </p>
+      <p class="text-muted mt-4">
+        <a title="Desenvolupament d'aplicacions web a mida" href={u('development/web')} class="btn-primary mt-12 mb-12 w-auto">Explora els nostres serveis de desenvolupament web a mida</a>
+      </p>
+
+    </Fragment>
+  </Content>
+
+  <Content
+    title=`Creem interfícies d'usuari <span class="custom-gradient">responsive</span>`
+    subtitle=`Adaptades a mòbil, tauleta i ordinador`
+    image={{
+      src: '~/assets/images/tecnologia/bootstrap-responsive.png',
+      alt: 'Escenari per a Bootstrap - Interfícies responsive',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        Bootstrap ofereix una base sòlida per dissenyar interfícies ordenades i professionals sense necessitat d'escriure
+        codi CSS des de zero. El seu sistema de quadrícula flexible, components predefinits i enfocament mobile-first ens
+        permeten accelerar el procés de desenvolupament sense comprometre la personalització.
+      </p>
+      <p class="text-muted mt-4">
+        <a title="Pàgina oficial de Bootstrap" target="_blank" href="https://getbootstrap.com/" class="btn-primary mt-12 mb-12 w-auto">Visita la web oficial de Boostrap</a>
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Features3
+    title="Beneficis d'utilitzar Bootstrap en el teu projecte"
+    items={[
+      {
+        title: 'Disseny adaptable a qualsevol pantalla',
+        description: `Bootstrap garanteix que la teva interfície es vegi bé en qualsevol dispositiu sense esforç addicional.`,
+        icon: 'tabler:screen-share',
+      },
+      {
+        title: 'Estructura optimitzada per al desenvolupament',
+        description: `Organitza la informació i el contingut de manera eficient, facilitant la maquetació i el manteniment.`,
+        icon: 'tabler:layout-grid',
+      },
+      {
+        title: 'Components llestos per a producció',
+        description: `Inclou botons, formularis, alertes i més, reduint el temps de desenvolupament sense sacrificar personalització.`,
+        icon: 'tabler:components',
+      },
+      {
+        title: 'Sistema de quadrícula flexible',
+        description: `Permet crear dissenys fluids i ben estructurats, ajustant-se dinàmicament a cada necessitat del projecte.`,
+        icon: 'tabler:squares-diagonal',
+      },
+      {
+        title: 'Compatibilitat amb tots els navegadors',
+        description: `Funciona sense problemes a Chrome, Firefox, Edge, Safari i altres, assegurant una experiència homogènia per als usuaris.`,
+        icon: 'tabler:browser-check',
+      },
+      {
+        title: 'Comunitat i ecosistema en constant evolució',
+        description: `Milers de desenvolupadors contribueixen amb millores, plugins i solucions, fent de Bootstrap una opció sòlida i actualitzada.`,
+        icon: 'tabler:users-group',
+      },
+      {
+        title: 'Personalització avançada sense esforç',
+        description: `Ajusta estils, colors i variables amb facilitat perquè el disseny s'adapti a la identitat del teu projecte.`,
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Accelera el temps de desenvolupament',
+        description: `Redueix la corba d'aprenentatge i llança projectes més ràpid amb les seves eines i utilitats integrades.`,
+        icon: 'tabler:bolt',
+      },
+      {
+        title: 'Documentació detallada i accessible',
+        description: `Troba exemples pràctics i guies clares per implementar qualsevol funcionalitat sense complicacions.`,
+        icon: 'tabler:manual-gearbox',
+      },
+    ]}
+  />
+
+  <Content
+    isImageSmall
+    title="A Gilsys hem confiat en Bootstrap des dels seus inicis"
+    subtitle="Hem apostat per aquest framework des de les seves primeres versions, la qual cosa ens aporta una visió profunda del seu funcionament."
+    image={{
+      src: '~/assets/images/tecnologia/bootstrap-interfaz.png',
+      alt: "Interfície d'usuari i components Bootstrap",
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        Des de la versió 3 de Bootstrap fins a l'actual, hem treballat amb aquest framework per desenvolupar
+        aplicacions eficients i amb interfícies atractives. Gràcies a la nostra experiència, podem adaptar-lo a
+        projectes de diferent complexitat, des de llocs web empresarials fins a plataformes interactives i backoffices
+        avançats.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Content
+    isReversed
+    title="Manteniment i evolució amb Bootstrap"
+    image={{
+      src: '~/assets/images/tecnologia/bootstrap-uiux.jpg',
+      alt: 'Bootstrap UI UX imatge',
+    }}
+    items={[
+      {
+        title: 'Optimització de codi',
+        description: "Implicant reducció d'estils innecessaris.",
+        icon: 'tabler:code',
+      },
+      {title: 'Adaptació d\'interfícies antigues a versions modernes',
+        description: 'Gràcies a les seves actualitzacions regulars, podem implementar millores estètiques i funcionals.',
+        icon: 'tabler:tool',
+      },
+      {
+        title: 'Integració amb altres frameworks i tecnologies web.',
+        description:
+          'Com a experts en desenvolupament a mida, podem integrar components addicionals o programar-los a mida.',
+        icon: 'tabler:plug',
+      },
+    ]}
+  >
+    <Fragment slot="preContent">
+      <p class="text-muted">
+        A Gilsys, Bootstrap no és només una eina, és part del nostre ADN. Amb anys d'experiència i una profunda
+        passió per aquest framework, creem interfícies excepcionals que combinen funcionalitat i disseny d'avantguarda.
+        Ens encarreguem que cada interfície no només es mantingui actualitzada i funcional, sinó que també reflecteixi les
+        últimes tendències en disseny web.
+      </p>
+    </Fragment>
+    <Fragment slot="postContent">
+      <p class="text-muted">
+        Des de Gilsys, ens encarreguem que cada interfície no només es mantingui actualitzada i funcional, sinó que també
+        reflecteixi les últimes tendències en disseny web.
+      </p>
+    </Fragment>
+
+  </Content>
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/geometric-2/4.jpg', alt: 'Fons abstracte' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Pressupost gratuït',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Trucar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title"
+      >Som <span class="custom-gradient">especialistes en Bootstrap</span><br /> Deixa la maquetació a les nostres mans</Fragment
+    >
+    <Fragment slot="subtitle"
+      >Ens encarreguem del disseny, maquetació i adaptació responsive de la interfície d'usuari del teu projecte.</Fragment
+    >
+  </CallToAction>
+</Layout>

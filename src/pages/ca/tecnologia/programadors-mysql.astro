@@ -1,0 +1,263 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+
+const metadata = {
+  title: 'Experts en desenvolupament de bases de dades amb MySQL',
+  description: `Programem bases de dades relacionals amb MySQL. Dissenyem models de dades complexos i optimitzats per a cada projecte. Pressupost gratuït! Des d'Osona, Barcelona.`,
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Disseny de bases de dades MySQL des d'Osona, província de Barcelona"
+    actions={[{ variant: 'primary', text: 'Pressupost gratuït', href: u('contact') }]}
+    backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/geometric-2/4.jpg' }}
+  >
+    <Fragment slot="title">
+      Serveis de desenvolupament de bases de dades amb <span class="text-accent highlight">MySQL</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      Dissenyem models de dades relacionals per a MySQL, específics per cada projecte, des de solucions simples fins a
+      molt complexes.
+    </Fragment>
+  </Hero>
+
+  <Content
+    classes={{ container: 'contains-logo' }}
+    isImageSmall
+    title="<span class='custom-gradient'>MySQL: </span>La clau per una gestió eficient de dades"
+    subtitle="Aprofitem tota la potència del motor de base de dades més popular del món."
+    image={{
+      id: 'mysql-logo',
+      src: '~/assets/images/tecnologia/mysql-logo.svg',
+      alt: 'Logotip MySQL',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        A Gilsys, som especialistes en <strong>MySQL</strong> i <strong>MariaDB</strong>, amb experiència des de la
+        versió 3 fins a l'actual. Dissenyem bases de dades SQL relacionals amb una estructura flexible, permetent la seva
+        adaptació a canvis d'enfocament sense requerir reestructuracions dràstiques. Això optimitza l'escalabilitat i
+        evolució de cada projecte.
+      </p>
+    </Fragment>
+  </Content>
+
+  <Content
+    title="El motor de base de dades més popular del món"
+    subtitle="Amb anys de trajectòria, MySQL segueix sent una solució indiscutible en gestió de dades relacionals per a molts projectes."
+    classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}
+    image={{
+      src: '~/assets/images/tecnologia/mysql-escenario-delfin.png',
+      alt: 'Delfí saltant sobre un ordinador',
+    }}
+    items={[
+      {
+        title: `Codi obert i gratuït`,
+        description: `Ideal per a projectes de qualsevol escala, des de startups fins a grans corporacions.`,
+        icon: 'tabler:code', 
+      },
+      {
+        title: `Rendiment optimitzat`,
+        description: `Capacitat de gestionar grans volums de dades i consultes complexes amb eficiència.`,
+        icon: 'tabler:rocket', 
+      },
+      {
+        title: `Compatibilitat multiplataforma`,
+        description: `Funciona en diversos sistemes operatius, brindant flexibilitat en la implementació.`,
+        icon: 'tabler:devices', 
+      },
+      {
+        title: `Ecosistema robust`,
+        description: `Àmplia gamma d'eines i biblioteques que faciliten el desenvolupament i l'administració.`,
+        icon: 'tabler:puzzle', 
+      },
+    ]}
+  >
+    <Fragment slot="preContent">
+      <p class="text-muted">
+        MySQL és la base de dades relacional més utilitzada a nivell global, amb un lideratge recolzat per la seva robustesa,
+        versatilitat i una comunitat activa. La seva popularitat es deu a factors clau:
+      </p>
+    </Fragment>
+
+    <Fragment slot="postContent">
+      <p class="text-muted mt-4">
+        A Gilsys, aprofitem tot el potencial de MySQL per estructurar informació de manera eficient, assegurant
+        integritat referencial, optimització de consultes i índexs, i garantint la base sòlida que el teu projecte
+        necessita.
+      </p>
+      <p class="text-center">
+        <a title="Web oficial de MySQL" target="_blank" href="https://www.mysql.com/" class="btn-primary mt-12 mb-12 w-auto"
+          >Coneix més sobre MySQL</a
+        >
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Features3
+    columns={3}
+    title="Beneficis d'usar MySQL en els teus projectes"
+    subtitle="Des d'aplicacions web fins a solucions empresarials, MySQL s'adapta a les teves necessitats amb potència i flexibilitat."
+    items={[
+      {
+        title: `Estructura consistent`,
+        description: `Les bases de dades creades tenen una estructura ben definida, garantint consistència i fiabilitat.`,
+        icon: 'tabler:database',
+      },
+      {
+        title: `Anàlisi i optimització de consultes`,
+        description: `Permet analitzar i optimitzar consultes SQL, millorant temps de resposta.`,
+        icon: 'tabler:chart-line',
+      },
+      {
+        title: `Integritat`,
+        description: `Ofereix integritat referencial amb claus primàries i foranes, assegurant coherència en les dades.`,
+        icon: 'tabler:key',
+      },
+      {
+        title: `Compatibilitat`,
+        description:
+          `Alta compatibilitat amb la majoria d'eines de <a href="` +
+          u('software/metabase') +
+          `" class="text-accent" title="Eines de Business Intelligence per crear informes">Business Intelligence</a>.`,
+        icon: 'tabler:chart-pie',
+      },
+      {
+        title: `Seguretat`,
+        description: `Seguretat avançada i control d'accés, protegint la informació sensible.`,
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Escalabilitat',
+        description: `Escalabilitat comprovada, capaç d'adaptar-se a projectes de qualsevol mida.`,
+        icon: 'tabler:arrows-maximize',
+      },
+      {
+        title: 'Camps flexibles',
+        description: `Emmagatzematge de dades flexible, permetent usar el <strong>format JSON</strong>, que emmagatzema estructures més flexibles dins d'un entorn relacional.`,
+        icon: 'tabler:json',
+      },
+      {
+        title: 'Xifratge',
+        description: `Capacitat de <strong>xifratge de camps</strong> per garantir major seguretat en la gestió de dades sensibles.`,
+        icon: 'tabler:lock',
+      },
+      {
+        title: 'Encriptació',
+        description: `<strong>Suport per TDE</strong> (Transparent Data Encryption) a MariaDB, permetent la encriptació de dades en repòs per a major protecció d'informació de sectors sensibles.`,
+        icon: 'tabler:shield-lock',
+      },
+    ]}
+  />
+
+  <Content
+    isReversed
+    title="MySQL d'alt rendiment: L'experiència Gilsys al servei de les teves dades"
+    subtitle="A Gilsys, potenciem els teus projectes amb la robustesa de MySQL i MariaDB, solucions fiables per a dades estructurades."
+    image={{
+      src: '~/assets/images/tecnologia/mysql-data.jpg',
+      alt: 'Documents de gràfics i taules empresarials',
+    }}
+  >
+    <Fragment slot="preContent">
+      <p class="text-muted">
+        Amb més de dues dècades d'experiència, a Gilsys ens especialitzem en el disseny, modelatge i optimització de
+        bases de dades MySQL per a projectes de qualsevol escala.
+      </p>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="text-muted">
+        La nostra àmplia trajectòria ens permet adaptar meticulosament cada base de dades a les necessitats úniques de
+        els nostres clients, garantint estructures eficients, escalables i robustes, preparades per a entorns de
+        producció exigents.
+      </p>
+    </Fragment>
+    <Fragment slot="postContent">
+      <p class="text-muted mt-4">
+        Implementem les millors pràctiques en el disseny de models de dades i la creació de consultes SQL, prioritzant
+        l'optimització del rendiment per evitar colls d'ampolla i assegurar una gestió de dades àgil i fiable. En
+        triar Gilsys, inverteixes en una base de dades que no només suporta les demandes actuals del teu projecte, sinó que
+        també s'anticipa al seu creixement futur.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Features
+    title="Serveis de disseny de bases de dades amb MySQL"
+    subtitle="La gestió experta de les teves dades és la nostra prioritat, entenem que són el fonament de qualsevol solució tecnològica sòlida."
+    items={[
+      {
+        title: 'Disseny i modelatge de bases de dades MySQL/MariaDB',
+        description: 'Creem estructures de bases de dades relacionals eficients i optimitzades per a cada projecte.',
+        icon: 'tabler:database',
+      },
+      {
+        title: 'Optimització de consultes i millora del rendiment d\'índexs',
+        description:
+          'Accelerem les teves operacions, optimitzant consultes i ajustant índexs per a temps de resposta més ràpids.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Migració de bases de dades entre versions i plataformes',
+        description:
+          'Facilitem la transició de les teves dades, permetent una migració segura i sense pèrdua d\'informació.',
+        icon: 'tabler:world-upload',
+      },
+      {
+        title: 'Seguretat i control d\'accessos',
+        description: 'Protegim la teva informació amb mesures de seguretat avançades i un control d\'accés granular.',
+        icon: 'tabler:shield-lock',
+      },
+      {
+        title: 'Implementació d\'estratègies de còpia de seguretat i recuperació de dades',
+        description:
+          'Assegurem la integritat de les teves dades amb estratègies de còpia de seguretat i recuperació fiables i eficients.',
+        icon: 'tabler:cloud-upload',
+      },
+      {
+        title: 'Encriptació de dades i comunicacions',
+        description:
+          'Implementem solucions de xifratge robustes per protegir les teves dades sensibles en repòs i en trànsit.',
+        icon: 'tabler:lock-access',
+      },
+    ]}
+  />
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/geometric-2/4.jpg', alt: 'Fons abstracte' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Pressupost gratuït',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Trucar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title"
+      >Deixa les teves dades en mans d'experts, som <span class="custom-gradient">especialistes en MySQL</span></Fragment
+    >
+    <Fragment slot="subtitle"
+      >La correcta gestió de dades és el primer pas cap a la implementació exitosa de solucions tecnològiques.
+    </Fragment>
+  </CallToAction>
+</Layout>

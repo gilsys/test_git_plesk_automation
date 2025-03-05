@@ -1,0 +1,248 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+
+const metadata = {
+  title: 'Disseny i programació en HTML i CSS',
+  description: `Com a empresa de desenvolupament a mida, oferim programació d'interfícies web en HTML i CSS de forma professional, prioritzant SEO.`,
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="HTML i CSS han recorregut un llarg camí des dels seus inicis"
+    actions={[{ variant: 'primary', text: 'Pressupost gratuït', href: u('contact') }]}
+    backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/geometric-2/4.jpg' }}
+  >
+    <Fragment slot="title">
+      Disseny i desenvolupament amb <span class="text-accent highlight">HTML i CSS</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      Com a empresa de desenvolupament a mida, oferim maquetació d'interfícies web en HTML i CSS de forma professional.
+    </Fragment>
+  </Hero>
+  <Content
+    classes={{ container: 'contains-logo' }}
+    isImageSmall
+    title="<span class='custom-gradient'>HTML i CSS:</span> L'essència d'una web estructurada i funcional"
+    image={{
+      id: 'html-css-logo',
+      src: '~/assets/images/tecnologia/html-css-logo.png',
+      alt: 'Logotips de HTML i CSS',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        A Gilsys, entenem que <strong>HTML i CSS</strong> són la base de tota experiència web. Tot i que són llenguatges fonamentals
+        en el desenvolupament, el seu domini és essencial per crear interfícies modernes, accessibles i ben estructurades.
+      </p>
+      <p class="text-muted mt-4">
+        En un entorn on els frameworks evolucionen constantment, HTML continua sent el llenguatge universal que tots
+        els navegadors interpreten, mentre que CSS permet personalitzar i optimitzar l'aparença de cada projecte.
+      </p>
+    </Fragment>
+  </Content>
+
+  <Content
+    isReversed
+    title="Els pilars imprescindibles en el desenvolupament web actual"
+    subtitle="A Gilsys, dominem les últimes novetats d'HTML i CSS per oferir-te solucions web d'avantguarda."
+    classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}
+  >
+    <Fragment slot="preContent">
+      <p class="text-muted">
+        A Gilsys, no ens limitem a conèixer els fonaments d'HTML i CSS. Els nostres programadors es mantenen
+        actualitzats amb les últimes especificacions i funcionalitats d'aquests llenguatges.
+      </p>
+      <p class="text-muted mt-4">
+        Aquesta constant actualització ens permet construir llocs web amb una estructura sòlida i eficient.
+      </p>
+      <p class="text-center">
+        <a title="Aplicacions web a mida" href={u('development/web')} class="btn-primary mt-12 mb-12 w-auto"
+          >Explora els nostres serveis d'aplicacions web</a
+        >
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Features
+  columns={2}
+  title="Importància d'un codi HTML semàntic i net"
+  subtitle="Un codi ben estructurat beneficia a usuaris i motors de cerca."
+  items={[
+    {
+        title: 'Accessibilitat millorada',
+        description: `Facilitant la lectura per part dels motors de cerca i lectors de pantalla.`,
+        icon: 'tabler:disabled-2', 
+      },
+      {
+        title: 'SEO optimitzat',
+        description: `Permetent que els cercadors indexin correctament el contingut.`,
+        icon: 'tabler:world-www', 
+      },
+      {
+        title: 'Manteniment eficient',
+        description: `Amb estructures organitzades i fàcils d'interpretar.`,
+        icon: 'tabler:tools', 
+      },
+      {
+        title: 'Compatibilitat universal',
+        description: `Garantint que qualsevol navegador pugui interpretar el codi correctament.`,
+        icon: 'tabler:browser', 
+      },
+  ]}
+/>
+
+  <Content
+    title="CSS pur: Més que estils, animacions i transicions"
+    image={{
+      src: '~/assets/images/tecnologia/html-css-styles.JPG',
+      alt: 'Pantalla amb un gradient de colors',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        CSS ha evolucionat fins a convertir-se en un llenguatge amb capacitats avançades per millorar la interacció i l'
+        estètica d'una pàgina web.
+      </p>
+      <p class="text-muted mt-4">
+        A Gilsys, aprofitem al màxim CSS per desenvolupar animacions, efectes visuals i transicions fluides, sense
+        necessitat de recórrer a JavaScript.
+      </p>
+    </Fragment>
+  </Content>
+
+  <Features
+    title="Avantatges d'utilitzar animacions i transicions en CSS"
+    items={[
+      {
+        title: "Experiència d'usuari millorada",
+        description: 'Fan la navegació més atractiva i dinàmica.',
+        icon: 'tabler:user-check', 
+      },
+      {
+        title: 'Rendiment optimitzat',
+        description: 'CSS gestiona les animacions de forma més eficient que JavaScript.',
+        icon: 'tabler:chart-line', 
+      },
+      {
+        title: 'Compatibilitat amb navegadors',
+        description: 'Assegurant una visualització coherent en tots els navegadors moderns.',
+        icon: 'tabler:world', 
+      },
+      {
+        title: 'Càrrega més ràpida',
+        description: 'En eliminar la dependència de biblioteques externes.',
+        icon: 'tabler:bolt', 
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Features>
+
+  <Content
+    isReversed
+    title="Gilsys ofereix HTML i CSS sota control"
+    subtitle="A Gilsys, treballem amb HTML i CSS a nivell avançat, assegurant que cada línia de codi sigui neta, semàntica i eficient."
+    image={{
+      src: '~/assets/images/tecnologia/html-css-control.jpg',
+      alt: 'Ordinadors amb codi a les pantalles',
+    }}
+    items={[
+      {
+        title: 'Maquetació HTML semàntica',
+        description: 'Maquetació avançada amb HTML semàntic.',
+        icon: 'tabler:html', 
+      },
+      {
+        title: 'Estils CSS a mida',
+        description: "Desenvolupament d'estils personalitzats amb CSS pur.",
+        icon: 'tabler:file-type-css', 
+      },
+      {
+        title: 'Animacions i transicions CSS',
+        description: "Implementació d'animacions i transicions CSS per millorar la usabilitat.",
+        icon: 'tabler:eye-exclamation', 
+    },
+      {
+        title: 'Optimització de codi',
+        description: 'Codi net i lleuger que ofereix rendiment i accessibilitat.',
+        icon: 'tabler:bolt', 
+      },
+      {
+        title: 'Compatibilitat multiplataforma',
+        description: 'Compatibilitat amb tots els navegadors i dispositius.',
+        icon: 'tabler:world', 
+      },
+    ]}
+  />
+
+  <Content
+    title="Integració d'HTML i CSS amb altres tecnologies"
+    image={{
+      src: '~/assets/images/tecnologia/html-codigo.jpg',
+      alt: 'Codi font HTML',
+    }}
+    items={[
+      {
+        description: "Preprocessadors com Sass i Less per a una millor gestió d'estils.",
+      },
+      {
+        description:
+          'Frameworks com <a title="Pagina de tecnologias de Tailwind" href="' + u('technology/tailwind') + '" class="text-accent">Tailwind CSS</a> i <a title="Pagina de tecnologias de Bootstrap" href="' + u('technology/bootstrap') + '" class="text-accent">Bootstrap</a> per a projectes que requereixen escalabilitat.',
+      },
+      {
+        description: '<a title="Tecnologias de JavaScript" href="' + u('technology/javascript') + '" class="text-accent">JavaScript</a> per a efectes interactius més complexos',
+      },
+      {
+        description: 'Optimització per a SEO i accessibilitat amb codi semàntic i estructurat.',
+      },
+    ]}
+  >
+    <Fragment slot="preContent">
+      <p class="text-muted">
+        A més de treballar amb HTML i CSS pur, integrem aquestes tecnologies amb eines modernes per potenciar
+        les seves capacitats:
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/geometric-2/4.jpg', alt: 'Fons abstracte' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Pressupost gratuït',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Trucar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title"
+      >Si estàs buscant especialistes en <span class="custom-gradient">HTML i CSS</span>, els has trobat.</Fragment
+    >
+    <Fragment slot="subtitle"
+      >Estem a la teva disposició per elaborar desenvolupar el teu projecte en HTML i CSS, creant una maquetació a mida.</Fragment
+    >
+  </CallToAction>
+</Layout>

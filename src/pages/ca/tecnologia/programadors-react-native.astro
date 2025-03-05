@@ -1,0 +1,220 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+
+const metadata = {
+  title: 'Empresa de desenvolupament d\'aplicacions amb React Native',
+  description: `Som experts en programació d'apps per a mòbils multiplataforma a mida amb React Native, creant aplicacions híbrides per a Android i iOS`,
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Ens trobaràs a Osona, a la província de Barcelona."
+    actions={[{ variant: 'primary', text: 'Pressupost gratuït', href: u('contact') }]}
+    backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/geometric-2/4.jpg' }}
+  >
+    <Fragment slot="title">
+      Empresa de desenvolupament d'aplicacions amb <span class="text-accent highlight">React Native</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      Programem apps híbrides per a mòbils (iOS i Android), completament a mida programant amb React Native.
+    </Fragment>
+  </Hero>
+
+  <Content
+    classes={{ container: 'contains-logo pb-0 md:pb-0 lg:pb-0' }}
+    isImageSmall
+    title="Busques experts en <span class='custom-gradient'>React Native</span> a la província de Barcelona?"
+    subtitle="A Gilsys podem desenvolupar l'aplicació mòbil que necessites."
+    image={{
+      id: 'react-native-logo',
+      src: '~/assets/images/tecnologia/react-native-logo.svg',
+      alt: 'Logotip de React Native',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        El nostre equip de desenvolupadors s'especialitza en la <strong
+          >creació d'aplicacions mòbils personalitzades,
+        </strong>
+        escalables i d'alt rendiment utilitzant React Native.
+      </p>
+      <p class="text-muted mt-4">
+        Una solució híbrida, multiplataforma, que permet disposar d'un codi únic que una vegada compilat pot
+        distribuir-se per ser executat en dispositius iOS i Android.
+      </p>
+      <p class="text-center">
+        <a
+          title="Serveis de programació d'aplicacions per a mòbils"
+          href={u('development/apps')}
+          class="btn-primary mt-12 mb-12 w-auto">Explora els nostres serveis de desenvolupament d'apps</a
+        >
+      </p>
+    </Fragment>
+  </Content>
+
+  <Content
+    isReversed
+    title="React Native és el Framework líder per desenvolupar aplicacions híbrides"
+    subtitle="La seva capacitat per crear apps natives per a iOS i Android amb un únic codi, redueix costos i temps de desenvolupament sense sacrificar rendiment"
+    classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}
+    image={{
+      src: '~/assets/images/tecnologia/react-native-estilo-mobile.png',
+      alt: `Desenvolupament i optimització d'aplicacions React Native`,
+    }}
+  >
+    <Fragment slot="preContent">
+      <p class="text-muted">
+        React Native és un framework de codi obert creat per Meta (abans Facebook) que permet desenvolupar
+        aplicacions mòbils natives amb JavaScript i React.
+      </p>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="text-muted">
+        A diferència d'altres solucions híbrides, React Native no genera aplicacions web encapsulades, sinó interfícies
+        realment natives. Això garanteix una experiència d'usuari (UX) fluida i un rendiment comparable al d'apps
+        creades amb Swift o Java.
+      </p>
+      <p class="text-center">
+        <a title="Pàgina oficial de React Native" target="_blank" href="[https://reactnative.dev/](https://reactnative.dev/)" class="btn-primary mt-12 mb-12 w-auto"
+          >Coneix més sobre React Native</a
+        >
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Features
+    title="Beneficis de triar React Native per al teu projecte"
+    items={[
+      {
+        title: 'Aplicacions personalitzades',
+        description: 'Adaptem cada solució a les necessitats específiques del teu negoci.',
+        icon: 'tabler:adjustments',
+      },
+      {
+        title: 'Desenvolupament multiplataforma',
+        description: 'Una sola aplicació compatible amb iOS i Android.',
+        icon: 'tabler:devices',
+      },
+      {
+        title: 'Ampliable i evolucionable',
+        description: 'Aplicacions adaptables a noves funcionalitats sense reescriure grans porcions de codi.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Comunitat i suport',
+        description: 'Suportat per una comunitat global i actualitzacions constants.',
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Rendiment optimitzat',
+        description: `Experiència d'usuari fluida, amb una velocitat comparable a les apps natives.`,
+        icon: 'tabler:bolt', // Icona per a rendiment
+      },
+      {
+        title: 'Flexibilitat i escalabilitat',
+        description: 'Adaptable a projectes de qualsevol mida.',
+        icon: 'tabler:arrows-maximize', // Icona per a escalabilitat
+      },
+    ]}
+  />
+
+  <Features2
+    title="Serveis de React Native oferts per Gilsys"
+    subtitle="Oferim un ampli ventall de serveis de React Native per portar la teva aplicació mòbil al següent nivell"
+    items={[
+      {
+        title: 'Desenvolupament des de zero',
+        description:
+          'Creem aplicacions mòbils multiplataforma natives per a iOS i Android, adaptades a les teves necessitats i objectius.',
+        icon: 'tabler:device-mobile',
+      },
+      {
+        title: `Migració d'aplicacions`,
+        description:
+          'Convertim la teva aplicació a React Native, millorant el seu rendiment i reduint els costos de manteniment.',
+        icon: 'tabler:arrows-transfer-down',
+      },
+      {
+        title: 'Manteniment i suport',
+        description:
+          'Actualitzem, millorem i solucionem problemes a la teva aplicació React Native, assegurant la seva compatibilitat i rendiment a llarg termini.',
+        icon: 'tabler:tools',
+      },
+      {
+        title: 'Funcionalitats personalitzades',
+        description:
+          `Implementem noves funcionalitats i característiques específiques per a la teva aplicació, millorant l'experiència de l'usuari.`,
+        icon: 'tabler:puzzle',
+      },
+      {
+        title: 'Integració amb APIs',
+        description:
+          'Connectem la teva aplicació React Native amb altres plataformes i serveis per ampliar les seves capacitats.',
+        icon: 'tabler:plug',
+      },
+      {
+        title: 'Optimització de rendiment',
+        description:
+          'Millorem la velocitat i eficiència de la teva aplicació per oferir una experiència fluida i sense retards.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Disseny UI/UX',
+        description:
+          `Creem interfícies atractives i fàcils d'utilitzar, que milloren la interacció de l'usuari amb la teva aplicació.`,
+        icon: 'tabler:color-swatch',
+      },{
+        title: 'Proves i control de qualitat',
+        description:
+          `Realitzem proves exhaustives per assegurar l'estabilitat, seguretat i funcionalitat de la teva aplicació React Native.`,
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Consultoria i assessorament',
+        description:
+          'Et guiem en la presa de decisions sobre el desenvolupament de la teva aplicació React Native, oferint-te solucions personalitzades i eficients.',
+        icon: 'tabler:bulb',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Features2>
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/geometric-2/4.jpg', alt: 'Fons abstracte' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Pressupost gratuït',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Trucar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title"
+      >Si necessites especialistes en <span class="custom-gradient">React Native</span>, compta amb Gilsys</Fragment
+    >
+    <Fragment slot="subtitle"
+      >Des de Barcelona, desenvolupem projectes amb React Native per a clients de qualsevol sector, tant a nivell
+      nacional com internacional.
+    </Fragment>
+  </CallToAction>
+</Layout>

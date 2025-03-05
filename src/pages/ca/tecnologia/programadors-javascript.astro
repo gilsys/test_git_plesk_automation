@@ -1,0 +1,173 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+
+const metadata = {
+  title: 'Desenvolupament d\'Aplicacions Web amb JavaScript',
+  description:
+    'A Gilsys, amb més de 20 anys d\'experiència, desenvolupem aplicacions web avançades i solucions a mida amb JavaScript.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="JavaScript: La clau del desenvolupament web modern"
+    actions={[{ variant: 'primary', text: 'Pressupost gratuït', href: u('contact') }]}
+    backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/geometric-2/4.jpg' }}
+  >
+    <Fragment slot="title">
+      Desenvolupament d'aplicacions web amb <span class="text-accent highlight">JavaScript</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      Més de 20 anys d'experiència creant solucions innovadores amb JavaScript, des d'aplicacions web avançades
+      fins a desenvolupaments a mida per empreses.
+    </Fragment>
+  </Hero>
+
+  <Content
+    classes={{ container: 'contains-logo' }}
+    isImageSmall
+    title="Desenvolupaments amb <span class='custom-gradient'>JavaScript:</span> Molt més que interactividad"
+    subtitle="A Gilsys, reconeixem <strong>JavaScript</strong> com un pilar del desenvolupament actual."
+    image={{
+      id: 'javascript-logo',
+      src: '~/assets/images/tecnologia/javascript-logo.svg',
+      alt: 'Logotip de JavaScript',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        Des dels nostres inicis, JavaScript ha estat una part essencial del nostre treball. La seva evolució l'ha convertit
+        en un llenguatge fonamental, no només per a la interactividad web, sinó també per al desenvolupament d'aplicacions
+        robustes i solucions avançades.
+      </p>
+    </Fragment>
+  </Content>
+
+  <Features2
+    columns={2}
+    title="Des de Gilsys personalitzem el teu projecte desenvolupant amb <span class='custom-gradient'>JavaScript</span>"
+    subtitle="Com a experts en desenvolupament, oferim solucions web a mida amb màxima adaptabilitat, rendiment i eficiència."
+    items={[
+      {
+        title: 'Adaptabilitat',
+        description: 'De web apps a eines del servidor, JavaScript cobreix múltiples necessitats.',
+        icon: 'tabler:arrows-right-left',
+      },
+      {
+        title: 'Alt rendiment',
+        description: 'Desenvolupa solucions optimitzades i eficients sense comprometre la funcionalitat.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Desenvolupament simplificat',
+        description: 'Accelera el procés de desenvolupament amb un llenguatge que facilita la implementació ràpida d\'idees.',
+        icon: 'tabler:bolt',
+      },
+      {
+        title: 'Compatibilitat total',
+        description: 'Assegura la compatibilitat i accessibilitat del teu projecte en qualsevol dispositiu i navegador.',
+        icon: 'tabler:world',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Features2>
+
+  <Features
+    title="Utilitzem JavaScript com a llenguatge de programació versàtil"
+    subtitle="Des de Gilsys, podem treballar amb qualsevol eina que utilitzi el llenguatge JS"
+    items={[
+      {
+        title: 'Desenvolupament web front-end',
+        description:
+          'Crea interfícies interactives, animacions i manipula el DOM en temps real per a una experiència d\'usuari millorada.',
+        icon: 'tabler:browser',
+      },
+      {
+        title: 'Desenvolupament web back-end',
+        description: 'Utilitza Node.js per construir aplicacions web escalables i eficients al servidor.',
+        icon: 'tabler:server',
+      },
+      {
+        title: 'Desenvolupament mòbil',
+        description: 'Construeix aplicacions mòbils multiplataforma amb frameworks com React Native i Ionic.',
+        icon: 'tabler:device-mobile',
+      },
+      {
+        title: 'Desenvolupament d\'escriptori',
+        description: 'Crea aplicacions d\'escriptori multiplataforma amb Electron, utilitzant tecnologies web.',
+        icon: 'tabler:devices-pc',
+      },
+      {
+        title: 'Internet de les coses (IoT)',
+        description: 'Programa la lògica de dispositius connectats, com sensors i actuadors.',
+        icon: 'tabler:smart-home',
+      },
+      {
+        title: 'Components interactius i gràfics',
+        description:
+          'Desenvolupem components web interactius, visualitzacions de dades, gràfics i altres solucions personalitzades amb JavaScript.',
+        icon: 'tabler:chart-bar',
+      },
+    ]}
+  />
+
+  <Content
+    isReversed
+    title="Gilsys: Pioners en desenvolupament <span class='custom-gradient'>JavaScript</span>"
+    subtitle="Més de dues dècades impulsant la innovació amb JavaScript."
+    image={{
+      src: '~/assets/images/tecnologia/javascript-lenguaje-programacion.png',
+      alt: 'Desenvolupament JavaScript a Gilsys',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        Des dels nostres inicis, JavaScript ha estat una part fonamental del nostre treball, permetent-nos adaptar-nos i
+        evolucionar amb la tecnologia.
+      </p>
+      <p class="text-muted mt-4">
+        El nostre equip està dedicat a crear solucions innovadores, utilitzant JavaScript per impulsar l'èxit dels
+        nostres clients.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/geometric-2/4.jpg', alt: 'Fons abstracte' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Pressupost gratuït',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Trucar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      A Gilsys trobaràs més de dues dècades d'experiència desenvolupant amb <span class="custom-gradient"
+        >JavaScript</span
+      >
+    </Fragment>
+    <Fragment slot="subtitle">
+      Aprofitem el potencial de JavaScript per programar solucions empresarials a mida de forma professional.
+    </Fragment>
+  </CallToAction>
+</Layout>

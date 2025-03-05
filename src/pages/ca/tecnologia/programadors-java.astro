@@ -1,0 +1,220 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+
+const metadata = {
+  title: 'Desenvolupament de programari a mida amb Java',
+  description: `A Gilsys, desenvolupem solucions empresarials robustes i escalables amb Java. Som experts en desenvolupament Java des del 2004.`,
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Més de 20 anys d'experiència en desenvolupament Java."
+    actions={[{ variant: 'primary', text: 'Pressupost gratuït', href: u('contact') }]}
+    backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/geometric-2/4.jpg' }}
+  >
+    <Fragment slot="title">
+      Desenvolupament de programari a mida amb <span class="text-accent highlight">Java</span>
+    </Fragment>
+    <Fragment slot="subtitle"> Desenvolupem plataformes empresarials segures i d'alt rendiment. </Fragment>
+  </Hero>
+
+  <Content
+    classes={{ container: 'contains-logo pb-0 md:pb-0 lg:pb-0' }}
+    isImageSmall
+    title="Desenvolupem projectes d'alt nivell amb <span class='custom-gradient'>Java</span>"
+    subtitle="Java està present en múltiples indústries, incloent-hi finances, comerç electrònic, desenvolupament empresarial, aplicacions mòbils, sistemes distribuïts i Big Data."
+    image={{
+      id: 'java-logo',
+      src: '~/assets/images/tecnologia/java-logo.svg',
+      alt: 'Logotip de Java',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        A Gilsys, Java és un dels pilars de la nostra experiència en desenvolupament de programari. Des dels nostres inicis,
+        hem apostat per Java a causa de la seva robustesa, versatilitat i seguretat per desenvolupar solucions empresarials
+        d'alt rendiment.
+      </p>
+      <p class="text-muted mt-4">
+        El nostre equip d'experts en Java s'especialitza en la creació de programari a mida, adaptant cada solució a
+        les necessitats i objectius específics de la teva empresa.
+      </p>
+      <p class="text-center">
+        <a
+          title="Serveis sobre desenvolupament d'aplicacions web a mida"
+          href={u('development/web')}
+          class="btn-primary mt-12 mb-12 w-auto">Explora els nostres serveis de desenvolupament web</a
+        >
+      </p>
+    </Fragment>
+  </Content>
+
+  <Content
+    isReversed
+    title="<span class='custom-gradient'>Java</span>: Un llenguatge que ha sobreviscut al temps i que continua impulsant la innovació empresarial"
+    subtitle="Robust, versàtil i segur, Java és l'elecció ideal per a solucions empresarials d'alt rendiment."
+    classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}
+    image={{
+      src: '~/assets/images/tecnologia/java-cafe.webp',
+      alt: 'Logo amb tassa de cafè de Java',
+    }}
+    items={[
+      {
+        title: 'Portabilitat',
+        description: `S'executa en qualsevol plataforma amb la màquina virtual Java (JVM).`,
+        icon: 'tabler:arrow-autofit-width', // Icono para portabilidad
+      },
+      {
+        title: 'Escalabilitat',
+        description: 'Ideal per a aplicacions empresarials de gran envergadura.',
+        icon: 'tabler:arrows-maximize', // Icono para escalabilidad
+      },
+      {
+        title: 'Seguretat',
+        description: 'Robust sistema de seguretat per protegir dades sensibles.',
+        icon: 'tabler:shield-lock', // Icono para seguridad
+      },
+      {
+        title: 'Gran comunitat',
+        description: 'Ampli suport i recursos disponibles.',
+        icon: 'tabler:users', // Icono para comunidad
+      },
+    ]}
+  >
+    <Fragment slot="preContent">
+      <p class="text-muted">
+        Java és un llenguatge de programació d'alt nivell i orientat a objectes que s'ha consolidat com una de les
+        tecnologies més utilitzades i versàtils en el desenvolupament de programari. La seva capacitat per desenvolupar aplicacions
+        robustes, escalables i segures el converteix en l'elecció ideal per a empreses de qualsevol mida. La seva
+        popularitat es deu a diversos factors:
+      </p>
+    </Fragment>
+    <Fragment slot="postContent">
+      <p class="text-center">
+        <a title="Pàgina oficial de Java" target="_blank" href="https://www.java.com/es/" class="btn-primary mt-12 mb-12 w-auto">Coneix més sobre Java</a>
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Features
+    title="Avantatges de triar Java per al teu projecte"
+    subtitle="Solucions a mida per a empreses que busquen un futur digital."
+    items={[
+      {
+        title: 'Aplicacions robustes i escalables',
+        description: 'Ideal per a projectes empresarials complexos que requereixen un alt rendiment i disponibilitat.',
+        icon: 'tabler:building-skyscraper',
+      },
+      {
+        title: `Seguretat d'alt nivell`,
+        description: 'Protegeix la teva informació sensible amb les característiques de seguretat avançades de Java.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Compatibilitat multiplataforma',
+        description: 'Funciona en qualsevol sistema operatiu gràcies a la màquina virtual Java (JVM).',
+        icon: 'tabler:world',
+      },
+      {
+        title: 'Desenvolupament a mida',
+        description:
+          'Adaptem cada solució a les teves necessitats específiques, creant aplicacions personalitzades i eficients.',
+        icon: 'tabler:adjustments',
+      },
+      {
+        title: 'Comunitat i suport',
+        description:
+          `Beneficia't d'una gran comunitat de desenvolupadors i un ampli ecosistema d'eines i recursos.`,
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Manteniment a llarg termini',
+        description:
+          'Java és un llenguatge madur i estable, amb un cicle de vida llarg que facilita el manteniment de les aplicacions.',
+        icon: 'tabler:calendar-time',
+      },
+    ]}
+  />
+
+  <Features2
+    title="Serveis de desenvolupament Java a Gilsys"
+    subtitle="Java és la base, existeixen múltiples frameworks amb els quals treballar per crear solucions robustes, des de Gilsys treballem amb <strong>Spring</strong>."
+
+    items={[
+      {
+        title: `Desenvolupament d'aplicacions empresarials`,
+        description: 'Creem aplicacions robustes i escalables per optimitzar els teus processos de negoci.',
+        icon: 'tabler:building-store',
+      },
+      {
+        title: `Desenvolupament d'APIs i microserveis`,
+        description: 'Construïm APIs RESTful i microserveis eficients per integrar els teus sistemes i serveis.',
+        icon: 'tabler:api',
+      },
+      {
+        title: 'Migració i modernització de programari',
+        description:
+          `Actualitzem aplicacions Java existents i facilitem la seva migració a noves plataformes i tecnologies.`,
+        icon: 'tabler:arrows-right-left',
+      },
+      {
+        title: 'Manteniment i suport',
+        description:
+          'Oferim suport tècnic i manteniment per a les teves aplicacions Java, revisant la seva estabilitat i adequació a noves funcionalitats.',
+        icon: 'tabler:tools',
+      },
+      {
+        title: 'Integració amb tecnologies modernes',
+        description:
+          'Connectem les teves plataformes Java existents amb noves eines i tecnologies per ampliar la seva funcionalitat.',
+        icon: 'tabler:plug',
+      },
+      {
+        title: 'Millora de plataformes existents',
+        description:
+          'Implementem millores i noves funcionalitats a les teves plataformes Java existents, optimitzant el seu rendiment i seguretat.',
+        icon: 'tabler:arrow-up-right',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Features2>
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/geometric-2/4.jpg', alt: 'Fons abstracte' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Pressupost gratuït',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Trucar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Impulsem la teva empresa amb desenvolupaments avançats en <span class="custom-gradient">Java</span></Fragment
+    >
+    <Fragment slot="subtitle">
+      A Gilsys, t'ajudem a <strong>desenvolupar</strong>, <strong>optimitzar</strong> o <strong>modernitzar</strong> la teva
+      infraestructura tecnològica per a un futur digital competitiu.
+    </Fragment>
+  </CallToAction>
+</Layout>

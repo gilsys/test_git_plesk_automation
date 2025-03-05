@@ -1,0 +1,252 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+
+const metadata = {
+  title: 'Empresa de programació frontend amb Angular',
+  description: `A Gilsys oferim programació a mida d'aplicacions web amb Angular, creem interfícies professionals amb aquest llenguatge de programació. ¡Pressupost gratuït!`,
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Interfícies modernes i lleugeres, per a aplicacions web o apps mòbils."
+    actions={[{ variant: 'primary', text: 'Pressupost gratuït', href: u('contact') }]}
+    backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/geometric-2/4.jpg' }}
+  >
+    <Fragment slot="title">
+      Programació d'aplicacions web amb <span class="text-accent highlight">Angular</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      Creem interfícies frontend professionals amb aquest framework basat en JavaScript.
+    </Fragment>
+  </Hero>
+
+  <Content
+    classes={{ container: 'contains-logo' }}
+    isImageSmall
+    subtitle="Angular permet crear eines eficients i escalables."
+    title="Desenvolupament d'aplicacions web i apps mòbils amb <span class='custom-gradient'>Angular</span>"
+    image={{
+      id: 'angular-logo',
+      src: '~/assets/images/tecnologia/angular-logo.png',
+      alt: 'Logotip Angular',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        En el món digital actual, comptar amb aplicacions web ràpides, escalables i d'alt rendiment és clau per a
+        qualsevol negoci. El nostre equip d'especialistes en Angular, amb àmplia experiència en el desenvolupament
+        frontend, crea solucions a mida adaptades a les necessitats de cada empresa.
+      </p>
+      <p class="text-muted mt-4">
+        A més, amb Apache Cordova, estenem la funcionalitat d'Angular per desenvolupar <a
+          href={u('development/apps')}
+          class="text-accent">aplicacions mòbils híbrides</a
+        >, compatibles amb iOS i Android.
+      </p>
+    </Fragment>
+  </Content>
+
+  <Content
+    title="Solucions innovadores desenvolupades amb <span class='custom-gradient'>Angular</span>"
+    subtitle="Programem aplicacions web i mòbils amb tecnologia d'avantguarda."
+    classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}
+  >
+    <Fragment slot="preContent">
+      <p class="text-muted">
+        Angular és un framework modern desenvolupat per Google, ideal per a la construcció d'interfícies dinàmiques i
+        eficients. Utilitzem aquesta tecnologia per dissenyar aplicacions escalables, optimitzades i amb una experiència
+        d'usuari superior, tant en entorns web com en dispositius mòbils.
+      </p>
+      <p class="text-center">
+        <a title="Pàgina oficial d'Angular" target="_blank" href="https://angular.dev/" class="btn-primary mt-12 mb-12 w-auto"
+          >Coneix més sobre Angular</a
+        >
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Features3
+    title="Per què Angular és una gran opció per al teu projecte?"
+    items={[
+      {
+        title: 'Estructura modular',
+        description: `Disseny basat en mòduls independents i reutilitzables, cosa que facilita el manteniment i permet que l'aplicació creixi amb facilitat.`,
+        icon: 'tabler:components',
+      },
+      {
+        title: 'Rendiment optimitzat',
+        description: `Aplicació web ràpida i eficient, gràcies a tècniques com la càrrega diferida i una arquitectura basada en components.`,
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Seguretat integrada',
+        description: `Protecció robusta amb mesures de seguretat avançades que prevenen vulnerabilitats i atacs.`,
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Compatibilitat empresarial',
+        description: `Compatible amb entorns empresarials, permetent una integració fluida amb APIs REST i altres tecnologies.`,
+        icon: 'tabler:server',
+      },
+      {
+        title: `Desenvolupament d'apps híbrides`,
+        description: `Creació d'aplicacions mòbils híbrides amb Apache Cordova, que s'executen en dispositius mòbils a partir de la teva aplicació web.`,
+        icon: 'tabler:device-mobile',
+      },
+      {
+        title: 'Suport i comunitat',
+        description: `Respatller de Google i una comunitat activa de desenvolupadors, cosa que garanteix un desenvolupament continu i actualitzacions freqüents.`,
+        icon: 'tabler:brand-google',
+      },
+    ]}
+  />
+
+  <Content
+    title="Amb Angular tenim les millors eines per potenciar el teu projecte"
+    subtitle="A nivell tecnològic, és un sistema molt modern, popular i amb una gran comunitat d'usuaris."
+    image={{
+      src: '~/assets/images/tecnologia/angular-desarrollo.png',
+      alt: 'Imatge que reflecteix desenvolupament web i apps amb Angular',
+    }}
+    items={[
+      {
+        title: 'Disseny basat en components',
+        description:
+          "Creem una arquitectura modular basada en components reutilitzables, definint clarament l'estructura i el flux de dades de la teva aplicació Angular.",
+      },
+      {
+        title: 'Desenvolupament amb TypeScript',
+        description:
+          "Implementem la lògica de l'aplicació utilitzant TypeScript, aprofitant els avantatges de tipatge estàtic i orientació a objectes per a un codi més robust i mantenible.",
+      },
+      {
+        title: 'Desplegament i optimització',
+        description:
+          'Utilitzem Angular CLI per generar builds optimitzats i despleguem la teva aplicació en entorns de producció, assegurant un rendiment òptim i una càrrega ràpida.',
+      },
+      {
+        title: 'Actualitzacions i manteniment amb Angular CLI',
+        description:
+          "Mantenim la teva aplicació actualitzada amb les últimes versions d'Angular utilitzant Angular CLI, i oferim suport continu per resoldre qualsevol incidència i assegurar el seu correcte funcionament a llarg termini.",
+      },
+    ]}
+  >
+    <Fragment slot="preContent">
+      <p class="text-muted">
+        Tant si necessites una nova aplicació des de zero com si vols millorar un sistema existent, aprofitem al màxim
+        les capacitats d'Angular:
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Content
+    isReversed
+    title="Migració i modernització a Angular"
+    image={{
+      src: '~/assets/images/tecnologia/angular-migracion.jpg',
+      alt: 'Imatge que reflecteix la migració amb Angular',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        Si la teva plataforma actual està obsoleta, t'ajudem a migrar-la a Angular mitjançant un procés àgil i sense
+        interrupcions en la teva operativitat.
+      </p>
+      <p class="text-center md:text-left">
+        <a
+          title="Migració d'eines web a tecnologia Angular"
+          href={u('migration')}
+          class="btn-primary mt-12 mb-12 w-auto">Descobreix com renovar el teu programari</a
+        >
+      </p>
+    </Fragment>
+  </Content>
+
+  <Content
+    isReversed
+    title="Tres solucions amb un mateix codi: <span class='custom-gradient'>Web</span> + <span class='custom-gradient'>Android</span> + <span class='custom-gradient'>iOS</span>"
+    subtitle="Amb Angular podem crear aplicacions web i apps híbrides multiplataforma."
+    image={{
+      src: '~/assets/images/tecnologia/angular-programacion.png',
+      alt: "Desenvolupament d'aplicacions web i mòbils amb Angular",
+    }}
+    items={[
+      {
+        title: 'Desenvolupament multidispositiu amb Angular',
+        description:
+          "Creem aplicacions web i mòbils d'avantguarda amb un únic codi base. Des de la concepció fins al llançament, t'acompanyem en cada pas, oferint una experiència d'usuari fluida en iOS i Android.",
+      },
+      {
+        title: 'La teva plataforma actual et limita?',
+        description: `Migrem el teu programari a Angular de forma àgil i segura, minimitzant l'impacte en la teva operació i maximitzant el rendiment.<br/><br/><a title="" href="` +
+          u('migration') +
+          `"  class="btn-primary mt-4 w-auto">Serveis de renovació de programari</a>`,
+      },
+    ]}
+  >
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-lightgray"></div>
+  </Fragment>
+</Content>
+
+  <Content
+    title="Suport i manteniment en aplicacions <span class='custom-gradient'>Angular</span>"
+    subtitle="Serveis de manteniment per mantenir els desenvolupaments actualitzats"
+    image={{
+      src: '~/assets/images/tecnologia/angular-mantenimiento.jpg',
+      alt: 'Ordinadors amb codi de programació a la pantalla',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        Ens encarreguem que la teva aplicació Angular es mantingui actualitzada, segura i en constant millora. Realitzem
+        manteniment correctiu i evolutiu per optimitzar el seu rendiment i adaptar-la a noves necessitats.
+      </p>
+      <p class="text-center md:text-left">
+        <a
+          title="Migració d'eines web a tecnologia Angular"
+          href={u('gilsys')}
+          class="btn-primary mt-12 mb-12 w-auto">Coneix més sobre la nostra empresa</a
+        >
+      </p>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/geometric-2/4.jpg', alt: 'Fons abstracte' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Pressupost gratuït',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Trucar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title"
+      >Si estàs buscant especialistes en <span class="custom-gradient">Angular</span>, els has trobat.</Fragment
+    >
+    <Fragment slot="subtitle"
+      >Estem llestos per elaborar una proposta de desenvolupament en Angular i dissenyar una maquetació a mida per al
+      teu projecte.</Fragment
+    >
+  </CallToAction>
+</Layout>

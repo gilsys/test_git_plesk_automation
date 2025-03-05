@@ -1,0 +1,205 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+
+const metadata = {
+  title: 'Disseny de bases de dades amb Oracle',
+  description: `A Gilsys, creem models de dades i programem PL/SQL usant bases de dades Oracle. Som a Osona, Barcelona.`,
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Disseny de bases de dades Oracle i programació PL/SQL des de la província de Barcelona"
+    actions={[{ variant: 'primary', text: 'Pressupost gratuït', href: u('contact') }]}
+    backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/geometric-2/4.jpg' }}
+  >
+    <Fragment slot="title">
+      Desenvolupament de bases de dades amb <span class="text-accent highlight">Oracle Database</span>
+    </Fragment>
+    <Fragment slot="subtitle"> Creem models de dades i programem PL/SQL usant bases de dades Oracle. </Fragment>
+  </Hero>
+
+  <Content
+    classes={{ container: 'contains-logo' }}
+    isImageSmall
+    title="<span class='custom-gradient'>Oracle Database:</span> La base de dades líder per a empreses"
+    image={{
+      id: 'oracle-logo',
+      src: '~/assets/images/tecnologia/oracle-logo.svg',
+      alt: 'Logotip d\'Oracle',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        A Gilsys, hem desenvolupat múltiples projectes amb Oracle Database, una de les bases de dades relacionals
+        més robustes i confiables del mercat.
+      </p>
+      <p class="text-muted mt-4">
+        El nostre equip d'analistes i programadors especialistes t'ajudarà a dissenyar, desenvolupar i implementar
+        solucions a mida, optimitzades per satisfer les necessitats específiques del teu projecte empresarial.
+      </p>
+    </Fragment>
+  </Content>
+
+  <Content
+    title="Potència i fiabilitat en la gestió de dades empresarials"
+    classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}
+  >
+    <Fragment slot="preContent">
+      <p class="text-muted">
+        Oracle és una de les bases de dades més potents i fiables del mercat. A Gilsys, dissenyem arquitectures de
+        bases de dades optimitzades, assegurant integritat referencial, alt rendiment i una organització eficient de
+        la informació.
+      </p>
+      <p class="text-center">
+        <a title="Web oficial d'Oracle Database" target="_blank" href="[https://www.oracle.com/es/](https://www.oracle.com/es/)" class="btn-primary mt-12 mb-12 w-auto"
+          >Coneix més sobre Oracle Database</a
+        >
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Features3
+    columns={3}
+    title=`Beneficis d'usar <span class="custom-gradient">Oracle Database</span> en els teus projectes`
+    subtitle="Oracle database és la base de dades més popular per a projectes empresarials crítics."
+    items={[
+      {
+        title: 'Alt rendiment',
+        description: `Processament veloç i eficient, ideal per a entorns de missió crítica que requereixen alta disponibilitat.`,
+        icon: 'tabler:cpu',
+      },
+      {
+        title: 'PL/SQL avançat',
+        description: `Permet el desenvolupament de procediments emmagatzemats complexos i eficients per a una lògica de negoci optimitzada.`,
+        icon: 'tabler:code',
+      },
+      {
+        title: 'Seguretat robusta',
+        description: `Control d'accés granular amb rols i privilegis, que protegeix la informació sensible i garanteix el compliment de normatives.`,
+        icon: 'tabler:shield-lock',
+      },
+      {
+        title: 'Optimització de rendiment',
+        description: `Tècniques avançades com el particionament i els índexs intel·ligents que milloren la velocitat i eficiència de les consultes.`,
+        icon: 'tabler:brand-speedtest',
+      },
+      {
+        title: 'Alta disponibilitat',
+        description: `Mecanismes de recuperació davant desastres que garanteixen la continuïtat del negoci, fins i tot en situacions imprevistes.`,
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Escalabilitat',
+        description: `Adaptable a grans volums de dades i entorns distribuïts, ideal per a empreses en creixement.`,
+        icon: 'tabler:network',
+      },
+    ]}
+  />
+
+  <Content
+    isReversed
+    tagline="Experiència i serveis de Gilsys amb Oracle "
+    title="Aprofitem el màxim rendiment amb PL/SQL"
+    image={{
+      src: '~/assets/images/tecnologia/oracle-abstracto.jpg',
+      alt: 'Experts en Oracle PL/SQL',
+    }}
+  >
+    <Fragment slot="preContent">
+      <p class="text-muted">
+        A Gilsys, treballem amb Oracle Database des de la versió 10 fins a les més recents, adaptant-nos a la seva
+        evolució i aprofitant les seves noves capacitats per optimitzar el rendiment dels nostres desenvolupaments.
+      </p>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="text-muted mt-4">
+        <strong>PL/SQL</strong>, el llenguatge de programació natiu d'Oracle, és l'eina clau per aprofitar
+        al màxim el potencial de la base de dades. El nostre coneixement de PL/SQL ens permet crear solucions que
+        milloren el rendiment de consultes i la gestió de dades.
+      </p>
+      <p class="text-muted mt-4">
+        A Gilsys, desenvolupem procediments emmagatzemats, triggers i funcions amb un enfocament en l'eficiència,
+        adaptats a les necessitats específiques de cada projecte per a un rendiment òptim del sistema.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Features
+    title=`Quins serveis oferim amb <span class='custom-gradient'>Oracle Database</span>?`
+    items={[
+      {
+        title: 'Desenvolupament PL/SQL',
+        description:
+          'Creem paquets, procediments emmagatzemats i funcions personalitzades per optimitzar la lògica del teu negoci i el rendiment de la base de dades.',
+        icon: 'tabler:code',
+      },
+      {
+        title: 'Optimització de consultes',
+        description:
+          'Ajustem les teves consultes SQL per assegurar la màxima eficiència i reduir els temps de resposta.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Disseny de bases de dades',
+        description:
+          'Modelem i dissenyem bases de dades relacionals robustes i escalables que s\'adapten a les teves necessitats, incloent-hi la creació de noves taules.',
+        icon: 'tabler:table',
+      },
+      {
+        title: 'Migració de bases de dades',
+        description:
+          'Traslladem les teves bases de dades entre diferents versions i plataformes de forma segura i eficient.',
+        icon: 'tabler:switch-vertical',},
+      {
+        title: 'Creació de taules i vistes',
+        description:
+          'Dissenyem i creem noves taules i vistes per organitzar i accedir a les teves dades de forma eficient.',
+        icon: 'tabler:database',
+      },
+      {
+        title: 'Comunicació amb eines externes',
+        description:
+          'Integrem la teva base de dades Oracle amb altres eines i sistemes, independentment de la tecnologia en què estiguin desenvolupats.',
+        icon: 'tabler:plug',
+      },
+    ]}
+  />
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/geometric-2/4.jpg', alt: 'Fondo abstracto' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Pressupost gratuït',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Trucar',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title"
+      >Necessites serveis per treballar amb bases de dades <span class="custom-gradient">Oracle</span>?</Fragment
+    >
+    <Fragment slot="subtitle"
+      >Contacta'ns i dissenyarem o analitzarem la teva base de dades en funció de les necessitats del teu projecte.
+    </Fragment>
+  </CallToAction>
+</Layout>

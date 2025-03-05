@@ -66,7 +66,7 @@ const metadata = {
         de usuario superior, tanto en entornos web como en dispositivos móviles.
       </p>
       <p class="text-center">
-        <a title="Página oficial de Angular" href="https://angular.dev/" class="btn-primary mt-12 mb-12 w-auto"
+        <a title="Página oficial de Angular" target="_blank" href="https://angular.dev/" class="btn-primary mt-12 mb-12 w-auto"
           >Conoce más sobre Angular</a
         >
       </p>
@@ -148,6 +148,9 @@ const metadata = {
         máximo las capacidades de Angular:
       </p>
     </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
   </Content>
 
   <Content
@@ -171,9 +174,6 @@ const metadata = {
         >
       </p>
     </Fragment>
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-lightgray"></div>
-    </Fragment>
   </Content>
 
   <Content
@@ -192,10 +192,16 @@ const metadata = {
       },
       {
         title: '¿Tu plataforma actual te limita?',
-        description: `Migramos tu software a Angular de forma ágil y segura, minimizando el impacto en tu operación y maximizando el rendimiento.<br/><br/><a title="" href={u('migration')} class="btn-primary mt-4 w-auto">Servicios de renovación de software</a>`,
+        description: `Migramos tu software a Angular de forma ágil y segura, minimizando el impacto en tu operación y maximizando el rendimiento.<br/><br/><a title="" href="` +
+          u('migration') +
+          `" class="btn-primary mt-4 w-auto">Servicios de renovación de software</a>`,
       },
     ]}
-  />
+  >
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-lightgray"></div>
+  </Fragment>
+</Content>
 
   <Content
     title="Soporte y mantenimiento en aplicaciones <span class='custom-gradient'>Angular</span>"
@@ -213,13 +219,10 @@ const metadata = {
       <p class="text-center md:text-left">
         <a
           title="Migración de herramientas web a tecnología Angular"
-          href={u('migration')}
+          href={u('gilsys')}
           class="btn-primary mt-12 mb-12 w-auto">Conoce más sobre nuestra empresa</a
         >
       </p>
-    </Fragment>
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-lightgray"></div>
     </Fragment>
   </Content>
 
