@@ -484,3 +484,10 @@ address a{
   max-width: 250px;
 }
 
+
+
+@media (min-width: 1000px) and (max-width: 1600px) {
+  .technology-container {
+      max-width: 1000px;
+  }
+}

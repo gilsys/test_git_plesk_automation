@@ -56,7 +56,8 @@ export const ui = {
     'affiliations.ccm': 'Socios de Consell empresarial d\'Osona',
     'affiliations.tic': 'Socios de TICOsona - Associació d\'Empreses de Tecnologies de la Informació i la Comunicació d\'Osona',
     'cookie.settings': 'Configuración de cookies',
-    'technology': 'Tecnologias destacadas'
+    'technology': 'Tecnologias destacadas',
+    'technology.title': 'Lenguajes de programación y tecnologías utilizadas en Gilsys',
   },
   ca: {
     'common.home': 'Inici',
@@ -98,7 +99,8 @@ export const ui = {
     'affiliations.ccm': 'Socios de Consell empresarial d\'Osona',
     'affiliations.tic': 'Socios de TICOsona - Associació d\'Empreses de Tecnologies de la Informació i la Comunicació d\'Osona',
     'cookie.settings': 'Configuració de cookies',
-    'technology': 'Tecnologias destacades'
+    'technology': 'Tecnologias destacades',
+    'technology.title': 'Llenguatges de programació i tecnologíes utilitzades a Gilsys',
   },
   en: {
     'common.home': 'Home',
@@ -140,7 +142,8 @@ export const ui = {
     'affiliations.ccm': 'Member of Consell empresarial d\'Osona',
     'affiliations.tic': 'Member of TICOsona - Associació d\'Empreses de Tecnologies de la Informació i la Comunicació d\'Osona',
     'cookie.settings': 'Cookie settings',
-    'technology': 'Featured technologies'
+    'technology': 'Featured technologies',
+    'technology.title': 'Featured coding languages and technologies used at Gilsys',
   },
 } as const;
 
@@ -680,6 +683,98 @@ export const header = {
         title: 'Formulari de contacte',
         href: routes['ca']['contact'],
       },
+      {
+        _id: 'technology',
+        text: 'Tecnologies',
+        title: 'Tecnologies per al desenvolupament de software',
+        href: routes['ca']['technology'], 
+        links: [
+            {
+                href: routes['ca']['technology/angular'], 
+                title: 'Programació d\'aplicacions web amb Angular',
+                text: 'Angular',
+                icon: 'tabler:brand-angular',
+            },
+            {
+                href: routes['ca']['technology/astro'], 
+                title: 'Desenvolupament web amb ASTRO: rendiment, SEO i seguretat',
+                text: 'Astro',
+                icon: 'tabler:rocket',
+            },
+            {
+                href: routes['ca']['technology/bootstrap'],
+                title: 'Desenvolupament d\'interfícies responsive amb Bootstrap',
+                text: 'Bootstrap',
+                icon: 'tabler:brand-bootstrap',
+            },
+            {
+                href: routes['ca']['technology/html-css'],
+                title: 'Disseny i desenvolupament amb HTML i CSS',
+                text: 'HTML i CSS',
+                icon: 'tabler:code',
+            },
+            {
+                href: routes['ca']['technology/java'], 
+                title: 'Desenvolupament de software a mida amb Java',
+                text: 'Java',
+                icon: 'tabler:coffee',
+            },
+            {
+                href: routes['ca']['technology/javascript'], 
+                title: 'Desenvolupament d\'aplicacions web amb JavaScript',
+                text: 'JavaScript',
+                icon: 'tabler:brand-javascript',
+            },
+            {
+                href: routes['ca']['technology/metronic'], 
+                title: 'Programació d\'interfícies d\'administració amb Metronic',
+                text: 'Metronic',
+                icon: 'tabler:layout-dashboard',
+            },
+            {
+                href: routes['ca']['technology/mongodb'], 
+                title: 'Desenvolupament de bases de dades amb MongoDB',
+                text: 'MongoDB',
+                icon: 'tabler:brand-mongodb',
+            },
+            {
+                href: routes['ca']['technology/mysql'], 
+                title: 'Serveis de desenvolupament de bases de dades amb MySQL',
+                text: 'MySQL',
+                icon: 'tabler:brand-mysql',
+            },
+            {
+                href: routes['ca']['technology/oracle'], 
+                title: 'Desenvolupament de bases de dades amb Oracle Database',
+                text: 'Oracle',
+                icon: 'tabler:database',
+            },
+            {
+                href: routes['ca']['technology/php'], 
+                title: 'Desenvolupament a mida amb PHP',
+                text: 'PHP',
+                icon: 'tabler:brand-php',
+            },
+            {
+                href: routes['ca']['technology/react-native'], 
+                title: 'Empresa de desenvolupament d\'aplicacions amb React Native',
+                text: 'React Native',
+                icon: 'tabler:brand-react',
+            },
+            {
+                href: routes['ca']['technology/slim-framework'], 
+                title: 'Desenvolupaments amb Slim Framework',
+                text: 'Slim Framework',
+                icon: 'tabler:ease-in-out',
+            },
+            {
+                href: routes['ca']['technology/tailwind'], 
+                title: 'Disseny d\'interfícies d\'usuari amb Tailwind CSS',
+                text: 'Tailwind',
+                icon: 'tabler:brand-tailwind',
+            },
+        ],
+    },
     ],
   },
   es: {
@@ -1304,6 +1399,98 @@ export const header = {
         title: 'Contact form',
         href: routes['en']['contact'],
       },
+      {
+        _id: 'technology',
+        text: 'Technologies',
+        title: 'Technologies for software development',
+        href: routes['en']['technology'],
+        links: [
+            {
+                href: routes['en']['technology/angular'],
+                title: 'Web application programming with Angular',
+                text: 'Angular',
+                icon: 'tabler:brand-angular',
+            },
+            {
+                href: routes['en']['technology/astro'],
+                title: 'Web development with ASTRO: performance, SEO and security',
+                text: 'Astro',
+                icon: 'tabler:rocket',
+            },
+            {
+                href: routes['en']['technology/bootstrap'],
+                title: 'Responsive interface development with Bootstrap',
+                text: 'Bootstrap',
+                icon: 'tabler:brand-bootstrap',
+            },
+            {
+                href: routes['en']['technology/html-css'],
+                title: 'Design and development with HTML and CSS',
+                text: 'HTML and CSS',
+                icon: 'tabler:code',
+            },
+            {
+                href: routes['en']['technology/java'],
+                title: 'Custom software development with Java',
+                text: 'Java',
+                icon: 'tabler:coffee',
+            },
+            {
+                href: routes['en']['technology/javascript'],
+                title: 'Web application development with JavaScript',
+                text: 'JavaScript',
+                icon: 'tabler:brand-javascript',
+            },
+            {
+                href: routes['en']['technology/metronic'],
+                title: 'Admin interface programming with Metronic',
+                text: 'Metronic',
+                icon: 'tabler:layout-dashboard',
+            },
+            {
+                href: routes['en']['technology/mongodb'],
+                title: 'Database development with MongoDB',
+                text: 'MongoDB',
+                icon: 'tabler:brand-mongodb',
+            },
+            {
+                href: routes['en']['technology/mysql'],
+                title: 'Database development services with MySQL',
+                text: 'MySQL',
+                icon: 'tabler:brand-mysql',
+            },
+            {
+                href: routes['en']['technology/oracle'],
+                title: 'Database development with Oracle Database',
+                text: 'Oracle',
+                icon: 'tabler:database',
+            },
+            {
+                href: routes['en']['technology/php'],
+                title: 'Custom development with PHP',
+                text: 'PHP',
+                icon: 'tabler:brand-php',
+            },
+            {
+                href: routes['en']['technology/react-native'],
+                title: 'Application development company with React Native',
+                text: 'React Native',
+                icon: 'tabler:brand-react',
+            },
+            {
+                href: routes['en']['technology/slim-framework'],
+                title: 'Developments with Slim Framework',
+                text: 'Slim Framework',
+                icon: 'tabler:ease-in-out',
+            },
+            {
+                href: routes['en']['technology/tailwind'],
+                title: 'User interface design with Tailwind CSS',
+                text: 'Tailwind',
+                icon: 'tabler:brand-tailwind',
+            },
+        ],
+      }
     ],
   },
 };
