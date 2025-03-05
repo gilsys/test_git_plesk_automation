@@ -1,0 +1,190 @@
+
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+
+const metadata = {
+  title: 'MongoDB Database Programming Services',
+  description: `Professional MongoDB development services. Our company's programmers design and develop NoSQL, non-relational databases.`,
+};
+---
+
+<Layout metadata={metadata}>
+  {/* Hero Section */}
+  <Hero
+    tagline="Non-relational databases: prioritizing maximum efficiency"
+    actions={[{ variant: 'primary', text: 'Free Quote', href: u('contact') }]}
+    backgroundImage={{ alt: 'Abstract background', src: '~/assets/images/geometric-2/4.jpg' }}
+  >
+    <Fragment slot="title">
+      Database development with <span class="text-accent highlight">MongoDB</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      We design and implement fast and scalable NoSQL databases for web and mobile applications.
+    </Fragment>
+  </Hero>
+
+  <Content
+    classes={{ container: 'contains-logo' }}
+    isImageSmall
+    title="<span class='custom-gradient'>MongoDB and NoSQL:</span> The evolution of data storage"
+    image={{
+      id: 'mongodb-logo',
+      src: '~/assets/images/tecnologia/mongodb-logo.svg',
+      alt: 'MongoDB logo',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        At Gilsys, we are specialists in <strong >MongoDB</strong>, one of the most advanced and efficient NoSQL database
+        systems on the market.
+      </p>
+      <p class="text-muted mt-4">
+        With extensive experience in designing NoSQL data architectures, we help companies manage large volumes of
+        information in a <strong >flexible, scalable, and efficient</strong> manner.
+      </p>
+    </Fragment>
+  </Content>
+
+  <Content
+    title="Flexible and scalable management of dynamic and distributed data."
+    image={{
+      id: 'php-logo',
+      src: '~/assets/images/tecnologia/mongodb-escena-pantalla.png',
+      alt: 'PHP Logo',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        <strong >MongoDB</strong> is a NoSQL database designed to optimally handle unstructured and semi-structured
+        data. Unlike traditional SQL systems, MongoDB stores documents in BSON format (similar to JSON), which allows
+        for greater <strong >agility, speed, and scalability</strong> in data processing.
+      </p>
+      <p class="text-center">
+        <a title="MongoDB official website" target="_blank" href="https://www.mongodb.com/" class="btn-primary mt-12 mb-12 w-auto"
+          >Learn more about MongoDB</a
+        >
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Features3
+    columns={3}
+    title="Advantages of using MongoDB over SQL databases"
+    items={[
+      {
+        description: `Flexibility in data structure, allowing dynamic schemas without defining rigid relationships.`,
+        icon: 'tabler:layers-subtract',
+      },
+      {
+        description: `Horizontal scalability, supporting large volumes of data without affecting performance.`,
+        icon: 'tabler:arrows-maximize',
+      },
+      {
+        description: `Fast and efficient queries, thanks to its document-based model.`,
+        icon: 'tabler:search',
+      },
+      {
+        description: `High availability and automatic replication, minimizing the risk of data loss.`,
+        icon: 'tabler:refresh',
+      },
+      {
+        description: `Better performance in applications with unstructured or changing data.`,
+        icon: 'tabler:bolt',
+      },
+      {
+        description: `Easy integration with modern applications and cloud-native environments.`,
+        icon: 'tabler:cloud',
+      },
+    ]}
+  />
+
+  <Features2
+    columns={2}
+    title="Cases where MongoDB is the best option"
+    subtitle="MongoDB is ideal for applications that need to store large volumes of unrelated data, for example:"
+    items={[
+      {
+        title: 'Applications with a large amount of content',
+        description: 'Stores and manages flexible and diverse content, adapting to changing structures.',
+        icon: 'tabler:file-text',
+      },
+      {
+        title: 'Product catalogs and e-commerce',
+        description: 'Handles large volumes of product data with variable attributes and complex hierarchies.',
+        icon: 'tabler:shopping-cart',
+      },
+      {
+        title: 'Mobile and Internet of Things (IoT) applications',
+        description: 'Collects and processes real-time data from devices, sensors, and mobile users.',
+        icon: 'tabler:device-mobile',
+      },
+      {
+        title: 'Real-time data analysis and Big Data',
+        description: 'Scales horizontally to handle large volumes of data and perform rapid analysis.',
+        icon: 'tabler:chart-bar',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Features2>
+
+  <Content
+    isReversed
+    title="When do we use MongoDB at Gilsys?"
+    image={{
+      src: '~/assets/images/tecnologia/mongodb-hoja-db.png',
+      alt: 'MongoDB logo leaf',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        At Gilsys, we have implemented <strong >MongoDB</strong> in various projects to improve the performance and
+        scalability of applications, whenever a non-related data structure is required. NoSQL databases are optimized
+        to store, query, and analyze <strong >large volumes of data</strong> with maximum efficiency.
+      </p>
+      <p class="text-muted mt-4">
+        Thanks to our knowledge in non-relational architectures, we help companies migrate from traditional
+        relational databases to more flexible and adaptable solutions to current needs.
+      </p>
+      <p class="text-center">
+        <a title="Data migration from old platforms" href={u('migration')} class="btn-primary mt-12 mb-12 w-auto"
+          >Learn more about data migration</a
+        >
+      </p>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/geometric-2/4.jpg', alt: 'Abstract background' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Free Quote',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Call',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Trust Gilsys to implement databases with <span class="custom-gradient">MongoDB</span>
+    </Fragment>
+    <Fragment slot="subtitle">We are experts in NoSQL and SQL, and we will guide you to choose the best solution.</Fragment>
+  </CallToAction>
+</Layout>
