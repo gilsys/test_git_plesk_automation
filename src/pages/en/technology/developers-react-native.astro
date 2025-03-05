@@ -1,0 +1,221 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+
+const metadata = {
+  title: 'React Native Application Development Company',
+  description: `We are experts in custom cross-platform mobile app programming with React Native, creating hybrid applications for Android and iOS.`,
+};
+---
+
+<Layout metadata={metadata}>
+  {/* Hero Section */}
+  <Hero
+    tagline="You will find us in Osona, in the province of Barcelona."
+    actions={[{ variant: 'primary', text: 'Free Quote', href: u('contact') }]}
+    backgroundImage={{ alt: 'Abstract background', src: '~/assets/images/geometric-2/4.jpg' }}
+  >
+    <Fragment slot="title">
+      Application development company with <span class="text-accent highlight">React Native</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      We program hybrid mobile apps (iOS and Android), completely customized using React Native.
+    </Fragment>
+  </Hero>
+
+  <Content
+    classes={{ container: 'contains-logo pb-0 md:pb-0 lg:pb-0' }}
+    isImageSmall
+    title="Looking for <span class='custom-gradient'>React Native</span> experts in the province of Barcelona?"
+    subtitle="At Gilsys, we can develop the mobile application you need."
+    image={{
+      id: 'react-native-logo',
+      src: '~/assets/images/tecnologia/react-native-logo.svg',
+      alt: 'React Native logo',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        Our development team specializes in the
+        <strong
+          >creation of customized, scalable, and high-performance mobile applications</strong
+        >
+        using React Native.
+      </p>
+      <p class="text-muted mt-4">
+        A hybrid, cross-platform solution that allows for a single code base which, once compiled, can be distributed
+        to run on both iOS and Android devices.
+      </p>
+      <p class="text-center">
+        <a
+          title="Mobile application programming services"
+          href={u('development/apps')}
+          class="btn-primary mt-12 mb-12 w-auto">Explore our app development services</a
+        >
+      </p>
+    </Fragment>
+  </Content>
+
+  <Content
+    isReversed
+    title="React Native is the leading framework for developing hybrid applications"
+    subtitle="Its ability to create native iOS and Android apps with a single code base reduces costs and development time without sacrificing performance"
+    classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}
+    image={{
+      src: '~/assets/images/tecnologia/react-native-estilo-mobile.png',
+      alt: 'React Native application development and optimization',
+    }}
+  >
+    <Fragment slot="preContent">
+      <p class="text-muted">
+        React Native is an open-source framework created by Meta (formerly Facebook) that allows developing native
+        mobile applications with JavaScript and React.
+      </p>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="text-muted">
+        Unlike other hybrid solutions, React Native does not generate encapsulated web applications, but truly
+        native interfaces. This ensures a fluid user experience (UX) and performance comparable to apps created with
+        Swift or Java.
+      </p>
+      <p class="text-center">
+        <a title="React Native official page" target="_blank" href="https://reactnative.dev/" class="btn-primary mt-12 mb-12 w-auto"
+          >Learn more about React Native</a
+        >
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Features
+    title="Benefits of choosing React Native for your project"
+    items={[
+      {
+        title: 'Custom applications',
+        description: 'We adapt each solution to the specific needs of your business.',
+        icon: 'tabler:adjustments',
+      },
+      {
+        title: 'Cross-platform development',
+        description: 'A single application compatible with iOS and Android.',
+        icon: 'tabler:devices',
+      },
+      {
+        title: 'Expandable and evolvable',
+        description: 'Applications adaptable to new functionalities without rewriting large portions of code.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Community and support',
+        description: 'Backed by a global community and constant updates.',
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Optimized performance',
+        description: 'Smooth user experience, with a speed comparable to native apps.',
+        icon: 'tabler:bolt', // Icon for performance
+      },
+      {
+        title: 'Flexibility and scalability',
+        description: 'Adaptable to projects of any size.',
+        icon: 'tabler:arrows-maximize', // Icon for scalability
+      },
+    ]}
+  />
+
+  <Features2
+    title="React Native services offered by Gilsys"
+    subtitle="We offer a wide range of React Native services to take your mobile application to the next level"
+    items={[
+      {
+        title: 'Development from scratch',
+        description:
+          'We create native cross-platform mobile applications for iOS and Android, tailored to your needs and goals.',
+        icon: 'tabler:device-mobile',
+      },
+      {
+        title: 'Application migration',
+        description:
+          'We convert your application to React Native, improving its performance and reducing maintenance costs.',
+        icon: 'tabler:arrows-transfer-down',
+      },
+      {
+        title: 'Maintenance and support',
+        description:
+          'We update, improve, and fix issues in your React Native application, ensuring its compatibility and long-term performance.',
+        icon: 'tabler:tools',
+      },
+      {
+        title: 'Custom functionalities',
+        description:
+          'We implement new functionalities and specific features for your application, enhancing the user experience.',
+        icon: 'tabler:puzzle',
+      },
+      {
+        title: 'API integration',
+        description: 'We connect your React Native application with other platforms and services to expand its capabilities.',
+        icon: 'tabler:plug',
+      },
+      {
+        title: 'Performance optimization',
+        description: 'We improve the speed and efficiency of your application to provide a smooth and lag-free experience.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'UI/UX design',
+        description:
+          'We create attractive and easy-to-use interfaces that improve user interaction with your application.',
+        icon: 'tabler:color-swatch',
+      },
+      {
+        title: 'Testing and quality control',
+        description:
+          'We perform exhaustive testing to ensure the stability, security, and functionality of your React Native application.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Consulting and advisory',
+        description:
+          'We guide you in making decisions about your React Native application development, offering you customized and efficient solutions.',
+        icon: 'tabler:bulb',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Features2>
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/geometric-2/4.jpg', alt: 'Abstract background' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Free Quote',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Call',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      If you need <span class="custom-gradient">React Native</span> specialists, count on Gilsys
+    </Fragment>
+    <Fragment slot="subtitle">
+      From Barcelona, we develop projects with React Native for clients from any sector, both nationally and
+      internationally.
+    </Fragment>
+  </CallToAction>
+</Layout>

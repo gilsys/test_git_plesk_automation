@@ -1,0 +1,219 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+
+const metadata = {
+  title: 'Bootstrap Programming Company',
+  description: `With Bootstrap, we create responsive user interfaces (Frontend), adapted to mobile, tablet, and computer. We carry out custom layout and design. Free quote!`,
+};
+---
+
+<Layout metadata={metadata}>
+  {/* Hero Section */}
+  <Hero
+    tagline="A single code, multiple presentation formats."
+    actions={[{ variant: 'primary', text: 'Free Quote', href: u('contact') }]}
+    backgroundImage={{ alt: 'Abstract background', src: '~/assets/images/geometric-2/4.jpg' }}
+  >
+    <Fragment slot="title">
+      Responsive interface development with <span class="text-accent highlight">Bootstrap</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      We have a team of expert Bootstrap programmers, ready to develop professional tools with this framework.
+    </Fragment>
+  </Hero>
+
+  <Content
+    classes={{ container: 'contains-logo pb-0 md:pb-0 lg:pb-0' }}
+    isImageSmall
+    title="<span class='custom-gradient'>Bootstrap: </span> We design modern and adaptable interfaces"
+    image={{
+      id: 'bootstrap-logo',
+      src: '~/assets/images/tecnologia/bootstrap-logo.svg',
+      alt: 'Bootstrap Logo - Framework for responsive interfaces',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        At Gilsys, we use Bootstrap to build modern, responsive, and highly functional interfaces. As one of the most
+        widely used CSS frameworks in the world, Bootstrap offers a solid and efficient solution for designing intuitive
+        web applications that adapt to any device.
+      </p>
+      <p class="text-muted mt-4">
+        Its flexibility makes it ideal for dynamic frontends and backends with responsive layout, ensuring a fluid and
+        accessible experience for all users.
+      </p>
+      <p class="text-muted mt-4">
+        <a title="Custom web application development" href={u('development/web')} class="btn-primary mt-12 mb-12 w-auto"
+          >Explore our custom web development services</a
+        >
+      </p>
+    </Fragment>
+  </Content>
+
+  <Content
+    title={`We create <span class="custom-gradient">responsive</span> user interfaces`}
+    subtitle={`Adapted to mobile, tablet, and computer`}
+    image={{
+      src: '~/assets/images/tecnologia/bootstrap-responsive.png',
+      alt: 'Scenario for Bootstrap - Responsive interfaces',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        Bootstrap offers a solid foundation for designing clean and professional interfaces without writing CSS code
+        from scratch. Its flexible grid system, predefined components, and mobile-first approach allow us to speed up
+        the development process without compromising customization.
+      </p>
+      <p class="text-muted mt-4">
+        <a title="Bootstrap official page" target="_blank" href="https://getbootstrap.com/" class="btn-primary mt-12 mb-12 w-auto"
+          >Visit the official Bootstrap website</a
+        >
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Features3
+    title="Benefits of using Bootstrap in your project"
+    items={[
+      {
+        title: 'Adaptable design on any screen',
+        description: `Bootstrap ensures your interface looks good on any device without extra effort.`,
+        icon: 'tabler:screen-share',
+      },
+      {
+        title: 'Optimized structure for development',
+        description: `Organizes information and content efficiently, facilitating layout and maintenance.`,
+        icon: 'tabler:layout-grid',
+      },
+      {
+        title: 'Production-ready components',
+        description: `Includes buttons, forms, alerts, and more, reducing development time without sacrificing customization.`,
+        icon: 'tabler:components',
+      },
+      {
+        title: 'Flexible grid system',
+        description: `Allows creating fluid and well-structured designs, dynamically adapting to each project's need.`,
+        icon: 'tabler:squares-diagonal',
+      },
+      {
+        title: 'Compatibility with all browsers',
+        description: `Works smoothly on Chrome, Firefox, Edge, Safari, and others, ensuring a homogeneous user experience.`,
+        icon: 'tabler:browser-check',
+      },
+      {
+        title: 'Constantly evolving community and ecosystem',
+        description: `Thousands of developers contribute with improvements, plugins, and solutions, making Bootstrap a solid and up-to-date option.`,
+        icon: 'tabler:users-group',
+      },
+      {
+        title: 'Advanced customization without effort',
+        description: `Adjust styles, colors, and variables easily to make the design fit your project's identity.`,
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Speeds up development time',
+        description: `Reduces the learning curve and launches projects faster with its built-in tools and utilities.`,
+        icon: 'tabler:bolt',
+      },
+      {
+        title: 'Detailed and accessible documentation',
+        description: `Find practical examples and clear guides to implement any functionality without complications.`,
+        icon: 'tabler:manual-gearbox',
+      },
+    ]}
+  />
+
+  <Content
+    isImageSmall
+    title="At Gilsys, we have trusted Bootstrap since its beginnings"
+    subtitle="We have relied on this framework since its first versions, which gives us a deep understanding of its operation."
+    image={{
+      src: '~/assets/images/tecnologia/bootstrap-interfaz.png',
+      alt: 'User interface and Bootstrap components',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        From Bootstrap version 3 to the current one, we have worked with this framework to develop efficient
+        applications with attractive interfaces. Thanks to our experience, we can adapt it to projects of varying
+        complexity, from corporate websites to interactive platforms and advanced back offices.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Content
+    isReversed
+    title="Maintenance and evolution with Bootstrap"
+    image={{
+      src: '~/assets/images/tecnologia/bootstrap-uiux.jpg',
+      alt: 'Bootstrap UI UX image',
+    }}
+    items={[
+      {
+        title: 'Code optimization',
+        description: 'Implying reduction of unnecessary styles.',
+        icon: 'tabler:code',
+      },
+      {
+        title: 'Adaptation of old interfaces to modern versions',
+        description: 'Thanks to its regular updates, we can implement aesthetic and functional improvements.',
+        icon: 'tabler:tool',
+      },
+      {
+        title: 'Integration with other frameworks and web technologies.',
+        description: 'As experts in custom development, we can integrate additional components or program them to measure.',
+        icon: 'tabler:plug',
+      },
+    ]}
+  >
+    <Fragment slot="preContent">
+      <p class="text-muted">
+        At Gilsys, Bootstrap is not just a tool, it is part of our DNA. With years of experience and a deep passion for
+        this framework, we create exceptional interfaces that combine functionality and cutting-edge design. We ensure
+        that each interface not only stays updated and functional but also reflects the latest trends in web design.
+      </p>
+    </Fragment>
+    <Fragment slot="postContent">
+      <p class="text-muted">
+        At Gilsys, we ensure that each interface not only stays updated and functional but also reflects the latest
+        trends in web design.
+      </p>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/geometric-2/4.jpg', alt: 'Abstract background' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Free Quote',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+      text: 'Call',
+      href: 'tel:+34665331271',
+    },
+  ]}
+>
+  <Fragment slot="title">
+    We are <span class="custom-gradient">Bootstrap specialists</span><br />Let us handle the layout
+  </Fragment>
+  <Fragment slot="subtitle">
+    We take care of the design, layout, and responsive adaptation of your project's user interface.
+  </Fragment>
+</CallToAction>
+</Layout>

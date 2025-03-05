@@ -1,0 +1,171 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+
+const metadata = {
+  title: 'Web Application Development with JavaScript',
+  description:
+    'At Gilsys, with over 20 years of experience, we develop advanced web applications and custom solutions with JavaScript.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="JavaScript: The key to modern web development"
+    actions={[{ variant: 'primary', text: 'Free Quote', href: u('contact') }]}
+    backgroundImage={{ alt: 'Abstract background', src: '~/assets/images/geometric-2/4.jpg' }}
+  >
+    <Fragment slot="title">
+      Web application development with <span class="text-accent highlight">JavaScript</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      Over 20 years of experience creating innovative solutions with JavaScript, from advanced web applications to
+      custom developments for businesses.
+    </Fragment>
+  </Hero>
+
+  <Content
+    classes={{ container: 'contains-logo' }}
+    isImageSmall
+    title="Developments with <span class='custom-gradient'>JavaScript:</span> Much more than interactivity"
+    subtitle="At Gilsys, we recognize <strong>JavaScript</strong> as a pillar of current development."
+    image={{
+      id: 'javascript-logo',
+      src: '~/assets/images/tecnologia/javascript-logo.svg',
+      alt: 'JavaScript logo',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        Since our inception, JavaScript has been an essential part of our work. Its evolution has made it a fundamental
+        language, not only for web interactivity but also for developing robust applications and advanced solutions.
+      </p>
+    </Fragment>
+  </Content>
+
+  <Features2
+    columns={2}
+    title="At Gilsys, we customize your project by developing with <span class='custom-gradient'>JavaScript</span>"
+    subtitle="As development experts, we offer custom web solutions with maximum adaptability, performance, and efficiency."
+    items={[
+      {
+        title: 'Adaptability',
+        description: 'From web apps to server tools, JavaScript covers multiple needs.',
+        icon: 'tabler:arrows-right-left',
+      },
+      {
+        title: 'High performance',
+        description: 'Develop optimized and efficient solutions without compromising functionality.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Simplified development',
+        description: 'Speed up the development process with a language that facilitates rapid implementation of ideas.',
+        icon: 'tabler:bolt',
+      },
+      {
+        title: 'Total compatibility',
+        description: 'Ensure the compatibility and accessibility of your project on any device and browser.',
+        icon: 'tabler:world',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Features2>
+
+  <Features
+    title="We use JavaScript as a versatile programming language"
+    subtitle="At Gilsys, we can work with any tool that uses the JS language"
+    items={[
+      {
+        title: 'Front-end web development',
+        description:
+          'Create interactive interfaces, animations, and manipulate the DOM in real-time for an enhanced user experience.',
+        icon: 'tabler:browser',
+      },
+      {
+        title: 'Back-end web development',
+        description: 'Use Node.js to build scalable and efficient web applications on the server.',
+        icon: 'tabler:server',
+      },
+      {
+        title: 'Mobile development',
+        description: 'Build cross-platform mobile applications with frameworks like React Native and Ionic.',
+        icon: 'tabler:device-mobile',
+      },
+      {
+        title: 'Desktop development',
+        description: 'Create cross-platform desktop applications with Electron, using web technologies.',
+        icon: 'tabler:devices-pc',
+      },
+      {
+        title: 'Internet of Things (IoT)',
+        description: 'Program the logic of connected devices, such as sensors and actuators.',
+        icon: 'tabler:smart-home',
+      },
+      {
+        title: 'Interactive components and graphics',
+        description:
+          'We develop interactive web components, data visualizations, graphics, and other custom solutions with JavaScript.',
+        icon: 'tabler:chart-bar',
+      },
+    ]}
+  />
+
+  <Content
+    isReversed
+    title="Gilsys: Pioneers in <span class='custom-gradient'>JavaScript</span> development"
+    subtitle="More than two decades driving innovation with JavaScript."
+    image={{
+      src: '~/assets/images/tecnologia/javascript-lenguaje-programacion.png',
+      alt: 'JavaScript development at Gilsys',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        Since our inception, JavaScript has been a fundamental part of our work, allowing us to adapt and evolve with
+        technology.
+      </p>
+      <p class="text-muted mt-4">
+        Our team is dedicated to creating innovative solutions, using JavaScript to drive our clients' success.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/geometric-2/4.jpg', alt: 'Abstract background' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Free Quote',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Call',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      At Gilsys, you will find more than two decades of experience developing with <span class="custom-gradient"
+        >JavaScript</span
+      >
+    </Fragment>
+    <Fragment slot="subtitle">
+      We leverage the potential of JavaScript to professionally program custom business solutions.
+    </Fragment>
+  </CallToAction>
+</Layout>

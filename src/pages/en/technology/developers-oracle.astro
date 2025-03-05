@@ -1,0 +1,205 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+
+const metadata = {
+  title: 'Oracle Database Design',
+  description: `At Gilsys, we create data models and program PL/SQL using Oracle databases. We are located in Osona, Barcelona.`,
+};
+---
+
+<Layout metadata={metadata}>
+  {/* Hero Section */}
+  <Hero
+    tagline="Oracle database design and PL/SQL programming from the province of Barcelona"
+    actions={[{ variant: 'primary', text: 'Free Quote', href: u('contact') }]}
+    backgroundImage={{ alt: 'Abstract background', src: '~/assets/images/geometric-2/4.jpg' }}
+  >
+    <Fragment slot="title">
+      Database development with <span class="text-accent highlight">Oracle Database</span>
+    </Fragment>
+    <Fragment slot="subtitle"> We create data models and program PL/SQL using Oracle databases. </Fragment>
+  </Hero>
+
+  <Content
+    classes={{ container: 'contains-logo' }}
+    isImageSmall
+    title="<span class='custom-gradient'>Oracle Database:</span> The leading database for businesses"
+    image={{
+      id: 'oracle-logo',
+      src: '~/assets/images/tecnologia/oracle-logo.svg',
+      alt: 'Oracle logo',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        At Gilsys, we have developed multiple projects with Oracle Database, one of the most robust and reliable
+        relational databases on the market.
+      </p>
+      <p class="text-muted mt-4">
+        Our team of expert analysts and programmers will help you design, develop, and implement custom solutions,
+        optimized to meet the specific needs of your business project.
+      </p>
+    </Fragment>
+  </Content>
+
+  <Content
+    title="Power and reliability in enterprise data management"
+    classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}
+  >
+    <Fragment slot="preContent">
+      <p class="text-muted">
+        Oracle is one of the most powerful and reliable databases on the market. At Gilsys, we design optimized
+        database architectures, ensuring referential integrity, high performance, and efficient information
+        organization.
+      </p>
+      <p class="text-center">
+        <a title="Oracle Database official website" target="_blank" href="https://www.oracle.com/ca-en/" class="btn-primary mt-12 mb-12 w-auto"
+          >Learn more about Oracle Database</a
+        >
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Features3
+    columns={3}
+    title='Benefits of using <span class="custom-gradient">Oracle Database</span> in your projects'
+    subtitle="Oracle database is the most popular database for critical enterprise projects."
+    items={[
+      {
+        title: 'High performance',
+        description: `Fast and efficient processing, ideal for mission-critical environments that require high availability.`,
+        icon: 'tabler:cpu',
+      },
+      {
+        title: 'Advanced PL/SQL',
+        description: `Allows the development of complex and efficient stored procedures for optimized business logic.`,
+        icon: 'tabler:code',
+      },
+      {
+        title: 'Robust security',
+        description: `Granular access control with roles and privileges, which protects sensitive information and ensures regulatory compliance.`,
+        icon: 'tabler:shield-lock',
+      },
+      {
+        title: 'Performance optimization',
+        description: `Advanced techniques such as partitioning and smart indexes that improve query speed and efficiency.`,
+        icon: 'tabler:brand-speedtest',
+      },
+      {
+        title: 'High availability',
+        description: `Disaster recovery mechanisms that ensure business continuity, even in unforeseen situations.`,
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Scalability',
+        description: `Adaptable to large volumes of data and distributed environments, ideal for growing companies.`,
+        icon: 'tabler:network',
+      },
+    ]}
+  />
+
+  <Content
+    isReversed
+    tagline="Gilsys experience and services with Oracle"
+    title="We leverage maximum performance with PL/SQL"
+    image={{
+      src: '~/assets/images/tecnologia/oracle-abstracto.jpg',
+      alt: 'Oracle PL/SQL experts',
+    }}
+  >
+    <Fragment slot="preContent">
+      <p class="text-muted">
+        At Gilsys, we have been working with Oracle Database from version 10 to the most recent ones, adapting to its
+        evolution and taking advantage of its new capabilities to optimize the performance of our developments.
+      </p>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="text-muted mt-4">
+        <strong>PL/SQL</strong>, Oracle's native programming language, is the key tool to leverage the full potential
+        of the database. Our knowledge of PL/SQL allows us to create solutions that improve query performance and data
+        management.
+      </p>
+      <p class="text-muted mt-4">
+        At Gilsys, we develop stored procedures, triggers, and functions with a focus on efficiency, adapted to the
+        specific needs of each project for optimal system performance.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Features
+    title=`What services do we offer with <span class='custom-gradient'>Oracle Database</span>?`
+    items={[
+      {
+        title: 'PL/SQL development',
+        description:
+          'We create custom packages, stored procedures, and functions to optimize your business logic and database performance.',
+        icon: 'tabler:code',
+      },
+      {
+        title: 'Query optimization',
+        description: 'We fine-tune your SQL queries to ensure maximum efficiency and reduce response times.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Database design',
+        description:
+          'We model and design robust and scalable relational databases that adapt to your needs, including the creation of new tables.',
+        icon: 'tabler:table',
+      },
+      {
+        title: 'Database migration',
+        description: 'We move your databases between different versions and platforms safely and efficiently.',
+        icon: 'tabler:switch-vertical',
+      },
+      {
+        title: 'Table and view creation',
+        description:
+          'We design and create new tables and views to organize and access your data efficiently.',
+        icon: 'tabler:database',
+      },
+      {
+        title: 'Communication with external tools',
+        description:
+          'We integrate your Oracle database with other tools and systems, regardless of the technology they are developed in.',
+        icon: 'tabler:plug',
+      },
+    ]}
+  />
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/geometric-2/4.jpg', alt: 'Abstract background' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Free Quote',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Call',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Do you need services to work with <span class="custom-gradient">Oracle</span> databases?
+    </Fragment>
+    <Fragment slot="subtitle">
+      Contact us and we will design or analyze your database based on the needs of your project.
+    </Fragment>
+  </CallToAction>
+</Layout>

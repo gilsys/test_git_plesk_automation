@@ -1,0 +1,259 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+
+const metadata = {
+  title: 'Experts in MySQL Database Development',
+  description: `We program relational databases with MySQL. We design complex and optimized data models for each project. Free quote! From Osona, Barcelona.`,
+};
+---
+
+<Layout metadata={metadata}>
+  {/* Hero Section */}
+  <Hero
+    tagline="MySQL database design from Osona, province of Barcelona"
+    actions={[{ variant: 'primary', text: 'Free Quote', href: u('contact') }]}
+    backgroundImage={{ alt: 'Abstract background', src: '~/assets/images/geometric-2/4.jpg' }}
+  >
+    <Fragment slot="title">
+      MySQL database development services
+    </Fragment>
+    <Fragment slot="subtitle">
+      We design relational data models for MySQL, specific to each project, from simple to very complex solutions.
+    </Fragment>
+  </Hero>
+
+  <Content
+    classes={{ container: 'contains-logo' }}
+    isImageSmall
+    title="<span class='custom-gradient'>MySQL: </span>The key to efficient data management"
+    subtitle="We harness the full power of the world's most popular database engine."
+    image={{
+      id: 'mysql-logo',
+      src: '~/assets/images/tecnologia/mysql-logo.svg',
+      alt: 'MySQL logo',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        At Gilsys, we are specialists in <strong>MySQL</strong> and <strong>MariaDB</strong>, with experience from
+        version 3 to the current version. We design relational SQL databases with a flexible structure, allowing them
+        to be adapted to changes in focus without requiring drastic restructurings. This optimizes the scalability and
+        evolution of each project.
+      </p>
+    </Fragment>
+  </Content>
+
+  <Content
+    title="The world's most popular database engine"
+    subtitle="With years of experience, MySQL remains an undisputed solution in relational data management for many projects."
+    classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}
+    image={{
+      src: '~/assets/images/tecnologia/mysql-escenario-delfin.png',
+      alt: 'Dolphin jumping over a computer',
+    }}
+    items={[
+      {
+        title: `Open source and free`,
+        description: `Ideal for projects of any scale, from startups to large corporations.`,
+        icon: 'tabler:code', // You can choose another more representative icon
+      },
+      {
+        title: `Optimized performance`,
+        description: `Capable of handling large volumes of data and complex queries efficiently.`,
+        icon: 'tabler:rocket', // You can choose another more representative icon
+      },
+      {
+        title: `Cross-platform compatibility`,
+        description: `Works on various operating systems, providing flexibility in implementation.`,
+        icon: 'tabler:devices', // You can choose another more representative icon
+      },
+      {
+        title: `Robust ecosystem`,
+        description: `Wide range of tools and libraries that facilitate development and administration.`,
+        icon: 'tabler:puzzle', // You can choose another more representative icon
+      },
+    ]}
+  >
+    <Fragment slot="preContent">
+      <p class="text-muted">
+        MySQL is the most widely used relational database globally, with a leadership supported by its robustness,
+        versatility, and an active community. Its popularity is due to key factors:
+      </p>
+    </Fragment>
+
+    <Fragment slot="postContent">
+      <p class="text-muted mt-4">
+        At Gilsys, we leverage the full potential of MySQL to structure information efficiently, ensuring referential
+        integrity, query and index optimization, and guaranteeing the solid foundation your project needs.
+      </p>
+      <p class="text-center">
+        <a title="MySQL official website" target="_blank" href="https://www.mysql.com/" class="btn-primary mt-12 mb-12 w-auto"
+          >Learn more about MySQL</a
+        >
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Features3
+    columns={3}
+    title="Benefits of using MySQL in your projects"
+    subtitle="From web applications to enterprise solutions, MySQL adapts to your needs with power and flexibility."
+    items={[
+      {
+        title: `Consistent structure`,
+        description: `Databases created have a well-defined structure, ensuring consistency and reliability.`,
+        icon: 'tabler:database',
+      },
+      {
+        title: `Query analysis and optimization`,
+        description: `Allows analyzing and optimizing SQL queries, improving response times.`,
+        icon: 'tabler:chart-line',
+      },
+      {
+        title: `Integrity`,
+        description: `Offers referential integrity with primary and foreign keys, ensuring data coherence.`,
+        icon: 'tabler:key',
+      },
+      {
+        title: `Compatibility`,
+        description:
+          `High compatibility with most <a href="` +
+          u('software/metabase') +
+          `" class="text-accent" title="Business Intelligence tools for creating reports">Business Intelligence</a> tools.`,
+        icon: 'tabler:chart-pie',
+      },
+      {
+        title: `Security`,
+        description: `Advanced security and access control, protecting sensitive information.`,
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Scalability',
+        description: `Proven scalability, capable of adapting to projects of any size.`,
+        icon: 'tabler:arrows-maximize',
+      },
+      {
+        title: 'Flexible fields',
+        description: `Flexible data storage, allowing the use of <strong>JSON format</strong>, which stores more flexible structures within a relational environment.`,
+        icon: 'tabler:json',
+      },
+      {
+        title: 'Encryption',
+        description: `<strong>Field encryption</strong> capability to ensure greater security in the management of sensitive data.`,
+        icon: 'tabler:lock',
+      },
+      {
+        title: 'Encryption',
+        description: `<strong>TDE support</strong> (Transparent Data Encryption) in MariaDB, allowing data encryption at rest for greater protection of information in sensitive sectors.`,
+        icon: 'tabler:shield-lock',
+      },
+    ]}
+  />
+
+  <Content
+    isReversed
+    title="High-performance MySQL: Gilsys experience at the service of your data"
+    subtitle="At Gilsys, we enhance your projects with the robustness of MySQL and MariaDB, reliable solutions for structured data."
+    image={{
+      src: '~/assets/images/tecnologia/mysql-data.jpg',
+      alt: 'Business graphics and table documents',
+    }}
+  >
+    <Fragment slot="preContent">
+      <p class="text-muted">
+        With over two decades of experience, at Gilsys we specialize in the design, modeling, and optimization of MySQL
+        databases for projects of any scale.
+      </p>
+    </Fragment>
+    <Fragment slot="content">
+      <p class="text-muted">
+        Our extensive experience allows us to meticulously adapt each database to the unique needs of our clients,
+        ensuring efficient, scalable, and robust structures, prepared for demanding production environments.
+      </p>
+    </Fragment>
+    <Fragment slot="postContent">
+      <p class="text-muted mt-4">
+        We implement best practices in data model design and SQL query creation, prioritizing performance optimization
+        to avoid bottlenecks and ensure agile and reliable data management. By choosing Gilsys, you invest in a database that not only supports the current demands of your project, but also anticipates its future growth.
+    </p>
+    </Fragment>
+    <Fragment slot="bg">
+    <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+    </Content>
+    
+    <Features
+    title="MySQL database design services"
+    subtitle="Expert management of your data is our priority, we understand that they are the foundation of any solid technological solution."
+    items={[
+    {
+    title: 'MySQL/MariaDB database design and modeling',
+    description: 'We create efficient and optimized relational database structures for each project.',
+    icon: 'tabler:database',
+    },
+    {
+    title: 'Query optimization and index performance improvement',
+    description:
+    'We accelerate your operations, optimizing queries and adjusting indexes for faster response times.',
+    icon: 'tabler:rocket',
+    },
+    {
+    title: 'Database migration between versions and platforms',
+    description:
+    'We facilitate the transition of your data, allowing a safe migration without information loss.',
+    icon: 'tabler:world-upload',
+    },
+    {
+    title: 'Security and access control',
+    description: 'We protect your information with advanced security measures and granular access control.',
+    icon: 'tabler:shield-lock',
+    },
+    {
+    title: 'Implementation of backup and data recovery strategies',
+    description:
+    'We ensure the integrity of your data with reliable and efficient backup and recovery strategies.',
+    icon: 'tabler:cloud-upload',
+    },
+    {
+    title: 'Data and communication encryption',
+    description:
+    'We implement robust encryption solutions to protect your sensitive data at rest and in transit.',
+    icon: 'tabler:lock-access',
+    },
+    ]}
+    />
+    
+    <CallToAction
+    backgroundImage={{ src: '~/assets/images/geometric-2/4.jpg', alt: 'Abstract background' }}
+    actions={[
+    {
+    variant: 'primary',
+    text: 'Free Quote',
+    href: u('contact'),
+    },
+    {
+    variant: 'primary',
+    text: 'Call',
+    href: 'tel:+34665331271',
+    },
+]}
+>
+    <Fragment slot="title">
+        Leave your data in the hands of experts, we are <span class="custom-gradient">MySQL specialists</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+        Correct data management is the first step towards the successful implementation of technological solutions.
+    </Fragment>
+</CallToAction>
+</Layout>

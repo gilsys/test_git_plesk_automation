@@ -121,6 +121,9 @@ const metadata = {
         necessitat de recórrer a JavaScript.
       </p>
     </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
   </Content>
 
   <Features
@@ -148,9 +151,6 @@ const metadata = {
       },
     ]}
   >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-lightgray"></div>
-    </Fragment>
   </Features>
 
   <Content
@@ -188,7 +188,11 @@ const metadata = {
         icon: 'tabler:world', 
       },
     ]}
-  />
+  >
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-lightgray"></div>
+  </Fragment>
+</Content>
 
   <Content
     title="Integració d'HTML i CSS amb altres tecnologies"
@@ -217,9 +221,6 @@ const metadata = {
         A més de treballar amb HTML i CSS pur, integrem aquestes tecnologies amb eines modernes per potenciar
         les seves capacitats:
       </p>
-    </Fragment>
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-lightgray"></div>
     </Fragment>
   </Content>
 

@@ -1,0 +1,167 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+
+const metadata = {
+  title: 'Custom Admin Interface Programming with Metronic',
+  description: `Our company uses Metronic, a framework based on Bootstrap or Tailwind, to develop professional admin interfaces.`,
+};
+---
+
+<Layout metadata={metadata}>
+  {/* Hero Section */}
+  <Hero
+    tagline="Functional, intuitive, and stable user interfaces."
+    actions={[{ variant: 'primary', text: 'Free Quote', href: u('contact') }]}
+    backgroundImage={{ alt: 'Abstract background', src: '~/assets/images/geometric-2/4.jpg' }}
+  >
+    <Fragment slot="title">
+      Admin interface programming with <span class="text-accent highlight">Metronic</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      We recommend Metronic, the framework that allows us to design and program the graphical part of web applications
+      with primarily functional objectives.
+    </Fragment>
+  </Hero>
+
+  <Content
+    classes={{ container: 'contains-logo pb-0 md:pb-0 lg:pb-0' }}
+    isImageSmall
+    subtitle="Launched in 2013, it remains the number one framework for creating functional interfaces."
+    title="We develop attractive and functional admin applications with <span class='custom-gradient'>Metronic</span>"
+    image={{
+      id: 'metronic-logo',
+      src: '~/assets/images/tecnologia/metronic-logo.svg',
+      alt: 'Metronic logo',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        Admin and data management platforms must be <strong>functional</strong>, <strong>intuitive</strong>, and
+        <strong>stable</strong>. Our team of programmers regularly works with Metronic, one of the most advanced
+        template systems for developing back offices, admin panels, and highly functional web applications.
+        <a title="Custom web application programming" href={u('development/web')} class="btn-primary mt-12 mb-12 w-auto"
+          >Learn more about web application programming</a
+        >
+      </p>
+    </Fragment>
+  </Content>
+
+  <Features
+    title="Advantages of using Metronic in custom programming projects"
+    items={[
+      {
+        title: 'Modern and responsive design',
+        description:
+          'Adaptable to any device, ensuring an optimal user experience on mobiles, tablets, and computers.',
+        icon: 'tabler:devices',
+      },
+      {
+        title: 'Extensive component library',
+        description:
+          'Speeds up development without compromising customization, offering a wide range of pre-designed and ready-to-use elements.',
+        icon: 'tabler:components',
+      },
+      {
+        title: 'Integration with advanced frameworks',
+        description:
+          'Compatible with frameworks like <a href="' + u('technology/slim-framework') + '" class="text-accent">SlimFramework</a>, facilitating the creation of robust and scalable applications.',
+        icon: 'tabler:code-plus',
+      },
+      {
+        title: 'Performance and fast loading',
+        description: 'Optimized to ensure efficient response times and a smooth user experience.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Customization',
+        description:
+          'Allows expert developers to adapt each element to the specific needs of the project, from appearance to functionality.',
+        icon: 'tabler:adjustments-alt',
+      },
+      {
+        title: 'Multiple base structures',
+        description:
+          'Offers different templates within its package, to have a base to work on directly, depending on the focus of each project.',
+        icon: 'tabler:stack',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Features>
+
+  <Features3
+    title="How do we use Metronic at Gilsys?"
+    subtitle="Certainly, it is a framework that we love; we use it in almost all the admin solutions we develop custom."
+    items={[
+      {
+        title: 'Building admin panels and functional applications',
+        description: `From admin panels to manage content to advanced platforms for business control, Metronic offers the flexibility needed to create intuitive and efficient solutions.`,
+        icon: 'tabler:layout-dashboard',
+      },
+      {
+        title: 'Transformation and modernization with Metronic',
+        description: `If your admin system needs an update, we perform migrations and optimization to Metronic, ensuring a smooth transition and no interruptions in operability.`,
+        icon: 'tabler:refresh',
+      },
+      {
+        title: 'Maintenance and support for Metronic solutions',
+        description: `We maintain and improve platforms developed with Metronic, ensuring they are always up-to-date, protected, and aligned with the latest technological trends.`,
+        icon: 'tabler:tools',
+      },
+    ]}
+  />
+
+  <Content title="Versions with Tailwind and Bootstrap" classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}>
+    <Fragment slot="preContent">
+      <p class="text-muted">
+        Metronic offers two versions: one based on <a href={u('technology/bootstrap')} class="text-accent">Bootstrap</a> and
+        another on
+        <a href={u('technology/tailwind')} class="text-accent">Tailwind</a>, allowing you to choose the one that best suits
+        each project. Both versions include a wide collection of components and an optimized structure, which
+        accelerates the development of enterprise applications and improves the user experience.
+      </p>
+      <p class="text-center">
+        <a title="Metronic official website" target="_blank" href="https://keenthemes.com/metronic" class="btn-primary mt-12 mb-12 w-auto"
+          >Learn more about Metronic</a
+        >
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/geometric-2/4.jpg', alt: 'Abstract background' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Free Quote',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Call',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Whether you know <span class="custom-gradient">Metronic</span> or not, we recommend it from Gilsys
+    </Fragment>
+    <Fragment slot="subtitle">
+      We take care of preparing an attractive interface for your project so that users feel comfortable and enjoy using
+      the created tool.
+    </Fragment>
+  </CallToAction>
+</Layout>

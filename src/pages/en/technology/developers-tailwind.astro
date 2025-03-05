@@ -1,0 +1,185 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+
+const metadata = {
+  title: 'Interface Design Company with Tailwind CSS',
+  description:
+    'We design unique and custom interfaces. Our programming team is expert in developing intuitive and optimized web experiences for each project.',
+};
+---
+
+<Layout metadata={metadata}>
+  {/* Hero Section */}
+  <Hero
+    tagline="Modern interface development with Tailwind CSS in Osona, province of Barcelona"
+    actions={[{ variant: 'primary', text: 'Free Quote', href: u('contact') }]}
+    backgroundImage={{ alt: 'Abstract background', src: '~/assets/images/geometric-2/4.jpg' }}
+  >
+    <Fragment slot="title">
+      User interface design with <span class="text-accent highlight">Tailwind CSS</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      Our programming team is expert in developing intuitive and optimized web experiences for each project.
+    </Fragment>
+  </Hero>
+
+  <Content
+    isImageSmall
+    classes={{ container: 'contains-logo' }}
+    title="<span class='custom-gradient'>Tailwind</span> CSS: Efficiency and adaptability"
+    subtitle="The CSS framework that revolutionizes web design with its innovative <em>utility-first</em> approach."
+    image={{
+      id: 'tailwind-logo',
+      src: '~/assets/images/tecnologia/tailwind-logo.svg',
+      alt: 'Tailwind CSS logo',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        At Gilsys, we believe in the importance of clean, fast, and highly customizable user interfaces. Therefore, we
+        are committed to Tailwind CSS, a styling framework that allows building scalable and optimized designs
+        without the rigidity of traditional systems.
+      </p>
+    </Fragment>
+  </Content>
+
+  <Content
+    title="Scalable, optimized, and highly customizable designs"
+    subtitle="User interfaces adapted to all devices"
+    classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}
+  >
+    <Fragment slot="preContent">
+      <p class="text-muted">
+        Unlike conventional frameworks that impose predefined styles, Tailwind CSS offers an approach based on
+        utility classes, which allows for <strong >total customization</strong> without the need to write additional
+        CSS.
+      </p>
+      <p class="text-center">
+        <a title="Tailwind official website" target="_blank" href="https://tailwindcss.com/" class="btn-primary mt-12 mb-12 w-auto"
+          >Learn more about Tailwind CSS</a
+        >
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Features3
+    title="Why choose Tailwind CSS for your project?"
+    subtitle="The advantages of a modern and flexible CSS framework."
+    items={[
+      {
+        description: `Maximum flexibility, without predefined style restrictions.`,
+        icon: 'tabler:palette',
+      },
+      {
+        description: `Performance optimization, thanks to its utility class system and elimination of unnecessary code.`,
+        icon: 'tabler:bolt',
+      },
+      {
+        description: `Responsive designs with ease, allowing to adapt interfaces to any device intuitively.`,
+        icon: 'tabler:devices',
+      },
+      {
+        description: `Scalability without complications, allowing to extend styles without generating huge CSS files.`,
+        icon: 'tabler:stack-back',
+      },
+      {
+        description: `Compatibility with any technology, perfectly integrating with frameworks such as React, Angular, or SlimFramework.`,
+        icon: 'tabler:plug',
+      },
+      {
+        description: `Reduction of development times, facilitating the creation of reusable components without style overload.`,
+        icon: 'tabler:clock',
+      },
+    ]}
+  />
+
+  <Content
+    isReversed
+    title="Our experience with Tailwind CSS at Gilsys"
+    subtitle="We know the technology well; our corporate website, programmed using Astro and Tailwind, is proof of that."
+    image={{
+      src: '~/assets/images/tecnologia/tailwind-css-escena-mar.png',
+      alt: 'Mockups of different screens floating',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        As a development company, we take advantage of this technology to create quality solutions without falling
+        into code repetition and ensuring agile maintenance.
+      </p>
+      <p class="text-muted mt-4">
+        At Gilsys, we enjoy this commitment, as it allows us to make the most of our experience and create optimized
+        interfaces with creative freedom.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Features
+    title="Custom web development with Tailwind CSS at Gilsys"
+    subtitle="We create unique and optimized user interfaces to boost your project."
+    items={[
+      {
+        title: 'Custom interface design with Tailwind CSS',
+        description:
+          'We create unique and personalized user interfaces that adapt to your vision and business goals.',
+        icon: 'tabler:palette',
+      },
+      {
+        title: 'Reusable component development',
+        description:
+          'We build modular and scalable components to streamline development and ensure design consistency.',
+        icon: 'tabler:components',
+      },
+      {
+        title: 'Web performance optimization',
+        description:
+          'We minimize the size of the CSS code generated by Tailwind CSS to ensure fast loading and an optimal user experience.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Integration with JavaScript frameworks',
+        description:
+          'We integrate Tailwind CSS with frameworks like Astro or Angular for modern and efficient web development.',
+        icon: 'tabler:brand-javascript',
+      },
+    ]}
+  />
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/geometric-2/4.jpg', alt: 'Abstract background' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Request your quote',
+        href: u('contact'),
+      },
+      {
+        variant: 'secondary',
+        text: 'Contact us',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Develop your cutting-edge interface with Gilsys and <span class="custom-gradient">Tailwind CSS</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      Leave the user interface in the hands of our programming team; your design will stand out with a high level of
+      performance.
+    </Fragment>
+  </CallToAction>
+</Layout>

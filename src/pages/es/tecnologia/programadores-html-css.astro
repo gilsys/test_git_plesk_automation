@@ -84,22 +84,22 @@ const metadata = {
       {
         title: 'Accesibilidad mejorada',
         description: `Facilitando la lectura por parte de los motores de búsqueda y lectores de pantalla.`,
-        icon: 'tabler:disabled-2', // Icono para accesibilidad
+        icon: 'tabler:disabled-2', 
       },
       {
         title: 'SEO optimizado',
         description: `Permitiendo que los buscadores indexen correctamente el contenido.`,
-        icon: 'tabler:world-www', // Icono para SEO y web
+        icon: 'tabler:world-www',
       },
       {
         title: 'Mantenimiento eficiente',
         description: `Con estructuras organizadas y fáciles de interpretar.`,
-        icon: 'tabler:tools', // Icono para mantenimiento y herramientas
+        icon: 'tabler:tools', 
       },
       {
         title: 'Compatibilidad universal',
         description: `Garantizando que cualquier navegador pueda interpretar el código correctamente.`,
-        icon: 'tabler:browser', // Icono para compatibilidad y navegadores
+        icon: 'tabler:browser', 
       },
     ]}
   />
@@ -121,6 +121,9 @@ const metadata = {
         necesidad de recurrir a JavaScript.
       </p>
     </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
   </Content>
 
   <Features
@@ -129,28 +132,25 @@ const metadata = {
       {
         title: 'Experiencia de usuario mejorada',
         description: 'Hacen la navegación más atractiva y dinámica.',
-        icon: 'tabler:user-check', // Icono para experiencia de usuario
+        icon: 'tabler:user-check', 
       },
       {
         title: 'Rendimiento optimizado',
         description: 'CSS maneja las animaciones de forma más eficiente que JavaScript.',
-        icon: 'tabler:chart-line', // Icono para rendimiento
+        icon: 'tabler:chart-line', 
       },
       {
         title: 'Compatibilidad con navegadores',
         description: 'Asegurando una visualización coherente en todos los navegadores modernos.',
-        icon: 'tabler:world', // Icono para compatibilidad
+        icon: 'tabler:world', 
       },
       {
         title: 'Carga más rápida',
         description: 'Al eliminar la dependencia de bibliotecas externas.',
-        icon: 'tabler:bolt', // Icono para velocidad
+        icon: 'tabler:bolt', 
       },
     ]}
   >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-lightgray"></div>
-    </Fragment>
   </Features>
 
   <Content
@@ -165,30 +165,34 @@ const metadata = {
       {
         title: 'Maquetación HTML semántica',
         description: 'Maquetación avanzada con HTML semántico.',
-        icon: 'tabler:html', // Icono para HTML5
+        icon: 'tabler:html', 
       },
       {
         title: 'Estilos CSS a medida',
         description: 'Desarrollo de estilos personalizados con CSS puro.',
-        icon: 'tabler:file-type-css', // Icono para CSS3
+        icon: 'tabler:file-type-css', 
       },
       {
         title: 'Animaciones y transiciones CSS',
         description: 'Implementación de animaciones y transiciones CSS para mejorar la usabilidad.',
-        icon: 'tabler:eye-exclamation', // Icono para animaciones
+        icon: 'tabler:eye-exclamation', 
       },
       {
         title: 'Optimización de código',
         description: 'Código límpio y ligero ofreciendo rendimiento y accesibilidad.',
-        icon: 'tabler:bolt', // Icono para rendimiento
+        icon: 'tabler:bolt', 
       },
       {
         title: 'Compatibilidad multiplataforma',
         description: 'Compatibilidad con todos los navegadores y dispositivos.',
-        icon: 'tabler:world', // Icono para compatibilidad
+        icon: 'tabler:world', 
       },
     ]}
-  />
+  >
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-lightgray"></div>
+  </Fragment>
+</Content>
 
   <Content
     title="Integración de HTML y CSS con otras tecnologías"
@@ -217,9 +221,6 @@ const metadata = {
         Además de trabajar con HTML y CSS puro, integramos estas tecnologías con herramientas modernas para potenciar
         sus capacidades:
       </p>
-    </Fragment>
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-lightgray"></div>
     </Fragment>
   </Content>
 

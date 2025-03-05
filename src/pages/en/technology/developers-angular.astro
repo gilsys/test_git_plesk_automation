@@ -1,0 +1,250 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+
+const metadata = {
+  title: 'Frontend Programming Company with Angular',
+  description: `At Gilsys, we offer custom programming of web applications with Angular, creating professional interfaces with this programming language. Free quote!`,
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Modern and lightweight interfaces for web applications or mobile apps."
+    actions={[{ variant: 'primary', text: 'Free Quote', href: u('contact') }]}
+    backgroundImage={{ alt: 'Abstract background', src: '~/assets/images/geometric-2/4.jpg' }}
+  >
+    <Fragment slot="title">
+      Web application programming with <span class="text-accent highlight">Angular</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      We create professional frontend interfaces with this JavaScript-based framework.
+    </Fragment>
+  </Hero>
+
+  <Content
+    classes={{ container: 'contains-logo' }}
+    isImageSmall
+    subtitle="Angular allows creating efficient and scalable tools."
+    title="Development of web applications and mobile apps with <span class='custom-gradient'>Angular</span>"
+    image={{
+      id: 'angular-logo',
+      src: '~/assets/images/tecnologia/angular-logo.png',
+      alt: 'Angular logo',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        In today's digital world, having fast, scalable, and high-performance web applications is key for any business.
+        Our team of Angular specialists, with extensive frontend development experience, creates customized solutions
+        tailored to each company's needs.
+      </p>
+      <p class="text-muted mt-4">
+        Additionally, with Apache Cordova, we extend Angular's functionality to develop
+        <a href={u('development/apps')} class="text-accent">hybrid mobile applications</a>, compatible with iOS and
+        Android.
+      </p>
+    </Fragment>
+  </Content>
+
+  <Content
+    title="Innovative solutions developed with <span class='custom-gradient'>Angular</span>"
+    subtitle="We program web and mobile applications with cutting-edge technology."
+    classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}
+  >
+    <Fragment slot="preContent">
+      <p class="text-muted">
+        Angular is a modern framework developed by Google, ideal for building dynamic and efficient interfaces. We use
+        this technology to design scalable, optimized applications with a superior user experience, both in web
+        environments and on mobile devices.
+      </p>
+      <p class="text-center">
+        <a title="Angular official page" target="_blank" href="https://angular.dev/" class="btn-primary mt-12 mb-12 w-auto">
+          Learn more about Angular
+        </a>
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Features3
+    title="Why is Angular a great option for your project?"
+    items={[
+      {
+        title: 'Modular structure',
+        description: `Design based on independent and reusable modules, which facilitates maintenance and allows the application to grow easily.`,
+        icon: 'tabler:components', // Icon for components and modules
+      },
+      {
+        title: 'Optimized performance',
+        description: `Fast and efficient web application, thanks to techniques such as lazy loading and a component-based architecture.`,
+        icon: 'tabler:rocket', // Icon for performance and speed
+      },
+      {
+        title: 'Integrated security',
+        description: `Robust protection with advanced security measures that prevent vulnerabilities and attacks.`,
+        icon: 'tabler:shield-check', // Icon for security and protection
+      },
+      {
+        title: 'Enterprise compatibility',
+        description: `Compatible with enterprise environments, allowing seamless integration with REST APIs and other technologies.`,
+        icon: 'tabler:server', // Icon for servers and APIs
+      },
+      {
+        title: 'Hybrid app development',
+        description: `Creation of hybrid mobile applications with Apache Cordova, which run on mobile devices from your web application.`,
+        icon: 'tabler:device-mobile', // Icon for mobile devices and hybrid applications
+      },
+      {
+        title: 'Support and community',
+        description: `Backed by Google and an active developer community, which ensures continuous development and frequent updates.`,
+        icon: 'tabler:brand-google', // Icon for Google and its support
+      },
+    ]}
+  />
+
+  <Content
+    title="With Angular, we have the best tools to enhance your project"
+    subtitle="At a technological level, it is a very modern, popular system with a large user community."
+    image={{
+      src: '~/assets/images/tecnologia/angular-desarrollo.png',
+      alt: 'Image reflecting web and app development with Angular',
+    }}
+    items={[
+      {
+        title: 'Component-based design',
+        description:
+          'We create a modular architecture based on reusable components, clearly defining the structure and data flow of your Angular application.',
+      },
+      {
+        title: 'Development with TypeScript',
+        description:
+          'We implement application logic using TypeScript, leveraging the advantages of static typing and object-oriented programming for more robust and maintainable code.',
+      },
+      {
+        title: 'Deployment and optimization',
+        description:
+          'We use Angular CLI to generate optimized builds and deploy your application in production environments, ensuring optimal performance and fast loading.',
+      },
+      {
+        title: 'Updates and maintenance with Angular CLI',
+        description:
+          'We keep your application updated with the latest Angular versions using Angular CLI, and offer continuous support to resolve any issues and ensure its correct long-term operation.',
+      },
+    ]}
+  >
+    <Fragment slot="preContent">
+      <p class="text-muted">
+        Whether you need a new application from scratch or want to improve an existing system, we maximize Angular's
+        capabilities:
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Content
+    isReversed
+    title="Migration and modernization to Angular"
+    image={{
+      src: '~/assets/images/tecnologia/angular-migracion.jpg',
+      alt: 'Image reflecting migration with Angular',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        If your current platform is outdated, we help you migrate it to Angular through an agile process without
+        interruptions to your operations.
+      </p>
+      <p class="text-center md:text-left">
+        <a
+          title="Migration of web tools to Angular technology"
+          href={u('migration')}
+          class="btn-primary mt-12 mb-12 w-auto"
+          >Discover how to renew your software</a
+        >
+      </p>
+    </Fragment>
+  </Content>
+
+  <Content
+    isReversed
+    title="Three solutions with the same code: <span class='custom-gradient'>Web</span> + <span class='custom-gradient'>Android</span> + <span class='custom-gradient'>iOS</span>"
+    subtitle="With Angular, we can create web applications and cross-platform hybrid apps."
+    image={{
+      src: '~/assets/images/tecnologia/angular-programacion.png',
+      alt: 'Development of web and mobile applications with Angular',
+    }}
+    items={[
+      {
+        title: 'Cross-device development with Angular',
+        description:
+          'We create cutting-edge web and mobile applications with a single code base. From conception to launch, we accompany you every step of the way, offering a seamless user experience on iOS and Android.',
+      },
+      {
+        title: 'Does your current platform limit you?',
+        description:
+          `We migrate your software to Angular in an agile and secure way, minimizing the impact on your operation and maximizing performance.<br/><br/><a title="" href="` +
+          u('migration') +
+          `" class="btn-primary mt-4 w-auto">Software renewal services</a>`,
+      },
+    ]}
+  >
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-lightgray"></div>
+  </Fragment>
+  </Content>
+  
+  <Content
+    title="Support and maintenance in <span class='custom-gradient'>Angular</span> applications"
+    subtitle="Maintenance services to keep developments updated"
+    image={{
+      src: '~/assets/images/tecnologia/angular-mantenimiento.jpg',
+      alt: 'Computers with programming code on the screen',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        We ensure that your Angular application stays updated, secure, and constantly improved. We carry out corrective and
+        evolutionary maintenance to optimize its performance and adapt it to new needs.
+      </p>
+      <p class="text-center md:text-left">
+        <a title="Migration of web tools to Angular technology" href={u('gilsys')} class="btn-primary mt-12 mb-12 w-auto">
+          Learn more about our company
+        </a>
+      </p>
+    </Fragment>
+  </Content>
+  
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/geometric-2/4.jpg', alt: 'Abstract background' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Free Quote',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Call',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      If you are looking for specialists in <span class="custom-gradient">Angular</span>, you have found them.
+    </Fragment>
+    <Fragment slot="subtitle">
+      We are ready to develop an Angular development proposal and design a custom layout for your project.
+    </Fragment>
+  </CallToAction>
+  </Layout>

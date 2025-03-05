@@ -1,0 +1,213 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+
+const metadata = {
+  title: 'Custom Software Development with Java',
+  description: `At Gilsys, we develop robust and scalable business solutions with Java. We have been Java development experts since 2004.`,
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Over 20 years of experience in Java development."
+    actions={[{ variant: 'primary', text: 'Free Quote', href: u('contact') }]}
+    backgroundImage={{ alt: 'Abstract background', src: '~/assets/images/geometric-2/4.jpg' }}
+  >
+    <Fragment slot="title">
+      Custom Software Development with <span class="text-accent highlight">Java</span>
+    </Fragment>
+    <Fragment slot="subtitle"> We develop secure and high-performance enterprise platforms. </Fragment>
+  </Hero>
+
+  <Content
+    classes={{ container: 'contains-logo pb-0 md:pb-0 lg:pb-0' }}
+    isImageSmall
+    title="We develop high-level projects with <span class='custom-gradient'>Java</span>"
+    subtitle="Java is present in multiple industries, including finance, e-commerce, enterprise development, mobile applications, distributed systems, and Big Data."
+    image={{
+      id: 'java-logo',
+      src: '~/assets/images/tecnologia/java-logo.svg',
+      alt: 'Java logo',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        At Gilsys, Java is one of the pillars of our software development expertise. Since our inception, we have
+        relied on Java for its robustness, versatility, and security in developing high-performance business
+        solutions.
+      </p>
+      <p class="text-muted mt-4">
+        Our team of Java experts specializes in creating custom software, adapting each solution to the specific
+        needs and goals of your company.
+      </p>
+      <p class="text-center">
+        <a title="Custom web application development services" href={u('development/web')} class="btn-primary mt-12 mb-12 w-auto"
+          >Explore our web development services</a
+        >
+      </p>
+    </Fragment>
+  </Content>
+
+  <Content
+    isReversed
+    title="<span class='custom-gradient'>Java</span>: A language that has survived the test of time and continues to drive business innovation"
+    subtitle="Robust, versatile, and secure, Java is the ideal choice for high-performance enterprise solutions."
+    classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}
+    image={{
+      src: '~/assets/images/tecnologia/java-cafe.webp',
+      alt: 'Java coffee cup logo',
+    }}
+    items={[
+      {
+        title: 'Portability',
+        description: 'Runs on any platform with the Java Virtual Machine (JVM).',
+        icon: 'tabler:arrow-autofit-width', // Icon for portability
+      },
+      {
+        title: 'Scalability',
+        description: 'Ideal for large-scale enterprise applications.',
+        icon: 'tabler:arrows-maximize', // Icon for scalability
+      },
+      {
+        title: 'Security',
+        description: 'Robust security system to protect sensitive data.',
+        icon: 'tabler:shield-lock', // Icon for security
+      },
+      {
+        title: 'Large community',
+        description: 'Extensive support and resources available.',
+        icon: 'tabler:users', // Icon for community
+      },
+    ]}
+  >
+    <Fragment slot="preContent">
+      <p class="text-muted">
+        Java is a high-level, object-oriented programming language that has established itself as one of the most
+        widely used and versatile technologies in software development. Its ability to develop robust, scalable, and
+        secure applications makes it the ideal choice for companies of any size. Its popularity is due to several
+        factors:
+      </p>
+    </Fragment>
+    <Fragment slot="postContent">
+      <p class="text-center">
+        <a title="Java official page" target="_blank" href="https://www.java.com/es/" class="btn-primary mt-12 mb-12 w-auto"
+          >Learn more about Java</a
+        >
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Features
+    title="Advantages of choosing Java for your project"
+    subtitle="Tailored solutions for companies looking for a digital future."
+    items={[
+      {
+        title: 'Robust and scalable applications',
+        description: 'Ideal for complex business projects that require high performance and availability.',
+        icon: 'tabler:building-skyscraper',
+      },
+      {
+        title: 'High-level security',
+        description: 'Protect your sensitive information with Java’s advanced security features.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Cross-platform compatibility',
+        description: 'Works on any operating system thanks to the Java Virtual Machine (JVM).',
+        icon: 'tabler:world',
+      },
+      {
+        title: 'Custom development',
+        description: 'We adapt each solution to your specific needs, creating personalized and efficient applications.',
+        icon: 'tabler:adjustments',
+      },
+      {
+        title: 'Community and support',
+        description: 'Benefit from a large developer community and a broad ecosystem of tools and resources.',
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Long-term maintenance',
+        description: 'Java is a mature and stable language with a long lifecycle that facilitates application maintenance.',
+        icon: 'tabler:calendar-time',
+      },
+    ]}
+  />
+
+  <Features2
+    title="Java Development Services at Gilsys"
+    subtitle="Java is the base; there are multiple frameworks to work with to create robust solutions. At Gilsys, we work with <strong>Spring</strong>."
+    items={[
+      {
+        title: 'Enterprise application development',
+        description: 'We create robust and scalable applications to optimize your business processes.',
+        icon: 'tabler:building-store',
+      },
+      {
+        title: 'API and microservices development',
+        description: 'We build efficient RESTful APIs and microservices to integrate your systems and services.',
+        icon: 'tabler:api',
+      },
+      {
+        title: 'Software migration and modernization',
+        description: 'We update existing Java applications and facilitate their migration to new platforms and technologies.',
+        icon: 'tabler:arrows-right-left',
+      },
+      {
+        title: 'Maintenance and support',
+        description:
+          'We offer technical support and maintenance for your Java applications, ensuring their stability and suitability for new functionalities.',
+        icon: 'tabler:tools',
+      },
+      {
+        title: 'Integration with modern technologies',
+        description: 'We connect your existing Java platforms with new tools and technologies to expand their functionality.',
+        icon: 'tabler:plug',
+      },
+      {
+        title: 'Enhancement of existing platforms',
+        description:
+          'We implement improvements and new functionalities on your existing Java platforms, optimizing their performance and security.',
+        icon: 'tabler:arrow-up-right',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Features2>
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/geometric-2/4.jpg', alt: 'Abstract background' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Free Quote',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Call',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      We drive your company with advanced developments in <span class="custom-gradient">Java</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      At Gilsys, we help you <strong>develop</strong>, <strong>optimize</strong>, or <strong>modernize</strong> your technological infrastructure for a competitive digital future.
+    </Fragment>
+  </CallToAction>
+</Layout>

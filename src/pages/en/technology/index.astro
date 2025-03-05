@@ -1,0 +1,291 @@
+---
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+
+const metadata = {
+  title: 'Software Development Technologies',
+  description:
+    'At Gilsys, we master different software development technologies and programming languages to program customized solutions that adapt to each project.',
+};
+---
+<Layout metadata={metadata}>
+  <Hero
+    actions={[{ variant: 'primary', text: 'Free Quote', href: u('contact') }]}
+    backgroundImage={{ alt: 'Abstract background', src: '~/assets/images/geometric-2/4.jpg' }}
+    tagline="We program customized solutions with a wide variety of languages."
+  >
+    <Fragment slot="title">
+      <span class="text-accent highlight"> Technologies</span> for Software Development
+    </Fragment>
+    <Fragment slot="subtitle">
+      Each project requires a combination of different technologies, precisely chosen to create customized solutions for each business.
+    </Fragment>
+  </Hero>
+
+  <Features3
+    isLinkableGrid
+    title="Experts in programming with multiple <span class='custom-gradient'>languages</span> and <span class='custom-gradient'>technologies</span>"
+    subtitle="For over 20 years, we have worked with many technologies.<br/>Currently, we highlight the following:"
+    items={[
+      {
+        title: 'Angular',
+        description: 'The JavaScript framework to create user interfaces for web and mobile applications.',
+        icon: 'tabler:brand-angular',
+        callToAction: {
+          class: 'more-info',
+          text: 'More info',
+          href: u('technology/angular'),
+        },
+      },
+      {
+        title: 'Astro',
+        description:
+          'Next-generation framework to create ultra-fast, secure, and SEO on-page optimized websites.',
+        icon: 'tabler:rocket',
+        callToAction: {
+          class: 'more-info',
+          text: 'More info',
+          href: u('technology/astro'),
+        },
+      },
+      {
+        title: 'Bootstrap',
+        description:
+          'The most popular CSS framework to create responsive interfaces, adapted to any device.',
+        icon: 'tabler:brand-bootstrap',
+        callToAction: {
+          class: 'more-info',
+          text: 'More info',
+          href: u('technology/bootstrap'),
+        },
+      },
+      {
+        title: 'HTML & CSS',
+        description: 'The base technologies of the web, essential for any project.',
+        icon: 'tabler:code',
+        callToAction: {
+          class: 'more-info',
+          text: 'More info',
+          href: u('technology/html-css'),
+        },
+      },
+      {
+        title: 'Java',
+        description:
+          'The robust and versatile programming language for backend development and enterprise applications.',
+        icon: 'tabler:coffee',
+        callToAction: {
+          class: 'more-info',
+          text: 'More info',
+          href: u('technology/java'),
+        },
+      },
+      {
+        title: 'JavaScript',
+        description:
+          'The essential programming language for web interactivity has evolved to be much more versatile.',
+        icon: 'tabler:brand-javascript',
+        callToAction: {
+          class: 'more-info',
+          text: 'More info',
+          href: u('technology/javascript'),
+        },
+      },
+      {
+        title: 'Metronic',
+        description:
+          'The best web template to create professional, functional, and modern administration interfaces.',
+        icon: 'tabler:layout-dashboard',
+        callToAction: {
+          class: 'more-info',
+          text: 'More info',
+          href: u('technology/metronic'),
+        },
+      },
+      {
+        title: 'MongoDB',
+        description: 'The NoSQL database for projects that require flexibility and scalability.',
+        icon: 'tabler:brand-mongodb',
+        callToAction: {
+          class: 'more-info',
+          text: 'More info',
+          href: u('technology/mongodb'),
+        },
+      },
+      {
+        title: 'MySQL',
+        description:
+          'The most popular relational database for projects that need an efficient data management system.',
+        icon: 'tabler:brand-mysql',
+        callToAction: {
+          class: 'more-info',
+          text: 'More info',
+          href: u('technology/mysql'),
+        },
+      },
+      {
+        title: 'Oracle',
+        description: 'The enterprise database for projects that require high performance and security.',
+        icon: 'tabler:database',
+        callToAction: {
+          class: 'more-info',
+          text: 'More info',
+          href: u('technology/oracle'),
+        },
+      },
+      {
+        title: 'PHP',
+        description: 'The server-side programming language that powers a large part of the web.',
+        icon: 'tabler:brand-php',
+        callToAction: {
+          class: 'more-info',
+          text: 'More info',
+          href: u('technology/php'),
+        },
+      },
+      {
+        title: 'React Native',
+        description: 'The framework to create native mobile applications with JavaScript.',
+        icon: 'tabler:brand-react',
+        callToAction: {
+          class: 'more-info',
+          text: 'More info',
+          href: u('technology/react-native'),
+        },
+      },
+      {
+        title: 'Slim Framework',
+        description:
+          'The PHP microframework to create APIs and web applications, without unnecessary feature overload.',
+        icon: 'tabler:ease-in-out',
+        callToAction: {
+          class: 'more-info',
+          text: 'More info',
+          href: u('technology/slim-framework'),
+        },
+      },
+      {
+        title: 'Tailwind CSS',
+        description:
+          'The CSS framework that speeds up web development and improves performance. With predefined classes, it streamlines the programming of custom responsive interfaces.',
+        icon: 'tabler:brand-tailwind',
+        callToAction: {
+          class: 'more-info',
+          text: 'More info',
+          href: u('technology/tailwind'),
+        },
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Features3>
+
+  <Features
+    id="features"
+    title="Development, customization, migration, integration, and consulting"
+    subtitle="The programming code is our ally to develop projects adapted to each client."
+    items={[
+      {
+        title: 'Custom software development',
+        description:
+          'Our extensive experience in various programming languages allows us to create software fully adapted to your specific needs.',
+        icon: 'tabler:code',
+      },
+      {
+        title: 'Customization of existing software',
+        description:
+          'We modify and adapt existing software, based on languages and technologies we master, to optimize its performance and adjust it to your requirements.',
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Migration between platforms',
+        description:
+          'We perform smooth migrations between platforms using known programming languages, ensuring the continuity and efficiency of your operations.',
+        icon: 'tabler:transfer-in',
+      },
+      {
+        title: 'Integration of tools',
+        description:
+          'We integrate tools and systems, leveraging our knowledge of their programming languages, to create cohesive and efficient solutions.',
+        icon: 'tabler:plug',
+      },
+      {
+        title: 'Specialized consulting',
+        description:
+          'We offer consulting services based on deep knowledge of multiple languages and technologies, advising you on strategic decision-making.',
+        icon: 'tabler:bulb',
+      },
+      {
+        title: 'Troubleshooting in third-party software',
+        description:
+          'Our deep understanding of various programming languages allows us to diagnose and solve problems in tools developed by third parties, optimizing their performance.',
+        icon: 'tabler:tools',
+      },
+    ]}
+  />
+
+  <FAQs
+    title="Why is mastering <span class='custom-gradient'>so many technologies</span> important?"
+    subtitle="We understand that mastering a wide variety of technologies allows us to have a solid perspective to choose the best combination for each project."
+    tagline=""
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'Adaptation to project needs',
+        description:
+          'Our broad knowledge of various technologies allows us to select the most appropriate tools for each project, ensuring efficient and successful solutions.',
+      },
+      {
+        title: 'Innovation and cutting-edge',
+        description:
+          'We keep up to date with the latest trends and technologies, offering you innovative and competitive solutions that drive you towards the future.',
+      },
+      {
+        title: 'Precise selection',
+        description:
+          'We have analyzed, studied, and used the technologies that we consider best to fulfill each specific functionality optimally.',
+      },
+      {
+        title: 'Systems integration',
+        description:
+          'Our understanding of different programming languages facilitates system integration and reduces potential problems.',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </FAQs>
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/geometric-2/4.jpg', alt: 'Abstract background' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Free Quote',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Call',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      We drive your project by programming with the most appropriate <span class="custom-gradient">technologies</span>
+    </Fragment>
+    <Fragment slot="subtitle">Contact us and discover how we can develop your project.</Fragment>
+  </CallToAction>
+  <BlogLatestPosts title="Latest blog posts" linkText="Go to the blog" />
+</Layout>

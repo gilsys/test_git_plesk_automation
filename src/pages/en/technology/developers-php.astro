@@ -1,0 +1,168 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+
+const metadata = {
+  title: 'Custom PHP Development',
+  description: `Our team of expert PHP programmers develops professional applications for businesses with this programming language.`,
+};
+---
+
+<Layout metadata={metadata}>
+  {/* Hero Section */}
+  <Hero
+    tagline="Over 20 years creating custom web solutions with PHP."
+    actions={[{ variant: 'primary', text: 'Free Quote', href: u('contact') }]}
+    backgroundImage={{ alt: 'Abstract background', src: '~/assets/images/geometric-2/4.jpg' }}
+  >
+    <Fragment slot="title">
+      Custom development with <span class="text-accent highlight">PHP</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      We have a team of expert PHP programmers specialized in the development of professional tools.
+    </Fragment>
+  </Hero>
+
+  <Content
+    classes={{ container: 'contains-logo pb-0 md:pb-0 lg:pb-0' }}
+    isImageSmall
+    title="<span class='custom-gradient'>PHP</span>: The foundation for solid and scalable web applications"
+    subtitle="PHP is one of the most robust and widely used web programming languages."
+    image={{
+      id: 'php-logo',
+      src: '~/assets/images/tecnologia/php-logo.png',
+      alt: 'PHP logo',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        At Gilsys, we have a team of PHP programming specialists with extensive experience. We master PHP from its
+        first versions to the most recent ones, always applying the best practices to guarantee secure, efficient, and
+        scalable solutions.
+      </p>
+      <p class="text-muted mt-4">
+        We specialize in the creation of
+        <a href={u('development')} class="text-accent" title="Custom software programming services">custom software</a>,
+        adapted to the specific needs of each client, without geographical restrictions.
+      </p>
+      <p class="text-center">
+        <a
+          title="Custom PHP web application development"
+          href={u('development/web')}
+          class="btn-primary mt-12 mb-12 w-auto">Discover our web development services</a
+        >
+      </p>
+    </Fragment>
+  </Content>
+
+  <Content title="PHP Development: The power of a language that remains current" classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}>
+    <Fragment slot="preContent">
+      <p class="text-muted">
+        Despite the rise of new technologies, PHP continues to be a fundamental pillar of web development, powering
+        millions of sites and applications worldwide.
+      </p>
+      <p class="text-muted mt-4">
+        PHP is the foundation of renowned platforms like WordPress, PrestaShop, Pimcore, or Magento, which dominate the
+        content management and e-commerce market. Its adaptability to different needs and its constant evolution
+        maintain it as a relevant language with a promising future.
+      </p>
+      <p class="text-center">
+        <a title="PHP official website" target="_blank" href="https://www.php.net" class="btn-primary mt-12 mb-12 w-auto"
+          >Learn more about PHP</a
+        >
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Features3
+    columns={3}
+    title="What do we offer as a PHP development company?"
+    items={[
+      {
+        title: 'Optimized architectures',
+        description: `We implement modern and optimized architectures, ensuring fast and high-performance applications.`,
+        icon: 'tabler:layers-linked',
+      },
+      {
+        title: 'Advanced frameworks',
+        description: `We work with advanced frameworks to optimize the efficiency and scalability of projects.`,
+        icon: 'tabler:stack',
+      },
+      {
+        title: 'Robust security',
+        description: `We prioritize software security, integrating advanced protocols to protect data and information.`,
+        icon: 'tabler:shield-lock',
+      },
+      {
+        title: 'Modular design',
+        description: `We design modular and flexible platforms, ready for future updates and expansions.`,
+        icon: 'tabler:components',
+      },
+      {
+        title: 'Quality code',
+        description: `We write clean, maintainable, and efficient code, following the best PHP development practices.`,
+        icon: 'tabler:checklist',
+      },
+      {
+        title: 'Maintenance and evolution',
+        description: `We offer preventive maintenance, security updates, and functional improvements according to your business needs.`,
+        icon: 'tabler:refresh',
+      },
+    ]}
+  />
+
+  <Content
+    isReversed
+    title="Migration and modernization of PHP applications"
+    image={{
+      src: '~/assets/images/tecnologia/php-desarrollo-tags.png',
+      alt: 'Computer displaying visual elements related to PHP, tags, and symbols',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        If your current software requires an update or is developed in another technology, we help you migrate it to
+        PHP through a structured process, optimizing the code, improving performance, and ensuring a smooth
+        transition.
+        <a title="Software renovation" href={u('migration')} class="btn-primary mt-12 mb-12 w-auto"
+          >Discover how to modernize your application</a
+        >
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/geometric-2/4.jpg', alt: 'Abstract background' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Free Quote',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Call',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Tell us about your project, we are <span class="custom-gradient">PHP</span> specialists since 2004
+    </Fragment>
+    <Fragment slot="subtitle">
+      We create custom PHP solutions that drive your business growth. Shall we start?
+    </Fragment>
+  </CallToAction>
+</Layout>

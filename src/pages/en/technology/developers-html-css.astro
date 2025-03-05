@@ -1,0 +1,251 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features3.astro'; 
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+
+const metadata = {
+  title: 'HTML and CSS Design and Programming',
+  description: `As a custom development company, we offer professional web interface programming in HTML and CSS, prioritizing SEO.`,
+};
+---
+
+<Layout metadata={metadata}>
+
+  <Hero
+    tagline="HTML and CSS have come a long way since their inception"
+    actions={[{ variant: 'primary', text: 'Free Quote', href: u('contact') }]}
+    backgroundImage={{ alt: 'Abstract background', src: '~/assets/images/geometric-2/4.jpg' }}
+  >
+    <Fragment slot="title">
+      Design and development with <span class="text-accent highlight">HTML and CSS</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      As a custom development company, we offer professional web interface layout in HTML and CSS.
+    </Fragment>
+  </Hero>
+  <Content
+    classes={{ container: 'contains-logo' }}
+    isImageSmall
+    title="<span class='custom-gradient'>HTML and CSS:</span> The essence of a structured and functional website"
+    image={{
+      id: 'html-css-logo',
+      src: '~/assets/images/tecnologia/html-css-logo.png',
+      alt: 'HTML and CSS logos',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        At Gilsys, we understand that <strong>HTML and CSS</strong> are the foundation of every web experience. Although
+        they are fundamental languages in development, their mastery is essential to create modern, accessible, and
+        well-structured interfaces.
+      </p>
+      <p class="text-muted mt-4">
+        In an environment where frameworks are constantly evolving, HTML remains the universal language that all
+        browsers interpret, while CSS allows customizing and optimizing the appearance of each project.
+      </p>
+    </Fragment>
+  </Content>
+
+  <Content
+    isReversed
+    title="The essential pillars in current web development"
+    subtitle="At Gilsys, we master the latest HTML and CSS features to offer you cutting-edge web solutions."
+    classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}
+  >
+    <Fragment slot="preContent">
+      <p class="text-muted">
+        At Gilsys, we don't just know the basics of HTML and CSS. Our programmers stay updated with the latest
+        specifications and functionalities of these languages.
+      </p>
+      <p class="text-muted mt-4">
+        This constant updating allows us to build websites with a solid and efficient structure.
+      </p>
+      <p class="text-center">
+        <a title="Custom web applications" href={u('development/web')} class="btn-primary mt-12 mb-12 w-auto">
+          Explore our web application services
+        </a>
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Features
+    columns={2}
+    title="Importance of semantic and clean HTML code"
+    subtitle="A well-structured code benefits users and search engines."
+    items={[
+      {
+        title: 'Improved accessibility',
+        description: `Making it easier for search engines and screen readers to read.`,
+        icon: 'tabler:disabled-2',
+      },
+      {
+        title: 'Optimized SEO',
+        description: `Allowing search engines to correctly index the content.`,
+        icon: 'tabler:world-www',
+      },
+      {
+        title: 'Efficient maintenance',
+        description: `With organized and easy-to-interpret structures.`,
+        icon: 'tabler:tools',
+      },
+      {
+        title: 'Universal compatibility',
+        description: `Guaranteeing that any browser can interpret the code correctly.`,
+        icon: 'tabler:browser',
+      },
+    ]}
+  />
+
+  <Content
+    title="Pure CSS: More than styles, animations, and transitions"
+    image={{
+      src: '~/assets/images/tecnologia/html-css-styles.JPG',
+      alt: 'Screen with a color gradient',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        CSS has evolved into a language with advanced capabilities to enhance the interaction and aesthetics of a
+        web page.
+      </p>
+      <p class="text-muted mt-4">
+        At Gilsys, we take full advantage of CSS to develop animations, visual effects, and smooth transitions, without
+        resorting to JavaScript.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+        <div class="absolute inset-0 bg-lightgray"></div>
+      </Fragment>
+  </Content>
+
+  <Features
+    title="Advantages of using animations and transitions in CSS"
+    items={[
+      {
+        title: 'Improved user experience',
+        description: 'They make navigation more attractive and dynamic.',
+        icon: 'tabler:user-check',
+      },
+      {
+        title: 'Optimized performance',
+        description: 'CSS handles animations more efficiently than JavaScript.',
+        icon: 'tabler:chart-line',
+      },
+      {
+        title: 'Browser compatibility',
+        description: 'Ensuring consistent display in all modern browsers.',
+        icon: 'tabler:world',
+      },
+      {
+        title: 'Faster loading',
+        description: 'By eliminating dependence on external libraries.',
+        icon: 'tabler:bolt',
+      },
+    ]}
+  >
+  </Features>
+
+  <Content
+    isReversed
+    title="Gilsys offers HTML and CSS under control"
+    subtitle="At Gilsys, we work with HTML and CSS at an advanced level, ensuring that each line of code is clean, semantic, and efficient."
+    image={{
+      src: '~/assets/images/tecnologia/html-css-control.jpg',
+      alt: 'Computers with code on the screens',
+    }}
+    items={[
+      {
+        title: 'Semantic HTML layout',
+        description: 'Advanced layout with semantic HTML.',
+        icon: 'tabler:html', 
+      },
+      {
+        title: 'Custom CSS styles',
+        description: 'Development of custom styles with pure CSS.',
+        icon: 'tabler:file-type-css',
+      },
+      {
+        title: 'CSS animations and transitions',
+        description: 'Implementation of CSS animations and transitions to improve usability.',
+        icon: 'tabler:eye-exclamation', 
+      },
+      {
+        title: 'Code optimization',
+        description: 'Clean and lightweight code offering performance and accessibility.',
+        icon: 'tabler:bolt', 
+      },
+      {
+        title: 'Multiplatform compatibility',
+        description: 'Compatibility with all browsers and devices.',
+        icon: 'tabler:world', 
+      },
+    ]}
+  >
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-lightgray"></div>
+  </Fragment>
+</Content>
+
+
+  <Content
+    title="Integrating HTML and CSS with other technologies"
+    image={{
+      src: '~/assets/images/tecnologia/html-codigo.jpg',
+      alt: 'HTML source code',
+    }}
+    items={[
+      {
+        description: 'Preprocessors like Sass and Less for better style management.',
+      },
+      {
+        description:
+          'Frameworks like <a title="Tailwind technology page" href="' + u('technology/tailwind') + '" class="text-accent">Tailwind CSS</a> and <a title="Bootstrap technology page" href="' + u('technology/bootstrap') + '" class="text-accent">Bootstrap</a> for projects that require scalability.',
+      },
+      {
+        description: '<a title="JavaScript Technologies" href="' + u('technology/javascript') + '" class="text-accent">JavaScript</a> for more complex interactive effects',
+      },
+      {
+        description: 'Optimization for SEO and accessibility with semantic and structured code.',
+      },
+    ]}
+  >
+    <Fragment slot="preContent">
+      <p class="text-muted">
+        In addition to working with pure HTML and CSS, we integrate these technologies with modern tools to enhance
+        their capabilities:
+      </p>
+    </Fragment>
+  </Content>
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/geometric-2/4.jpg', alt: 'Abstract background' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Free Quote',
+        href: u('contact'),
+      },
+      {
+        variant: 'primary',
+        text: 'Call',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      If you are looking for specialists in <span class="custom-gradient">HTML and CSS</span>, you have found them.
+    </Fragment>
+    <Fragment slot="subtitle">
+      We are at your disposal to develop your project in HTML and CSS, creating a custom layout.
+    </Fragment>
+  </CallToAction>
+</Layout>

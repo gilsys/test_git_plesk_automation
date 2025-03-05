@@ -1,0 +1,185 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+
+const u = useRoutes(getLangFromUrl(Astro.url));
+
+const metadata = {
+  title: 'Empresa de disseny d\'interfícies amb Tailwind CSS',
+  description:
+    'Dissenyem interfícies úniques i a mida. El nostre equip de programació és expert en desenvolupar experiències web intuïtives i optimitzades per a cada projecte.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Desenvolupament d'interfícies modernes amb Tailwind CSS a Osona, província de Barcelona"
+    actions={[{ variant: 'primary', text: 'Pressupost gratuït', href: u('contact') }]}
+    backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/geometric-2/4.jpg' }}
+  >
+    <Fragment slot="title">
+      Disseny d'interfícies d'usuari amb <span class="text-accent highlight">Tailwind CSS</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+      El nostre equip de programació és expert en el desenvolupament d'experiències web intuïtives i optimitzades per a cada
+      projecte.
+    </Fragment>
+  </Hero>
+
+  <Content
+    isImageSmall
+    classes={{ container: 'contains-logo' }}
+    title="<span class='custom-gradient'>Tailwind </span>CSS: Eficiència i adaptabilitat"
+    subtitle="El framework CSS que revoluciona el disseny web amb el seu innovador enfocament <em>utility-first</em>."
+    image={{
+      id: 'tailwind-logo',
+      src: '~/assets/images/tecnologia/tailwind-logo.svg',
+      alt: 'Logotip de Tailwind CSS',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        A Gilsys, creiem en la importància d'interfícies d'usuari netes, ràpides i altament personalitzables. Per
+        això, apostem per Tailwind CSS, un framework d'estils que permet construir dissenys escalables i optimitzats
+        sense la rigidesa dels sistemes tradicionals.
+      </p>
+    </Fragment>
+  </Content>
+
+  <Content
+    title="Dissenys escalables, optimitzats i altament personalitzables"
+    subtitle="Interfícies d'usuari adaptades a tots els dispositius"
+    classes={{ container: 'pb-0 md:pb-0 lg:pb-0' }}
+  >
+    <Fragment slot="preContent">
+      <p class="text-muted">
+        A diferència dels frameworks convencionals que imposen estils predefinits, Tailwind CSS ofereix un enfocament
+        basat en classes utilitàries, el que permet una <strong>personalització total</strong> sense necessitat d'escriure
+        CSS addicional.
+      </p>
+      <p class="text-center">
+        <a title="Web oficial de Tailwind" target="_blank" href="https://tailwindcss.com/" class="btn-primary mt-12 mb-12 w-auto"
+          >Coneix més sobre Tailwind CSS</a
+        >
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Features3
+    title="Per què triar Tailwind CSS per al teu projecte?"
+    subtitle="Els avantatges d'un framework CSS modern i flexible."
+    items={[
+      {
+        description: `Màxima flexibilitat, sense restriccions d'estils predeterminats.`,
+        icon: 'tabler:palette',
+      },
+      {
+        description: `Optimització del rendiment, gràcies al seu sistema de classes utilitàries i eliminació de codi innecessari.`,
+        icon: 'tabler:bolt',
+      },
+      {
+        description: `Dissenys responsive amb facilitat, el que permet adaptar interfícies a qualsevol dispositiu de manera intuïtiva.`,
+        icon: 'tabler:devices',
+      },
+      {
+        description: `Escalabilitat sense complicacions, permetent estendre els estils sense generar arxius CSS enormes.`,
+        icon: 'tabler:stack-back',
+      },
+      {
+        description: `Compatibilitat amb qualsevol tecnologia, integrant-se perfectament amb frameworks com React, Angular o SlimFramework.`,
+        icon: 'tabler:plug',
+      },
+      {
+        description: `Reducció de temps de desenvolupament, facilitant la creació de components reutilitzables sense sobrecàrrega d'estils.`,
+        icon: 'tabler:clock',
+      },
+    ]}
+  />
+
+  <Content
+    isReversed
+    title="La nostra experiència amb Tailwind CSS a Gilsys"
+    subtitle="Coneixem bé la tecnologia, la mostra és la nostra web corporativa, programada usant Astro i Tailwind."
+    image={{
+      src: '~/assets/images/tecnologia/tailwind-css-escena-mar.png',
+      alt: 'Mockups de diferents pantalles flotant',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        Com a empresa de desenvolupament, aprofitem aquesta tecnologia per crear solucions de qualitat sense caure en la
+        repetició de codi i assegurant un manteniment àgil.
+      </p>
+      <p class="text-muted mt-4">
+        A Gilsys, gaudim d'aquest compromís, ja que ens permet aprofitar al màxim la nostra experiència i crear
+        interfícies optimitzades amb llibertat creativa.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Content>
+
+  <Features
+    title="Desenvolupament web a mida amb Tailwind CSS a Gilsys"
+    subtitle="Creem interfícies d'usuari úniques i optimitzades per impulsar el teu projecte."
+    items={[
+      {
+        title: 'Disseny d\'interfícies a mida amb Tailwind CSS',
+        description:
+          'Creem interfícies d\'usuari úniques i personalitzades que s\'adapten a la teva visió i objectius de negoci.',
+        icon: 'tabler:palette',
+      },
+      {
+        title: 'Desenvolupament de components reutilitzables',
+        description:
+          'Construïm components modulars i escalables per agilitar el desenvolupament i assegurar la consistència del disseny.',
+        icon: 'tabler:components',
+      },
+      {
+        title: 'Optimització del rendiment web',
+        description:
+          'Minimitzem la mida del codi CSS generat per Tailwind CSS per garantir una càrrega ràpida i una experiència d\'usuari òptima.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Integració amb frameworks JavaScript',
+        description:
+          'Integramos Tailwind CSS amb frameworks com Astro o Angular per a un desenvolupament web modern i eficient.',
+        icon: 'tabler:brand-javascript',
+      },
+    ]}
+  />
+
+  <CallToAction
+    backgroundImage={{ src: '~/assets/images/geometric-2/4.jpg', alt: 'Fons abstracte' }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Sol·licita el teu pressupost',
+        href: u('contact'),
+      },
+      {
+        variant: 'secondary',
+        text: 'Contacta\'ns',
+        href: 'tel:+34665331271',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Desenvolupa la teva interfície d'avantguarda amb Gilsys i <span class="custom-gradient">Tailwind CSS</span>
+    </Fragment>
+    <Fragment slot="subtitle">
+        Deixa la interfície d'usuari en mans del nostre equip de programació; el teu disseny destacarà amb un alt nivell de
+        rendiment.
+      </Fragment>
+    </CallToAction>
+  </Layout>
