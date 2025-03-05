@@ -27,8 +27,13 @@ const currentPage = page.currentPage ?? 1;
 // const allCategories = await findCategories();
 // const allTags = await findTags();
 
+
+const metadataTitle = t('blog.meta.title');
+const metadataDescription = t('blog.meta.description');
+
 const metadata = {
-  title: `${t('blog.list.title')}${currentPage > 1 ? ` — ${t('common.page')} ${currentPage}` : ''}`,
+  title: `${metadataTitle}${currentPage > 1 ? ` — ${t('common.page')} ${currentPage}` : ''}`,
+  description: metadataDescription,
   robots: {
     index: blogListRobots?.index && currentPage === 1,
     follow: blogListRobots?.follow,
