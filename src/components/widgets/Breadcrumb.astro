@@ -9,7 +9,7 @@ const { items = [] } = Astro.props;
 ---
 
 <nav aria-label="breadcrumb" class="text-sm">
-  <ol itemscope itemtype="https://schema.org/BreadcrumbList" class="flex items-center flex-wrap">
+  <ol id="breadcrumb-nav" itemscope itemtype="https://schema.org/BreadcrumbList" class="flex items-center flex-wrap">
     {
       items.map(({ text, href }, index) => {
         const isLast = index === items.length - 1;

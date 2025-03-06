@@ -45,6 +45,44 @@ import { languages } from '~/i18n/ui';
     let lastKnownScrollPosition = window.scrollY;
     let ticking = true;
 
+    // Vincula al formulario de contacto el asunto de forma dinámica
+    const contactHref = document.getElementById('contact').getAttribute('href');
+    const breadcrumbNav = document.getElementById('breadcrumb-nav');
+    subject = '';
+    if (breadcrumbNav) {
+      const breadcrumbNames = Array.from(breadcrumbNav.querySelectorAll('span[itemprop="name"]')).map((span) =>
+        span.textContent.trim()
+      );
+
+      const breadcrumbNamesWithoutFirst = breadcrumbNames.slice(1);
+      subject = breadcrumbNamesWithoutFirst.join(' > ') + ' - ';
+    }
+
+    attachEvent('[href="' + contactHref + '"]', 'click', function (event, item) {
+      if (item.id == 'contact') {
+        return;
+      }
+      sessionStorage.setItem('contactSubject', subject + item.textContent);
+    });
+
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+      const subjectInput = contactForm.querySelectorAll('[name="page_title"]');
+      const contactSubject = sessionStorage.getItem('contactSubject');
+      if (subjectInput && contactSubject) {
+        subjectInput[0].value = contactSubject.trim();
+        let subjectToCut = subjectInput[0].value;
+
+        // Si subjectToCut tiene un '>', recortar a partir de este carácter
+        if (subjectToCut.indexOf('>') !== -1) {
+          subjectToCut = subjectToCut.substring(subjectToCut.indexOf('>') + 1).trim();
+        }
+
+        contactForm.querySelectorAll('[name="subject"]')[0].value = subjectToCut;
+        sessionStorage.removeItem('contactSubject');
+      }
+    }
+
     attachEvent('#header nav', 'click', function () {
       document.querySelector('[data-aw-toggle-menu]')?.classList.remove('expanded');
       document.body.classList.remove('overflow-hidden');
@@ -63,13 +101,13 @@ import { languages } from '~/i18n/ui';
       document.getElementById('header')?.classList.toggle('bg-page');
       document.querySelector('#header nav')?.classList.toggle('hidden');
       document.querySelector('#header > div > div:last-child')?.classList.toggle('hidden');
-      document.querySelectorAll('header .dropdown.show').forEach(element => {
+      document.querySelectorAll('header .dropdown.show').forEach((element) => {
         element.classList.remove('show');
       });
     });
 
     attachEvent('header .dropdown > button', 'click', function (event, dropdown) {
-      if(!document.querySelector('[data-aw-toggle-menu]').classList.contains('expanded')) {
+      if (!document.querySelector('[data-aw-toggle-menu]').classList.contains('expanded')) {
         return;
       }
 
