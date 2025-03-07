@@ -30,7 +30,7 @@ const { tags, class: className = 'text-sm', title = undefined, isCategory = fals
             ) : (
               <a
                 href={getPermalink(tag.permalink, isCategory ? 'category' : 'tag')}
-                class="text-muted dark:text-slate-300 hover:text-primary dark:hover:text-gray-200"
+                class="tag-link text-muted dark:text-slate-300 hover:text-primary dark:hover:text-gray-200"
               >
                 {tag.title}
               </a>
