@@ -204,6 +204,7 @@ body.route-home .wg-hero p
   color: #000;
 }
 
+.wg-singlepost a:not(.btn-primary):not(.tag-link),
 a.text-accent{
   background:  linear-gradient(180deg, rgb(16 16 16 / 99%), rgb(16 16 16 / 99%));
   background-position: 0 100%;
@@ -213,6 +214,7 @@ a.text-accent{
   text-decoration: none;
   transition: background-size .2s;
 }
+.wg-singlepost a:hover:not(.btn-primary):not(.tag-link),
 a.text-accent:hover {
   background-size: 1px 100% !important;
   color:#FFF;
@@ -490,4 +492,15 @@ address a{
   .technology-container {
       max-width: 1000px;
   }
+}
+
+.wg-singlepost p img{
+  margin: 0 auto;
+  max-height: 150px;
+  width: auto;
+  box-shadow: none;
+}
+.wg-singlepost a.btn-primary{
+  color: #FFF;
+  text-decoration: none;
 }
