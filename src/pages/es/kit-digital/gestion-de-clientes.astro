@@ -5,14 +5,15 @@ import Features2 from '~/components/widgets/Features2.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import KitDigital from '~/components/widgets/KitDigital.astro';
 import Layout from '~/layouts/PageLayout.astro';
+import Content from '~/components/widgets/Content.astro';
 import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 
 const u = useRoutes(getLangFromUrl(Astro.url));
 
 const metadata = {
-  title: 'Kit Digital - Subvención en Gestión de clientes',
+  title: 'CRM 100% Subvencionado con el Kit Digital - Gestión de Clientes Eficiente',
   description:
-    'Optimiza la gestión de relaciones comerciales con los clientes mediante herramientas digitales avanzadas y gestión documental centralizada para tu PYME con el Kit Digital.',
+    'Obtén un CRM profesional totalmente subvencionado con el Kit Digital. Automatiza la gestión de clientes, mejora la productividad y digitaliza tu empresa sin coste alguno. Contacta ahora y accede a la subvención.',
 };
 ---
 
@@ -25,7 +26,7 @@ const metadata = {
     tagline="Subvención Kit Digital"
     backgroundImage={{ alt: 'Fondo abstracto', src: '~/assets/images/dots/21.jpg' }}
   >
-    <Fragment slot="title">Gestión de clientes</Fragment>
+    <Fragment slot="title">CRM 100% subvencionable con el Kit Digital</Fragment>
     <Fragment slot="subtitle">
       Implementa un sistema de <span class="custom-gradient">gestión de clientes</span> eficiente con <span
         class="custom-gradient">CRM</span
@@ -36,9 +37,9 @@ const metadata = {
   </Hero>
 
   <Features2
-    tagline="Funcionalidades y servicios"
-    subtitle="Digitaliza y optimiza la gestión de relaciones comerciales con tus clientes. Almacena, sigue y convierte leads en clientes, con herramientas de gestión y reporting detallado para tomar decisiones informadas."
-    title="Gestión integral de clientes, oportunidades y leads para empresas, con herramientas digitales avanzadas"
+    tagline="CRM 100% Subvencionado"
+    subtitle="Con a subvención del Kit Digital, consigue tu CRM de gratuita y gestiona de forma centralizada tu cartera de clientes y contactos."
+    title="Tu nuevo <span class='custom-gradient'>CRM</span> subvencionado por el Kit Digital"
     items={[
       {
         title: 'Gestión de clientes',
@@ -96,6 +97,98 @@ const metadata = {
     ]}
   />
 
+   <Content
+   title="Gestiona los clientes, oportunidades y contactos de tu negocio"
+   subtitle="Unifica el seguimiento de las relaciones comerciales con tus clientes."
+    image={{
+      src: '~/assets/images/kit-digital1.jpg',
+      alt: 'Imagen que refleja un trabajador con el CRM',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        Nuestro CRM es más que un simple software de gestión de relaciones con clientes; es una herramienta integral que transforma la manera en que tu empresa interactúa con sus clientes.
+      </p>
+      <p class="text-muted mt-4">
+        Nuestra herramienta no solo te ayuda a gestionar a tus clientes, sino que mejora la forma en que interactúas con ellos, impulsando el crecimiento de tu negocio y optimizando la manera en que trabajas.
+      </p>
+      <p>
+        <a title="Gestión de Clientes con CRM Personalizado" href={u('software/crm')} class="btn-primary mt-12 mb-12 w-auto"
+          >Conoce más sobre nuestro CRM</a
+        >
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>  
+  </Content>
+
+<Content
+title="Monitorización y seguimiento de tus contactos"
+subtitle="Optimiza la gestión de contactos con un CRM flexible y adaptable a tu negocio."
+isReversed
+  image={{
+    src: '~/assets/images/kit-digital4.jpg',
+    alt: 'Pantalla con CRM y correos electronicos',
+  }}
+>
+  <Fragment slot="content">
+    <p class="text-muted ">
+      Nuestro CRM dispone de un sistema modular, permitiéndote configurar de manera precisa y adaptar las funcionalidades según las necesidades específicas de tu negocio.
+    </p>   
+    <p class="text-muted mt-4">
+      Con la herramienta de gestión de clientes, dispondrás de un mejor control de tu cartera de clientes, seguimiento y contactos mejorando la satisfacción, y al mismo tiempo que optimiza los procesos de venta y marketing para impulsar el crecimiento y la competitividad en el mercado.
+    </p>
+    <p class="text-muted mt-4">
+      También ofrecemos paneles avanzados para la monitorización y el análisis del rendimiento de las ventas y la eficiencia operativa de tu equipo. Esto permite identificar áreas de mejora, optimizar el rendimiento general e impulsar la productividad.
+    </p>
+  </Fragment>
+</Content>
+
+  <Content
+  title="Centraliza la gestión de tus clientes"
+  subtitle="Adaptamos el CRM para que funcione tal y como lo quieres para que se adapte a las necesidades y procesos específicos de tu negocio"
+  items={[
+     {
+        title: 'Gestión de clientes',
+        description: 'Mantén un registro detallado de cada interacción con los clientes, desde el primer contacto hasta la postventa, todo en una sola plataforma fácil de usar.',
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Automatización de clientes potenciales',
+        description: 'Maximiza la productividad de tu equipo con flujos de trabajo automatizados que reducen las tareas repetitivas y permiten centrarse en lo que realmente importa: atraer y gestionar clientes potenciales.',
+        icon: 'tabler:settings-automation',
+      },
+      {
+        title: 'Informes de datos',
+        description: 'Toma decisiones basadas en datos con informes personalizables y análisis profundos que revelan tendencias, rendimiento de ventas y oportunidades de crecimiento.',
+        icon: 'tabler:chart-bar',
+      },
+      {
+        title: 'Integracón a medida',
+        description:'El CRM que integramos se adapta perfectamente a las herramientas que ya utilizas, facilitando una transición suave y una implementación sin problemas',
+        icon: 'tabler:link',
+      },
+  ]}
+   image={{
+    src: '~/assets/images/kit-digital2.jpg',
+    alt: 'Pantalla con graficos',
+  }}
+>
+  <Fragment slot="preContent">
+    <p class="text-muted">
+      La gestión de clientes es fundamental para un buen funcionamiento y crecimiento de una empresa. Con un CRM podrás digitalizar este proceso, consiguiendo así tener un mejor control de tu negocio.
+    </p>
+  </Fragment>
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-lightgray"></div>
+  </Fragment>  
+</Content>
+
+ 
+
+
+
   <Features
     title="Subvención Kit Digital según el número de empleados"
     subtitle="La subvención puede utilizarse para diversos servicios de digitalización, con un importe máximo que varía en función del número de empleados de la empresa."
@@ -119,7 +212,8 @@ const metadata = {
         icon: 'tabler:check',
       },
     ]}
-  />
+  >
+</Features>
 
   <CallToAction
     backgroundImage={{ src: '~/assets/images/dots/21.jpg', alt: 'Fondo abstracto, inspirado en tecnología y software' }}
@@ -145,6 +239,9 @@ const metadata = {
       Contáctanos y implementaremos una solución de <span class="custom-gradient">gestión de clientes</span> para tu empresa,
       de forma gratuita gracias a la subvención del Kit Digital.
     </Fragment>
+     <Fragment slot="bg">
+    <div class="absolute inset-0 bg-lightgray"></div>
+  </Fragment>
   </CallToAction>
 
   <KitDigital />

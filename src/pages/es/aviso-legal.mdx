@@ -2,6 +2,8 @@
 title: 'Aviso legal'
 layout: '~/layouts/MarkdownLayout.astro'
 ---
+export const lang = 'es';
+import {routes} from '~/i18n/ui.ts';
 
 ## Información general
 
@@ -12,11 +14,10 @@ De acuerdo con el **Artículo 10 de la Ley 34/2002** de Servicios de la Sociedad
 - **NIF:** 90002762J  
 - **Teléfono:** 665 33 12 71  
 - **Correo electrónico:** [info@gilsys.com](mailto:info@gilsys.com)  
-- **Sitio web:** [https://www.gilsys.com](https://www.gilsys.com)  
-
+- **Sitio web:** <a href={routes[lang]['home']}>https://www.gilsys.com</a> 
 ## Objeto
 
-Gilsys (en adelante, **"el prestador"**), como responsable del sitio web, pone a disposición de los usuarios el presente documento, que regula el uso del sitio web **[https://www.gilsys.com](https://www.gilsys.com)**.
+Gilsys (en adelante, **"el prestador"**), como responsable del sitio web, pone a disposición de los usuarios el presente documento, que regula el uso del sitio web <a href={routes[lang]['home']}>https://www.gilsys.com</a>.
 
 Este aviso legal tiene como finalidad informar sobre las **condiciones de uso** y garantizar el **cumplimiento de la LSSICE**.
 
@@ -62,7 +63,7 @@ Si un usuario detecta **contenido inapropiado**, puede notificarlo a **[info@gil
 
 Este sitio web puede utilizar **cookies** para mejorar la experiencia de navegación. Las cookies son **archivos de información** que se almacenan en el dispositivo del usuario.
 
-Las cookies **no recopilan datos personales**. Para más información, consulta nuestra **[Política de cookies](https://www.gilsys.com/es/politica-cookies/)**.
+Las cookies **no recopilan datos personales**. Para más información, consulta nuestra  <a href={routes[lang]['cookie-policy']}>Política de cookies.</a>
 
 ## Enlaces a terceros
 
@@ -77,7 +78,7 @@ Gilsys se compromete a garantizar la **protección de los datos personales** de 
 - **Reglamento General de Protección de Datos (RGPD) 2016/679**
 - **Ley Orgánica 3/2018 de Protección de Datos Personales (LOPDGDD)**
 
-Para más información, consulta nuestra **[Política de privacidad](https://www.gilsys.com/es/politica-privacidad/)**.
+Para más información, consulta nuestra  <a href={routes[lang]['privacy-policy']}>Política de privacidad</a>.
 
 ## Propiedad intelectual e industrial
 
