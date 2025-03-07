@@ -44,6 +44,10 @@ export interface Post {
   readingTime?: number;
 
   lang?: string;
+
+  callToActionTitle?: string;
+  
+  callToActionSubtitle?: string;
 }
 
 export interface Taxonomy {

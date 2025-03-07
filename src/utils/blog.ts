@@ -77,6 +77,9 @@ const getNormalizedPost = async (post: CollectionEntry<'post'>): Promise<Post> =
     author,
     draft = false,
     metadata = {},
+    callToActionTitle,
+    callToActionSubtitle
+
   } = data;
 
   let idSplit = id.split('/');
@@ -125,6 +128,8 @@ const getNormalizedPost = async (post: CollectionEntry<'post'>): Promise<Post> =
 
     readingTime: remarkPluginFrontmatter?.readingTime,
     lang: lang,
+    callToActionTitle : callToActionTitle,
+    callToActionSubtitle : callToActionSubtitle
   };
 };
 

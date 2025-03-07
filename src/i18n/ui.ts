@@ -60,6 +60,8 @@ export const ui = {
     'cookie.settings': 'Configuración de cookies',
     'technology': 'Tecnologias destacadas',
     'technology.title': 'Lenguajes de programación y tecnologías utilizadas en Gilsys',
+    'calltoaction.call': 'Llamar',
+    'calltoaction.contact': 'Contactar',
   },
   ca: {
     'common.home': 'Inici',
@@ -105,6 +107,8 @@ export const ui = {
     'cookie.settings': 'Configuració de cookies',
     'technology': 'Tecnologias destacades',
     'technology.title': 'Llenguatges de programació i tecnologíes utilitzades a Gilsys',
+    'calltoaction.call': 'Trucar',
+    'calltoaction.contact': 'Contactar',
   },
   en: {
     'common.home': 'Home',
@@ -150,6 +154,8 @@ export const ui = {
     'cookie.settings': 'Cookie settings',
     'technology': 'Featured technologies',
     'technology.title': 'Featured coding languages and technologies used at Gilsys',
+    'calltoaction.call': 'Call us',
+    'calltoaction.contact': 'Contact',
   },
 } as const;
 
