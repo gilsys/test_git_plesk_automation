@@ -2,6 +2,8 @@
 title: 'Avís Legal'
 layout: '~/layouts/MarkdownLayout.astro'
 ---
+export const lang = 'ca';
+import {routes} from '~/i18n/ui.ts';
 
 ## Informació general
 
@@ -12,11 +14,11 @@ D’acord amb l’article 10 de la **Llei 34/2002** de Serveis de la Societat de
 - **NIF:** 90002762J  
 - **Telèfon:** 665 33 12 71  
 - **E-Mail:** [info@gilsys.com](mailto:info@gilsys.com)  
-- **Lloc Web:** [https://www.gilsys.com](https://www.gilsys.com)  
+- **Lloc Web:** <a class="" title="Paragraphs" href={routes[lang]['home']}>https://www.gilsys.com</a>
 
 ## Objecte
 
-Gilsys (en endavant, **"el prestador"**) com a responsable del lloc web, posa a disposició dels usuaris el present document que regula l’ús del lloc web **[https://www.gilsys.com](https://www.gilsys.com)**.
+Gilsys (en endavant, **"el prestador"**) com a responsable del lloc web, posa a disposició dels usuaris el present document que regula l’ús del lloc web <a href={routes[lang]['home']}>https://www.gilsys.com</a>.
 
 Aquest avís legal té com a finalitat informar sobre les **condicions d’ús** i **complir amb les obligacions** establertes a la **LSSICE**.
 
@@ -62,7 +64,7 @@ Si un usuari detecta **contingut inapropiat**, pot notificar-ho a **[info@gilsys
 
 Aquest lloc web pot utilitzar **cookies** per millorar l’experiència de navegació. Les cookies són **arxius d’informació** que es guarden en el dispositiu de l’usuari.
 
-Les cookies **no recullen dades personals**. Per obtenir més informació, pots consultar la nostra **[Política de Cookies](https://www.gilsys.com/ca/politica-cookies/)**.
+Les cookies **no recullen dades personals**. Per obtenir més informació, pots consultar la nostra <a href={routes[lang]['cookie-policy']}>Política de Cookies</a>.
 
 ## Enllaços a tercers (Links)
 
@@ -77,7 +79,7 @@ Gilsys es compromet a garantir la **protecció de les dades personals** dels seu
 - **Reglament General de Protecció de Dades (RGPD) 2016/679**
 - **Llei Orgànica 3/2018 de Protecció de Dades Personals (LOPDGDD)**
 
-Per a més informació, consulta la nostra **[Política de privacitat](https://www.gilsys.com/ca/politica-privacidad/)**.
+Per a més informació, consulta la nostra <a href={routes[lang]['privacy-policy']}>Política de privacitat</a>.
 
 ## Propietat intel·lectual i industrial
 
