@@ -103,6 +103,7 @@ const metadata = {
   </Features3>
 
   <FAQs
+    columns={1}
     title="Software, webs, apps mòbils i eines al cloud, programades a mida"
     subtitle="A Gilsys, som especialistes en el desenvolupament de solucions tecnològiques dissenyades des de zero per cobrir els requisits concrets de cada projecte."
     tagline=""
@@ -119,6 +120,31 @@ const metadata = {
           "Tot i que poden semblar conceptes similars, és important destacar que el software a mida es crea <strong>des de zero</strong>, mentre que el software personalitzat implica adaptar o ampliar una eina a les necessitats del client. No hi ha una solució perfecta, depenent de cada projecte, serà millor programar software a mida o utilitzar com a base <a title='Programació de software personalitzat' href='" +
           u('software') +
           "' class='text-accent'>software personalitzat</a>.",
+      },
+      {
+        title: 'Amb quines tecnologies, bases de dades i llenguatges de programació treballeu habitualment?',
+        description:
+          "A l'apartat <a class='text-accent' href='" +
+          u('technology') +
+          "' title='Tecnologies per al desenvolupament de software a mida'>tecnologies</a> trobareu informació completa sobre els principals llenguatges de programació, bases de dades i eines amb les que treballem. Per resumir i sense entrar en detalls, a nivell de programació de servidor fem servir <a class='text-accent' href='" +
+          u('technology/php') +
+          "' title='Desenvolupament de software amb PHP'>PHP</a> o <a class='text-accent' href='" +
+          u('technology/java') +
+          "' title='Desenvolupament de software amb JAVA'>JAVA</a>, disseny responsive amb <a class='text-accent' href='" +
+          u('technology/bootstrap') +
+          "' title='Disseny responsive amb Bootstrap'>Bootstrap</a> o <a class='text-accent' href='" +
+          u('technology/tailwind') +
+          "' title='Disseny responsive amb Tailwind'>Tailwind</a>, bases de dades <a class='text-accent' href='" +
+          u('technology/mysql') +
+          "' title='Programació de Bases de dades amb MySQL'>MySQL</a>, <a class='text-accent' href='" +
+          u('technology/oracle') +
+          "' title='Programació de bases de dades amb Oracle Database'>Oracle</a> o <a class='text-accent' href='" +
+          u('technology/mongodb') +
+          "' title='Programació de bases de dades amb MongoDB'>MongoDB</a> principalment i aplicacions amb <a class='text-accent' href='" +
+          u('technology/angular') +
+          "' title='Desenvolupament d'aplicacions amb Angular'>Angular</a> o <a class='text-accent' href='" +
+          u('technology/react-native') +
+          "' title='Desenvolupament d'aplicacions amb React Native'>React Native</a>. De totes maneres, estem constantment aprenent i integrant nous serveis basats en tecnologies capdavanteres.",
       },
     ]}
   />
@@ -186,7 +212,11 @@ const metadata = {
         icon: 'tabler:currency-dollar',
       },
     ]}
-  />
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Features2>
 
   <Features
     id="features"
