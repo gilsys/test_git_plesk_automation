@@ -75,7 +75,7 @@ const metadata = {
       {
         title: 'High-Performance Websites',
         description:
-          "We develop websites optimized for performance, SEO, security, and an exceptional user experience. For projects that require more than just WordPress.",
+          'We develop websites optimized for performance, SEO, security, and an exceptional user experience. For projects that require more than just WordPress.',
         icon: 'tabler:layout',
         callToAction: {
           class: 'more-info',
@@ -101,6 +101,7 @@ const metadata = {
     </Fragment>
   </Features3>
   <FAQs
+    columns={1}
     title="Custom Software, Web Applications, Mobile Apps, and Cloud-Based Tools"
     subtitle="At Gilsys, we specialize in developing technology solutions designed from scratch to meet the specific requirements of each project."
     tagline=""
@@ -117,6 +118,31 @@ const metadata = {
           "While these may seem like similar concepts, it's important to highlight that custom software is created <strong>from scratch</strong>, whereas personalized software involves adapting or extending an existing tool to meet client needs. There is no one-size-fits-all solution—depending on the project, it may be better to develop custom software or use <a title='Customizable software solutions' href='" +
           u('software') +
           "' class='text-accent'>customizable software</a> as a base.",
+      },
+      {
+        title: 'What technologies, databases, and programming languages do you commonly work with?',
+        description:
+          "In the <a class='text-accent' href='" +
+          u('technology') +
+          "' title='Technologies for custom software development'>technologies</a> section, you will find complete information about the main programming languages, databases, and tools we work with. To summarize without going into details, for server-side programming, we use <a class='text-accent' href='" +
+          u('technology/php') +
+          "' title='Software development with PHP'>PHP</a> or <a class='text-accent' href='" +
+          u('technology/java') +
+          "' title='Software development with JAVA'>JAVA</a>, responsive design with <a class='text-accent' href='" +
+          u('technology/bootstrap') +
+          "' title='Responsive design with Bootstrap'>Bootstrap</a> or <a class='text-accent' href='" +
+          u('technology/tailwind') +
+          "' title='Responsive design with Tailwind'>Tailwind</a>, databases <a class='text-accent' href='" +
+          u('technology/mysql') +
+          "' title='Database programming with MySQL'>MySQL</a>, <a class='text-accent' href='" +
+          u('technology/oracle') +
+          "' title='Database programming with Oracle Database'>Oracle</a>, or <a class='text-accent' href='" +
+          u('technology/mongodb') +
+          "' title='Database programming with MongoDB'>MongoDB</a> mainly, and applications with <a class='text-accent' href='" +
+          u('technology/angular') +
+          "' title='Application development with Angular'>Angular</a> or <a class='text-accent' href='" +
+          u('technology/react-native') +
+          "' title='Application development with React Native'>React Native</a>. However, we are constantly learning and integrating new services based on cutting-edge technologies.",
       },
     ]}
   />
@@ -151,32 +177,32 @@ const metadata = {
         title: 'Code Control & Updates',
         description:
           'Custom software development guarantees complete control over the source code and updates, providing flexibility and eliminating dependency on external vendors.',
-          icon: 'tabler:code',
+        icon: 'tabler:code',
       },
       {
         title: 'Scalability & Flexibility for Business Growth',
         description:
           'Custom-built solutions are designed to evolve alongside each project. Applications can be expanded or modified to incorporate new features, integrate emerging technologies, and scale in terms of infrastructure.',
-          icon: 'tabler:arrows-maximize',
+        icon: 'tabler:arrows-maximize',
       },
       {
         title: 'Efficiency & Productivity',
         description:
           'Reducing time spent on repetitive tasks and minimizing human error is possible with custom software development, which optimizes processes and boosts business productivity.',
-          icon: 'tabler:chart-line',
-        },
+        icon: 'tabler:chart-line',
+      },
       {
         title: 'Innovation in Software Development',
         description:
           'Modern frameworks and artificial intelligence can be integrated to future-proof software and align it with current and upcoming business needs.',
-          icon: 'tabler:bulb',
-        },
+        icon: 'tabler:bulb',
+      },
       {
         title: 'Seamless Integration with Existing Systems',
         description:
           'Custom software development enables seamless integration with existing business systems and tools, enhancing connectivity and optimizing workflows without disruption.',
-          icon: 'tabler:plug',
-        },
+        icon: 'tabler:plug',
+      },
       {
         title: 'Long-Term Cost Savings Compared to Proprietary Software',
         description:
@@ -184,7 +210,11 @@ const metadata = {
         icon: 'tabler:currency-dollar',
       },
     ]}
-  />
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Features2>
   <Features
     id="features"
     tagline=""

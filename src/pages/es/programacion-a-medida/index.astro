@@ -76,7 +76,7 @@ const metadata = {
       {
         title: 'Webs de alto rendimiento',
         description:
-          "Programamos webs optimizadas en rendimiento, SEO, seguridad y con una experiencia de usuario funcional. Para proyectos que requieren más que un WordPress.",
+          'Programamos webs optimizadas en rendimiento, SEO, seguridad y con una experiencia de usuario funcional. Para proyectos que requieren más que un WordPress.',
         icon: 'tabler:layout',
         callToAction: {
           class: 'more-info',
@@ -103,6 +103,7 @@ const metadata = {
   </Features3>
 
   <FAQs
+    columns={1}
     title="Software, webs, apps móviles y herramientas en la nube, programadas a medida"
     subtitle="En Gilsys, somos especialistas en el desarrollo de soluciones tecnológicas diseñadas desde cero para cubrir los requisitos concretos de cada proyecto."
     tagline=""
@@ -119,6 +120,31 @@ const metadata = {
           "Aunque pueden parecer conceptos similares, es importante destacar que el software a medida se crea <strong>desde cero</strong>, mientras que el software personalizado implica adaptar o ampliar una herramienta a las necesidades del cliente. No hay una solución perfecta, dependiendo de cada proyecto, será mejor programar software a medida o utilizar como base <a title='Programación de software personalizado' href='" +
           u('software') +
           "' class='text-accent'>software personalizado</a>.",
+      },
+      {
+        title: '¿Con qué tecnologías, bases de datos y lenguajes de programación trabajáis habitualmente?',
+        description:
+          "En el apartado <a class='text-accent' href='" +
+          u('technology') +
+          "' title='Tecnologías para desarrollo de software a medida'>tecnologías</a> encontrarás información sobre completa sobre los principales lenguajes de programación, bases de datos y herramientas con las que trebajamos. Para resumir y sin entrar en detalles, a nivel de programación de servidor usamos <a class='text-accent' href='" +
+          u('technology/php') +
+          "' title='Desarrollo de software con PHP'>PHP</a> o <a class='text-accent' href='" +
+          u('technology/java') +
+          "' title='Desarrollo de software con JAVA'>JAVA</a>, diseño responsive con <a class='text-accent' href='" +
+          u('technology/bootstrap') +
+          "' title='Diseño responsive con Bootstrap'>Bootstrap</a> o <a class='text-accent' href='" +
+          u('technology/tailwind') +
+          "' title='Diseño responsive con Tailwind'>Tailwind</a>, bases de datos <a class='text-accent' href='" +
+          u('technology/mysql') +
+          "' title='Programación de Bases de datos con MySQL'>MySQL</a>, <a class='text-accent' href='" +
+          u('technology/oracle') +
+          "' title='Programación de bases de datos con Oracle Database'>Oracle</a> o <a class='text-accent' href='" +
+          u('technology/mongodb') +
+          "' title='Programación e bases de datos con MongoDB'>MongoDB</a> principalmente y aplicaciones con <a class='text-accent' href='" +
+          u('technology/angular') +
+          "' title='Desarrollo de aplicaciones con Angular'>Angular</a> o <a class='text-accent' href='" +
+          u('technology/react-native') +
+          "' title='Desarrollo de aplicaciones con React Native'>React Native</a>. De todos modos, estamos constantemente aprendiendo e integrando nuevos servicios basados en tecnologías punteras.",
       },
     ]}
   />
@@ -186,7 +212,11 @@ const metadata = {
         icon: 'tabler:currency-dollar',
       },
     ]}
-  />
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>
+  </Features2>
 
   <Features
     id="features"
