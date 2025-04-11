@@ -3,6 +3,7 @@ import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Content from '~/components/widgets/Content.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
+import Features from '~/components/widgets/Features2.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import Hero from '~/components/widgets/Hero.astro';
@@ -192,7 +193,38 @@ const metadata = {
     },
   ]}
 />
-
+<Features
+    id="features"
+    tagline=""
+    title="Challenges & Solutions"
+    subtitle="Working with customizable software presents challenges—discover how we address them to provide efficient and sustainable solutions."
+    items={[
+      {
+        title: 'Security Vulnerabilities in Open-Source Tools',
+        description:
+          'Open-source tools can be more susceptible to security issues. The solution is to have a <strong>regular update service</strong> and integrate the necessary security measures to protect the project.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Complexity in Updates',
+        description:
+          'When extensive customizations are applied, updates can become complicated. At Gilsys, we follow <strong>best programming practices</strong> by avoiding modifications to the core code and encapsulating customizations into independent modules, ensuring compatibility with future versions.',
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Implementation Time & Complexity',
+        description:
+          'The time and complexity required to implement customizations may surpass that of fully custom software when a high degree of adaptation is needed. This must be evaluated before starting the project to determine the best technology for development.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Recurring Plugin Costs',
+        description:
+          'Using commercial plugins may involve subscription fees that result in recurring costs. At Gilsys, we carefully analyze the best modules for integration, comparing costs and requirements with fully custom development to ensure the best solution.',
+        icon: 'tabler:currency-dollar',
+      },
+    ]}
+  />
 
   <Content
     isReversed
