@@ -126,7 +126,7 @@ async function generateSitemap(): Promise<void> {
 
     sitemapEntries += `
       <url>
-        <loc>${postUrl}</loc>
+        <loc>${postUrl}/</loc>
         <lastmod>${post.publishDate}</lastmod>
       </url>`;
   }
