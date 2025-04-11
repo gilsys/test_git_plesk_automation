@@ -15,18 +15,19 @@ function getLastModified(routeKey: string): string {
   for (const lang of availableLanguages) {
     const routeMap: RoutesType = routes[lang] || {};
     if (routeMap[routeKey]) {
-      let filePath = path.resolve(`src/pages/${routeMap[routeKey]}.astro`);
+      const currentRouteMap = routeMap[routeKey].replace(/[\/\\]$/, '');
+      let filePath = path.resolve(`src/pages/${currentRouteMap}.astro`);
       try {
         if (!fs.existsSync(filePath)) {
-          filePath = path.resolve(`src/pages/${routeMap[routeKey]}.mdx`);
+          filePath = path.resolve(`src/pages/${currentRouteMap}.mdx`);
         }
 
         if (!fs.existsSync(filePath)) {
-          filePath = path.resolve(`src/pages/${routeMap[routeKey]}/index.astro`);
+          filePath = path.resolve(`src/pages/${currentRouteMap}/index.astro`);
         }
 
         if (!fs.existsSync(filePath)) {
-          filePath = path.resolve(`src/pages/${routeMap[routeKey]}/index.mdx`);
+          filePath = path.resolve(`src/pages/${currentRouteMap}/index.mdx`);
         }
 
         if (fs.existsSync(filePath)) {
@@ -125,7 +126,7 @@ async function generateSitemap(): Promise<void> {
 
     sitemapEntries += `
       <url>
-        <loc>${postUrl}</loc>
+        <loc>${postUrl}/</loc>
         <lastmod>${post.publishDate}</lastmod>
       </url>`;
   }
