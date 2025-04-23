@@ -10,8 +10,10 @@ import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 const u = useRoutes(getLangFromUrl(Astro.url));
 const metadata = {
   title: 'IT Consulting',
-  description: `Advisory services for integrating artificial intelligence into businesses, analyzing technological landscapes, transforming ideas into projects, and optimizing data organization.`,
+  description:
+    'Advisory services for integrating AI into businesses, analyzing tech landscapes, transforming ideas into projects, and optimizing data organization.',
 };
+
 ---
 
 <Layout metadata={metadata}>
