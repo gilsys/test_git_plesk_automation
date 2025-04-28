@@ -5,7 +5,7 @@ export const languages = {
   },
   ca: {
     label: 'Català',
-    code: 'ca-CA'
+    code: 'es-CA'
   },
   en:  {
     label: 'English',
@@ -38,7 +38,7 @@ export const ui = {
     'blog.older_posts': 'Entradas más antiguas',
     'blog.share': 'Compartir',
     'blog.reading_time': 'minutos de lectura',
-    'blog.list.title': 'Blog',
+    'blog.list.title': 'Blog de servicios y noticias',
     'blog.list.subtitle': "Blog con actualidad de Gilsys, desarrollo de software a medida, aplicaciones de IA, soluciones de automatización y ayudas tecnológicas.",
     'contact.title': 'Explícanos tu proyecto',
     'contact.subtitle': 'Rellena el formulario para solicitar más información sobre nuestros servicios, concertar una reunión, pedir un presupuesto o simplemente enviarnos un mensaje.',
@@ -85,7 +85,7 @@ export const ui = {
     'blog.older_posts': 'Entrades més antigues',
     'blog.share': 'Compartir',
     'blog.reading_time': 'minuts de lectura',
-    'blog.list.title': 'Blog',
+    'blog.list.title': "Blog de serveis i notícies",
     'blog.list.subtitle': `Blog amb actualitat de Gilsys, projectes de software a mida, aplicacions d'IA, solucions d'automatització i ajuts tecnològics.`,
     'contact.title': "Explica'ns el teu projecte",
     'contact.subtitle': 'Omple el formulari per a demanar més informació sobre els nostres serveis, sol·licitar una reunió, demanar pressupost o simplement enviar-nos un missatge.',
