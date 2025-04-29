@@ -62,6 +62,8 @@ export const ui = {
     'technology.title': 'Lenguajes de programación y tecnologías utilizadas en Gilsys',
     'calltoaction.call': 'Llamar',
     'calltoaction.contact': 'Contactar',
+    'calltoaction.contact_by_email': 'Contactar por email',
+    'calltoaction.contact_by_phone': 'Trucar a Gilsys',
   },
   ca: {
     'common.home': 'Inici',
@@ -109,6 +111,8 @@ export const ui = {
     'technology.title': 'Llenguatges de programació i tecnologíes utilitzades a Gilsys',
     'calltoaction.call': 'Trucar',
     'calltoaction.contact': 'Contactar',
+    'calltoaction.contact_by_email': 'Contactar per email',
+    'calltoaction.contact_by_phone': 'Trucar a Gilsys',
   },
   en: {
     'common.home': 'Home',
@@ -156,6 +160,8 @@ export const ui = {
     'technology.title': 'Featured coding languages and technologies used at Gilsys',
     'calltoaction.call': 'Call us',
     'calltoaction.contact': 'Contact',
+    'calltoaction.contact_by_email': 'Contact by email',
+    'calltoaction.contact_by_phone': 'Call Gilsys',
   },
 } as const;
 
