@@ -21,4 +21,5 @@ pnpm-debug.log*
 
 pnpm-lock.yaml
 
-.astro
+.astro""  # Asegura una l¡nea nueva antes por si acaso
+"src/assets/images/blog/prestashop.psd" 
