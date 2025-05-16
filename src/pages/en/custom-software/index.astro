@@ -3,7 +3,7 @@ import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Content from '~/components/widgets/Content.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
-import Features from '~/components/widgets/Features.astro';
+import Features from '~/components/widgets/Features2.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import Hero from '~/components/widgets/Hero.astro';
@@ -12,7 +12,7 @@ import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 
 const u = useRoutes(getLangFromUrl(Astro.url));
 const metadata = {
-  title: 'Custom Software Development for Businesses | +20 Years',
+  title: 'Custom Software for Businesses | +20 Years',
   description:
     'We customize platforms like WordPress, PrestaShop, WooCommerce, Pimcore, and Metabase to create unique, tailored solutions adapted to each company.',
 };
@@ -150,55 +150,50 @@ const metadata = {
   />
 
   <Features2
-    id="features"
-    tagline="Why Use Customizable Software?"
-    title="We Create Tailored Solutions by Building on Existing Technologies"
-    subtitle="Leverage existing platforms for faster, scalable, and cost-effective results."
-    items={[
-      {
-        title: 'Efficient Development',
-        description: 'Using an existing foundation reduces development time, allowing for a quicker implementation.',
-        icon: 'tabler:clock',
-      },
-      {
-        title: 'More Cost-Effective',
-        description:
-          'Leveraging an existing platform can be a more cost-efficient approach compared to developing <a title="Fully Custom Software Development" href="' +
-          u('development') +
-          "' class='text-accent'>custom software</a> while still maintaining high levels of personalization.",
-        icon: 'tabler:currency-dollar',
-      },
-      {
-        title: 'Modular & Theme Customization',
-        description:
-          `Platforms like <a href='` +
-          u('software/wp') +
-          `' title="WordPress Development" class="text-accent">WordPress</a> and <a href='` +
-          u('software/ecommerce') +
-          `' title="E-commerce Development with PrestaShop" class="text-accent">PrestaShop</a> can be expanded with free, commercial, or custom-built modules, as well as fully tailored themes that reflect your company's brand identity.`,
-        icon: 'tabler:settings',
-      },
-      {
-        title: 'Flexible Scalability',
-        description:
-          'Customizable solutions allow businesses to start with essential functionalities and add new features as their needs grow.',
-        icon: 'tabler:line',
-      },
-      {
-        title: 'Lower Learning Curve',
-        description:
-          'Since these tools are widely used, users are often already familiar with their interfaces. Additionally, extensive online resources are available for troubleshooting and guidance.',
-        icon: 'tabler:school',
-      },
-      {
-        title: 'Regular Updates & Improvements',
-        description:
-          'The platforms we work with are constantly evolving, meaning that beyond custom developments, you will benefit from periodic updates with new features, security enhancements, and performance optimizations.',
-        icon: 'tabler:arrows-right-left',
-      },
-    ]}
-  />
-  <Features
+  id="features"
+  tagline="Why Use Customizable Software?"
+  title="We Create Tailored Solutions by Building on Existing Technologies"
+  subtitle="Leverage existing platforms for faster, scalable, and cost-effective results."
+  items={[
+    {
+      title: 'Efficient Development',
+      description:
+        'Using an existing foundation reduces development time, allowing for a quicker implementation.',
+      icon: 'tabler:clock',
+    },
+    {
+      title: 'More Cost-Effective',
+      description:
+        `Leveraging an existing platform can be a more cost-efficient approach compared to developing <a title="Fully Custom Software Development" href="${u('development')}" class="text-accent">custom software</a> while still maintaining high levels of personalization.`,
+      icon: 'tabler:currency-dollar',
+    },
+    {
+      title: 'Modular & Theme Customization',
+      description:
+        `Platforms like <a href="${u('software/wp')}" title="WordPress Development" class="text-accent">WordPress</a> and <a href="${u('software/ecommerce')}" title="E-commerce Development with PrestaShop" class="text-accent">PrestaShop</a> can be expanded with free, commercial, or custom-built modules, as well as fully tailored themes that reflect your company's brand identity.`,
+      icon: 'tabler:settings',
+    },
+    {
+      title: 'Flexible Scalability',
+      description:
+        'Customizable solutions allow businesses to start with essential functionalities and add new features as their needs grow.',
+      icon: 'tabler:line',
+    },
+    {
+      title: 'Lower Learning Curve',
+      description:
+        'Since these tools are widely used, users are often already familiar with their interfaces. Additionally, extensive online resources are available for troubleshooting and guidance.',
+      icon: 'tabler:school',
+    },
+    {
+      title: 'Regular Updates & Improvements',
+      description:
+        'The platforms we work with are constantly evolving, meaning that beyond custom developments, you will benefit from periodic updates with new features, security enhancements, and performance optimizations.',
+      icon: 'tabler:arrows-right-left',
+    },
+  ]}
+/>
+<Features
     id="features"
     tagline=""
     title="Challenges & Solutions"

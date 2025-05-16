@@ -12,8 +12,10 @@ import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 const u = useRoutes(getLangFromUrl(Astro.url));
 const metadata = {
   title: 'Consultoría IT - Osona (Barcelona)',
-  description: `Asesoramiento para integrar inteligencia artificial en la empresa, análisis de la situación tecnológica, transformación de ideas en proyectos y estudios para la organización de datos.`,
+  description:
+    'Asesoramiento en inteligencia artificial, análisis tecnológico, transformación de ideas en proyectos y estudios de organización de datos.',
 };
+
 ---
 
 <Layout metadata={metadata}>
@@ -83,7 +85,7 @@ const metadata = {
         callToAction: {
           class: 'more-info',
           text: 'Más información',
-          href: '#transformacion-ideas-proyectos',
+          href: '#transformar-ideas-en-proyectos',
         },
       },
       {

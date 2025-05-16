@@ -5,122 +5,213 @@ import Features2 from '~/components/widgets/Features2.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import KitDigital from '~/components/widgets/KitDigital.astro';
 import Layout from '~/layouts/PageLayout.astro';
+import Content from '~/components/widgets/Content.astro';
 import { getLangFromUrl, useRoutes } from '~/utils/i18n';
 
 const u = useRoutes(getLangFromUrl(Astro.url));
 
 const metadata = {
-  title: 'Kit Digital - Subvenció per Gestió de clients',
-  description:
-    'Optimitza la gestió de relacions comercials amb els clients mitjançant eines digitals avançades i gestió documental centralitzada per a la teva PIME amb el Kit Digital.',
+  title: 'CRM subvencionat amb el Kit Digital - Gestió de clients eficient',
+  description: 'Obtén un CRM professional subvencionat amb el Kit Digital. Automatitza la gestió de clients i digitalitza la teva empresa sense cost.'
 };
 ---
 
 <Layout metadata={metadata}>
   <Hero
-  actions={[
-    { variant: 'primary', text: 'Contactar', href: u('contact') },
-    { variant: 'primary', text: 'Preguntes freqüents', href: u('kit-digital') + '#faq' }]
+    actions={[
+      { variant: 'primary', text: 'Contactar', href: u('contact') },
+      { variant: 'primary', text: 'Preguntes freqüents', href: u('kit-digital') + '#faq' }]
     }
-  tagline="Subvenció Kit Digital" backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/21.jpg' }}>
-    <Fragment slot="title">Gestió de clients</Fragment>
+    tagline="Subvenció Kit Digital"
+    backgroundImage={{ alt: 'Fons abstracte', src: '~/assets/images/dots/21.jpg' }}
+  >
+    <Fragment slot="title">CRM 100% subvencionable amb el Kit Digital</Fragment>
     <Fragment slot="subtitle">
       Implementa un sistema de <span class="custom-gradient">gestió de clients</span> eficient amb <span
         class="custom-gradient">CRM</span
       > i eines digitals avançades,
-      <span class="custom-gradient">GRATIS</span> gràcies a la subvenció del Kit Digital, per optimitzar les relacions i
-      processos comercials.
+      <span class="custom-gradient">GRATUÏT</span> gràcies a la subvenció del Kit Digital, per optimitzar les relacions
+      i processos comercials.
     </Fragment>
   </Hero>
 
   <Features2
-    tagline="Funcionalitats i serveis"
-    subtitle="Digitalitza i optimitza la gestió de relacions comercials amb els teus clients. Emmagatzema, segueix i converteix leads en clients, amb eines de gestió i reporting detallat per prendre decisions informades."
-    title="Gestió integral de clients, oportunitats i leads per a empreses, amb eines digitals avançades"
+    tagline="CRM 100% Subvencionat"
+    subtitle="Amb la subvenció del Kit Digital, aconsegueix el teu CRM de manera gratuïta i gestiona de forma centralitzada la teva cartera de clients i contactes."
+    title="El teu nou <span class='custom-gradient'>CRM</span> subvencionat pel Kit Digital"
     items={[
       {
-        title: "Gestió de clients",
+        title: 'Gestió de clients',
         description:
-          "Seràs capaç d'emmagatzemar i consultar les dades de cadascun dels teus clients, des de la seva alta com a oportunitat de negoci, i simular la compra de productes o contractació de serveis.",
+          'Podràs emmagatzemar i consultar les dades de cadascun dels teus clients, des del seu alta com a oportunitat de negoci, i simular la compra de productes o contractació de serveis.',
         icon: 'tabler:user',
       },
       {
-        title: "Gestió de clients potencials (leads)",
+        title: 'Gestió de clients potencials (leads)',
         description:
-          "Podràs donar d'alta nous leads de forma manual o mitjançant una importació per fitxer. Les dades associades als leads et permetran la seva gestió comercial amb l'objectiu de convertir-los en clients. Addicionalment, podràs parametritzar regles de negoci per a l'assignació de leads segons diferents criteris.",
+          'Podràs donar d’alta nous leads de forma manual o mitjançant una importació per fitxer. Les dades associades et permetran gestionar-los comercialment amb l’objectiu de convertir-los en clients. A més, podràs parametritzar regles de negoci per a l’assignació de leads segons diferents criteris.',
         icon: 'tabler:user-plus',
       },
       {
-        title: "Gestió d'oportunitats",
+        title: 'Gestió d’oportunitats',
         description:
-          "Tindràs la possibilitat de gestionar totes les oportunitats de negoci que comportin l'enviament al client potencial o Lead d'ofertes i pressupostos. A més, podràs comprovar l'estat de cada oportunitat (en anàlisi, oferta presentada, en negociació, guanyades, cancel·lades, etc.).",
+          'Tindràs la possibilitat de gestionar totes les oportunitats de negoci que impliquin l’enviament al client potencial d’ofertes i pressupostos. També podràs comprovar l’estat de cada oportunitat (en anàlisi, oferta presentada, en negociació, guanyades, cancel·lades, etc.).',
         icon: 'tabler:target',
       },
       {
-        title: "Accions o tasques comercials",
+        title: 'Accions o tasques comercials',
         description:
-          "L'eina implantada per l'Agent Digitalitzador de la teva elecció et permetrà crear accions i tasques comercials, tant de forma manual com automàtica.",
+          'L’eina implantada per l’Agent Digitalitzador de la teva elecció et permetrà crear accions i tasques comercials, tant de manera manual com automàtica.',
         icon: 'tabler:circle-check',
       },
       {
-        title: "Reporting, planificació i seguiment comercial",
+        title: 'Reporting, planificació i seguiment comercial',
         description:
-          "Podràs realitzar el seguiment mitjançant indicadors (KPI's), llistat d'oportunitats, i altres, amb diferents nivells d'agregació d'informació en funció de les teves necessitats. També podràs generar informes per al seguiment i monitorització de la teva activitat comercial, contemplant ràtios d'eficiència, estat de fases, pipeline i altres atributs mesurables (com productes, cotitzacions, etc.), i segons els canals, perfils, rols i/o fases comercials. Aquests informes podran mostrar, almenys, dades mensuals, acumulades i/o comparatives entre diferents exercicis comercials.",
+          "Podràs fer el seguiment mitjançant indicadors (KPI's), llistat d’oportunitats i altres, amb diferents nivells d’agregació segons les teves necessitats. També podràs generar informes per fer un seguiment de l’activitat comercial, incloent ràtios d’eficiència, estat de fases, pipeline i altres atributs mesurables, segons canals, perfils, rols i/o fases comercials. Aquests informes mostraran, com a mínim, dades mensuals, acumulades i/o comparatives entre exercicis.",
         icon: 'tabler:file-chart',
       },
       {
-        title: "Alertes",
+        title: 'Alertes',
         description:
-          'Seràs capaç de visualitzar Alertes de Clients en format gràfic de diferent tipologia (icones, missatges emergents, etc.).',
+          'Podràs visualitzar alertes de clients en format gràfic de diferent tipologia (icones, missatges emergents, etc.).',
         icon: 'tabler:bell',
       },
       {
-        title: "Gestió documental",
+        title: 'Gestió documental',
         description:
-          "La solució inclourà un software per a la gestió centralitzada de la documentació capaç d'inserir i/o vincular documents tant relatius a la teva activitat comercial, com els proporcionats pels propis clients.",
+          'La solució inclourà un programari per a la gestió centralitzada de la documentació, capaç d’inserir i/o vincular documents relacionats amb l’activitat comercial o proporcionats pels propis clients.',
         icon: 'tabler:folder',
       },
       {
-        title: "Disseny Responsive",
+        title: 'Disseny Responsive',
         description: 'Tindràs una interfície funcional en tot tipus de dispositius.',
         icon: 'tabler:device-laptop',
       },
       {
-        title: "Integració amb diverses plataformes",
+        title: 'Integració amb diverses plataformes',
         description:
-          "Disposaràs d'APIs o Web Services per a la consolidació de la informació i dades de tota la teva empresa.",
+          'Disposaràs d’APIs o Web Services per a la consolidació de la informació i dades de tota la teva empresa.',
         icon: 'tabler:plug',
       },
     ]}
   />
 
+  <Content
+    title="Gestiona els clients, oportunitats i contactes del teu negoci"
+    subtitle="Unifica el seguiment de les relacions comercials amb els teus clients."
+    image={{
+      src: '~/assets/images/kit-digital1.jpg',
+      alt: 'Imatge que reflecteix un treballador amb el CRM',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted">
+        El nostre CRM és més que un simple programari de gestió de relacions amb clients; és una eina integral que transforma la manera com la teva empresa interactua amb els seus clients.
+      </p>
+      <p class="text-muted mt-4">
+        La nostra eina no només t’ajuda a gestionar els teus clients, sinó que millora la forma com hi interactues, impulsant el creixement del teu negoci i optimitzant la manera com treballes.
+      </p>
+      <p>
+        <a title="Gestió de Clients amb CRM Personalitzat" href={u('software/crm')} class="btn-primary mt-12 mb-12 w-auto"
+          >Coneix més sobre el nostre CRM</a
+        >
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>  
+  </Content>
+
+  <Content
+    title="Monitorització i seguiment dels teus contactes"
+    subtitle="Optimitza la gestió de contactes amb un CRM flexible i adaptable al teu negoci."
+    isReversed
+    image={{
+      src: '~/assets/images/kit-digital4.jpg',
+      alt: 'Pantalla amb CRM i correus electrònics',
+    }}
+  >
+    <Fragment slot="content">
+      <p class="text-muted ">
+        El nostre CRM disposa d’un sistema modular, que et permet configurar i adaptar les funcionalitats segons les necessitats específiques del teu negoci.
+      </p>   
+      <p class="text-muted mt-4">
+        Amb l’eina de gestió de clients, disposaràs d’un millor control de la teva cartera de clients, seguiment i contactes millorant la satisfacció, alhora que optimitza els processos de venda i màrqueting per impulsar el creixement i la competitivitat.
+      </p>
+      <p class="text-muted mt-4">
+        També oferim panells avançats per a la monitorització i anàlisi del rendiment de vendes i eficiència operativa del teu equip. Això permet identificar àrees de millora i millorar la productivitat general.
+      </p>
+    </Fragment>
+  </Content>
+
+  <Content
+    title="Centralitza la gestió dels teus clients"
+    subtitle="Adaptem el CRM perquè funcioni tal com el vols, segons les necessitats i processos específics del teu negoci"
+    items={[
+      {
+        title: 'Gestió de clients',
+        description: 'Mantingues un registre detallat de cada interacció amb els clients, des del primer contacte fins a la postvenda, tot en una sola plataforma fàcil d’utilitzar.',
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Automatització de clients potencials',
+        description: 'Maximitza la productivitat del teu equip amb fluxos de treball automatitzats que redueixen les tasques repetitives i permeten centrar-se en allò realment important: atraure i gestionar clients potencials.',
+        icon: 'tabler:settings-automation',
+      },
+      {
+        title: 'Informes de dades',
+        description: 'Pren decisions basades en dades amb informes personalitzables i anàlisis profundes que revelen tendències, rendiment de vendes i oportunitats de creixement.',
+        icon: 'tabler:chart-bar',
+      },
+      {
+        title: 'Integració a mida',
+        description:'El CRM que integrem s’adapta perfectament a les eines que ja utilitzes, facilitant una transició suau i una implementació sense problemes.',
+        icon: 'tabler:link',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/kit-digital2.jpg',
+      alt: 'Pantalla amb gràfics',
+    }}
+  >
+    <Fragment slot="preContent">
+      <p class="text-muted">
+        La gestió de clients és fonamental per al bon funcionament i creixement d’una empresa. Amb un CRM podràs digitalitzar aquest procés i tenir un millor control del teu negoci.
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
+    </Fragment>  
+  </Content>
+
   <Features
-    title="Subvenció Kit Digital segons el nombre d'empleats"
-    subtitle="La subvenció pot ser utilitzada per a diversos serveis de digitalització, amb un import màxim que varia en funció del nombre d'empleats de l'empresa."
+    title="Subvenció Kit Digital segons el nombre de treballadors"
+    subtitle="La subvenció pot utilitzar-se per a diversos serveis de digitalització, amb un import màxim que varia segons el nombre de treballadors de l’empresa."
     items={[
       {
         title: 'Import total subvencionat:',
         list: [
-          '<strong>De 0 a 3 empleats:</strong> 3.000€',
-          '<strong>De 50 a 99 empleats:</strong> 25.000€',
-          '<strong>De 100 a 250 empleats:</strong> 29.000€',
+          '<strong>De 0 a 3 treballadors:</strong> 3.000€',
+          '<strong>De 50 a 99 treballadors:</strong> 25.000€',
+          '<strong>De 100 a 250 treballadors:</strong> 29.000€',
         ],
         icon: 'tabler:check',
       },
       {
         title: 'Import màxim per al servei de gestió de clients:',
         list: [
-        '<strong>De 0 a 3 empleats:</strong> 2.000€ (inclou 1 usuari)',
-        '<strong>De 50 a 99 empleats:</strong> 10.000€ (inclou 10 usuaris)',
-        '<strong>De 100 a 250 empleats:</strong> 14.000€ (inclou 15 usuaris)',
-      ],
+          '<strong>De 0 a 3 treballadors:</strong> 2.000€ (inclou 1 usuari)',
+          '<strong>De 50 a 99 treballadors:</strong> 10.000€ (inclou 10 usuaris)',
+          '<strong>De 100 a 250 treballadors:</strong> 14.000€ (inclou 15 usuaris)',
+        ],
         icon: 'tabler:check',
       },
     ]}
-  />
+  >
+  </Features>
 
   <CallToAction
-    backgroundImage={{ src: '~/assets/images/dots/21.jpg', alt: 'Fons abstracte, inspirat en tecnologia i software' }}
+    backgroundImage={{ src: '~/assets/images/dots/21.jpg', alt: 'Fons abstracte, inspirat en tecnologia i programari' }}
     actions={[
       {
         variant: 'primary',
@@ -135,13 +226,16 @@ const metadata = {
     ]}
   >
     <Fragment slot="title">
-      Estàs a un <span class="custom-gradient">click</span> de digitalitzar la gestió de <span class="custom-gradient"
+      Estàs a un <span class="custom-gradient">clic</span> de digitalitzar la gestió de <span class="custom-gradient"
         >clients</span
       > i portar la teva relació comercial al següent nivell
     </Fragment>
     <Fragment slot="subtitle">
-      Contacta'ns i implementarem una solució de <span class="custom-gradient">gestió de clients</span> per a la teva empresa,
+      Contacta’ns i implementarem una solució de <span class="custom-gradient">gestió de clients</span> per a la teva empresa,
       de forma gratuïta gràcies a la subvenció del Kit Digital.
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-lightgray"></div>
     </Fragment>
   </CallToAction>
 

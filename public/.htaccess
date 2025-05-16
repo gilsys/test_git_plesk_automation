@@ -17,7 +17,7 @@
 
 <IfModule mod_headers.c>
   # Asegura que los archivos no cambian se mantengan en caché
-  <FilesMatch "\.(webp|jpg|jpeg|png|gif|woff2|woff)$">
+  <FilesMatch "\.(webp|jpg|jpeg|png|gif|woff2|woff|svg)$">
     Header set Cache-Control "public, max-age=31536000, immutable"
   </FilesMatch>
   

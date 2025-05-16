@@ -41,7 +41,7 @@ const translatePath = useTranslatedPath(language);
   <head>
     {
       Object.entries(languages)
-        .filter(([lang]) => lang !== language && route && translatePath(route, lang)) // Filtra el idioma actual
+        .filter(([lang]) => route && translatePath(route, lang)) // Filtra el idioma actual
         .map(
           (
             [lang, { code }] // Extrae el código del idioma

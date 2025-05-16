@@ -1,0 +1,142 @@
+---
+publishDate: 2025-05-12T20:00:00Z
+title: Sistema centralizado para la gestión de visitas, facturación y calendario
+excerpt: Aprovecha la subvención del Kit Digital y automatiza la gestión de citas, procesos y facturas con nuestra herramienta que conecta Google Calendar, Holded y PRM.
+image: ~/assets/images/blog/soft-gestion-citas-facturacion.png
+category: Servicios
+callToActionTitle: Sistema para profesionales para gestionar agenda, visitas y facturación
+callToActionSubtitle: Comunicamos Google Calendar, Holded y PRM para automatizar la gestión y facturación de visitas
+tags:
+  - Google Calendar
+  - PRM
+  - Facturación
+  - Kit Digital
+  - Gestión de citas
+  - Autónomos
+  - Automatización
+---
+
+export const lang = 'es';
+import { routes } from '~/i18n/ui.ts';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Features from '~/components/widgets/Features.astro';
+import { getLangFromUrl, useRoutes } from '~/utils/i18n';
+import Image from '~/components/common/Image.astro';
+
+## Automatiza la gestión de citas y facturas con Google Calendar y Holded
+¡Olvídate de las tareas manuales!
+
+¿Aún gestionas las citas con Google Calendar y haces las facturas a mano? Esta solución subvencionada te puede ahorrar horas de trabajo.
+
+En Gilsys conectamos **Google Calendar**, **Holded** y nuestro sistema **PRM** para crear una herramienta centralizada, automática y adaptada a tu negocio.
+
+## Beneficios de nuestro sistema
+
+- **Todo centralizado:** agenda, procesos, documentos y facturas
+- **Reducción de errores:** sin duplicar datos ni pasar nada a mano
+- **Ahorro de tiempo:** automatizas mucho trabajo que hasta ahora había que hacer manualmente
+- **Kit Digital:** 100% subvencionada para pymes y autónomos
+
+## ¿Cómo funciona nuestro sistema de calendario, gestión y facturación?
+
+<Image src="~/assets/images/blog/sistema-calendario-citas-facturacion.svg" alt="Flujo de trabajo entre Google Calendar, Holded y PRM para automatizar citas y facturas" class="m-auto" />
+
+### 1. Crear la cita en Google Calendar
+Da de alta la visita en Google Calendar, indicando día y hora.
+
+### 2. Vincular al cliente como asistente
+Utilizaremos el sistema de contactos de Google, así podrás tener tu agenda ordenada y solo será necesario que vincules al cliente como participante.
+
+### 3. Envío de recordatorio
+El día antes, se enviará automáticamente un recordatorio al cliente a través de WhatsApp o SMS.
+
+### 4. Gestión y seguimiento
+Desde el PRM dispondrás de la información de tu calendario sincronizada automáticamente. Podrás ampliar la información de la cita con textos, notas, tareas, documentos e imágenes.
+
+### 5. Facturación automática
+Una vez acabada la cita, solo es necesario que indiques el coste desde Google Calendar, el sistema generará automáticamente una factura o ticket en Holded.
+
+<Image src="~/assets/images/blog/profesional-google-calendar.png" alt="Profesional trabajando con el gestor de procesos" class="m-auto" width={500} />
+
+### Todo funciona automáticamente
+
+El sistema genera avisos, detecta las citas del calendario, crea procesos vinculados al cliente y genera la factura o ticket en Holded. Tú solo tienes que centrarte en tu servicio.
+
+### Acceso seguro y desde cualquier lugar
+
+Toda la información queda registrada y disponible en un único lugar: agenda, documentos, historial, procesos y facturas.
+
+### Ideal para autónomos y profesionales
+
+Una herramienta pensada para quien quiere ofrecer un buen servicio sin perder tiempo en gestiones manuales ni duplicar datos.
+
+<Image src="~/assets/images/blog/doctor-laptop-prm.png" alt="Profesional trabajando con el gestor de procesos" class="m-auto" width={500} />
+
+<Features
+  tagline="Diseñada para profesionales"
+  title="¿Por qué elegir esta solución?"
+  subtitle="Una herramienta ágil, centralizada y pensada para ahorrarte trabajo."
+  items={[
+    {
+      title: 'Más tiempo para tus clientes',
+      description: 'El sistema se ocupa de la gestión. Tú puedes centrarte en la atención al cliente.',
+      icon: 'tabler:clock',
+    },
+    {
+      title: 'Control total y remoto',
+      description: 'Consulta o edita la agenda, procesos y facturas desde cualquier dispositivo.',
+      icon: 'tabler:device-mobile',
+    },
+    {
+      title: 'Implementación fácil y rápida',
+      description: 'Te lo configuramos y adaptamos a tu día a día en pocos días.',
+      icon: 'tabler:rocket',
+    },
+    {
+      title: 'Incluida en el Kit Digital',
+      description: 'Solución 100% subvencionada para autónomos y pequeñas empresas.',
+      icon: 'tabler:currency-euro',
+    }
+  ]}
+/>
+
+<div className="text-center mb-2">
+  <a className="btn-primary" title="Solicita una demo para la solución de agenda, gestión de citas y facturación" href={routes[lang]['contact']}>Solicita una demo gratuita</a>
+</div>
+
+
+<FAQs
+  title="Preguntas frecuentes"
+  subtitle="Dudas habituales sobre la digitalización de la agenda, procesos y facturas"
+  columns={1}
+  tagline=""
+  heading=""
+  classes={{ container: 'max-w-6xl' }}
+  items={[
+    {
+      title: '¿Es necesario tener Holded para utilizar esta solución?',
+      description:
+        'No. Si ya tienes Holded, lo podemos integrar. Y si no lo tienes, te lo podemos configurar como parte de la solución, aprovechando la subvención del Kit Digital.',
+    },
+    {
+      title: '¿Y si no trabajo con Holded y prefiero utilizar otra plataforma de facturación?',
+      description:
+        'Podemos estudiar la integración con la nueva plataforma y valorar si es posible realizar la integración en nuestro sistema.',
+    },
+    {
+      title: '¿Es necesario tener conocimientos técnicos?',
+      description:
+        'No. Nos encargamos de toda la configuración y automatización. Tú solo tienes que seguir con tu manera habitual de gestionar citas y clientes.',
+    },
+    {
+      title: '¿La solución se adapta a mi negocio?',
+      description:
+        'Sí. Podemos personalizar la configuración según el tipo de servicio, calendario, tipo de factura, y forma de trabajar. El objetivo es adaptarnos a ti, no al revés.',
+    },
+    {
+      title: '¿Funciona si tengo más de una agenda o trabajo en equipo?',
+      description:
+        'Sí. El sistema puede gestionar múltiples calendarios y agendes compartidas, ideal para equipos o negocios con más de un professional.',
+    },
+  ]}
+/>

@@ -14,13 +14,19 @@ tags:
   - Software personalitzat
 ---
 
+export const lang = 'ca'
+import { routes } from '~/i18n/ui.ts'
+
 ## Plugins programats a mida, al teu abast
 
 WordPress és una plataforma versàtil i popular, i a Gilsys en som experts. Utilitzem el desenvolupament de mòduls a mida per personalitzar els webs dels nostres clients, afegint funcionalitats úniques i millorant el SEO.
 
-<div class='text-center'>
-<a class="btn btn-primary" title="Programació a mida de WordPress" href="{routes[lang]['software/wp']}">Programació de webs amb WordPress</a>
+<div class="text-center">
+  <a class="btn btn-primary" title="Programació a mida de WordPress" href={routes[lang]['software/wp']}>
+    Programació de webs amb WordPress
+  </a>
 </div>
+
 
 ## Per què desenvolupar mòduls personalitzats per WordPress?
 

@@ -1,6 +1,6 @@
 ---
 import { Icon } from 'astro-icon/components';
-
+import CallToAction from '~/components/widgets/CallToAction.astro';
 import Image from '~/components/common/Image.astro';
 import PostTags from '~/components/blog/Tags.astro';
 import SocialShare from '~/components/common/SocialShare.astro';
@@ -9,7 +9,8 @@ import { getPermalink } from '~/utils/permalinks';
 import { getFormattedDate } from '~/utils/utils';
 
 import type { Post } from '~/types';
-import { getLangFromUrl, useTranslations } from '~/utils/i18n';
+import { getLangFromUrl, useRoutes, useTranslations } from '~/utils/i18n';
+const u = useRoutes(getLangFromUrl(Astro.url));
 
 export interface Props {
   post: Post;
@@ -99,6 +100,33 @@ const t = useTranslations(lang);
     >
       <slot />
     </div>
+
+
+
+
+    {post?.callToActionTitle && (
+      <CallToAction
+        backgroundImage={{ src: '~/assets/images/neutral/bg-6.jpg', alt: 'Abstract background' }}
+        actions={[
+          {
+            variant: 'primary',
+            text: t('calltoaction.contact'),
+            href: u('contact'),
+          },
+          {
+            variant: 'primary',
+            text: t('calltoaction.call'),
+            href: 'tel:+34665331271',
+          },
+        ]}
+      >
+        <Fragment slot="title">{post?.callToActionTitle}</Fragment>
+        <Fragment slot="subtitle">{post?.callToActionSubtitle}</Fragment>
+      </CallToAction>
+    )}
+
+
+
     <div class="mx-auto px-6 sm:px-6 max-w-3xl mt-8 flex justify-between flex-col sm:flex-row">
       <PostTags tags={post.tags} class="mr-5 rtl:mr-0 rtl:ml-5" />
       <SocialShare url={url} text={post.title} class="mt-5 sm:mt-1 align-middle text-gray-500 dark:text-slate-600" />
