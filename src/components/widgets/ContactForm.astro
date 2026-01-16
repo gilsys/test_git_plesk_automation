@@ -8,12 +8,7 @@ const currentLang = getLangFromUrl(Astro.url);
 const t = useTranslations(currentLang);
 const u = useRoutes(currentLang);
 
-const { 
-  title = t('contact.title'),
-  subtitle = t('contact.subtitle'),
-  pageTitle,
-  description,
- } = Astro.props;
+const { title = t('contact.title'), subtitle = t('contact.subtitle'), pageTitle, description } = Astro.props;
 
 const inputs = [
   {
@@ -26,6 +21,21 @@ const inputs = [
     type: 'text',
     name: 'company',
     label: t('contact.company'),
+  },
+  {
+    type: 'radio',
+    name: 'companySize',
+    label: t('contact.companySize'),
+    required: true,
+    fullWidth: true,
+    options: [
+    { value: '1', label: '1' },
+    { value: '2-5', label: '2 – 5' },
+    { value: '6-10', label: '6 – 10' },
+    { value: '11-25', label: '11 – 25' },
+    { value: '26-50', label: '26 – 50' },
+    { value: '51-100', label: '51 – 100' },
+    ],
   },
   {
     type: 'text',
@@ -61,7 +71,9 @@ const inputs = [
   },
 ];
 
-const disclaimer = t('contact.disclaimer').replace('%terms%', u('terms')).replace('%privacy_policy%', u('privacy-policy'));
+const disclaimer = t('contact.disclaimer')
+  .replace('%terms%', u('terms'))
+  .replace('%privacy_policy%', u('privacy-policy'));
 ---
 
 <ContactUs
@@ -80,5 +92,5 @@ const disclaimer = t('contact.disclaimer').replace('%terms%', u('terms')).replac
   }}
   description={description}
   sendTo={`${SITE.site}/contact/contact.php`}
-  classes={{container: 'py-0 md:py-0 lg:py-0'}}
+  classes={{ container: 'py-0 md:py-0 lg:py-0' }}
 />

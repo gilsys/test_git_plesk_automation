@@ -27,7 +27,7 @@ if (!empty($_POST[HONEYPOT])) {
     exit();
 }
 
-$fields = ['name', 'company', 'phone', 'email', 'subject', 'page_title', 'message'];
+$fields = ['name', 'company', 'companySize', 'phone', 'email', 'subject', 'page_title', 'message'];
 $data = [];
 foreach ($fields as $field) {
     $data[$field] = !empty($_POST[$field]) ? $_POST[$field] : '';
@@ -82,7 +82,7 @@ function getHtmlContent($data) {
                     color: #333;
                     background-color: #f4f4f4;
                     margin: 0;
-                    padding: 0;
+                    padding: 20px;
                 }
                 .container {
                     width: 100%;
@@ -134,6 +134,7 @@ function getHtmlContent($data) {
                 <h2>Formulario de contacto</h2>
                 <p><strong>Nombre:</strong> ' . $data['name'] . '</p>
                 <p><strong>Empresa:</strong> ' . $data['company'] . '</p>
+                <p><strong>Tamaño de empresa:</strong> ' . $data['companySize'] . '</p>
                 <p><strong>Teléfono:</strong> ' . $data['phone'] . '</p>
                 <p><strong>Email:</strong> ' . $data['email'] . '</p>
                 <p><strong>Título de la página:</strong> ' . $data['page_title'] . '</p>

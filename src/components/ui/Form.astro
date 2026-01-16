@@ -22,43 +22,74 @@ const {
 <form id={id} autocomplete="off">
   <div class="sm:grid sm:grid-cols-2 gap-4">
     {
-      inputs &&
-        inputs.map(
-          ({
-            type = 'text',
-            name,
-            label = '',
-            autocomplete = 'off',
-            placeholder = '',
-            value = '',
-            required = false,
-            spamCheck = false,
-            fullWidth = false,
-          }) =>
-            name &&
-            (type !== 'hidden' ? (
-              <div class={`mb-6${spamCheck ? ' hidden' : ''}${fullWidth ? ' col-span-2' : ''}`}>
-                {label && (
-                  <label for={name} class="block text-sm font-medium mb-1">
-                    {label}
-                    {required ? '*' : ''}
-                  </label>
-                )}
-                <input
-                  type={type}
-                  name={name}
-                  id={name}
-                  autocomplete={autocomplete}
-                  placeholder={placeholder}
-                  required={required}
-                  class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
-                />
+  inputs &&
+    inputs.map(
+      ({
+        type = 'text',
+        name,
+        label = '',
+        autocomplete = 'off',
+        placeholder = '',
+        value = '',
+        required = false,
+        spamCheck = false,
+        fullWidth = false,
+        options = [], 
+      }) =>
+        name &&
+        (type !== 'hidden' ? (
+          <div class={`mb-6${spamCheck ? ' hidden' : ''}${fullWidth ? ' col-span-2' : ''}`}>
+            {label && (
+              <label class="block text-sm font-medium mb-2">
+                {label}
+                {required ? '*' : ''}
+              </label>
+            )}
+
+          
+            {type === 'radio' ? (
+              <div class="grid grid-cols-1 sm:grid-cols-6 gap-2">
+                {options.map((opt, idx) => {
+                  const radioId = `${name}-${idx}`; 
+
+                  return (
+                    <div class="flex items-center gap-2">
+                      <input
+                        id={radioId}
+                        type="radio"
+                        name={name}
+                        value={opt.value}
+                        required={required && idx === 0} 
+                        class="h-4 w-4"
+                      />
+                      <label for={radioId} class="text-sm text-gray-700 dark:text-gray-300">
+                        {opt.label}
+                      </label>
+                    </div>
+                  );
+                })}
               </div>
             ) : (
-              <input type={type} name={name} id={name} value={value} />
-            ))
-        )
-    }
+              
+              <input
+                type={type}
+                name={name}
+                id={name}
+                autocomplete={autocomplete}
+                placeholder={placeholder}
+                required={required}
+                value={value}
+                class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
+              />
+            )}
+          </div>
+        ) : (
+          // <-- IGUAL QUE ABANS: hidden
+          <input type={type} name={name} id={name} value={value} />
+        ))
+    )
+}
+
   </div>
 
   {

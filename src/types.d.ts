@@ -180,6 +180,11 @@ export interface Testimonial {
   image?: string | unknown;
 }
 
+export interface InputOption {
+  value: string;
+  label: string;
+}
+
 export interface Input {
   type: HTMLInputTypeAttribute;
   name: string;
@@ -190,6 +195,7 @@ export interface Input {
   required?: boolean;
   spamCheck?: boolean;
   fullWidth?: boolean;
+  options?: Array<InputOption>; 
 }
 
 export interface Textarea {
