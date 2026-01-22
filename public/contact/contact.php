@@ -3,19 +3,13 @@
 use PHPMailer\PHPMailer\PHPMailer;
 
 require 'vendor/autoload.php';
+require 'config.php';
 
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Headers: X-Requested-With, Content-Type, Accept, Origin, Authorization, auth-token');
 header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, PATCH, OPTIONS');
+header('Content-Type: application/json; charset=utf-8');
 
-define('HONEYPOT', 'comments');
-define('MAIL_HOST', 'mail.gilsys.com');
-define('MAIL_USERNAME', 'noreply@gilsys.com');
-define('MAIL_PASSWORD', 'K37yie6!5123');
-define('MAIL_PORT', 587);
-define('MAIL_FROM_ADDRESS', 'noreply@gilsys.com');
-define('MAIL_FROM_NAME', 'Gilsys');
-define('MAIL_TO_ADDRESS', 'info@gilsys.com');
 
 if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
     http_response_code(200);
@@ -33,14 +27,67 @@ foreach ($fields as $field) {
     $data[$field] = !empty($_POST[$field]) ? $_POST[$field] : '';
 }
 
-if (sendEmail($data)) {
-    echo json_encode(['success' => 1]);
-} else {
-    echo json_encode(['error' => 1]);
+if (trim((string)($data['email'] ?? '')) === '') {
+    echo json_encode(['success' => 1], JSON_UNESCAPED_UNICODE);
+    exit();
 }
+
+$leadId = createLead($data);
+$emailSent = sendEmail($data);
+
+echo json_encode(
+    ['success' => 1, 'leadId' => $leadId, 'emailSent' => $emailSent ? 1 : 0],
+    JSON_UNESCAPED_UNICODE
+);
 exit();
 
-function sendEmail($data) {
+
+function createLead(array $data): int
+{
+    $uid = jsonRpc(
+        ODOO_URL,
+        'common',
+        'authenticate',
+        [ODOO_DB, ODOO_USERNAME, ODOO_APIKEY, []]
+    );
+
+    if (!$uid) {
+        throw new RuntimeException('Odoo Authentication failed (lead)');
+    }
+
+    $leadId = jsonRpc(
+        ODOO_URL,
+        'object',
+        'execute_kw',
+        [
+            ODOO_DB,
+            $uid,
+            ODOO_APIKEY,
+            'crm.lead',
+            'create',
+            [[
+                'name' => $data['company'] . ' | ' . $data['subject'],
+                'contact_name' => $data['name'],
+                'partner_name' => $data['company'],
+                'email_from'   => $data['email'],
+                'phone'        => $data['phone'],
+
+                'description' =>
+                "<b>Grandària de l'Empresa:</b> {$data['companySize']}<br><br>" .
+                    "<b>Títol de la pàgina:</b> {$data['page_title']}<br><br>" .
+                    "<b>Assumpte:</b> {$data['subject']}<br><br>" .
+                    "<b>Missatge:</b><br>" . nl2br($data['message']),
+
+            ]]
+        ]
+    );
+
+    return $leadId;
+}
+
+
+function sendEmail($data)
+{
     try {
         $mail = new PHPMailer(true);
 
@@ -71,7 +118,8 @@ function sendEmail($data) {
     }
 }
 
-function getHtmlContent($data) {
+function getHtmlContent($data)
+{
     return '
         <html>
         <head>
@@ -144,4 +192,43 @@ function getHtmlContent($data) {
             </div>
         </body>
         </html>';
+}
+
+
+
+function jsonRpc(string $url, string $service, string $method, array $args)
+{
+    $payload = [
+        'jsonrpc' => '2.0',
+        'method'  => 'call',
+        'params'  => [
+            'service' => $service,
+            'method'  => $method,
+            'args'    => $args,
+        ],
+        'id' => random_int(1, 1000000),
+    ];
+
+    $ch = curl_init($url);
+    curl_setopt_array($ch, [
+        CURLOPT_POST => true,
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_HTTPHEADER => ['Content-Type: application/json'],
+        CURLOPT_POSTFIELDS => json_encode($payload),
+    ]);
+
+    $response = curl_exec($ch);
+
+    if ($response === false) {
+        throw new RuntimeException(curl_error($ch));
+    }
+
+    curl_close($ch);
+
+    $decoded = json_decode($response, true);
+    if (isset($decoded['error'])) {
+        throw new RuntimeException(json_encode($decoded['error'], JSON_PRETTY_PRINT));
+    }
+
+    return $decoded['result'] ?? null;
 }
