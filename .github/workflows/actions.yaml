@@ -6,6 +6,9 @@ on:
       - 'v*'  # Se ejecutará cuando crees un tag que empiece por 'v' (ej: v1.0, v2.1.4)
       # Si quieres que se ejecute con CUALQUIER tag, cambia lo anterior por: - '*'
 
+permissions:
+  contents: write
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
