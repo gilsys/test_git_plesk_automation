@@ -21,7 +21,7 @@
     "fix": "npm run fix:eslint && npm run fix:prettier",
     "fix:eslint": "eslint --fix .",
     "fix:prettier": "prettier -w .",
-    "deploy": "gh-pages -d dist -b production"
+    "deploy": "npm run build && gh-pages -d dist -b production"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.11",

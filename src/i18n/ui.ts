@@ -1610,7 +1610,7 @@ export const footer = {
       //{ ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
     ],
     address: `            
-            <a href="tel:+34665331271">711 239 085</a><br>
+            <a href="tel:+34711239085">711 239 085</a><br>
             <a class='text-accent' href="mailto:info@gilsys.com">info@gilsys.com</a><br><br>            
             <a href='https://maps.app.goo.gl/V5T7Ksystbsv68eD7' target='_blank' title='Obrir google maps'>Passeig del Ter 48<br>
             08580, Sant Quirze de Besora<br>
@@ -1711,7 +1711,7 @@ export const footer = {
       //{ ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
     ],
     address: `            
-            <a href="tel:+34665331271">711 239 085</a><br>
+            <a href="tel:+34711239085">711 239 085</a><br>
             <a class='text-accent' href="mailto:info@gilsys.com">info@gilsys.com</a><br><br>            
             <a href='https://maps.app.goo.gl/V5T7Ksystbsv68eD7' rel='nofollow' target='_blank' title='Abrir Google Maps'>Passeig del Ter 48<br>
             08580, Sant Quirze de Besora<br>
@@ -1811,7 +1811,7 @@ export const footer = {
       //{ ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
     ],
     address: `            
-            <a href="tel:+34665331271">711 239 085</a><br>
+            <a href="tel:+34711239085">711 239 085</a><br>
             <a class='text-accent' href="mailto:info@gilsys.com">info@gilsys.com</a><br><br>            
             <a href='https://maps.app.goo.gl/V5T7Ksystbsv68eD7' rel='nofollow' target='_blank' title='Open Google Maps'>Passeig del Ter 48<br>
             08580, Sant Quirze de Besora<br>
